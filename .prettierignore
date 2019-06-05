@@ -1,0 +1,7 @@
+/.git
+/.next
+/coverage
+/tmp
+build
+node_modules
+package-lock.json
