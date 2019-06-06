@@ -11,7 +11,6 @@
   "author": "chenyueban <chenyueban@qq.com>",
   "homepage": "https://fluent-ui.com",
   "license": "MIT",
-  "main": "lib/fluent-ui.com.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -27,6 +26,7 @@
     "url": "https://github.com/chenyueban/fluent-ui/issues"
   },
   "dependencies": {
+    "@fluent-ui/core": "^0.0.1",
     "gatsby": "^2.8.3",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -42,6 +42,9 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "gatsby-plugin-eslint": "^2.0.5",
     "prettier": "^1.17.1"
   },
   "scripts": {

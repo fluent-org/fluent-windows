@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "lib": ["es6", "dom"],
     "jsx": "react",
+    "declaration": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "baseUrl": "./packages",
     "allowSyntheticDefaultImports": true,
     "noErrorTruncation": true,
+    "baseUrl": "./packages",
     "paths": {
       "@fluent-ui/core": ["./fluent-ui/src"],
-      "@fluent-ui/core/*": ["./fluent-ui/src/*"],
+      "@fluent-ui/core/*": ["./fluent-ui/src/*"]
     }
   },
   "exclude": [

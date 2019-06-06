@@ -5,23 +5,41 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint --fix . && echo 'Lint complete.'"
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "start": "lerna run start --parallel",
+    "build": "lerna run build",
+    "release": "lerna publish --force-publish @fluent-ui/core"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
+    "commitizen": "^3.1.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^2.4.0",
     "lerna": "^3.14.1",
+    "lint-staged": "^8.1.7",
     "prettier": "1.17.1",
-    "typescript": "^3.5.1"
+    "typescript": "^3.4.5"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "packages/*/src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   }
 }
