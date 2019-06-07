@@ -3,7 +3,8 @@
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,7 +18,8 @@
     "react",
     "react-hooks",
     "prettier",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "jest"
   ],
   "extends": [
     "eslint:recommended",
@@ -25,7 +27,8 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:jest/recommended"
   ],
   "settings": {
     "react": {

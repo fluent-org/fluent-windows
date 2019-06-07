@@ -8,7 +8,6 @@
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noEmit": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "noErrorTruncation": true,
@@ -21,6 +20,9 @@
   "exclude": [
     "**/build/",
     "node_modules",
-    "dist"
+    "dist",
+    "build",
+    "public",
+    "**/__tests__/"
   ]
 }

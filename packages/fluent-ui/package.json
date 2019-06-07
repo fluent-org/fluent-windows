@@ -10,9 +10,6 @@
   ],
   "main": "build/umd/index.js",
   "module": "build/es/index.js",
-  "files": [
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/chenyueban/fluent-ui",
@@ -27,33 +24,40 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf build",
-    "build": "cross-env rollup -c rollup.config.js",
-    "start": "rollup -c rollup.config.js -w",
+    "build": "yarn build:cjs && yarn build:es && yarn build:umd",
+    "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build/cjs",
+    "build:es": "cross-env NODE_ENV=production tsc --module ES6 --outDir ./build/es",
+    "build:umd": "cross-env NODE_ENV=production tsc --module UMD --outDir ./build/umd",
+    "start": "cross-env NODE_ENV=production tsc -w --module ES6 --outDir ./build/es",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
-    "test:prod": "npm run lint && npm run test -- --no-cache",
+    "test:prod": "yarn test -- --no-cache",
     "codecov": "codecov"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "styled-components": ">= 4.X"
+  },
+  "dependencies": {
+    "styled-system": "^5.0.5"
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "4.1.8",
+    "@types/styled-system": "^4.2.1",
     "codecov": "^3.5.0",
     "cross-env": "^5.2.0",
+    "eslint-plugin-jest": "^22.6.4",
     "jest": "^23.6.0",
     "jest-config": "^23.6.0",
     "rimraf": "^2.6.2",
-    "rollup": "^0.67.0",
-    "rollup-plugin-commonjs": "^9.1.8",
-    "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.18.0",
+    "styled-components": "^4.3.0",
+    "styled-system": "^5.0.5",
     "ts-jest": "^23.10.2"
   },
   "jest": {

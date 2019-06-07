@@ -8,6 +8,7 @@
     "lint": "eslint --fix . && echo 'Lint complete.'",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
+    "test": "lerna run test",
     "release": "lerna publish --force-publish @fluent-ui/core"
   },
   "devDependencies": {
@@ -22,7 +23,7 @@
     "husky": "^2.4.0",
     "lerna": "^3.14.1",
     "lint-staged": "^8.1.7",
-    "prettier": "1.17.1",
+    "prettier": "^1.17.1",
     "typescript": "^3.4.5"
   },
   "config": {

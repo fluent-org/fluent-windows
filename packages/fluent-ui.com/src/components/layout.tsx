@@ -10,8 +10,17 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 
+import { ThemeProvider, Theme } from '@fluent-ui/core'
+
 interface LayoutProps {
   children: ReactChild
+}
+
+const theme: Theme = {
+  colors: {
+    // primary: 'rgba(0, 0, 0, 0.2)',
+    // accent: 'rgba(0, 120, 215, 1)'
+  }
 }
 
 const Layout: SFC<LayoutProps> = ({ children }: LayoutProps): ReactElement => (
@@ -25,17 +34,12 @@ const Layout: SFC<LayoutProps> = ({ children }: LayoutProps): ReactElement => (
         }
       }
     `}
-    render={data => (
+    render={(data): ReactElement => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
+        <main>{children}</main>
+        {/* <ThemeProvider theme={theme}>
+        </ThemeProvider> */}
       </>
     )}
   />

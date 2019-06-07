@@ -22,5 +22,5 @@ Button default style
 Highlighted button
 
 ```jsx
-<Button accent>Accent</Button>
+<Button variant='accent'>Accent</Button>
 ```
