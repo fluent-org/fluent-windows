@@ -1,8 +1,8 @@
 import React, { SFC, ReactChild, ReactElement } from 'react'
-import { ThemeProvider as BaseProvider } from 'styled-components'
-import defaultTheme, { Theme } from './theme'
-
+import { ThemeProvider as BaseProvider } from '@xstyled/styled-components'
+import defaultTheme, { Theme } from '../../theme'
 import { deepMerge } from '../../utils'
+import 'normalize.css'
 
 interface ThemeProviderProps {
   theme: Theme

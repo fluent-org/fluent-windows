@@ -733,7 +733,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.3.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.4":
   version "7.4.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
@@ -1590,90 +1590,6 @@
   resolved "https://registry.npmjs.org/@stefanprobst/lokijs/-/lokijs-1.5.6-b.tgz#6a36a86dbe132e702e6b15ffd3ce4139aebfe942"
   integrity sha512-MNodHp46og+Sdde/LCxTLrxcD5Dimu21R/Fer2raXMG1XtHSV2+vZnkIV87OPAxuf2NiDj1W5hN7Q2MYUfQQ8w==
 
-"@styled-system/background@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/background/-/background-5.0.5.tgz#2c5a1dfd251be802f3f27a7c1797e64fcaaa87df"
-  integrity sha512-CNPbx0nH9YUzaG4Ot/iRC88kCnr60Bt0D7J5LKxEfhfZT8uLfvwyvJvFDMIq1kgWRzPEC/PsFcr/s9chCnUHOA==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/border@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/border/-/border-5.0.5.tgz#484765202df84cf67a42812f46523244795bc519"
-  integrity sha512-fCGFUJuqywF75Q1z1UJdHsNWV0MYBjYbuve0u7u/F1VlyQwlz0xur3Pa2qOGxTWZzkFVKc9QRLRapyBXDea4jw==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/color@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/color/-/color-5.0.5.tgz#5fe267ea6b93ecb0ec942c4a1995c9ed64ac2f55"
-  integrity sha512-vpEBhbOEargvz5iNqg/Y/UGuhvK0wF3rVGdcEtvl6aIchzMuh72HzRpBZ04o7EnSJT1kqU9TAyF8RfhUG3p3Jg==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/core@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/core/-/core-5.0.5.tgz#ac3d769f8fc2ae54f7cfada6d22c8c26d195cc03"
-  integrity sha512-FeP2Swis9anzW8fpU4wmBYqHBoPeYp7htcq0JAIi0+4LT3CkQNl3rFGa7IW9VZDnXPYC6Elvh/vdCJVPUyke/Q==
-  dependencies:
-    object-assign "^4.1.1"
-
-"@styled-system/flexbox@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/flexbox/-/flexbox-5.0.5.tgz#2a4a30c76eb6d4f9252ee640a2df5e229c60433b"
-  integrity sha512-3TTs4GD71SzW22WPnb0DNqgAZfa0EixvlNjdReexLtMZPunk3AIBkURNQ9WuWLgDhwzolVrinKtQaER/4v2f7Q==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/grid@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/grid/-/grid-5.0.5.tgz#fbcb770785c2994970225bf9440e957b13f61712"
-  integrity sha512-UtDf4UovXEJp8shJfoTVf6zqW/2ynxAuBXV2PESEytH1m5+9MQfiYVIHjNJbebFNnes20AmAtfuYuk82xrqquA==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/layout@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/layout/-/layout-5.0.5.tgz#129a28b984aa4c81a9f152fb3f4a9ec4d7ad6a36"
-  integrity sha512-wXut8J4Nu/jz+SNVHQgbtFn/VkmNau9ahQerxrNtZ8MDfSpVTq8FwmlEq1fpSZQl4PFlFWHS8BBvDi29DsXRvw==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/position@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/position/-/position-5.0.5.tgz#bc0756079d436d11bb90f276755eafcb7add8891"
-  integrity sha512-xXrqqif8ESUKzvbBrvLxoEnMnySv6XWPL3eHb15/lZoiBnDoHy3DVqqlYvGrCdfVm9CRZhiwRTjA7FDsN+DFsg==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/shadow@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/shadow/-/shadow-5.0.5.tgz#f785e314e3816258c9c18f194e4cae2da1629e0f"
-  integrity sha512-fezKQie5hVM83LfW0droALj6qjXYTv99tLCFy84XN9p9zLvY/X1IpokUOvIzPBvvoOpXPVotbPqvU2mnl6UQCQ==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/space@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/space/-/space-5.0.5.tgz#9c31d61b41814295b53cf1699f7282b70e18825f"
-  integrity sha512-cUQmFpJr3Y74+6ERfHAgrPaLq4frt8nk6n3TcngUFPS4qyD2vAlNvaeJEjY5t4uPuuxdD+kRgnxUouafYEfRoA==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/typography@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/typography/-/typography-5.0.5.tgz#9f4fcf6c12d4a98150110335f3bd97072d53f29b"
-  integrity sha512-iWcVHNur6ExcvT63ux8iJrBsCws4Ux4k6HsmDhsE62+S92w8xynDGTG4Hl9zCEbVluOt6w9NaqR5amB84Ur7zA==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
-"@styled-system/variant@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/@styled-system/variant/-/variant-5.0.5.tgz#11ba85324f6ce679b1036bcfb617cc2ed324e443"
-  integrity sha512-BLQdOgLsFoFHfE8/IVrkdTkCQHfyegZNWJI5X4417dJsO8Gxo5nCsOJbCqRTXPA4fpvodqRT/vZsYxjcvy/ToQ==
-  dependencies:
-    "@styled-system/core" "^5.0.5"
-
 "@types/configstore@^2.1.1":
   version "2.1.1"
   resolved "https://registry.npmjs.org/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
@@ -1807,13 +1723,6 @@
     "@types/node" "*"
     "@types/react" "*"
     csstype "^2.2.0"
-
-"@types/styled-system@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.npmjs.org/@types/styled-system/-/styled-system-4.2.1.tgz#dc03af329452b5208aba9dc56fdfc6971b9ed2d0"
-  integrity sha512-4wARGJuZz1DzogmGAKhOviaDeZYfOU29ROt/XrWSFTKhTNSpMvq7WyzEUuxPRC70VH57eUB1uxsWrKYND/FgJQ==
-  dependencies:
-    csstype "^2.6.4"
 
 "@types/tmp@^0.0.32":
   version "0.0.32"
@@ -2000,6 +1909,22 @@
     "@webassemblyjs/ast" "1.7.11"
     "@webassemblyjs/wast-parser" "1.7.11"
     "@xtuc/long" "4.2.1"
+
+"@xstyled/styled-components@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@xstyled/styled-components/-/styled-components-1.1.1.tgz#894b9b3d5f7388cbe58492091c149ae2d5d6145a"
+  integrity sha512-RErNeqAiUQ5JvX4eSFPax3V7cikIFZ9Ee6zjo/hkBwrNaRCKPIpkAqG/Rsh0F3AKwNNYTTruEtrKEKACMZnn5A==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@xstyled/system" "^1.1.1"
+
+"@xstyled/system@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@xstyled/system/-/system-1.1.1.tgz#8e597bae5c1b9de148880746522bf75596ff3928"
+  integrity sha512-itePYxz3I5FCXLJ0+vA7YUbawRUGQGUz0A+bFLTBqCNFgzeGuj+PJdteEW08MYecl88gWrgX0BOX7hmzQW/9Dw==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    deepmerge "^3.2.0"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -4578,7 +4503,7 @@ cssstyle@^1.0.0:
   dependencies:
     cssom "0.3.x"
 
-csstype@^2.2.0, csstype@^2.6.4:
+csstype@^2.2.0:
   version "2.6.5"
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.6.5.tgz#1cd1dff742ebf4d7c991470ae71e12bb6751e034"
   integrity sha512-JsTaiksRsel5n7XwqPAfB0l3TFKdpjW/kgAELf9vrb5adGA7UCPLajKK5s3nFrcFm3Rkyp/Qkgl73ENc1UY3cA==
@@ -4789,7 +4714,7 @@ deep-is@~0.1.3:
   resolved "https://registry.npmjs.org/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
 
-deepmerge@3.2.0:
+deepmerge@3.2.0, deepmerge@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/deepmerge/-/deepmerge-3.2.0.tgz#58ef463a57c08d376547f8869fdc5bcee957f44e"
   integrity sha512-6+LuZGU7QCNUnAJyX8cIrlzoEgggTM6B7mm+znKOX4t5ltluT9KLjN6g61ECMS0LTsLW7yDpNoxhix5FZcrIow==
@@ -10721,6 +10646,11 @@ normalize-url@^3.0.0, normalize-url@^3.3.0:
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.npmjs.org/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
+
 npm-bundled@^1.0.1:
   version "1.0.6"
   resolved "https://registry.npmjs.org/npm-bundled/-/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"
@@ -14257,25 +14187,6 @@ styled-components@^4.3.0:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
-
-styled-system@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.npmjs.org/styled-system/-/styled-system-5.0.5.tgz#fc01516f06b313799899b4e904f62d2dba775e8c"
-  integrity sha512-ylAQlaknwcjWPLmZeceKKe3Q8EsGZgKtgj7RHiL/ETBq/KzC+mNcpIcoPQwviuOx0O/yjcDwA/JUAVIbEAYArg==
-  dependencies:
-    "@styled-system/background" "^5.0.5"
-    "@styled-system/border" "^5.0.5"
-    "@styled-system/color" "^5.0.5"
-    "@styled-system/core" "^5.0.5"
-    "@styled-system/flexbox" "^5.0.5"
-    "@styled-system/grid" "^5.0.5"
-    "@styled-system/layout" "^5.0.5"
-    "@styled-system/position" "^5.0.5"
-    "@styled-system/shadow" "^5.0.5"
-    "@styled-system/space" "^5.0.5"
-    "@styled-system/typography" "^5.0.5"
-    "@styled-system/variant" "^5.0.5"
-    object-assign "^4.1.1"
 
 stylehacks@^4.0.0:
   version "4.0.3"

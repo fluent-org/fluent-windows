@@ -1,19 +1,20 @@
 import React, { SFC, ReactElement, ReactChild } from 'react'
-
 import StyledButton from './Button.styled'
 
 interface ButtonProps {
   variant?: 'primary' | 'accent'
+  disabled?: boolean
+
   children: ReactChild
 }
 
 const Button: SFC<ButtonProps> = ({
   variant = 'primary',
+  disabled,
   children
 }: ButtonProps): ReactElement => {
-  const color = variant === 'accent' ? 'white' : 'black'
   return (
-    <StyledButton color={color} bg={variant}>
+    <StyledButton variant={variant} disabled={disabled}>
       {children}
     </StyledButton>
   )

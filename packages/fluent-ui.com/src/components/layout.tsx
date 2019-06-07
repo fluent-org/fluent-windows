@@ -37,9 +37,9 @@ const Layout: SFC<LayoutProps> = ({ children }: LayoutProps): ReactElement => (
     render={(data): ReactElement => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        {/* <ThemeProvider theme={theme}>
-        </ThemeProvider> */}
+        <ThemeProvider theme={theme}>
+          <main>{children}</main>
+        </ThemeProvider>
       </>
     )}
   />
