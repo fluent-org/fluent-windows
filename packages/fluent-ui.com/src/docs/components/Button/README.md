@@ -9,7 +9,7 @@ components: Button
 
 A button gives the user a way to trigger an immediate action. Some buttons are specialized for particular tasks, such as navigation, repeated actions, or presenting menus.
 
-## Primary Buttons
+## Variant
 
 Button default style
 
@@ -17,10 +17,28 @@ Button default style
 <Button>Primary</Button>
 ```
 
-## Accent Buttons
-
 Highlighted button
 
 ```jsx
 <Button variant='accent'>Accent</Button>
+```
+
+## Disabled
+
+Disabled button
+
+```jsx
+<Button disabled>Disabled</Button>
+```
+
+## Sizes
+
+Use the `size` property.
+
+```jsx
+<>
+  <Button size='small'>small</Button>
+  <Button size='medium'>medium</Button>
+  <Button size='large'>large</Button>
+</>
 ```

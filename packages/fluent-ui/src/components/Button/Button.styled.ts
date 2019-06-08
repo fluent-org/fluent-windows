@@ -7,6 +7,7 @@ const base = css`
   min-width: 64px;
   transition: ${th.transition('button')};
   border: 2px solid transparent;
+  font-family: ${th.font('button')};
   &:hover {
     border-color: ${th.color('border')};
   }

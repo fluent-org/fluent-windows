@@ -12,7 +12,13 @@ const Playground: SFC<PlaygroundProps> = ({ children }: PlaygroundProps): ReactE
   return (
     <section>
       <LiveProvider code={children.props.children} scope={scope}>
-        <LivePreview />
+        <LivePreview
+          css={`
+            > * {
+              margin: 8px;
+            }
+          `}
+        />
         <LiveEditor className="markdown-pre" />
         <LiveError />
       </LiveProvider>

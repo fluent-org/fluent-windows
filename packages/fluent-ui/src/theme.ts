@@ -24,10 +24,15 @@ interface Transitions {
   button: CSS.TransitionProperty
 }
 
+interface Fonts {
+  button: CSS.FontFamilyProperty
+}
+
 export interface Theme {
   colors?: Colors
   sizes?: Sizes
   transitions?: Transitions
+  fonts?: Fonts
 }
 
 const colors: Colors = {
@@ -49,13 +54,13 @@ const colors: Colors = {
 
 const sizes: Sizes = {
   small: {
-    padding: '2px 6px'
+    padding: '2px 18px'
   },
   medium: {
-    padding: '4px 14px'
+    padding: '4px 26px'
   },
   large: {
-    padding: '6px 22px'
+    padding: '6px 38px'
   }
 }
 
@@ -63,10 +68,15 @@ const transitions: Transitions = {
   button: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms'
 }
 
+const fonts: Fonts = {
+  button: 'PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto'
+}
+
 const defaultTheme: Theme = {
   colors,
   sizes,
-  transitions
+  transitions,
+  fonts
 }
 
 export default defaultTheme
