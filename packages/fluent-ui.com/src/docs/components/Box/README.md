@@ -22,15 +22,17 @@ Backdrop filter is currently baked under CSS Filters Level 2, and at the time of
 </div>
 ```
 
-## Without Acrylic
+## Reveal
 
 ```jsx
 <div style={{
   padding: '6em 8em',
   background: 'url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover'
 }}>
-  <Box padding={{ sm: 15, lg: 25 }} color='#fff'>
-    Acrylic
+  <Box acrylic={true} padding={{ sm: 15, lg: 25 }} color='#fff' bg='#fff'>
+    <Button style={{margin: 5}}>Button 1</Button>
+    <Button style={{margin: 5}}>Button 2</Button>
+    <Button style={{margin: 5}}>Button 3</Button>
   </Box>
 </div>
 ```

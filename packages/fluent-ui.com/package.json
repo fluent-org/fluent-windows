@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@fluent-ui/core": "^0.0.1",
+    "@fluent-ui/icons": "^0.0.1",
     "gatsby": "^2.8.3",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -40,12 +41,14 @@
     "markdown-to-jsx": "^6.10.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-live": "^2.1.2"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "^6.9.0",
+    "@types/react-copy-to-clipboard": "^4.2.6",
     "@types/react-helmet": "^5.0.8",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.11",

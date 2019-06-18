@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@xstyled/styled-components": "^1.1.1",
+    "fluent-reveal-effect": "^1.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

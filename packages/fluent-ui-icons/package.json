@@ -1,0 +1,40 @@
+{
+  "name": "@fluent-ui/icons",
+  "version": "0.0.1",
+  "description": "Fluent Design System Svg Icon.",
+  "author": "chenyueban <chenyueban@qq.com>",
+  "keywords": [
+    "react",
+    "fluent-design",
+    "fluent-ui",
+    "icons"
+  ],
+  "main": "build/umd/index.js",
+  "module": "build/es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenyueban/fluent-ui",
+    "directory": "packages/fluent-ui"
+  },
+  "homepage": "https://fluent-ui.com/",
+  "bugs": {
+    "url": "https://github.com/chenyueban/fluent-ui/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "yarn build:cjs && yarn build:es && yarn build:umd",
+    "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build/cjs",
+    "build:es": "cross-env NODE_ENV=production tsc --module ES6 --outDir ./build/es",
+    "build:umd": "cross-env NODE_ENV=production tsc --module UMD --outDir ./build/umd",
+    "start": "cross-env NODE_ENV=production tsc -w --module ES6 --outDir ./build/es"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "styled-components": ">= 4.X"
+  }
+}

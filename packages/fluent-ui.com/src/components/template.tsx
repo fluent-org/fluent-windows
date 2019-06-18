@@ -5,6 +5,8 @@ import Markdown from 'markdown-to-jsx'
 import Layout from './layout'
 import Playground from './playground'
 
+import IconTemplate from '../docs/components/Icon/template'
+
 interface TemplateProps {
   data: {
     doc: {
@@ -27,7 +29,8 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
           <Markdown
             options={{
               overrides: {
-                pre: Playground as any
+                pre: Playground as any,
+                IconTemplate
               }
             }}
           >
