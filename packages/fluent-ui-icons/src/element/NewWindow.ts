@@ -1,0 +1,14 @@
+export default {
+  type: 'svg',
+  props: {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 2048 2048',
+    children: {
+      type: 'path',
+      props: {
+        d:
+          'M1024 1018v646H896v-646l-163 163-90-90 317-317 317 317-90 90zm768-635v1282h-641v-129h512V512H256v1024h512v129H127V383h1665z'
+      }
+    }
+  }
+}

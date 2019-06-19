@@ -3,18 +3,18 @@ title: Command
 components: Command
 ---
 
-# Commands
+# Command
 
-<p class="description">Commands give users a way to trigger an immediate action.</p>
+<p class="description">Command bars provide users with easy access to the most common tasks within the app.</p>
 
-`
-yarn add @fluent-ui/icons
-`
-
-## Variant
+## Default
 
 Command default style
 
 ```jsx
-<Command>Primary</Command>
+<Command>
+  <Command.Item>
+    <Icon type=""/>
+  </Command.Item>
+</Command>
 ```

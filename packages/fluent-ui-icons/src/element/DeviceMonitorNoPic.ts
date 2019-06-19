@@ -1,24 +1,13 @@
 export default {
   type: 'svg',
-  key: null,
-  ref: null,
   props: {
-    version: '1.1',
     xmlns: 'http://www.w3.org/2000/svg',
-    width: '32',
-    height: '32',
-    viewBox: '0 0 32 32',
+    viewBox: '0 0 2048 2048',
     children: {
       type: 'path',
-      key: null,
-      ref: null,
       props: {
-        d: 'M30 20h-30v-20h30v20zM2 18h26v-16h-26v16z'
-      },
-      _owner: null,
-      _store: {}
+        d: 'M1920 1280H0V0h1920v1280zM128 1152h1664V128H128v1024z'
+      }
     }
-  },
-  _owner: null,
-  _store: {}
+  }
 }

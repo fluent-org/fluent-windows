@@ -1,25 +1,14 @@
 export default {
   type: 'svg',
-  key: null,
-  ref: null,
   props: {
-    version: '1.1',
     xmlns: 'http://www.w3.org/2000/svg',
-    width: '32',
-    height: '32',
-    viewBox: '0 0 32 32',
+    viewBox: '0 0 2048 2048',
     children: {
       type: 'path',
-      key: null,
-      ref: null,
       props: {
         d:
-          'M0 30v-22h32v22h-32zM24 12v2h2v-2h-2zM24 16v2h2v-2h-2zM24 20v2h2v-2h-2zM18 12v2h2v-2h-2zM18 16v2h2v-2h-2zM18 20v2h2v-2h-2zM18 24v2h2v-2h-2zM12 12v2h2v-2h-2zM12 16v2h2v-2h-2zM12 20v2h2v-2h-2zM12 24v2h2v-2h-2zM6 16v2h2v-2h-2zM6 20v2h2v-2h-2zM6 24v2h2v-2h-2zM26 2h6v4h-32v-4h6v-2h2v2h16v-2h2v2z'
-      },
-      _owner: null,
-      _store: {}
+          'M0 1920V512h2048v1408H0zM1536 768v128h128V768h-128zm0 256v128h128v-128h-128zm0 256v128h128v-128h-128zm-384-512v128h128V768h-128zm0 256v128h128v-128h-128zm0 256v128h128v-128h-128zm0 256v128h128v-128h-128zM768 768v128h128V768H768zm0 256v128h128v-128H768zm0 256v128h128v-128H768zm0 256v128h128v-128H768zm-384-512v128h128v-128H384zm0 256v128h128v-128H384zm0 256v128h128v-128H384zM1664 128h384v256H0V128h384V0h128v128h1024V0h128v128z'
+      }
     }
-  },
-  _owner: null,
-  _store: {}
+  }
 }

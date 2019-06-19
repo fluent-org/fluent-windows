@@ -1,25 +1,14 @@
 export default {
   type: 'svg',
-  key: null,
-  ref: null,
   props: {
-    version: '1.1',
     xmlns: 'http://www.w3.org/2000/svg',
-    width: '32',
-    height: '32',
-    viewBox: '0 0 32 32',
+    viewBox: '0 0 2048 2048',
     children: {
       type: 'path',
-      key: null,
-      ref: null,
       props: {
         d:
-          'M30.125 22h1.875v10h-32v-10h1.875l2-4h-1.875v-8l5-10h18l5 10v8h-1.875zM12 12h-2.891l-2.984 6h5.875v-6zM14 12v6h4v-6h-4zM20 12v6h5.875l-2.984-6h-2.891zM28 16v-4h-2.891l2 4h0.891zM8.234 2l-4 8h23.531l-4-8h-15.531zM4 16h0.891l2-4h-2.891v4zM5.109 20l-0.984 2h23.75l-0.984-2h-21.781zM30 30v-6h-28v6h28zM20 26v2h-8v-2h8z'
-      },
-      _owner: null,
-      _store: {}
+          'M1928 1408h120v640H0v-640h120l128-256H128V640L448 0h1152l320 640v512h-120zM768 768H583l-191 384h376V768zm128 0v384h256V768H896zm384 0v384h376l-191-384h-185zm512 256V768h-185l128 256h57zM527 128L271 640h1506l-256-512H527zm-271 896h57l128-256H256v256zm71 256l-63 128h1520l-63-128H327zm1593 640v-384H128v384h1792zm-640-256v128H768v-128h512z'
+      }
     }
-  },
-  _owner: null,
-  _store: {}
+  }
 }

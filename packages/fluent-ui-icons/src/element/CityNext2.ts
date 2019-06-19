@@ -1,25 +1,14 @@
 export default {
   type: 'svg',
-  key: null,
-  ref: null,
   props: {
-    version: '1.1',
     xmlns: 'http://www.w3.org/2000/svg',
-    width: '32',
-    height: '32',
-    viewBox: '0 0 32 32',
+    viewBox: '0 0 2048 2048',
     children: {
       type: 'path',
-      key: null,
-      ref: null,
       props: {
         d:
-          'M8 16h-2v-4h2v4zM12 16h-2v-4h2v4zM16 16h-2v-4h2v4zM8 22h-2v-4h2v4zM12 22h-2v-4h2v4zM16 22h-2v-4h2v4zM22 12q1.656 0 3.117 0.625t2.547 1.711 1.711 2.547 0.625 3.117v12h-2v-12q0-1.234-0.469-2.328t-1.289-1.914-1.914-1.289-2.328-0.469h-2v18h-8v-6h-2v6h-8v-24h2v-4h4v-4h6v4h4v4h2v4h2zM10 4h2v-2h-2v2zM6 8h10v-2h-10v2zM18 10h-14v20h4v-6h6v6h4v-20zM22 18h4v2h-4v-2zM22 22h4v2h-4v-2zM22 26h4v2h-4v-2zM22 30h4v2h-4v-2z'
-      },
-      _owner: null,
-      _store: {}
+          'M512 1024H384V768h128v256zm256 0H640V768h128v256zm256 0H896V768h128v256zm-512 384H384v-256h128v256zm256 0H640v-256h128v256zm256 0H896v-256h128v256zm384-640q106 0 199.5 40t163 109.5 109.5 163 40 199.5v768h-128v-768q0-79-30-149t-82.5-122.5T1557 926t-149-30h-128v1152H768v-384H640v384H128V512h128V256h256V0h384v256h256v256h128v256h128zM640 256h128V128H640v128zM384 512h640V384H384v128zm768 128H256v1280h256v-384h384v384h256V640zm256 512h256v128h-256v-128zm0 256h256v128h-256v-128zm0 256h256v128h-256v-128zm0 256h256v128h-256v-128z'
+      }
     }
-  },
-  _owner: null,
-  _store: {}
+  }
 }
