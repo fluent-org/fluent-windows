@@ -1,17 +1,25 @@
-import React, { SFC, ReactElement, forwardRef } from 'react'
-import styled, { Box as BaseBox } from '@xstyled/styled-components'
+import React, {
+  ReactElement,
+  forwardRef,
+  ReactNode,
+  ComponentPropsWithoutRef
+} from 'react'
+import styled, { Box as Base } from '@xstyled/styled-components'
+import { omit } from '../../utils'
+import { StylesProps } from './style'
 
-interface BoxProps {
-  as?: string
+interface BoxProps extends StylesProps, ComponentPropsWithoutRef<'div'> {
   acrylic?: boolean
-  bg?: string
   reveal?: boolean
+  children?: ReactNode
+  as?: keyof JSX.IntrinsicElements
 }
 
 const Acrylic = styled.box`
   position: relative;
   overflow: hidden;
   @supports (backdrop-filter: blur(10px)) {
+    background: none !important;
     backdrop-filter: blur(10px);
     &::before,
     &::after {
@@ -25,7 +33,8 @@ const Acrylic = styled.box`
     &::before {
       z-index: -2;
       opacity: 0.5;
-      background: ${(props: BoxProps): string => props.bg!};
+      background-color: ${({ backgroundColor }: BoxProps): string =>
+        backgroundColor!};
     }
     &::after {
       z-index: -1;
@@ -35,18 +44,21 @@ const Acrylic = styled.box`
   }
 `
 
-const Box: SFC<BoxProps> = forwardRef<{}, BoxProps>(
+const BaseBox = Base as any
+
+const Box = forwardRef<HTMLDivElement, BoxProps>(
   (props: BoxProps, ref): ReactElement => {
     if (props.acrylic) {
       return <Acrylic ref={ref} {...props} />
     }
-    return <BaseBox ref={ref} {...props} />
+    const otherProps = omit(props, ['acrylic'])
+    return <BaseBox ref={ref} {...otherProps} />
   }
 )
 
 Box.defaultProps = {
   acrylic: false,
-  bg: '#000'
+  backgroundColor: '#e6e6e6'
 }
 
 Box.displayName = 'FBox'

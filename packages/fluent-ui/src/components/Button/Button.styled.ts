@@ -1,10 +1,12 @@
 import styled, { css } from '@xstyled/styled-components'
 import { variant, th } from '@xstyled/system'
+import { ButtonProps } from './Button'
 
 const base = css`
   outline: none;
   cursor: pointer;
   min-width: 64px;
+  line-height: 1;
   transition: ${th.transition('button')};
   border: 2px solid transparent;
   font-family: ${th.font('button')};
@@ -54,7 +56,7 @@ const sizes = variant({
   }
 })
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
   ${base}
   ${variants}
   ${sizes}

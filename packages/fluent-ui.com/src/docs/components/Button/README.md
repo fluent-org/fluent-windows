@@ -20,7 +20,7 @@ Button default style
 Highlighted button
 
 ```jsx
-<Button variant='accent'>Accent</Button>
+<Button variant="accent">Accent</Button>
 ```
 
 ## Disabled
@@ -37,8 +37,8 @@ Use the `size` property.
 
 ```jsx
 <>
-  <Button size='small'>small</Button>
-  <Button size='medium'>medium</Button>
-  <Button size='large'>large</Button>
+  <Button size="small">small</Button>
+  <Button size="medium">medium</Button>
+  <Button size="large">large</Button>
 </>
 ```

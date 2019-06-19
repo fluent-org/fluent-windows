@@ -41,6 +41,7 @@
     "styled-components": ">= 4.X"
   },
   "dependencies": {
+    "@fluent-ui/icons": "^0.0.1",
     "@xstyled/styled-components": "^1.1.1",
     "fluent-reveal-effect": "^1.0.0",
     "normalize.css": "^8.0.1"
@@ -53,6 +54,7 @@
     "@types/styled-components": "4.1.8",
     "codecov": "^3.5.0",
     "cross-env": "^5.2.0",
+    "csstype": "^2.6.5",
     "eslint-plugin-jest": "^22.6.4",
     "jest": "^23.6.0",
     "jest-config": "^23.6.0",

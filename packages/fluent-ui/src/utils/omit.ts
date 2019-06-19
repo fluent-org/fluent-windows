@@ -2,7 +2,7 @@ interface Obj {
   [key: string]: any
 }
 
-function omit(obj: object, fields: string[]): object {
+function omit(obj: Obj, fields: string[]): Omit<Obj, string> {
   const shallowCopy: Obj = {
     ...obj
   }

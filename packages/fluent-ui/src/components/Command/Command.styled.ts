@@ -1,11 +1,16 @@
-import styled, { css } from '@xstyled/styled-components'
-import { variant, th } from '@xstyled/system'
+import styled from '@xstyled/styled-components'
 
-const StyledButton = styled.header`
+export const StyledContent = styled.div`
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-right: 5px;
 `
 
-export default StyledButton
+export const StyledPrimary = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+`

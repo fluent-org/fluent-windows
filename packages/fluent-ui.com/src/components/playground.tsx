@@ -2,6 +2,7 @@ import React, { ReactElement, SFC } from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import * as Fluent from '@fluent-ui/core'
 import * as Icon from '@fluent-ui/icons'
+import { theme } from '../utils/theme'
 
 const scope = { ...Fluent, ...Icon }
 
@@ -12,7 +13,7 @@ interface PlaygroundProps {
 const Playground: SFC<PlaygroundProps> = ({ children }: PlaygroundProps): ReactElement => {
   return (
     <section>
-      <LiveProvider code={children.props.children} scope={scope}>
+      <LiveProvider code={children.props.children} scope={scope} theme={theme}>
         <LivePreview
           css={`
             > * {
@@ -20,7 +21,14 @@ const Playground: SFC<PlaygroundProps> = ({ children }: PlaygroundProps): ReactE
             }
           `}
         />
-        <LiveEditor className="markdown-pre" />
+        <LiveEditor
+          css={`
+            font-size: 14px;
+            textarea {
+              outline: none;
+            }
+          `}
+        />
         <LiveError />
       </LiveProvider>
     </section>

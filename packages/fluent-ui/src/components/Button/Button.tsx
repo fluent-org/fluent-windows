@@ -1,17 +1,31 @@
-import React, { SFC, ReactElement, forwardRef, ReactNode } from 'react'
+import React, {
+  ReactElement,
+  forwardRef,
+  ReactNode,
+  MouseEventHandler,
+  ComponentPropsWithoutRef
+} from 'react'
 import StyledButton from './Button.styled'
 
-interface ButtonProps {
+export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   variant?: 'primary' | 'accent'
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'
 
+  onClick?: MouseEventHandler<HTMLButtonElement>
   children: ReactNode
 }
 
-const Button: SFC<ButtonProps> = forwardRef<{}, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { variant = 'primary', disabled, size, children, ...rest }: ButtonProps,
+    {
+      variant = 'primary',
+      disabled,
+      size,
+      onClick,
+      children,
+      ...rest
+    }: ButtonProps,
     ref
   ): ReactElement => (
     <StyledButton
@@ -19,6 +33,7 @@ const Button: SFC<ButtonProps> = forwardRef<{}, ButtonProps>(
       variant={variant}
       disabled={disabled}
       size={size}
+      onClick={onClick}
       {...rest}
     >
       {children}

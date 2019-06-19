@@ -8,8 +8,8 @@ interface IconProps {
 }
 
 const SvgIconStyled = styled.svg`
-  width: 1em;
-  height: 1em;
+  width: 0.83em;
+  height: 0.83em;
   display: inline-block;
   user-select: none;
   font-size: 1.5rem;

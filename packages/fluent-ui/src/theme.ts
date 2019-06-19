@@ -1,8 +1,10 @@
 import * as CSS from 'csstype'
 
 interface BaseColors {
+  secondary?: CSS.ColorProperty
   primary?: CSS.ColorProperty
   accent?: CSS.ColorProperty
+  selected?: CSS.ColorProperty
   white?: CSS.ColorProperty
   black?: CSS.ColorProperty
   border?: CSS.ColorProperty
@@ -36,15 +38,19 @@ export interface Theme {
 }
 
 const colors: Colors = {
+  secondary: 'rgba(0, 0, 0, 0.1)',
   primary: 'rgba(0, 0, 0, 0.2)',
   accent: 'rgba(0, 120, 215, 1)',
+  selected: 'rgba(0, 120, 215, 0.4)',
   white: 'rgba(255, 255, 255, 1)',
   black: 'rgba(0, 0, 0, 1)',
   border: 'rgba(0, 0, 0, 0.4)',
   modes: {
     dark: {
+      secondary: 'rgba(0, 0, 0, 0.1)',
       primary: 'rgba(0, 0, 0, 0.2)',
       accent: 'rgba(0, 120, 215, 1)',
+      selected: 'rgba(0, 120, 215, 0.4)',
       white: 'rgba(255, 255, 255, 1)',
       black: 'rgba(0, 0, 0, 1)',
       border: 'rgba(0, 0, 0, 0.4)'
