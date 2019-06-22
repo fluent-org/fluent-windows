@@ -43,7 +43,6 @@
   "dependencies": {
     "@fluent-ui/icons": "^0.0.1",
     "@xstyled/styled-components": "^1.1.1",
-    "fluent-reveal-effect": "^1.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

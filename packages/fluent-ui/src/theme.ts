@@ -1,5 +1,8 @@
 import * as CSS from 'csstype'
 
+// eslint-disable-next-line
+export interface ThemeProps {}
+
 interface BaseColors {
   secondary?: CSS.ColorProperty
   primary?: CSS.ColorProperty
@@ -8,13 +11,13 @@ interface BaseColors {
   white?: CSS.ColorProperty
   black?: CSS.ColorProperty
   border?: CSS.ColorProperty
+  gray100?: CSS.ColorProperty
+  gray200?: CSS.ColorProperty
+  gray300?: CSS.ColorProperty
 }
 
-interface Colors extends BaseColors {
-  modes?: {
-    dark: BaseColors
-  }
-}
+// eslint-disable-next-line
+interface Colors extends BaseColors {}
 
 interface Sizes {
   small?: any
@@ -45,17 +48,9 @@ const colors: Colors = {
   white: 'rgba(255, 255, 255, 1)',
   black: 'rgba(0, 0, 0, 1)',
   border: 'rgba(0, 0, 0, 0.4)',
-  modes: {
-    dark: {
-      secondary: 'rgba(0, 0, 0, 0.1)',
-      primary: 'rgba(0, 0, 0, 0.2)',
-      accent: 'rgba(0, 120, 215, 1)',
-      selected: 'rgba(0, 120, 215, 0.4)',
-      white: 'rgba(255, 255, 255, 1)',
-      black: 'rgba(0, 0, 0, 1)',
-      border: 'rgba(0, 0, 0, 0.4)'
-    }
-  }
+  gray100: 'rgba(230, 230, 230, 1)',
+  gray200: 'rgba(215, 215, 215, 1)',
+  gray300: 'rgba(185, 185, 185, 1)'
 }
 
 const sizes: Sizes = {

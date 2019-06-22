@@ -14,3 +14,10 @@ export const StyledPrimary = styled.div`
   justify-content: flex-end;
   flex: 1;
 `
+
+export const RevealButtonWrapper = styled.div.attrs({
+  className: 'fluent_reveal_button'
+})`
+  margin: 1px;
+  padding: 1px;
+`

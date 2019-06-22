@@ -2,15 +2,18 @@ import React, {
   ReactElement,
   forwardRef,
   ReactNode,
-  ComponentPropsWithoutRef
+  ComponentPropsWithoutRef,
+  HTMLAttributes
 } from 'react'
 import styled, { Box as Base } from '@xstyled/styled-components'
 import { omit } from '../../utils'
 import { StylesProps } from './style'
 
-interface BoxProps extends StylesProps, ComponentPropsWithoutRef<'div'> {
-  acrylic?: boolean
-  reveal?: boolean
+export interface BoxProps
+  extends StylesProps,
+    ComponentPropsWithoutRef<'div'>,
+    HTMLAttributes<HTMLDivElement> {
+  acrylic: boolean
   children?: ReactNode
   as?: keyof JSX.IntrinsicElements
 }
@@ -33,6 +36,7 @@ const Acrylic = styled.box`
     &::before {
       z-index: -2;
       opacity: 0.5;
+      // @ts-ignore
       background-color: ${({ backgroundColor }: BoxProps): string =>
         backgroundColor!};
     }
@@ -57,8 +61,7 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(
 )
 
 Box.defaultProps = {
-  acrylic: false,
-  backgroundColor: '#e6e6e6'
+  acrylic: false
 }
 
 Box.displayName = 'FBox'

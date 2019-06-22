@@ -3,11 +3,14 @@ import React, {
   forwardRef,
   ReactNode,
   MouseEventHandler,
-  ComponentPropsWithoutRef
+  ComponentPropsWithoutRef,
+  ButtonHTMLAttributes
 } from 'react'
 import StyledButton from './Button.styled'
 
-export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
+export interface ButtonProps
+  extends ComponentPropsWithoutRef<'button'>,
+    ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'accent'
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'

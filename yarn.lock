@@ -6240,11 +6240,6 @@ flatted@^2.0.0:
   resolved "https://registry.npmjs.org/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
   integrity sha512-R+H8IZclI8AAkSBRQJLVOsxwAoHd6WC40b4QTNWIjzAa6BXOBfQcM587MXDTVPeYaopFNWHUFLx7eNmHDSxMWg==
 
-fluent-reveal-effect@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/fluent-reveal-effect/-/fluent-reveal-effect-1.0.0.tgz#0c201c4bddd52aa009ecbd8b2ccb83c2c81677a6"
-  integrity sha512-jcfLuisUUsQAWHFGZDnffBgYW945ngdgX57Qk2Vkkwub00DYyhpTp+GkgLQSu82Ti0hLJyJ4zvOme6Iy1HwWDA==
-
 flush-write-stream@^1.0.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/flush-write-stream/-/flush-write-stream-1.1.1.tgz#8dd7d873a1babc207d94ead0c2e0e44276ebf2e8"
