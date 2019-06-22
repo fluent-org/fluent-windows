@@ -5,7 +5,9 @@ import React, {
   ReactComponentElement,
   ForwardRefExoticComponent,
   useEffect,
-  createContext
+  createContext,
+  useState,
+  MouseEvent
 } from 'react'
 import {
   StyledContent,
@@ -19,6 +21,7 @@ import CommandButton from '../CommandButton'
 import { omit } from '../../utils'
 import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../../theme'
+import Portal from '../Portal'
 
 type Children =
   | ReactComponentElement<typeof CommandButton>
@@ -58,7 +61,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
         if (child.type.name! === 'Content') {
           container.content.push(child)
         } else if (child.type.name === 'Secondary') {
-          container.secondary.push(child)
+          container.secondary = child.props.children
         } else {
           container.primary.push(child)
         }
@@ -78,6 +81,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
                 const gradientSize = 80
                 const lightColor = 'rgba(160,160,160,1)'
                 const gradient = `radial-gradient(circle ${gradientSize}px at ${x}px ${y}px, ${lightColor}, rgba(255,255,255,0))`
+                // @ts-ignore
                 item.style.background = gradient
               }
             )
@@ -85,6 +89,19 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
         )
       }
     }, [reveal])
+
+    const [secondaryVisible, setSecondaryVisible] = useState(false)
+    const [portalStyle, setPortalStyle] = useState()
+    function handleSecondaryVisible(e: MouseEvent<HTMLButtonElement>): void {
+      const rect = e.currentTarget.getBoundingClientRect()
+      const position = {
+        position: 'absolute',
+        left: `${rect.left + window.scrollX}px`,
+        top: `${rect.top + window.scrollY + rect.height}px`
+      }
+      setSecondaryVisible(!secondaryVisible)
+      setPortalStyle(position)
+    }
 
     // 当使用 acrylic 时 reveal 不生效
     reveal = acrylic ? false : reveal
@@ -99,8 +116,8 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
           <StyledPrimary>
             {reveal
               ? container.primary.map(
-                  (primary, i): ReactElement => (
-                    <RevealButtonWrapper key={i}>{primary}</RevealButtonWrapper>
+                  (child, i): ReactElement => (
+                    <RevealButtonWrapper key={i}>{child}</RevealButtonWrapper>
                   )
                 )
               : container.primary}
@@ -108,11 +125,28 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
           {!!container.secondary.length &&
             (reveal ? (
               <RevealButtonWrapper>
-                <CommandButton icon="More" style={{ height: '100%' }} />
+                <CommandButton
+                  icon="More"
+                  style={{ height: '100%' }}
+                  onClick={handleSecondaryVisible}
+                />
               </RevealButtonWrapper>
             ) : (
-              <CommandButton icon="More" />
+              <CommandButton icon="More" onClick={handleSecondaryVisible} />
             ))}
+          {secondaryVisible && (
+            <Portal style={portalStyle}>
+              <Box
+                width={130}
+                display="flex"
+                flexDirection="column"
+                backgroundColor="#e6e6e6"
+                acrylic={acrylic}
+              >
+                {container.secondary}
+              </Box>
+            </Portal>
+          )}
         </CommandContext.Provider>
       </Box>
     )

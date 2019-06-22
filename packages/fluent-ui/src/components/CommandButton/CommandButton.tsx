@@ -40,9 +40,11 @@ const CommandButtonStyled = styled.button<{
   }
 `
 
-const CommandButtonTextStyled = styled.div`
+const CommandButtonTextStyled = styled.div<{
+  icon?: boolean
+}>`
   font-size: 12px;
-  margin-top: 6px;
+  margin-top: ${({ icon }): string => (icon ? '6px' : '0')};
   text-overflow: ellipsis;
   overflow: hidden;
 `
@@ -62,7 +64,9 @@ const CommandButton = forwardRef<HTMLButtonElement, CommandButtonProps>(
         >
           {icon && <Icon type={icon} />}
           {children && (
-            <CommandButtonTextStyled>{children}</CommandButtonTextStyled>
+            <CommandButtonTextStyled icon={!!icon}>
+              {children}
+            </CommandButtonTextStyled>
           )}
         </CommandButtonStyled>
       )}

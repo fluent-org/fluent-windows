@@ -13,7 +13,7 @@ export interface BoxProps
   extends StylesProps,
     ComponentPropsWithoutRef<'div'>,
     HTMLAttributes<HTMLDivElement> {
-  acrylic: boolean
+  acrylic?: boolean
   children?: ReactNode
   as?: keyof JSX.IntrinsicElements
 }
