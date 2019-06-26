@@ -6,18 +6,23 @@ import React, {
   ReactComponentElement,
   createContext
 } from 'react'
-import Box from '../Box'
 import Item, { ID } from './Item'
 import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../../theme'
 import Header from './Header'
 import Footer from './Footer'
 import Content from './Content'
-import { StyledHeader, StyledFooter, StyledContent } from './Navigation.styled'
+import {
+  StyledHeader,
+  StyledFooter,
+  StyledContent,
+  StyledContainer
+} from './Navigation.styled'
 import { useAction } from '../../hooks/useAction'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
   response?: boolean
+  expanded?: boolean
   value?: ID
   onChange?: (id: ID) => void
 }
@@ -41,11 +46,14 @@ type Child =
   | ReactComponentElement<typeof Content>
   | any
 
-export const NavigationContext = createContext<ID>('')
+export const NavigationContext = createContext<{
+  value: ID
+  expanded: boolean
+}>({ value: '', expanded: true })
 
 const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
   (
-    { value, onChange, children, ...rest }: NavigationProps,
+    { expanded, value, onChange, children, ...rest }: NavigationProps,
     ref
   ): ReactElement => {
     const container: Container = {
@@ -66,6 +74,7 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
       }
     )
 
+    // handle active item
     useAction(
       'navigation/handleActive',
       (id): void => {
@@ -74,20 +83,17 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
       [value]
     )
 
+    const contextValue = {
+      value: value as ID,
+      expanded: expanded as boolean
+    }
     return (
-      <NavigationContext.Provider value={value as ID}>
-        <Box
-          ref={ref}
-          maxWidth={260}
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-between"
-          {...rest}
-        >
+      <NavigationContext.Provider value={contextValue}>
+        <StyledContainer expanded={expanded as boolean} ref={ref} {...rest}>
           <StyledHeader>{container.header}</StyledHeader>
           <StyledContent>{container.content}</StyledContent>
           <StyledFooter>{container.footer}</StyledFooter>
-        </Box>
+        </StyledContainer>
       </NavigationContext.Provider>
     )
   }
@@ -101,7 +107,8 @@ Navigation.Item = Item
 Navigation.displayName = 'FNavigation'
 
 Navigation.defaultProps = {
-  backgroundColor: '#e6e6e6'
+  backgroundColor: '#e6e6e6',
+  expanded: true
 }
 
 export default Navigation

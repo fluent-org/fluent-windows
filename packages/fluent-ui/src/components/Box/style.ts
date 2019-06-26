@@ -163,6 +163,6 @@ export interface StylesProps {
    */
   opacity?: number
   overflow?: CSS.OverflowProperty
-  Transition?: CSS.TransitionProperty
+  transition?: CSS.TransitionProperty
   basics?: string
 }

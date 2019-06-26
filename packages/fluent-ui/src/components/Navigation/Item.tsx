@@ -58,6 +58,21 @@ const StyledItemActiveBar = styled.div<StyledItemActiveBarProps>`
     active ? 'scale3d(1,1,1)' : 'scale3d(0,0,0)'};
   transition: ${th.transition('navigation')};
 `
+const StyledItemIconWrapper = styled.div<{ expanded: boolean }>`
+  margin-right: ${({ expanded }): string => (expanded ? '12px' : '0px')};
+  height: 100%;
+  transition: ${th.transition('navigation')};
+`
+const StyledItemTextWrapper = styled.div<{ expanded: boolean }>`
+  width: ${({ expanded }): string => (expanded ? 'auto' : '0px')};
+  opacity: ${({ expanded }): number => (expanded ? 1 : 0)};
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: ${th.transition('navigation')};
+`
 
 const Item = ({ id, children }: ItemProps): ReactElement => {
   const container: {
@@ -83,7 +98,7 @@ const Item = ({ id, children }: ItemProps): ReactElement => {
   )
 
   // handle active item
-  const activeID = useContext(NavigationContext)
+  const { value: activeID, expanded } = useContext(NavigationContext)
   const dispatch = useDispatch({ type: 'navigation/handleActive', payload: id })
   function handleItemClick(): void {
     dispatch()
@@ -99,12 +114,12 @@ const Item = ({ id, children }: ItemProps): ReactElement => {
   return (
     <StyledItemWrapper onClick={handleItemClick}>
       {id && <StyledItemActiveBar active={active} />}
-      <Box marginRight={12} height="100%">
+      <StyledItemIconWrapper expanded={expanded}>
         {container.icon}
-      </Box>
-      <Box flex={1} display="flex" alignItems="center" overflow="hidden">
+      </StyledItemIconWrapper>
+      <StyledItemTextWrapper expanded={expanded}>
         {container.content}
-      </Box>
+      </StyledItemTextWrapper>
     </StyledItemWrapper>
   )
 }
