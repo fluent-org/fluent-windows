@@ -18,10 +18,10 @@ const SvgIconStyled = styled.svg`
 `
 
 const Icon = forwardRef<{}, IconProps>(
-  ({ type }: IconProps, ref: Ref<any>): ReactElement => {
+  ({ type, ...rest }: IconProps, ref: Ref<any>): ReactElement => {
     const vdom = (Icons as any)[type]
     return (
-      <SvgIconStyled ref={ref} {...omit(vdom.props, ['children'])}>
+      <SvgIconStyled ref={ref} {...omit(vdom.props, ['children'])} {...rest}>
         <path {...vdom.props.children.props} />
       </SvgIconStyled>
     )

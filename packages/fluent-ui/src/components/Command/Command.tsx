@@ -7,7 +7,9 @@ import React, {
   useEffect,
   createContext,
   useState,
-  MouseEvent
+  MouseEvent,
+  useRef,
+  RefObject
 } from 'react'
 import {
   StyledContent,
@@ -22,8 +24,9 @@ import { omit } from '../../utils'
 import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../../theme'
 import Portal from '../Portal'
+import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 
-type Children =
+type Child =
   | ReactComponentElement<typeof CommandButton>
   | ReactComponentElement<typeof Content>
   | ReactComponentElement<typeof Secondary>
@@ -31,7 +34,7 @@ type Children =
 
 interface CommandProps extends BoxProps, ThemeProps {
   reveal: boolean
-  children: Children[]
+  children: Child[]
 }
 
 interface Container {
@@ -57,7 +60,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
     }
     Children.forEach(
       children,
-      (child: Children): void => {
+      (child: Child): void => {
         if (child.type.name! === 'Content') {
           container.content.push(child)
         } else if (child.type.name === 'Secondary') {
@@ -99,12 +102,21 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
         left: `${rect.left + window.scrollX}px`,
         top: `${rect.top + window.scrollY + rect.height}px`
       }
-      setSecondaryVisible(!secondaryVisible)
+      setSecondaryVisible((visible): boolean => !visible)
       setPortalStyle(position)
     }
 
     // 当使用 acrylic 时 reveal 不生效
     reveal = acrylic ? false : reveal
+
+    // 点击 More 菜单之外的区域关闭 More 菜单
+    const secondaryRef = useRef<HTMLDivElement>(null)
+    useOnClickOutside(
+      secondaryRef,
+      (): void => {
+        setSecondaryVisible((visible): boolean => !visible)
+      }
+    )
 
     const otherProps = omit(rest, ['display'])
     return (
@@ -137,6 +149,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
           {secondaryVisible && (
             <Portal style={portalStyle}>
               <Box
+                ref={secondaryRef}
                 width={130}
                 display="flex"
                 flexDirection="column"

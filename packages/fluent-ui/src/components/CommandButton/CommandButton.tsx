@@ -2,7 +2,8 @@ import React, {
   ReactElement,
   MouseEventHandler,
   forwardRef,
-  ButtonHTMLAttributes
+  ButtonHTMLAttributes,
+  useContext
 } from 'react'
 import styled from '@xstyled/styled-components'
 import { th } from '@xstyled/system'
@@ -53,25 +54,24 @@ const CommandButton = forwardRef<HTMLButtonElement, CommandButtonProps>(
   (
     { icon, onClick, children, ...rest }: CommandButtonProps,
     ref
-  ): ReactElement => (
-    <CommandContext.Consumer>
-      {(reveal): ReactElement => (
-        <CommandButtonStyled
-          onClick={onClick}
-          ref={ref}
-          reveal={reveal}
-          {...rest}
-        >
-          {icon && <Icon type={icon} />}
-          {children && (
-            <CommandButtonTextStyled icon={!!icon}>
-              {children}
-            </CommandButtonTextStyled>
-          )}
-        </CommandButtonStyled>
-      )}
-    </CommandContext.Consumer>
-  )
+  ): ReactElement => {
+    const reveal = useContext(CommandContext)
+    return (
+      <CommandButtonStyled
+        onClick={onClick}
+        ref={ref}
+        reveal={reveal}
+        {...rest}
+      >
+        {icon && <Icon type={icon} />}
+        {children && (
+          <CommandButtonTextStyled icon={!!icon}>
+            {children}
+          </CommandButtonTextStyled>
+        )}
+      </CommandButtonStyled>
+    )
+  }
 )
 
 CommandButton.displayName = 'FCommandButton'
