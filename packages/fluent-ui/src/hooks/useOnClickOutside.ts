@@ -7,7 +7,7 @@ export function useOnClickOutside(
   useEffect((): (() => void) => {
     const listener = (event: MouseEvent | TouchEvent): void => {
       // @ts-ignore
-      if (!ref.current || ref.current.contains(event.currentTarget)) {
+      if (!ref.current || ref.current.contains(event.target)) {
         return
       }
 

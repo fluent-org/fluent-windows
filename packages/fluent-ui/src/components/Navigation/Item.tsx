@@ -7,9 +7,10 @@ import React, {
   cloneElement,
   useContext,
   useEffect,
-  useState
+  useState,
+  MouseEventHandler,
+  MouseEvent
 } from 'react'
-import Box from '../Box'
 import { Icon } from '@fluent-ui/icons'
 import styled from '@xstyled/styled-components'
 import { th } from '@xstyled/system'
@@ -21,6 +22,7 @@ export type ID = string | number
 interface ItemProps {
   id?: ID
   title?: string
+  onClick?: MouseEventHandler<HTMLDivElement>
   children: ReactNode
 }
 
@@ -74,7 +76,7 @@ const StyledItemTextWrapper = styled.div<{ expanded: boolean }>`
   transition: ${th.transition('navigation')};
 `
 
-const Item = ({ id, children }: ItemProps): ReactElement => {
+const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   const container: {
     icon: any
     content: any
@@ -100,7 +102,8 @@ const Item = ({ id, children }: ItemProps): ReactElement => {
   // handle active item
   const { value: activeID, expanded } = useContext(NavigationContext)
   const dispatch = useDispatch({ type: 'navigation/handleActive', payload: id })
-  function handleItemClick(): void {
+  function handleItemClick(e: MouseEvent<HTMLDivElement>): void {
+    onClick && onClick(e)
     dispatch()
   }
   const [active, setActive] = useState(false)

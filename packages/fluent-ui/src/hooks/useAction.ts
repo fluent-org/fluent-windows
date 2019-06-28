@@ -25,7 +25,7 @@ import { useEffect } from 'react'
 
 type Type = string | object
 type Callback = (payload: any) => any
-type Deps = (string | number | undefined)[] | []
+type Deps = (string | number | null | undefined | boolean)[] | []
 type Payload = any
 interface Dispatch {
   type: Type

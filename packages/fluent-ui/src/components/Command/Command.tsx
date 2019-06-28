@@ -8,8 +8,7 @@ import React, {
   createContext,
   useState,
   MouseEvent,
-  useRef,
-  RefObject
+  useRef
 } from 'react'
 import {
   StyledContent,
@@ -23,7 +22,7 @@ import CommandButton from '../CommandButton'
 import { omit } from '../../utils'
 import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../../theme'
-import Portal from '../Portal'
+import { usePortal } from '../../hooks/usePortal'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 
 type Child =
@@ -48,7 +47,6 @@ interface CommandType extends ForwardRefExoticComponent<CommandProps> {
   Secondary?: typeof Secondary
 }
 
-// 用于与子组件 CommandButton 通信
 export const CommandContext = createContext(false)
 
 const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
@@ -93,7 +91,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
       }
     }, [reveal])
 
-    const [secondaryVisible, setSecondaryVisible] = useState(false)
+    const [secondaryVisible, setSecondaryVisible, SecondaryPortal] = usePortal()
     const [portalStyle, setPortalStyle] = useState()
     function handleSecondaryVisible(e: MouseEvent<HTMLButtonElement>): void {
       const rect = e.currentTarget.getBoundingClientRect()
@@ -147,7 +145,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
               <CommandButton icon="More" onClick={handleSecondaryVisible} />
             ))}
           {secondaryVisible && (
-            <Portal style={portalStyle}>
+            <SecondaryPortal style={portalStyle}>
               <Box
                 ref={secondaryRef}
                 width={130}
@@ -158,7 +156,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
               >
                 {container.secondary}
               </Box>
-            </Portal>
+            </SecondaryPortal>
           )}
         </CommandContext.Provider>
       </Box>
