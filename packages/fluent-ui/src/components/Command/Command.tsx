@@ -4,17 +4,12 @@ import React, {
   forwardRef,
   ReactComponentElement,
   ForwardRefExoticComponent,
-  useEffect,
   createContext,
   useState,
   MouseEvent,
   useRef
 } from 'react'
-import {
-  StyledContent,
-  StyledPrimary,
-  RevealButtonWrapper
-} from './Command.styled'
+import { StyledContent, StyledPrimary } from './Command.styled'
 import Secondary from './Secondary'
 import Content from './Content'
 import Box from '../Box'
@@ -24,6 +19,7 @@ import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../../theme'
 import { usePortal } from '../../hooks/usePortal'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
+import { useReveal } from '../../hooks/useReveal'
 
 type Child =
   | ReactComponentElement<typeof CommandButton>
@@ -68,28 +64,6 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
         }
       }
     )
-    useEffect((): void => {
-      if (reveal) {
-        document.addEventListener(
-          'mousemove',
-          (e): void => {
-            const wrappers = document.querySelectorAll('.fluent_reveal_button')
-            wrappers.forEach(
-              (item: Element): void => {
-                const rect = item.getBoundingClientRect()
-                const x = e.pageX - rect.left - window.scrollX
-                const y = e.pageY - rect.top - window.scrollY
-                const gradientSize = 80
-                const lightColor = 'rgba(160,160,160,1)'
-                const gradient = `radial-gradient(circle ${gradientSize}px at ${x}px ${y}px, ${lightColor}, rgba(255,255,255,0))`
-                // @ts-ignore
-                item.style.background = gradient
-              }
-            )
-          }
-        )
-      }
-    }, [reveal])
 
     const [secondaryVisible, setSecondaryVisible, SecondaryPortal] = usePortal()
     const [portalStyle, setPortalStyle] = useState()
@@ -106,6 +80,7 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
 
     // 当使用 acrylic 时 reveal 不生效
     reveal = acrylic ? false : reveal
+    const [RevealWrapper] = useReveal()
 
     // 点击 More 菜单之外的区域关闭 More 菜单
     const secondaryRef = useRef<HTMLDivElement>(null)
@@ -127,20 +102,20 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
             {reveal
               ? container.primary.map(
                   (child, i): ReactElement => (
-                    <RevealButtonWrapper key={i}>{child}</RevealButtonWrapper>
+                    <RevealWrapper key={i}>{child}</RevealWrapper>
                   )
                 )
               : container.primary}
           </StyledPrimary>
           {!!container.secondary.length &&
             (reveal ? (
-              <RevealButtonWrapper>
+              <RevealWrapper>
                 <CommandButton
                   icon="More"
                   style={{ height: '100%' }}
                   onClick={handleSecondaryVisible}
                 />
-              </RevealButtonWrapper>
+              </RevealWrapper>
             ) : (
               <CommandButton icon="More" onClick={handleSecondaryVisible} />
             ))}

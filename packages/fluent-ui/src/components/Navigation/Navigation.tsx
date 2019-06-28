@@ -19,11 +19,14 @@ import {
   StyledContainer
 } from './Navigation.styled'
 import { useAction } from '../../hooks/useAction'
+import { useReveal } from '../../hooks/useReveal'
+import * as CSS from 'csstype'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
   response?: boolean
   expanded?: boolean
   acrylic?: boolean
+  reveal?: boolean
   value?: ID
   onChange?: (id: ID) => void
 }
@@ -50,11 +53,30 @@ type Child =
 export const NavigationContext = createContext<{
   value: ID
   expanded: boolean
-}>({ value: '', expanded: true })
+  backgroundColor: CSS.BackgroundColorProperty
+  color: CSS.ColorProperty
+  reveal: boolean
+}>({
+  value: '',
+  expanded: true,
+  backgroundColor: '#e6e6e6',
+  color: '#000',
+  reveal: false
+})
 
 const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
   (
-    { expanded, acrylic, value, onChange, children, ...rest }: NavigationProps,
+    {
+      expanded,
+      acrylic,
+      reveal,
+      value,
+      onChange,
+      backgroundColor,
+      color,
+      children,
+      ...rest
+    }: NavigationProps,
     ref
   ): ReactElement => {
     const container: Container = {
@@ -84,9 +106,15 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
       [value]
     )
 
+    reveal = acrylic ? false : reveal
+    const [RevealWrapper] = useReveal(66)
+
     const contextValue = {
       value: value as ID,
-      expanded: expanded as boolean
+      expanded: expanded as boolean,
+      backgroundColor: backgroundColor as CSS.BackgroundColorProperty,
+      color: color as CSS.ColorProperty,
+      reveal: reveal as boolean
     }
     return (
       <NavigationContext.Provider value={contextValue}>
@@ -94,11 +122,37 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
           ref={ref}
           expanded={expanded as boolean}
           acrylic={acrylic}
+          backgroundColor={backgroundColor}
+          color={color}
           {...rest}
         >
-          <StyledHeader>{container.header}</StyledHeader>
-          <StyledContent>{container.content}</StyledContent>
-          <StyledFooter>{container.footer}</StyledFooter>
+          <StyledHeader>
+            {reveal
+              ? container.header.map(
+                  (child, i): ReactElement => (
+                    <RevealWrapper key={i}>{child}</RevealWrapper>
+                  )
+                )
+              : container.header}
+          </StyledHeader>
+          <StyledContent>
+            {reveal
+              ? container.content.map(
+                  (child, i): ReactElement => (
+                    <RevealWrapper key={i}>{child}</RevealWrapper>
+                  )
+                )
+              : container.content}
+          </StyledContent>
+          <StyledFooter>
+            {reveal
+              ? container.footer.map(
+                  (child, i): ReactElement => (
+                    <RevealWrapper key={i}>{child}</RevealWrapper>
+                  )
+                )
+              : container.footer}
+          </StyledFooter>
         </StyledContainer>
       </NavigationContext.Provider>
     )

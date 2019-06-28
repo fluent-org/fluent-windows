@@ -16,6 +16,7 @@ import styled from '@xstyled/styled-components'
 import { th } from '@xstyled/system'
 import { NavigationContext } from './Navigation'
 import { useDispatch } from '../../hooks/useAction'
+import * as CSS from 'csstype'
 
 export type ID = string | number
 
@@ -28,7 +29,11 @@ interface ItemProps {
 
 type Child = ReactComponentElement<typeof Icon> | ReactChild | any
 
-const StyledItemWrapper = styled.div`
+const StyledItemWrapper = styled.div<{
+  reveal: boolean
+  backgroundColor: CSS.BackgroundColorProperty
+  color: CSS.ColorProperty
+}>`
   position: relative;
   max-height: 40px;
   height: 40px;
@@ -38,17 +43,22 @@ const StyledItemWrapper = styled.div`
   padding: 12;
   box-sizing: border-box;
   transition: ${th.transition('navigation')};
+  background-color: ${({ reveal }): CSS.ColorProperty =>
+    reveal ? th.color('gray100') : 'transparent'};
+  color: ${({ color }): string => color};
   &:hover {
-    background-color: secondary;
+    background-color: ${({ reveal }): CSS.ColorProperty =>
+      reveal ? th.color('gray200') : th.color('secondary')};
   }
   &:active {
-    background-color: primary;
+    color: black;
+    background-color: ${({ reveal }): CSS.ColorProperty =>
+      reveal ? th.color('gray300') : th.color('primary')};
   }
 `
-interface StyledItemActiveBarProps {
+const StyledItemActiveBar = styled.div<{
   active: boolean
-}
-const StyledItemActiveBar = styled.div<StyledItemActiveBarProps>`
+}>`
   position: absolute;
   left: 0;
   top: 50%;
@@ -100,7 +110,13 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   )
 
   // handle active item
-  const { value: activeID, expanded } = useContext(NavigationContext)
+  const {
+    value: activeID,
+    expanded,
+    backgroundColor,
+    color,
+    reveal
+  } = useContext(NavigationContext)
   const dispatch = useDispatch({ type: 'navigation/handleActive', payload: id })
   function handleItemClick(e: MouseEvent<HTMLDivElement>): void {
     onClick && onClick(e)
@@ -115,7 +131,12 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   }, [activeID, id])
 
   return (
-    <StyledItemWrapper onClick={handleItemClick}>
+    <StyledItemWrapper
+      onClick={handleItemClick}
+      reveal={reveal}
+      backgroundColor={backgroundColor}
+      color={color}
+    >
       {id && <StyledItemActiveBar active={active} />}
       <StyledItemIconWrapper expanded={expanded}>
         {container.icon}
