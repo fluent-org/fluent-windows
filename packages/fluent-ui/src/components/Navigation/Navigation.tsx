@@ -23,6 +23,7 @@ import { useReveal } from '../../hooks/useReveal'
 import * as CSS from 'csstype'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
+  horizontal?: boolean
   response?: boolean
   expanded?: boolean
   acrylic?: boolean
@@ -56,17 +57,20 @@ export const NavigationContext = createContext<{
   backgroundColor: CSS.BackgroundColorProperty
   color: CSS.ColorProperty
   reveal: boolean
+  horizontal: boolean
 }>({
   value: '',
   expanded: true,
   backgroundColor: '#e6e6e6',
   color: '#000',
-  reveal: false
+  reveal: false,
+  horizontal: false
 })
 
 const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
   (
     {
+      horizontal,
       expanded,
       acrylic,
       reveal,
@@ -114,19 +118,21 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
       expanded: expanded as boolean,
       backgroundColor: backgroundColor as CSS.BackgroundColorProperty,
       color: color as CSS.ColorProperty,
-      reveal: reveal as boolean
+      reveal: reveal as boolean,
+      horizontal: horizontal as boolean
     }
     return (
       <NavigationContext.Provider value={contextValue}>
         <StyledContainer
           ref={ref}
+          horizontal={horizontal}
           expanded={expanded as boolean}
           acrylic={acrylic}
           backgroundColor={backgroundColor}
           color={color}
           {...rest}
         >
-          <StyledHeader>
+          <StyledHeader horizontal={horizontal}>
             {reveal
               ? container.header.map(
                   (child, i): ReactElement => (
@@ -135,7 +141,7 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
                 )
               : container.header}
           </StyledHeader>
-          <StyledContent>
+          <StyledContent horizontal={horizontal}>
             {reveal
               ? container.content.map(
                   (child, i): ReactElement => (
@@ -144,7 +150,7 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
                 )
               : container.content}
           </StyledContent>
-          <StyledFooter>
+          <StyledFooter horizontal={horizontal}>
             {reveal
               ? container.footer.map(
                   (child, i): ReactElement => (
@@ -168,6 +174,7 @@ Navigation.displayName = 'FNavigation'
 
 Navigation.defaultProps = {
   backgroundColor: '#e6e6e6',
+  horizontal: false,
   expanded: true,
   acrylic: false
 }

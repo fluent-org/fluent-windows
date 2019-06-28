@@ -4,32 +4,39 @@ import Box from '../Box'
 import { BoxProps } from '../Box/Box'
 
 interface StyledContainerProps extends BoxProps {
+  horizontal?: boolean
   expanded: boolean
 }
 
 export const StyledContainer = styled(Box)<StyledContainerProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ horizontal }: StyledContainerProps): string =>
+    horizontal ? 'row' : 'column'};
   justify-content: space-between;
   ${({ backgroundColor }: StyledContainerProps): string =>
     backgroundColor ? `background-color: ${backgroundColor}` : ''};
-  max-width: ${({ expanded }: StyledContainerProps): string =>
-    expanded ? '260px' : '40px'};
+  ${({ horizontal, expanded }): string =>
+    horizontal
+      ? `max-height: 40px`
+      : `max-width: ${expanded ? '260px' : '40px'}`};
   transition: ${th.transition('navigation')};
 `
 
-export const StyledHeader = styled.div`
+export const StyledHeader = styled.div<{ horizontal?: boolean }>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ horizontal }): string =>
+    horizontal ? 'row' : 'column'};
 `
 
-export const StyledFooter = styled.div`
+export const StyledFooter = styled.div<{ horizontal?: boolean }>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ horizontal }): string =>
+    horizontal ? 'row' : 'column'};
 `
 
-export const StyledContent = styled.div`
+export const StyledContent = styled.div<{ horizontal?: boolean }>`
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ horizontal }): string =>
+    horizontal ? 'row' : 'column'};
 `
