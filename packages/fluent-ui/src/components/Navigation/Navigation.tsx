@@ -23,6 +23,7 @@ import { useAction } from '../../hooks/useAction'
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
   response?: boolean
   expanded?: boolean
+  acrylic?: boolean
   value?: ID
   onChange?: (id: ID) => void
 }
@@ -53,7 +54,7 @@ export const NavigationContext = createContext<{
 
 const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
   (
-    { expanded, value, onChange, children, ...rest }: NavigationProps,
+    { expanded, acrylic, value, onChange, children, ...rest }: NavigationProps,
     ref
   ): ReactElement => {
     const container: Container = {
@@ -89,7 +90,12 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
     }
     return (
       <NavigationContext.Provider value={contextValue}>
-        <StyledContainer expanded={expanded as boolean} ref={ref} {...rest}>
+        <StyledContainer
+          ref={ref}
+          expanded={expanded as boolean}
+          acrylic={acrylic}
+          {...rest}
+        >
           <StyledHeader>{container.header}</StyledHeader>
           <StyledContent>{container.content}</StyledContent>
           <StyledFooter>{container.footer}</StyledFooter>
@@ -108,7 +114,8 @@ Navigation.displayName = 'FNavigation'
 
 Navigation.defaultProps = {
   backgroundColor: '#e6e6e6',
-  expanded: true
+  expanded: true,
+  acrylic: false
 }
 
 export default Navigation

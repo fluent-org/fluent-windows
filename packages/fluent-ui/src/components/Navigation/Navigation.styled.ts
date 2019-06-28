@@ -1,12 +1,20 @@
 import styled from '@xstyled/styled-components'
 import { th } from '@xstyled/system'
+import Box from '../Box'
+import { BoxProps } from '../Box/Box'
 
-export const StyledContainer = (styled as any).box`
+interface StyledContainerProps extends BoxProps {
+  expanded: boolean
+}
+
+export const StyledContainer = styled(Box)<StyledContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${({ backgroundColor }: any): string => backgroundColor};
-  max-width: ${({ expanded }: any): string => (expanded ? '260px' : '40px')};
+  ${({ backgroundColor }: StyledContainerProps): string =>
+    backgroundColor ? `background-color: ${backgroundColor}` : ''};
+  max-width: ${({ expanded }: StyledContainerProps): string =>
+    expanded ? '260px' : '40px'};
   transition: ${th.transition('navigation')};
 `
 
