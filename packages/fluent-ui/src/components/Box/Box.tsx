@@ -18,7 +18,7 @@ export interface BoxProps
   as?: keyof JSX.IntrinsicElements
 }
 
-const Acrylic = styled.box`
+const Acrylic = (styled as any).box`
   position: relative;
   overflow: hidden;
   @supports (backdrop-filter: blur(10px)) {

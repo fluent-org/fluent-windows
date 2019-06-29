@@ -39,13 +39,13 @@ interface Container {
 }
 
 interface CommandType extends ForwardRefExoticComponent<CommandProps> {
-  Content?: typeof Content
-  Secondary?: typeof Secondary
+  Content: typeof Content
+  Secondary: typeof Secondary
 }
 
 export const CommandContext = createContext(false)
 
-const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
+const Command = forwardRef<HTMLDivElement, CommandProps>(
   ({ acrylic, reveal, children, ...rest }: CommandProps, ref): ReactElement => {
     const container: Container = {
       content: [],
@@ -139,8 +139,16 @@ const Command: CommandType = forwardRef<HTMLDivElement, CommandProps>(
   }
 )
 
-Command.Secondary = Secondary
-Command.Content = Content
+Object.defineProperty(Command, 'Secondary', {
+  get(): typeof Secondary {
+    return Secondary
+  }
+})
+Object.defineProperty(Command, 'Content', {
+  get(): typeof Content {
+    return Content
+  }
+})
 
 Command.displayName = 'FCommand'
 
@@ -150,4 +158,4 @@ Command.defaultProps = {
   backgroundColor: '#e6e6e6'
 }
 
-export default Command
+export default Command as CommandType

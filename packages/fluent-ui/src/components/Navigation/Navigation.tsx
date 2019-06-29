@@ -32,10 +32,10 @@ interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
 }
 
 interface NavigationType extends ForwardRefExoticComponent<NavigationProps> {
-  Header?: typeof Header
-  Footer?: typeof Footer
-  Content?: typeof Content
-  Item?: typeof Item
+  Header: typeof Header
+  Footer: typeof Footer
+  Content: typeof Content
+  Item: typeof Item
 }
 
 interface Container {
@@ -68,7 +68,7 @@ export const NavigationContext = createContext<{
   horizontal: false
 })
 
-const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
+const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
   (
     {
       horizontal,
@@ -158,10 +158,26 @@ const Navigation: NavigationType = forwardRef<HTMLDivElement, NavigationProps>(
   }
 )
 
-Navigation.Header = Header
-Navigation.Footer = Footer
-Navigation.Content = Content
-Navigation.Item = Item
+Object.defineProperty(Navigation, 'Header', {
+  get(): typeof Header {
+    return Header
+  }
+})
+Object.defineProperty(Navigation, 'Footer', {
+  get(): typeof Footer {
+    return Footer
+  }
+})
+Object.defineProperty(Navigation, 'Content', {
+  get(): typeof Content {
+    return Content
+  }
+})
+Object.defineProperty(Navigation, 'Item', {
+  get(): typeof Item {
+    return Item
+  }
+})
 
 Navigation.displayName = 'FNavigation'
 
@@ -172,4 +188,4 @@ Navigation.defaultProps = {
   acrylic: false
 }
 
-export default Navigation
+export default Navigation as NavigationType
