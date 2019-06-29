@@ -10,12 +10,10 @@ components: Box
 ## Default
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
-  <Box padding={{ sm: 15, lg: 25 }}>
-    <Button style={{margin: 5}}>Button 1</Button>
-    <Button style={{margin: 5}}>Button 2</Button>
-    <Button style={{margin: 5}}>Button 3</Button>
-  </Box>
+<Box padding={{ sm: 15, lg: 25 }}>
+  <Button style={{margin: 5}}>Button 1</Button>
+  <Button style={{margin: 5}}>Button 2</Button>
+  <Button style={{margin: 5}}>Button 3</Button>
 </Box>
 ```
 

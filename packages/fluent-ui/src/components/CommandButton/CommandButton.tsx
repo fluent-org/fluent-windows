@@ -12,7 +12,8 @@ import * as CSS from 'csstype'
 import { CommandContext } from '../Command/Command'
 
 export interface CommandButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
+    StyledProps {
   icon?: string
   onClick?: MouseEventHandler<HTMLButtonElement>
   children?: ReactElement
@@ -26,10 +27,12 @@ const CommandButtonStyled = styled.button<{
   padding: 10px 22px;
   line-height: 1;
   transition: ${th.transition('button')};
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
   color: inherit;
   background-color: ${({ reveal }): CSS.ColorProperty =>
     reveal ? th.color('gray100') : 'transparent'};
-  display: inline-block;
   &:hover {
     background-color: ${({ reveal }): CSS.ColorProperty =>
       reveal ? th.color('gray200') : th.color('secondary')};

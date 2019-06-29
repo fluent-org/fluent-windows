@@ -10,7 +10,8 @@ import StyledButton from './Button.styled'
 
 export interface ButtonProps
   extends ComponentPropsWithoutRef<'button'>,
-    ButtonHTMLAttributes<HTMLButtonElement> {
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    StyledProps {
   variant?: 'primary' | 'accent'
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'

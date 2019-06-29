@@ -1,5 +1,5 @@
-import React, { ReactElement, SFC } from 'react'
-import { graphql } from 'gatsby'
+import React, { ReactElement, SFC, useState } from 'react'
+import { graphql, navigate } from 'gatsby'
 import Markdown from 'markdown-to-jsx'
 import { Box, Navigation } from '@fluent-ui/core'
 import { Icon } from '@fluent-ui/icons'
@@ -42,45 +42,64 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
   const activeId = data.docs.edges.findIndex(
     (v): boolean => v.node.frontmatter.title === data.doc.frontmatter.title
   )
+  const [expanded, setExpanded] = useState(true)
+  function handleExpanded(): void {
+    setExpanded((e): boolean => !e)
+  }
+  function handleNavigation(title: string): void {
+    navigate(`/components/${title.toLowerCase()}`)
+  }
+
   return (
     <Layout>
-      <Navigation
-        value={activeId}
-        acrylic
-        width={260}
-        height="100vh"
-        position="fixed"
-        left={0}
-        top={0}
-        backgroundColor="#000"
-        color="#fff"
-      >
-        <Navigation.Header>
-          <Navigation.Item>
-            <Icon type="GlobalNavigationButton" />
-          </Navigation.Item>
-        </Navigation.Header>
-        {data.docs.edges.map(
-          (child, index): ReactElement => (
-            <Navigation.Item id={index} key={child.node.frontmatter.title}>
-              <Icon type="Connected" />
-              <span>{child.node.frontmatter.title}</span>
-            </Navigation.Item>
-          )
-        )}
-      </Navigation>
-      <Box flex={1} paddingLeft={260} paddingTop={64}>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Markdown
-          options={{
-            overrides: {
-              pre: Playground as any,
-              IconTemplate
-            }
-          }}
+      <Box display="flex" justifyContent="space-between">
+        <Navigation
+          value={`component${activeId}`}
+          expanded={expanded}
+          acrylic
+          width={260}
+          height="100vh"
         >
-          {data.doc.rawMarkdownBody}
-        </Markdown>
+          <Navigation.Header>
+            <Navigation.Item onClick={handleExpanded}>
+              <Icon type="GlobalNavigationButton" />
+            </Navigation.Item>
+          </Navigation.Header>
+          {data.docs.edges.map(
+            (child, index): ReactElement => (
+              <Navigation.Item
+                id={`component${index}`}
+                key={child.node.frontmatter.title}
+                onClick={handleNavigation.bind(undefined, child.node.frontmatter.title)}
+              >
+                <Icon type="Connected" />
+                <span>{child.node.frontmatter.title}</span>
+              </Navigation.Item>
+            )
+          )}
+        </Navigation>
+        <Box
+          flex={1}
+          maxHeight="100vh"
+          display="flex"
+          flexDirection="column"
+          boxShadow="0px 0px 8px 0px rgba(0, 0, 0, 0.36)"
+          transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
+        >
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <Box overflow="auto" flex={1} padding="10px">
+            <Markdown
+              options={{
+                overrides: {
+                  pre: Playground as any,
+                  IconTemplate
+                }
+              }}
+            >
+              {data.doc.rawMarkdownBody}
+            </Markdown>
+          </Box>
+        </Box>
       </Box>
     </Layout>
   )

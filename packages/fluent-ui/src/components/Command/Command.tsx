@@ -28,7 +28,7 @@ type Child =
   | any
 
 interface CommandProps extends BoxProps, ThemeProps {
-  reveal: boolean
+  reveal?: boolean
   children: Child[]
 }
 
