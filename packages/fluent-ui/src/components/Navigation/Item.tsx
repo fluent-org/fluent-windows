@@ -15,7 +15,6 @@ import { Icon } from '@fluent-ui/icons'
 import styled, { css } from '@xstyled/styled-components'
 import { th, variant } from '@xstyled/system'
 import { NavigationContext } from './Navigation'
-import { useDispatch } from '../../hooks/useAction'
 import * as CSS from 'csstype'
 
 export type ID = string | number
@@ -136,16 +135,16 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   // handle active item
   const {
     value: activeID,
+    onChange,
     expanded,
     backgroundColor,
     color,
     reveal,
     horizontal
   } = useContext(NavigationContext)
-  const dispatch = useDispatch({ type: 'navigation/handleActive', payload: id })
   function handleItemClick(e: MouseEvent<HTMLDivElement>): void {
     onClick && onClick(e)
-    dispatch()
+    onChange && onChange(id as ID)
   }
   const [active, setActive] = useState(false)
   useEffect((): void => {
@@ -162,7 +161,7 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
       backgroundColor={backgroundColor}
       color={color}
     >
-      {id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
+      {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
       <StyledItemIconWrapper>{container.icon}</StyledItemIconWrapper>
       <StyledItemTextWrapper expanded={expanded}>
         {container.content}
