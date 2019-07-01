@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box as 1`] = `
+<span
+  className="sc-bdVaJa "
+>
+  as span
+</span>
+`;
+
+exports[`Box basic 1`] = `
+<div
+  className="sc-bdVaJa "
+>
+  basic
+</div>
+`;

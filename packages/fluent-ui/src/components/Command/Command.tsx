@@ -1,4 +1,5 @@
-import React, {
+import * as React from 'react'
+import {
   ReactElement,
   Children,
   forwardRef,
@@ -94,7 +95,7 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
     const otherProps = omit(rest, ['display'])
     return (
       <Box display="flex" ref={ref} acrylic={acrylic} {...otherProps}>
-        <CommandContext.Provider value={reveal}>
+        <CommandContext.Provider value={reveal as boolean}>
           {!!container.content.length && (
             <StyledContent>{container.content}</StyledContent>
           )}

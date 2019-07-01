@@ -1,4 +1,5 @@
-import React, { ReactElement, SFC, useState } from 'react'
+import * as React from 'react'
+import { ReactElement, SFC, useState } from 'react'
 import { graphql, navigate } from 'gatsby'
 import Markdown from 'markdown-to-jsx'
 import { Box, Navigation } from '@fluent-ui/core'

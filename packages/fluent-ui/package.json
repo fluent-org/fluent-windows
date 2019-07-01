@@ -46,49 +46,14 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/styled-components": "4.1.8",
-    "codecov": "^3.5.0",
     "cross-env": "^5.2.0",
     "csstype": "^2.6.5",
-    "eslint-plugin-jest": "^22.6.4",
-    "jest": "^23.6.0",
-    "jest-config": "^23.6.0",
     "rimraf": "^2.6.2",
-    "styled-components": "^4.3.0",
-    "ts-jest": "^23.10.2"
-  },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "ts-jest"
-    },
-    "testEnvironment": "node",
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 95,
-        "lines": 95,
-        "statements": 95
-      }
-    },
-    "collectCoverageFrom": [
-      "src/*.{js,ts}"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "styled-components": "^4.3.0"
   },
   "commitlint": {
     "extends": [

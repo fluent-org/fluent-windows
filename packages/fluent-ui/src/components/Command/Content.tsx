@@ -1,4 +1,5 @@
-import React, { SFC, ReactElement } from 'react'
+import * as React from 'react'
+import { SFC, ReactElement } from 'react'
 
 const Content: SFC = (props): ReactElement => {
   return <div {...props} />

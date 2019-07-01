@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import { ReactElement } from 'react'
+import * as PropTypes from 'prop-types'
 import { Command, CommandButton } from '@fluent-ui/core'
 
 const Header = ({ siteTitle }): ReactElement => (

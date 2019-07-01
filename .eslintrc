@@ -41,6 +41,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "no-dupe-class-members": "off"
+    "no-dupe-class-members": "off",
+    "@typescript-eslint/no-var-requires": "off"
   }
 }

@@ -9,7 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
     "noErrorTruncation": true,
     "baseUrl": "./packages",
     "paths": {
@@ -22,7 +21,6 @@
     "node_modules",
     "dist",
     "build",
-    "public",
-    "**/__tests__/"
+    "public"
   ]
 }

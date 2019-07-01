@@ -30,7 +30,10 @@
     "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build/cjs",
     "build:es": "cross-env NODE_ENV=production tsc --module ES6 --outDir ./build/es",
     "build:umd": "cross-env NODE_ENV=production tsc --module UMD --outDir ./build/umd",
-    "start": "cross-env NODE_ENV=production tsc -w --module ES6 --outDir ./build/es"
+    "start": "cross-env NODE_ENV=production tsc -w --module ES6 --outDir ./build/es",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "yarn test -- --no-cache"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",

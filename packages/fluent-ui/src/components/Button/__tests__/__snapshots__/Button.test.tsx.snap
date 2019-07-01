@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button as 1`] = `
+.c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 4px 26px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<a
+  className="c0"
+  href="#"
+>
+  as a
+</a>
+`;
+
+exports[`Button basic 1`] = `
+.c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 4px 26px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+  className="c0"
+>
+  basic
+</button>
+`;
+
+exports[`Button disabled 1`] = `
+.c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 4px 26px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+  className="c0"
+  disabled={true}
+>
+  disabled
+</button>
+`;
+
+exports[`Button size 1`] = `
+Array [
+  .c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 2px 18px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+    size="small"
+  >
+    small
+  </button>,
+  .c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 4px 26px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+    size="medium"
+  >
+    medium
+  </button>,
+  .c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 6px 38px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+    size="large"
+  >
+    large
+  </button>,
+]
+`;
+
+exports[`Button variant 1`] = `
+Array [
+  .c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.2);
+  padding: 4px 26px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+  >
+    primary
+  </button>,
+  .c0 {
+  outline: none;
+  cursor: pointer;
+  min-width: 64px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border: 2px solid transparent;
+  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,120,215,1);
+  padding: 4px 26px;
+}
+
+.c0:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.c0:active {
+  color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.4);
+  border-color: transparent;
+}
+
+.c0:disabled {
+  color: rgba(0,0,0,0.4);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+  >
+    accent
+  </button>,
+]
+`;

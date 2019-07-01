@@ -33,9 +33,9 @@ components: Command
 ```jsx
 <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
   <Command reveal>
-    <CommandButton icon="Back" className='btn2' />
-    <CommandButton icon="Play" className='btn2' />
-    <CommandButton icon="Forward" className='btn2' />
+    <CommandButton icon="Back" />
+    <CommandButton icon="Play" />
+    <CommandButton icon="Forward" />
 
     <Command.Content>
       Now Playing...

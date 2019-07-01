@@ -1,4 +1,5 @@
-import React, { ReactElement, SFC, ReactNode } from 'react'
+import * as React from 'react'
+import { ReactElement, SFC, ReactNode } from 'react'
 
 import { ThemeProvider, Theme, Box } from '@fluent-ui/core'
 

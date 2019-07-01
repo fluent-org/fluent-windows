@@ -1,9 +1,11 @@
-import React, {
+import * as React from 'react'
+import {
   ReactElement,
   MouseEventHandler,
   forwardRef,
   ButtonHTMLAttributes,
-  useContext
+  useContext,
+  ReactNode
 } from 'react'
 import styled from '@xstyled/styled-components'
 import { th } from '@xstyled/system'
@@ -16,7 +18,7 @@ export interface CommandButtonProps
     StyledProps {
   icon?: string
   onClick?: MouseEventHandler<HTMLButtonElement>
-  children?: ReactElement
+  children?: ReactNode
 }
 
 const CommandButtonStyled = styled.button<{
@@ -28,6 +30,7 @@ const CommandButtonStyled = styled.button<{
   line-height: 1;
   transition: ${th.transition('button')};
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   color: inherit;

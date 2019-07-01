@@ -1,4 +1,5 @@
-import React, { ReactElement, SFC } from 'react'
+import * as React from 'react'
+import { ReactElement, SFC } from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import * as Fluent from '@fluent-ui/core'
 import * as Icon from '@fluent-ui/icons'

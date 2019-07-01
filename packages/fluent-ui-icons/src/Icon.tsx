@@ -1,4 +1,5 @@
-import React, { forwardRef, ReactElement, Ref } from 'react'
+import * as React from 'react'
+import { forwardRef, ReactElement, Ref } from 'react'
 import styled from 'styled-components'
 import * as Icons from './element'
 import { omit } from './utils'

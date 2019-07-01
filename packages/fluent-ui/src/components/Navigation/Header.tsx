@@ -1,4 +1,5 @@
-import React, { ReactElement, ReactNode } from 'react'
+import * as React from 'react'
+import { ReactElement, ReactNode } from 'react'
 import Box from '../Box'
 
 interface ItemProps {
