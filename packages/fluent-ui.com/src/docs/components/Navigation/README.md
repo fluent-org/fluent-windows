@@ -19,30 +19,30 @@ components: Navigation
     <Navigation height={600} value={activeId} onChange={handleActiveId}>
       <Navigation.Header>
         <Navigation.Item>
-          <Icon type="GlobalNavigationButton" />
+          <Icon.GlobalNavigationButton />
         </Navigation.Item>
       </Navigation.Header>
 
       <Navigation.Item id={1}>
-        <Icon type="Connected" />
+        <Icon.Connected />
         <span>Option 1</span>
       </Navigation.Item>
       <Navigation.Item id={2}>
-        <Icon type="Connected" />
+        <Icon.Connected />
         <span>Option 2</span>
       </Navigation.Item>
       <Navigation.Item id={3}>
-        <Icon type="Connected" />
+        <Icon.Connected />
         <span>Option 3</span>
       </Navigation.Item>
       <Navigation.Item id={4}>
-        <Icon type="Connected" />
+        <Icon.Connected />
         <span>Option 4</span>
       </Navigation.Item>
 
       <Navigation.Footer>
         <Navigation.Item>
-          <Icon type="Settings" />
+          <Icon.Settings />
           <span>Settings</span>
         </Navigation.Item>
       </Navigation.Footer>
@@ -69,30 +69,30 @@ components: Navigation
       <Navigation height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
           <Navigation.Item>
-            <Icon type="GlobalNavigationButton" />
+            <Icon.GlobalNavigationButton />
           </Navigation.Item>
         </Navigation.Header>
 
         <Navigation.Item id={1}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 1</span>
         </Navigation.Item>
         <Navigation.Item id={2}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 2</span>
         </Navigation.Item>
         <Navigation.Item id={3}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 3</span>
         </Navigation.Item>
         <Navigation.Item id={4}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 4</span>
         </Navigation.Item>
 
         <Navigation.Footer>
           <Navigation.Item>
-            <Icon type="Settings" />
+            <Icon.Settings />
             <span>Settings</span>
           </Navigation.Item>
         </Navigation.Footer>
@@ -120,30 +120,30 @@ components: Navigation
       <Navigation horizontal width={1000} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
           <Navigation.Item>
-            <Icon type="GlobalNavigationButton" />
+            <Icon.GlobalNavigationButton />
           </Navigation.Item>
         </Navigation.Header>
 
         <Navigation.Item id={1}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 1</span>
         </Navigation.Item>
         <Navigation.Item id={2}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 2</span>
         </Navigation.Item>
         <Navigation.Item id={3}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 3</span>
         </Navigation.Item>
         <Navigation.Item id={4}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 4</span>
         </Navigation.Item>
 
         <Navigation.Footer>
           <Navigation.Item>
-            <Icon type="Settings" />
+            <Icon.Settings />
             <span>Settings</span>
           </Navigation.Item>
         </Navigation.Footer>
@@ -171,30 +171,30 @@ components: Navigation
       <Navigation acrylic height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
           <Navigation.Item>
-            <Icon type="GlobalNavigationButton" />
+            <Icon.GlobalNavigationButton />
           </Navigation.Item>
         </Navigation.Header>
 
         <Navigation.Item id={1}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 1</span>
         </Navigation.Item>
         <Navigation.Item id={2}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 2</span>
         </Navigation.Item>
         <Navigation.Item id={3}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 3</span>
         </Navigation.Item>
         <Navigation.Item id={4}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 4</span>
         </Navigation.Item>
 
         <Navigation.Footer>
           <Navigation.Item>
-            <Icon type="Settings" />
+            <Icon.Settings />
             <span>Settings</span>
           </Navigation.Item>
         </Navigation.Footer>
@@ -222,30 +222,30 @@ components: Navigation
       <Navigation reveal height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
           <Navigation.Item>
-            <Icon type="GlobalNavigationButton" />
+            <Icon.GlobalNavigationButton />
           </Navigation.Item>
         </Navigation.Header>
 
         <Navigation.Item id={1}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 1</span>
         </Navigation.Item>
         <Navigation.Item id={2}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 2</span>
         </Navigation.Item>
         <Navigation.Item id={3}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 3</span>
         </Navigation.Item>
         <Navigation.Item id={4}>
-          <Icon type="Connected" />
+          <Icon.Connected />
           <span>Option 4</span>
         </Navigation.Item>
 
         <Navigation.Footer>
           <Navigation.Item>
-            <Icon type="Settings" />
+            <Icon.Settings />
             <span>Settings</span>
           </Navigation.Item>
         </Navigation.Footer>

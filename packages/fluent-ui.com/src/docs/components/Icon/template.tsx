@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import { Box } from '@fluent-ui/core'
-import { Icon } from '@fluent-ui/icons'
-import Icons from './icons'
+import * as Icons from '@fluent-ui/icons'
+import { GlobalNavigationButton } from '@fluent-ui/icons'
 
 const Button = styled.div`
   width: 20%;
@@ -35,14 +35,15 @@ const Button = styled.div`
 `
 
 const Template = (): ReactElement => {
+  const IconArray = Object.keys(Icons).map(key => Icons[key])
   return (
     <Box>
-      {Icons.map(
-        (icon): ReactElement => (
-          <CopyToClipboard key={icon} text={`<Icon type="${icon}" />`}>
+      {IconArray.map(
+        (Icon): ReactElement => (
+          <CopyToClipboard key={Icon.displayName} text={`<${Icon.displayName} />`}>
             <Button>
-              <Icon type={icon} />
-              <span>{icon}</span>
+              <Icon />
+              <span>{Icon.displayName}</span>
             </Button>
           </CopyToClipboard>
         )

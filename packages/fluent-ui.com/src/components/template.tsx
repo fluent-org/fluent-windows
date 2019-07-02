@@ -3,7 +3,10 @@ import { ReactElement, SFC, useState } from 'react'
 import { graphql, navigate } from 'gatsby'
 import Markdown from 'markdown-to-jsx'
 import { Box, Navigation } from '@fluent-ui/core'
-import { Icon } from '@fluent-ui/icons'
+import {
+  GlobalNavigationButton as GlobalNavigationButtonIcon,
+  Connected as ConnectedIcon
+} from '@fluent-ui/icons'
 
 import Header from './header'
 import Layout from './layout'
@@ -63,7 +66,7 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
         >
           <Navigation.Header>
             <Navigation.Item onClick={handleExpanded}>
-              <Icon type="GlobalNavigationButton" />
+              <GlobalNavigationButtonIcon />
             </Navigation.Item>
           </Navigation.Header>
           {data.docs.edges.map(
@@ -73,7 +76,7 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
                 key={child.node.frontmatter.title}
                 onClick={handleNavigation.bind(undefined, child.node.frontmatter.title)}
               >
-                <Icon type="Connected" />
+                <ConnectedIcon />
                 <span>{child.node.frontmatter.title}</span>
               </Navigation.Item>
             )

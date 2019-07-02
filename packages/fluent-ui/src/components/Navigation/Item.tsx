@@ -12,7 +12,6 @@ import {
   MouseEventHandler,
   MouseEvent
 } from 'react'
-import { Icon } from '@fluent-ui/icons'
 import styled, { css } from '@xstyled/styled-components'
 import { th, variant } from '@xstyled/system'
 import { NavigationContext } from './Navigation'
@@ -27,7 +26,7 @@ interface ItemProps {
   children: ReactNode
 }
 
-type Child = ReactComponentElement<typeof Icon> | ReactChild | any
+type Child = ReactChild | any
 
 const StyledItemWrapper = styled.div<{
   reveal: boolean
@@ -121,7 +120,11 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   Children.forEach(
     children,
     (child: Child): void => {
-      if (child.type && child.type.displayName === 'FIcon') {
+      if (
+        child.type &&
+        child.type.displayName &&
+        String.prototype.includes.call(child.type.displayName, 'FIcon')
+      ) {
         container.icon = cloneElement(child, {
           style: { width: 16, height: 16 }
         })

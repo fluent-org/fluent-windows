@@ -9,7 +9,7 @@ import {
 } from 'react'
 import styled from '@xstyled/styled-components'
 import { th } from '@xstyled/system'
-import { Icon } from '@fluent-ui/icons'
+import * as Icons from '@fluent-ui/icons'
 import * as CSS from 'csstype'
 import { CommandContext } from '../Command/Command'
 
@@ -56,12 +56,15 @@ const CommandButtonTextStyled = styled.div<{
   overflow: hidden;
 `
 
+type IconType = keyof (typeof Icons)
+
 const CommandButton = forwardRef<HTMLButtonElement, CommandButtonProps>(
   (
     { icon, onClick, children, ...rest }: CommandButtonProps,
     ref
   ): ReactElement => {
     const reveal = useContext(CommandContext)
+    const Icon = Icons[icon as IconType]
     return (
       <CommandButtonStyled
         onClick={onClick}
@@ -69,7 +72,7 @@ const CommandButton = forwardRef<HTMLButtonElement, CommandButtonProps>(
         reveal={reveal}
         {...rest}
       >
-        {icon && <Icon type={icon} />}
+        {icon && <Icon />}
         {children && (
           <CommandButtonTextStyled icon={!!icon}>
             {children}

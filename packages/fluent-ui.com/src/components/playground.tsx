@@ -5,7 +5,7 @@ import * as Fluent from '@fluent-ui/core'
 import * as Icon from '@fluent-ui/icons'
 import { theme } from '../utils/theme'
 
-const scope = { ...Fluent, ...Icon }
+const scope = { ...Fluent, Icon }
 
 interface PlaygroundProps {
   children: any

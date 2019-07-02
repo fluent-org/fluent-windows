@@ -26,7 +26,8 @@
   },
   "scripts": {
     "prebuild": "rimraf build",
-    "build": "yarn build:cjs && yarn build:es && yarn build:umd",
+    "compile": "ts-node ./builder",
+    "build": "yarn compile && yarn build:cjs && yarn build:es && yarn build:umd",
     "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build/cjs",
     "build:es": "cross-env NODE_ENV=production tsc --module ES6 --outDir ./build/es",
     "build:umd": "cross-env NODE_ENV=production tsc --module UMD --outDir ./build/umd",
@@ -39,5 +40,11 @@
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
     "styled-components": ">= 4.X"
+  },
+  "devDependencies": {
+    "@types/svgo": "^1.2.0",
+    "htm": "^2.1.1",
+    "omit-deep-lodash": "^1.1.4",
+    "svgo": "^1.2.2"
   }
 }
