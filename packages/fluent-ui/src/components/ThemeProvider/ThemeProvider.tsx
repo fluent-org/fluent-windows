@@ -3,7 +3,7 @@ import { FC, ReactElement, ReactNode } from 'react'
 import { ThemeProvider as BaseProvider } from '@xstyled/styled-components'
 import defaultTheme, { Theme } from '../../theme'
 import { deepMerge } from '../../utils'
-// import 'normalize.css'
+import Normalize from './normalize'
 
 interface ThemeProviderProps {
   theme: Theme
@@ -17,7 +17,10 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
   const mergeTheme = deepMerge<Theme>(defaultTheme, theme)
   return (
     <BaseProvider theme={mergeTheme}>
-      <>{children}</>
+      <>
+        <Normalize />
+        {children}
+      </>
     </BaseProvider>
   )
 }

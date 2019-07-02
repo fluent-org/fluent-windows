@@ -42,8 +42,7 @@
   },
   "dependencies": {
     "@fluent-ui/icons": "^0.0.1",
-    "@xstyled/styled-components": "^1.1.1",
-    "normalize.css": "^8.0.1"
+    "@xstyled/styled-components": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
