@@ -9,7 +9,7 @@ import {
 } from 'react'
 import Item, { ID } from './Item'
 import { BoxProps } from '../Box/Box'
-import { ThemeProps } from '../../theme'
+import { ThemeProps } from '../theme'
 import Header from './Header'
 import Footer from './Footer'
 import Content from './Content'
@@ -19,7 +19,7 @@ import {
   StyledContent,
   StyledContainer
 } from './Navigation.styled'
-import { useReveal } from '../../hooks/useReveal'
+import { useReveal } from '../hooks/useReveal'
 import * as CSS from 'csstype'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {

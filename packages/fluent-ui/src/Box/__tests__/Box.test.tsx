@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { ThemeProvider, Box } from '../../..'
+import { ThemeProvider, Box } from '../..'
 
 describe('Box', (): void => {
   const theme = {}

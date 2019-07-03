@@ -7,7 +7,7 @@ import {
   HTMLAttributes
 } from 'react'
 import styled, { Box as Base } from '@xstyled/styled-components'
-import { omit } from '../../utils'
+import { omit } from '../utils'
 import { StylesProps } from './style'
 
 export interface BoxProps

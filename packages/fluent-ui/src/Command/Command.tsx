@@ -15,12 +15,12 @@ import Secondary from './Secondary'
 import Content from './Content'
 import Box from '../Box'
 import CommandButton from '../CommandButton'
-import { omit } from '../../utils'
+import { omit } from '../utils'
 import { BoxProps } from '../Box/Box'
-import { ThemeProps } from '../../theme'
-import { usePortal } from '../../hooks/usePortal'
-import { useOnClickOutside } from '../../hooks/useOnClickOutside'
-import { useReveal } from '../../hooks/useReveal'
+import { ThemeProps } from '../theme'
+import { usePortal } from '../hooks/usePortal'
+import { useOnClickOutside } from '../hooks/useOnClickOutside'
+import { useReveal } from '../hooks/useReveal'
 
 type Child =
   | ReactComponentElement<typeof CommandButton>

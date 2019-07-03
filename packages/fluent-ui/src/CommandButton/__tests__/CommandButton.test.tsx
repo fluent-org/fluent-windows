@@ -2,8 +2,8 @@ import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import { ThemeProvider, CommandButton } from '../../..'
-import { findAllByType } from '../../../utils'
+import { ThemeProvider, CommandButton } from '../..'
+import { findAllByType } from '../../utils'
 
 describe('CommandButton', (): void => {
   const theme = {}
