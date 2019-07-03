@@ -18,7 +18,6 @@ const Button = styled.div`
   transition: all ease-in-out 250ms;
   & > svg {
     transition: all ease-in-out 250ms;
-    will-change: transform;
   }
   & > span {
     font-size: 12px;

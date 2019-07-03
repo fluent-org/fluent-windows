@@ -32,6 +32,7 @@ const CommandButtonStyled = styled.button<{
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: inherit;
   background-color: ${({ reveal }): CSS.ColorProperty =>

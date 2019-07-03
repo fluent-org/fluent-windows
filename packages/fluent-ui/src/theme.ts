@@ -43,12 +43,12 @@ export interface Theme {
 
 const colors: Colors = {
   secondary: 'rgba(0, 0, 0, 0.1)',
-  primary: 'rgba(0, 0, 0, 0.2)',
+  primary: 'rgba(204, 204, 204, 1)',
   accent: 'rgba(0, 120, 215, 1)',
   selected: 'rgba(0, 120, 215, 0.4)',
   white: 'rgba(255, 255, 255, 1)',
   black: 'rgba(0, 0, 0, 1)',
-  border: 'rgba(0, 0, 0, 0.4)',
+  border: 'rgba(122, 122, 122, 1)',
   gray100: 'rgba(230, 230, 230, 1)',
   gray200: 'rgba(215, 215, 215, 1)',
   gray300: 'rgba(185, 185, 185, 1)'
