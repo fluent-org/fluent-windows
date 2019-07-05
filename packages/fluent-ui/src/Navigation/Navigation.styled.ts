@@ -8,13 +8,15 @@ interface StyledContainerProps extends BoxProps {
   expanded: boolean
 }
 
-export const StyledContainer = styled(Box)<StyledContainerProps>`
+export const StyledContainer = styled(Box).attrs(
+  (props): any => ({
+    backgroundColor: th.color('primary.light2').call(undefined, props)
+  })
+)<StyledContainerProps>`
   display: flex;
   flex-direction: ${({ horizontal }: StyledContainerProps): string =>
     horizontal ? 'row' : 'column'};
   justify-content: space-between;
-  ${({ backgroundColor }: StyledContainerProps): string =>
-    backgroundColor ? `background-color: ${backgroundColor}` : ''};
   ${({ horizontal, expanded }): string =>
     horizontal
       ? `max-height: 40px`

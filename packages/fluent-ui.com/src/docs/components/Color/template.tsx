@@ -22,9 +22,9 @@ const colorList = Object.entries(colors).map(
 )
 
 const Block = styled(
-  ({ value, index, ...rest }): ReactElement => (
+  ({ type, value, ...rest }): ReactElement => (
     <Box {...rest}>
-      <Box flex={1}>{index}</Box>
+      <Box flex={1}>{type}</Box>
       <Box>{value}</Box>
     </Box>
   )
@@ -53,9 +53,9 @@ const Template = (): ReactElement => {
             <h1>{type}</h1>
             <Box>
               {items.map(
-                ({ key, value }, index): ReactElement => (
+                ({ key, value }): ReactElement => (
                   <CopyToClipboard key={key} text={value}>
-                    <Block type={key} index={index} value={value} />
+                    <Block type={key} value={value} />
                   </CopyToClipboard>
                 )
               )}

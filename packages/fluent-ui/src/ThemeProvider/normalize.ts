@@ -6,7 +6,12 @@
 import { createGlobalStyle } from '@xstyled/styled-components'
 
 const Normalize = createGlobalStyle`
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
 html {
+  box-sizing: border-box;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }

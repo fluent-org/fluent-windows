@@ -1,16 +1,17 @@
-interface Obj {
+interface Target {
   [key: string]: any
 }
 
-function omit(obj: Obj, fields: string[]): Omit<Obj, string> {
-  const shallowCopy: Obj = {
-    ...obj
-  }
-  for (let i = 0; i < fields.length; i++) {
-    const key: string = fields[i]
-    delete shallowCopy[key]
-  }
-  return shallowCopy
+function omit(target: Target, fields: string[]): Omit<Target, string> {
+  return Object.keys(target)
+    .filter((key): boolean => !fields.includes(key))
+    .reduce(
+      (acc, cur): any => ({
+        ...acc,
+        [cur]: target[cur]
+      }),
+      {}
+    )
 }
 
 export default omit

@@ -29,8 +29,6 @@ type Child = ReactChild | any
 
 const StyledItemWrapper = styled.div<{
   reveal: boolean
-  backgroundColor: CSS.BackgroundColorProperty
-  color: CSS.ColorProperty
 }>`
   position: relative;
   max-height: 40px;
@@ -41,17 +39,17 @@ const StyledItemWrapper = styled.div<{
   padding: 12;
   box-sizing: border-box;
   transition: ${th.transition('navigation')};
-  color: ${({ color }): string => color};
+  color: ${th.color('black.default')};
   background-color: ${({ reveal }): CSS.ColorProperty =>
-    reveal ? th.color('primary.1') : 'transparent'};
+    reveal ? th.color('primary.light2') : 'transparent'};
   &:hover {
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.2') : th.color('primary.7')};
+      reveal ? th.color('primary.light1') : th.color('primary.transparent1')};
   }
   &:active {
-    color: black;
+    color: ${th.color('black.default')};
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.4') : th.color('primary.8')};
+      reveal ? th.color('primary.dark1') : th.color('primary.transparent2')};
   }
 `
 const StyledItemActiveBar = styled.div<{
@@ -59,7 +57,7 @@ const StyledItemActiveBar = styled.div<{
   horizontal: boolean
 }>`
   position: absolute;
-  background-color: accent.3;
+  background-color: ${th.color('accent.default')};
   transition: ${th.transition('navigation')};
   ${variant({
     prop: 'horizontal',
@@ -139,8 +137,6 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
     value: activeID,
     onChange,
     expanded,
-    backgroundColor,
-    color,
     reveal,
     horizontal
   } = useContext(NavigationContext)
@@ -157,12 +153,7 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   }, [activeID, id])
 
   return (
-    <StyledItemWrapper
-      onClick={handleItemClick}
-      reveal={reveal}
-      backgroundColor={backgroundColor}
-      color={color}
-    >
+    <StyledItemWrapper onClick={handleItemClick} reveal={reveal}>
       {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
       <StyledItemIconWrapper>{container.icon}</StyledItemIconWrapper>
       <StyledItemTextWrapper expanded={expanded}>

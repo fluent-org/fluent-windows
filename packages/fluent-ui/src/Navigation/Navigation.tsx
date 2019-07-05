@@ -20,8 +20,7 @@ import {
   StyledContainer
 } from './Navigation.styled'
 import { useReveal } from '../hooks/useReveal'
-import * as CSS from 'csstype'
-import { primary, black } from '../colors'
+import { omit } from '../utils'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
   horizontal?: boolean
@@ -56,16 +55,12 @@ export const NavigationContext = createContext<{
   value: ID
   onChange: (id: ID) => void
   expanded: boolean
-  backgroundColor: CSS.BackgroundColorProperty
-  color: CSS.ColorProperty
   reveal: boolean
   horizontal: boolean
 }>({
   value: '',
   onChange: (): void => {},
   expanded: true,
-  backgroundColor: primary.light2!,
-  color: black.default,
   reveal: false,
   horizontal: false
 })
@@ -79,8 +74,6 @@ const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
       reveal,
       value,
       onChange,
-      backgroundColor,
-      color,
       children,
       ...rest
     }: NavigationProps,
@@ -111,11 +104,10 @@ const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
       value: value as ID,
       onChange: onChange as (id: ID) => void,
       expanded: expanded as boolean,
-      backgroundColor: backgroundColor as CSS.BackgroundColorProperty,
-      color: color as CSS.ColorProperty,
       reveal: reveal as boolean,
       horizontal: horizontal as boolean
     }
+    const others = omit(rest, ['backgroundColor', 'color'])
     return (
       <NavigationContext.Provider value={contextValue}>
         <StyledContainer
@@ -123,9 +115,7 @@ const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
           horizontal={horizontal}
           expanded={expanded as boolean}
           acrylic={acrylic}
-          backgroundColor={backgroundColor}
-          color={color}
-          {...rest}
+          {...others}
         >
           <StyledHeader horizontal={horizontal}>
             {reveal
@@ -184,7 +174,6 @@ Object.defineProperty(Navigation, 'Item', {
 Navigation.displayName = 'FNavigation'
 
 Navigation.defaultProps = {
-  backgroundColor: primary.light2,
   horizontal: false,
   expanded: true,
   acrylic: false

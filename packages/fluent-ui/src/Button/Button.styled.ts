@@ -11,15 +11,15 @@ const base = css`
   border: 2px solid transparent;
   font-family: ${th.font('button')};
   &:hover {
-    border-color: primary.6;
+    border-color: ${th.color('primary.dark3')};
   }
   &:active {
-    color: black;
-    background-color: primary.6;
+    color: ${th.color('black.default')};
+    background-color: ${th.color('primary.dark3')};
     border-color: transparent;
   }
   &:disabled {
-    color: primary.6;
+    color: ${th.color('primary.dark3')};
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -30,12 +30,12 @@ const variants = variant({
   default: 'primary',
   variants: {
     primary: css`
-      color: black;
-      background-color: primary.3;
+      color: ${th.color('black.default')};
+      background-color: ${th.color('primary.default')};
     `,
     accent: css`
-      color: white;
-      background-color: accent.3;
+      color: ${th.color('white.default')};
+      background-color: ${th.color('accent.default')};
     `
   }
 })

@@ -36,15 +36,15 @@ const CommandButtonStyled = styled.button<{
   cursor: pointer;
   color: inherit;
   background-color: ${({ reveal }): CSS.ColorProperty =>
-    reveal ? th.color('primary.1') : 'transparent'};
+    reveal ? th.color('primary.light2') : 'transparent'};
   &:hover {
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.2') : th.color('primary.7')};
+      reveal ? th.color('primary.light1') : th.color('primary.transparent1')};
   }
   &:active {
-    color: black;
+    color: ${th.color('black.default')};
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.4') : th.color('primary.8')};
+      reveal ? th.color('primary.dark1') : th.color('primary.transparent2')};
   }
 `
 

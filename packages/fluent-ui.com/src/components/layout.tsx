@@ -9,8 +9,9 @@ interface LayoutProps {
 
 const theme: Theme = {
   colors: {
-    // primary: 'rgba(0, 0, 0, 0.2)',
-    // accent: 'rgba(0, 120, 215, 1)'
+    primary: {
+      // light2: '#000'
+    }
   }
 }
 

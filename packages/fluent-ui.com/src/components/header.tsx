@@ -3,11 +3,24 @@ import { ReactElement } from 'react'
 import * as PropTypes from 'prop-types'
 import { Command, CommandButton } from '@fluent-ui/core'
 
-const Header = ({ siteTitle }): ReactElement => (
-  <Command width="100%" backgroundColor="white" height={56} position="sticky" top={0} left={0}>
+interface HeaderProps {
+  siteTitle: string
+  left: number
+}
+
+const Header = ({ siteTitle, left }: HeaderProps): ReactElement => (
+  <Command
+    backgroundColor="white.default"
+    width={`calc(100% - ${left}px)`}
+    height={56}
+    position="fixed"
+    left={left}
+    top={0}
+    zIndex={100}
+  >
     <CommandButton icon="Code" as="a" href="https://github.com/chenyueban/fluent-ui" />
 
-    <Command.Content>Fluent</Command.Content>
+    <Command.Content>{siteTitle}</Command.Content>
   </Command>
 )
 

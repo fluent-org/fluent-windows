@@ -86,14 +86,14 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
         )}
       </Navigation>
       <Box
-        width={`calc(100vw - ${expanded ? `${navigationWidth}px` : '40px'})`}
         minHeight="100vh"
-        marginLeft={expanded ? navigationWidth : '40px'}
+        paddingLeft={expanded ? navigationWidth : '40px'}
+        paddingTop={56}
         boxShadow="0px 0px 8px 0px rgba(0, 0, 0, 0.36)"
         transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
-        overflow="hidden"
+        style={{ overflowX: 'hidden' }}
       >
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} left={expanded ? navigationWidth : 40} />
         <Box padding="10px">
           <Markdown
             options={{

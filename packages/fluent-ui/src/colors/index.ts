@@ -8,7 +8,7 @@ export interface Color {
   light3?: CSS.Color
   light2?: CSS.Color
   light1?: CSS.Color
-  default: CSS.Color
+  default?: CSS.Color
   dark1?: CSS.Color
   dark2?: CSS.Color
   dark3?: CSS.Color

@@ -10,10 +10,14 @@ import {
   MouseEvent,
   useRef
 } from 'react'
-import { StyledContent, StyledPrimary } from './Command.styled'
+import {
+  StyledContent,
+  StyledPrimary,
+  StyledContainer,
+  StyledSecondaryContainer
+} from './Command.styled'
 import Secondary from './Secondary'
 import Content from './Content'
-import Box from '../Box'
 import CommandButton from '../CommandButton'
 import { omit } from '../utils'
 import { BoxProps } from '../Box/Box'
@@ -21,7 +25,6 @@ import { ThemeProps } from '../styles/createTheme'
 import { usePortal } from '../hooks/usePortal'
 import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import { useReveal } from '../hooks/useReveal'
-import { primary } from '../colors'
 
 type Child =
   | ReactComponentElement<typeof CommandButton>
@@ -93,9 +96,9 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
       }
     )
 
-    const otherProps = omit(rest, ['display'])
+    const otherProps = omit(rest, ['display', 'backgroundColor', 'color'])
     return (
-      <Box display="flex" ref={ref} acrylic={acrylic} {...otherProps}>
+      <StyledContainer ref={ref} acrylic={acrylic} {...otherProps}>
         <CommandContext.Provider value={reveal as boolean}>
           {!!container.content.length && (
             <StyledContent>{container.content}</StyledContent>
@@ -123,20 +126,13 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
             ))}
           {secondaryVisible && (
             <SecondaryPortal style={portalStyle}>
-              <Box
-                ref={secondaryRef}
-                width={130}
-                display="flex"
-                flexDirection="column"
-                backgroundColor="#e6e6e6"
-                acrylic={acrylic}
-              >
+              <StyledSecondaryContainer ref={secondaryRef} acrylic={acrylic}>
                 {container.secondary}
-              </Box>
+              </StyledSecondaryContainer>
             </SecondaryPortal>
           )}
         </CommandContext.Provider>
-      </Box>
+      </StyledContainer>
     )
   }
 )
@@ -156,8 +152,7 @@ Command.displayName = 'FCommand'
 
 Command.defaultProps = {
   acrylic: false,
-  reveal: false,
-  backgroundColor: primary.light2
+  reveal: false
 }
 
 export default Command as CommandType
