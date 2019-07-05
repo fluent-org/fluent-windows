@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { FC, ReactElement, ReactNode } from 'react'
 import { ThemeProvider as BaseProvider } from '@xstyled/styled-components'
-import defaultTheme, { Theme } from '../theme'
-import { deepMerge } from '../utils'
+import createTheme, { Theme } from '../styles/createTheme'
+
 import Normalize from './normalize'
 
 interface ThemeProviderProps {
@@ -14,9 +14,9 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
   theme,
   children
 }: ThemeProviderProps): ReactElement => {
-  const mergeTheme = deepMerge<Theme>(defaultTheme, theme)
+  const customTheme = createTheme(theme)
   return (
-    <BaseProvider theme={mergeTheme}>
+    <BaseProvider theme={customTheme}>
       <>
         <Normalize />
         {children}

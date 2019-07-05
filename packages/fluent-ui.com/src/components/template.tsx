@@ -13,6 +13,7 @@ import Layout from './layout'
 import Playground from './playground'
 
 import IconTemplate from '../docs/components/Icon/template'
+import ColorTemplate from '../docs/components/Color/template'
 
 interface TemplateProps {
   data: {
@@ -85,7 +86,8 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
         )}
       </Navigation>
       <Box
-        width={`calc(100vw - ${expanded ? navigationWidth : '40px'})`}
+        width={`calc(100vw - ${expanded ? `${navigationWidth}px` : '40px'})`}
+        minHeight="100vh"
         marginLeft={expanded ? navigationWidth : '40px'}
         boxShadow="0px 0px 8px 0px rgba(0, 0, 0, 0.36)"
         transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
@@ -97,7 +99,8 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
             options={{
               overrides: {
                 pre: Playground as any,
-                IconTemplate
+                IconTemplate,
+                ColorTemplate
               }
             }}
           >

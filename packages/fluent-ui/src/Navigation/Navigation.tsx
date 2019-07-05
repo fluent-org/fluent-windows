@@ -9,7 +9,7 @@ import {
 } from 'react'
 import Item, { ID } from './Item'
 import { BoxProps } from '../Box/Box'
-import { ThemeProps } from '../theme'
+import { ThemeProps } from '../styles/createTheme'
 import Header from './Header'
 import Footer from './Footer'
 import Content from './Content'
