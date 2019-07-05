@@ -10,4 +10,5 @@ export interface Color {
   dark1: CSS.Color
   dark2: CSS.Color
   dark3: CSS.Color
+  [key: string]: CSS.Color
 }

@@ -24,39 +24,42 @@ const colorList = Object.entries(colors).map(
 const Block = styled(
   ({ value, index, ...rest }): ReactElement => (
     <Box {...rest}>
-      <Box textAlign="center">{index}</Box>
-      <Box textAlign="center">{value}</Box>
+      <Box flex={1}>{index}</Box>
+      <Box>{value}</Box>
     </Box>
   )
 )`
-  width: 100px;
-  height: 100px;
-  display: inline-flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
   background-color: ${({ value }): string => value};
   color: ${({ type }): string => (type.includes('light') ? 'black' : 'white')};
   cursor: pointer;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
-    transform: scale3d(1.2, 1.2, 1.2);
+    margin-right: -8px;
   }
 `
 
 const Template = (): ReactElement => {
   return (
-    <Box>
+    <Box display="flex" flexWrap="wrap" justifyContent="space-between">
       {colorList.map(
         ({ type, items }): ReactElement => (
-          <Box key={type}>
+          <Box key={type} width="30%" display="inline-block">
             <h1>{type}</h1>
-            {items.map(
-              ({ key, value }, index): ReactElement => (
-                <CopyToClipboard key={key} text={value}>
-                  <Block type={key} index={index} value={value} />
-                </CopyToClipboard>
-              )
-            )}
+            <Box>
+              {items.map(
+                ({ key, value }, index): ReactElement => (
+                  <CopyToClipboard key={key} text={value}>
+                    <Block type={key} index={index} value={value} />
+                  </CopyToClipboard>
+                )
+              )}
+            </Box>
           </Box>
         )
       )}

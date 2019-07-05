@@ -21,6 +21,7 @@ import { ThemeProps } from '../styles/createTheme'
 import { usePortal } from '../hooks/usePortal'
 import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import { useReveal } from '../hooks/useReveal'
+import { primary } from '../colors'
 
 type Child =
   | ReactComponentElement<typeof CommandButton>
@@ -156,7 +157,7 @@ Command.displayName = 'FCommand'
 Command.defaultProps = {
   acrylic: false,
   reveal: false,
-  backgroundColor: '#e6e6e6'
+  backgroundColor: primary.light2
 }
 
 export default Command as CommandType
