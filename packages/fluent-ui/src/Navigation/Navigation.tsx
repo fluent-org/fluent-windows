@@ -21,6 +21,7 @@ import {
 } from './Navigation.styled'
 import { useReveal } from '../hooks/useReveal'
 import * as CSS from 'csstype'
+import { primary, black } from '../colors'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
   horizontal?: boolean
@@ -63,8 +64,8 @@ export const NavigationContext = createContext<{
   value: '',
   onChange: (): void => {},
   expanded: true,
-  backgroundColor: '#e6e6e6',
-  color: '#000',
+  backgroundColor: primary.light2!,
+  color: black.default,
   reveal: false,
   horizontal: false
 })
@@ -183,7 +184,7 @@ Object.defineProperty(Navigation, 'Item', {
 Navigation.displayName = 'FNavigation'
 
 Navigation.defaultProps = {
-  backgroundColor: '#e6e6e6',
+  backgroundColor: primary.light2,
   horizontal: false,
   expanded: true,
   acrylic: false

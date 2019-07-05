@@ -10,7 +10,7 @@ const primary: Color = {
   dark3: '#7a7a7a',
   transparent1: 'rgba(0, 0, 0, 0.1)',
   transparent2: 'rgba(0, 0, 0, 0.2)',
-  transparent4: 'rgba(0, 0, 0, 0.4)'
+  transparent3: 'rgba(0, 0, 0, 0.4)'
 }
 
 export default primary

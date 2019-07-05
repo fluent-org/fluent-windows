@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { primary, accent } from '../colors'
+import { primary, accent, white, black } from '../colors'
 import { deepMerge } from '../utils'
 
 type ColorIntention = CSS.Color[]
@@ -7,16 +7,16 @@ type ColorIntention = CSS.Color[]
 export interface Colors {
   primary?: ColorIntention
   accent?: ColorIntention
-  white?: CSS.Color
-  black?: CSS.Color
+  white?: ColorIntention
+  black?: ColorIntention
 }
 
 function createColor(colors: Colors): Colors {
   const defaultColors = {
     primary: Object.values(primary),
     accent: Object.values(accent),
-    white: '#fff',
-    black: '#000'
+    white: Object.values(white),
+    black: Object.values(black)
   }
   return deepMerge(colors, defaultColors)
 }

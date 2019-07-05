@@ -3,7 +3,6 @@ import {
   ReactElement,
   ReactNode,
   Children,
-  ReactComponentElement,
   ReactChild,
   cloneElement,
   useContext,
@@ -44,15 +43,15 @@ const StyledItemWrapper = styled.div<{
   transition: ${th.transition('navigation')};
   color: ${({ color }): string => color};
   background-color: ${({ reveal }): CSS.ColorProperty =>
-    reveal ? th.color('gray100') : 'transparent'};
+    reveal ? th.color('primary.1') : 'transparent'};
   &:hover {
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('gray200') : th.color('secondary')};
+      reveal ? th.color('primary.2') : th.color('primary.7')};
   }
   &:active {
     color: black;
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('gray300') : th.color('primary')};
+      reveal ? th.color('primary.4') : th.color('primary.8')};
   }
 `
 const StyledItemActiveBar = styled.div<{
@@ -60,7 +59,7 @@ const StyledItemActiveBar = styled.div<{
   horizontal: boolean
 }>`
   position: absolute;
-  background-color: accent;
+  background-color: accent.3;
   transition: ${th.transition('navigation')};
   ${variant({
     prop: 'horizontal',
@@ -102,7 +101,6 @@ const StyledItemTextWrapper = styled.div<{ expanded: boolean }>`
   padding-left: ${({ children, expanded }): string =>
     children ? (expanded ? '12px' : '0px') : '0px'};
   flex: 1;
-  display: flex;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
