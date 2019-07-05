@@ -11,15 +11,15 @@ const base = css`
   border: 2px solid transparent;
   font-family: ${th.font('button')};
   &:hover {
-    border-color: ${th.color('border')};
+    border-color: primary.6;
   }
   &:active {
     color: black;
-    background-color: border;
+    background-color: primary.6;
     border-color: transparent;
   }
   &:disabled {
-    color: border;
+    color: primary.6;
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -31,11 +31,11 @@ const variants = variant({
   variants: {
     primary: css`
       color: black;
-      background-color: primary;
+      background-color: primary.3;
     `,
     accent: css`
       color: white;
-      background-color: accent;
+      background-color: accent.3;
     `
   }
 })

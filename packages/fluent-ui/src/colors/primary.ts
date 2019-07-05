@@ -7,7 +7,7 @@ const primary: Color = {
   default: '#cccccc',
   dark1: '#b9b9b9',
   dark2: '#aaaaaa',
-  dark3: '#999999'
+  dark3: '#7a7a7a'
 }
 
 export default primary
