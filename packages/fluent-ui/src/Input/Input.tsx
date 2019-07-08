@@ -45,7 +45,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           type={password ? 'password' : 'text'}
           {...rest}
         />
-        {cleared && (
+        {value && cleared && (
           <StyledIcon onClick={handleClear}>
             <ChromeCloseIcon />
           </StyledIcon>

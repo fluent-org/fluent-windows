@@ -18,7 +18,7 @@ function createIcon(jsx: JSX, componentName: string): React.ForwardRefExoticComp
     color: inherit;
     fill: currentColor;
   `
-  SvgIconStyled.displayName = componentName
+  SvgIconStyled.displayName = `FIcon${componentName}`
   return SvgIconStyled
 }
 

@@ -13,6 +13,7 @@ const base = css`
   outline: none;
   width: 296px;
   height: ${inputSize}px;
+  line-height: ${inputSize}px;
   font-size: 14px;
   padding: 6px 12px;
   font-family: ${th.font('input')};

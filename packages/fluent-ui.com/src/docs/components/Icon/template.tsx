@@ -37,14 +37,17 @@ const Template = (): ReactElement => {
   return (
     <Box>
       {IconArray.map(
-        (Icon): ReactElement => (
-          <CopyToClipboard key={Icon.displayName} text={`<${Icon.displayName} />`}>
-            <Button>
-              <Icon />
-              <span>{Icon.displayName}</span>
-            </Button>
-          </CopyToClipboard>
-        )
+        (Icon): ReactElement => {
+          const name = String.prototype.substring.call(Icon.displayName, 5)
+          return (
+            <CopyToClipboard key={name} text={`<${name} />`}>
+              <Button>
+                <Icon />
+                <span>{name}</span>
+              </Button>
+            </CopyToClipboard>
+          )
+        }
       )}
     </Box>
   )
