@@ -1,4 +1,4 @@
-import omit from '../omit'
+import { omit } from '..'
 
 describe('omit', (): void => {
   it('should exclude the key specified in the object', (): void => {

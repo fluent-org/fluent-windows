@@ -1,4 +1,4 @@
-import { isObject, deepMerge } from '../deepMerge'
+import { isObject, deepMerge } from '..'
 
 describe('isObject', (): void => {
   it('Correctly determine the type of object', (): void => {
