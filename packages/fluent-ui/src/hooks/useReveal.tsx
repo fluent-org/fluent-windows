@@ -3,6 +3,7 @@ import {
   ReactElement,
   useState,
   useRef,
+  useCallback,
   ReactNode,
   useEffect,
   RefObject,
@@ -23,15 +24,18 @@ const createRevealWrapper = (
   const RevealWrapper = ({ children }: RevealWrapperProps): ReactElement => {
     const [background, setBackground] = useState()
     const ref = useRef<HTMLDivElement>() as RefObject<HTMLDivElement>
-    function listener(e: MouseEvent): void {
-      const rect = ref.current && ref.current.getBoundingClientRect()
-      if (ref.current && rect) {
-        const x = e.pageX - rect.left - window.scrollX
-        const y = e.pageY - rect.top - window.scrollY
-        const gradient = `radial-gradient(circle ${gradientSize}px at ${x}px ${y}px, ${lightColor}, rgba(255,255,255,0))`
-        setBackground(gradient)
-      }
-    }
+    const listener = useCallback(
+      (e: MouseEvent): void => {
+        const rect = ref.current && ref.current.getBoundingClientRect()
+        if (ref.current && rect) {
+          const x = e.pageX - rect.left - window.scrollX
+          const y = e.pageY - rect.top - window.scrollY
+          const gradient = `radial-gradient(circle ${gradientSize}px at ${x}px ${y}px, ${lightColor}, rgba(255,255,255,0))`
+          setBackground(gradient)
+        }
+      },
+      [ref]
+    )
     useEffect((): (() => void) => {
       document.addEventListener('mousemove', listener)
       return (): void => {
