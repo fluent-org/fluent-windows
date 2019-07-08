@@ -3,11 +3,13 @@ import { deepMerge } from '../utils'
 
 export interface Fonts {
   button?: CSS.FontFamilyProperty
+  input?: CSS.FontFamilyProperty
 }
 
 function createFont(fonts: Fonts): Fonts {
   const defaultFont: Fonts = {
-    button: 'PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto'
+    button: 'PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto',
+    input: 'PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto'
   }
   return deepMerge(fonts, defaultFont)
 }

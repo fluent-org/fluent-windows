@@ -14,11 +14,11 @@ function createIcon(jsx: JSX, componentName: string): React.ForwardRefExoticComp
     height: 0.83em;
     display: inline-block;
     user-select: none;
-    font-size: 1.5rem;
+    font-size: inherit;
     color: inherit;
     fill: currentColor;
   `
-  SvgIconStyled.displayName = `FIcon${componentName}`
+  SvgIconStyled.displayName = componentName
   return SvgIconStyled
 }
 

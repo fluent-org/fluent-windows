@@ -5,7 +5,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import { Box } from '@fluent-ui/core'
 import * as Icons from '@fluent-ui/icons'
-import { GlobalNavigationButton } from '@fluent-ui/icons'
 
 const Button = styled.div`
   width: 20%;
