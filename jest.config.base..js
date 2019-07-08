@@ -5,7 +5,7 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   modulePathIgnorePatterns: ['node_modules', 'build'],
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['node_modules', 'build'],
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$',
   coveragePathIgnorePatterns: ['node_modules', 'build'],

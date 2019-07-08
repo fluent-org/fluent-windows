@@ -19,6 +19,10 @@ exports[`CommandButton as 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
   color: inherit;
   background-color: transparent;
@@ -29,7 +33,7 @@ exports[`CommandButton as 1`] = `
 }
 
 .c0:active {
-  color: rgba(0,0,0,1);
+  color: #000000;
   background-color: rgba(0,0,0,0.2);
 }
 
@@ -71,6 +75,10 @@ exports[`CommandButton basic 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
   color: inherit;
   background-color: transparent;
@@ -81,7 +89,7 @@ exports[`CommandButton basic 1`] = `
 }
 
 .c0:active {
-  color: rgba(0,0,0,1);
+  color: #000000;
   background-color: rgba(0,0,0,0.2);
 }
 

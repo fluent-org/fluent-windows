@@ -2,7 +2,7 @@
 
 exports[`Box as 1`] = `
 <span
-  className="sc-bdVaJa "
+  className=""
 >
   as span
 </span>
@@ -10,7 +10,7 @@ exports[`Box as 1`] = `
 
 exports[`Box basic 1`] = `
 <div
-  className="sc-bdVaJa "
+  className=""
 >
   basic
 </div>
