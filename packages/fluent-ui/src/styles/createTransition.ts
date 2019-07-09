@@ -6,6 +6,7 @@ export interface Transitions {
   button?: CSS.TransitionProperty
   input?: CSS.TransitionProperty
   checkbox?: CSS.TransitionProperty
+  radio?: CSS.TransitionProperty
   navigation?: CSS.TransitionProperty
 }
 
@@ -17,6 +18,7 @@ function createTransition(transitions: Transitions): Transitions {
     button: baseTransition,
     input: baseTransition,
     checkbox: baseTransition,
+    radio: baseTransition,
     navigation: baseTransition
   }
   return deepMerge(transitions, defaultTransitions)

@@ -22,6 +22,9 @@ components: Checkbox
 ## Disabled
 
 ```jsx
-<Checkbox disabled/>
+<>
+  <Checkbox disabled />
+  <Checkbox disabled checked/>
+</>
 ```
 

@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox basic 1`] = `
+exports[`Radio basic 1`] = `
 .c0 {
   width: 20px;
   height: 20px;
+  border-radius: 50%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -21,16 +22,11 @@ exports[`Checkbox basic 1`] = `
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   color: #000000;
-  background-color: transparent;
   border-color: #cccccc;
 }
 
 .c0:hover {
   border-color: #7a7a7a;
-}
-
-.c0:active {
-  background-color: #7a7a7a;
 }
 
 .c1 {
@@ -51,15 +47,16 @@ exports[`Checkbox basic 1`] = `
   <input
     className="c1"
     onChange={[Function]}
-    type="checkbox"
+    type="radio"
   />
 </div>
 `;
 
-exports[`Checkbox prop disabled 1`] = `
+exports[`Radio prop disabled 1`] = `
 .c0 {
   width: 20px;
   height: 20px;
+  border-radius: 50%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -77,21 +74,14 @@ exports[`Checkbox prop disabled 1`] = `
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   color: #000000;
-  background-color: transparent;
   border-color: #cccccc;
   border-color: #7a7a7a;
-  background-color: transparent;
-  color: #7a7a7a;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .c0:hover {
   border-color: #7a7a7a;
-}
-
-.c0:active {
-  background-color: #7a7a7a;
 }
 
 .c1 {
@@ -114,7 +104,7 @@ exports[`Checkbox prop disabled 1`] = `
     className="c1"
     disabled={true}
     onChange={[Function]}
-    type="checkbox"
+    type="radio"
   />
 </div>
 `;

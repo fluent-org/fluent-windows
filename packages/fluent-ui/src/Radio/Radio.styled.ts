@@ -6,12 +6,13 @@ const checked = variant({
   variants: {
     true: css`
       color: ${th.color('white.default')};
-      background-color: ${th.color('accent.default')};
       border-color: ${th.color('accent.default')};
+      &:hover {
+        border-color: ${th.color('accent.default')};
+      }
     `,
     false: css`
       color: ${th.color('black.default')};
-      background-color: transparent;
       border-color: ${th.color('primary.default')};
     `
   }
@@ -23,8 +24,6 @@ const disabled = variant({
   variants: {
     true: css`
       border-color: ${th.color('primary.dark3')};
-      background-color: transparent;
-      color: ${th.color('primary.dark3')};
       cursor: not-allowed;
       pointer-events: none;
     `,
@@ -32,30 +31,28 @@ const disabled = variant({
   }
 })
 
-export const StyledCheckboxWrapper = styled.div<{
+export const StyledRadioWrapper = styled.div<{
   checked?: boolean
   disabled?: boolean
 }>`
   width: 20px;
   height: 20px;
+  border-radius: 50%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid;
-  transition: ${th.transition('checkbox')};
+  transition: ${th.transition('radio')};
   &:hover {
     border-color: ${th.color('primary.dark3')};
-  }
-  &:active {
-    background-color: ${th.color('primary.dark3')};
   }
 
   ${checked}
   ${disabled}
 `
 
-export const StyledCheckbox = styled.input`
+export const StyledRadio = styled.input`
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -65,4 +62,13 @@ export const StyledCheckbox = styled.input`
   top: 0;
   bottom: 0;
   cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
+`
+
+export const StyledCircle = styled.div<{ disabled?: boolean }>`
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: ${th.transition('radio')};
+  background-color: ${({ disabled }): string =>
+    disabled ? th.color('primary.dark3') : th.color('black.default')};
 `
