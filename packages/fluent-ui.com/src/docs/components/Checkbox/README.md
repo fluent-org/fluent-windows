@@ -19,6 +19,20 @@ components: Checkbox
 }
 ```
 
+## With Label
+
+```jsx
+() => {
+  const [checked, set] = React.useState(false)
+  function handleChange(c) {
+    set(c)
+  }
+  return (
+    <Checkbox checked={checked} onChange={handleChange}>Checkbox</Checkbox>
+  )
+}
+```
+
 ## Disabled
 
 ```jsx

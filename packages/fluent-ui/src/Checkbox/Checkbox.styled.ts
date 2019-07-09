@@ -1,5 +1,17 @@
 import { styled, css, th, variant } from '../styles/styled'
 
+export const StyledLabel = styled.label<{ disabled?: boolean }>`
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
+`
+
+export const StyledLabelText = styled.span`
+  font-size: 0.8em;
+  margin-left: ${({ children }): string => (children ? '4px' : '0')};
+`
+
 const checked = variant({
   prop: 'checked',
   default: false,
@@ -25,7 +37,6 @@ const disabled = variant({
       border-color: ${th.color('primary.dark3')};
       background-color: transparent;
       color: ${th.color('primary.dark3')};
-      cursor: not-allowed;
       pointer-events: none;
     `,
     false: css``
@@ -39,7 +50,7 @@ export const StyledCheckboxWrapper = styled.div<{
   width: 20px;
   height: 20px;
   position: relative;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border: 2px solid;

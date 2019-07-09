@@ -1,5 +1,10 @@
 import * as React from 'react'
-import { StyledCheckboxWrapper, StyledCheckbox } from './Checkbox.styled'
+import {
+  StyledLabel,
+  StyledLabelText,
+  StyledCheckboxWrapper,
+  StyledCheckbox
+} from './Checkbox.styled'
 import { Accept as AcceptIcon } from '@fluent-ui/icons'
 
 interface CheckboxProps {
@@ -7,28 +12,32 @@ interface CheckboxProps {
   value?: string
   onChange?: (checked: boolean) => void
   disabled?: boolean
+  children?: React.ReactNode
 }
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (
-    { checked, value, onChange, disabled }: CheckboxProps,
+    { checked, value, onChange, disabled, children }: CheckboxProps,
     ref
   ): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }
     return (
-      <StyledCheckboxWrapper checked={checked} disabled={disabled}>
-        {checked && <AcceptIcon />}
-        <StyledCheckbox
-          ref={ref}
-          type="checkbox"
-          checked={checked}
-          value={value}
-          onChange={handleChange}
-          disabled={disabled}
-        />
-      </StyledCheckboxWrapper>
+      <StyledLabel disabled={disabled}>
+        <StyledCheckboxWrapper checked={checked} disabled={disabled}>
+          {checked && <AcceptIcon />}
+          <StyledCheckbox
+            ref={ref}
+            type="checkbox"
+            checked={checked}
+            value={value}
+            onChange={handleChange}
+            disabled={disabled}
+          />
+        </StyledCheckboxWrapper>
+        <StyledLabelText>{children}</StyledLabelText>
+      </StyledLabel>
     )
   }
 )
