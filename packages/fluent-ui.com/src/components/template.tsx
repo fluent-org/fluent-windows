@@ -5,10 +5,10 @@ import Markdown from 'markdown-to-jsx'
 import { Box, Navigation } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
-  Connected as ConnectedIcon
+  Connected as ConnectedIcon,
+  Code as CodeIcon
 } from '@fluent-ui/icons'
 
-import Header from './header'
 import Layout from './layout'
 import Playground from './playground'
 
@@ -84,16 +84,20 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
             </Navigation.Item>
           )
         )}
+        <Navigation.Footer>
+          <Navigation.Item as="a" href="https://github.com/chenyueban/fluent-ui">
+            <CodeIcon />
+            <span>Github</span>
+          </Navigation.Item>
+        </Navigation.Footer>
       </Navigation>
       <Box
         minHeight="100vh"
         paddingLeft={expanded ? navigationWidth : '40px'}
-        paddingTop={56}
         boxShadow="0px 0px 8px 0px rgba(0, 0, 0, 0.36)"
         transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
         style={{ overflowX: 'hidden' }}
       >
-        <Header siteTitle={data.site.siteMetadata.title} left={expanded ? navigationWidth : 40} />
         <Box padding="10px">
           <Markdown
             options={{

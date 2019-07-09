@@ -17,7 +17,7 @@ import * as CSS from 'csstype'
 
 export type ID = string | number
 
-interface ItemProps {
+interface ItemProps extends StyledProps {
   id?: ID
   title?: string
   onClick?: MouseEventHandler<HTMLDivElement>
@@ -104,7 +104,7 @@ const StyledItemTextWrapper = styled.div<{ expanded: boolean }>`
   transition: ${th.transition('navigation')};
 `
 
-const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
+const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
   const container: {
     icon: any
     content: any
@@ -152,7 +152,7 @@ const Item = ({ id, onClick, children }: ItemProps): ReactElement => {
   }, [activeID, id])
 
   return (
-    <StyledItemWrapper onClick={handleItemClick} reveal={reveal}>
+    <StyledItemWrapper onClick={handleItemClick} reveal={reveal} {...rest}>
       {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
       <StyledItemIconWrapper>{container.icon}</StyledItemIconWrapper>
       <StyledItemTextWrapper expanded={expanded}>

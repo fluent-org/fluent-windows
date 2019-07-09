@@ -117,7 +117,7 @@ components: Navigation
   return (
     <>
       <Button onClick={handleExpanded}>toggle</Button>
-      <Navigation horizontal={true} width={1000} value={activeId} onChange={handleActiveId} expanded={expanded}>
+      <Navigation horizontal={true} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
           <Navigation.Item>
             <Icon.GlobalNavigationButton />
