@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { FC, ReactElement, ReactNode } from 'react'
-import { ThemeProvider as BaseProvider } from '@xstyled/styled-components'
+import { ThemeProvider as BaseProvider } from '../styles/styled'
 import createTheme, { Theme } from '../styles/createTheme'
 
 import Normalize from './normalize'

@@ -6,7 +6,7 @@ import {
   ComponentPropsWithoutRef,
   HTMLAttributes
 } from 'react'
-import styled, { Box as Base } from '@xstyled/styled-components'
+import { styled, system } from '../styles/styled'
 import { omit } from '../utils'
 import { StylesProps } from './style'
 
@@ -19,9 +19,13 @@ export interface BoxProps
   as?: keyof JSX.IntrinsicElements
 }
 
-const Acrylic = (styled as any).box`
-  position: relative;
-  overflow: hidden;
+const Base = styled.div`
+  ${system}
+`
+
+const Acrylic = styled(Base)`
+  position: ${({ position }: BoxProps): string => position || 'relative'};
+  overflow: ${({ overflow }: BoxProps): string => overflow || 'hidden'};
   @supports (backdrop-filter: blur(10px)) {
     background: none !important;
     backdrop-filter: blur(10px);
@@ -37,7 +41,6 @@ const Acrylic = (styled as any).box`
     &::before {
       z-index: -2;
       opacity: 0.5;
-      // @ts-ignore
       background-color: ${({ backgroundColor }: BoxProps): string =>
         backgroundColor!};
     }
@@ -49,15 +52,13 @@ const Acrylic = (styled as any).box`
   }
 `
 
-const BaseBox = Base as any
-
 const Box = forwardRef<HTMLDivElement, BoxProps>(
   (props: BoxProps, ref): ReactElement => {
-    if (props.acrylic) {
-      return <Acrylic ref={ref} {...props} />
-    }
     const otherProps = omit(props, ['acrylic'])
-    return <BaseBox ref={ref} {...otherProps} />
+    if (props.acrylic) {
+      return <Acrylic ref={ref} {...otherProps} />
+    }
+    return <Base ref={ref} {...otherProps} />
   }
 )
 

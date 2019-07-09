@@ -6,7 +6,7 @@ import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
 export interface InputProps
   extends Omit<
     React.InputHTMLAttributes<HTMLInputElement>,
-    'size' | 'value' | 'onChange'
+    'size' | 'value' | 'onChange' | 'type'
   > {
   value?: string
   onChange?: (value: string) => void

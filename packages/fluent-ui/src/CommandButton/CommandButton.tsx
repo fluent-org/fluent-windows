@@ -7,8 +7,7 @@ import {
   useContext,
   ReactNode
 } from 'react'
-import styled from '@xstyled/styled-components'
-import { th } from '@xstyled/system'
+import { styled, th } from '../styles/styled'
 import * as Icons from '@fluent-ui/icons'
 import * as CSS from 'csstype'
 import { CommandContext } from '../Command/Command'

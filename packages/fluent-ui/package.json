@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@fluent-ui/icons": "^0.0.1",
-    "@xstyled/styled-components": "^1.1.1"
+    "@xstyled/system": "^1.7.0"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
@@ -51,8 +51,7 @@
     "@types/styled-components": "4.1.8",
     "cross-env": "^5.2.0",
     "csstype": "^2.6.5",
-    "rimraf": "^2.6.2",
-    "styled-components": "^4.3.0"
+    "rimraf": "^2.6.2"
   },
   "commitlint": {
     "extends": [

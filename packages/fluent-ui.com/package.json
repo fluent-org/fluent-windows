@@ -44,7 +44,8 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-live": "^2.1.2"
+    "react-live": "^2.1.2",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "^6.9.0",

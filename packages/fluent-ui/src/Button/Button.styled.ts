@@ -1,5 +1,4 @@
-import styled, { css } from '@xstyled/styled-components'
-import { variant, th } from '@xstyled/system'
+import { styled, css, variant, th } from '../styles/styled'
 import { ButtonProps } from './Button'
 
 const base = css`

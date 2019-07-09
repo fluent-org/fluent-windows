@@ -3,7 +3,7 @@
  * https://github.com/necolas/normalize.css
  */
 
-import { createGlobalStyle } from '@xstyled/styled-components'
+import { createGlobalStyle } from '../styles/styled'
 
 const Normalize = createGlobalStyle`
 *, *::after, *::before {

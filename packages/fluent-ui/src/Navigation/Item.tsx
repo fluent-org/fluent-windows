@@ -11,8 +11,7 @@ import {
   MouseEventHandler,
   MouseEvent
 } from 'react'
-import styled, { css } from '@xstyled/styled-components'
-import { th, variant } from '@xstyled/system'
+import { styled, css, variant, th } from '../styles/styled'
 import { NavigationContext } from './Navigation'
 import * as CSS from 'csstype'
 
@@ -36,7 +35,7 @@ const StyledItemWrapper = styled.div<{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12;
+  padding: 12px;
   box-sizing: border-box;
   transition: ${th.transition('navigation')};
   color: ${th.color('black.default')};

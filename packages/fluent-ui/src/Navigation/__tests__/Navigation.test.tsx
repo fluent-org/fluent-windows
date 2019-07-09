@@ -3,7 +3,7 @@ import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { GlobalNavigationButton, Connected, Settings } from '@fluent-ui/icons'
 
-import { ThemeProvider, Navigation } from '../../..'
+import { ThemeProvider, Navigation } from '../../'
 
 describe('Navigation', (): void => {
   const theme = {}
