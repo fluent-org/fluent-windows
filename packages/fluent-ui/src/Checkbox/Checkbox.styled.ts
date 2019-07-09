@@ -4,6 +4,7 @@ export const StyledLabel = styled.label<{ disabled?: boolean }>`
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  vertical-align: middle;
   cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
 `
 
