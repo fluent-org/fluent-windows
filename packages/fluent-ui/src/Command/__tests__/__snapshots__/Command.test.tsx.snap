@@ -1,87 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Command acrylic 1`] = `
-.c0 {
+.c1 {
+  background-color: #e6e6e6;
   position: relative;
   overflow: hidden;
 }
 
-.c0.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #e6e6e6;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 10px;
-  margin-right: 5px;
-}
-
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c4 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c6 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c7 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
 .c5 {
   width: 0.83em;
   height: 0.83em;
@@ -90,204 +15,7 @@ exports[`Command acrylic 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c3 {
-  border: none;
-  outline: none;
-  padding: 10px 22px;
-  line-height: 1;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  color: inherit;
-  background-color: transparent;
-}
-
-.c3:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.c3:active {
-  color: #000000;
-  background-color: rgba(0,0,0,0.2);
-}
-
-@supports (-webkit-backdrop-filter:blur(10px)) or (backdrop-filter:blur(10px)) {
-  .c0 {
-    background: none !important;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
-
-  .c0::before,
-  .c0::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-
-  .c0::before {
-    z-index: -2;
-    opacity: 0.5;
-    background-color: #e6e6e6;
-  }
-
-  .c0::after {
-    z-index: -1;
-    opacity: 0.25;
-    background-image: url(data:image/png;base64,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);
-  }
-}
-
-<div
-  className="c0"
-  display="flex"
->
-  <div
-    className="c1"
-  >
-    <div>
-      Now Playing...
-    </div>
-  </div>
-  <div
-    className="c2"
-  >
-    <button
-      className="c3"
-    >
-      <svg
-        className="c4"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-        />
-      </svg>
-    </button>
-    <button
-      className="c3"
-    >
-      <svg
-        className="c5"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-        />
-      </svg>
-    </button>
-    <button
-      className="c3"
-    >
-      <svg
-        className="c6"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-        />
-      </svg>
-    </button>
-  </div>
-  <button
-    className="c3"
-    onClick={[Function]}
-  >
-    <svg
-      className="c7"
-      viewBox="0 0 2048 2048"
-    >
-      <path
-        d="M256 896q27 0 50 10t40.5 27.5T374 974t10 50-10 50-27.5 40.5T306 1142t-50 10-50-10-40.5-27.5T138 1074t-10-50 10-50 27.5-40.5T206 906t50-10zm768 0q27 0 50 10t40.5 27.5T1142 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5T906 1074t-10-50 10-50 27.5-40.5T974 906t50-10zm768 0q27 0 50 10t40.5 27.5T1910 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5-27.5-40.5-10-50 10-50 27.5-40.5T1742 906t50-10z"
-      />
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`Command basic 1`] = `
-.c0.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #e6e6e6;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 10px;
-  margin-right: 5px;
-}
-
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c4 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c6 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
@@ -300,187 +28,7 @@ exports[`Command basic 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c5 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c3 {
-  border: none;
-  outline: none;
-  padding: 10px 22px;
-  line-height: 1;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  color: inherit;
-  background-color: transparent;
-}
-
-.c3:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.c3:active {
-  color: #000000;
-  background-color: rgba(0,0,0,0.2);
-}
-
-<div
-  className="c0"
-  display="flex"
->
-  <div
-    className="c1"
-  >
-    <div>
-      Now Playing...
-    </div>
-  </div>
-  <div
-    className="c2"
-  >
-    <button
-      className="c3"
-    >
-      <svg
-        className="c4"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-        />
-      </svg>
-    </button>
-    <button
-      className="c3"
-    >
-      <svg
-        className="c5"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-        />
-      </svg>
-    </button>
-    <button
-      className="c3"
-    >
-      <svg
-        className="c6"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-        />
-      </svg>
-    </button>
-  </div>
-  <button
-    className="c3"
-    onClick={[Function]}
-  >
-    <svg
-      className="c7"
-      viewBox="0 0 2048 2048"
-    >
-      <path
-        d="M256 896q27 0 50 10t40.5 27.5T374 974t10 50-10 50-27.5 40.5T306 1142t-50 10-50-10-40.5-27.5T138 1074t-10-50 10-50 27.5-40.5T206 906t50-10zm768 0q27 0 50 10t40.5 27.5T1142 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5T906 1074t-10-50 10-50 27.5-40.5T974 906t50-10zm768 0q27 0 50 10t40.5 27.5T1910 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5-27.5-40.5-10-50 10-50 27.5-40.5T1742 906t50-10z"
-      />
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`Command button with label 1`] = `
-.c0.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #e6e6e6;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 10px;
-  margin-right: 5px;
-}
-
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c4 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c7 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
@@ -493,7 +41,7 @@ exports[`Command button with label 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
@@ -506,12 +54,48 @@ exports[`Command button with label 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+
 .c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c4 {
   border: none;
   outline: none;
   padding: 10px 22px;
@@ -538,55 +122,72 @@ exports[`Command button with label 1`] = `
   background-color: transparent;
 }
 
-.c3:hover {
+.c4:hover {
   background-color: rgba(0,0,0,0.1);
 }
 
-.c3:active {
+.c4:active {
   color: #000000;
   background-color: rgba(0,0,0,0.2);
 }
 
-.c5 {
-  font-size: 12px;
-  margin-top: 6px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+@supports (-webkit-backdrop-filter:blur(10px)) or (backdrop-filter:blur(10px)) {
+  .c1 {
+    background: none !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  .c1::before,
+  .c1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .c1::before {
+    z-index: -2;
+    opacity: 0.5;
+    background-color: #e6e6e6;
+  }
+
+  .c1::after {
+    z-index: -1;
+    opacity: 0.25;
+    background-image: url(data:image/png;base64,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);
+  }
 }
 
 <div
-  className="c0"
-  display="flex"
+  className="c0 c1"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <div>
       Now Playing...
     </div>
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <button
-      className="c3"
+      className="c4"
     >
       <svg
-        className="c4"
+        className="c5"
         viewBox="0 0 2048 2048"
       >
         <path
           d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
         />
       </svg>
-      <div
-        className="c5"
-      >
-        Back
-      </div>
     </button>
     <button
-      className="c3"
+      className="c4"
     >
       <svg
         className="c6"
@@ -596,14 +197,9 @@ exports[`Command button with label 1`] = `
           d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
         />
       </svg>
-      <div
-        className="c5"
-      >
-        Play
-      </div>
     </button>
     <button
-      className="c3"
+      className="c4"
     >
       <svg
         className="c7"
@@ -613,15 +209,10 @@ exports[`Command button with label 1`] = `
           d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
         />
       </svg>
-      <div
-        className="c5"
-      >
-        Forward
-      </div>
     </button>
   </div>
   <button
-    className="c3"
+    className="c4"
     onClick={[Function]}
   >
     <svg
@@ -636,16 +227,71 @@ exports[`Command button with label 1`] = `
 </div>
 `;
 
-exports[`Command reveal 1`] = `
-.c0.c0 {
+exports[`Command basic 1`] = `
+.c1 {
+  background-color: #e6e6e6;
+}
+
+.c5 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c7 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c8 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c6 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #e6e6e6;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -659,7 +305,7 @@ exports[`Command reveal 1`] = `
   margin-right: 5px;
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -675,6 +321,113 @@ exports[`Command reveal 1`] = `
 }
 
 .c4 {
+  border: none;
+  outline: none;
+  padding: 10px 22px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+.c4:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.c4:active {
+  color: #000000;
+  background-color: rgba(0,0,0,0.2);
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <div>
+      Now Playing...
+    </div>
+  </div>
+  <div
+    className="c3"
+  >
+    <button
+      className="c4"
+    >
+      <svg
+        className="c5"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
+        />
+      </svg>
+    </button>
+    <button
+      className="c4"
+    >
+      <svg
+        className="c6"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
+        />
+      </svg>
+    </button>
+    <button
+      className="c4"
+    >
+      <svg
+        className="c7"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
+        />
+      </svg>
+    </button>
+  </div>
+  <button
+    className="c4"
+    onClick={[Function]}
+  >
+    <svg
+      className="c8"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M256 896q27 0 50 10t40.5 27.5T374 974t10 50-10 50-27.5 40.5T306 1142t-50 10-50-10-40.5-27.5T138 1074t-10-50 10-50 27.5-40.5T206 906t50-10zm768 0q27 0 50 10t40.5 27.5T1142 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5T906 1074t-10-50 10-50 27.5-40.5T974 906t50-10zm768 0q27 0 50 10t40.5 27.5T1910 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5-27.5-40.5-10-50 10-50 27.5-40.5T1742 906t50-10z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Command button with label 1`] = `
+.c1 {
+  background-color: #e6e6e6;
+}
+
+.c5 {
   width: 0.83em;
   height: 0.83em;
   display: inline-block;
@@ -682,12 +435,12 @@ exports[`Command reveal 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
 
-.c6 {
+.c8 {
   width: 0.83em;
   height: 0.83em;
   display: inline-block;
@@ -695,7 +448,20 @@ exports[`Command reveal 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c9 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
@@ -708,9 +474,174 @@ exports[`Command reveal 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c4 {
+  border: none;
+  outline: none;
+  padding: 10px 22px;
+  line-height: 1;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+.c4:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.c4:active {
+  color: #000000;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.c6 {
+  font-size: 12px;
+  margin-top: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <div>
+      Now Playing...
+    </div>
+  </div>
+  <div
+    className="c3"
+  >
+    <button
+      className="c4"
+    >
+      <svg
+        className="c5"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
+        />
+      </svg>
+      <div
+        className="c6"
+      >
+        Back
+      </div>
+    </button>
+    <button
+      className="c4"
+    >
+      <svg
+        className="c7"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
+        />
+      </svg>
+      <div
+        className="c6"
+      >
+        Play
+      </div>
+    </button>
+    <button
+      className="c4"
+    >
+      <svg
+        className="c8"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
+        />
+      </svg>
+      <div
+        className="c6"
+      >
+        Forward
+      </div>
+    </button>
+  </div>
+  <button
+    className="c4"
+    onClick={[Function]}
+  >
+    <svg
+      className="c9"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M256 896q27 0 50 10t40.5 27.5T374 974t10 50-10 50-27.5 40.5T306 1142t-50 10-50-10-40.5-27.5T138 1074t-10-50 10-50 27.5-40.5T206 906t50-10zm768 0q27 0 50 10t40.5 27.5T1142 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5T906 1074t-10-50 10-50 27.5-40.5T974 906t50-10zm768 0q27 0 50 10t40.5 27.5T1910 974t10 50-10 50-27.5 40.5-40.5 27.5-50 10-50-10-40.5-27.5-27.5-40.5-10-50 10-50 27.5-40.5T1742 906t50-10z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Command reveal 1`] = `
+.c1 {
+  background-color: #e6e6e6;
 }
 
 .c5 {
@@ -721,12 +652,87 @@ exports[`Command reveal 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 1.5rem;
+  font-size: inherit;
   color: inherit;
   fill: currentColor;
 }
 
+.c7 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c8 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c6 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+
 .c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c4 {
   border: none;
   outline: none;
   padding: 10px 22px;
@@ -753,28 +759,27 @@ exports[`Command reveal 1`] = `
   background-color: #e6e6e6;
 }
 
-.c3:hover {
+.c4:hover {
   background-color: #d7d7d7;
 }
 
-.c3:active {
+.c4:active {
   color: #000000;
   background-color: #b9b9b9;
 }
 
 <div
-  className="c0"
-  display="flex"
+  className="c0 c1"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <div>
       Now Playing...
     </div>
   </div>
   <div
-    className="c2"
+    className="c3"
   >
     <div
       style={
@@ -786,10 +791,10 @@ exports[`Command reveal 1`] = `
       }
     >
       <button
-        className="c3"
+        className="c4"
       >
         <svg
-          className="c4"
+          className="c5"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -808,10 +813,10 @@ exports[`Command reveal 1`] = `
       }
     >
       <button
-        className="c3"
+        className="c4"
       >
         <svg
-          className="c5"
+          className="c6"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -830,10 +835,10 @@ exports[`Command reveal 1`] = `
       }
     >
       <button
-        className="c3"
+        className="c4"
       >
         <svg
-          className="c6"
+          className="c7"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -853,7 +858,7 @@ exports[`Command reveal 1`] = `
     }
   >
     <button
-      className="c3"
+      className="c4"
       onClick={[Function]}
       style={
         Object {
@@ -862,7 +867,7 @@ exports[`Command reveal 1`] = `
       }
     >
       <svg
-        className="c7"
+        className="c8"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -875,20 +880,59 @@ exports[`Command reveal 1`] = `
 `;
 
 exports[`Command without Content and Secondary 1`] = `
-.c0 {
+.c1 {
+  background-color: #e6e6e6;
   position: relative;
   overflow: hidden;
 }
 
-.c0.c0 {
+.c4 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c6 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c5 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #e6e6e6;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -904,45 +948,6 @@ exports[`Command without Content and Secondary 1`] = `
 }
 
 .c3 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c5 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c4 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1.5rem;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c2 {
   border: none;
   outline: none;
   padding: 10px 22px;
@@ -969,24 +974,24 @@ exports[`Command without Content and Secondary 1`] = `
   background-color: transparent;
 }
 
-.c2:hover {
+.c3:hover {
   background-color: rgba(0,0,0,0.1);
 }
 
-.c2:active {
+.c3:active {
   color: #000000;
   background-color: rgba(0,0,0,0.2);
 }
 
 @supports (-webkit-backdrop-filter:blur(10px)) or (backdrop-filter:blur(10px)) {
-  .c0 {
+  .c1 {
     background: none !important;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
 
-  .c0::before,
-  .c0::after {
+  .c1::before,
+  .c1::after {
     content: '';
     position: absolute;
     left: 0;
@@ -995,13 +1000,13 @@ exports[`Command without Content and Secondary 1`] = `
     bottom: 0;
   }
 
-  .c0::before {
+  .c1::before {
     z-index: -2;
     opacity: 0.5;
     background-color: #e6e6e6;
   }
 
-  .c0::after {
+  .c1::after {
     z-index: -1;
     opacity: 0.25;
     background-image: url(data:image/png;base64,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);
@@ -1009,17 +1014,16 @@ exports[`Command without Content and Secondary 1`] = `
 }
 
 <div
-  className="c0"
-  display="flex"
+  className="c0 c1"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <button
-      className="c2"
+      className="c3"
     >
       <svg
-        className="c3"
+        className="c4"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -1028,10 +1032,10 @@ exports[`Command without Content and Secondary 1`] = `
       </svg>
     </button>
     <button
-      className="c2"
+      className="c3"
     >
       <svg
-        className="c4"
+        className="c5"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -1040,10 +1044,10 @@ exports[`Command without Content and Secondary 1`] = `
       </svg>
     </button>
     <button
-      className="c2"
+      className="c3"
     >
       <svg
-        className="c5"
+        className="c6"
         viewBox="0 0 2048 2048"
       >
         <path

@@ -10,8 +10,8 @@ function createIcon(jsx: JSX, componentName: string): React.ForwardRefExoticComp
     return React.createElement(type, { ...props, ..._props }, React.createElement(...children))
   }
   const SvgIconStyled = styled(Icon)`
-    width: 0.83em;
-    height: 0.83em;
+    width: 1em;
+    height: 1em;
     display: inline-block;
     user-select: none;
     font-size: inherit;

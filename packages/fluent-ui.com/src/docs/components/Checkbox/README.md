@@ -8,6 +8,20 @@ components: Checkbox
 ## Default
 
 ```jsx
-<Checkbox />
+() => {
+  const [checked, set] = React.useState(false)
+  function handleChange(c) {
+    set(c)
+  }
+  return (
+    <Checkbox checked={checked} onChange={handleChange} />
+  )
+}
+```
+
+## Disabled
+
+```jsx
+<Checkbox disabled/>
 ```
 
