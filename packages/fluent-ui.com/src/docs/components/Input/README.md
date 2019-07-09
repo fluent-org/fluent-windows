@@ -16,8 +16,8 @@ components: Input
 ```jsx
 () => {
   const [value, setValue] = React.useState('')
-  function handleChange(e) {
-    setValue(e)
+  function handleChange(v) {
+    setValue(v)
   }
   return (
     <Input value={value} onChange={handleChange} />
@@ -36,8 +36,8 @@ components: Input
 ```jsx
 () => {
   const [value, setValue] = React.useState('')
-  function handleChange(e) {
-    setValue(e)
+  function handleChange(v) {
+    setValue(v)
   }
   return (
     <Input value={value} onChange={handleChange} cleared />
@@ -50,8 +50,8 @@ components: Input
 ```jsx
 () => {
   const [value, setValue] = React.useState('')
-  function handleChange(e) {
-    setValue(e)
+  function handleChange(v) {
+    setValue(v)
   }
   return (
     <Input value={value} onChange={handleChange} password />

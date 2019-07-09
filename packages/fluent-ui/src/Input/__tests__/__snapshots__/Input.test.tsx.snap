@@ -10,51 +10,7 @@ exports[`Input basic 1`] = `
   outline: none;
   width: 296px;
   height: 32px;
-  font-size: 14px;
-  padding: 6px 12px;
-  font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;
-  border: 2px solid #cccccc;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-}
-
-.c1:hover {
-  border-color: #7a7a7a;
-}
-
-.c1:active,
-.c1:focus {
-  border-color: #0078d7;
-}
-
-.c1:disabled {
-  background-color: #cccccc;
-  color: #7a7a7a;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-<span
-  className="c0"
->
-  <input
-    className="c1"
-    onChange={[Function]}
-    type="text"
-  />
-</span>
-`;
-
-exports[`Input prop cleared 1`] = `
-.c0 {
-  display: inline-block;
-  position: relative;
-}
-
-.c1 {
-  outline: none;
-  width: 296px;
-  height: 32px;
+  line-height: 32px;
   font-size: 14px;
   padding: 6px 12px;
   font-family: PingFangSC-Regular,sans-serif,Arial,Helvetica,Roboto;

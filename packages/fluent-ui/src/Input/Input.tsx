@@ -3,7 +3,11 @@ import { forwardRef, ReactElement } from 'react'
 import { StyledWrapper, StyledInput, StyledIcon } from './Input.styled'
 import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
 
-export interface InputProps {
+export interface InputProps
+  extends Omit<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    'size' | 'value' | 'onChange'
+  > {
   value?: string
   onChange?: (value: string) => void
   placeholder?: string
