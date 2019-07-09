@@ -2,13 +2,35 @@
 
 exports[`Checkbox basic 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.c3 {
+  font-size: 0.8em;
+  margin-left: 0;
+}
+
+.c1 {
   width: 20px;
   height: 20px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -25,15 +47,15 @@ exports[`Checkbox basic 1`] = `
   border-color: #cccccc;
 }
 
-.c0:hover {
+.c1:hover {
   border-color: #7a7a7a;
 }
 
-.c0:active {
+.c1:active {
   background-color: #7a7a7a;
 }
 
-.c1 {
+.c2 {
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -45,26 +67,55 @@ exports[`Checkbox basic 1`] = `
   cursor: pointer;
 }
 
-<div
+<label
   className="c0"
 >
-  <input
+  <div
     className="c1"
-    onChange={[Function]}
-    type="checkbox"
+  >
+    <input
+      className="c2"
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+  <span
+    className="c3"
   />
-</div>
+</label>
 `;
 
 exports[`Checkbox prop disabled 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  cursor: not-allowed;
+}
+
+.c3 {
+  font-size: 0.8em;
+  margin-left: 0;
+}
+
+.c1 {
   width: 20px;
   height: 20px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -82,19 +133,18 @@ exports[`Checkbox prop disabled 1`] = `
   border-color: #7a7a7a;
   background-color: transparent;
   color: #7a7a7a;
-  cursor: not-allowed;
   pointer-events: none;
 }
 
-.c0:hover {
+.c1:hover {
   border-color: #7a7a7a;
 }
 
-.c0:active {
+.c1:active {
   background-color: #7a7a7a;
 }
 
-.c1 {
+.c2 {
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -106,15 +156,23 @@ exports[`Checkbox prop disabled 1`] = `
   cursor: not-allowed;
 }
 
-<div
+<label
   className="c0"
   disabled={true}
 >
-  <input
+  <div
     className="c1"
     disabled={true}
-    onChange={[Function]}
-    type="checkbox"
+  >
+    <input
+      className="c2"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+  </div>
+  <span
+    className="c3"
   />
-</div>
+</label>
 `;

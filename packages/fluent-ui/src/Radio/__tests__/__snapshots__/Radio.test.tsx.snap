@@ -2,6 +2,28 @@
 
 exports[`Radio basic 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.c4 {
+  font-size: 0.8em;
+  margin-left: 0;
+}
+
+.c1 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -25,11 +47,11 @@ exports[`Radio basic 1`] = `
   border-color: #cccccc;
 }
 
-.c0:hover {
+.c1:hover {
   border-color: #7a7a7a;
 }
 
-.c1 {
+.c3 {
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -41,19 +63,61 @@ exports[`Radio basic 1`] = `
   cursor: pointer;
 }
 
-<div
+.c2 {
+  border-radius: 50%;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: #000000;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+<label
   className="c0"
 >
-  <input
+  <div
     className="c1"
-    onChange={[Function]}
-    type="radio"
+  >
+    <div
+      className="c2"
+    />
+    <input
+      className="c3"
+      onChange={[Function]}
+      type="radio"
+    />
+  </div>
+  <span
+    className="c4"
   />
-</div>
+</label>
 `;
 
 exports[`Radio prop disabled 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  cursor: not-allowed;
+}
+
+.c4 {
+  font-size: 0.8em;
+  margin-left: 0;
+}
+
+.c1 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -80,11 +144,11 @@ exports[`Radio prop disabled 1`] = `
   pointer-events: none;
 }
 
-.c0:hover {
+.c1:hover {
   border-color: #7a7a7a;
 }
 
-.c1 {
+.c3 {
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -96,15 +160,37 @@ exports[`Radio prop disabled 1`] = `
   cursor: not-allowed;
 }
 
-<div
+.c2 {
+  border-radius: 50%;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  background-color: #7a7a7a;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+<label
   className="c0"
   disabled={true}
 >
-  <input
+  <div
     className="c1"
     disabled={true}
-    onChange={[Function]}
-    type="radio"
+  >
+    <div
+      className="c2"
+      disabled={true}
+    />
+    <input
+      className="c3"
+      disabled={true}
+      onChange={[Function]}
+      type="radio"
+    />
+  </div>
+  <span
+    className="c4"
   />
-</div>
+</label>
 `;
