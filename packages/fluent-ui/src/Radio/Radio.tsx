@@ -21,7 +21,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
     return (
       <StyledLabel disabled={disabled}>
         <StyledRadioWrapper checked={checked} disabled={disabled}>
-          {checked && <StyledCircle disabled={disabled} />}
+          <StyledCircle disabled={disabled} checked={checked} />
           <StyledRadio
             ref={ref}
             type="radio"

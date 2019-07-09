@@ -64,11 +64,28 @@ export const StyledRadio = styled.input`
   cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
 `
 
-export const StyledCircle = styled.div<{ disabled?: boolean }>`
-  width: 12px;
-  height: 12px;
+export const StyledCircle = styled.div<{
+  disabled?: boolean
+  checked?: boolean
+}>`
   border-radius: 50%;
   transition: ${th.transition('radio')};
   background-color: ${({ disabled }): string =>
     disabled ? th.color('primary.dark3') : th.color('black.default')};
+  ${variant({
+    prop: 'checked',
+    default: false,
+    variants: {
+      true: css`
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+      `,
+      false: css`
+        width: 0;
+        height: 0;
+        opacity: 0;
+      `
+    }
+  })}
 `
