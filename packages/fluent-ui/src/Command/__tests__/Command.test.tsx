@@ -2,6 +2,11 @@ import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
+import {
+  Back as BackIcon,
+  Play as PlayIcon,
+  Forward as ForwardIcon
+} from '@fluent-ui/icons'
 import { ThemeProvider, Command, CommandButton } from '../../'
 
 describe('Command', (): void => {
@@ -10,9 +15,15 @@ describe('Command', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
         <Command>
-          <CommandButton icon="Back" />
-          <CommandButton icon="Play" />
-          <CommandButton icon="Forward" />
+          <CommandButton>
+            <BackIcon />
+          </CommandButton>
+          <CommandButton>
+            <PlayIcon />
+          </CommandButton>
+          <CommandButton>
+            <ForwardIcon />
+          </CommandButton>
 
           <Command.Content>Now Playing...</Command.Content>
 
@@ -31,9 +42,15 @@ describe('Command', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
         <Command acrylic>
-          <CommandButton icon="Back" />
-          <CommandButton icon="Play" />
-          <CommandButton icon="Forward" />
+          <CommandButton>
+            <BackIcon />
+          </CommandButton>
+          <CommandButton>
+            <PlayIcon />
+          </CommandButton>
+          <CommandButton>
+            <ForwardIcon />
+          </CommandButton>
 
           <Command.Content>Now Playing...</Command.Content>
 
@@ -52,9 +69,15 @@ describe('Command', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
         <Command reveal>
-          <CommandButton icon="Back" />
-          <CommandButton icon="Play" />
-          <CommandButton icon="Forward" />
+          <CommandButton>
+            <BackIcon />
+          </CommandButton>
+          <CommandButton>
+            <PlayIcon />
+          </CommandButton>
+          <CommandButton>
+            <ForwardIcon />
+          </CommandButton>
 
           <Command.Content>Now Playing...</Command.Content>
 
@@ -73,9 +96,18 @@ describe('Command', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
         <Command>
-          <CommandButton icon="Back">Back</CommandButton>
-          <CommandButton icon="Play">Play</CommandButton>
-          <CommandButton icon="Forward">Forward</CommandButton>
+          <CommandButton>
+            <BackIcon />
+            <span>Back</span>
+          </CommandButton>
+          <CommandButton>
+            <PlayIcon />
+            <span>Play</span>
+          </CommandButton>
+          <CommandButton>
+            <ForwardIcon />
+            <span>Forward</span>
+          </CommandButton>
 
           <Command.Content>Now Playing...</Command.Content>
 
@@ -94,9 +126,15 @@ describe('Command', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
         <Command acrylic>
-          <CommandButton icon="Back" />
-          <CommandButton icon="Play" />
-          <CommandButton icon="Forward" />
+          <CommandButton>
+            <BackIcon />
+          </CommandButton>
+          <CommandButton>
+            <PlayIcon />
+          </CommandButton>
+          <CommandButton>
+            <ForwardIcon />
+          </CommandButton>
         </Command>
       </ThemeProvider>
     )
