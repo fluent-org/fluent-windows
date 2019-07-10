@@ -4,7 +4,6 @@ import { IconButtonProps } from './IconButton'
 const base = css`
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: inline-flex;
   flex-direction: column;
@@ -12,6 +11,7 @@ const base = css`
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   transition: ${th.transition('button')};
   &:hover {
     background-color: ${th.color('primary.light2')};

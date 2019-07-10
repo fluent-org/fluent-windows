@@ -17,7 +17,6 @@ exports[`IconButton as 1`] = `
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -36,6 +35,7 @@ exports[`IconButton as 1`] = `
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
@@ -89,7 +89,6 @@ exports[`IconButton basic 1`] = `
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -108,6 +107,7 @@ exports[`IconButton basic 1`] = `
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
@@ -160,7 +160,6 @@ exports[`IconButton disabled 1`] = `
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -179,6 +178,7 @@ exports[`IconButton disabled 1`] = `
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
@@ -233,7 +233,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -252,6 +251,7 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 8px;
@@ -303,7 +303,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -322,6 +321,7 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
@@ -372,7 +372,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -391,6 +390,7 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 16px;
@@ -447,7 +447,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -466,6 +465,7 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
@@ -515,7 +515,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  padding: 12px;
   line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -534,6 +533,7 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   color: #ffffff;
