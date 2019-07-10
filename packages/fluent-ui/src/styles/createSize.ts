@@ -1,3 +1,4 @@
+import { css } from '../styles/styled'
 import { deepMerge } from '../utils'
 
 export interface Sizes {
@@ -9,13 +10,30 @@ export interface Sizes {
 function createSize(sizes: Sizes): Sizes {
   const defaultSizes: Sizes = {
     small: {
-      padding: '2px 18px'
+      button: css`
+        padding: 2px 18px;
+      `,
+      iconButton: css`
+        padding: 8px;
+        font-size: 0.8em;
+      `
     },
     medium: {
-      padding: '4px 26px'
+      button: css`
+        padding: 4px 26px;
+      `,
+      iconButton: css`
+        padding: 12px;
+      `
     },
     large: {
-      padding: '6px 38px'
+      button: css`
+        padding: 6px 38px;
+      `,
+      iconButton: css`
+        padding: 16px;
+        font-size: 1.2em;
+      `
     }
   }
   return deepMerge(sizes, defaultSizes)

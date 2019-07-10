@@ -38,7 +38,7 @@
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
-    "styled-components": ">= 4.X"
+    "styled-components": ">= 5.X"
   },
   "dependencies": {
     "@fluent-ui/icons": "^0.0.1",

@@ -44,13 +44,13 @@ const sizes = variant({
   default: 'medium',
   variants: {
     small: css`
-      ${th.size('small')}
+      ${th.size('small.button')}
     `,
     medium: css`
-      ${th.size('medium')}
+      ${th.size('medium.button')}
     `,
     large: css`
-      ${th.size('large')}
+      ${th.size('large.button')}
     `
   }
 })

@@ -1,0 +1,582 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton as 1`] = `
+.c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 12px;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<a
+  className="c0"
+  href="#"
+>
+  <svg
+    className="c1"
+    viewBox="0 0 2048 2048"
+  >
+    <path
+      d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+    />
+  </svg>
+</a>
+`;
+
+exports[`IconButton basic 1`] = `
+.c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 12px;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+  className="c0"
+>
+  <svg
+    className="c1"
+    viewBox="0 0 2048 2048"
+  >
+    <path
+      d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`IconButton disabled 1`] = `
+.c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 12px;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+  className="c0"
+  disabled={true}
+>
+  <svg
+    className="c1"
+    viewBox="0 0 2048 2048"
+  >
+    <path
+      d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`IconButton size 1`] = `
+Array [
+  .c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 8px;
+  font-size: 0.8em;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+    size="small"
+  >
+    <svg
+      className="c1"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+      />
+    </svg>
+  </button>,
+  .c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 12px;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+    size="medium"
+  >
+    <svg
+      className="c1"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+      />
+    </svg>
+  </button>,
+  .c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 16px;
+  font-size: 1.2em;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+    size="large"
+  >
+    <svg
+      className="c1"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+      />
+    </svg>
+  </button>,
+]
+`;
+
+exports[`IconButton variant 1`] = `
+Array [
+  .c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  padding: 12px;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<button
+    className="c0"
+  >
+    <svg
+      className="c1"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+      />
+    </svg>
+  </button>,
+  .c1 {
+  width: 0.83em;
+  height: 0.83em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  border: none;
+  outline: none;
+  padding: 12px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #ffffff;
+  background-color: #0078d7;
+  padding: 12px;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0:active {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+.c0:disabled {
+  color: #7a7a7a;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover {
+  background-color: #003c6b;
+}
+
+.c0:active {
+  color: #ffffff;
+  background-color: #0078d7;
+}
+
+<button
+    className="c0"
+  >
+    <svg
+      className="c1"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M640 1755L19 1133l90-90 531 530L1939 275l90 90L640 1755z"
+      />
+    </svg>
+  </button>,
+]
+`;

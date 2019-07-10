@@ -42,3 +42,11 @@ Use the `size` property.
   <Button size="large">large</Button>
 </>
 ```
+
+## As
+
+As a
+
+```jsx
+<Button as="a" href="#">As a</Button>
+```
