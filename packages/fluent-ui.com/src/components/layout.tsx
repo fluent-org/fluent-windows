@@ -1,10 +1,9 @@
 import * as React from 'react'
-import { ReactElement, SFC, ReactNode } from 'react'
 
-import { ThemeProvider, Theme, Box } from '@fluent-ui/core'
+import { ThemeProvider, Normalize, Theme, Box } from '@fluent-ui/core'
 
 interface LayoutProps {
-  children: ReactNode
+  children: React.ReactNode
 }
 
 const theme: Theme = {
@@ -15,8 +14,9 @@ const theme: Theme = {
   }
 }
 
-const Layout: SFC<LayoutProps> = ({ children }: LayoutProps): ReactElement => (
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactElement => (
   <ThemeProvider theme={theme}>
+    <Normalize />
     <Box as="main">{children}</Box>
   </ThemeProvider>
 )
