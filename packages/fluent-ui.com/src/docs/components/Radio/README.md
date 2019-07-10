@@ -5,7 +5,9 @@ components: Radio
 
 # Radio
 
-## Default
+<p class="description">Radio allow the user to select one option from a set.</p>
+
+## Controlled
 
 ```jsx
 () => {

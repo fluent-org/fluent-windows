@@ -5,9 +5,16 @@ components: IconButton
 
 # IconButtons
 
+<p class="description">Icon buttons are commonly found in app bars and toolbars.</p>
+
 ## Variant
 
-Button default style
+There are two styles of buttons, controlled by the variant prop.
+
+- primary
+- accent
+
+### Default style - primary
 
 ```jsx
 <IconButton>
@@ -15,7 +22,7 @@ Button default style
 </IconButton>
 ```
 
-Highlighted button
+### Highlighted button - accent
 
 ```jsx
 <IconButton variant="accent">
@@ -25,6 +32,8 @@ Highlighted button
 
 ## Disabled
 
+Whether the button is disabled.
+
 ```jsx
 <IconButton disabled>
   <Icon.Accept />
@@ -33,7 +42,7 @@ Highlighted button
 
 ## Sizes
 
-Use the `size` property.
+Fancy larger or smaller buttons? Use the `size` property.
 
 ```jsx
 <>
@@ -51,7 +60,7 @@ Use the `size` property.
 
 ## As
 
-As a
+Thanks to [`styled-components`](https://github.com/styled-components/styled-components), you can use `as` to change the type of DOM tag.
 
 ```jsx
 <IconButton as="a" href="#">

@@ -5,7 +5,9 @@ components: Checkbox
 
 # Checkbox
 
-## Default
+<p class="description">Checkbox allow the user to select one or more items from a set.</p>
+
+## Controlled
 
 ```jsx
 () => {

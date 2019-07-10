@@ -5,6 +5,8 @@ components: Input
 
 # Inputs
 
+<p class="description">Text fields let users enter and edit text.</p>
+
 ## Default
 
 ```jsx
@@ -27,11 +29,15 @@ components: Input
 
 ## Disabled
 
+Whether the button is disabled.
+
 ```jsx
 <Input value='Hint text' disabled />
 ```
 
 ## Cleared
+
+Show a button to clear your input.
 
 ```jsx
 () => {

@@ -7,17 +7,20 @@ components: Button
 
 <p class="description">Buttons give users a way to trigger an immediate action.</p>
 
-A button gives the user a way to trigger an immediate action. Some buttons are specialized for particular tasks, such as navigation, repeated actions, or presenting menus.
-
 ## Variant
 
-Button default style
+There are two styles of buttons, controlled by the variant prop.
+
+- primary
+- accent
+
+### Default style - primary
 
 ```jsx
 <Button>Primary</Button>
 ```
 
-Highlighted button
+### Highlighted button - accent
 
 ```jsx
 <Button variant="accent">Accent</Button>
@@ -25,7 +28,7 @@ Highlighted button
 
 ## Disabled
 
-Disabled button
+Whether the button is disabled.
 
 ```jsx
 <Button disabled>Disabled</Button>
@@ -33,7 +36,7 @@ Disabled button
 
 ## Sizes
 
-Use the `size` property.
+Fancy larger or smaller buttons? Use the `size` property.
 
 ```jsx
 <>
@@ -45,7 +48,7 @@ Use the `size` property.
 
 ## As
 
-As a
+Thanks to [`styled-components`](https://github.com/styled-components/styled-components), you can use `as` to change the type of DOM tag.
 
 ```jsx
 <Button as="a" href="#">As a</Button>
