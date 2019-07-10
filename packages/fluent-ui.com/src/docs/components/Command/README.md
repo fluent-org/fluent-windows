@@ -12,9 +12,15 @@ components: Command
 ```jsx
 <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
   <Command acrylic>
-    <CommandButton icon="Back" />
-    <CommandButton icon="Play" />
-    <CommandButton icon="Forward" />
+    <CommandButton>
+      <Icon.Back/>
+    </CommandButton>
+    <CommandButton>
+      <Icon.Play/>
+    </CommandButton>
+    <CommandButton>
+      <Icon.Forward/>
+    </CommandButton>
 
     <Command.Content>
       Now Playing...
@@ -33,9 +39,15 @@ components: Command
 ```jsx
 <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
   <Command reveal>
-    <CommandButton icon="Back" />
-    <CommandButton icon="Play" />
-    <CommandButton icon="Forward" />
+    <CommandButton>
+      <Icon.Back/>
+    </CommandButton>
+    <CommandButton>
+      <Icon.Play/>
+    </CommandButton>
+    <CommandButton>
+      <Icon.Forward/>
+    </CommandButton>
 
     <Command.Content>
       Now Playing...
@@ -54,14 +66,17 @@ components: Command
 ```jsx
 <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
   <Command acrylic>
-    <CommandButton icon="Back">
-      Back
+    <CommandButton>
+      <Icon.Back/>
+      <span>Back</span>
     </CommandButton>
-    <CommandButton icon="Play">
-      Play
+    <CommandButton>
+      <Icon.Play/>
+      <span>Play</span>
     </CommandButton>
-    <CommandButton icon="Forward">
-      Forward
+    <CommandButton>
+      <Icon.Forward/>
+      <span>Forward</span>
     </CommandButton>
 
     <Command.Content>
@@ -82,9 +97,15 @@ components: Command
 <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
   <Box backgroundColor="none" display="flex" justifyContent="center">
     <Command acrylic>
-      <CommandButton icon="Back" />
-      <CommandButton icon="Play" />
-      <CommandButton icon="Forward" />
+      <CommandButton>
+        <Icon.Back/>
+      </CommandButton>
+      <CommandButton>
+        <Icon.Play/>
+      </CommandButton>
+      <CommandButton>
+        <Icon.Forward/>
+      </CommandButton>
     </Command>
   </Box>
 </Box>

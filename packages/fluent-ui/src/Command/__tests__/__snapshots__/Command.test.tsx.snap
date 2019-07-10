@@ -20,45 +20,6 @@ exports[`Command acrylic 1`] = `
   fill: currentColor;
 }
 
-.c7 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c8 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c6 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -176,47 +137,20 @@ exports[`Command acrylic 1`] = `
   >
     <button
       className="c4"
-    >
-      <svg
-        className="c5"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-        />
-      </svg>
-    </button>
+    />
     <button
       className="c4"
-    >
-      <svg
-        className="c6"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-        />
-      </svg>
-    </button>
+    />
     <button
       className="c4"
-    >
-      <svg
-        className="c7"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-        />
-      </svg>
-    </button>
+    />
   </div>
   <button
     className="c4"
     onClick={[Function]}
   >
     <svg
-      className="c8"
+      className="c5"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -245,45 +179,6 @@ exports[`Command basic 1`] = `
   fill: currentColor;
 }
 
-.c7 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c8 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c6 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -371,47 +266,20 @@ exports[`Command basic 1`] = `
   >
     <button
       className="c4"
-    >
-      <svg
-        className="c5"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-        />
-      </svg>
-    </button>
+    />
     <button
       className="c4"
-    >
-      <svg
-        className="c6"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-        />
-      </svg>
-    </button>
+    />
     <button
       className="c4"
-    >
-      <svg
-        className="c7"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-        />
-      </svg>
-    </button>
+    />
   </div>
   <button
     className="c4"
     onClick={[Function]}
   >
     <svg
-      className="c8"
+      className="c5"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -440,45 +308,6 @@ exports[`Command button with label 1`] = `
   fill: currentColor;
 }
 
-.c8 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c9 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c7 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -551,13 +380,6 @@ exports[`Command button with label 1`] = `
   background-color: rgba(0,0,0,0.2);
 }
 
-.c6 {
-  font-size: 12px;
-  margin-top: 6px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 <div
   className="c0 c1"
 >
@@ -574,53 +396,17 @@ exports[`Command button with label 1`] = `
     <button
       className="c4"
     >
-      <svg
-        className="c5"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-        />
-      </svg>
-      <div
-        className="c6"
-      >
-        Back
-      </div>
+      Back
     </button>
     <button
       className="c4"
     >
-      <svg
-        className="c7"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-        />
-      </svg>
-      <div
-        className="c6"
-      >
-        Play
-      </div>
+      Play
     </button>
     <button
       className="c4"
     >
-      <svg
-        className="c8"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-        />
-      </svg>
-      <div
-        className="c6"
-      >
-        Forward
-      </div>
+      Forward
     </button>
   </div>
   <button
@@ -628,7 +414,7 @@ exports[`Command button with label 1`] = `
     onClick={[Function]}
   >
     <svg
-      className="c9"
+      className="c5"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -645,45 +431,6 @@ exports[`Command reveal 1`] = `
 }
 
 .c5 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c7 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c8 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c6 {
   width: 0.83em;
   height: 0.83em;
   display: inline-block;
@@ -792,16 +539,7 @@ exports[`Command reveal 1`] = `
     >
       <button
         className="c4"
-      >
-        <svg
-          className="c5"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-          />
-        </svg>
-      </button>
+      />
     </div>
     <div
       style={
@@ -814,16 +552,7 @@ exports[`Command reveal 1`] = `
     >
       <button
         className="c4"
-      >
-        <svg
-          className="c6"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-          />
-        </svg>
-      </button>
+      />
     </div>
     <div
       style={
@@ -836,16 +565,7 @@ exports[`Command reveal 1`] = `
     >
       <button
         className="c4"
-      >
-        <svg
-          className="c7"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-          />
-        </svg>
-      </button>
+      />
     </div>
   </div>
   <div
@@ -867,7 +587,7 @@ exports[`Command reveal 1`] = `
       }
     >
       <svg
-        className="c8"
+        className="c5"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -884,45 +604,6 @@ exports[`Command without Content and Secondary 1`] = `
   background-color: #e6e6e6;
   position: relative;
   overflow: hidden;
-}
-
-.c4 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c6 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c5 {
-  width: 0.83em;
-  height: 0.83em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
 }
 
 .c1 {
@@ -1021,40 +702,13 @@ exports[`Command without Content and Secondary 1`] = `
   >
     <button
       className="c3"
-    >
-      <svg
-        className="c4"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2048 1088H250l787 787-90 90L6 1024 947 83l90 90-787 787h1798v128z"
-        />
-      </svg>
-    </button>
+    />
     <button
       className="c3"
-    >
-      <svg
-        className="c5"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M1792 1024L512 1920V128zM640 1674l929-650-929-650v1300z"
-        />
-      </svg>
-    </button>
+    />
     <button
       className="c3"
-    >
-      <svg
-        className="c6"
-        viewBox="0 0 2048 2048"
-      >
-        <path
-          d="M2042 1024l-941 941-90-90 787-787H0V960h1798l-787-787 90-90z"
-        />
-      </svg>
-    </button>
+    />
   </div>
 </div>
 `;

@@ -1,15 +1,5 @@
 import * as React from 'react'
-import {
-  ReactElement,
-  Children,
-  forwardRef,
-  ReactComponentElement,
-  ForwardRefExoticComponent,
-  createContext,
-  useState,
-  MouseEvent,
-  useRef
-} from 'react'
+import { More as MoreIcon } from '@fluent-ui/icons' // TODO treeShaking
 import {
   StyledContent,
   StyledPrimary,
@@ -27,9 +17,9 @@ import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import { useReveal } from '../hooks/useReveal'
 
 type Child =
-  | ReactComponentElement<typeof CommandButton>
-  | ReactComponentElement<typeof Content>
-  | ReactComponentElement<typeof Secondary>
+  | React.ReactComponentElement<typeof CommandButton>
+  | React.ReactComponentElement<typeof Content>
+  | React.ReactComponentElement<typeof Secondary>
   | any
 
 interface CommandProps extends BoxProps, ThemeProps {
@@ -38,26 +28,29 @@ interface CommandProps extends BoxProps, ThemeProps {
 }
 
 interface Container {
-  primary: ReactComponentElement<typeof CommandButton>[]
-  content: ReactComponentElement<typeof Content>[]
-  secondary: ReactComponentElement<typeof Secondary>[]
+  primary: React.ReactComponentElement<typeof CommandButton>[]
+  content: React.ReactComponentElement<typeof Content>[]
+  secondary: React.ReactComponentElement<typeof Secondary>[]
 }
 
-interface CommandType extends ForwardRefExoticComponent<CommandProps> {
+interface CommandType extends React.ForwardRefExoticComponent<CommandProps> {
   Content: typeof Content
   Secondary: typeof Secondary
 }
 
-export const CommandContext = createContext(false)
+export const CommandContext = React.createContext(false)
 
-const Command = forwardRef<HTMLDivElement, CommandProps>(
-  ({ acrylic, reveal, children, ...rest }: CommandProps, ref): ReactElement => {
+const Command = React.forwardRef<HTMLDivElement, CommandProps>(
+  (
+    { acrylic, reveal, children, ...rest }: CommandProps,
+    ref
+  ): React.ReactElement => {
     const container: Container = {
       content: [],
       primary: [],
       secondary: []
     }
-    Children.forEach(
+    React.Children.forEach(
       children,
       (child: Child): void => {
         if (child.type.name! === 'Content') {
@@ -71,8 +64,10 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
     )
 
     const [secondaryVisible, setSecondaryVisible, SecondaryPortal] = usePortal()
-    const [portalStyle, setPortalStyle] = useState()
-    function handleSecondaryVisible(e: MouseEvent<HTMLButtonElement>): void {
+    const [portalStyle, setPortalStyle] = React.useState()
+    function handleSecondaryVisible(
+      e: React.MouseEvent<HTMLButtonElement>
+    ): void {
       const rect = e.currentTarget.getBoundingClientRect()
       const position = {
         position: 'absolute',
@@ -88,7 +83,7 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
     const [RevealWrapper] = useReveal()
 
     // 点击 More 菜单之外的区域关闭 More 菜单
-    const secondaryRef = useRef<HTMLDivElement>(null)
+    const secondaryRef = React.useRef<HTMLDivElement>(null)
     useOnClickOutside(
       secondaryRef,
       (): void => {
@@ -106,7 +101,7 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
           <StyledPrimary>
             {reveal
               ? container.primary.map(
-                  (child, i): ReactElement => (
+                  (child, i): React.ReactElement => (
                     <RevealWrapper key={i}>{child}</RevealWrapper>
                   )
                 )
@@ -116,13 +111,16 @@ const Command = forwardRef<HTMLDivElement, CommandProps>(
             (reveal ? (
               <RevealWrapper>
                 <CommandButton
-                  icon="More"
                   style={{ height: '100%' }}
                   onClick={handleSecondaryVisible}
-                />
+                >
+                  <MoreIcon />
+                </CommandButton>
               </RevealWrapper>
             ) : (
-              <CommandButton icon="More" onClick={handleSecondaryVisible} />
+              <CommandButton onClick={handleSecondaryVisible}>
+                <MoreIcon />
+              </CommandButton>
             ))}
           {secondaryVisible && (
             <SecondaryPortal style={portalStyle}>

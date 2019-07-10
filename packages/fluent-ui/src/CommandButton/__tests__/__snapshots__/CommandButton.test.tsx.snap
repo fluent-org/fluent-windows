@@ -37,22 +37,11 @@ exports[`CommandButton as 1`] = `
   background-color: rgba(0,0,0,0.2);
 }
 
-.c1 {
-  font-size: 12px;
-  margin-top: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 <a
   className="c0"
   href="#"
 >
-  <div
-    className="c1"
-  >
-    as a
-  </div>
+  as a
 </a>
 `;
 
@@ -93,20 +82,9 @@ exports[`CommandButton basic 1`] = `
   background-color: rgba(0,0,0,0.2);
 }
 
-.c1 {
-  font-size: 12px;
-  margin-top: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 <button
   className="c0"
 >
-  <div
-    className="c1"
-  >
-    basic
-  </div>
+  basic
 </button>
 `;

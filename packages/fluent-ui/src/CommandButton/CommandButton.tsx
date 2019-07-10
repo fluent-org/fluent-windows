@@ -1,70 +1,26 @@
 import * as React from 'react'
-import {
-  ReactElement,
-  MouseEventHandler,
-  forwardRef,
-  ButtonHTMLAttributes,
-  useContext,
-  ReactNode
-} from 'react'
-import { styled, th } from '../styles/styled'
-import * as Icons from '@fluent-ui/icons'
-import * as CSS from 'csstype'
 import { CommandContext } from '../Command/Command'
+import {
+  CommandButtonStyled,
+  CommandButtonTextStyled
+} from './CommandButton.styled'
 
 export interface CommandButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     StyledProps {
-  icon?: string
-  onClick?: MouseEventHandler<HTMLButtonElement>
-  children?: ReactNode
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  children: React.ReactNode
 }
 
-const CommandButtonStyled = styled.button<{
-  reveal?: boolean
-}>`
-  border: none;
-  outline: none;
-  padding: 10px 22px;
-  line-height: 1;
-  transition: ${th.transition('button')};
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: inherit;
-  background-color: ${({ reveal }): CSS.ColorProperty =>
-    reveal ? th.color('primary.light2') : 'transparent'};
-  &:hover {
-    background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.light1') : th.color('primary.transparent1')};
-  }
-  &:active {
-    color: ${th.color('black.default')};
-    background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.dark1') : th.color('primary.transparent2')};
-  }
-`
-
-const CommandButtonTextStyled = styled.div<{
-  icon?: boolean
-}>`
-  font-size: 12px;
-  margin-top: ${({ icon }): string => (icon ? '6px' : '0')};
-  text-overflow: ellipsis;
-  overflow: hidden;
-`
-
-type IconType = keyof (typeof Icons)
-
-const CommandButton = forwardRef<HTMLButtonElement, CommandButtonProps>(
+const CommandButton = React.forwardRef<HTMLButtonElement, CommandButtonProps>(
   (
-    { icon, onClick, children, ...rest }: CommandButtonProps,
+    { onClick, children, ...rest }: CommandButtonProps,
     ref
-  ): ReactElement => {
-    const reveal = useContext(CommandContext)
-    const Icon = Icons[icon as IconType]
+  ): React.ReactElement => {
+    const reveal = React.useContext(CommandContext)
+    const theChildren = React.Children.toArray(children)
+    const icon = theChildren[0]
+    const text = React.Children.count(children) > 1 ? theChildren[1] : null
     return (
       <CommandButtonStyled
         onClick={onClick}
@@ -72,10 +28,10 @@ const CommandButton = forwardRef<HTMLButtonElement, CommandButtonProps>(
         reveal={reveal}
         {...rest}
       >
-        {icon && <Icon />}
-        {children && (
-          <CommandButtonTextStyled icon={!!icon}>
-            {children}
+        {icon}
+        {text && (
+          <CommandButtonTextStyled hasIcon={!!icon}>
+            {text}
           </CommandButtonTextStyled>
         )}
       </CommandButtonStyled>
