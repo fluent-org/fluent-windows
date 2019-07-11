@@ -61,11 +61,7 @@ function dispatch(param?: Dispatch): void {
   )
 }
 
-export function useAction(
-  type: Type,
-  callback: Callback,
-  deps: Deps = []
-): typeof dispatch {
+export function useAction(type: Type, callback: Callback, deps: Deps = []): typeof dispatch {
   useEffect((): (() => void) => {
     subscribe(type, callback)
     return (): void => {

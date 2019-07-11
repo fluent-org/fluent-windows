@@ -1,33 +1,24 @@
-import {
-  useState,
-  useEffect,
-  ReactPortal,
-  ReactNode,
-  useCallback,
-  Dispatch,
-  SetStateAction
-} from 'react'
+import * as React from 'react'
 import { createPortal } from 'react-dom'
 
-type Return = [
-  boolean,
-  Dispatch<SetStateAction<boolean>>,
-  (props: PortalProps) => ReactPortal | null
-]
+export type Visible = boolean
+export type Set = React.Dispatch<React.SetStateAction<boolean>>
+export type Portal = (props: PortalProps) => React.ReactPortal
+export type Return = [Visible, Set, Portal]
 
 interface PortalProps {
-  children: ReactNode
+  children: React.ReactNode
   style?: object
 }
 
 export function usePortal(defaultVisible = false): Return {
-  const [visible, handleState] = useState(defaultVisible)
+  const [visible, handleState] = React.useState(defaultVisible)
 
-  const setVisible = useCallback((v): void => {
+  const setVisible = React.useCallback((v): void => {
     handleState(v)
   }, [])
 
-  const Portal = ({ children, style }: PortalProps): ReactPortal | null => {
+  const Portal = ({ children, style }: PortalProps): React.ReactPortal => {
     const node = document.createElement('div')
     if (style) {
       for (const prop in style) {
@@ -35,7 +26,7 @@ export function usePortal(defaultVisible = false): Return {
         node.style[prop] = style[prop]
       }
     }
-    useEffect((): (() => void) => {
+    React.useEffect((): (() => void) => {
       document.body.appendChild(node)
       return (): void => {
         document.body.removeChild(node)

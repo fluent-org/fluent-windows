@@ -7,6 +7,7 @@ import {
   ReactComponentElement,
   createContext
 } from 'react'
+import { useReveal } from '@fluent-ui/hooks' // TODO treeShaking
 import Item, { ID } from './Item'
 import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../styles/createTheme'
@@ -19,7 +20,6 @@ import {
   StyledContent,
   StyledContainer
 } from './Navigation.styled'
-import { useReveal } from '../hooks/useReveal'
 import { omit } from '../utils'
 
 interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {

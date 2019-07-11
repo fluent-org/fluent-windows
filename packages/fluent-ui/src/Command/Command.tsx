@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { More as MoreIcon } from '@fluent-ui/icons' // TODO treeShaking
+import { usePortal, useOnClickOutside, useReveal } from '@fluent-ui/hooks' // TODO treeShaking
 import {
   StyledContent,
   StyledPrimary,
@@ -12,9 +13,6 @@ import CommandButton from '../CommandButton'
 import { omit } from '../utils'
 import { BoxProps } from '../Box/Box'
 import { ThemeProps } from '../styles/createTheme'
-import { usePortal } from '../hooks/usePortal'
-import { useOnClickOutside } from '../hooks/useOnClickOutside'
-import { useReveal } from '../hooks/useReveal'
 
 type Child =
   | React.ReactComponentElement<typeof CommandButton>
