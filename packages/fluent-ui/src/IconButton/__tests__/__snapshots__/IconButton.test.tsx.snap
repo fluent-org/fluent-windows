@@ -2,8 +2,8 @@
 
 exports[`IconButton as 1`] = `
 .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -74,8 +74,8 @@ exports[`IconButton as 1`] = `
 
 exports[`IconButton basic 1`] = `
 .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -145,8 +145,8 @@ exports[`IconButton basic 1`] = `
 
 exports[`IconButton disabled 1`] = `
 .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -218,8 +218,8 @@ exports[`IconButton disabled 1`] = `
 exports[`IconButton size 1`] = `
 Array [
   .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -288,8 +288,8 @@ Array [
     </svg>
   </button>,
   .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -357,8 +357,8 @@ Array [
     </svg>
   </button>,
   .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -432,8 +432,8 @@ Array [
 exports[`IconButton variant 1`] = `
 Array [
   .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -500,8 +500,8 @@ Array [
     </svg>
   </button>,
   .c1 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;

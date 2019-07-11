@@ -2,8 +2,8 @@
 
 exports[`Command acrylic 1`] = `
 .c5 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -15,8 +15,8 @@ exports[`Command acrylic 1`] = `
 }
 
 .c7 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -28,8 +28,8 @@ exports[`Command acrylic 1`] = `
 }
 
 .c8 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -41,8 +41,8 @@ exports[`Command acrylic 1`] = `
 }
 
 .c6 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -229,8 +229,8 @@ exports[`Command acrylic 1`] = `
 
 exports[`Command basic 1`] = `
 .c5 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -242,8 +242,8 @@ exports[`Command basic 1`] = `
 }
 
 .c7 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -255,8 +255,8 @@ exports[`Command basic 1`] = `
 }
 
 .c8 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -268,8 +268,8 @@ exports[`Command basic 1`] = `
 }
 
 .c6 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -424,8 +424,8 @@ exports[`Command basic 1`] = `
 
 exports[`Command button with label 1`] = `
 .c5 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -437,8 +437,8 @@ exports[`Command button with label 1`] = `
 }
 
 .c8 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -450,8 +450,8 @@ exports[`Command button with label 1`] = `
 }
 
 .c9 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -463,8 +463,8 @@ exports[`Command button with label 1`] = `
 }
 
 .c7 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -647,8 +647,8 @@ exports[`Command button with label 1`] = `
 
 exports[`Command reveal 1`] = `
 .c5 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -660,8 +660,8 @@ exports[`Command reveal 1`] = `
 }
 
 .c7 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -673,8 +673,8 @@ exports[`Command reveal 1`] = `
 }
 
 .c8 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -686,8 +686,8 @@ exports[`Command reveal 1`] = `
 }
 
 .c6 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -887,8 +887,8 @@ exports[`Command reveal 1`] = `
 
 exports[`Command without Content and Secondary 1`] = `
 .c4 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -900,8 +900,8 @@ exports[`Command without Content and Secondary 1`] = `
 }
 
 .c6 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -913,8 +913,8 @@ exports[`Command without Content and Secondary 1`] = `
 }
 
 .c5 {
-  width: 0.83em;
-  height: 0.83em;
+  width: 1em;
+  height: 1em;
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;

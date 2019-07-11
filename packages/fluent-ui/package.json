@@ -1,5 +1,6 @@
 {
   "name": "@fluent-ui/core",
+  "private": true,
   "version": "0.0.1",
   "description": "React components that implement Microsoft's Fluent Design System.",
   "author": "chenyueban <chenyueban@qq.com>",
@@ -8,8 +9,6 @@
     "fluent-design",
     "fluent-ui"
   ],
-  "main": "build/umd/index.js",
-  "module": "build/es/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/chenyueban/fluent-ui",
@@ -25,11 +24,12 @@
   },
   "scripts": {
     "prebuild": "rimraf build",
-    "build": "yarn build:cjs && yarn build:es && yarn build:umd",
-    "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build/cjs",
+    "build": "yarn build:cjs && yarn build:es && yarn build:umd && yarn build:copy-files",
+    "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build",
     "build:es": "cross-env NODE_ENV=production tsc --module ES6 --outDir ./build/es",
     "build:umd": "cross-env NODE_ENV=production tsc --module UMD --outDir ./build/umd",
-    "start": "cross-env NODE_ENV=production tsc -w --module ES6 --outDir ./build/es",
+    "build:copy-files": "ts-node ../../scripts/copy-files.ts",
+    "start": "cross-env NODE_ENV=production tsc -w --module CommonJS --outDir ./build",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "test:prod": "yarn test -- --no-cache",
@@ -57,5 +57,8 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "main": "build/index.js",
+  "module": "build/es/index.js",
+  "typings": "build/index.d.ts"
 }
