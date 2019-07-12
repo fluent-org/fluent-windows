@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.3.0...@fluent-ui/core@0.3.1) (2019-07-12)
+
+**Note:** Version bump only for package @fluent-ui/core
+
+
+
+
+
 # 0.1.0 (2019-07-12)
 
 

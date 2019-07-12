@@ -1,7 +1,7 @@
 {
   "name": "@fluent-ui/core",
   "private": false,
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "React components that implement Microsoft's Fluent Design System.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
