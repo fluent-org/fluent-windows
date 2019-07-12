@@ -805,25 +805,6 @@
   resolved "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.4.tgz#a87b4b04e5ae14a88d48ebef15015f6b7d1f5677"
   integrity sha512-kBa+cDHOR9jpRJ+kcGMsysrls0leukrm68DmFQoMIWQcXdr2cZvyvypWuGYT7U+9kAExUE7+T7r6G3C3A6L8MQ==
 
-"@fluent-ui/core@^0.1.0":
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/@fluent-ui/core/-/core-0.1.0.tgz#aa47c9870e42d04bdccc5e284875545ae1049536"
-  integrity sha512-xbege5c64BxpE6chNAhDa237IEekDL9cwptBUEN8FOUbrI7tIirWiEkXkixRkbR1QAx3iT4/merF5UDrW+VNWA==
-  dependencies:
-    "@fluent-ui/hooks" "^0.0.1"
-    "@fluent-ui/icons" "^0.0.1"
-    "@xstyled/system" "^1.7.0"
-
-"@fluent-ui/hooks@^0.0.2":
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/@fluent-ui/hooks/-/hooks-0.0.2.tgz#4dfb583c28de3359555a88046415df74c4add666"
-  integrity sha512-pYrCesdHs6DlHBAzVfIRMIQm6p0AL+J2awpaj+AQzb5D1lKpE9HvPIfpkxRiGsSImHXvaUnW058odAsEiOxekg==
-
-"@fluent-ui/icons@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/@fluent-ui/icons/-/icons-0.1.0.tgz#de857fea41ae8f827ae2721459c8226b445dd8b4"
-  integrity sha512-gF29iOeB9I7XzJ46c6kWCIYDQVqmDeEJJhhNxo7GCGd0/+ZYIV/JBarOwQsBtjNbWv2tipVs0phHQEQlRJXeoQ==
-
 "@gatsbyjs/relay-compiler@2.0.0-printer-fix.2":
   version "2.0.0-printer-fix.2"
   resolved "https://registry.npmjs.org/@gatsbyjs/relay-compiler/-/relay-compiler-2.0.0-printer-fix.2.tgz#214db0e6072d40ea78ad5fabdb49d56bc95f4e99"

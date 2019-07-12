@@ -28,8 +28,8 @@
     "url": "https://github.com/chenyueban/fluent-ui/issues"
   },
   "dependencies": {
-    "@fluent-ui/core": "^0.1.0",
-    "@fluent-ui/icons": "^0.1.0",
+    "@fluent-ui/core": "^0.3.0",
+    "@fluent-ui/icons": "^0.3.0",
     "gatsby": "^2.8.3",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
