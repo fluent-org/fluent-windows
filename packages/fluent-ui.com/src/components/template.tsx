@@ -6,7 +6,8 @@ import { Box, Navigation } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
-  Code as CodeIcon
+  Code as CodeIcon,
+  Home as HomeIcon
 } from '@fluent-ui/icons'
 
 import Layout from './layout'
@@ -54,6 +55,9 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
   function handleNavigation(title: string): void {
     navigate(`/components/${title.toLowerCase()}`)
   }
+  function handleNavigationToHome(): void {
+    navigate(`/`)
+  }
   const navigationWidth = 260
   return (
     <Layout>
@@ -85,6 +89,10 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
           )
         )}
         <Navigation.Footer>
+          <Navigation.Item onClick={handleNavigationToHome}>
+            <HomeIcon />
+            <span>Home</span>
+          </Navigation.Item>
           <Navigation.Item as="a" href="https://github.com/chenyueban/fluent-ui">
             <CodeIcon />
             <span>Github</span>

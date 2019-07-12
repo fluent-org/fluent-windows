@@ -2,6 +2,8 @@ import { styled, css, variant, th } from '../styles/styled'
 import { ButtonProps } from './Button'
 
 const base = css`
+  display: inline-block;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;

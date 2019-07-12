@@ -30,6 +30,8 @@ const StyledItemWrapper = styled.div<{
   reveal: boolean
 }>`
   position: relative;
+  cursor: pointer;
+  text-decoration: none;
   max-height: 40px;
   height: 40px;
   display: flex;
@@ -132,13 +134,7 @@ const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
   )
 
   // handle active item
-  const {
-    value: activeID,
-    onChange,
-    expanded,
-    reveal,
-    horizontal
-  } = useContext(NavigationContext)
+  const { value: activeID, onChange, expanded, reveal, horizontal } = useContext(NavigationContext)
   function handleItemClick(e: MouseEvent<HTMLDivElement>): void {
     onClick && onClick(e)
     onChange && onChange(id as ID)
@@ -155,9 +151,7 @@ const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
     <StyledItemWrapper onClick={handleItemClick} reveal={reveal} {...rest}>
       {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
       <StyledItemIconWrapper>{container.icon}</StyledItemIconWrapper>
-      <StyledItemTextWrapper expanded={expanded}>
-        {container.content}
-      </StyledItemTextWrapper>
+      <StyledItemTextWrapper expanded={expanded}>{container.content}</StyledItemTextWrapper>
     </StyledItemWrapper>
   )
 }
