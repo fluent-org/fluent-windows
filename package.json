@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
-    "release": "yarn build && lerna publish --contents build --conventional-commits"
+    "release": "lerna publish --contents build --conventional-commits"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",

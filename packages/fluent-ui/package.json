@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@fluent-ui/hooks": "^0.0.1",
-    "@fluent-ui/icons": "^0.0.1",
+    "@fluent-ui/icons": "^0.1.0",
     "@xstyled/system": "^1.7.0"
   },
   "devDependencies": {
