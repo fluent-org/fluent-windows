@@ -1,14 +1,16 @@
 {
   "name": "fluent-ui.com",
+  "private": true,
   "version": "1.0.0",
   "description": "fluent-ui.com",
   "keywords": [
     "react",
     "gatsby",
     "fluent-design",
-    "fluent-ui"
+    "fluent-ui",
+    "fluent-ui.com"
   ],
-  "author": "chenyueban <chenyueban@qq.com>",
+  "author": "chenyueban <jasonchan0527@gmail.com>",
   "homepage": "https://fluent-ui.com",
   "license": "MIT",
   "directories": {

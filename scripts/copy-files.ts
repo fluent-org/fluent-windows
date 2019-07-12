@@ -37,7 +37,7 @@ async function includeFileInBuild(file: string): Promise<void> {
 async function worker(): Promise<void> {
   try {
     await createPackageFile()
-    const files = ['./README.md']
+    const files = ['./README.md', '../../LICENSE', './CHANGELOG.md']
     await Promise.all(
       files.map(
         (file): void => {

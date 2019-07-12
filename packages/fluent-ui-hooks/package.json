@@ -1,9 +1,9 @@
 {
   "name": "@fluent-ui/hooks",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "description": "Fluent Design System React hooks.",
-  "author": "chenyueban <chenyueban@qq.com>",
+  "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
     "react",
     "fluent-design",
