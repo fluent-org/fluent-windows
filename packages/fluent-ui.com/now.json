@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "fluent-ui.com",
-  "alias": "fluent-ui.com",
   "builds": [
     {
       "src": "package.json",

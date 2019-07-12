@@ -16,7 +16,6 @@ const IndexPage = (): React.ReactElement => {
       <Box
         width="100vw"
         height="100vh"
-        acrylic
         backgroundColor="primary.default"
         background="url(msft-verge-fluent.jpg) 50% center / cover no-repeat fixed"
         display="flex"
@@ -31,10 +30,15 @@ const IndexPage = (): React.ReactElement => {
           React components that implement Microsoft Fluent Design System.
         </Box>
         <Box marginTop={20} display="flex">
-          <Button variant="accent" onClick={handleLink}>
+          <Button variant="accent" size="large" onClick={handleLink}>
             GET START
           </Button>
-          <Button as="a" href="https://github.com/chenyueban/fluent-ui" style={{ marginLeft: 20 }}>
+          <Button
+            as="a"
+            href="https://github.com/chenyueban/fluent-ui"
+            style={{ marginLeft: 20 }}
+            size="large"
+          >
             GITHUB
           </Button>
         </Box>
