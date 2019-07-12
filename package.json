@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
-    "release": "lerna publish --force-publish @fluent-ui/core"
+    "release": "lerna publish"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
