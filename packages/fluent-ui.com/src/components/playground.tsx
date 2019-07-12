@@ -2,11 +2,12 @@ import * as React from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import * as Fluent from '@fluent-ui/core'
 import * as Icon from '@fluent-ui/icons'
+import * as Hooks from '@fluent-ui/hooks'
 import { theme } from '../utils/theme'
 
 const { Box, IconButton } = Fluent
 
-const scope = { ...Fluent, Icon }
+const scope = { ...Fluent, Icon, ...Hooks }
 
 interface PlaygroundProps {
   children: any

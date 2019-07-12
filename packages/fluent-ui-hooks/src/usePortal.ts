@@ -11,7 +11,7 @@ interface PortalProps {
   style?: object
 }
 
-export function usePortal(defaultVisible = false): Return {
+export function usePortal(defaultVisible = false, container?: Element): Return {
   const [visible, handleState] = React.useState(defaultVisible)
 
   const setVisible = React.useCallback((v): void => {
@@ -19,17 +19,17 @@ export function usePortal(defaultVisible = false): Return {
   }, [])
 
   const Portal = ({ children, style }: PortalProps): React.ReactPortal => {
-    const node = document.createElement('div')
+    const node = container || document.createElement('div')
     if (style) {
       for (const prop in style) {
         // @ts-ignore
         node.style[prop] = style[prop]
       }
     }
-    React.useEffect((): (() => void) => {
-      document.body.appendChild(node)
+    React.useLayoutEffect((): (() => void) => {
+      !container && document.body.appendChild(node)
       return (): void => {
-        document.body.removeChild(node)
+        !container && document.body.removeChild(node)
       }
     }, [node])
     return createPortal(children, node)

@@ -4,6 +4,3 @@ components: hooks
 ---
 
 # Hooks
-
-## useTransition
-
