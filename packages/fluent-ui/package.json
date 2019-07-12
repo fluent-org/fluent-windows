@@ -59,6 +59,9 @@
       "@commitlint/config-conventional"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "build/index.js",
   "module": "build/es/index.js",
   "typings": "build/index.d.ts"

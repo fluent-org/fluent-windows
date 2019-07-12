@@ -44,6 +44,9 @@
     "omit-deep-lodash": "^1.1.4",
     "svgo": "^1.2.2"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "build/index.js",
   "module": "build/es/index.js",
   "typings": "build/index.d.ts"
