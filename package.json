@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
-    "release": "lerna publish --contents build --conventional-commits --no-verify-access --skip-git"
+    "release": "lerna run release"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
