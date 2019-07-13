@@ -2,6 +2,9 @@
 
 exports[`Button as 1`] = `
 .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -41,6 +44,9 @@ exports[`Button as 1`] = `
 
 exports[`Button basic 1`] = `
 .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -79,6 +85,9 @@ exports[`Button basic 1`] = `
 
 exports[`Button disabled 1`] = `
 .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -119,6 +128,9 @@ exports[`Button disabled 1`] = `
 exports[`Button size 1`] = `
 Array [
   .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -155,6 +167,9 @@ Array [
     small
   </button>,
   .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -191,6 +206,9 @@ Array [
     medium
   </button>,
   .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -232,6 +250,9 @@ Array [
 exports[`Button variant 1`] = `
 Array [
   .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;
@@ -267,6 +288,9 @@ Array [
     primary
   </button>,
   .c0 {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   min-width: 64px;

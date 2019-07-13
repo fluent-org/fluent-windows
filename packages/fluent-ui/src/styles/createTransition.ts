@@ -11,7 +11,10 @@ export interface Transitions {
   navigation?: CSS.TransitionProperty
 }
 
-const baseTransition = 'all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms'
+export const createBaseTransition = (type: string[]): CSS.TransitionProperty =>
+  type.map((v): CSS.SingleTransition => `${v} 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms`).join(',')
+
+const baseTransition = createBaseTransition(['all'])
 
 function createTransition(transitions: Transitions): Transitions {
   const defaultTransitions: Transitions = {

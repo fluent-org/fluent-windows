@@ -47,6 +47,9 @@ exports[`Navigation basic 1`] = `
 
 .c3 {
   position: relative;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   max-height: 40px;
   height: 40px;
   display: -webkit-box;
@@ -475,6 +478,9 @@ exports[`Navigation controlled 1`] = `
 
 .c3 {
   position: relative;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   max-height: 40px;
   height: 40px;
   display: -webkit-box;

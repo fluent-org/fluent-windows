@@ -43,12 +43,14 @@
   "dependencies": {
     "@fluent-ui/hooks": "^0.3.0",
     "@fluent-ui/icons": "^0.3.0",
-    "@xstyled/system": "^1.7.0"
+    "@xstyled/system": "^1.7.0",
+    "react-transition-group": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
+    "@types/react-transition-group": "^2.9.2",
     "@types/styled-components": "4.1.8",
     "cross-env": "^5.2.0",
     "csstype": "^2.6.5",
