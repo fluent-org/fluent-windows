@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.4.0...@fluent-ui/core@0.4.1) (2019-07-14)
+
+
+### Bug Fixes
+
+* **Command, Navigation:** Fix Command, Navigation child rendering position does not meet expectation ([735a629](https://github.com/chenyueban/fluent-ui/commit/735a629))
+
+
+
+
+
 # [0.4.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.3.1...@fluent-ui/core@0.4.0) (2019-07-14)
 
 
