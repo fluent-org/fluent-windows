@@ -28,8 +28,13 @@ interface TemplateProps {
         components: string
         title: string
       }
-      fileAbsolutePath: string
-      html: string
+      rawMarkdownBody: string
+    }
+    api: {
+      frontmatter: {
+        components: string
+        title: string
+      }
       rawMarkdownBody: string
     }
     docs: {
@@ -118,6 +123,15 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
           >
             {data.doc.rawMarkdownBody}
           </Markdown>
+          <Markdown
+            options={{
+              namedCodesToUnicode: {
+                or: '|'
+              }
+            }}
+          >
+            {data.api.rawMarkdownBody}
+          </Markdown>
         </Box>
       </Box>
     </Layout>
@@ -138,11 +152,16 @@ export const query = graphql`
         components
         title
       }
-      fileAbsolutePath
-      html
       rawMarkdownBody
     }
-    docs: allMarkdownRemark {
+    api: markdownRemark(frontmatter: { title: { eq: $title }, api: { eq: true } }) {
+      frontmatter {
+        components
+        title
+      }
+      rawMarkdownBody
+    }
+    docs: allMarkdownRemark(filter: { frontmatter: { api: { nin: true } } }) {
       edges {
         node {
           frontmatter {

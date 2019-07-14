@@ -15,11 +15,10 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { api: { nin: true } } }) {
         nodes {
           frontmatter {
             title
-            components
           }
           rawMarkdownBody
           html
