@@ -1,38 +1,23 @@
 import * as React from 'react'
-import {
-  ReactElement,
-  forwardRef,
-  ReactNode,
-  MouseEventHandler,
-  ComponentPropsWithoutRef,
-  ButtonHTMLAttributes
-} from 'react'
 import StyledButton from './Button.styled'
 
 export interface ButtonProps
-  extends ComponentPropsWithoutRef<'button'>,
-    ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.ComponentPropsWithoutRef<'button'>,
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     StyledProps {
   variant?: 'primary' | 'accent'
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'
 
-  onClick?: MouseEventHandler<HTMLButtonElement>
-  children: ReactNode
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  children: React.ReactNode
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    {
-      variant = 'primary',
-      disabled,
-      size,
-      onClick,
-      children,
-      ...rest
-    }: ButtonProps,
+    { variant = 'primary', disabled, size, onClick, children, ...rest }: ButtonProps,
     ref
-  ): ReactElement => (
+  ): React.ReactElement => (
     <StyledButton
       ref={ref}
       variant={variant}

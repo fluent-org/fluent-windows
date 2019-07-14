@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { forwardRef, ReactElement } from 'react'
 import { StyledWrapper, StyledInput, StyledIcon } from './Input.styled'
 import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
 
@@ -16,19 +15,11 @@ export interface InputProps
   password?: boolean
 }
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    {
-      value,
-      onChange,
-      placeholder,
-      disabled,
-      cleared,
-      password,
-      ...rest
-    }: InputProps,
+    { value, onChange, placeholder, disabled, cleared, password, ...rest }: InputProps,
     ref
-  ): ReactElement => {
+  ): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement> | null): void {
       onChange && onChange(e ? e.target.value : '')
     }

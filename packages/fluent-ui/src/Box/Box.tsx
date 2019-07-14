@@ -1,21 +1,14 @@
 import * as React from 'react'
-import {
-  ReactElement,
-  forwardRef,
-  ReactNode,
-  ComponentPropsWithoutRef,
-  HTMLAttributes
-} from 'react'
 import { styled, system } from '../styles/styled'
 import { omit } from '../utils'
 import { StylesProps } from './style'
 
 export interface BoxProps
   extends StylesProps,
-    ComponentPropsWithoutRef<'div'>,
-    HTMLAttributes<HTMLDivElement> {
+    React.ComponentPropsWithoutRef<'div'>,
+    React.HTMLAttributes<HTMLDivElement> {
   acrylic?: boolean
-  children?: ReactNode
+  children?: React.ReactNode
   as?: keyof JSX.IntrinsicElements
 }
 
@@ -41,8 +34,7 @@ const Acrylic = styled(Base)`
     &::before {
       z-index: -2;
       opacity: 0.5;
-      background-color: ${({ backgroundColor }: BoxProps): string =>
-        backgroundColor!};
+      background-color: ${({ backgroundColor }: BoxProps): string => backgroundColor!};
     }
     &::after {
       z-index: -1;
@@ -52,8 +44,8 @@ const Acrylic = styled(Base)`
   }
 `
 
-const Box = forwardRef<HTMLDivElement, BoxProps>(
-  (props: BoxProps, ref): ReactElement => {
+const Box = React.forwardRef<HTMLDivElement, BoxProps>(
+  (props: BoxProps, ref): React.ReactElement => {
     const otherProps = omit(props, ['acrylic'])
     if (props.acrylic) {
       return <Acrylic ref={ref} {...otherProps} />
