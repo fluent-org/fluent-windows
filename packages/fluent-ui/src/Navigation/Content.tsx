@@ -1,13 +1,14 @@
 import * as React from 'react'
-import { ReactElement, ReactNode } from 'react'
 import Box from '../Box'
 
 interface ContentProps {
-  children: ReactNode
+  children: React.ReactNode
 }
 
-const Content = ({ children }: ContentProps): ReactElement => (
+const Content: React.FC<ContentProps> = ({ children }: ContentProps): React.ReactElement => (
   <Box>{children}</Box>
 )
+
+Content.displayName = 'FNavigationContent'
 
 export default Content

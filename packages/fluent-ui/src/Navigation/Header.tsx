@@ -1,11 +1,14 @@
 import * as React from 'react'
-import { ReactElement, ReactNode } from 'react'
 import Box from '../Box'
 
 interface ItemProps {
-  children: ReactNode
+  children: React.ReactNode
 }
 
-const Header = ({ children }: ItemProps): ReactElement => <Box>{children}</Box>
+const Header: React.FC<ItemProps> = ({ children }: ItemProps): React.ReactElement => (
+  <Box>{children}</Box>
+)
+
+Header.displayName = 'FNavigationHeader'
 
 export default Header

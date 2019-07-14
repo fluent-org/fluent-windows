@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { SFC, ReactElement } from 'react'
 
-const Secondary: SFC = (props): ReactElement => {
+const Secondary: React.FC = (props): React.ReactElement => {
   return <div {...props} />
 }
+
+Secondary.displayName = 'FCommandSecondary'
 
 export default Secondary

@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { SFC, ReactElement } from 'react'
 
-const Content: SFC = (props): ReactElement => {
+const Content: React.FC = (props): React.ReactElement => {
   return <div {...props} />
 }
+
+Content.displayName = 'FCommandContent'
 
 export default Content

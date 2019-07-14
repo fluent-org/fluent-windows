@@ -1,16 +1,4 @@
 import * as React from 'react'
-import {
-  ReactElement,
-  ReactNode,
-  Children,
-  ReactChild,
-  cloneElement,
-  useContext,
-  useEffect,
-  useState,
-  MouseEventHandler,
-  MouseEvent
-} from 'react'
 import { styled, css, variant, th } from '../styles/styled'
 import { NavigationContext } from './Navigation'
 import * as CSS from 'csstype'
@@ -20,11 +8,11 @@ export type ID = string | number
 interface ItemProps extends StyledProps {
   id?: ID
   title?: string
-  onClick?: MouseEventHandler<HTMLDivElement>
-  children: ReactNode
+  onClick?: React.MouseEventHandler<HTMLDivElement>
+  children: React.ReactNode
 }
 
-type Child = ReactChild | any
+type Child = React.ReactChild | any
 
 const StyledItemWrapper = styled.div<{
   reveal: boolean
@@ -106,7 +94,12 @@ const StyledItemTextWrapper = styled.div<{ expanded: boolean }>`
   transition: ${th.transition('navigation')};
 `
 
-const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
+const Item: React.FC<ItemProps> = ({
+  id,
+  onClick,
+  children,
+  ...rest
+}: ItemProps): React.ReactElement => {
   const container: {
     icon: any
     content: any
@@ -114,7 +107,7 @@ const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
     icon: null,
     content: null
   }
-  Children.forEach(
+  React.Children.forEach(
     children,
     (child: Child): void => {
       if (
@@ -122,11 +115,11 @@ const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
         child.type.displayName &&
         String.prototype.includes.call(child.type.displayName, 'FIcon')
       ) {
-        container.icon = cloneElement(child, {
+        container.icon = React.cloneElement(child, {
           style: { width: 16, height: 16 }
         })
       } else {
-        container.content = cloneElement(child, {
+        container.content = React.cloneElement(child, {
           style: { fontSize: 14 }
         })
       }
@@ -134,13 +127,15 @@ const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
   )
 
   // handle active item
-  const { value: activeID, onChange, expanded, reveal, horizontal } = useContext(NavigationContext)
-  function handleItemClick(e: MouseEvent<HTMLDivElement>): void {
+  const { value: activeID, onChange, expanded, reveal, horizontal } = React.useContext(
+    NavigationContext
+  )
+  function handleItemClick(e: React.MouseEvent<HTMLDivElement>): void {
     onClick && onClick(e)
     onChange && onChange(id as ID)
   }
-  const [active, setActive] = useState(false)
-  useEffect((): void => {
+  const [active, setActive] = React.useState(false)
+  React.useEffect((): void => {
     if (id) {
       if (activeID === id) setActive(true)
       else if (activeID && activeID !== id) setActive(false)
@@ -155,5 +150,7 @@ const Item = ({ id, onClick, children, ...rest }: ItemProps): ReactElement => {
     </StyledItemWrapper>
   )
 }
+
+Item.displayName = 'FNavigationItem'
 
 export default Item

@@ -39,10 +39,7 @@ interface CommandType extends React.ForwardRefExoticComponent<CommandProps> {
 export const CommandContext = React.createContext(false)
 
 const Command = React.forwardRef<HTMLDivElement, CommandProps>(
-  (
-    { acrylic, reveal, children, ...rest }: CommandProps,
-    ref
-  ): React.ReactElement => {
+  ({ acrylic, reveal, children, ...rest }: CommandProps, ref): React.ReactElement => {
     const container: Container = {
       content: [],
       primary: [],
@@ -51,9 +48,9 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
     React.Children.forEach(
       children,
       (child: Child): void => {
-        if (child.type.name! === 'Content') {
+        if (child.type.displayName! === 'FCommandContent') {
           container.content.push(child)
-        } else if (child.type.name === 'Secondary') {
+        } else if (child.type.displayName === 'FCommandSecondary') {
           container.secondary = child.props.children
         } else {
           container.primary.push(child)
@@ -63,9 +60,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
 
     const [secondaryVisible, setSecondaryVisible, SecondaryPortal] = usePortal()
     const [portalStyle, setPortalStyle] = React.useState()
-    function handleSecondaryVisible(
-      e: React.MouseEvent<HTMLButtonElement>
-    ): void {
+    function handleSecondaryVisible(e: React.MouseEvent<HTMLButtonElement>): void {
       const rect = e.currentTarget.getBoundingClientRect()
       const position = {
         position: 'absolute',
@@ -93,25 +88,18 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
     return (
       <StyledContainer ref={ref} acrylic={acrylic} {...otherProps}>
         <CommandContext.Provider value={reveal as boolean}>
-          {!!container.content.length && (
-            <StyledContent>{container.content}</StyledContent>
-          )}
+          {!!container.content.length && <StyledContent>{container.content}</StyledContent>}
           <StyledPrimary>
             {reveal
               ? container.primary.map(
-                  (child, i): React.ReactElement => (
-                    <RevealWrapper key={i}>{child}</RevealWrapper>
-                  )
+                  (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
                 )
               : container.primary}
           </StyledPrimary>
           {!!container.secondary.length &&
             (reveal ? (
               <RevealWrapper>
-                <CommandButton
-                  style={{ height: '100%' }}
-                  onClick={handleSecondaryVisible}
-                >
+                <CommandButton style={{ height: '100%' }} onClick={handleSecondaryVisible}>
                   <MoreIcon />
                 </CommandButton>
               </RevealWrapper>
