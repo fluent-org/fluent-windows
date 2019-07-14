@@ -1,7 +1,7 @@
 {
   "name": "@fluent-ui/core",
   "private": false,
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "React components that implement Microsoft's Fluent Design System.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@fluent-ui/hooks": "^0.3.0",
-    "@fluent-ui/icons": "^0.3.0",
+    "@fluent-ui/icons": "^0.3.1",
     "@xstyled/system": "^1.7.0",
     "react-transition-group": "^4.2.1"
   },

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.1.2...fluent-ui.com@1.2.0) (2019-07-14)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Join the homepage and adjust the style of the details ([c12250d](https://github.com/chenyueban/fluent-ui/commit/c12250d))
+
+
+### Features
+
+* **Transition:** New component Transition ([cf1da17](https://github.com/chenyueban/fluent-ui/commit/cf1da17))
+
+
+
+
+
 ## [1.1.2](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.1.1...fluent-ui.com@1.1.2) (2019-07-12)
 
 **Note:** Version bump only for package fluent-ui.com
