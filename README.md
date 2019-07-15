@@ -4,7 +4,17 @@
   </a>
 </p>
 
-[React](https://reactjs.org/) components that inspired by [Microsoft's Fluent Design System.](https://www.microsoft.com/design/fluent/).
+<div align="center">
+
+[React](https://reactjs.org/) components that inspired by [Microsoft's Fluent Design System](https://www.microsoft.com/design/fluent/).
+
+[![npm](https://img.shields.io/npm/v/@fluent-ui/core.svg?style=flat-square)](https://www.npmjs.com/package/@fluent-ui/core)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/fluent-org/fluent-ui/blob/master/LICENSE)
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e&style=flat-square)](https://github.com/styled-components/styled-components)
+![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
+
+</div>
+
 
 ## Installation
 
