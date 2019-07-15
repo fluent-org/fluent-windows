@@ -9,7 +9,7 @@ export interface TransitionProps extends Omit<CSSTransitionProps, 'in'> {
   wrapper?: boolean
 }
 
-const Transition = React.forwardRef<HTMLElement, TransitionProps>(
+const Transition = React.forwardRef<HTMLDivElement, TransitionProps>(
   (
     {
       type = 'fade',
@@ -22,9 +22,17 @@ const Transition = React.forwardRef<HTMLElement, TransitionProps>(
     }: TransitionProps,
     ref
   ): React.ReactElement => {
+    const [wrapperHeight, setWrapperHeight] = React.useState(0)
     return (
       <CSSTransition in={visible} appear={appear} timeout={timeout} classNames={type} {...rest}>
-        <StyledContainer ref={ref} visible={visible} type={type} wrapper={wrapper}>
+        <StyledContainer
+          forwardRef={ref}
+          visible={visible}
+          type={type}
+          wrapper={wrapper}
+          wrapperHeight={wrapperHeight}
+          setWrapperHeight={setWrapperHeight}
+        >
           {children}
         </StyledContainer>
       </CSSTransition>

@@ -85,7 +85,7 @@ The Transition component's `mountOnEnter` property prevents the child component 
     <>
       <Toggle checked={visible} onChange={handleVisible} />
       <Transition visible={visible} type="collapse">
-        <Box width={50} height={50} margin={2} backgroundColor="white.default"></Box>
+        <Box width={50} height={50} backgroundColor="white.default"></Box>
       </Transition>
     </>
   )
