@@ -33,7 +33,6 @@ const Playground: React.FC<PlaygroundProps> = ({
             css={`
               font-size: 14px;
               border-radius: 4px;
-              margin-bottom: 6px;
               max-height: 1000px;
               overflow: auto !important;
               background-color: #f5f5f5 !important;

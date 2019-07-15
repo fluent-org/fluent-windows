@@ -2,7 +2,7 @@
   "name": "@fluent-ui/icons",
   "private": false,
   "version": "0.3.1",
-  "description": "Fluent Design System Svg Icon.",
+  "description": "Fluent-UI Svg Icons.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
     "react",

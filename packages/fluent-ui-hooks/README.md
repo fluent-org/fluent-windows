@@ -1,6 +1,6 @@
 # @fluent-ui/hooks
 
-React components that implement Microsoft's Fluent Design System.
+React components that inspired by Microsoft's Fluent Design System.
 
 ## Installation
 
