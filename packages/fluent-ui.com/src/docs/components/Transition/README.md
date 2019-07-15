@@ -72,3 +72,22 @@ The Transition component's `mountOnEnter` property prevents the child component 
   )
 }
 ```
+
+## Collapse
+
+```jsx
+() => {
+  const [visible, setVisible] = React.useState(false)
+  function handleVisible() {
+    setVisible(v => !v)
+  }
+  return (
+    <>
+      <Toggle checked={visible} onChange={handleVisible} />
+      <Transition visible={visible} type="collapse">
+        <Box width={50} height={50} margin={2} backgroundColor="white.default"></Box>
+      </Transition>
+    </>
+  )
+}
+```

@@ -2,11 +2,13 @@ import * as React from 'react'
 import styled, { css } from 'styled-components'
 import { variant } from '@xstyled/system'
 import { createBaseTransition } from '../styles/createTransition'
+import { Box } from '..'
 
-export type Type = 'fade' | 'zoom' | 'slide'
+export type Type = 'fade' | 'zoom' | 'slide' | 'collapse'
 export interface StyledContainerProps {
   type?: Type
   visible?: boolean
+  wrapper?: boolean
 }
 
 export const fade = css`
@@ -60,6 +62,21 @@ export const slide = css`
   }
 `
 
+export const collapse = css`
+  &.collapse-enter {
+    transform: scaleY(0);
+    &-active {
+      transform: scaleY(1);
+    }
+  }
+  &.collapse-exit {
+    transform: scaleY(1);
+    &-active {
+      transform: scaleY(0);
+    }
+  }
+`
+
 export const type = variant({
   prop: 'type',
   default: 'fade',
@@ -78,16 +95,25 @@ export const type = variant({
       transition: ${createBaseTransition(['transform'])};
       ${({ visible }: StyledContainerProps): string | false =>
         visible ? `transform: none;` : `transform: translateY(100vh);`}
+    `,
+    collapse: css`
+      overflow: hidden;
+      transform-origin: top left;
+      transition: ${createBaseTransition(['transform'])};
+      ${({ visible }: StyledContainerProps): string | false =>
+        visible ? `transform: scaleY(1);` : `transform: scaleY(0);`}
     `
   }
 })
 
 export const StyledContainer = styled(
-  ({ children, ...props }): React.ReactElement => React.cloneElement(children, props)
+  ({ children, wrapper, ...props }): React.ReactElement =>
+    wrapper ? <Box {...props}>{children}</Box> : React.cloneElement(children, props)
 )<StyledContainerProps>`
   ${type}
 
   ${fade}
   ${zoom}
   ${slide}
+  ${collapse}
 `

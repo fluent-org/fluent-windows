@@ -18,7 +18,8 @@ import { Transition } from '@fluent-ui/core'
 | --- | --- | --- | --- |
 | children | React.ReactNode |  | Elements that require transition effects. |
 | visible | boolean | false | Control element display. |
-| type | 'fade' &or; 'zoom' &or; 'slide' | 'fade' | Transition effects type. |
+| type | 'fade' &or; 'zoom' &or; 'slide' &or; 'collapse' | 'fade' | Transition effects type. |
+| wrapper | boolean | true | If `true` a layer of div will be nested outside the target to display the animation, otherwise the animation will be displayed directly on the target. |
 | mountOnEnter | boolean | false | By default the child component is mounted immediately along with the parent `Transition` component. If you want to "lazy mount" the component on the first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay mounted, even on "exited", unless you also specify `unmountOnExit`. |
 | unmountOnExit | boolean | false | By default the child component stays mounted after it reaches the `'exited'` state. Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting. |
 | appear | boolean | true | The component will transition in as soon as the `<Transition>` mounts. |

@@ -6,16 +6,25 @@ import { Type, StyledContainer } from './Transition.styled'
 export interface TransitionProps extends Omit<CSSTransitionProps, 'in'> {
   type?: Type
   visible?: boolean
+  wrapper?: boolean
 }
 
 const Transition = React.forwardRef<HTMLElement, TransitionProps>(
   (
-    { type = 'fade', appear = true, timeout = 250, visible, children, ...rest }: TransitionProps,
+    {
+      type = 'fade',
+      wrapper = true,
+      appear = true,
+      timeout = 250,
+      visible,
+      children,
+      ...rest
+    }: TransitionProps,
     ref
   ): React.ReactElement => {
     return (
       <CSSTransition in={visible} appear={appear} timeout={timeout} classNames={type} {...rest}>
-        <StyledContainer ref={ref} visible={visible} type={type}>
+        <StyledContainer ref={ref} visible={visible} type={type} wrapper={wrapper}>
           {children}
         </StyledContainer>
       </CSSTransition>
