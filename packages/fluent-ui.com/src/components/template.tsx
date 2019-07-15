@@ -6,7 +6,19 @@ import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
   Code as CodeIcon,
-  Home as HomeIcon
+  Home as HomeIcon,
+  CheckboxComposite as CheckboxCompositeIcon,
+  RadioBtnOn as RadioBtnOnIcon,
+  Color as ColorIcon,
+  Input as InputIcon,
+  GiftboxOpen as GiftboxOpenIcon,
+  ToggleBorder as ToggleBorderIcon,
+  ClosePaneMirrored as ClosePaneMirroredIcon,
+  GripperBarHorizontal as GripperBarHorizontalIcon,
+  Badge as BadgeIcon,
+  NUIFPStartSlideHand as NUIFPStartSlideHandIcon,
+  NUIFPRollLeftHand as NUIFPRollLeftHandIcon,
+  BackgroundToggle as BackgroundToggleIcon
 } from '@fluent-ui/icons'
 
 import Layout from './layout'
@@ -50,6 +62,62 @@ interface TemplateProps {
   }
 }
 
+const iconMap = [
+  {
+    title: 'Box',
+    icon: <GiftboxOpenIcon />
+  },
+  {
+    title: 'Checkbox',
+    icon: <CheckboxCompositeIcon />
+  },
+  {
+    title: 'Radio',
+    icon: <RadioBtnOnIcon />
+  },
+  {
+    title: 'Toggle',
+    icon: <ToggleBorderIcon />
+  },
+  {
+    title: 'Color',
+    icon: <ColorIcon />
+  },
+  {
+    title: 'Input',
+    icon: <InputIcon />
+  },
+  {
+    title: 'Navigation',
+    icon: <ClosePaneMirroredIcon />
+  },
+  {
+    title: 'Command',
+    icon: <GripperBarHorizontalIcon />
+  },
+  {
+    title: 'Icon',
+    icon: <BadgeIcon />
+  },
+  {
+    title: 'Button',
+    icon: <NUIFPStartSlideHandIcon />
+  },
+  {
+    title: 'IconButton',
+    icon: <NUIFPRollLeftHandIcon />
+  },
+  {
+    title: 'Transition',
+    icon: <BackgroundToggleIcon />
+  }
+]
+
+function getIconBytitle(title: string): JSX.Element {
+  const target = iconMap.find((v): boolean => v.title === title)
+  return target ? target.icon : <ConnectedIcon />
+}
+
 const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.ReactElement => {
   const activeId = data.docs.edges.findIndex(
     (v): boolean => v.node.frontmatter.title === data.doc.frontmatter.title
@@ -89,7 +157,7 @@ const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.React
               key={child.node.frontmatter.title}
               onClick={handleNavigation.bind(undefined, child.node.frontmatter.title)}
             >
-              <ConnectedIcon />
+              {getIconBytitle(child.node.frontmatter.title)}
               <span>{child.node.frontmatter.title}</span>
             </Navigation.Item>
           )
@@ -106,13 +174,12 @@ const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.React
         </Navigation.Footer>
       </Navigation>
       <Box
-        minHeight="100vh"
         paddingLeft={expanded ? navigationWidth : '40px'}
         boxShadow="0px 0px 8px 0px rgba(0, 0, 0, 0.36)"
         transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
         style={{ overflowX: 'hidden' }}
       >
-        <Box padding="10px">
+        <Box padding="10px" minHeight="100vh" backgroundColor="white.default">
           <Markdown
             options={{
               overrides: {

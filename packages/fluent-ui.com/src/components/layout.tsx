@@ -28,7 +28,9 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
   <ThemeProvider theme={theme}>
     <Normalize />
     <GlobalStyle />
-    <Box as="main">{children}</Box>
+    <Box as="main" background="url(/msft-verge-fluent.jpg) 50% center / cover no-repeat fixed">
+      {children}
+    </Box>
   </ThemeProvider>
 )
 
