@@ -40,7 +40,7 @@ components: Toggle
 ```jsx
 <>
   <Toggle disabled />
-  <Toggle disabled checked/>
+  <Toggle disabled checked />
 </>
 ```
 

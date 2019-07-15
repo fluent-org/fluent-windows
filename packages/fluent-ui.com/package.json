@@ -41,6 +41,7 @@
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
     "markdown-to-jsx": "^6.10.2",
+    "prism-react-renderer": "^0.1.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",

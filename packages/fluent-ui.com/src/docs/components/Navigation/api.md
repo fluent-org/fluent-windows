@@ -12,40 +12,6 @@ import Navigation from '@fluent-ui/core/Navigation'
 import { Navigation } from '@fluent-ui/core'
 ```
 
-```jsx
-<Navigation>
-  <Navigation.Header>
-    <Navigation.Item>
-      <Icon.GlobalNavigationButton />
-    </Navigation.Item>
-  </Navigation.Header>
-
-  <Navigation.Item id={1}>
-    <Icon.Connected />
-    <span>Option 1</span>
-  </Navigation.Item>
-  <Navigation.Item id={2}>
-    <Icon.Connected />
-    <span>Option 2</span>
-  </Navigation.Item>
-  <Navigation.Item id={3}>
-    <Icon.Connected />
-    <span>Option 3</span>
-  </Navigation.Item>
-  <Navigation.Item id={4}>
-    <Icon.Connected />
-    <span>Option 4</span>
-  </Navigation.Item>
-
-  <Navigation.Footer>
-    <Navigation.Item>
-      <Icon.Settings />
-      <span>Settings</span>
-    </Navigation.Item>
-  </Navigation.Footer>
-</Navigation>
-```
-
 Use `Navigation.Header` `Navigation.Footer` inside Navigation so that f knows how to render to the target location.
 
 ### Props

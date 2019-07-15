@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { ReactElement, SFC, useState } from 'react'
 import { graphql, navigate } from 'gatsby'
 import Markdown from 'markdown-to-jsx'
 import { Box, Navigation } from '@fluent-ui/core'
@@ -12,6 +11,7 @@ import {
 
 import Layout from './layout'
 import Playground from './playground'
+import Highlight from './highlight'
 
 import IconTemplate from '../docs/components/Icon/template'
 import ColorTemplate from '../docs/components/Color/template'
@@ -49,11 +49,11 @@ interface TemplateProps {
   }
 }
 
-const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => {
+const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.ReactElement => {
   const activeId = data.docs.edges.findIndex(
     (v): boolean => v.node.frontmatter.title === data.doc.frontmatter.title
   )
-  const [expanded, setExpanded] = useState(true)
+  const [expanded, setExpanded] = React.useState(true)
   function handleExpanded(): void {
     setExpanded((e): boolean => !e)
   }
@@ -82,7 +82,7 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
           </Navigation.Item>
         </Navigation.Header>
         {data.docs.edges.map(
-          (child, index): ReactElement => (
+          (child, index): React.ReactElement => (
             <Navigation.Item
               id={`component${index}`}
               key={child.node.frontmatter.title}
@@ -127,6 +127,9 @@ const Template: SFC<TemplateProps> = ({ data }: TemplateProps): ReactElement => 
             options={{
               namedCodesToUnicode: {
                 or: '|'
+              },
+              overrides: {
+                pre: Highlight
               }
             }}
           >
@@ -147,7 +150,7 @@ export const query = graphql`
         title
       }
     }
-    doc: markdownRemark(frontmatter: { title: { eq: $title } }) {
+    doc: markdownRemark(frontmatter: { title: { eq: $title }, api: { nin: true } }) {
       frontmatter {
         components
         title
