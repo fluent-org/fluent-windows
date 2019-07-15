@@ -15,6 +15,7 @@ import Highlight from './highlight'
 
 import IconTemplate from '../docs/components/Icon/template'
 import ColorTemplate from '../docs/components/Color/template'
+import Table from './table'
 
 interface TemplateProps {
   data: {
@@ -129,7 +130,8 @@ const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.React
                 or: '|'
               },
               overrides: {
-                pre: Highlight
+                pre: Highlight,
+                table: Table
               }
             }}
           >
