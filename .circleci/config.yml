@@ -11,7 +11,7 @@ jobs:
       - restore_cache:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
-      - run: yarn install && lerna bootstrap
+      - run: npm run bootstrap
       - save_cache:
           paths:
             - node_modules
