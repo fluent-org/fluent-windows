@@ -1,29 +1,54 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: node:10
+version: 2.1
 
-    working_directory: ~/fluent-ui
+defaults: &defaults
+  working_directory: /tmp/fluent-ui
+  docker:
+    - image: circleci/node:10.15.3
 
+commands:
+  install_js:
     steps:
-      - checkout:
-          post:
-            - git fetch --all
-
       - restore_cache:
           keys:
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Branch }}-
-            - yarn-packages-v1-
+            - v2-yarn-sha-{{ checksum "yarn.lock" }}
+            - v2-yarn-sha-
+      - run:
+          name: Install js dependencies
+          command: yarn
+      - run:
+          name: Bootstrap
+          command: yarn bootstrap
 
-      - run: yarn install --freeze-lockfile
-
+jobs:
+  checkout:
+    <<: *defaults
+    steps:
+      - checkout
+      - install_js
+      - run:
+          name: Should not have any git not staged
+          command: git diff --exit-code
       - save_cache:
+          key: v2-yarn-sha-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache/yarn
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - ~/.cache/yarn/v4
+  test_unit:
+    <<: *defaults
+    steps:
+      - checkout
+      - install_js
+      - run:
+          name: Tests fake browser
+          command: yarn test:prod
 
-      - run: yarn bootstrap
-
-      - run: yarn test:prod
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - checkout:
+          filters:
+            branches:
+              ignore: l10n
+      - test_unit:
+          requires:
+            - checkout

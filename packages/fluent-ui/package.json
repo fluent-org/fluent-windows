@@ -32,7 +32,7 @@
     "start": "cross-env NODE_ENV=production tsc -w --module ES6 --outDir ./build/es",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --coverage --watch",
-    "test:prod": "cross-env NODE_ENV=test jest --ci --coverage && yarn codecov",
+    "test:prod": "cross-env NODE_ENV=test jest --ci --coverage --runInBand --detectOpenHandles --forceExit --maxWorkers=2 && yarn codecov",
     "codecov": "cross-env NODE_ENV=test codecov"
   },
   "peerDependencies": {
