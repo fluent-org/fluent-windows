@@ -166,7 +166,7 @@ components: Navigation
     setExpanded(e => !e)
   }
   return (
-    <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
+    <Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation acrylic={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>

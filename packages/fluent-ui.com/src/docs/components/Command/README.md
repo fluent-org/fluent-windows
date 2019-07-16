@@ -10,7 +10,7 @@ components: Command
 ## Default
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
+<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
     <CommandButton>
       <Icon.Back/>
@@ -37,7 +37,7 @@ components: Command
 ## reveal
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
+<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command reveal>
     <CommandButton>
       <Icon.Back/>
@@ -64,7 +64,7 @@ components: Command
 ## With label
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
+<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
     <CommandButton>
       <Icon.Back/>
@@ -94,7 +94,7 @@ components: Command
 ## Without Content and Secondary
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover">
+<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Box backgroundColor="none" display="flex" justifyContent="center">
     <Command acrylic>
       <CommandButton>
