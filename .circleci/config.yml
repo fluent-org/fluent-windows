@@ -26,7 +26,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: yarn test:prod
+      - run: npm run test:prod
       - store_test_results:
           path: test-results
 

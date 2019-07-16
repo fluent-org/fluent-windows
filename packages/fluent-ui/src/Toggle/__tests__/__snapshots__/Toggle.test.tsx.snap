@@ -2,9 +2,6 @@
 
 exports[`Toggle basic 1`] = `
 .c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -88,9 +85,6 @@ exports[`Toggle basic 1`] = `
 
 exports[`Toggle prop disabled 1`] = `
 .c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -119,7 +113,6 @@ exports[`Toggle prop disabled 1`] = `
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   left: 3px;
-  background-color: #000000;
   background-color: #aaaaaa;
 }
 
@@ -131,10 +124,8 @@ exports[`Toggle prop disabled 1`] = `
   border: 2px solid;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  background-color: transparent;
-  border-color: #000000;
-  border-color: #b9b9b9;
   background-color: #b9b9b9;
+  border-color: #b9b9b9;
   pointer-events: none;
 }
 

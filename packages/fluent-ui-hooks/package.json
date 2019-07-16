@@ -25,7 +25,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "prebuild": "rimraf build",
+    "prebuild": "cross-env NODE_ENV=production rimraf build",
     "build": "yarn build:cjs && yarn build:es && yarn build:umd && yarn build:copy-files",
     "build:cjs": "cross-env NODE_ENV=production tsc --module CommonJS --outDir ./build",
     "build:es": "cross-env NODE_ENV=production tsc --module ES6 --outDir ./build/es",
