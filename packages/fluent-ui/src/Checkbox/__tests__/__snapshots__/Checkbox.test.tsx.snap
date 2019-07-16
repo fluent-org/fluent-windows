@@ -2,6 +2,9 @@
 
 exports[`Checkbox basic 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -24,6 +27,9 @@ exports[`Checkbox basic 1`] = `
   width: 20px;
   height: 20px;
   position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -81,6 +87,9 @@ exports[`Checkbox basic 1`] = `
 
 exports[`Checkbox prop disabled 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -103,6 +112,9 @@ exports[`Checkbox prop disabled 1`] = `
   width: 20px;
   height: 20px;
   position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -115,9 +127,12 @@ exports[`Checkbox prop disabled 1`] = `
   border: 2px solid;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  color: #7a7a7a;
+  color: #000000;
   background-color: transparent;
+  border-color: #cccccc;
   border-color: #7a7a7a;
+  background-color: transparent;
+  color: #7a7a7a;
   pointer-events: none;
 }
 

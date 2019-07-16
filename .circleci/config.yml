@@ -24,4 +24,6 @@ jobs:
             - ~/.cache/yarn
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
+      - run: yarn bootstrap
+
       - run: yarn test:prod

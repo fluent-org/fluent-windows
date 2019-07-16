@@ -18,6 +18,9 @@ exports[`IconButton as 1`] = `
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -87,6 +90,9 @@ exports[`IconButton basic 1`] = `
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -155,6 +161,9 @@ exports[`IconButton disabled 1`] = `
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -225,6 +234,9 @@ Array [
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -292,6 +304,9 @@ Array [
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -358,6 +373,9 @@ Array [
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -430,6 +448,9 @@ Array [
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -495,6 +516,9 @@ Array [
   border: none;
   outline: none;
   line-height: 1;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -508,10 +532,12 @@ Array [
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  color: #ffffff;
-  background-color: #0078d7;
+  color: inherit;
+  background-color: transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #ffffff;
+  background-color: #0078d7;
   padding: 12px;
 }
 

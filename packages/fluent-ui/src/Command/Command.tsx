@@ -67,7 +67,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
         left: `${rect.left + window.scrollX}px`,
         top: `${rect.top + window.scrollY + rect.height}px`
       }
-      setSecondaryVisible((visible): boolean => !visible)
+      setSecondaryVisible((visible: boolean): boolean => !visible)
       setPortalStyle(position)
     }
 
@@ -80,7 +80,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
     useOnClickOutside(
       secondaryRef,
       (): void => {
-        setSecondaryVisible((visible): boolean => !visible)
+        setSecondaryVisible((visible: boolean): boolean => !visible)
       }
     )
 

@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "lint": "eslint --fix . && echo 'Lint complete.'",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
