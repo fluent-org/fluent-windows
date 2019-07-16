@@ -22,7 +22,7 @@ const mosaic =
 const Acrylic = styled(Base)`
   position: ${({ position }: BoxProps): string => position || 'relative'};
   overflow: ${({ overflow }: BoxProps): string => overflow || 'hidden'};
-  @supports (backdrop-filter: blur(10px)) {
+  @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
     background: none !important;
     backdrop-filter: blur(10px);
     &::before,
@@ -45,7 +45,7 @@ const Acrylic = styled(Base)`
       background-image: url(${mosaic});
     }
   }
-  @supports (not (backdrop-filter: blur(10px))) {
+  @supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
     background: inherit;
     z-index: 1;
     &::before {
