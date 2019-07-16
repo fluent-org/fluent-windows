@@ -11,7 +11,7 @@ jobs:
       - restore_cache:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
-      - run: npm run bootstrap
+      - run: npm install && npm run bootstrap
       - save_cache:
           paths:
             - node_modules

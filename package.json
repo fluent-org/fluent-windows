@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap --hoist --npm-client=npm",
     "lint": "eslint --fix . && echo 'Lint complete.'",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
