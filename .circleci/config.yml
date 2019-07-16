@@ -1,0 +1,40 @@
+defaults: &defaults
+  docker:
+    - image: circleci/node:8
+version: 2
+
+jobs:
+  prepare:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+      - run: yarn install && lerna bootstrap
+      - save_cache:
+          paths:
+            - node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: yarn test:prod
+      - store_test_results:
+          path: test-results
+
+workflows:
+  version: 2
+  unit_test:
+    jobs:
+      - prepare
+      - test:
+          requires:
+            - prepare

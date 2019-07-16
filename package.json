@@ -10,6 +10,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
+    "test:prod": "lerna run test:prod",
     "release": "lerna publish --contents build --conventional-commits"
   },
   "devDependencies": {
