@@ -35,7 +35,7 @@ const IndexPage = (): React.ReactElement => {
           </Button>
           <Button
             as="a"
-            href="https://github.com/chenyueban/fluent-ui"
+            href="https://github.com/fluent-org/fluent-ui"
             style={{ marginLeft: 20 }}
             size="large"
           >
