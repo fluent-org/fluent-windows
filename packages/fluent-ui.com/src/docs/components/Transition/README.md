@@ -18,7 +18,7 @@ components: Transition
       <Toggle checked={visible} onChange={handleVisible} />
       <Box display="flex">
         <Transition visible={visible}>
-          <Box width={50} height={50} margin={2} backgroundColor="white.default"></Box>
+          <Box width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
         </Transition>
       </Box>
     </>
@@ -41,10 +41,10 @@ conditionally applies the `timeout` property to change the entry speed.
       <Toggle checked={visible} onChange={handleVisible} />
       <Box display="flex">
         <Transition visible={visible} type="zoom">
-          <Box display="inline-block" width={50} height={50} margin={2} backgroundColor="white.default"></Box>
+          <Box display="inline-block" width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
         </Transition>
         <Transition visible={visible} type="zoom" timeout={500}>
-          <Box display="inline-block" width={50} height={50} margin={2} backgroundColor="white.default"></Box>
+          <Box display="inline-block" width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
         </Transition>
       </Box>
     </>
@@ -66,7 +66,7 @@ The Transition component's `mountOnEnter` property prevents the child component 
     <>
       <Toggle checked={visible} onChange={handleVisible} />
       <Transition visible={visible} type="slide" mountOnEnter unmountOnExit>
-        <Box width={50} height={50} margin={2} backgroundColor="white.default"></Box>
+        <Box width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
       </Transition>
     </>
   )
@@ -85,7 +85,7 @@ The Transition component's `mountOnEnter` property prevents the child component 
     <>
       <Toggle checked={visible} onChange={handleVisible} />
       <Transition visible={visible} type="collapse">
-        <Box width={50} height={50} backgroundColor="white.default"></Box>
+        <Box width={50} height={50} backgroundColor="standard.light2"></Box>
       </Transition>
     </>
   )
