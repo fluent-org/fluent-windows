@@ -13,16 +13,18 @@ export const StyledLabelText = styled.span`
   margin-left: ${({ children }): string => (children ? '4px' : '0')};
 `
 
+const circleSize = 12
+
 export const StyledToggleCircle = styled.span<{
   checked?: boolean
   disabled?: boolean
 }>`
-  width: 10px;
-  height: 10px;
+  width: ${circleSize}px;
+  height: ${circleSize}px;
+  margin-top: -${circleSize / 2}px;
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  margin-top: -5px;
   transition: ${th.transition('toggle')};
   ${variant({
     prop: 'checked',
@@ -45,7 +47,8 @@ export const StyledToggleCircle = styled.span<{
     default: false,
     variants: {
       true: css`
-        background-color: ${th.color('standard.dark2')};
+        background-color: ${({ checked }: { checked?: boolean; disabled?: boolean }): string =>
+          checked ? th.color('white.default') : th.color('standard.dark1')};
       `,
       false: css``
     }
@@ -60,10 +63,18 @@ const checked = variant({
       color: ${th.color('white.default')};
       background-color: ${th.color('primary.default')};
       border-color: ${th.color('primary.default')};
+      &:active {
+        background-color: ${th.color('primary.dark1')};
+        border-color: ${th.color('primary.dark1')};
+      }
     `,
     false: css`
       background-color: transparent;
       border-color: ${th.color('black.default')};
+      &:active {
+        background-color: ${th.color('standard.default')};
+        border-color: ${th.color('standard.default')};
+      }
     `
   }
 })
@@ -73,8 +84,9 @@ const disabled = variant({
   default: false,
   variants: {
     true: css`
-      border-color: ${th.color('standard.dark1')};
-      background-color: ${th.color('standard.dark1')};
+      background-color: ${({ checked }: { checked?: boolean; disabled?: boolean }): string =>
+        checked ? th.color('standard.default') : ''};
+      border-color: ${th.color('standard.default')};
       pointer-events: none;
     `,
     false: css``
@@ -85,16 +97,12 @@ export const StyledToggleWrapper = styled.div<{
   checked?: boolean
   disabled?: boolean
 }>`
-  width: 44px;
+  width: 40px;
   height: 20px;
-  border-radius: 22px;
+  border-radius: 20px;
   position: relative;
   border: 2px solid;
   transition: ${th.transition('toggle')};
-  &:active {
-    background-color: ${th.color('standard.dark3')};
-    border-color: ${th.color('standard.dark3')};
-  }
 
   ${checked}
   ${disabled}

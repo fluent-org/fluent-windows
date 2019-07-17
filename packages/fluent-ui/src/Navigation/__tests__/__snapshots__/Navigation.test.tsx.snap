@@ -66,8 +66,8 @@ exports[`Navigation basic 1`] = `
   align-items: center;
   padding: 12px;
   box-sizing: border-box;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #000000;
   background-color: transparent;
 }
@@ -84,8 +84,8 @@ exports[`Navigation basic 1`] = `
 .c8 {
   position: absolute;
   background-color: #0078d4;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   width: 6px;
   height: 24px;
   left: 0;
@@ -98,8 +98,8 @@ exports[`Navigation basic 1`] = `
 
 .c4 {
   height: 100%;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c6 {
@@ -115,8 +115,8 @@ exports[`Navigation basic 1`] = `
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c10 {
@@ -132,8 +132,8 @@ exports[`Navigation basic 1`] = `
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c0 {
@@ -149,8 +149,8 @@ exports[`Navigation basic 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 260px;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c2 {
@@ -497,8 +497,8 @@ exports[`Navigation controlled 1`] = `
   align-items: center;
   padding: 12px;
   box-sizing: border-box;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #000000;
   background-color: transparent;
 }
@@ -515,8 +515,8 @@ exports[`Navigation controlled 1`] = `
 .c8 {
   position: absolute;
   background-color: #0078d4;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   width: 6px;
   height: 24px;
   left: 0;
@@ -529,8 +529,8 @@ exports[`Navigation controlled 1`] = `
 
 .c4 {
   height: 100%;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c6 {
@@ -546,8 +546,8 @@ exports[`Navigation controlled 1`] = `
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c10 {
@@ -563,8 +563,8 @@ exports[`Navigation controlled 1`] = `
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c0 {
@@ -580,8 +580,8 @@ exports[`Navigation controlled 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 260px;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
 .c2 {

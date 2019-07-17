@@ -157,3 +157,218 @@ exports[`Input basic 1`] = `
   </div>
 </span>
 `;
+
+exports[`Input prop cleared 1`] = `
+.c2 {
+  -webkit-transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.c2.fade-enter {
+  opacity: 0;
+}
+
+.c2.fade-enter-active {
+  opacity: 1;
+}
+
+.c2.fade-exit {
+  opacity: 1;
+}
+
+.c2.fade-exit-active {
+  opacity: 0;
+}
+
+.c2.zoom-enter {
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c2.zoom-enter-done {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.zoom-exit {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.zoom-exit-active {
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c2.zoom-exit-done {
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c2.slide-enter {
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+}
+
+.c2.slide-enter-done {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.slide-exit {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.slide-exit-active {
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+}
+
+.c2.slide-exit-done {
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+}
+
+.c2.collapse-enter {
+  height: 0;
+}
+
+.c2.collapse-enter-active {
+  height: 0px;
+}
+
+.c2.collapse-enter-done {
+  height: auto;
+}
+
+.c2.collapse-exit {
+  height: 0px;
+}
+
+.c2.collapse-exit-active {
+  height: 0;
+}
+
+.c0 {
+  display: inline-block;
+  position: relative;
+  min-width: 200px;
+  font: inherit;
+}
+
+.c1 {
+  outline: none;
+  font: inherit;
+  width: 100%;
+  border-radius: 2px;
+  border: 2px solid;
+  border-color: #dedede;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  padding: 6px 12px;
+  padding-right: 0px;
+}
+
+.c1:hover {
+  border-color: #b5b5b5;
+}
+
+.c1:active,
+.c1:focus {
+  border-color: #0078d4;
+}
+
+.c1:disabled {
+  color: #8c8c8c;
+  background-color: #e9e9e9;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c3 {
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+}
+
+.c3:hover {
+  background-color: #0078d4;
+  color: #ffffff;
+}
+
+.c4 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+<span
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    type="text"
+  />
+  <div
+    className="c2 "
+    type="fade"
+  >
+    <div
+      className=""
+    >
+      <span
+        className="c3"
+        onClick={[Function]}
+      >
+        <svg
+          className="c4"
+          viewBox="0 0 2048 2048"
+        >
+          <path
+            d="M1169 1024l879 879-145 145-879-879-879 879L0 1903l879-879L0 145 145 0l879 879L1903 0l145 145z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</span>
+`;

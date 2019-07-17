@@ -56,16 +56,13 @@ describe('Input', (): void => {
   })
 
   test('prop cleared', (): void => {
-    let node = React.createRef<HTMLInputElement>()
-    ReactTestUtils.renderIntoDocument(
+    const component = renderer.create(
       <ThemeProvider theme={theme}>
-        <Input ref={node} cleared={true} />
+        <Input cleared={true} />
       </ThemeProvider>
     )
-    expect(node.current as HTMLInputElement).toHaveStyleRule(
-      'padding-right',
-      '44px'
-    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 
   test('prop password', (): void => {

@@ -24,33 +24,33 @@ exports[`Toggle basic 1`] = `
 }
 
 .c2 {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  margin-top: -5px;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   left: 3px;
   background-color: #000000;
 }
 
 .c1 {
-  width: 44px;
+  width: 40px;
   height: 20px;
-  border-radius: 22px;
+  border-radius: 20px;
   position: relative;
   border: 2px solid;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   background-color: transparent;
   border-color: #000000;
 }
 
 .c1:active {
-  background-color: #595959;
-  border-color: #595959;
+  background-color: #dedede;
+  border-color: #dedede;
 }
 
 .c3 {
@@ -110,37 +110,36 @@ exports[`Toggle prop disabled 1`] = `
 }
 
 .c2 {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  margin-top: -5px;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   left: 3px;
   background-color: #000000;
-  background-color: #8c8c8c;
+  background-color: #b5b5b5;
 }
 
 .c1 {
-  width: 44px;
+  width: 40px;
   height: 20px;
-  border-radius: 22px;
+  border-radius: 20px;
   position: relative;
   border: 2px solid;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   background-color: transparent;
   border-color: #000000;
-  border-color: #b5b5b5;
-  background-color: #b5b5b5;
+  border-color: #dedede;
   pointer-events: none;
 }
 
 .c1:active {
-  background-color: #595959;
-  border-color: #595959;
+  background-color: #dedede;
+  border-color: #dedede;
 }
 
 .c3 {
