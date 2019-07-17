@@ -21,11 +21,28 @@ const checked = variant({
       color: ${th.color('white.default')};
       background-color: ${th.color('primary.default')};
       border-color: ${th.color('primary.default')};
+      &:hover,
+      &:focus {
+        border-color: ${th.color('primary.default')};
+      }
+      &:active {
+        background-color: ${th.color('primary.dark3')};
+        border-color: ${th.color('primary.dark3')};
+      }
     `,
     false: css`
       color: ${th.color('black.default')};
-      background-color: transparent;
+      background-color: ${th.color('white.default')};
       border-color: ${th.color('standard.default')};
+      &:hover,
+      &:focus {
+        border-color: ${th.color('standard.dark1')};
+      }
+      &:active {
+        color: ${th.color('white.default')};
+        background-color: ${th.color('primary.default')};
+        border-color: ${th.color('primary.default')};
+      }
     `
   }
 })
@@ -35,9 +52,9 @@ const disabled = variant({
   default: false,
   variants: {
     true: css`
-      border-color: ${th.color('standard.dark3')};
-      background-color: transparent;
-      color: ${th.color('standard.dark3')};
+      color: ${th.color('standard.dark2')};
+      background-color: ${th.color('standard.light1')};
+      border-color: ${th.color('standard.default')};
       pointer-events: none;
     `,
     false: css``
@@ -55,13 +72,8 @@ export const StyledCheckboxWrapper = styled.div<{
   justify-content: center;
   align-items: center;
   border: 2px solid;
+  border-radius: 2px;
   transition: ${th.transition('checkbox')};
-  &:hover {
-    border-color: ${th.color('standard.dark3')};
-  }
-  &:active {
-    background-color: ${th.color('standard.dark3')};
-  }
 
   ${checked}
   ${disabled}
