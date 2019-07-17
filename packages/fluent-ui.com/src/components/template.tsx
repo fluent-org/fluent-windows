@@ -175,11 +175,17 @@ const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.React
       </Navigation>
       <Box
         paddingLeft={expanded ? navigationWidth : '40px'}
-        boxShadow="0px 0px 8px 0px rgba(0, 0, 0, 0.36)"
         transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
         style={{ overflowX: 'hidden' }}
       >
-        <Box padding="10px" minHeight="100vh" backgroundColor="white.default">
+        <Box
+          padding="10px"
+          minHeight="100vh"
+          backgroundColor="white.default"
+          boxShadow="0px 3px 5px -1px rgba(0,0,0,0.12), 0px 3px 8px 0px rgba(0,0,0,0.06)"
+          position="relative"
+          zIndex={2}
+        >
           <Markdown
             options={{
               overrides: {

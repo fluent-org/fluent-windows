@@ -21,9 +21,18 @@ const Playground: React.FC<PlaygroundProps> = ({
     setCodeVisible(v => !v)
   }
   return (
-    <section>
+    <Box
+      as="section"
+      boxShadow="rgba(0, 0, 0, 0.06) 0px 2px 8px, rgba(0, 0, 0, 0.05) 0px 0.5px 1px"
+      borderRadius="4px"
+    >
       <LiveProvider code={children.props.children} scope={scope} theme={theme}>
-        <Box display="flex" justifyContent="flex-end">
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          padding="5px 16px"
+          backgroundColor="standard.light2"
+        >
           <IconButton onClick={handleCodeVisible}>
             <Icon.Code />
           </IconButton>
@@ -35,7 +44,8 @@ const Playground: React.FC<PlaygroundProps> = ({
               border-radius: 4px;
               max-height: 1000px;
               overflow: auto !important;
-              background-color: #f5f5f5 !important;
+              background-color: #fff !important;
+              border-bottom: 1px dashed #f5f5f5;
               textarea {
                 outline: none;
               }
@@ -44,7 +54,7 @@ const Playground: React.FC<PlaygroundProps> = ({
         </Transition>
         <LivePreview
           css={`
-            background-color: #f5f5f5;
+            // background-color: #f5f5f5;
             padding: 20px;
             border-radius: 4px;
             > * {
@@ -54,7 +64,7 @@ const Playground: React.FC<PlaygroundProps> = ({
         />
         <LiveError />
       </LiveProvider>
-    </section>
+    </Box>
   )
 }
 
