@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.4.1...@fluent-ui/core@0.5.0) (2019-07-17)
+
+
+### Features
+
+* **Box:** Add polyfill for box acrylic ([c611f28](https://github.com/chenyueban/fluent-ui/commit/c611f28))
+* **Transition:** add prop wrapper, and new type 'collapse' ([63306cc](https://github.com/chenyueban/fluent-ui/commit/63306cc))
+
+
+
+
+
 ## [0.4.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.4.0...@fluent-ui/core@0.4.1) (2019-07-14)
 
 
