@@ -4,7 +4,7 @@ const standard: Color = {
   light3: '#fafafa',
   light2: '#f5f5f5',
   light1: '#e9e9e9',
-  default: '#dbdbdb',
+  default: '#dedede',
   dark1: '#b5b5b5',
   dark2: '#8c8c8c',
   dark3: '#595959',

@@ -24,6 +24,9 @@ function createSize(sizes: Sizes): Sizes {
       `,
       iconButton: css`
         padding: 12px;
+      `,
+      input: css`
+        padding: 6px 12px;
       `
     },
     large: {

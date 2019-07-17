@@ -89,24 +89,25 @@ export const type = variant({
   default: 'fade',
   variants: {
     fade: css`
-      transition: ${createBaseTransition(['opacity'])};
-      ${({ visible }: StyledContainerProps): string => (visible ? `opacity: 1;` : `opacity: 0;`)}
+      transition: ${createBaseTransition(['opacity', 'visibility'])};
+      ${({ visible }: StyledContainerProps): string =>
+        visible ? `opacity: 1;` : `opacity: 0;visibility: hidden;`}
     `,
     zoom: css`
-      transition: ${createBaseTransition(['transform'])};
+      transition: ${createBaseTransition(['transform', 'visibility'])};
       ${({ visible }: StyledContainerProps): string =>
-        visible ? `transform: none;` : `transform: scale3d(0, 0, 0);`}
+        visible ? `transform: none;` : `transform: scale3d(0, 0, 0);visibility: hidden;`}
     `,
     slide: css`
-      transition: ${createBaseTransition(['transform'])};
+      transition: ${createBaseTransition(['transform', 'visibility'])};
       ${({ visible }: StyledContainerProps): string =>
-        visible ? `transform: none;` : `transform: translateY(100vh);`}
+        visible ? `transform: none;` : `transform: translateY(100vh);visibility: hidden;`}
     `,
     collapse: css`
       overflow: hidden;
-      transition: ${createBaseTransition(['height'])};
+      transition: ${createBaseTransition(['height', 'visibility'])};
       ${({ visible, wrapperHeight }: StyledContainerProps): string =>
-        visible ? `height: ${wrapperHeight}px;` : `height: 0;`}
+        visible ? `height: ${wrapperHeight}px;` : `height: 0;visibility: hidden;`}
     `
   }
 })

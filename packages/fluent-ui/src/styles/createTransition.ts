@@ -14,7 +14,7 @@ export interface Transitions {
 export const createBaseTransition = (
   type: string[],
   duration = 250,
-  cubicBezier = '0.4, 0, 0.2, 1'
+  cubicBezier = '0.76, 0.24, 0.23, 0.94'
 ): CSS.TransitionProperty =>
   type
     .map((v): CSS.SingleTransition => `${v} ${duration}ms cubic-bezier(${cubicBezier}) 0ms`)
@@ -27,9 +27,9 @@ function createTransition(transitions: Transitions): Transitions {
     default: baseTransition,
     button: createBaseTransition(
       ['background-color', 'color', 'border-color', 'box-shadow', 'padding'],
-      360
+      250
     ),
-    input: baseTransition,
+    input: createBaseTransition(['background-color', 'color', 'border-color'], 250),
     checkbox: baseTransition,
     toggle: baseTransition,
     radio: baseTransition,

@@ -36,8 +36,8 @@ exports[`IconButton as 1`] = `
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 12px;
@@ -109,8 +109,8 @@ exports[`IconButton basic 1`] = `
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 12px;
@@ -181,8 +181,8 @@ exports[`IconButton disabled 1`] = `
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 12px;
@@ -255,8 +255,8 @@ Array [
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 8px;
@@ -326,8 +326,8 @@ Array [
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 12px;
@@ -396,8 +396,8 @@ Array [
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 16px;
@@ -472,8 +472,8 @@ Array [
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #0078d4;
   background-color: transparent;
   padding: 12px;
@@ -541,8 +541,8 @@ Array [
   color: inherit;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: #ffffff;
   background-color: #0078d4;
   box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.22),0px 3px 8px 0px rgba(0,0,0,0.16),0px 1px 14px 0px rgba(0,0,0,0.1);
