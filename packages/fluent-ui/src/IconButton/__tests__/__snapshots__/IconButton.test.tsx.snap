@@ -17,7 +17,6 @@ exports[`IconButton as 1`] = `
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -35,26 +34,28 @@ exports[`IconButton as 1`] = `
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <a
@@ -89,7 +90,6 @@ exports[`IconButton basic 1`] = `
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -107,26 +107,28 @@ exports[`IconButton basic 1`] = `
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <button
@@ -160,7 +162,6 @@ exports[`IconButton disabled 1`] = `
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -178,26 +179,28 @@ exports[`IconButton disabled 1`] = `
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <button
@@ -233,7 +236,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -251,27 +253,29 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 8px;
   font-size: 0.8em;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <button
@@ -303,7 +307,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -321,26 +324,28 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <button
@@ -372,7 +377,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -390,27 +394,29 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 16px;
   font-size: 1.2em;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <button
@@ -447,7 +453,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -465,26 +470,28 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  color: #0078d4;
   background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   padding: 12px;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
+.c0:disabled {
+  color: #595959;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: rgba(36,149,224,0.08);
 }
 
 .c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
-.c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
-  cursor: not-allowed;
-  pointer-events: none;
+  background-color: rgba(36,149,224,0.36);
 }
 
 <button
@@ -515,7 +522,6 @@ Array [
 .c0 {
   border: none;
   outline: none;
-  line-height: 1;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -533,37 +539,31 @@ Array [
   justify-content: center;
   cursor: pointer;
   color: inherit;
-  background-color: transparent;
-  -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
+  transition: background-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 360ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 360ms cubic-bezier(0.4,0,0.2,1) 0ms,padding 360ms cubic-bezier(0.4,0,0.2,1) 0ms;
   color: #ffffff;
-  background-color: #0078d7;
+  background-color: #0078d4;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.22),0px 3px 8px 0px rgba(0,0,0,0.16),0px 1px 14px 0px rgba(0,0,0,0.1);
   padding: 12px;
 }
 
-.c0:hover {
-  background-color: #e6e6e6;
-}
-
-.c0:active {
-  color: #000000;
-  background-color: #cccccc;
-}
-
 .c0:disabled {
-  color: #7a7a7a;
-  background-color: #cccccc;
+  color: #595959;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c0:hover {
-  background-color: #003c6b;
+.c0:hover,
+.c0:focus {
+  background-color: #005cad;
 }
 
 .c0:active {
   color: #ffffff;
-  background-color: #0078d7;
+  background-color: #002d61;
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22),0px 7px 11px 1px rgba(0,0,0,0.16),0px 3px 17px 2px rgba(0,0,0,0.1);
 }
 
 <button

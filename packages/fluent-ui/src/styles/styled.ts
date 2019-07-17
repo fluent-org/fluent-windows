@@ -6,3 +6,5 @@ export { styled, system, th, variant, getUtilityPropTypes }
 
 export * from 'styled-components'
 export * from '@xstyled/system'
+
+export * from './stylize'

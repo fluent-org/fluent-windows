@@ -25,7 +25,10 @@ const baseTransition = createBaseTransition(['all'])
 function createTransition(transitions: Transitions): Transitions {
   const defaultTransitions: Transitions = {
     default: baseTransition,
-    button: createBaseTransition(['background-color', 'color', 'border-color', 'padding'], 360),
+    button: createBaseTransition(
+      ['background-color', 'color', 'border-color', 'box-shadow', 'padding'],
+      360
+    ),
     input: baseTransition,
     checkbox: baseTransition,
     toggle: baseTransition,

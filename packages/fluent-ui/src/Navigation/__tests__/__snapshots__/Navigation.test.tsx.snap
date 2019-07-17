@@ -41,7 +41,7 @@ exports[`Navigation basic 1`] = `
 }
 
 .c1 {
-  background-color: #e6e6e6;
+  background-color: #f5f5f5;
   height: 600px;
 }
 
@@ -83,7 +83,7 @@ exports[`Navigation basic 1`] = `
 
 .c8 {
   position: absolute;
-  background-color: #0078d7;
+  background-color: #0078d4;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   width: 6px;
@@ -472,7 +472,7 @@ exports[`Navigation controlled 1`] = `
 }
 
 .c1 {
-  background-color: #e6e6e6;
+  background-color: #f5f5f5;
   height: 600px;
 }
 
@@ -514,7 +514,7 @@ exports[`Navigation controlled 1`] = `
 
 .c8 {
   position: absolute;
-  background-color: #0078d7;
+  background-color: #0078d4;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   width: 6px;

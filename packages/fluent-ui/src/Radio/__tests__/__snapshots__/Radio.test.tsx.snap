@@ -44,11 +44,11 @@ exports[`Radio basic 1`] = `
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   color: #000000;
-  border-color: #cccccc;
+  border-color: #dbdbdb;
 }
 
 .c1:hover {
-  border-color: #7a7a7a;
+  border-color: #595959;
 }
 
 .c3 {
@@ -138,14 +138,14 @@ exports[`Radio prop disabled 1`] = `
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   color: #000000;
-  border-color: #cccccc;
-  border-color: #7a7a7a;
+  border-color: #dbdbdb;
+  border-color: #595959;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .c1:hover {
-  border-color: #7a7a7a;
+  border-color: #595959;
 }
 
 .c3 {
@@ -164,7 +164,7 @@ exports[`Radio prop disabled 1`] = `
   border-radius: 50%;
   -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
   transition: all 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-  background-color: #7a7a7a;
+  background-color: #595959;
   width: 0;
   height: 0;
   opacity: 0;

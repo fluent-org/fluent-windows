@@ -1,28 +1,20 @@
-import { styled, th, css, variant } from '../styles/styled'
+import { styled, th, css, variant, lighten } from '../styles/styled'
 import { IconButtonProps } from './IconButton'
 
 const base = css`
   border: none;
   outline: none;
-  line-height: 1;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: inherit;
-  background-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
   transition: ${th.transition('button')};
-  &:hover {
-    background-color: ${th.color('standard.light2')};
-  }
-  &:active {
-    color: ${th.color('black.default')};
-    background-color: ${th.color('standard.default')};
-  }
   &:disabled {
     color: ${th.color('standard.dark3')};
-    background-color: ${th.color('standard.default')};
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -32,16 +24,29 @@ const variants = variant({
   prop: 'variant',
   default: 'standard',
   variants: {
-    standard: css``,
+    standard: css`
+      color: ${th.color('primary.default')};
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        background-color: ${lighten('primary.light1', 0.08)};
+      }
+      &:active {
+        background-color: ${lighten('primary.light1', 0.36)};
+      }
+    `,
     primary: css`
       color: ${th.color('white.default')};
       background-color: ${th.color('primary.default')};
-      &:hover {
+      box-shadow: ${th.shadow(1)};
+      &:hover,
+      &:focus {
         background-color: ${th.color('primary.dark1')};
       }
       &:active {
         color: ${th.color('white.default')};
-        background-color: ${th.color('primary.default')};
+        background-color: ${th.color('primary.dark3')};
+        box-shadow: ${th.shadow(3)};
       }
     `
   }
