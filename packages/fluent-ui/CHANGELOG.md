@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.5.0...@fluent-ui/core@0.5.1) (2019-07-17)
+
+
+### Bug Fixes
+
+* **theme:** Add shadows and Refactoring IconButton ([9a26b28](https://github.com/chenyueban/fluent-ui/commit/9a26b28))
+
+
+
+
+
 # [0.5.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.4.1...@fluent-ui/core@0.5.0) (2019-07-17)
 
 
