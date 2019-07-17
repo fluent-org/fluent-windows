@@ -11,15 +11,21 @@ export interface Transitions {
   navigation?: CSS.TransitionProperty
 }
 
-export const createBaseTransition = (type: string[]): CSS.TransitionProperty =>
-  type.map((v): CSS.SingleTransition => `${v} 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms`).join(',')
+export const createBaseTransition = (
+  type: string[],
+  duration = 250,
+  cubicBezier = '0.4, 0, 0.2, 1'
+): CSS.TransitionProperty =>
+  type
+    .map((v): CSS.SingleTransition => `${v} ${duration}ms cubic-bezier(${cubicBezier}) 0ms`)
+    .join(',')
 
 const baseTransition = createBaseTransition(['all'])
 
 function createTransition(transitions: Transitions): Transitions {
   const defaultTransitions: Transitions = {
     default: baseTransition,
-    button: baseTransition,
+    button: createBaseTransition(['background-color', 'color', 'border-color', 'padding'], 360),
     input: baseTransition,
     checkbox: baseTransition,
     toggle: baseTransition,

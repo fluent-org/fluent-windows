@@ -9,7 +9,7 @@ interface StyledContainerProps extends BoxProps {
 
 export const StyledContainer = styled(Box).attrs(
   (props): any => ({
-    backgroundColor: th.color('primary.light2').call(undefined, props)
+    backgroundColor: th.color('standard.light2').call(undefined, props)
   })
 )<StyledContainerProps>`
   display: flex;
@@ -17,27 +17,22 @@ export const StyledContainer = styled(Box).attrs(
     horizontal ? 'row' : 'column'};
   justify-content: space-between;
   ${({ horizontal, expanded }): string =>
-    horizontal
-      ? `max-height: 40px`
-      : `max-width: ${expanded ? '260px' : '40px'}`};
+    horizontal ? `max-height: 40px` : `max-width: ${expanded ? '260px' : '40px'}`};
   transition: ${th.transition('navigation')};
 `
 
 export const StyledHeader = styled.div<{ horizontal?: boolean }>`
   display: flex;
-  flex-direction: ${({ horizontal }): string =>
-    horizontal ? 'row' : 'column'};
+  flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
 `
 
 export const StyledFooter = styled.div<{ horizontal?: boolean }>`
   display: flex;
-  flex-direction: ${({ horizontal }): string =>
-    horizontal ? 'row' : 'column'};
+  flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
 `
 
 export const StyledContent = styled.div<{ horizontal?: boolean }>`
   flex: 1;
   display: flex;
-  flex-direction: ${({ horizontal }): string =>
-    horizontal ? 'row' : 'column'};
+  flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
 `

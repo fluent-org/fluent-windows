@@ -6,21 +6,19 @@ const base = css`
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  min-width: 64px;
-  line-height: 1;
-  transition: ${th.transition('button')};
-  border: 2px solid transparent;
+  min-width: 56px;
+  vertical-align: middle;
+  border: 2px solid;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.0228em;
   font-family: ${th.font('button')};
-  &:hover {
-    border-color: ${th.color('primary.dark3')};
-  }
-  &:active {
-    color: ${th.color('black.default')};
-    background-color: ${th.color('primary.dark3')};
-    border-color: transparent;
-  }
+  transition: ${th.transition('button')};
   &:disabled {
-    color: ${th.color('primary.dark3')};
+    color: ${th.color('standard.dark2')};
+    background-color: ${th.color('standard.light1')};
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -28,15 +26,34 @@ const base = css`
 
 const variants = variant({
   prop: 'variant',
-  default: 'primary',
+  default: 'standard',
   variants: {
-    primary: css`
+    standard: css`
       color: ${th.color('black.default')};
-      background-color: ${th.color('primary.default')};
+      background-color: ${th.color('white.default')};
+      border-color: ${th.color('standard.default')};
+      &:hover,
+      &:focus {
+        border-color: ${th.color('standard.dark1')};
+      }
+      &:active {
+        background-color: ${th.color('standard.default')};
+        border-color: ${th.color('standard.dark3')};
+      }
     `,
-    accent: css`
+    primary: css`
       color: ${th.color('white.default')};
-      background-color: ${th.color('accent.default')};
+      background-color: ${th.color('primary.default')};
+      border-color: ${th.color('primary.default')};
+      &:hover,
+      &:focus {
+        background-color: ${th.color('primary.dark1')};
+        border-color: ${th.color('primary.dark1')};
+      }
+      &:active {
+        background-color: ${th.color('primary.dark3')};
+        border-color: ${th.color('primary.dark3')};
+      }
     `
   }
 })

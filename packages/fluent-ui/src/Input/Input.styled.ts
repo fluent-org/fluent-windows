@@ -16,18 +16,18 @@ const base = css`
   font-size: 14px;
   padding: 6px 12px;
   font-family: ${th.font('input')};
-  border: 2px solid ${th.color('primary.default')};
+  border: 2px solid ${th.color('standard.default')};
   transition: ${th.transition('input')};
   &:hover {
-    border-color: ${th.color('primary.dark3')};
+    border-color: ${th.color('standard.dark3')};
   }
   &:active,
   &:focus {
-    border-color: ${th.color('accent.default')};
+    border-color: ${th.color('primary.default')};
   }
   &:disabled {
-    background-color: ${th.color('primary.default')};
-    color: ${th.color('primary.dark3')};
+    background-color: ${th.color('standard.default')};
+    color: ${th.color('standard.dark3')};
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -62,7 +62,7 @@ export const StyledIcon = styled.span`
   align-items: center;
   transition: ${th.transition('default')};
   &:hover {
-    background-color: ${th.color('accent.default')};
+    background-color: ${th.color('primary.default')};
     color: ${th.color('white.default')};
   }
 `

@@ -285,7 +285,7 @@ Array [
 <button
     className="c0"
   >
-    primary
+    standard
   </button>,
   .c0 {
   display: inline-block;
@@ -323,7 +323,7 @@ Array [
 <button
     className="c0"
   >
-    accent
+    primary
   </button>,
 ]
 `;

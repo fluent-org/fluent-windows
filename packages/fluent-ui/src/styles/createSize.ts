@@ -11,7 +11,7 @@ function createSize(sizes: Sizes): Sizes {
   const defaultSizes: Sizes = {
     small: {
       button: css`
-        padding: 2px 18px;
+        padding: 0 8px;
       `,
       iconButton: css`
         padding: 8px;
@@ -20,7 +20,7 @@ function createSize(sizes: Sizes): Sizes {
     },
     medium: {
       button: css`
-        padding: 4px 26px;
+        padding: 3px 12px;
       `,
       iconButton: css`
         padding: 12px;
@@ -28,7 +28,7 @@ function createSize(sizes: Sizes): Sizes {
     },
     large: {
       button: css`
-        padding: 6px 38px;
+        padding: 8px 42px;
       `,
       iconButton: css`
         padding: 16px;

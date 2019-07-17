@@ -11,10 +11,10 @@ components: IconButton
 
 There are two styles of buttons, controlled by the variant prop.
 
+- standard
 - primary
-- accent
 
-### Default style - primary
+### Default style - standard
 
 ```jsx
 <IconButton>
@@ -22,10 +22,10 @@ There are two styles of buttons, controlled by the variant prop.
 </IconButton>
 ```
 
-### Highlighted button - accent
+### Highlighted button - primary
 
 ```jsx
-<IconButton variant="accent">
+<IconButton variant="primary">
   <Icon.Accept />
 </IconButton>
 ```
@@ -46,13 +46,13 @@ Fancy larger or smaller buttons? Use the `size` property.
 
 ```jsx
 <>
-  <IconButton size="small" variant="accent">
+  <IconButton size="small" variant="primary">
     <Icon.Accept />
   </IconButton>
-  <IconButton size="medium" variant="accent">
+  <IconButton size="medium" variant="primary">
     <Icon.Accept />
   </IconButton>
-  <IconButton size="large" variant="accent">
+  <IconButton size="large" variant="primary">
     <Icon.Accept />
   </IconButton>
 </>

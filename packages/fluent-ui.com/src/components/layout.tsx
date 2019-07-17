@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const theme: Theme = {
   colors: {
-    primary: {
+    standard: {
       // light2: '#000'
     }
   }

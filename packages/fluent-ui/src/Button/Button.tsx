@@ -5,7 +5,7 @@ export interface ButtonProps
   extends React.ComponentPropsWithoutRef<'button'>,
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     StyledProps {
-  variant?: 'primary' | 'accent'
+  variant?: 'standard' | 'primary'
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'
 
@@ -15,7 +15,7 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { variant = 'primary', disabled, size, onClick, children, ...rest }: ButtonProps,
+    { variant = 'standard', disabled, size, onClick, children, ...rest }: ButtonProps,
     ref
   ): React.ReactElement => (
     <StyledButton

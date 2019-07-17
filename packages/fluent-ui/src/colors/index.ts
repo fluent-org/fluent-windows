@@ -1,5 +1,5 @@
+export { default as standard } from './standard'
 export { default as primary } from './primary'
-export { default as accent } from './accent'
 export { default as black } from './black'
 export { default as white } from './white'
 

@@ -23,10 +23,10 @@ describe('IconButton', (): void => {
   test('variant', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
-        <IconButton variant="primary">
+        <IconButton variant="standard">
           <AcceptIcon />
         </IconButton>
-        <IconButton variant="accent">
+        <IconButton variant="primary">
           <AcceptIcon />
         </IconButton>
       </ThemeProvider>

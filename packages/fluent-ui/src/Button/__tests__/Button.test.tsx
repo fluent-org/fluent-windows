@@ -20,8 +20,8 @@ describe('Button', (): void => {
   test('variant', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
+        <Button variant="standard">standard</Button>
         <Button variant="primary">primary</Button>
-        <Button variant="accent">accent</Button>
       </ThemeProvider>
     )
     const tree = component.toJSON()

@@ -30,15 +30,15 @@ const StyledItemWrapper = styled.div<{
   transition: ${th.transition('navigation')};
   color: ${th.color('black.default')};
   background-color: ${({ reveal }): CSS.ColorProperty =>
-    reveal ? th.color('primary.light2') : 'transparent'};
+    reveal ? th.color('standard.light2') : 'transparent'};
   &:hover {
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.light1') : th.color('primary.transparent1')};
+      reveal ? th.color('standard.light1') : th.color('standard.transparent1')};
   }
   &:active {
     color: ${th.color('black.default')};
     background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('primary.dark1') : th.color('primary.transparent2')};
+      reveal ? th.color('standard.dark1') : th.color('standard.transparent2')};
   }
 `
 const StyledItemActiveBar = styled.div<{
@@ -46,7 +46,7 @@ const StyledItemActiveBar = styled.div<{
   horizontal: boolean
 }>`
   position: absolute;
-  background-color: ${th.color('accent.default')};
+  background-color: ${th.color('primary.default')};
   transition: ${th.transition('navigation')};
   ${variant({
     prop: 'horizontal',

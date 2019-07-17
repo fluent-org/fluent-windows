@@ -3,7 +3,7 @@ import Box from '../Box'
 
 export const StyledContainer = styled(Box).attrs(
   (props): any => ({
-    backgroundColor: th.color('primary.light2').call(undefined, props)
+    backgroundColor: th.color('standard.light2').call(undefined, props)
   })
 )`
   display: flex;
@@ -25,7 +25,7 @@ export const StyledPrimary = styled.div`
 `
 
 export const StyledSecondaryContainer = styled(Box).attrs({
-  backgroundColor: th.color('primary.light2')
+  backgroundColor: th.color('standard.light2')
 })`
   display: flex;
   flex-direction: column;

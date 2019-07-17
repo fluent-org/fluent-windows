@@ -42,7 +42,7 @@ import Button from '@fluent-ui/core/Button';
 
 function App() {
   return (
-    <Button variant="accent">
+    <Button variant="primary">
       Hello World
     </Button>
   );

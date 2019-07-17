@@ -16,7 +16,7 @@ import { Button } from '@fluent-ui/core'
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| variant | 'primary' &or; 'accent' | 'primary' | The variant to use. |
+| variant | 'standard' &or; 'primary' | 'standard' | The variant to use. |
 | disabled | boolean |  | If `true`, the button will be disabled. |
 | size | 'small' &or; 'medium' &or; 'large' | 'medium' | The size of the button. |
 | onClick | (event) => void |  | Set the handler to handle click event. |

@@ -26,7 +26,7 @@ interface CommandProps extends BoxProps, ThemeProps {
 }
 
 interface Container {
-  primary: React.ReactComponentElement<typeof CommandButton>[]
+  standard: React.ReactComponentElement<typeof CommandButton>[]
   content: React.ReactComponentElement<typeof Content>[]
   secondary: React.ReactComponentElement<typeof Secondary>[]
 }
@@ -42,7 +42,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
   ({ acrylic, reveal, children, ...rest }: CommandProps, ref): React.ReactElement => {
     const container: Container = {
       content: [],
-      primary: [],
+      standard: [],
       secondary: []
     }
     React.Children.forEach(
@@ -53,7 +53,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
         } else if (child.type.displayName === 'FCommandSecondary') {
           container.secondary = child.props.children
         } else {
-          container.primary.push(child)
+          container.standard.push(child)
         }
       }
     )
@@ -91,10 +91,10 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
           {!!container.content.length && <StyledContent>{container.content}</StyledContent>}
           <StyledPrimary>
             {reveal
-              ? container.primary.map(
+              ? container.standard.map(
                   (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
                 )
-              : container.primary}
+              : container.standard}
           </StyledPrimary>
           {!!container.secondary.length &&
             (reveal ? (

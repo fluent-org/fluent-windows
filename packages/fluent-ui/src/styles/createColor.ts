@@ -1,17 +1,17 @@
-import { primary, accent, white, black, Color } from '../colors'
+import { standard, primary, white, black, Color } from '../colors'
 import { deepMerge } from '../utils'
 
 export interface Colors {
+  standard?: Color
   primary?: Color
-  accent?: Color
   white?: Color
   black?: Color
 }
 
 function createColor(colors: Colors): Colors {
   const defaultColors = {
+    standard,
     primary,
-    accent,
     white,
     black
   }

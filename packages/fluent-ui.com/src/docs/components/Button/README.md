@@ -11,19 +11,19 @@ components: Button
 
 There are two styles of buttons, controlled by the variant prop.
 
+- standard
 - primary
-- accent
 
-### Default style - primary
+### Default style - standard
 
 ```jsx
-<Button>Primary</Button>
+<Button>Standard</Button>
 ```
 
-### Highlighted button - accent
+### Highlighted button - primary
 
 ```jsx
-<Button variant="accent">Accent</Button>
+<Button variant="primary">Primary</Button>
 ```
 
 ## Disabled

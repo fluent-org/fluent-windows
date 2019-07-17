@@ -19,13 +19,13 @@ const checked = variant({
   variants: {
     true: css`
       color: ${th.color('white.default')};
-      background-color: ${th.color('accent.default')};
-      border-color: ${th.color('accent.default')};
+      background-color: ${th.color('primary.default')};
+      border-color: ${th.color('primary.default')};
     `,
     false: css`
       color: ${th.color('black.default')};
       background-color: transparent;
-      border-color: ${th.color('primary.default')};
+      border-color: ${th.color('standard.default')};
     `
   }
 })
@@ -35,9 +35,9 @@ const disabled = variant({
   default: false,
   variants: {
     true: css`
-      border-color: ${th.color('primary.dark3')};
+      border-color: ${th.color('standard.dark3')};
       background-color: transparent;
-      color: ${th.color('primary.dark3')};
+      color: ${th.color('standard.dark3')};
       pointer-events: none;
     `,
     false: css``
@@ -57,10 +57,10 @@ export const StyledCheckboxWrapper = styled.div<{
   border: 2px solid;
   transition: ${th.transition('checkbox')};
   &:hover {
-    border-color: ${th.color('primary.dark3')};
+    border-color: ${th.color('standard.dark3')};
   }
   &:active {
-    background-color: ${th.color('primary.dark3')};
+    background-color: ${th.color('standard.dark3')};
   }
 
   ${checked}

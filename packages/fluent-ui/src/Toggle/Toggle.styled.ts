@@ -45,7 +45,7 @@ export const StyledToggleCircle = styled.span<{
     default: false,
     variants: {
       true: css`
-        background-color: ${th.color('primary.dark2')};
+        background-color: ${th.color('standard.dark2')};
       `,
       false: css``
     }
@@ -58,8 +58,8 @@ const checked = variant({
   variants: {
     true: css`
       color: ${th.color('white.default')};
-      background-color: ${th.color('accent.default')};
-      border-color: ${th.color('accent.default')};
+      background-color: ${th.color('primary.default')};
+      border-color: ${th.color('primary.default')};
     `,
     false: css`
       background-color: transparent;
@@ -73,8 +73,8 @@ const disabled = variant({
   default: false,
   variants: {
     true: css`
-      border-color: ${th.color('primary.dark1')};
-      background-color: ${th.color('primary.dark1')};
+      border-color: ${th.color('standard.dark1')};
+      background-color: ${th.color('standard.dark1')};
       pointer-events: none;
     `,
     false: css``
@@ -92,8 +92,8 @@ export const StyledToggleWrapper = styled.div<{
   border: 2px solid;
   transition: ${th.transition('toggle')};
   &:active {
-    background-color: ${th.color('primary.dark3')};
-    border-color: ${th.color('primary.dark3')};
+    background-color: ${th.color('standard.dark3')};
+    border-color: ${th.color('standard.dark3')};
   }
 
   ${checked}

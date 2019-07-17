@@ -6,14 +6,14 @@ const checked = variant({
   variants: {
     true: css`
       color: ${th.color('white.default')};
-      border-color: ${th.color('accent.default')};
+      border-color: ${th.color('primary.default')};
       &:hover {
-        border-color: ${th.color('accent.default')};
+        border-color: ${th.color('primary.default')};
       }
     `,
     false: css`
       color: ${th.color('black.default')};
-      border-color: ${th.color('primary.default')};
+      border-color: ${th.color('standard.default')};
     `
   }
 })
@@ -23,7 +23,7 @@ const disabled = variant({
   default: false,
   variants: {
     true: css`
-      border-color: ${th.color('primary.dark3')};
+      border-color: ${th.color('standard.dark3')};
       cursor: not-allowed;
       pointer-events: none;
     `,
@@ -45,7 +45,7 @@ export const StyledRadioWrapper = styled.div<{
   border: 2px solid;
   transition: ${th.transition('radio')};
   &:hover {
-    border-color: ${th.color('primary.dark3')};
+    border-color: ${th.color('standard.dark3')};
   }
 
   ${checked}
@@ -71,7 +71,7 @@ export const StyledCircle = styled.div<{
   border-radius: 50%;
   transition: ${th.transition('radio')};
   background-color: ${({ disabled }): string =>
-    disabled ? th.color('primary.dark3') : th.color('black.default')};
+    disabled ? th.color('standard.dark3') : th.color('black.default')};
   ${variant({
     prop: 'checked',
     default: false,

@@ -14,15 +14,15 @@ const base = css`
   background-color: transparent;
   transition: ${th.transition('button')};
   &:hover {
-    background-color: ${th.color('primary.light2')};
+    background-color: ${th.color('standard.light2')};
   }
   &:active {
     color: ${th.color('black.default')};
-    background-color: ${th.color('primary.default')};
+    background-color: ${th.color('standard.default')};
   }
   &:disabled {
-    color: ${th.color('primary.dark3')};
-    background-color: ${th.color('primary.default')};
+    color: ${th.color('standard.dark3')};
+    background-color: ${th.color('standard.default')};
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -30,18 +30,18 @@ const base = css`
 
 const variants = variant({
   prop: 'variant',
-  default: 'primary',
+  default: 'standard',
   variants: {
-    primary: css``,
-    accent: css`
+    standard: css``,
+    primary: css`
       color: ${th.color('white.default')};
-      background-color: ${th.color('accent.default')};
+      background-color: ${th.color('primary.default')};
       &:hover {
-        background-color: ${th.color('accent.dark1')};
+        background-color: ${th.color('primary.dark1')};
       }
       &:active {
         color: ${th.color('white.default')};
-        background-color: ${th.color('accent.default')};
+        background-color: ${th.color('primary.default')};
       }
     `
   }
