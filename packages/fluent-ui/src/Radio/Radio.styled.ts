@@ -5,15 +5,16 @@ const checked = variant({
   default: false,
   variants: {
     true: css`
-      color: ${th.color('white.default')};
       border-color: ${th.color('primary.default')};
       &:hover {
         border-color: ${th.color('primary.default')};
       }
     `,
     false: css`
-      color: ${th.color('black.default')};
       border-color: ${th.color('standard.default')};
+      &:hover {
+        border-color: ${th.color('standard.dark1')};
+      }
     `
   }
 })
@@ -23,7 +24,8 @@ const disabled = variant({
   default: false,
   variants: {
     true: css`
-      border-color: ${th.color('standard.dark3')};
+      background-color: ${th.color('standard.light1')};
+      border-color: ${th.color('standard.default')};
       cursor: not-allowed;
       pointer-events: none;
     `,
@@ -44,9 +46,7 @@ export const StyledRadioWrapper = styled.div<{
   align-items: center;
   border: 2px solid;
   transition: ${th.transition('radio')};
-  &:hover {
-    border-color: ${th.color('standard.dark3')};
-  }
+  background-color: ${th.color('white.default')};
 
   ${checked}
   ${disabled}
