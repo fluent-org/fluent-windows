@@ -6,14 +6,14 @@ defaults: &defaults
     - image: circleci/node:10.15.3
 
 commands:
-  install_js:
+  install:
     steps:
       - restore_cache:
           keys:
             - v2-yarn-sha-{{ checksum "yarn.lock" }}
             - v2-yarn-sha-
       - run:
-          name: Install js dependencies
+          name: Install dependencies
           command: yarn
       - run:
           name: Bootstrap
@@ -24,7 +24,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - install_js
+      - install
       - run:
           name: Should not have any git not staged
           command: git diff --exit-code
@@ -36,9 +36,12 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - install_js
+      - install
       - run:
-          name: Tests fake browser
+          name: Build
+          command: yarn build
+      - run:
+          name: Test_unit
           command: yarn test:prod
 
 workflows:
