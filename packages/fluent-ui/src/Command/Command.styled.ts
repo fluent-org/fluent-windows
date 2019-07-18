@@ -24,9 +24,11 @@ export const StyledPrimary = styled.div`
   flex: 1;
 `
 
-export const StyledSecondaryContainer = styled(Box).attrs({
-  backgroundColor: th.color('standard.light2')
-})`
+export const StyledSecondaryContainer = styled(Box).attrs(
+  (props): any => ({
+    backgroundColor: th.color('standard.light2').call(undefined, props)
+  })
+)`
   display: flex;
   flex-direction: column;
   width: 130px;

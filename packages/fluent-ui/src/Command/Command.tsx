@@ -65,7 +65,8 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
       const position = {
         position: 'absolute',
         left: `${rect.left + window.scrollX}px`,
-        top: `${rect.top + window.scrollY + rect.height}px`
+        top: `${rect.top + window.scrollY + rect.height}px`,
+        zIndex: 9999
       }
       setSecondaryVisible((visible: boolean): boolean => !visible)
       setPortalStyle(position)
