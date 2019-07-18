@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.3.1...fluent-ui.com@1.4.0) (2019-07-18)
+
+
+### Bug Fixes
+
+* **@fluent-ui/hooks:** Add hooks: useHover, usePopper ([9479180](https://github.com/chenyueban/fluent-ui/commit/9479180))
+
+
+### Features
+
+* **Tooltip:** Complete the component Tooltip ([91c2730](https://github.com/chenyueban/fluent-ui/commit/91c2730))
+
+
+
+
+
 ## [1.3.1](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.3.0...fluent-ui.com@1.3.1) (2019-07-17)
 
 **Note:** Version bump only for package fluent-ui.com

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.5.1...@fluent-ui/core@0.6.0) (2019-07-18)
+
+
+### Bug Fixes
+
+* **@fluent-ui/hooks:** Add hooks: useHover, usePopper ([9479180](https://github.com/chenyueban/fluent-ui/commit/9479180))
+* **Command:** Fix problems not displayed by Secondary ([4ffcbce](https://github.com/chenyueban/fluent-ui/commit/4ffcbce))
+
+
+### Features
+
+* **Tooltip:** Complete the component Tooltip ([91c2730](https://github.com/chenyueban/fluent-ui/commit/91c2730))
+
+
+
+
+
 ## [0.5.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.5.0...@fluent-ui/core@0.5.1) (2019-07-17)
 
 
