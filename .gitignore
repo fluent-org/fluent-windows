@@ -13,3 +13,4 @@ public
 .cache
 build
 design
+local_test.tsx

@@ -37,6 +37,9 @@
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
   },
+  "dependencies": {
+    "popper.js": "^1.15.0"
+  },
   "publishConfig": {
     "access": "public"
   },
