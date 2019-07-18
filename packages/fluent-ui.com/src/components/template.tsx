@@ -18,7 +18,8 @@ import {
   Badge as BadgeIcon,
   NUIFPStartSlideHand as NUIFPStartSlideHandIcon,
   NUIFPRollLeftHand as NUIFPRollLeftHandIcon,
-  BackgroundToggle as BackgroundToggleIcon
+  BackgroundToggle as BackgroundToggleIcon,
+  ToolTip as TooltipIcon
 } from '@fluent-ui/icons'
 
 import Layout from './layout'
@@ -110,6 +111,10 @@ const iconMap = [
   {
     title: 'Transition',
     icon: <BackgroundToggleIcon />
+  },
+  {
+    title: 'Tooltip',
+    icon: <TooltipIcon />
   }
 ]
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { More as MoreIcon } from '@fluent-ui/icons' // TODO treeShaking
-import { usePortal, useOnClickOutside, useReveal } from '@fluent-ui/hooks' // TODO treeShaking
+import { usePortal, useClickOutside, useReveal } from '@fluent-ui/hooks' // TODO treeShaking
 import {
   StyledContent,
   StyledPrimary,
@@ -77,7 +77,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
 
     // 点击 More 菜单之外的区域关闭 More 菜单
     const secondaryRef = React.useRef<HTMLDivElement>(null)
-    useOnClickOutside(
+    useClickOutside(
       secondaryRef,
       (): void => {
         setSecondaryVisible((visible: boolean): boolean => !visible)

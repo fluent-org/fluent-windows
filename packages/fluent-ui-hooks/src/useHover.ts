@@ -1,6 +1,8 @@
 import * as React from 'react'
 
-export function useHover(): [
+export function useHover(
+  statusHandler?: (status: boolean) => void
+): [
   boolean,
   {
     onMouseEnter: () => void
@@ -11,10 +13,10 @@ export function useHover(): [
 
   const bind = {
     onMouseEnter: (): void => {
-      setHovered(true)
+      statusHandler ? statusHandler(true) : setHovered(true)
     },
     onMouseLeave: (): void => {
-      setHovered(false)
+      statusHandler ? statusHandler(false) : setHovered(false)
     }
   }
 
