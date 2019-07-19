@@ -7,6 +7,7 @@ export const StyledTooltip = styled.div`
   font-size: 0.625rem;
   font-weight: 500;
   padding: 4px 8px;
+  margin: 6px 0;
   max-width: 320px;
   border-radius: 2px;
 `
