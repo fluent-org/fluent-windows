@@ -11,7 +11,7 @@ const path = require('path')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const template = path.resolve(`src/components/template.tsx`)
+  const docs = path.resolve(`src/components/docs/template.tsx`)
 
   return graphql(`
     {
@@ -37,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
       } = node
       createPage({
         path: `/components/${title.toLowerCase()}`,
-        component: template,
+        component: docs,
         context: { title } // additional data can be passed via context
       })
     })

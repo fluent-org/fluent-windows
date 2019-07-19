@@ -35,4 +35,5 @@ export const StyledContent = styled.div<{ horizontal?: boolean }>`
   flex: 1;
   display: flex;
   flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
+  overflow: auto;
 `

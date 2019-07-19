@@ -72,11 +72,11 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
       setPortalStyle(position)
     }
 
-    // 当使用 acrylic 时 reveal 不生效
+    // Reveal does not take effect when using acrylic
     reveal = acrylic ? false : reveal
     const [RevealWrapper] = useReveal()
 
-    // 点击 More 菜单之外的区域关闭 More 菜单
+    // Click on the area outside the More menu to close the More menu.
     const secondaryRef = React.useRef<HTMLDivElement>(null)
     useClickOutside(
       secondaryRef,

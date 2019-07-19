@@ -5,7 +5,7 @@ import * as Icon from '@fluent-ui/icons'
 import * as Hooks from '@fluent-ui/hooks'
 import { theme } from '../utils/theme'
 
-const { Box, IconButton, Transition, Tooltip } = Fluent
+const { Box, Command, CommandButton, Transition, Tooltip } = Fluent
 
 const scope = { ...Fluent, Icon, ...Hooks }
 
@@ -27,18 +27,13 @@ const Playground: React.FC<PlaygroundProps> = ({
       borderRadius="4px"
     >
       <LiveProvider code={children.props.children} scope={scope} theme={theme}>
-        <Box
-          display="flex"
-          justifyContent="flex-end"
-          padding="5px 16px"
-          backgroundColor="standard.light2"
-        >
-          <Tooltip title="show the source" placement="top">
-            <IconButton onClick={handleCodeVisible}>
+        <Command height={46}>
+          <Tooltip title="code" placement="top">
+            <CommandButton onClick={handleCodeVisible}>
               <Icon.Code />
-            </IconButton>
+            </CommandButton>
           </Tooltip>
-        </Box>
+        </Command>
         <Transition visible={codeVisible} type="collapse" mountOnEnter unmountOnExit>
           <LiveEditor
             css={`

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import { ThemeProvider, Normalize, Theme, Box } from '@fluent-ui/core'
+import { ThemeProvider, Normalize, Theme } from '@fluent-ui/core'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -15,6 +15,9 @@ const theme: Theme = {
 }
 
 const GlobalStyle = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
   code {
     background-color: rgba(27, 31, 35, 0.05);
     border-radius: 3px;
@@ -28,9 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
   <ThemeProvider theme={theme}>
     <Normalize />
     <GlobalStyle />
-    <Box as="main" background="url(/msft-verge-fluent.jpg) 50% center / cover no-repeat fixed">
-      {children}
-    </Box>
+    {children}
   </ThemeProvider>
 )
 
