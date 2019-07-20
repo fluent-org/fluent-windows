@@ -1,6 +1,7 @@
 ---
 title: Radio
 components: Radio
+type: Inputs
 ---
 
 # Radio

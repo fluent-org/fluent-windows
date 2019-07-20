@@ -1,6 +1,7 @@
 ---
 title: Input
 components: Input
+type: Inputs
 ---
 
 # Inputs

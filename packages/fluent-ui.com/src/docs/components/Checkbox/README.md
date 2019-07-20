@@ -1,6 +1,7 @@
 ---
 title: Checkbox
 components: Checkbox
+type: Inputs
 ---
 
 # Checkbox

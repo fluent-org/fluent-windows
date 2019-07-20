@@ -1,6 +1,7 @@
 ---
 title: IconButton
 components: IconButton
+type: Inputs
 ---
 
 # IconButtons

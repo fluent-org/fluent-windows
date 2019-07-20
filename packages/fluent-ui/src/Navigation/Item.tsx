@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { styled, css, variant, th } from '../styles/styled'
+import Box from '../Box'
 import { NavigationContext } from './Navigation'
 import * as CSS from 'csstype'
 
 export type ID = string | number
 
-interface ItemProps extends StyledProps {
+interface ItemProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'id'>, StyledProps {
   id?: ID
   title?: string
   onClick?: React.MouseEventHandler<HTMLDivElement>
@@ -14,7 +15,7 @@ interface ItemProps extends StyledProps {
 
 type Child = React.ReactChild | any
 
-const StyledItemWrapper = styled.div<{
+const StyledItemWrapper = styled(Box)<{
   reveal: boolean
 }>`
   position: relative;

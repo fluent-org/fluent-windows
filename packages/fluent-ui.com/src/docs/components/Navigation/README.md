@@ -1,6 +1,7 @@
 ---
 title: Navigation
 components: Navigation
+type: Navigation
 ---
 
 # Navigation

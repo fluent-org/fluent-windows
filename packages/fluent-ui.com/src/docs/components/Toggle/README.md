@@ -1,6 +1,7 @@
 ---
 title: Toggle
 components: Toggle
+type: Inputs
 ---
 
 # Toggle

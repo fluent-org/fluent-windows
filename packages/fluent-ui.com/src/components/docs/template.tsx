@@ -18,6 +18,7 @@ export interface TemplateProps {
       frontmatter: {
         components: string
         title: string
+        type: string
       }
       rawMarkdownBody: string
     }
@@ -33,6 +34,7 @@ export interface TemplateProps {
         node: {
           frontmatter: {
             title: string
+            type: string
           }
         }
       }[]
@@ -82,6 +84,7 @@ export const query = graphql`
       frontmatter {
         components
         title
+        type
       }
       rawMarkdownBody
     }
@@ -97,6 +100,7 @@ export const query = graphql`
         node {
           frontmatter {
             title
+            type
           }
         }
       }

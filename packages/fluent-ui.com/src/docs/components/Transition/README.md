@@ -1,6 +1,7 @@
 ---
 title: Transition
 components: Transition
+type: Utils
 ---
 
 # Transition

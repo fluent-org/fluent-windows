@@ -1,6 +1,7 @@
 ---
 title: Command
 components: Command
+type: Navigation
 ---
 
 # Command

@@ -1,6 +1,7 @@
 ---
 title: Button
 components: Button
+type: Inputs
 ---
 
 # Buttons

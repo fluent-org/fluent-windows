@@ -1,6 +1,7 @@
 ---
 title: Tooltip
 components: Tooltip
+type: DataDisplay
 ---
 
 # Tooltip

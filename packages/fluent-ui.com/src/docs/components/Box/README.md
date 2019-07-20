@@ -1,6 +1,7 @@
 ---
 title: Box
 components: Box
+type: Layout
 ---
 
 # Box

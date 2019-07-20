@@ -1,6 +1,7 @@
 ---
 title: Icon
 components: Icon
+type: DataDisplay
 ---
 
 # Icon

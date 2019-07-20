@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation } from '@fluent-ui/core'
+import { Navigation, Transition, Box } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
-  Code as CodeIcon,
-  Home as HomeIcon,
+  ChevronUpMed as ChevronUpMedIcon,
+  ChevronDownMed as ChevronDownMedIcon,
   CheckboxComposite as CheckboxCompositeIcon,
   RadioBtnOn as RadioBtnOnIcon,
   Color as ColorIcon,
@@ -77,15 +77,50 @@ const iconMap = [
   }
 ]
 
+interface Acc {
+  [key: string]: string[]
+}
+interface Elem {
+  type: string
+  title: string
+}
+interface Result {
+  type: string
+  titles: string[]
+}
+const getFrontMatter = (target: TemplateProps['data']): Result[] => {
+  const classify: {
+    [type: string]: string[]
+  } = target.docs.edges
+    .map((v): Elem => v.node.frontmatter)
+    .reduce((acc, elem): Acc => {
+      const { type, title } = elem
+      if ((acc as Acc)[type]) {
+        return {
+          ...acc,
+          [type]: [...(acc as Acc)[type], title]
+        }
+      }
+      return {
+        ...acc,
+        [type]: [title]
+      }
+    }, {})
+  return Object.keys(classify).map(
+    (type): Result => ({
+      type,
+      titles: classify[type]
+    })
+  )
+}
+
 function getIconBytitle(title: string): JSX.Element {
   const target = iconMap.find((v): boolean => v.title === title)
   return target ? target.icon : <ConnectedIcon />
 }
 
 const Nav = ({ data }: TemplateProps): React.ReactElement => {
-  const activeId = data.docs.edges.findIndex(
-    (v): boolean => v.node.frontmatter.title === data.doc.frontmatter.title
-  )
+  const activeId = data.doc.frontmatter.title
   const [expanded, setExpanded] = React.useState(true)
   function handleExpanded(): void {
     setExpanded((e): boolean => !e)
@@ -93,33 +128,49 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
   function handleNavigation(title: string): void {
     navigate(`/components/${title.toLowerCase()}`)
   }
-  function handleNavigationToHome(): void {
-    navigate(`/`)
-  }
+  const result = getFrontMatter(data)
+
   return (
-    <Navigation
-      value={`component${activeId}`}
-      expanded={expanded}
-      acrylic
-      width={260}
-      height="100%"
-    >
+    <Navigation value={activeId} expanded={expanded} acrylic width={260} height="100%">
       <Navigation.Header>
         <Navigation.Item onClick={handleExpanded}>
           <GlobalNavigationButtonIcon />
         </Navigation.Item>
       </Navigation.Header>
-      {data.docs.edges.map(
-        (child, index): React.ReactElement => (
-          <Navigation.Item
-            id={`component${index}`}
-            key={child.node.frontmatter.title}
-            onClick={handleNavigation.bind(undefined, child.node.frontmatter.title)}
-          >
-            {getIconBytitle(child.node.frontmatter.title)}
-            <span>{child.node.frontmatter.title}</span>
-          </Navigation.Item>
-        )
+      {result.map(
+        ({ type, titles }): React.ReactFragment => {
+          const defaultVisible = !!titles.find((t): boolean => t === activeId)
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const [visible, set] = React.useState(defaultVisible)
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const handleVisible = React.useCallback((): void => {
+            set((v): boolean => !v)
+          }, [])
+          return (
+            <React.Fragment key={type}>
+              <Navigation.Item onClick={handleVisible}>
+                {visible ? <ChevronUpMedIcon /> : <ChevronDownMedIcon />}
+                <Box as="span" color={visible ? 'standard.dark3' : 'black.default'}>
+                  {type}
+                </Box>
+              </Navigation.Item>
+              <Transition visible={visible} type="collapse">
+                {titles.map(
+                  (title): React.ReactElement => (
+                    <Navigation.Item
+                      id={title}
+                      key={title}
+                      onClick={handleNavigation.bind(undefined, title)}
+                    >
+                      {getIconBytitle(title)}
+                      <span>{title}</span>
+                    </Navigation.Item>
+                  )
+                )}
+              </Transition>
+            </React.Fragment>
+          )
+        }
       )}
     </Navigation>
   )
