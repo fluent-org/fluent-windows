@@ -50,11 +50,3 @@ function App() {
 
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
-
-## Supporting Fluent-UI
-
-Give a ⭐️ if this project helped you!
-
-<a href="https://www.patreon.com/fluent_ui">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>

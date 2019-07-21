@@ -20,6 +20,7 @@ import {
   BackgroundToggle as BackgroundToggleIcon,
   ToolTip as TooltipIcon
 } from '@fluent-ui/icons'
+import { useMedia } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [
@@ -121,7 +122,8 @@ function getIconBytitle(title: string): JSX.Element {
 
 const Nav = ({ data }: TemplateProps): React.ReactElement => {
   const activeId = data.doc.frontmatter.title
-  const [expanded, setExpanded] = React.useState(true)
+  const isMobile = useMedia('xs')
+  const [expanded, setExpanded] = React.useState(!isMobile)
   function handleExpanded(): void {
     setExpanded((e): boolean => !e)
   }

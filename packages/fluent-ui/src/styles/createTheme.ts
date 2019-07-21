@@ -5,6 +5,7 @@ import createTransition, { Transitions } from './createTransition'
 import createSize, { Sizes } from './createSize'
 import createFont, { Fonts } from './createFont'
 import shadows, { Shadows } from './createShadow'
+import createBreakpoint, { Breakpoints, defaultBreakpoints } from './createBreakpoint'
 
 // eslint-disable-next-line
 export interface ThemeProps {}
@@ -15,6 +16,7 @@ export interface Theme {
   transitions?: Transitions
   fonts?: Fonts
   shadows?: Shadows
+  breakpoints?: Breakpoints
 }
 
 function createTheme(theme: Theme): Theme {
@@ -23,13 +25,15 @@ function createTheme(theme: Theme): Theme {
     sizes: sizesInput = {},
     transitions: transitionsInput = {},
     fonts: fontsInput = {},
-    shadows: shadowsInput
+    shadows: shadowsInput,
+    breakpoints: breakpointsInput = defaultBreakpoints
   } = theme
 
   const colors = createColor(colorsInput)
   const transitions = createTransition(transitionsInput)
   const sizes = createSize(sizesInput)
   const fonts = createFont(fontsInput)
+  const breakpoints = createBreakpoint(breakpointsInput)
 
   return {
     shadows: shadowsInput || shadows,
@@ -37,7 +41,8 @@ function createTheme(theme: Theme): Theme {
       colors,
       sizes,
       transitions,
-      fonts
+      fonts,
+      breakpoints
     })
   }
 }

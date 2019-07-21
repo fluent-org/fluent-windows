@@ -54,6 +54,7 @@ const Playground: React.FC<PlaygroundProps> = ({
             // background-color: #f5f5f5;
             padding: 20px;
             border-radius: 4px;
+            overflow: auto;
             > * {
               margin: 8px;
             }

@@ -14,7 +14,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/chenyueban/fluent-ui",
-    "directory": "packages/fluent-ui"
+    "directory": "packages/fluent-ui-hooks"
   },
   "homepage": "https://fluent-ui.com/",
   "bugs": {
@@ -38,7 +38,11 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
+    "json2mq": "^0.2.0",
     "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "@types/json2mq": "^0.2.0"
   },
   "publishConfig": {
     "access": "public"

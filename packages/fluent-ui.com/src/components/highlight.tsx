@@ -15,6 +15,7 @@ const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): Reac
           css={`
             padding: 16px;
             background-color: #f5f5f5;
+            overflow: auto;
           `}
           className={className}
           style={style}

@@ -15,7 +15,7 @@ interface ItemProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'id'>, S
 
 type Child = React.ReactChild | any
 
-const StyledItemWrapper = styled(Box)<{
+const StyledItemWrapper = styled.div<{
   reveal: boolean
 }>`
   position: relative;

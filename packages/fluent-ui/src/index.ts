@@ -12,7 +12,7 @@ export { default as Transition } from './Transition'
 export { default as Tooltip } from './Tooltip'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
-export { default as theme, Theme } from './styles/createTheme'
+export * from './styles'
 
 import * as colors from './colors'
 export { colors }

@@ -48,7 +48,7 @@ const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.React
       <Box
         as="main"
         background="url(/wall.jpg) 50% center / cover no-repeat fixed"
-        padding="3.6rem 3rem"
+        padding={{ sm: '0', md: '3.6rem 3rem' }}
         width="100vw"
         height="100vh"
         overflow="hidden"

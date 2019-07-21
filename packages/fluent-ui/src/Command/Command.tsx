@@ -22,7 +22,7 @@ type Child =
 
 interface CommandProps extends BoxProps, ThemeProps {
   reveal?: boolean
-  children: Child[]
+  children: Child[] | Child
 }
 
 interface Container {
