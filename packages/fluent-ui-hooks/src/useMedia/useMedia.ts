@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as json2mq from 'json2mq'
+import { global } from '../utils'
 
 type AllBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type MediaQuery = json2mq.QueryObject | json2mq.QueryObject[] | AllBreakpoints | string
@@ -55,9 +56,13 @@ export function useMedia(
     : typeof mediaQuery === 'string'
     ? mediaQuery
     : json2mq(mediaQuery)
-  const mql = window && window.matchMedia(query)
-  const [state, setState] = React.useState((): boolean => mql.matches)
+  const mql = global && global.matchMedia && global.matchMedia(query)
 
+  if (mql === false) return false
+
+  // eslint-disable-next-line
+  const [state, setState] = React.useState((): boolean => mql.matches)
+  // eslint-disable-next-line
   React.useLayoutEffect((): (() => void) => {
     let mounted = true
 

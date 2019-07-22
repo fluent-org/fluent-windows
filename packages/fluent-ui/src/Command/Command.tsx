@@ -58,7 +58,11 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
       }
     )
 
-    const [secondaryVisible, setSecondaryVisible, SecondaryPortal] = usePortal()
+    const {
+      visible: secondaryVisible,
+      setVisible: setSecondaryVisible,
+      Portal: SecondaryPortal
+    } = usePortal()
     const [portalStyle, setPortalStyle] = React.useState()
     function handleSecondaryVisible(e: React.MouseEvent<HTMLButtonElement>): void {
       const rect = e.currentTarget.getBoundingClientRect()

@@ -50,7 +50,7 @@ exports[`Navigation basic 1`] = `
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
-  max-height: 40px;
+  min-height: 40px;
   height: 40px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -184,7 +184,8 @@ exports[`Navigation basic 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 <div
@@ -482,7 +483,7 @@ exports[`Navigation controlled 1`] = `
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
-  max-height: 40px;
+  min-height: 40px;
   height: 40px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -616,7 +617,8 @@ exports[`Navigation controlled 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 <div

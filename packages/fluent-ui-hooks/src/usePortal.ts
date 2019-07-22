@@ -1,39 +1,58 @@
 import * as React from 'react'
 import { createPortal } from 'react-dom'
+import { global } from './utils'
 
-export type Visible = boolean
-export type Set = React.Dispatch<React.SetStateAction<boolean>>
-export type Portal = (props: PortalProps) => React.ReactPortal
-export type Return = [Visible, Set, Portal]
-
-interface PortalProps {
-  children: React.ReactNode
-  style?: object
+interface Option {
+  defaultVisible?: boolean
+  container?: HTMLElement
+  onMount?: () => void
 }
 
-export function usePortal(defaultVisible = false, container?: Element): Return {
-  const [visible, handleState] = React.useState(defaultVisible)
+interface PortalProps
+  extends React.ComponentPropsWithoutRef<'div'>,
+    React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactElement
+}
 
-  const setVisible = React.useCallback((v): void => {
-    handleState(v)
+interface UsePortalReturn {
+  visible: boolean
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>
+  Portal: ({ children }: PortalProps) => React.ReactPortal | null
+  targetRef: (element: any) => void
+}
+
+export function usePortal(option: Option = {}): UsePortalReturn {
+  const { defaultVisible = false, container, onMount } = option
+
+  const [visible, setVisible] = React.useState(defaultVisible)
+
+  const [refCurrent, setRef] = React.useState(null)
+  const targetRef = React.useCallback((element): void => {
+    setRef(element)
   }, [])
 
-  const Portal = ({ children, style }: PortalProps): React.ReactPortal => {
-    const node = container || document.createElement('div')
-    if (style) {
-      for (const prop in style) {
-        // @ts-ignore
-        node.style[prop] = style[prop]
-      }
-    }
-    React.useLayoutEffect((): (() => void) => {
-      !container && document.body.appendChild(node)
-      return (): void => {
-        !container && document.body.removeChild(node)
-      }
-    }, [node])
-    return createPortal(children, node)
-  }
+  const Portal = React.useCallback(
+    ({ children, ...rest }: PortalProps): React.ReactPortal | null => {
+      // eslint-disable-next-line
+      React.useEffect((): void => {
+        if (onMount && refCurrent) {
+          onMount()
+        }
+      }, [])
 
-  return [visible, setVisible, Portal]
+      const mountElement = container || (refCurrent || (global && global.document.body))
+
+      return visible
+        ? createPortal(React.cloneElement(children, { ...rest }), mountElement as HTMLElement)
+        : null
+    },
+    [onMount, refCurrent, container, visible]
+  )
+
+  return {
+    visible,
+    setVisible,
+    Portal,
+    targetRef
+  }
 }

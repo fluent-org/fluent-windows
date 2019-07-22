@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled, { css } from 'styled-components'
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import { variant } from '@xstyled/system'
 import { createBaseTransition } from '../styles/createTransition'
 import { Box } from '..'
@@ -13,6 +13,7 @@ export interface StyledContainerProps {
   wrapper?: boolean
   wrapperHeight: number
   setWrapperHeight: React.Dispatch<number>
+  custom?: FlattenSimpleInterpolation
 }
 
 export const fade = css`
@@ -108,7 +109,8 @@ export const type = variant({
       transition: ${createBaseTransition(['height', 'visibility'])};
       ${({ visible, wrapperHeight }: StyledContainerProps): string =>
         visible ? `height: ${wrapperHeight}px;` : `height: 0;visibility: hidden;`}
-    `
+    `,
+    custom: ({ custom }: StyledContainerProps): FlattenSimpleInterpolation | string => custom || ''
   }
 })
 
@@ -118,6 +120,7 @@ export const StyledContainer = styled(
     forwardRef,
     wrapper,
     setWrapperHeight,
+    custom,
     ...props
   }: StyledContainerProps): React.ReactElement => {
     const wrapperRef = React.useRef<HTMLDivElement>(null)

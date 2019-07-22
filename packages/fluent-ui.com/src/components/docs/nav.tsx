@@ -4,8 +4,6 @@ import { Navigation, Transition, Box } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
-  ChevronUpMed as ChevronUpMedIcon,
-  ChevronDownMed as ChevronDownMedIcon,
   CheckboxComposite as CheckboxCompositeIcon,
   RadioBtnOn as RadioBtnOnIcon,
   Color as ColorIcon,
@@ -18,7 +16,8 @@ import {
   NUIFPStartSlideHand as NUIFPStartSlideHandIcon,
   NUIFPRollLeftHand as NUIFPRollLeftHandIcon,
   BackgroundToggle as BackgroundToggleIcon,
-  ToolTip as TooltipIcon
+  ToolTip as TooltipIcon,
+  CashDrawer as CashDrawerIcon
 } from '@fluent-ui/icons'
 import { useMedia } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
@@ -75,6 +74,10 @@ const iconMap = [
   {
     title: 'Tooltip',
     icon: <TooltipIcon />
+  },
+  {
+    title: 'Drawer',
+    icon: <CashDrawerIcon />
   }
 ]
 
@@ -141,35 +144,26 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       </Navigation.Header>
       {result.map(
         ({ type, titles }): React.ReactFragment => {
-          const defaultVisible = !!titles.find((t): boolean => t === activeId)
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const [visible, set] = React.useState(defaultVisible)
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const handleVisible = React.useCallback((): void => {
-            set((v): boolean => !v)
-          }, [])
           return (
             <React.Fragment key={type}>
-              <Navigation.Item onClick={handleVisible}>
-                {visible ? <ChevronUpMedIcon /> : <ChevronDownMedIcon />}
-                <Box as="span" color={visible ? 'standard.dark3' : 'black.default'}>
+              <Transition visible={expanded} mountOnEnter unmountOnExit>
+                <Box padding="12px" height={40} position="relative" display="flex">
                   {type}
                 </Box>
-              </Navigation.Item>
-              <Transition visible={visible} type="collapse">
-                {titles.map(
-                  (title): React.ReactElement => (
-                    <Navigation.Item
-                      id={title}
-                      key={title}
-                      onClick={handleNavigation.bind(undefined, title)}
-                    >
-                      {getIconBytitle(title)}
-                      <span>{title}</span>
-                    </Navigation.Item>
-                  )
-                )}
               </Transition>
+              {titles.map(
+                (title): React.ReactElement => (
+                  <Navigation.Item
+                    id={title}
+                    key={title}
+                    onClick={handleNavigation.bind(undefined, title)}
+                    style={{ paddingLeft: expanded ? 24 : 12 }}
+                  >
+                    {getIconBytitle(title)}
+                    <span>{title}</span>
+                  </Navigation.Item>
+                )
+              )}
             </React.Fragment>
           )
         }

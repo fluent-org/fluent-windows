@@ -10,6 +10,7 @@ export { default as CommandButton } from './CommandButton'
 export { default as Navigation } from './Navigation'
 export { default as Transition } from './Transition'
 export { default as Tooltip } from './Tooltip'
+export { default as Drawer } from './Drawer'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'

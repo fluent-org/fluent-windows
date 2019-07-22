@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { styled, css, variant, th } from '../styles/styled'
-import Box from '../Box'
 import { NavigationContext } from './Navigation'
 import * as CSS from 'csstype'
 
@@ -21,7 +20,7 @@ const StyledItemWrapper = styled.div<{
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  max-height: 40px;
+  min-height: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
