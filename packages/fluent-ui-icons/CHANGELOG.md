@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/icons@0.3.2...@fluent-ui/icons@0.4.0) (2019-07-22)
+
+
+### Features
+
+* **@fluent-ui/hooks:** add useMedia ([cbf7bd6](https://github.com/chenyueban/fluent-ui/commit/cbf7bd6))
+
+
+
+
+
 ## [0.3.2](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/icons@0.3.1...@fluent-ui/icons@0.3.2) (2019-07-17)
 
 **Note:** Version bump only for package @fluent-ui/icons

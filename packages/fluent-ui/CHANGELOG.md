@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.6.0...@fluent-ui/core@0.7.0) (2019-07-22)
+
+
+### Bug Fixes
+
+* **Tooltip:** Fix the Tooltip title types ([09d5838](https://github.com/chenyueban/fluent-ui/commit/09d5838))
+
+
+### Features
+
+* **@fluent-ui/hooks:** add useMedia ([cbf7bd6](https://github.com/chenyueban/fluent-ui/commit/cbf7bd6))
+* **Drawer:** Add component Drawer ([4ca6967](https://github.com/chenyueban/fluent-ui/commit/4ca6967))
+
+
+
+
+
 # [0.6.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.5.1...@fluent-ui/core@0.6.0) (2019-07-18)
 
 
