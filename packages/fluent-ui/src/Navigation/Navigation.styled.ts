@@ -26,9 +26,11 @@ export const StyledContainer = styled(Box).attrs(
     prop: 'expanded',
     default: true,
     variants: {
-      true: css``,
+      true: css`
+        max-width: 260px;
+      `,
       false: css`
-        width: 40px;
+        max-width: 40px;
       `
     }
   })}

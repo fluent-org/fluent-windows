@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation, Transition, Box } from '@fluent-ui/core'
+import { Navigation, Transition, Box, Drawer } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
@@ -19,6 +19,7 @@ import {
   ToolTip as TooltipIcon,
   CashDrawer as CashDrawerIcon
 } from '@fluent-ui/icons'
+import { useMedia, useAction } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [
@@ -124,17 +125,83 @@ function getIconBytitle(title: string): JSX.Element {
 
 const Nav = ({ data }: TemplateProps): React.ReactElement => {
   const activeId = data.doc.frontmatter.title
+
   const [expanded, setExpanded] = React.useState(true)
+  const [drawerVisible, setDrawerVisible] = React.useState(false)
   function handleExpanded(): void {
     setExpanded((e): boolean => !e)
   }
+  function handleDrawerVisible(): void {
+    setDrawerVisible((e): boolean => !e)
+  }
+  useAction(
+    'navigation/expand',
+    (payload): void => {
+      setDrawerVisible(payload)
+    },
+    []
+  )
+
   function handleNavigation(title: string): void {
     navigate(`/components/${title.toLowerCase()}`)
   }
   const result = getFrontMatter(data)
 
-  return (
-    <Navigation value={activeId} expanded={expanded} acrylic width={260} height="100%">
+  const mobileChild = (
+    <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
+      <Navigation value={activeId} expanded={true} acrylic height="100%" width={260}>
+        <Navigation.Header>
+          <Navigation.Item onClick={handleExpanded}>
+            <GlobalNavigationButtonIcon />
+          </Navigation.Item>
+        </Navigation.Header>
+        {result.map(
+          ({ type, titles }): React.ReactFragment => {
+            return (
+              <React.Fragment key={type}>
+                <Transition visible={drawerVisible} mountOnEnter unmountOnExit>
+                  <Box padding="12px" height={40} position="relative" display="flex">
+                    {type}
+                  </Box>
+                </Transition>
+                {titles.map(
+                  (title): React.ReactElement => (
+                    <Navigation.Item
+                      id={title}
+                      key={title}
+                      onClick={handleNavigation.bind(undefined, title)}
+                      style={{ paddingLeft: drawerVisible ? 24 : 12 }}
+                    >
+                      {getIconBytitle(title)}
+                      <span>{title}</span>
+                    </Navigation.Item>
+                  )
+                )}
+              </React.Fragment>
+            )
+          }
+        )}
+      </Navigation>
+    </Drawer>
+  )
+  const pcChild = (
+    <Navigation
+      value={activeId}
+      expanded={expanded}
+      acrylic
+      height="100%"
+      css={`
+        @media (max-width: 600px) {
+          width: 0;
+          opacity: 0;
+          display: none;
+          visibility: hidden;
+        }
+        @media (min-width: 600px) {
+          width: 260px;
+        }
+      `}
+    >
       <Navigation.Header>
         <Navigation.Item onClick={handleExpanded}>
           <GlobalNavigationButtonIcon />
@@ -167,6 +234,13 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
         }
       )}
     </Navigation>
+  )
+
+  return (
+    <>
+      {mobileChild}
+      {pcChild}
+    </>
   )
 }
 

@@ -2,7 +2,7 @@ import * as React from 'react'
 import Markdown from 'markdown-to-jsx'
 import { Box } from '@fluent-ui/core'
 
-import Header from '../header'
+import Header from './header'
 
 import Playground from '../playground'
 import Highlight from '../highlight'

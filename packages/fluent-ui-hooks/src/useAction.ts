@@ -10,7 +10,7 @@
  *   (payload) => {
  *     // ...
  *   },
- *   [payload]
+ *   []
  * )
  *
  * // children

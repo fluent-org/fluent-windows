@@ -59,7 +59,7 @@ export interface StylesProps {
   /**
    * Layout
    */
-  display?: CSS.DisplayProperty
+  display?: LayoutTypes
   width?: LayoutTypes
   height?: LayoutTypes
   maxWidth?: LayoutTypes
@@ -68,10 +68,7 @@ export interface StylesProps {
   minHeight?: LayoutTypes
   size?: LayoutTypes
   verticalAlign?: CSS.VerticalAlignProperty<SpaceBaseTypes>
-  layout?:
-    | CSS.DisplayProperty
-    | LayoutTypes
-    | CSS.VerticalAlignProperty<SpaceBaseTypes>
+  layout?: CSS.DisplayProperty | LayoutTypes | CSS.VerticalAlignProperty<SpaceBaseTypes>
   /**
    * XGrids
    */
@@ -161,7 +158,7 @@ export interface StylesProps {
   /**
    * Basics
    */
-  opacity?: number
+  opacity?: LayoutTypes
   overflow?: CSS.OverflowProperty
   transition?: CSS.TransitionProperty
   basics?: string
