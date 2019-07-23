@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.5.0...@fluent-ui/hooks@0.5.1) (2019-07-23)
+
+**Note:** Version bump only for package @fluent-ui/hooks
+
+
+
+
+
 # [0.5.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.4.0...@fluent-ui/hooks@0.5.0) (2019-07-22)
 
 
