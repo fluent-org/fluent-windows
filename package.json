@@ -12,7 +12,7 @@
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
     "test:prod": "lerna run test:prod",
-    "release": "lerna publish --contents build --conventional-commits"
+    "release": "npm run build && lerna publish --contents build --conventional-commits"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
