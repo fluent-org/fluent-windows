@@ -73,6 +73,7 @@ export const StyledContent = styled.div<{ horizontal?: boolean }>`
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   ${variant({
     prop: 'horizontal',
     default: false,
@@ -84,5 +85,5 @@ export const StyledContent = styled.div<{ horizontal?: boolean }>`
         flex-direction: column;
       `
     }
-  })}
+  })};
 `

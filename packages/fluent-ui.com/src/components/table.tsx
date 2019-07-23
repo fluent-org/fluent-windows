@@ -11,6 +11,7 @@ const Table = styled.table`
   font-size: 14px;
   font-family: monospace, PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto;
   color: rgb(57, 58, 52);
+  -webkit-overflow-scrolling: touch;
   thead {
     color: rgba(0, 0, 0, 0.54);
     font-weight: 500;

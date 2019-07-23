@@ -22,6 +22,7 @@ const mosaic =
 const Acrylic = styled(Base)`
   position: ${({ position }: BoxProps): string => position || 'relative'};
   overflow: ${({ overflow }: BoxProps): string => overflow || 'hidden'};
+  -webkit-overflow-scrolling: touch;
   @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
     background: none !important;
     backdrop-filter: blur(10px);

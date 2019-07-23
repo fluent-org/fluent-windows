@@ -22,6 +22,9 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
       position="relative"
       zIndex={2}
       overflow="auto"
+      css={`
+        -webkit-overflow-scrolling: touch;
+      `}
     >
       <Header />
       <Box padding="4" minHeight="100%" backgroundColor="white.default">

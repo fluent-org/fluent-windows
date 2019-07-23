@@ -78,7 +78,9 @@ export interface StylesProps {
    * Typography
    */
   fontFamily?: CSS.FontFamilyProperty
-  fontSize?: CSS.FontSizeProperty<number | string>
+  fontSize?:
+    | CSS.FontSizeProperty<number | string>
+    | ResponsiveType<CSS.FontSizeProperty<number | string>>
   fontWeight?: CSS.FontWeightProperty
   lineHeight?: CSS.LineHeightProperty<number>
   textAlign?: CSS.TextAlignProperty

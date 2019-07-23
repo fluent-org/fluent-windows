@@ -19,28 +19,31 @@ const IndexPage = (): React.ReactElement => {
         backgroundColor="standard.default"
         background="url(msft-verge-fluent.jpg) 50% center / cover no-repeat fixed"
         display="flex"
-        flexDirection="column"
         justifyContent="center"
-        paddingLeft={300}
+        alignItems="center"
       >
-        <Box fontSize={128} fontWeight={600} marginTop={-260}>
-          FLUENT-UI
-        </Box>
-        <Box fontSize={18} fontWeight={500} marginTop={30}>
-          React components that implement Microsoft Fluent Design System.
-        </Box>
-        <Box marginTop={20} display="flex">
-          <Button variant="primary" size="large" onClick={handleLink}>
-            GET START
-          </Button>
-          <Button
-            as="a"
-            href="https://github.com/fluent-org/fluent-ui"
-            style={{ marginLeft: 20 }}
-            size="large"
-          >
-            GITHUB
-          </Button>
+        <Box width="80%" marginTop="-10em">
+          <Box fontSize={{ xs: '3em', md: '8em' }} fontWeight={600}>
+            FLUENT-UI
+          </Box>
+          <Box fontSize={{ xs: '1em', md: '1.25em' }} fontWeight={500}>
+            React components that implement Microsoft Fluent Design System.
+          </Box>
+          <Box marginTop="1.2em">
+            <Box display={{ xs: 'block', md: 'inline-block' }}>
+              <Button variant="primary" size="large" onClick={handleLink}>
+                GET START
+              </Button>
+            </Box>
+            <Box
+              margin={{ xs: '0.6em 0 0 0', md: '0 0 0 1.2em' }}
+              display={{ xs: 'block', md: 'inline-block' }}
+            >
+              <Button as="a" href="https://github.com/fluent-org/fluent-ui" size="large">
+                GITHUB
+              </Button>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Layout>

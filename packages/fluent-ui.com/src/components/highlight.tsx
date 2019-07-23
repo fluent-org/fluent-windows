@@ -16,6 +16,7 @@ const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): Reac
             padding: 16px;
             background-color: #f5f5f5;
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
           `}
           className={className}
           style={style}

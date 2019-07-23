@@ -43,6 +43,7 @@ const Playground: React.FC<PlaygroundProps> = ({
               overflow: auto !important;
               background-color: #fff !important;
               border-bottom: 1px dashed #f5f5f5;
+              -webkit-overflow-scrolling: touch;
               textarea {
                 outline: none;
               }
@@ -55,6 +56,7 @@ const Playground: React.FC<PlaygroundProps> = ({
             padding: 20px;
             border-radius: 4px;
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
             > * {
               margin: 8px;
             }

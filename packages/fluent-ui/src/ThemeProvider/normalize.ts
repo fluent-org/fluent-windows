@@ -148,6 +148,7 @@ progress {
 
 textarea {
   overflow: auto;
+  -webkit-overflow-scrolling : touch;
 }
 
 [type="checkbox"],
