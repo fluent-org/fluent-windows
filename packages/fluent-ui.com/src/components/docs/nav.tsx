@@ -19,7 +19,6 @@ import {
   ToolTip as TooltipIcon,
   CashDrawer as CashDrawerIcon
 } from '@fluent-ui/icons'
-import { useMedia } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [
@@ -125,8 +124,7 @@ function getIconBytitle(title: string): JSX.Element {
 
 const Nav = ({ data }: TemplateProps): React.ReactElement => {
   const activeId = data.doc.frontmatter.title
-  const isMobile = useMedia('xs')
-  const [expanded, setExpanded] = React.useState(!isMobile)
+  const [expanded, setExpanded] = React.useState(true)
   function handleExpanded(): void {
     setExpanded((e): boolean => !e)
   }

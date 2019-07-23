@@ -1,40 +1,86 @@
-import { styled, th } from '../styles/styled'
+import { styled, th, variant, css } from '../styles/styled'
 import Box from '../Box'
-import { BoxProps } from '../Box/Box'
-
-interface StyledContainerProps extends BoxProps {
-  horizontal?: boolean
-  expanded: boolean
-}
 
 export const StyledContainer = styled(Box).attrs(
   (props): any => ({
     backgroundColor: th.color('standard.light2').call(undefined, props)
   })
-)<StyledContainerProps>`
+)`
   display: flex;
-  flex-direction: ${({ horizontal }: StyledContainerProps): string =>
-    horizontal ? 'row' : 'column'};
   justify-content: space-between;
-  ${({ horizontal, expanded }): string =>
-    horizontal ? `max-height: 40px` : `max-width: ${expanded ? '260px' : '40px'}`};
   transition: ${th.transition('navigation')};
+  ${variant({
+    prop: 'horizontal',
+    default: false,
+    variants: {
+      true: css`
+        max-height: 40px;
+        flex-direction: row;
+      `,
+      false: css`
+        flex-direction: column;
+      `
+    }
+  })}
+  ${variant({
+    prop: 'expanded',
+    default: true,
+    variants: {
+      true: css``,
+      false: css`
+        width: 40px;
+      `
+    }
+  })}
 `
 
 export const StyledHeader = styled.div<{ horizontal?: boolean }>`
   display: flex;
-  flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
+  ${variant({
+    prop: 'horizontal',
+    default: false,
+    variants: {
+      true: css`
+        flex-direction: row;
+      `,
+      false: css`
+        flex-direction: column;
+      `
+    }
+  })}
 `
 
 export const StyledFooter = styled.div<{ horizontal?: boolean }>`
   display: flex;
-  flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
+  ${variant({
+    prop: 'horizontal',
+    default: false,
+    variants: {
+      true: css`
+        flex-direction: row;
+      `,
+      false: css`
+        flex-direction: column;
+      `
+    }
+  })}
 `
 
 export const StyledContent = styled.div<{ horizontal?: boolean }>`
   flex: 1;
   display: flex;
-  flex-direction: ${({ horizontal }): string => (horizontal ? 'row' : 'column')};
   overflow-x: hidden;
   overflow-y: auto;
+  ${variant({
+    prop: 'horizontal',
+    default: false,
+    variants: {
+      true: css`
+        flex-direction: row;
+      `,
+      false: css`
+        flex-direction: column;
+      `
+    }
+  })}
 `
