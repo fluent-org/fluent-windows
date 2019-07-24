@@ -1,6 +1,6 @@
 import { styled, th, css, FlattenSimpleInterpolation } from '../styles/styled'
 import { createBaseTransition } from '../styles/createTransition'
-import { DrawerProps } from './Drawer'
+import { DrawerProps } from './Drawer.type'
 
 const anchorTransitionMap = {
   left: '-100%, 0, 0',

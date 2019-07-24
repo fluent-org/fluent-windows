@@ -1,5 +1,5 @@
 import { styled, th, css, variant, lighten } from '../styles/styled'
-import { IconButtonProps } from './IconButton'
+import { IconButtonProps } from './IconButton.type'
 
 const base = css`
   border: none;

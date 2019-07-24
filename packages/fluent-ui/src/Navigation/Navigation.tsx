@@ -1,46 +1,24 @@
 import * as React from 'react'
 import { useReveal } from '@fluent-ui/hooks' // TODO treeShaking
-import Item, { ID } from './Item'
-import { BoxProps } from '../Box/Box'
-import { ThemeProps } from '../styles/createTheme'
-import Header from './Header'
-import Footer from './Footer'
-import Content from './Content'
-import { StyledHeader, StyledFooter, StyledContent, StyledContainer } from './Navigation.styled'
 import { omit } from '../utils'
 
-interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
-  horizontal?: boolean
-  response?: boolean
-  expanded?: boolean
-  acrylic?: boolean
-  reveal?: boolean
-  value?: ID
-  onChange?: (id: ID) => void
-}
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Content from './components/Content'
+import Item from './components/Item'
 
-interface NavigationType extends React.ForwardRefExoticComponent<NavigationProps> {
-  Header: typeof Header
-  Footer: typeof Footer
-  Content: typeof Content
-  Item: typeof Item
-}
-
-interface Container {
-  header: React.ReactComponentElement<typeof Header>[]
-  footer: React.ReactComponentElement<typeof Footer>[]
-  content: React.ReactComponentElement<typeof Content>[]
-}
-
-type Child =
-  | React.ReactComponentElement<typeof Header>
-  | React.ReactComponentElement<typeof Footer>
-  | React.ReactComponentElement<typeof Content>
-  | any
+import { StyledHeader, StyledFooter, StyledContent, StyledContainer } from './Navigation.styled'
+import {
+  NavigationProps,
+  NavigationID,
+  NavigationContainer,
+  NavigationChild,
+  NavigationType
+} from './Navigation.type'
 
 export const NavigationContext = React.createContext<{
-  value: ID
-  onChange: (id: ID) => void
+  value: NavigationID
+  onChange: (id: NavigationID) => void
   expanded: boolean
   reveal: boolean
   horizontal: boolean
@@ -57,14 +35,14 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
     { horizontal, expanded, acrylic, reveal, value, onChange, children, ...rest }: NavigationProps,
     ref
   ): React.ReactElement => {
-    const container: Container = {
+    const container: NavigationContainer = {
       header: [],
       footer: [],
       content: []
     }
     React.Children.forEach(
       children,
-      (child: Child): void => {
+      (child: NavigationChild): void => {
         if (child.type.displayName! === 'FNavigationHeader') {
           container.header.push(child)
         } else if (child.type.displayName === 'FNavigationFooter') {
@@ -79,8 +57,8 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
     const [RevealWrapper] = useReveal(66)
 
     const contextValue = {
-      value: value as ID,
-      onChange: onChange as (id: ID) => void,
+      value: value as NavigationID,
+      onChange: onChange as (id: NavigationID) => void,
       expanded: expanded as boolean,
       reveal: reveal as boolean,
       horizontal: horizontal as boolean

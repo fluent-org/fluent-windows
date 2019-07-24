@@ -1,15 +1,8 @@
 import * as React from 'react'
 import { usePortal } from '@fluent-ui/hooks'
 import Transition from '../Transition'
-import { StyledDrawer, StyledMask } from './Drawer.styled'
-import { createSwipe } from './Drawer.styled'
-
-export interface DrawerProps {
-  children: React.ReactElement
-  visible: boolean
-  onChange?: (visible: boolean) => void
-  anchor?: 'left' | 'top' | 'right' | 'bottom'
-}
+import { StyledDrawer, StyledMask, createSwipe } from './Drawer.styled'
+import { DrawerProps } from './Drawer.type'
 
 const Drawer = ({
   children,

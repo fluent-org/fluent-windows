@@ -1,7 +1,6 @@
 import * as React from 'react'
 import {
   usePopper,
-  usePropperOptions,
   useHover,
   useClick,
   useTouch,
@@ -10,14 +9,7 @@ import {
 } from '@fluent-ui/hooks'
 import Transition from '../Transition'
 import { StyledTooltip } from './Tooltip.styled'
-
-export interface TooltipProps extends usePropperOptions {
-  children: React.ReactElement
-  title: React.ReactElement | string
-  visible?: boolean
-  onChange?: (visible: boolean) => void
-  trigger?: 'hover' | 'click' | 'touch' | 'focus'
-}
+import { TooltipProps } from './Tooltip.type'
 
 const Tooltip = ({
   children,

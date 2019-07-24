@@ -6,20 +6,10 @@ import {
   StyledCheckbox
 } from './Checkbox.styled'
 import { Accept as AcceptIcon } from '@fluent-ui/icons'
-
-interface CheckboxProps {
-  checked?: boolean
-  value?: string
-  onChange?: (checked: boolean) => void
-  disabled?: boolean
-  children?: React.ReactNode
-}
+import { CheckboxProps } from './Checkbox.type'
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  (
-    { checked, value, onChange, disabled, children }: CheckboxProps,
-    ref
-  ): React.ReactElement => {
+  ({ checked, value, onChange, disabled, children }: CheckboxProps, ref): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }

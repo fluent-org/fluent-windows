@@ -2,11 +2,7 @@ import * as React from 'react'
 import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
-import {
-  Back as BackIcon,
-  Play as PlayIcon,
-  Forward as ForwardIcon
-} from '@fluent-ui/icons'
+import { Back as BackIcon, Play as PlayIcon, Forward as ForwardIcon } from '@fluent-ui/icons'
 import { ThemeProvider, Command, CommandButton } from '../../'
 
 describe('Command', (): void => {

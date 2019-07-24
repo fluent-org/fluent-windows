@@ -165,3 +165,12 @@ export interface StylesProps {
   transition?: CSS.TransitionProperty
   basics?: string
 }
+
+export interface BoxProps
+  extends StylesProps,
+    React.ComponentPropsWithoutRef<'div'>,
+    React.HTMLAttributes<HTMLDivElement> {
+  acrylic?: boolean
+  children?: React.ReactNode
+  as?: keyof JSX.IntrinsicElements
+}

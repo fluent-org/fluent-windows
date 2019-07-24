@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { IconButtonStyled } from './IconButton.styled'
-import { ButtonProps } from '../Button/Button'
-
-// eslint-disable-next-line
-export interface IconButtonProps extends ButtonProps {}
+import { IconButtonProps } from './IconButton.type'
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   (

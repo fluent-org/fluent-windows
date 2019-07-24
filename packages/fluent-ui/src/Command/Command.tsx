@@ -1,53 +1,30 @@
 import * as React from 'react'
 import { More as MoreIcon } from '@fluent-ui/icons' // TODO treeShaking
 import { usePortal, useClickOutside, useReveal } from '@fluent-ui/hooks' // TODO treeShaking
+import { omit } from '../utils'
 import {
   StyledContent,
   StyledPrimary,
   StyledContainer,
   StyledSecondaryContainer
 } from './Command.styled'
-import Secondary from './Secondary'
-import Content from './Content'
+import Secondary from './components/Secondary'
+import Content from './components/Content'
 import CommandButton from '../CommandButton'
-import { omit } from '../utils'
-import { BoxProps } from '../Box/Box'
-import { ThemeProps } from '../styles/createTheme'
-
-type Child =
-  | React.ReactComponentElement<typeof CommandButton>
-  | React.ReactComponentElement<typeof Content>
-  | React.ReactComponentElement<typeof Secondary>
-  | any
-
-interface CommandProps extends BoxProps, ThemeProps {
-  reveal?: boolean
-  children: Child[] | Child
-}
-
-interface Container {
-  standard: React.ReactComponentElement<typeof CommandButton>[]
-  content: React.ReactComponentElement<typeof Content>[]
-  secondary: React.ReactComponentElement<typeof Secondary>[]
-}
-
-interface CommandType extends React.ForwardRefExoticComponent<CommandProps> {
-  Content: typeof Content
-  Secondary: typeof Secondary
-}
+import { CommandProps, CommandContainer, CommandChild, CommandType } from './Command.type'
 
 export const CommandContext = React.createContext(false)
 
 const Command = React.forwardRef<HTMLDivElement, CommandProps>(
   ({ acrylic, reveal, children, ...rest }: CommandProps, ref): React.ReactElement => {
-    const container: Container = {
+    const container: CommandContainer = {
       content: [],
       standard: [],
       secondary: []
     }
     React.Children.forEach(
       children,
-      (child: Child): void => {
+      (child: CommandChild): void => {
         if (child.type.displayName! === 'FCommandContent') {
           container.content.push(child)
         } else if (child.type.displayName === 'FCommandSecondary') {

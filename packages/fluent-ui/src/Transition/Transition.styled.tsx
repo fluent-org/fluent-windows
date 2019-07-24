@@ -2,19 +2,8 @@ import * as React from 'react'
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import { variant } from '@xstyled/system'
 import { createBaseTransition } from '../styles/createTransition'
-import { Box } from '..'
-
-export type Type = 'fade' | 'zoom' | 'slide' | 'collapse'
-export interface StyledContainerProps {
-  children: React.ReactElement
-  forwardRef: React.Ref<HTMLDivElement>
-  type?: Type
-  visible?: boolean
-  wrapper?: boolean
-  wrapperHeight: number
-  setWrapperHeight: React.Dispatch<number>
-  custom?: FlattenSimpleInterpolation
-}
+import Box from '../Box'
+import { StyledContainerProps } from './Transition.type'
 
 export const fade = css`
   &.fade-enter {
@@ -120,7 +109,6 @@ export const StyledContainer = styled(
     forwardRef,
     wrapper,
     setWrapperHeight,
-    custom,
     ...props
   }: StyledContainerProps): React.ReactElement => {
     const wrapperRef = React.useRef<HTMLDivElement>(null)

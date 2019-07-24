@@ -1,20 +1,8 @@
 import * as React from 'react'
+import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
 import Transition from '../Transition'
 import { StyledWrapper, StyledInput, StyledIcon } from './Input.styled'
-import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
-
-export interface InputProps
-  extends Omit<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    'size' | 'value' | 'onChange' | 'type'
-  > {
-  value?: string
-  onChange?: (value: string) => void
-  placeholder?: string
-  disabled?: boolean
-  cleared?: boolean
-  password?: boolean
-}
+import { InputProps } from './Input.type'
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (

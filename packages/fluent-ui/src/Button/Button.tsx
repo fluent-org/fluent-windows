@@ -1,17 +1,6 @@
 import * as React from 'react'
 import StyledButton from './Button.styled'
-
-export interface ButtonProps
-  extends React.ComponentPropsWithoutRef<'button'>,
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    StyledProps {
-  variant?: 'standard' | 'primary'
-  disabled?: boolean
-  size?: 'small' | 'medium' | 'large'
-
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
-  children: React.ReactNode
-}
+import { ButtonProps } from './Button.type'
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (

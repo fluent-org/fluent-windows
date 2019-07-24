@@ -57,6 +57,7 @@ exports[`Command acrylic 1`] = `
   background-color: #f5f5f5;
   position: relative;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .c0 {
@@ -962,6 +963,7 @@ exports[`Command without Content and Secondary 1`] = `
   background-color: #f5f5f5;
   position: relative;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .c0 {

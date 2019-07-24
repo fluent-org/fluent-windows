@@ -1,15 +1,7 @@
 import * as React from 'react'
 import { CSSTransition } from 'react-transition-group'
-import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
-import { Type, StyledContainer } from './Transition.styled'
-import { FlattenSimpleInterpolation } from '../styles/styled'
-
-export interface TransitionProps extends Omit<CSSTransitionProps, 'in'> {
-  type?: Type
-  visible?: boolean
-  wrapper?: boolean
-  custom?: FlattenSimpleInterpolation
-}
+import { StyledContainer } from './Transition.styled'
+import { TransitionProps } from './Transition.type'
 
 const Transition = React.forwardRef<HTMLDivElement, TransitionProps>(
   (

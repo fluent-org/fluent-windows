@@ -1,1 +1,2 @@
-export { default, CommandButtonProps } from './CommandButton'
+export { default } from './CommandButton'
+export * from './CommandButton.type'

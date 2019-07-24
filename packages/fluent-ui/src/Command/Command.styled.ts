@@ -2,7 +2,7 @@ import { styled, th } from '../styles/styled'
 import Box from '../Box'
 
 export const StyledContainer = styled(Box).attrs(
-  (props): any => ({
+  (props): object => ({
     backgroundColor: th.color('standard.light2').call(undefined, props)
   })
 )`
@@ -25,7 +25,7 @@ export const StyledPrimary = styled.div`
 `
 
 export const StyledSecondaryContainer = styled(Box).attrs(
-  (props): any => ({
+  (props): object => ({
     backgroundColor: th.color('standard.light2').call(undefined, props)
   })
 )`

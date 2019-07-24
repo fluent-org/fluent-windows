@@ -1,5 +1,5 @@
 import { styled, css, variant, th } from '../styles/styled'
-import { InputProps } from './Input'
+import { InputProps } from './Input.type'
 
 export const StyledWrapper = styled.span`
   display: inline-block;

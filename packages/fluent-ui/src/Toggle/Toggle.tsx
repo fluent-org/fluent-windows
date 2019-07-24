@@ -6,20 +6,10 @@ import {
   StyledToggleCircle,
   StyledToggle
 } from './Toggle.styled'
-
-interface ToggleProps {
-  checked?: boolean
-  value?: string
-  onChange?: (checked: boolean) => void
-  disabled?: boolean
-  children?: React.ReactNode
-}
+import { ToggleProps } from './Toggle.type'
 
 const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
-  (
-    { checked, value, onChange, disabled, children }: ToggleProps,
-    ref
-  ): React.ReactElement => {
+  ({ checked, value, onChange, disabled, children }: ToggleProps, ref): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }
