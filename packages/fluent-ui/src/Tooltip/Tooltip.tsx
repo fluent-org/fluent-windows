@@ -59,7 +59,7 @@ const Tooltip = ({
   return (
     <>
       {React.cloneElement(children, { ref: referenceRef, ...bind })}
-      <Transition visible={isVisible} wrapper={false}>
+      <Transition visible={isVisible} wrapper={false} mountOnEnter unmountOnExit>
         {content}
       </Transition>
     </>

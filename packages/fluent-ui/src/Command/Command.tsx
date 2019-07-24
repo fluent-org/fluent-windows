@@ -58,8 +58,9 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
       }
     )
 
+    // Secondary Popup related
     const {
-      visible: secondaryVisible,
+      // visible: secondaryVisible,
       setVisible: setSecondaryVisible,
       Portal: SecondaryPortal
     } = usePortal()
@@ -113,13 +114,12 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
                 <MoreIcon />
               </CommandButton>
             ))}
-          {secondaryVisible && (
-            <SecondaryPortal style={portalStyle}>
-              <StyledSecondaryContainer ref={secondaryRef} acrylic={acrylic}>
-                {container.secondary}
-              </StyledSecondaryContainer>
-            </SecondaryPortal>
-          )}
+
+          <SecondaryPortal style={portalStyle}>
+            <StyledSecondaryContainer ref={secondaryRef} acrylic={acrylic}>
+              {container.secondary}
+            </StyledSecondaryContainer>
+          </SecondaryPortal>
         </CommandContext.Provider>
       </StyledContainer>
     )

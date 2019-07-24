@@ -6,7 +6,7 @@ export interface usePropperOptions extends PopperJS.PopperOptions {}
 
 export function usePopper({
   placement = 'bottom',
-  positionFixed = false,
+  positionFixed = true,
   eventsEnabled = true,
   ...otherOptions
 }: usePropperOptions): [React.MutableRefObject<null>, React.MutableRefObject<null>] {
