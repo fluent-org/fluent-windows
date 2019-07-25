@@ -24,7 +24,6 @@ export type Variant =
   | 'subtitle2'
   | 'body1'
   | 'body2'
-  | string
 
 export interface TypographyProps extends BoxProps {
   variant?: Variant

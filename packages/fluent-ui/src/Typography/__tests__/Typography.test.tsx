@@ -3,6 +3,7 @@ import * as renderer from 'react-test-renderer'
 import 'jest-styled-components'
 
 import { ThemeProvider, Typography } from '../..'
+import { Variant } from '../Typography.type'
 
 describe('Typography', (): void => {
   const theme = {}
@@ -27,7 +28,19 @@ describe('Typography', (): void => {
   })
 
   test('variant', (): void => {
-    ;['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body2', 'body1'].forEach(
+    const variants: Variant[] = [
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6',
+      'subtitle1',
+      'subtitle2',
+      'body2',
+      'body1'
+    ]
+    variants.forEach(
       (variant): void => {
         const component = renderer.create(
           <ThemeProvider theme={theme}>
