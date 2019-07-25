@@ -10,7 +10,7 @@
       "npmClient": "npm",
       "verifyAccess": false,
       "ignoreChanges": ["*.md", "**/test/**"],
-      "message": "chore(release): publish %s"
+      "message": "chore(release): publish"
     }
   }
 }

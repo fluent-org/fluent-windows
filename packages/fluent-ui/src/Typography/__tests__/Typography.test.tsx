@@ -53,6 +53,16 @@ describe('Typography', (): void => {
     )
   })
 
+  test('gutterTop', (): void => {
+    const component = renderer.create(
+      <ThemeProvider theme={theme}>
+        <Typography gutterTop>as span</Typography>
+      </ThemeProvider>
+    )
+    const tree = component.toJSON()
+    expect(tree).toHaveStyleRule('margin-top', '0.65em')
+  })
+
   test('gutterBottom', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>

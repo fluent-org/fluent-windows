@@ -1,5 +1,4 @@
 import { styled, css, variant } from '../styles/styled'
-import Box from '../Box'
 import { TypographyProps } from './Typography.type'
 
 const base = css`
@@ -11,6 +10,16 @@ const variants = variant({
   prop: 'variant'
 })
 
+const gutterTop = variant({
+  prop: 'gutterTop',
+  default: false,
+  variants: {
+    true: css`
+      margin-top: 0.65em;
+    `,
+    false: css``
+  }
+})
 const gutterBottom = variant({
   prop: 'gutterBottom',
   default: false,
@@ -35,9 +44,10 @@ const noWrap = variant({
   }
 })
 
-export const StyledTypography = styled(Box)<TypographyProps>`
+export const StyledTypography = styled.div<TypographyProps>`
   ${base}
   ${variants}
+  ${gutterTop}
   ${gutterBottom}
   ${noWrap}
 `

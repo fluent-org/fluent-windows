@@ -28,6 +28,7 @@ export type Variant =
 export interface TypographyProps extends BoxProps {
   variant?: Variant
   variantMapping?: VariantMapping
+  gutterTop?: boolean
   gutterBottom?: boolean
   noWrap?: boolean
 }
