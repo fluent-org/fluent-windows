@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.7.2...@fluent-ui/core@0.8.0) (2019-07-25)
+
+
+### Bug Fixes
+
+* **Typography:** Fix Variant type ([4b76252](https://github.com/chenyueban/fluent-ui/commit/4b76252))
+
+
+### Features
+
+* **Tooltip:** Tooltip does not render by default ([cb5af8a](https://github.com/chenyueban/fluent-ui/commit/cb5af8a))
+* **Typography:** new component Typography ([c3d768e](https://github.com/chenyueban/fluent-ui/commit/c3d768e))
+
+
+
+
+
 ## [0.7.2](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.7.1...@fluent-ui/core@0.7.2) (2019-07-23)
 
 **Note:** Version bump only for package @fluent-ui/core

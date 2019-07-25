@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.5.1...@fluent-ui/hooks@0.6.0) (2019-07-25)
+
+
+### Features
+
+* **Tooltip:** Tooltip does not render by default ([cb5af8a](https://github.com/chenyueban/fluent-ui/commit/cb5af8a))
+
+
+
+
+
 ## [0.5.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.5.0...@fluent-ui/hooks@0.5.1) (2019-07-23)
 
 **Note:** Version bump only for package @fluent-ui/hooks
