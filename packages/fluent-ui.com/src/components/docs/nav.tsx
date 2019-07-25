@@ -17,9 +17,10 @@ import {
   NUIFPRollLeftHand as NUIFPRollLeftHandIcon,
   BackgroundToggle as BackgroundToggleIcon,
   ToolTip as TooltipIcon,
-  CashDrawer as CashDrawerIcon
+  CashDrawer as CashDrawerIcon,
+  FontSize as FontSizeIcon
 } from '@fluent-ui/icons'
-import { useMedia, useAction } from '@fluent-ui/hooks'
+import { useAction } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [
@@ -78,6 +79,10 @@ const iconMap = [
   {
     title: 'Drawer',
     icon: <CashDrawerIcon />
+  },
+  {
+    title: 'Typography',
+    icon: <FontSizeIcon />
   }
 ]
 

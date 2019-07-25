@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography as 1`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+<span
+  className="c0"
+>
+  as span
+</span>
+`;
+
+exports[`Typography basic 1`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+<p
+  className="c0"
+>
+  basic
+</p>
+`;
+
+exports[`Typography variant 1`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+<h1
+  className="c0"
+>
+  as span
+</h1>
+`;
+
+exports[`Typography variant 2`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+<h2
+  className="c0"
+>
+  as span
+</h2>
+`;
+
+exports[`Typography variant 3`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.04;
+}
+
+<h3
+  className="c0"
+>
+  as span
+</h3>
+`;
+
+exports[`Typography variant 4`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 2.125rem;
+  line-height: 1.17;
+}
+
+<h4
+  className="c0"
+>
+  as span
+</h4>
+`;
+
+exports[`Typography variant 5`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+<h5
+  className="c0"
+>
+  as span
+</h5>
+`;
+
+exports[`Typography variant 6`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+<h6
+  className="c0"
+>
+  as span
+</h6>
+`;
+
+exports[`Typography variant 7`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+<h6
+  className="c0"
+>
+  as span
+</h6>
+`;
+
+exports[`Typography variant 8`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.57;
+}
+
+<h6
+  className="c0"
+>
+  as span
+</h6>
+`;
+
+exports[`Typography variant 9`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+<p
+  className="c0"
+>
+  as span
+</p>
+`;
+
+exports[`Typography variant 10`] = `
+.c0 {
+  margin: 0;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+<p
+  className="c0"
+>
+  as span
+</p>
+`;

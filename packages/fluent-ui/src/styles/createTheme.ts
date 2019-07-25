@@ -3,9 +3,9 @@ import { deepMerge } from '../utils'
 import createColor, { Colors } from './createColor'
 import createTransition, { Transitions } from './createTransition'
 import createSize, { Sizes } from './createSize'
-import createFont, { Fonts } from './createFont'
 import shadows, { Shadows } from './createShadow'
 import createBreakpoint, { Breakpoints, defaultBreakpoints } from './createBreakpoint'
+import createTypographies, { Typographies } from './createTypography'
 
 // eslint-disable-next-line
 export interface ThemeProps {}
@@ -14,9 +14,9 @@ export interface Theme {
   colors?: Colors
   sizes?: Sizes
   transitions?: Transitions
-  fonts?: Fonts
   shadows?: Shadows
   breakpoints?: Breakpoints
+  typographies?: Typographies
 }
 
 function createTheme(theme: Theme): Theme {
@@ -24,16 +24,16 @@ function createTheme(theme: Theme): Theme {
     colors: colorsInput = {},
     sizes: sizesInput = {},
     transitions: transitionsInput = {},
-    fonts: fontsInput = {},
     shadows: shadowsInput,
-    breakpoints: breakpointsInput = defaultBreakpoints
+    breakpoints: breakpointsInput = defaultBreakpoints,
+    typographies: typographiesInput = {}
   } = theme
 
   const colors = createColor(colorsInput)
   const transitions = createTransition(transitionsInput)
   const sizes = createSize(sizesInput)
-  const fonts = createFont(fontsInput)
   const breakpoints = createBreakpoint(breakpointsInput)
+  const typographies = createTypographies(typographiesInput)
 
   return {
     shadows: shadowsInput || shadows,
@@ -41,8 +41,8 @@ function createTheme(theme: Theme): Theme {
       colors,
       sizes,
       transitions,
-      fonts,
-      breakpoints
+      breakpoints,
+      typographies
     })
   }
 }

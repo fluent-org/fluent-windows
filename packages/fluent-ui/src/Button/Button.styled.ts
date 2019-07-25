@@ -1,5 +1,5 @@
 import { styled, css, variant, th } from '../styles/styled'
-import { ButtonProps } from './Button'
+import { ButtonProps } from './Button.type'
 
 const base = css`
   display: inline-block;
@@ -12,9 +12,6 @@ const base = css`
   border-radius: 2px;
   text-align: center;
   line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 0.0228em;
-  font-family: ${th.font('button')};
   transition: ${th.transition('button')};
   &:disabled {
     color: ${th.color('standard.dark2')};
