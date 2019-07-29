@@ -38,7 +38,7 @@ const variants = variant({
     primary: css`
       color: ${th.color('white.default')};
       background-color: ${th.color('primary.default')};
-      box-shadow: ${th.shadow(1)};
+      box-shadow: ${th.shadow(3)};
       &:hover,
       &:focus {
         background-color: ${th.color('primary.dark1')};
@@ -46,7 +46,7 @@ const variants = variant({
       &:active {
         color: ${th.color('white.default')};
         background-color: ${th.color('primary.dark3')};
-        box-shadow: ${th.shadow(3)};
+        box-shadow: ${th.shadow(4)};
       }
     `
   }

@@ -57,7 +57,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
     <Box
       flex={1}
       transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
-      boxShadow="0px 3px 5px -1px rgba(0,0,0,0.12), 0px 3px 8px 0px rgba(0,0,0,0.06)"
+      boxShadow="2"
       position="relative"
       zIndex={2}
       overflow="auto"

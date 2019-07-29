@@ -65,7 +65,7 @@ const anchorMap = {
 export const StyledDrawer = styled.div<StyledDrawerProps>`
   position: fixed;
   z-index: 1001;
-  box-shadow: ${th.shadow(1)};
+  box-shadow: ${th.shadow(3)};
   background-color: ${th.color('white.default')};
   ${({ anchor }: StyledDrawerProps): FlattenSimpleInterpolation => anchorMap[anchor!]}
 `

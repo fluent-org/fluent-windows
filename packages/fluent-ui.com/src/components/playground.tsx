@@ -18,14 +18,10 @@ const Playground: React.FC<PlaygroundProps> = ({
 }: PlaygroundProps): React.ReactElement => {
   const [codeVisible, setCodeVisible] = React.useState(false)
   function handleCodeVisible(): void {
-    setCodeVisible(v => !v)
+    setCodeVisible((v): boolean => !v)
   }
   return (
-    <Box
-      as="section"
-      boxShadow="rgba(0, 0, 0, 0.06) 0px 2px 8px, rgba(0, 0, 0, 0.05) 0px 0.5px 1px"
-      borderRadius="4px"
-    >
+    <Box as="section" boxShadow="1" borderRadius="4px">
       <LiveProvider code={children.props.children} scope={scope} theme={theme}>
         <Command height={46}>
           <Tooltip title="code" placement="top">
