@@ -18,7 +18,8 @@ import {
   BackgroundToggle as BackgroundToggleIcon,
   ToolTip as TooltipIcon,
   CashDrawer as CashDrawerIcon,
-  FontSize as FontSizeIcon
+  FontSize as FontSizeIcon,
+  ActionCenter as ActionCenterIcon
 } from '@fluent-ui/icons'
 import { useAction } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
@@ -83,6 +84,10 @@ const iconMap = [
   {
     title: 'Typography',
     icon: <FontSizeIcon />
+  },
+  {
+    title: 'Dialog',
+    icon: <ActionCenterIcon />
   }
 ]
 
