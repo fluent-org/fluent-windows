@@ -65,3 +65,17 @@ Show a button to clear your input.
   )
 }
 ```
+
+## Error
+
+```jsx
+() => {
+  const [value, setValue] = React.useState('')
+  function handleChange(v) {
+    setValue(v)
+  }
+  return (
+    <Input value={value} onChange={handleChange} error />
+  )
+}
+```

@@ -6,7 +6,7 @@ import { InputProps } from './Input.type'
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    { value, onChange, placeholder, disabled, cleared, password, ...rest }: InputProps,
+    { value, onChange, placeholder, disabled, cleared, password, error, ...rest }: InputProps,
     ref
   ): React.ReactElement => {
     const clearedRef = React.useRef<HTMLSpanElement>(null)
@@ -31,6 +31,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           placeholder={placeholder}
           disabled={disabled}
           cleared={cleared}
+          error={error}
           type={password ? 'password' : 'text'}
           clearedHeight={clearedHeight}
           {...rest}

@@ -1,5 +1,6 @@
 export { default as standard } from './standard'
 export { default as primary } from './primary'
+export { default as error } from './error'
 export { default as black } from './black'
 export { default as white } from './white'
 

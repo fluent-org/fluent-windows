@@ -43,6 +43,24 @@ const cleared = variant({
   }
 })
 
+const error = variant({
+  prop: 'error',
+  default: false,
+  variants: {
+    true: css`
+      border-color: ${th.color('error.default')};
+      &:hover {
+        border-color: ${th.color('error.default')};
+      }
+      &:active,
+      &:focus {
+        border-color: ${th.color('error.default')};
+      }
+    `,
+    false: css``
+  }
+})
+
 interface StyledInputProps extends Omit<InputProps, 'onChange'> {
   clearedHeight: number
 }
@@ -50,6 +68,7 @@ interface StyledInputProps extends Omit<InputProps, 'onChange'> {
 export const StyledInput = styled.input<StyledInputProps>`
   ${base}
   ${cleared}
+  ${error}
 `
 
 export const StyledIcon = styled.span<{ clearedHeight: number }>`

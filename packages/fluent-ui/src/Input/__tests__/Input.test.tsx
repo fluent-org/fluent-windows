@@ -74,4 +74,14 @@ describe('Input', (): void => {
     )
     expect((node.current as HTMLInputElement).type).toEqual('password')
   })
+
+  test('prop error', (): void => {
+    const component = renderer.create(
+      <ThemeProvider theme={theme}>
+        <Input error={true} />
+      </ThemeProvider>
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

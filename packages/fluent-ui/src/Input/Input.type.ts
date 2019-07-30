@@ -9,4 +9,5 @@ export interface InputProps
   disabled?: boolean
   cleared?: boolean
   password?: boolean
+  error?: boolean
 }
