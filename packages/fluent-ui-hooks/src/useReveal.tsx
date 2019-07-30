@@ -1,30 +1,20 @@
 import * as React from 'react'
-import {
-  ReactElement,
-  useState,
-  useRef,
-  useCallback,
-  ReactNode,
-  useEffect,
-  RefObject,
-  SFC
-} from 'react'
 import * as CSS from 'csstype'
 
-type Return = [SFC<RevealWrapperProps>]
+type Return = [React.FC<RevealWrapperProps>]
 
 interface RevealWrapperProps {
-  children: ReactNode
+  children: React.ReactElement
 }
 
 const createRevealWrapper = (
   gradientSize: number,
   lightColor: CSS.ColorProperty
-): SFC<RevealWrapperProps> => {
-  const RevealWrapper = ({ children }: RevealWrapperProps): ReactElement => {
-    const [background, setBackground] = useState()
-    const ref = useRef<HTMLDivElement>() as RefObject<HTMLDivElement>
-    const listener = useCallback(
+): React.FC<RevealWrapperProps> => {
+  const RevealWrapper = ({ children }: RevealWrapperProps): React.ReactElement => {
+    const [background, setBackground] = React.useState()
+    const ref = React.useRef<HTMLDivElement>() as React.RefObject<HTMLDivElement>
+    const listener = React.useCallback(
       (e: MouseEvent): void => {
         const rect = ref.current && ref.current.getBoundingClientRect()
         if (ref.current && rect) {
@@ -36,7 +26,7 @@ const createRevealWrapper = (
       },
       [ref]
     )
-    useEffect((): (() => void) => {
+    React.useEffect((): (() => void) => {
       document.addEventListener('mousemove', listener)
       return (): void => {
         document.removeEventListener('mousemove', listener)
@@ -44,7 +34,7 @@ const createRevealWrapper = (
     }, [listener])
     return (
       <div ref={ref} style={{ background, margin: 1, padding: 1 }}>
-        {children}
+        {React.cloneElement(children)}
       </div>
     )
   }

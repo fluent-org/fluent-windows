@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useReveal } from '@fluent-ui/hooks' // TODO treeShaking
+import { useReveal, useMedia } from '@fluent-ui/hooks' // TODO treeShaking
 import { omit } from '../utils'
 
 import Header from './components/Header'
@@ -55,6 +55,27 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
 
     reveal = acrylic ? false : reveal
     const [RevealWrapper] = useReveal(66)
+    const revealHeader = React.useMemo(
+      (): React.ReactElement[] =>
+        container.header.map(
+          (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
+        ),
+      [container.header]
+    )
+    const revealContent = React.useMemo(
+      (): React.ReactElement[] =>
+        container.content.map(
+          (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
+        ),
+      [container.content]
+    )
+    const revealFooter = React.useMemo(
+      (): React.ReactElement[] =>
+        container.footer.map(
+          (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
+        ),
+      [container.footer]
+    )
 
     const contextValue = {
       value: value as NavigationID,
@@ -74,25 +95,13 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
           {...others}
         >
           <StyledHeader horizontal={horizontal}>
-            {reveal
-              ? container.header.map(
-                  (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
-                )
-              : container.header}
+            {reveal ? revealHeader : container.header}
           </StyledHeader>
           <StyledContent horizontal={horizontal}>
-            {reveal
-              ? container.content.map(
-                  (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
-                )
-              : container.content}
+            {reveal ? revealContent : container.content}
           </StyledContent>
           <StyledFooter horizontal={horizontal}>
-            {reveal
-              ? container.footer.map(
-                  (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
-                )
-              : container.footer}
+            {reveal ? revealFooter : container.footer}
           </StyledFooter>
         </StyledContainer>
       </NavigationContext.Provider>

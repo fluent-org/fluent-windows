@@ -230,7 +230,7 @@ exports[`Navigation basic 1`] = `
   height={600}
 >
   <div
-    className="c2"
+    className="c2 c3"
   >
     <div
       className="c3"
@@ -424,7 +424,7 @@ exports[`Navigation basic 1`] = `
     </div>
   </div>
   <div
-    className="c12"
+    className="c12 c3"
   >
     <div
       className="c3"
@@ -700,7 +700,7 @@ exports[`Navigation controlled 1`] = `
   height={600}
 >
   <div
-    className="c2"
+    className="c2 c3"
   >
     <div
       className="c3"
@@ -894,7 +894,7 @@ exports[`Navigation controlled 1`] = `
     </div>
   </div>
   <div
-    className="c12"
+    className="c12 c3"
   >
     <div
       className="c3"
