@@ -60,21 +60,21 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
         container.header.map(
           (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
         ),
-      [container.header]
+      [] // eslint-disable-line
     )
     const revealContent = React.useMemo(
       (): React.ReactElement[] =>
         container.content.map(
           (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
         ),
-      [container.content]
+      [] // eslint-disable-line
     )
     const revealFooter = React.useMemo(
       (): React.ReactElement[] =>
         container.footer.map(
           (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
         ),
-      [container.footer]
+      [] // eslint-disable-line
     )
 
     const contextValue = {
