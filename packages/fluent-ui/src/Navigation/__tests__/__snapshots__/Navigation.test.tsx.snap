@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navigation basic 1`] = `
-.c9 {
+.c10 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -14,7 +14,7 @@ exports[`Navigation basic 1`] = `
   fill: currentColor;
 }
 
-.c5 {
+.c6 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -27,7 +27,7 @@ exports[`Navigation basic 1`] = `
   fill: currentColor;
 }
 
-.c12 {
+.c13 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -43,9 +43,14 @@ exports[`Navigation basic 1`] = `
 .c1 {
   background-color: #f5f5f5;
   height: 600px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .c3 {
+  -webkit-overflow-scrolling: touch;
+}
+
+.c4 {
   position: relative;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -72,16 +77,16 @@ exports[`Navigation basic 1`] = `
   background-color: transparent;
 }
 
-.c3:hover {
+.c4:hover {
   background-color: rgba(0,0,0,0.1);
 }
 
-.c3:active {
+.c4:active {
   color: #000000;
   background-color: rgba(0,0,0,0.2);
 }
 
-.c8 {
+.c9 {
   position: absolute;
   background-color: #0078d4;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
@@ -96,13 +101,13 @@ exports[`Navigation basic 1`] = `
   transform: scale3d(0,0,0);
 }
 
-.c4 {
+.c5 {
   height: 100%;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c6 {
+.c7 {
   width: auto;
   opacity: 1;
   padding-left: 0px;
@@ -119,7 +124,7 @@ exports[`Navigation basic 1`] = `
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c10 {
+.c11 {
   width: auto;
   opacity: 1;
   padding-left: 12px;
@@ -163,7 +168,7 @@ exports[`Navigation basic 1`] = `
   flex-direction: column;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -173,7 +178,7 @@ exports[`Navigation basic 1`] = `
   flex-direction: column;
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -183,10 +188,41 @@ exports[`Navigation basic 1`] = `
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@media (min-width:600px) {
+  .c1::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c1::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c1::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+@media (min-width:600px) {
+  .c3::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c3::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c3::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
 }
 
 <div
@@ -197,17 +233,17 @@ exports[`Navigation basic 1`] = `
     className="c2"
   >
     <div
-      className=""
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         onClick={[Function]}
       >
         <div
-          className="c4"
+          className="c5"
         >
           <svg
-            className="c5"
+            className="c6"
             style={
               Object {
                 "height": 16,
@@ -222,26 +258,26 @@ exports[`Navigation basic 1`] = `
           </svg>
         </div>
         <div
-          className="c6"
+          className="c7"
         />
       </div>
     </div>
   </div>
   <div
-    className="c7"
+    className="c8 c3"
   >
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -256,7 +292,7 @@ exports[`Navigation basic 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -270,17 +306,17 @@ exports[`Navigation basic 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -295,7 +331,7 @@ exports[`Navigation basic 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -309,17 +345,17 @@ exports[`Navigation basic 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -334,7 +370,7 @@ exports[`Navigation basic 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -348,17 +384,17 @@ exports[`Navigation basic 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -373,7 +409,7 @@ exports[`Navigation basic 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -388,20 +424,20 @@ exports[`Navigation basic 1`] = `
     </div>
   </div>
   <div
-    className="c11"
+    className="c12"
   >
     <div
-      className=""
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         onClick={[Function]}
       >
         <div
-          className="c4"
+          className="c5"
         >
           <svg
-            className="c12"
+            className="c13"
             style={
               Object {
                 "height": 16,
@@ -416,7 +452,7 @@ exports[`Navigation basic 1`] = `
           </svg>
         </div>
         <div
-          className="c10"
+          className="c11"
         >
           <span
             style={
@@ -435,7 +471,7 @@ exports[`Navigation basic 1`] = `
 `;
 
 exports[`Navigation controlled 1`] = `
-.c9 {
+.c10 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -448,7 +484,7 @@ exports[`Navigation controlled 1`] = `
   fill: currentColor;
 }
 
-.c5 {
+.c6 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -461,7 +497,7 @@ exports[`Navigation controlled 1`] = `
   fill: currentColor;
 }
 
-.c12 {
+.c13 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -477,9 +513,14 @@ exports[`Navigation controlled 1`] = `
 .c1 {
   background-color: #f5f5f5;
   height: 600px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .c3 {
+  -webkit-overflow-scrolling: touch;
+}
+
+.c4 {
   position: relative;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -506,16 +547,16 @@ exports[`Navigation controlled 1`] = `
   background-color: transparent;
 }
 
-.c3:hover {
+.c4:hover {
   background-color: rgba(0,0,0,0.1);
 }
 
-.c3:active {
+.c4:active {
   color: #000000;
   background-color: rgba(0,0,0,0.2);
 }
 
-.c8 {
+.c9 {
   position: absolute;
   background-color: #0078d4;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
@@ -530,13 +571,13 @@ exports[`Navigation controlled 1`] = `
   transform: scale3d(0,0,0);
 }
 
-.c4 {
+.c5 {
   height: 100%;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c6 {
+.c7 {
   width: auto;
   opacity: 1;
   padding-left: 0px;
@@ -553,7 +594,7 @@ exports[`Navigation controlled 1`] = `
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c10 {
+.c11 {
   width: auto;
   opacity: 1;
   padding-left: 12px;
@@ -597,7 +638,7 @@ exports[`Navigation controlled 1`] = `
   flex-direction: column;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -607,7 +648,7 @@ exports[`Navigation controlled 1`] = `
   flex-direction: column;
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -617,10 +658,41 @@ exports[`Navigation controlled 1`] = `
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@media (min-width:600px) {
+  .c1::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c1::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c1::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+@media (min-width:600px) {
+  .c3::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c3::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c3::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
 }
 
 <div
@@ -631,17 +703,17 @@ exports[`Navigation controlled 1`] = `
     className="c2"
   >
     <div
-      className=""
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         onClick={[Function]}
       >
         <div
-          className="c4"
+          className="c5"
         >
           <svg
-            className="c5"
+            className="c6"
             style={
               Object {
                 "height": 16,
@@ -656,26 +728,26 @@ exports[`Navigation controlled 1`] = `
           </svg>
         </div>
         <div
-          className="c6"
+          className="c7"
         />
       </div>
     </div>
   </div>
   <div
-    className="c7"
+    className="c8 c3"
   >
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -690,7 +762,7 @@ exports[`Navigation controlled 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -704,17 +776,17 @@ exports[`Navigation controlled 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -729,7 +801,7 @@ exports[`Navigation controlled 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -743,17 +815,17 @@ exports[`Navigation controlled 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -768,7 +840,7 @@ exports[`Navigation controlled 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -782,17 +854,17 @@ exports[`Navigation controlled 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       <div
-        className="c8"
+        className="c9"
       />
       <div
-        className="c4"
+        className="c5"
       >
         <svg
-          className="c9"
+          className="c10"
           style={
             Object {
               "height": 16,
@@ -807,7 +879,7 @@ exports[`Navigation controlled 1`] = `
         </svg>
       </div>
       <div
-        className="c10"
+        className="c11"
       >
         <span
           style={
@@ -822,20 +894,20 @@ exports[`Navigation controlled 1`] = `
     </div>
   </div>
   <div
-    className="c11"
+    className="c12"
   >
     <div
-      className=""
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
         onClick={[Function]}
       >
         <div
-          className="c4"
+          className="c5"
         >
           <svg
-            className="c12"
+            className="c13"
             style={
               Object {
                 "height": 16,
@@ -850,7 +922,7 @@ exports[`Navigation controlled 1`] = `
           </svg>
         </div>
         <div
-          className="c10"
+          className="c11"
         >
           <span
             style={

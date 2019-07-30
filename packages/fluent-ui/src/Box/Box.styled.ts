@@ -1,8 +1,24 @@
-import { styled, system } from '../styles/styled'
+import { styled, system, th, css, breakpoints } from '../styles/styled'
 import { BoxProps } from './Box.type'
 
 export const BaseBox = styled.div`
   ${system}
+  -webkit-overflow-scrolling: touch;
+  ${breakpoints({
+    sm: css`
+      &::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: ${th.color('standard.transparent2')};
+        &:hover {
+          background-color: ${th.color('standard.transparent3')};
+        }
+      }
+    `
+  })}
 `
 
 const mosaic =
@@ -11,7 +27,6 @@ const mosaic =
 export const AcrylicBox = styled(BaseBox)`
   position: ${({ position }: BoxProps): string => position || 'relative'};
   overflow: ${({ overflow }: BoxProps): string => overflow || 'hidden'};
-  -webkit-overflow-scrolling: touch;
   @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
     background: none !important;
     backdrop-filter: blur(10px);

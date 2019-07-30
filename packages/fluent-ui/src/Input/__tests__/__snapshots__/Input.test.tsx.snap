@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input basic 1`] = `
+.c3 {
+  -webkit-overflow-scrolling: touch;
+}
+
 .c2 {
   -webkit-transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
@@ -139,6 +143,22 @@ exports[`Input basic 1`] = `
   pointer-events: none;
 }
 
+@media (min-width:600px) {
+  .c3::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c3::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c3::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 <span
   className="c0"
 >
@@ -148,18 +168,22 @@ exports[`Input basic 1`] = `
     type="text"
   />
   <div
-    className="c2 "
+    className="c2 c3"
     type="fade"
   >
     <div
-      className=""
+      className="c3"
     />
   </div>
 </span>
 `;
 
 exports[`Input prop cleared 1`] = `
-.c4 {
+.c3 {
+  -webkit-overflow-scrolling: touch;
+}
+
+.c5 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -311,7 +335,7 @@ exports[`Input prop cleared 1`] = `
   pointer-events: none;
 }
 
-.c3 {
+.c4 {
   width: 0px;
   height: 100%;
   position: absolute;
@@ -335,9 +359,25 @@ exports[`Input prop cleared 1`] = `
   transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c3:hover {
+.c4:hover {
   background-color: #0078d4;
   color: #ffffff;
+}
+
+@media (min-width:600px) {
+  .c3::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c3::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c3::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
 }
 
 <span
@@ -349,18 +389,18 @@ exports[`Input prop cleared 1`] = `
     type="text"
   />
   <div
-    className="c2 "
+    className="c2 c3"
     type="fade"
   >
     <div
-      className=""
+      className="c3"
     >
       <span
-        className="c3"
+        className="c4"
         onClick={[Function]}
       >
         <svg
-          className="c4"
+          className="c5"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -374,6 +414,10 @@ exports[`Input prop cleared 1`] = `
 `;
 
 exports[`Input prop error 1`] = `
+.c3 {
+  -webkit-overflow-scrolling: touch;
+}
+
 .c2 {
   -webkit-transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
@@ -522,6 +566,22 @@ exports[`Input prop error 1`] = `
   border-color: #f44336;
 }
 
+@media (min-width:600px) {
+  .c3::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c3::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c3::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 <span
   className="c0"
 >
@@ -531,11 +591,11 @@ exports[`Input prop error 1`] = `
     type="text"
   />
   <div
-    className="c2 "
+    className="c2 c3"
     type="fade"
   >
     <div
-      className=""
+      className="c3"
     />
   </div>
 </span>

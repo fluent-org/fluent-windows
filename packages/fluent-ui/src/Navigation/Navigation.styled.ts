@@ -68,12 +68,11 @@ export const StyledFooter = styled.div<{ horizontal?: boolean }>`
   })}
 `
 
-export const StyledContent = styled.div<{ horizontal?: boolean }>`
+export const StyledContent = styled(Box)<{ horizontal?: boolean }>`
   flex: 1;
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   ${variant({
     prop: 'horizontal',
     default: false,

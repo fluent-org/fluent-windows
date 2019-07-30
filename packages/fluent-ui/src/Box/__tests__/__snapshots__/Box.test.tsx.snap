@@ -1,16 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Box as 1`] = `
+.c0 {
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width:600px) {
+  .c0::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c0::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c0::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 <span
-  className=""
+  className="c0"
 >
   as span
 </span>
 `;
 
 exports[`Box basic 1`] = `
+.c0 {
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width:600px) {
+  .c0::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c0::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c0::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 <div
-  className=""
+  className="c0"
 >
   basic
 </div>
