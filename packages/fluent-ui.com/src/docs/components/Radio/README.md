@@ -6,7 +6,7 @@ type: Inputs
 
 # Radio
 
-<p class="description">Radio allow the user to select one option from a set.</p>
+<p class="description">Radio buttons, let users select one option from two or more choices. Each option is represented by one Choice Group button; a user can select only one ChoiceGroup in a button group.</p>
 
 ## Controlled
 

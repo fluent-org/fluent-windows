@@ -24,7 +24,7 @@ const Header = (): React.ReactElement => {
         </CommandButton>
       </Tooltip>
       <Tooltip title="Github repository">
-        <CommandButton as="a" href="https://github.com/chenyueban/fluent-ui">
+        <CommandButton as="a" href="https://github.com/fluent-org/fluent-ui">
           <CodeIcon />
         </CommandButton>
       </Tooltip>

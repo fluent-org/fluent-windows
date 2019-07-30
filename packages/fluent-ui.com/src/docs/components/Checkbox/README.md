@@ -6,7 +6,7 @@ type: Inputs
 
 # Checkbox
 
-<p class="description">Checkbox allow the user to select one or more items from a set.</p>
+<p class="description">A Checkbox is a UI element that allows users to switch between two mutually exclusive options (checked or unchecked, on or off) through a single click or tap. It can also be used to indicate a subordinate setting or preference when paired with another control.</p>
 
 ## Controlled
 

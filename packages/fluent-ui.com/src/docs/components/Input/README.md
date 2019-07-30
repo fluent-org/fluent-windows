@@ -6,7 +6,7 @@ type: Inputs
 
 # Inputs
 
-<p class="description">Text fields let users enter and edit text.</p>
+<p class="description">The `Input` component enables a user to type text into an app. It's typically used to capture a single line of text, but can be configured to capture multiple lines of text. The text displays on the screen in a simple, uniform format.</p>
 
 ## Default
 

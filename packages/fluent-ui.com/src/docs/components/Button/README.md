@@ -6,7 +6,7 @@ type: Inputs
 
 # Buttons
 
-<p class="description">Buttons give users a way to trigger an immediate action.</p>
+<p class="description">Buttons are best used to enable a user to commit a change or complete steps in a task. They are typically found inside forms, dialogs, panels or pages. An example of their usage is confirming the deletion of a file in a confirmation dialog.</p>
 
 ## Variant
 

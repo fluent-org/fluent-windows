@@ -6,7 +6,7 @@ type: Inputs
 
 # Toggle
 
-<p class="description">Toggle allow the user to select one or more items from a set.</p>
+<p class="description">Toggles represent a physical switch that allows users to turn things on or off. Use Toggles to present users with two mutually exclusive options (like on/off), where choosing an option results in an immediate action.</p>
 
 ## Controlled
 
