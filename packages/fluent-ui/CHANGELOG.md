@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.8.0...@fluent-ui/core@0.9.0) (2019-07-31)
+
+
+### Bug Fixes
+
+* **Navigation:** Eliminate automatically added deps ([820b6a3](https://github.com/chenyueban/fluent-ui/commit/820b6a3))
+* **Navigation:** Fix the problem of item refresh under reveal ([9239dd9](https://github.com/chenyueban/fluent-ui/commit/9239dd9))
+
+
+### Features
+
+* **Box:** Modify the scrollbar style of the box ([11f5e22](https://github.com/chenyueban/fluent-ui/commit/11f5e22))
+* **Dialog:** Add new component Dialog ([6c6784e](https://github.com/chenyueban/fluent-ui/commit/6c6784e))
+* **Input:** Add a new prop error ([06f03af](https://github.com/chenyueban/fluent-ui/commit/06f03af))
+* **Portal:** New component Portal ([96b8d4b](https://github.com/chenyueban/fluent-ui/commit/96b8d4b)), closes [#1](https://github.com/chenyueban/fluent-ui/issues/1)
+
+
+
+
+
 # [0.8.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.7.2...@fluent-ui/core@0.8.0) (2019-07-25)
 
 

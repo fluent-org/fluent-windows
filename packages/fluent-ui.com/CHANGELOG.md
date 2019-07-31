@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.6.0...fluent-ui.com@1.7.0) (2019-07-31)
+
+
+### Features
+
+* **Box:** Modify the scrollbar style of the box ([11f5e22](https://github.com/chenyueban/fluent-ui/commit/11f5e22))
+* **Dialog:** Add new component Dialog ([6c6784e](https://github.com/chenyueban/fluent-ui/commit/6c6784e))
+* **Input:** Add a new prop error ([06f03af](https://github.com/chenyueban/fluent-ui/commit/06f03af))
+* **Portal:** New component Portal ([96b8d4b](https://github.com/chenyueban/fluent-ui/commit/96b8d4b)), closes [#1](https://github.com/chenyueban/fluent-ui/issues/1)
+
+
+
+
+
 # [1.6.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.5.2...fluent-ui.com@1.6.0) (2019-07-25)
 
 

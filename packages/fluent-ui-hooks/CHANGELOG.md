@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.6.0...@fluent-ui/hooks@0.7.0) (2019-07-31)
+
+
+### Bug Fixes
+
+* **Navigation:** Fix the problem of item refresh under reveal ([9239dd9](https://github.com/chenyueban/fluent-ui/commit/9239dd9))
+
+
+### Features
+
+* **Portal:** New component Portal ([96b8d4b](https://github.com/chenyueban/fluent-ui/commit/96b8d4b)), closes [#1](https://github.com/chenyueban/fluent-ui/issues/1)
+
+
+
+
+
 # [0.6.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.5.1...@fluent-ui/hooks@0.6.0) (2019-07-25)
 
 
