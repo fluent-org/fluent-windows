@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { More as MoreIcon } from '@fluent-ui/icons' // TODO treeShaking
-import { usePortal, useClickOutside, useReveal } from '@fluent-ui/hooks' // TODO treeShaking
+import { useClickOutside, useReveal, usePopper } from '@fluent-ui/hooks' // TODO treeShaking
 import { omit } from '../utils'
 import {
   StyledContent,
@@ -11,6 +11,8 @@ import {
 import Secondary from './components/Secondary'
 import Content from './components/Content'
 import CommandButton from '../CommandButton'
+import Portal from '../Portal'
+import Transition from '../Transition'
 import { CommandProps, CommandContainer, CommandChild, CommandType } from './Command.type'
 
 export const CommandContext = React.createContext(false)
@@ -35,34 +37,24 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
       }
     )
 
-    // Secondary Popup related
-    const {
-      // visible: secondaryVisible,
-      setVisible: setSecondaryVisible,
-      Portal: SecondaryPortal
-    } = usePortal()
-    const [portalStyle, setPortalStyle] = React.useState()
-    function handleSecondaryVisible(e: React.MouseEvent<HTMLButtonElement>): void {
-      const rect = e.currentTarget.getBoundingClientRect()
-      const position = {
-        position: 'absolute',
-        left: `${rect.left + window.scrollX}px`,
-        top: `${rect.top + window.scrollY + rect.height}px`,
-        zIndex: 9999
-      }
-      setSecondaryVisible((visible: boolean): boolean => !visible)
-      setPortalStyle(position)
-    }
-
     // Reveal does not take effect when using acrylic
     reveal = acrylic ? false : reveal
     const [RevealWrapper] = useReveal()
-
+    // Secondary Popup related
+    const [secondaryVisible, setSecondaryVisible] = React.useState(false)
+    function handleSecondaryVisible(): void {
+      if (secondaryVisible) return
+      setSecondaryVisible((visible: boolean): boolean => !visible)
+    }
     // Click on the area outside the More menu to close the More menu.
-    const secondaryRef = React.useRef<HTMLDivElement>(null)
+    const [referenceRef, popperRef] = usePopper<HTMLButtonElement, HTMLDivElement>({
+      placement: 'bottom'
+    })
     useClickOutside(
-      secondaryRef,
-      (): void => {
+      popperRef,
+      (event): void => {
+        // @ts-ignore
+        if (!referenceRef.current || referenceRef.current.contains(event.target)) return
         setSecondaryVisible((visible: boolean): boolean => !visible)
       }
     )
@@ -82,21 +74,27 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
           {!!container.secondary.length &&
             (reveal ? (
               <RevealWrapper>
-                <CommandButton style={{ height: '100%' }} onClick={handleSecondaryVisible}>
+                <CommandButton
+                  ref={referenceRef}
+                  style={{ height: '100%' }}
+                  onClick={handleSecondaryVisible}
+                >
                   <MoreIcon />
                 </CommandButton>
               </RevealWrapper>
             ) : (
-              <CommandButton onClick={handleSecondaryVisible}>
+              <CommandButton ref={referenceRef} onClick={handleSecondaryVisible}>
                 <MoreIcon />
               </CommandButton>
             ))}
 
-          <SecondaryPortal style={portalStyle}>
-            <StyledSecondaryContainer ref={secondaryRef} acrylic={acrylic}>
-              {container.secondary}
-            </StyledSecondaryContainer>
-          </SecondaryPortal>
+          <Portal>
+            <Transition visible={secondaryVisible} wrapper={false} mountOnEnter unmountOnExit>
+              <StyledSecondaryContainer ref={popperRef} acrylic={acrylic}>
+                {container.secondary}
+              </StyledSecondaryContainer>
+            </Transition>
+          </Portal>
         </CommandContext.Provider>
       </StyledContainer>
     )

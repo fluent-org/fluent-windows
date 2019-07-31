@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as json2mq from 'json2mq'
-import { global } from '../utils'
+import { useGlobal } from '../useGlobal'
 
 type AllBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type MediaQuery = json2mq.QueryObject | json2mq.QueryObject[] | AllBreakpoints | string
@@ -51,6 +51,7 @@ export function useMedia(
   )
   const transformedModel = React.useMemo((): TransformedModel => model(breakpoints), [breakpoints])
 
+  const global = useGlobal() as Window
   const query = isBreakpoint
     ? transformedModel[mediaQuery as keyof Breakpoints]
     : typeof mediaQuery === 'string'
@@ -58,7 +59,7 @@ export function useMedia(
     : json2mq(mediaQuery)
   const mql = global && global.matchMedia && global.matchMedia(query)
 
-  if (mql === false) return false
+  if (!mql) return false
 
   // eslint-disable-next-line
   const [state, setState] = React.useState((): boolean => mql.matches)

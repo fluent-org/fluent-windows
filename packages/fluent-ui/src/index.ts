@@ -13,6 +13,7 @@ export { default as Tooltip } from './Tooltip'
 export { default as Drawer } from './Drawer'
 export { default as Typography } from './Typography'
 export { default as Dialog } from './Dialog'
+export { default as Portal } from './Portal'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'

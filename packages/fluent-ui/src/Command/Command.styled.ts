@@ -32,4 +32,5 @@ export const StyledSecondaryContainer = styled(Box).attrs(
   display: flex;
   flex-direction: column;
   width: 130px;
+  z-index: 1001;
 `

@@ -38,6 +38,7 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
+    "@fluent-ui/core": "^0.8.0",
     "json2mq": "^0.2.0",
     "popper.js": "^1.15.0"
   },

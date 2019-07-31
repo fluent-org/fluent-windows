@@ -7,6 +7,7 @@ import {
   useFocus,
   useClickOutside
 } from '@fluent-ui/hooks'
+import Portal from '../Portal'
 import Transition from '../Transition'
 import { StyledTooltip } from './Tooltip.styled'
 import { TooltipProps } from './Tooltip.type'
@@ -19,7 +20,7 @@ const Tooltip = ({
   trigger = 'hover',
   ...propperOptions
 }: TooltipProps): React.ReactElement => {
-  const [referenceRef, popperRef] = usePopper(propperOptions)
+  const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>(propperOptions)
   const isControlled = React.useMemo((): boolean => !!visible, [visible])
 
   const hoverHandler = useHover(onChange)
@@ -51,9 +52,11 @@ const Tooltip = ({
   return (
     <>
       {React.cloneElement(children, { ref: referenceRef, ...bind })}
-      <Transition visible={isVisible} wrapper={false} mountOnEnter unmountOnExit>
-        {content}
-      </Transition>
+      <Portal>
+        <Transition visible={isVisible} wrapper={false} mountOnEnter unmountOnExit>
+          {content}
+        </Transition>
+      </Portal>
     </>
   )
 }

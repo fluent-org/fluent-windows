@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { usePortal } from '@fluent-ui/hooks'
 import { StyledDialogMask, StyledDialog, StyledDialogContent } from './Dialog.styled'
+import Portal from '../Portal'
 import Transition from '../Transition'
 import Title from './components/Title'
 import Content from './components/Content'
@@ -19,7 +19,6 @@ export const DialogContext = React.createContext<DialogContextType>({
 
 const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
   ({ children, visible, onChange }: DialogProps, ref): React.ReactElement | null => {
-    const { Portal } = usePortal({ defaultVisible: true })
     function handleClose(): void {
       onChange && onChange(false)
     }
@@ -48,13 +47,13 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
 
     return (
       <>
-        <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-          <Portal>
+        <Portal>
+          <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
             <StyledDialogMask onClick={handleClose} />
-          </Portal>
-        </Transition>
-        <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-          <Portal>
+          </Transition>
+        </Portal>
+        <Portal>
+          <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
             <StyledDialog
               ref={ref}
               boxShadow="5"
@@ -68,8 +67,8 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
                 {!!container.actions && container.actions}
               </DialogContext.Provider>
             </StyledDialog>
-          </Portal>
-        </Transition>
+          </Transition>
+        </Portal>
       </>
     )
   }

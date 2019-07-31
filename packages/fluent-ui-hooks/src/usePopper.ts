@@ -4,15 +4,15 @@ import PopperJS from 'popper.js'
 // eslint-disable-next-line
 export interface usePropperOptions extends PopperJS.PopperOptions {}
 
-export function usePopper({
+export function usePopper<Reference, Popper>({
   placement = 'bottom',
   positionFixed = true,
   eventsEnabled = true,
   ...otherOptions
-}: usePropperOptions): [React.MutableRefObject<null>, React.MutableRefObject<null>] {
+}: usePropperOptions): [React.RefObject<Reference>, React.RefObject<Popper>] {
   const popperInstance = React.useRef<PopperJS>(null)
-  const referenceRef = React.useRef(null)
-  const popperRef = React.useRef(null)
+  const referenceRef = React.useRef<Reference>(null)
+  const popperRef = React.useRef<Popper>(null)
 
   React.useEffect((): (() => void) | void => {
     if (popperInstance.current !== null) {

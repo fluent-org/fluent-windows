@@ -12,7 +12,7 @@ import Navigation from '@fluent-ui/core/Navigation'
 import { Navigation } from '@fluent-ui/core'
 ```
 
-Use `Navigation.Header` `Navigation.Footer` inside Navigation so that f knows how to render to the target location.
+Use `Navigation.Header` `Navigation.Footer` inside Navigation so that we knows how to render to the target location.
 
 ### Props
 

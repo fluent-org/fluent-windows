@@ -98,6 +98,7 @@ type: DataDisplay
     color="white.default"
     boxShadow="1"
     textAlign="center"
+    zIndex="1001"
   >
     hello
   </Box>

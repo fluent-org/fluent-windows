@@ -9,4 +9,5 @@ export const StyledTooltip = styled.div`
   margin: 6px 0;
   max-width: 320px;
   border-radius: 2px;
+  z-index: 1001;
 `
