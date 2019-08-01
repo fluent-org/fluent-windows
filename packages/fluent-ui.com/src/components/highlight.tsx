@@ -7,10 +7,12 @@ interface HighlightProps {
 }
 
 const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): React.ReactElement => {
+  // @ts-ignore
   const code = children.props.children
   return (
     <HighlightBase {...defaultProps} code={code} language="jsx" theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }): React.ReactElement => (
+        // @ts-ignore
         <pre
           css={`
             padding: 16px;

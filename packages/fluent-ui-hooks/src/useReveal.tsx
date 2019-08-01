@@ -1,3 +1,16 @@
+/**
+ * Create [Reveal Highlight](https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal) Effects.
+ *
+ * Demo
+ * import { useReveal } from '@fluent-ui/hooks'
+ *
+ * const [RevealWrapper] = useReveal(66)
+ *
+ * <RevealWrapper><div>1</div></RevealWrapper>
+ * <RevealWrapper><div>2</div></RevealWrapper>
+ * <RevealWrapper><div>3</div></RevealWrapper>
+ */
+
 import * as React from 'react'
 import * as CSS from 'csstype'
 

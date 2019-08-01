@@ -1,8 +1,8 @@
 /**
  * EventBus hooks
  *
- * API Demo
- * import { useAction, useDispatch } from 'xxx'
+ * Demo
+ * import { useAction, useDispatch } from '@fluent-ui/hooks'
  *
  * // parent
  * useAction(

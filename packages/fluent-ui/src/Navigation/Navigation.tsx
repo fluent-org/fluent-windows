@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useReveal, useMedia } from '@fluent-ui/hooks' // TODO treeShaking
+import { useReveal } from '@fluent-ui/hooks' // TODO treeShaking
 import { omit } from '../utils'
 
 import Header from './components/Header'

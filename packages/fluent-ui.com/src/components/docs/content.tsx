@@ -66,7 +66,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
         <Markdown
           options={{
             overrides: {
-              pre: Playground as any,
+              pre: data.doc.frontmatter.type !== 'hooks' ? (Playground as any) : Highlight,
               IconTemplate,
               ColorTemplate,
               ...typographyOverrides
@@ -77,6 +77,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
         </Markdown>
         <Markdown
           options={{
+            // @ts-ignore
             namedCodesToUnicode: {
               or: '|'
             },

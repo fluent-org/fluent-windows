@@ -1,3 +1,23 @@
+/**
+ * Tracks state of a CSS media query.
+ *
+ * Demo
+ * import { useMedia } from '@fluent-ui/hooks'
+ *
+ * const isWide = useMedia('(min-width: 600px)')
+ *
+ * <div>
+ *   Screen is wide: {isWide ? 'Yes' : 'No'}
+ * </div>
+ *
+ * // or you can use breakpoints
+ *
+ * const isWide = useMedia('sm')
+ * <div>
+ *   Screen is wide: {isWide ? 'Yes' : 'No'}
+ * </div>
+ */
+
 import * as React from 'react'
 import * as json2mq from 'json2mq'
 import { useGlobal } from '../useGlobal'

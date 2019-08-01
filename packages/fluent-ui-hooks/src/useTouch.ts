@@ -1,3 +1,17 @@
+/**
+ * Subscribe to touch events based on `onTouchStart`, `onTouchEnd`
+ *
+ * Demo
+ * import { useTouch } from '@fluent-ui/hooks'
+ *
+ * function handleChange() {
+ *   // ...
+ * }
+ * const [status, bind] = useTouch(handleChange)
+ *
+ * <button {...bind}>{status}</button>
+ */
+
 import * as React from 'react'
 
 export function useTouch(

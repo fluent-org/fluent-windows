@@ -1,3 +1,21 @@
+/**
+ * Subscribe to events that click on a location other than the specified element.
+ *
+ * Demo
+ * import { useClickOutside } from '@fluent-ui/hooks'
+ *
+ * const reference = React.useRef(null)
+ *
+ * useClickOutside(
+ *   reference,
+ *   (): void => {
+ *     // ...
+ *   }
+ * )
+ *
+ * <div ref={reference}>xxx</div>
+ */
+
 import { useEffect, RefObject } from 'react'
 
 export function useClickOutside(

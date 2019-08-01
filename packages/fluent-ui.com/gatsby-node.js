@@ -19,6 +19,7 @@ exports.createPages = ({ actions, graphql }) => {
         nodes {
           frontmatter {
             title
+            type
           }
           rawMarkdownBody
           html
@@ -33,10 +34,10 @@ exports.createPages = ({ actions, graphql }) => {
 
     result.data.allMarkdownRemark.nodes.forEach(node => {
       const {
-        frontmatter: { title }
+        frontmatter: { title, type }
       } = node
       createPage({
-        path: `/components/${title.toLowerCase()}`,
+        path: type === 'hooks' ? `/hooks/${title}` : `/components/${title.toLowerCase()}`,
         component: docs,
         context: { title } // additional data can be passed via context
       })

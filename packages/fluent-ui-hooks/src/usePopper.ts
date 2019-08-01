@@ -1,3 +1,15 @@
+/**
+ * Create popper, based on `popper.js`
+ *
+ * Demo
+ * import { usePopper } from '@fluent-ui/hooks'
+ *
+ * const [referenceRef, popperRef] = usePopper({ placement = 'bottom' })
+ *
+ * <button ref={referenceRef}></button>
+ * <div ref={popperRef}>I am popper</div>
+ */
+
 import * as React from 'react'
 import PopperJS from 'popper.js'
 

@@ -1,3 +1,17 @@
+/**
+ * Subscribe to hover events based on `onMouseEnter`, `onMouseLeave`
+ *
+ * Demo
+ * import { useHover } from '@fluent-ui/hooks'
+ *
+ * function handleChange() {
+ *   // ...
+ * }
+ * const [status, bind] = useHover(handleChange)
+ *
+ * <button {...bind}>{status}</button>
+ */
+
 import * as React from 'react'
 
 export function useHover(

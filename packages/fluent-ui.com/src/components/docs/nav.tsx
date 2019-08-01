@@ -138,12 +138,13 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
 
   const [expanded, setExpanded] = React.useState(true)
   const [drawerVisible, setDrawerVisible] = React.useState(false)
-  function handleExpanded(): void {
+  const handleExpanded = React.useCallback((): void => {
     setExpanded((e): boolean => !e)
-  }
-  function handleDrawerVisible(): void {
+  }, [])
+  const handleDrawerVisible = React.useCallback((): void => {
     setDrawerVisible((e): boolean => !e)
-  }
+  }, [])
+
   useAction(
     'navigation/expand',
     (payload): void => {
@@ -152,9 +153,10 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
     []
   )
 
-  function handleNavigation(title: string): void {
-    navigate(`/components/${title.toLowerCase()}`)
-  }
+  const handleNavigation = React.useCallback((title: string, type: string): void => {
+    type === 'hooks' ? navigate(`/hooks/${title}`) : navigate(`/components/${title.toLowerCase()}`)
+  }, [])
+
   const result = getFrontMatter(data)
 
   const mobileChild = (
@@ -166,35 +168,36 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
           </Navigation.Item>
         </Navigation.Header>
         {result.map(
-          ({ type, titles }): React.ReactFragment => {
-            return (
-              <React.Fragment key={type}>
-                <Transition visible={drawerVisible} mountOnEnter unmountOnExit>
-                  <Box padding="12px" height={40} position="relative" display="flex">
-                    {type}
-                  </Box>
-                </Transition>
-                {titles.map(
-                  (title): React.ReactElement => (
+          ({ type, titles }): React.ReactFragment => (
+            <React.Fragment key={type}>
+              <Transition visible={drawerVisible} mountOnEnter unmountOnExit>
+                <Box padding="12px" height={40} position="relative" display="flex">
+                  {type}
+                </Box>
+              </Transition>
+              {titles.map(
+                (title): React.ReactElement => {
+                  return (
                     <Navigation.Item
-                      id={title}
-                      key={title}
-                      onClick={handleNavigation.bind(undefined, title)}
+                      id={title + type}
+                      key={title + type}
+                      onClick={handleNavigation.bind(undefined, title, type)}
                       style={{ paddingLeft: drawerVisible ? 24 : 12 }}
                     >
                       {getIconBytitle(title)}
                       <span>{title}</span>
                     </Navigation.Item>
                   )
-                )}
-              </React.Fragment>
-            )
-          }
+                }
+              )}
+            </React.Fragment>
+          )
         )}
       </Navigation>
     </Drawer>
   )
   const pcChild = (
+    // @ts-ignore
     <Navigation
       value={activeId}
       expanded={expanded}
@@ -231,7 +234,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                   <Navigation.Item
                     id={title}
                     key={title}
-                    onClick={handleNavigation.bind(undefined, title)}
+                    onClick={handleNavigation.bind(undefined, title, type)}
                     style={{ paddingLeft: expanded ? 24 : 12 }}
                   >
                     {getIconBytitle(title)}

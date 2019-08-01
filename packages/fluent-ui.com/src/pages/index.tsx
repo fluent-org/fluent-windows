@@ -7,9 +7,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const IndexPage = (): React.ReactElement => {
-  function handleLink(): void {
+  const handleLink = React.useCallback((): void => {
     navigate('/components/box', { replace: true })
-  }
+  }, [])
   return (
     <Layout>
       <SEO title="Home" />

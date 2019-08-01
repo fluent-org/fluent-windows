@@ -1,3 +1,17 @@
+/**
+ * Subscribe to focus events based on `onFocus`, `onBlur`
+ *
+ * Demo
+ * import { useFocus } from '@fluent-ui/hooks'
+ *
+ * function handleChange() {
+ *   // ...
+ * }
+ * const [status, bind] = useFocus(handleChange)
+ *
+ * <button {...bind}>{status}</button>
+ */
+
 import * as React from 'react'
 
 export function useFocus(

@@ -17,9 +17,9 @@ const Playground: React.FC<PlaygroundProps> = ({
   children
 }: PlaygroundProps): React.ReactElement => {
   const [codeVisible, setCodeVisible] = React.useState(false)
-  function handleCodeVisible(): void {
+  const handleCodeVisible = React.useCallback((): void => {
     setCodeVisible((v): boolean => !v)
-  }
+  }, [])
   return (
     <Box as="section" boxShadow="1" borderRadius="4px">
       <LiveProvider code={children.props.children} scope={scope} theme={theme}>
