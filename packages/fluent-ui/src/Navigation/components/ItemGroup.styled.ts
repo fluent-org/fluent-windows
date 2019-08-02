@@ -32,6 +32,6 @@ export const StyledItemGroupTitleIconWrapper = styled.div<{
 
 export const StyledItemGroupItemWrapper = styled.div<{ level: number }>`
   ${StyledItemWrapper} {
-    padding-left: ${({ level }): number => (level ? 40 + level * 12 : 0)}px;
+    padding-left: ${({ level }): number => (level ? 40 + level * 12 : 0)}px !important;
   }
 `

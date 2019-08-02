@@ -1,52 +1,27 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation, Transition, Box, Drawer } from '@fluent-ui/core'
+import { Navigation, Drawer } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
-  CheckboxComposite as CheckboxCompositeIcon,
-  RadioBtnOn as RadioBtnOnIcon,
-  Color as ColorIcon,
   Input as InputIcon,
   GiftboxOpen as GiftboxOpenIcon,
-  ToggleBorder as ToggleBorderIcon,
   ClosePaneMirrored as ClosePaneMirroredIcon,
-  GripperBarHorizontal as GripperBarHorizontalIcon,
   Badge as BadgeIcon,
-  NUIFPStartSlideHand as NUIFPStartSlideHandIcon,
-  NUIFPRollLeftHand as NUIFPRollLeftHandIcon,
-  BackgroundToggle as BackgroundToggleIcon,
-  ToolTip as TooltipIcon,
-  CashDrawer as CashDrawerIcon,
-  FontSize as FontSizeIcon,
-  ActionCenter as ActionCenterIcon
+  Settings as SettingsIcon,
+  LineDisplay as LineDisplayIcon,
+  Feedback as FeedbackIcon
 } from '@fluent-ui/icons'
 import { useAction, useMedia } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [
   {
-    title: 'Box',
+    title: 'Layout',
     icon: <GiftboxOpenIcon />
   },
   {
-    title: 'Checkbox',
-    icon: <CheckboxCompositeIcon />
-  },
-  {
-    title: 'Radio',
-    icon: <RadioBtnOnIcon />
-  },
-  {
-    title: 'Toggle',
-    icon: <ToggleBorderIcon />
-  },
-  {
-    title: 'Color',
-    icon: <ColorIcon />
-  },
-  {
-    title: 'Input',
+    title: 'Inputs',
     icon: <InputIcon />
   },
   {
@@ -54,40 +29,20 @@ const iconMap = [
     icon: <ClosePaneMirroredIcon />
   },
   {
-    title: 'Command',
-    icon: <GripperBarHorizontalIcon />
+    title: 'DataDisplay',
+    icon: <LineDisplayIcon />
   },
   {
-    title: 'Icon',
+    title: 'Utils',
+    icon: <SettingsIcon />
+  },
+  {
+    title: 'Feedback',
+    icon: <FeedbackIcon />
+  },
+  {
+    title: 'hooks',
     icon: <BadgeIcon />
-  },
-  {
-    title: 'Button',
-    icon: <NUIFPStartSlideHandIcon />
-  },
-  {
-    title: 'IconButton',
-    icon: <NUIFPRollLeftHandIcon />
-  },
-  {
-    title: 'Transition',
-    icon: <BackgroundToggleIcon />
-  },
-  {
-    title: 'Tooltip',
-    icon: <TooltipIcon />
-  },
-  {
-    title: 'Drawer',
-    icon: <CashDrawerIcon />
-  },
-  {
-    title: 'Typography',
-    icon: <FontSizeIcon />
-  },
-  {
-    title: 'Dialog',
-    icon: <ActionCenterIcon />
   }
 ]
 
@@ -127,7 +82,6 @@ const getFrontMatter = (target: TemplateProps['data']): Result[] => {
     })
   )
 }
-
 function getIconBytitle(title: string): JSX.Element {
   const target = iconMap.find((v): boolean => v.title === title)
   return target ? target.icon : <ConnectedIcon />
@@ -170,31 +124,25 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
           </Navigation.Item>
         </Navigation.Header>
         {result.map(
-          ({ type, titles }): React.ReactFragment => (
-            <React.Fragment key={type}>
-              <Transition visible={drawerVisible} mountOnEnter unmountOnExit>
-                <Box padding="12px" height={40} position="relative" display="flex">
-                  {type}
-                </Box>
-              </Transition>
-              {titles.map(
-                (title): React.ReactElement => {
-                  return (
+          ({ type, titles }): React.ReactFragment => {
+            return (
+              <Navigation.ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
+                {titles.map(
+                  (title): React.ReactElement => (
                     <Navigation.Item
                       id={title}
                       key={title}
                       className={activeId === title ? 'active-item' : ''}
                       onClick={handleNavigation.bind(undefined, title, type)}
-                      style={{ paddingLeft: drawerVisible ? 24 : 12 }}
+                      style={{ paddingLeft: expanded ? 24 : 12 }}
                     >
-                      {getIconBytitle(title)}
                       <span>{title}</span>
                     </Navigation.Item>
                   )
-                }
-              )}
-            </React.Fragment>
-          )
+                )}
+              </Navigation.ItemGroup>
+            )
+          }
         )}
       </Navigation>
     </Drawer>
@@ -227,12 +175,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       {result.map(
         ({ type, titles }): React.ReactFragment => {
           return (
-            <React.Fragment key={type}>
-              <Transition visible={expanded} mountOnEnter unmountOnExit>
-                <Box padding="12px" height={40} position="relative" display="flex">
-                  {type}
-                </Box>
-              </Transition>
+            <Navigation.ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
               {titles.map(
                 (title): React.ReactElement => (
                   <Navigation.Item
@@ -242,12 +185,11 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                     onClick={handleNavigation.bind(undefined, title, type)}
                     style={{ paddingLeft: expanded ? 24 : 12 }}
                   >
-                    {getIconBytitle(title)}
                     <span>{title}</span>
                   </Navigation.Item>
                 )
               )}
-            </React.Fragment>
+            </Navigation.ItemGroup>
           )
         }
       )}

@@ -41,13 +41,13 @@ const ItemGroup = React.memo(
       }
     }, [activeID, childIds])
 
-    // If expand is triggered, set open to false
+    // If expanded is false, set open to false
     const openRecords: React.MutableRefObject<boolean> = React.useRef(false)
     React.useEffect((): void => {
       if (expanded === true) {
-        openRecords.current = open
+        openRecords.current = isActiveGroup || open
       }
-    }, [expanded, open])
+    }, [open, isActiveGroup]) // eslint-disable-line
     React.useEffect((): void => {
       if (expanded === false) {
         setOpen(false)
@@ -55,7 +55,7 @@ const ItemGroup = React.memo(
       if (expanded === true) {
         setOpen(openRecords.current)
       }
-    }, [expanded])
+    }, [expanded, isActiveGroup])
 
     // handle Reveal Effects
     const [RevealWrapper] = useReveal(66)
