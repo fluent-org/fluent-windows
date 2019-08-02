@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.7.0...@fluent-ui/hooks@0.7.1) (2019-08-02)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Navigation Persistent record of scroll position ([1d67613](https://github.com/chenyueban/fluent-ui/commit/1d67613))
+
+
+
+
+
 # [0.7.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.6.0...@fluent-ui/hooks@0.7.0) (2019-07-31)
 
 

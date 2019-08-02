@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.9.0...@fluent-ui/core@0.10.0) (2019-08-02)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Navigation Persistent record of scroll position ([1d67613](https://github.com/chenyueban/fluent-ui/commit/1d67613))
+
+
+### Features
+
+* **Navigation:** The new subcomponent ItemGroup is used to support the embedding of Item ([#3](https://github.com/chenyueban/fluent-ui/issues/3)) ([1f074e9](https://github.com/chenyueban/fluent-ui/commit/1f074e9))
+
+
+
+
+
 # [0.9.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.8.0...@fluent-ui/core@0.9.0) (2019-07-31)
 
 
