@@ -60,7 +60,9 @@ const Item = React.memo(
       <StyledItemWrapper onClick={handleItemClick} reveal={reveal} {...rest}>
         {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
         <StyledItemIconWrapper>{container.icon}</StyledItemIconWrapper>
-        <StyledItemTextWrapper expanded={expanded}>{container.content}</StyledItemTextWrapper>
+        <StyledItemTextWrapper expanded={expanded} hasIcon={!!container.icon}>
+          {container.content}
+        </StyledItemTextWrapper>
       </StyledItemWrapper>
     )
   }

@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
 import Item from './components/Item'
+import ItemGroup from './components/ItemGroup'
 
 import { StyledHeader, StyledFooter, StyledContent, StyledContainer } from './Navigation.styled'
 import {
@@ -21,12 +22,14 @@ export const NavigationContext = React.createContext<{
   onChange: (id: NavigationID) => void
   expanded: boolean
   reveal: boolean
+  acrylic: boolean
   horizontal: boolean
 }>({
   value: '',
   onChange: (): void => {},
   expanded: true,
   reveal: false,
+  acrylic: false,
   horizontal: false
 })
 
@@ -65,7 +68,12 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
     const revealContent = React.useMemo(
       (): React.ReactElement[] =>
         container.content.map(
-          (child, i): React.ReactElement => <RevealWrapper key={i}>{child}</RevealWrapper>
+          (child, i): React.ReactElement => {
+            if (child.type.displayName === 'FNavigationItem') {
+              return <RevealWrapper key={i}>{child}</RevealWrapper>
+            }
+            return child
+          }
         ),
       [] // eslint-disable-line
     )
@@ -82,6 +90,7 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
       onChange: onChange as (id: NavigationID) => void,
       expanded: expanded as boolean,
       reveal: reveal as boolean,
+      acrylic: acrylic as boolean,
       horizontal: horizontal as boolean
     }
     const others = omit(rest, ['backgroundColor', 'color'])
@@ -127,6 +136,11 @@ Object.defineProperty(Navigation, 'Content', {
 Object.defineProperty(Navigation, 'Item', {
   get(): typeof Item {
     return Item
+  }
+})
+Object.defineProperty(Navigation, 'ItemGroup', {
+  get(): typeof ItemGroup {
+    return ItemGroup
   }
 })
 

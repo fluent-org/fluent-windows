@@ -15,7 +15,7 @@ export const StyledItemWrapper = styled.div<{
   padding: 12px;
   box-sizing: border-box;
   transition: ${th.transition('navigation')};
-  color: ${th.color('black.default')};
+  color: inherit;
   background-color: ${({ reveal }): CSS.ColorProperty =>
     reveal ? th.color('standard.light2') : 'transparent'};
   &:hover {
@@ -69,11 +69,11 @@ export const StyledItemIconWrapper = styled.div`
   height: 100%;
   transition: ${th.transition('navigation')};
 `
-export const StyledItemTextWrapper = styled.div<{ expanded: boolean }>`
+export const StyledItemTextWrapper = styled.div<{ expanded: boolean; hasIcon: boolean }>`
   width: ${({ expanded }): string => (expanded ? 'auto' : '0px')};
   opacity: ${({ expanded }): number => (expanded ? 1 : 0)};
-  padding-left: ${({ children, expanded }): string =>
-    children ? (expanded ? '12px' : '0px') : '0px'};
+  padding-left: ${({ children, expanded, hasIcon }): string =>
+    children ? (expanded ? (hasIcon ? '12px' : '0px') : '0px') : '0px'};
   flex: 1;
   align-items: center;
   overflow: hidden;
