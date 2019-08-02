@@ -16,7 +16,7 @@ import { useHover } from '@fluent-ui/hooks'
 
 ```ts
 useHover(
-  statusHandler: (status: boolean) => void
+  statusHandler?: (status: boolean) => void
 ): [
   isHovered: boolean,
   bind: {

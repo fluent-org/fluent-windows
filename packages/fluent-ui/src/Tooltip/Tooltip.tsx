@@ -23,9 +23,8 @@ const Tooltip = ({
   const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>(propperOptions)
   const isControlled = React.useMemo((): boolean => !!visible, [visible])
 
-  const defaultOnChange = () => {}
-  const hoverHandler = useHover(onChange || defaultOnChange)
-  const clickHandler = useClick(onChange || defaultOnChange)
+  const hoverHandler = useHover(onChange)
+  const clickHandler = useClick(onChange)
   useClickOutside(
     referenceRef,
     (): void => {
@@ -33,8 +32,8 @@ const Tooltip = ({
       onChange && onChange(false)
     }
   )
-  const touchHandler = useTouch(onChange || defaultOnChange)
-  const focusHandler = useFocus(onChange || defaultOnChange)
+  const touchHandler = useTouch(onChange)
+  const focusHandler = useFocus(onChange)
   const triggerMap = {
     hover: hoverHandler,
     click: clickHandler,

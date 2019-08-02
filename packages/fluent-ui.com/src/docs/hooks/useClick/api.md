@@ -16,7 +16,7 @@ import { useClick } from '@fluent-ui/hooks'
 
 ```ts
 useClick(
-  statusHandler: (status: boolean) => void
+  statusHandler?: (status: boolean) => void
 ): [
   isClicked: boolean,
   bind: { onMouseUp: () => void },

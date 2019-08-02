@@ -16,7 +16,7 @@ import { useTouch } from '@fluent-ui/hooks'
 
 ```ts
 useTouch(
-  statusHandler: (status: boolean) => void
+  statusHandler?: (status: boolean) => void
 ): [
   isTouched: boolean,
   bind: {

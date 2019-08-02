@@ -16,7 +16,7 @@ import { useFocus } from '@fluent-ui/hooks'
 
 ```ts
 useFocus(
-  statusHandler: (status: boolean) => void
+  statusHandler?: (status: boolean) => void
 ): [
   isFocused: boolean,
   bind: {
