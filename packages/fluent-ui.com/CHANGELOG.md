@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.7.1...fluent-ui.com@1.7.2) (2019-08-02)
+
+
+### Bug Fixes
+
+* **Tooltip:** Fix problem with tooltip not showing ([81921b2](https://github.com/chenyueban/fluent-ui/commit/81921b2))
+
+
+
+
+
 ## [1.7.1](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.7.0...fluent-ui.com@1.7.1) (2019-08-02)
 
 
