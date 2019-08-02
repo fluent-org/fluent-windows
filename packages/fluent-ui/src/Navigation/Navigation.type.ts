@@ -18,7 +18,8 @@ export interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps 
   onChange?: (id: NavigationID) => void
 }
 
-export interface NavigationType extends React.ForwardRefExoticComponent<NavigationProps> {
+export interface NavigationType
+  extends React.ForwardRefExoticComponent<NavigationProps & React.RefAttributes<HTMLDivElement>> {
   Header: typeof Header
   Footer: typeof Footer
   Content: typeof Content

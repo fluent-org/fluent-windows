@@ -59,7 +59,10 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
       boxShadow="2"
       position="relative"
       zIndex={2}
-      overflow="auto"
+      style={{
+        overflowX: 'hidden',
+        overflowY: 'auto'
+      }}
     >
       <Header />
       <Box padding="4" minHeight="100%" backgroundColor="white.default">

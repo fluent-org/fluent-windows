@@ -15,7 +15,7 @@
 import * as React from 'react'
 
 export function useTouch(
-  statusHandler?: (status: boolean) => void
+  statusHandler: (status: boolean) => void
 ): [
   boolean,
   {

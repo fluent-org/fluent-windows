@@ -21,7 +21,7 @@ import {
   FontSize as FontSizeIcon,
   ActionCenter as ActionCenterIcon
 } from '@fluent-ui/icons'
-import { useAction } from '@fluent-ui/hooks'
+import { useAction, useMedia } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [
@@ -159,9 +159,11 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
 
   const result = getFrontMatter(data)
 
+  const rootRef = React.useRef<HTMLDivElement>(null)
+
   const mobileChild = (
     <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
-      <Navigation value={activeId} expanded={true} acrylic height="100%" width={260}>
+      <Navigation ref={rootRef} value={activeId} expanded={true} acrylic height="100%" width={260}>
         <Navigation.Header>
           <Navigation.Item onClick={handleExpanded}>
             <GlobalNavigationButtonIcon />
@@ -179,8 +181,9 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                 (title): React.ReactElement => {
                   return (
                     <Navigation.Item
-                      id={title + type}
-                      key={title + type}
+                      id={title}
+                      key={title}
+                      className={activeId === title ? 'active-item' : ''}
                       onClick={handleNavigation.bind(undefined, title, type)}
                       style={{ paddingLeft: drawerVisible ? 24 : 12 }}
                     >
@@ -199,6 +202,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
   const pcChild = (
     // @ts-ignore
     <Navigation
+      ref={rootRef}
       value={activeId}
       expanded={expanded}
       acrylic
@@ -234,6 +238,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                   <Navigation.Item
                     id={title}
                     key={title}
+                    className={activeId === title ? 'active-item' : ''}
                     onClick={handleNavigation.bind(undefined, title, type)}
                     style={{ paddingLeft: expanded ? 24 : 12 }}
                   >
@@ -249,12 +254,17 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
     </Navigation>
   )
 
-  return (
-    <>
-      {mobileChild}
-      {pcChild}
-    </>
-  )
+  const isMobile = useMedia('xs')
+
+  React.useEffect((): void => {
+    const activeElement = document.querySelector('.active-item')
+    if (activeElement) {
+      activeElement.scrollIntoView()
+      if (rootRef.current) rootRef.current.scrollTop = 0
+    }
+  }, [drawerVisible, isMobile])
+
+  return isMobile ? mobileChild : pcChild
 }
 
 export default Nav
