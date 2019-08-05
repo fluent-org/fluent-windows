@@ -52,7 +52,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
     })
     useClickOutside(
       popperRef,
-      (event): void => {
+      (event: MouseEvent | TouchEvent): void => {
         // @ts-ignore
         if (!referenceRef.current || referenceRef.current.contains(event.target)) return
         setSecondaryVisible((visible: boolean): boolean => !visible)

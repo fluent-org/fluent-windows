@@ -5,6 +5,6 @@ export { styled, system, th, variant, breakpoints }
 
 export * from 'styled-components'
 export * from '@xstyled/system'
-export * from '@xstyled/prop-types'
+// export * from '@xstyled/prop-types'
 
 export * from './stylize'
