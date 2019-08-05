@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Box } from '@fluent-ui/core'
 
+import SEO from '../../components/seo'
 import Nav from './nav'
 import Content from './content'
 
@@ -45,6 +46,7 @@ export interface TemplateProps {
 const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.ReactElement => {
   return (
     <Layout>
+      <SEO title={data.doc.frontmatter.title} />
       <Box
         as="main"
         background="url(/wall.jpg) 50% center / cover no-repeat fixed"

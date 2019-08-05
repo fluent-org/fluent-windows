@@ -18,12 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Fluent-UI`,
+        short_name: `fluent`,
+        description: `React components that implement Microsoft's Fluent Design System.`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#0078d4`,
+        theme_color: `#0078d4`,
+        display: `fluent-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
     },
@@ -40,6 +41,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {}
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#333`,
+        showSpinner: false
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        analyzerPort: 3000,
+        production: true,
+        disable: true
+      }
     }
   ]
 }
