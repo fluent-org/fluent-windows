@@ -11,7 +11,7 @@ type: Navigation
 ## Default
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
     <CommandButton>
       <Icon.Back/>
@@ -38,7 +38,7 @@ type: Navigation
 ## reveal
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command reveal>
     <CommandButton>
       <Icon.Back/>
@@ -65,7 +65,7 @@ type: Navigation
 ## With label
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
     <CommandButton>
       <Icon.Back/>
@@ -95,7 +95,7 @@ type: Navigation
 ## Without Content and Secondary
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Box backgroundColor="none" display="flex" justifyContent="center">
     <Command acrylic>
       <CommandButton>

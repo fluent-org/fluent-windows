@@ -7,6 +7,7 @@ export const StyledContainer = styled(Box).attrs(
   })
 )`
   display: flex;
+  overflow: hidden;
 `
 
 export const StyledContent = styled.div`

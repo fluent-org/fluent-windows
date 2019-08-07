@@ -48,10 +48,8 @@ const Playground: React.FC<PlaygroundProps> = ({
         </Transition>
         <LivePreview
           css={`
-            // background-color: #f5f5f5;
-            padding: 20px;
+            padding: 0.6em;
             border-radius: 4px;
-            overflow: auto;
             -webkit-overflow-scrolling: touch;
             > * {
               margin: 8px;

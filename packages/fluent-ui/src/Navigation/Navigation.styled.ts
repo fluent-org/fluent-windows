@@ -10,6 +10,7 @@ export const StyledContainer = styled(Box).attrs(
   display: flex;
   justify-content: space-between;
   transition: ${th.transition('navigation')};
+  overflow: hidden;
   ${variant({
     prop: 'horizontal',
     default: false,

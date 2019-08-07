@@ -29,8 +29,8 @@ We implemented acrylic with `backdrop-filter`, but it is not compatible, we are 
 > Backdrop filter is currently baked under CSS Filters Level 2, and at the time of the writing, it only works work in Safari 9 with the `-webkit-` prefix, and Chrome as well as Opera by enabling the “Experimental Web Platform Features” [under the chrome://flags menu](https://webdesign.tutsplus.com/tutorials/css-backdrop-filters--cms-27314).
 
 ```jsx
-<Box padding="6em 8em" background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
-  <Box acrylic={true} padding={{ sm: 15, lg: 25 }}>
+<Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+  <Box acrylic={true} padding={{ xs: 15, sm: 25 }}>
     Acrylic
   </Box>
 </Box>
