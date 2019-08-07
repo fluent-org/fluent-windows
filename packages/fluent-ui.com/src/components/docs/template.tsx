@@ -53,21 +53,12 @@ const Template: React.FC<TemplateProps> = ({ data }: TemplateProps): React.React
         padding={{ xs: '0', sm: '3.6rem 3rem' }}
         width="100vw"
         height="100vh"
+        display="flex"
+        justifyContent="space-between"
         overflow="hidden"
       >
-        <Box
-          background="inherit"
-          width="100%"
-          height="100%"
-          borderRadius={2}
-          boxShadow="3"
-          overflow="hidden"
-          display="flex"
-          justifyContent="space-between"
-        >
-          <Nav data={data} />
-          <Content data={data} />
-        </Box>
+        <Nav data={data} />
+        <Content data={data} />
       </Box>
     </Layout>
   )
