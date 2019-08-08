@@ -1,21 +1,21 @@
 import * as React from 'react'
-import Item from './Item'
 import { ChevronDownMed as ChevronDownMedIcon } from '@fluent-ui/icons'
-import Transition from '../../Transition'
+import Item from '../Item'
+import Transition from '../Transition'
 import {
   StyledItemGroupWrapper,
   StyledItemGroupTitleWrapper,
   StyledItemGroupTitleIconWrapper,
   StyledItemGroupItemWrapper
 } from './ItemGroup.styled'
-import { NavigationItemGroupProps } from '../Navigation.type'
-import { NavigationContext } from '../Navigation'
+import { ItemGroupProps } from './ItemGroup.type'
+import { NavigationContext } from '../Navigation/Navigation'
 import { useReveal } from '@fluent-ui/hooks'
 
 // TODO horizontal support
 
 const ItemGroup = React.memo(
-  ({ children, title, icon, level = 1 }: NavigationItemGroupProps): React.ReactElement => {
+  ({ children, title, icon, level = 1 }: ItemGroupProps): React.ReactElement => {
     const { value: activeID, expanded, reveal, acrylic } = React.useContext(NavigationContext)
 
     const [open, setOpen] = React.useState(false)
@@ -89,12 +89,13 @@ const ItemGroup = React.memo(
       ? React.Children.map(
           children,
           (child, i): React.ReactElement => {
-            if (child.type && (child as any).type.displayName === 'FNavigationItem') {
-              return <RevealWrapper key={i}>{child}</RevealWrapper>
-            } else if (child.type && (child as any).type.displayName === 'FItemGroup') {
-              return React.cloneElement(child, { level: level + 1 })
+            if (child.type) {
+              if ((child as any).type.displayName === 'FItem') {
+                return <RevealWrapper key={i}>{child}</RevealWrapper>
+              } else if ((child as any).type.displayName === 'FItemGroup') {
+                return React.cloneElement(child, { level: level + 1 })
+              }
             }
-
             return child
           }
         )

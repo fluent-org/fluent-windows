@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation, Drawer } from '@fluent-ui/core'
+import { Navigation, Drawer, Item, ItemGroup } from '@fluent-ui/core'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
@@ -119,17 +119,17 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
     <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
       <Navigation ref={rootRef} value={activeId} expanded={true} acrylic height="100%" width={260}>
         <Navigation.Header>
-          <Navigation.Item onClick={handleExpanded}>
+          <Item onClick={handleExpanded}>
             <GlobalNavigationButtonIcon />
-          </Navigation.Item>
+          </Item>
         </Navigation.Header>
         {result.map(
           ({ type, titles }): React.ReactFragment => {
             return (
-              <Navigation.ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
+              <ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
                 {titles.map(
                   (title): React.ReactElement => (
-                    <Navigation.Item
+                    <Item
                       id={title}
                       key={title}
                       className={activeId === title ? 'active-item' : ''}
@@ -137,10 +137,10 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                       style={{ paddingLeft: expanded ? 24 : 12 }}
                     >
                       <span>{title}</span>
-                    </Navigation.Item>
+                    </Item>
                   )
                 )}
-              </Navigation.ItemGroup>
+              </ItemGroup>
             )
           }
         )}
@@ -168,17 +168,17 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       `}
     >
       <Navigation.Header>
-        <Navigation.Item onClick={handleExpanded}>
+        <Item onClick={handleExpanded}>
           <GlobalNavigationButtonIcon />
-        </Navigation.Item>
+        </Item>
       </Navigation.Header>
       {result.map(
         ({ type, titles }): React.ReactFragment => {
           return (
-            <Navigation.ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
+            <ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
               {titles.map(
                 (title): React.ReactElement => (
-                  <Navigation.Item
+                  <Item
                     id={title}
                     key={title}
                     className={activeId === title ? 'active-item' : ''}
@@ -186,10 +186,10 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                     style={{ paddingLeft: expanded ? 24 : 12 }}
                   >
                     <span>{title}</span>
-                  </Navigation.Item>
+                  </Item>
                 )
               )}
-            </Navigation.ItemGroup>
+            </ItemGroup>
           )
         }
       )}

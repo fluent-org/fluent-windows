@@ -1,17 +1,18 @@
 import * as React from 'react'
-import { NavigationContext } from '../Navigation'
+import { NavigationContext } from '../Navigation/Navigation'
 import {
   StyledItemWrapper,
   StyledItemActiveBar,
   StyledItemIconWrapper,
   StyledItemTextWrapper
 } from './Item.styled'
-import { NavigationItemProps, NavigationID } from '../Navigation.type'
+import { NavigationID } from '../Navigation/Navigation.type'
+import { ItemProps } from './Item.type'
 
 type Child = React.ReactChild | any
 
 const Item = React.memo(
-  ({ id, onClick, children, ...rest }: NavigationItemProps): React.ReactElement => {
+  ({ id, onClick, children, ...rest }: ItemProps): React.ReactElement => {
     const container: {
       icon: any
       content: any
@@ -42,10 +43,13 @@ const Item = React.memo(
     const { value: activeID, onChange, expanded, reveal, horizontal } = React.useContext(
       NavigationContext
     )
-    function handleItemClick(e: React.MouseEvent<HTMLDivElement>): void {
-      onClick && onClick(e)
-      onChange && id && onChange(id as NavigationID)
-    }
+    const handleItemClick = React.useCallback(
+      (e: React.MouseEvent<HTMLDivElement>): void => {
+        onClick && onClick(e)
+        onChange && id && onChange(id as NavigationID)
+      },
+      [id, onChange, onClick]
+    )
     const [active, setActive] = React.useState(false)
     React.useEffect((): void => {
       if (id && activeID) {
@@ -68,6 +72,6 @@ const Item = React.memo(
   }
 )
 
-Item.displayName = 'FNavigationItem'
+Item.displayName = 'FItem'
 
 export default Item

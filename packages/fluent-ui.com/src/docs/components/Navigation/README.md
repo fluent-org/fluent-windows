@@ -19,33 +19,33 @@ type: Navigation
   return (
     <Navigation height={600} value={activeId} onChange={handleActiveId}>
       <Navigation.Header>
-        <Navigation.Item>
+        <Item>
           <Icon.GlobalNavigationButton />
-        </Navigation.Item>
+        </Item>
       </Navigation.Header>
 
-      <Navigation.Item id={1}>
+      <Item id={1}>
         <Icon.Connected />
         <span>Option 1</span>
-      </Navigation.Item>
-      <Navigation.Item id={2}>
+      </Item>
+      <Item id={2}>
         <Icon.Connected />
         <span>Option 2</span>
-      </Navigation.Item>
-      <Navigation.Item id={3}>
+      </Item>
+      <Item id={3}>
         <Icon.Connected />
         <span>Option 3</span>
-      </Navigation.Item>
-      <Navigation.Item id={4}>
+      </Item>
+      <Item id={4}>
         <Icon.Connected />
         <span>Option 4</span>
-      </Navigation.Item>
+      </Item>
 
       <Navigation.Footer>
-        <Navigation.Item>
+        <Item>
           <Icon.Settings />
           <span>Settings</span>
-        </Navigation.Item>
+        </Item>
       </Navigation.Footer>
     </Navigation>
   )
@@ -69,33 +69,33 @@ type: Navigation
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Navigation.Item>
+          <Item>
             <Icon.GlobalNavigationButton />
-          </Navigation.Item>
+          </Item>
         </Navigation.Header>
 
-        <Navigation.Item id={1}>
+        <Item id={1}>
           <Icon.Connected />
           <span>Option 1</span>
-        </Navigation.Item>
-        <Navigation.Item id={2}>
+        </Item>
+        <Item id={2}>
           <Icon.Connected />
           <span>Option 2</span>
-        </Navigation.Item>
-        <Navigation.Item id={3}>
+        </Item>
+        <Item id={3}>
           <Icon.Connected />
           <span>Option 3</span>
-        </Navigation.Item>
-        <Navigation.Item id={4}>
+        </Item>
+        <Item id={4}>
           <Icon.Connected />
           <span>Option 4</span>
-        </Navigation.Item>
+        </Item>
 
         <Navigation.Footer>
-          <Navigation.Item>
+          <Item>
             <Icon.Settings />
             <span>Settings</span>
-          </Navigation.Item>
+          </Item>
         </Navigation.Footer>
       </Navigation>
     </>
@@ -120,33 +120,33 @@ type: Navigation
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation horizontal={true} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Navigation.Item>
+          <Item>
             <Icon.GlobalNavigationButton />
-          </Navigation.Item>
+          </Item>
         </Navigation.Header>
 
-        <Navigation.Item id={1}>
+        <Item id={1}>
           <Icon.Connected />
           <span>Option 1</span>
-        </Navigation.Item>
-        <Navigation.Item id={2}>
+        </Item>
+        <Item id={2}>
           <Icon.Connected />
           <span>Option 2</span>
-        </Navigation.Item>
-        <Navigation.Item id={3}>
+        </Item>
+        <Item id={3}>
           <Icon.Connected />
           <span>Option 3</span>
-        </Navigation.Item>
-        <Navigation.Item id={4}>
+        </Item>
+        <Item id={4}>
           <Icon.Connected />
           <span>Option 4</span>
-        </Navigation.Item>
+        </Item>
 
         <Navigation.Footer>
-          <Navigation.Item>
+          <Item>
             <Icon.Settings />
             <span>Settings</span>
-          </Navigation.Item>
+          </Item>
         </Navigation.Footer>
       </Navigation>
     </>
@@ -175,33 +175,33 @@ type: Navigation
       >
         <Navigation acrylic={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
           <Navigation.Header>
-            <Navigation.Item>
+            <Item>
               <Icon.GlobalNavigationButton />
-            </Navigation.Item>
+            </Item>
           </Navigation.Header>
 
-          <Navigation.Item id={1}>
+          <Item id={1}>
             <Icon.Connected />
             <span>Option 1</span>
-          </Navigation.Item>
-          <Navigation.Item id={2}>
+          </Item>
+          <Item id={2}>
             <Icon.Connected />
             <span>Option 2</span>
-          </Navigation.Item>
-          <Navigation.Item id={3}>
+          </Item>
+          <Item id={3}>
             <Icon.Connected />
             <span>Option 3</span>
-          </Navigation.Item>
-          <Navigation.Item id={4}>
+          </Item>
+          <Item id={4}>
             <Icon.Connected />
             <span>Option 4</span>
-          </Navigation.Item>
+          </Item>
 
           <Navigation.Footer>
-            <Navigation.Item>
+            <Item>
               <Icon.Settings />
               <span>Settings</span>
-            </Navigation.Item>
+            </Item>
           </Navigation.Footer>
         </Navigation>
       </Box>
@@ -227,33 +227,33 @@ type: Navigation
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation reveal={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Navigation.Item>
+          <Item>
             <Icon.GlobalNavigationButton />
-          </Navigation.Item>
+          </Item>
         </Navigation.Header>
 
-        <Navigation.Item id={1}>
+        <Item id={1}>
           <Icon.Connected />
           <span>Option 1</span>
-        </Navigation.Item>
-        <Navigation.Item id={2}>
+        </Item>
+        <Item id={2}>
           <Icon.Connected />
           <span>Option 2</span>
-        </Navigation.Item>
-        <Navigation.Item id={3}>
+        </Item>
+        <Item id={3}>
           <Icon.Connected />
           <span>Option 3</span>
-        </Navigation.Item>
-        <Navigation.Item id={4}>
+        </Item>
+        <Item id={4}>
           <Icon.Connected />
           <span>Option 4</span>
-        </Navigation.Item>
+        </Item>
 
         <Navigation.Footer>
-          <Navigation.Item>
+          <Item>
             <Icon.Settings />
             <span>Settings</span>
-          </Navigation.Item>
+          </Item>
         </Navigation.Footer>
       </Navigation>
     </>
@@ -288,57 +288,57 @@ type: Navigation
           expanded={expanded}
         >
           <Navigation.Header>
-            <Navigation.Item>
+            <Item>
               <Icon.GlobalNavigationButton />
-            </Navigation.Item>
+            </Item>
           </Navigation.Header>
     
-          <Navigation.Item id={1}>
+          <Item id={1}>
             <Icon.Connected />
             <span>Option 1</span>
-          </Navigation.Item>
-          <Navigation.Item id={2}>
+          </Item>
+          <Item id={2}>
             <Icon.Connected />
             <span>Option 2</span>
-          </Navigation.Item>
-          <Navigation.Item id={3}>
+          </Item>
+          <Item id={3}>
             <Icon.Connected />
             <span>Option 3</span>
-          </Navigation.Item>
-          <Navigation.ItemGroup title="group" icon={<Icon.Connected />}>
-            <Navigation.Item id={4}>
+          </Item>
+          <ItemGroup title="group" icon={<Icon.Connected />}>
+            <Item id={4}>
               <span>Option 4</span>
-            </Navigation.Item>
-            <Navigation.Item id={5}>
+            </Item>
+            <Item id={5}>
               <span>Option 5</span>
-            </Navigation.Item>
-            <Navigation.ItemGroup title="group inside">
-              <Navigation.Item id={7}>
+            </Item>
+            <ItemGroup title="group inside">
+              <Item id={7}>
                 <span>Option 7</span>
-              </Navigation.Item>
-              <Navigation.Item id={8}>
+              </Item>
+              <Item id={8}>
                 <span>Option 8</span>
-              </Navigation.Item>
-              <Navigation.ItemGroup title="group inside">
-                <Navigation.Item id={9}>
+              </Item>
+              <ItemGroup title="group inside">
+                <Item id={9}>
                   <span>Option 9</span>
-                </Navigation.Item>
-                <Navigation.Item id={10}>
+                </Item>
+                <Item id={10}>
                   <span>Option 10</span>
-                </Navigation.Item>
-              </Navigation.ItemGroup>
-            </Navigation.ItemGroup>
-          </Navigation.ItemGroup>
-          <Navigation.Item id={6}>
+                </Item>
+              </ItemGroup>
+            </ItemGroup>
+          </ItemGroup>
+          <Item id={6}>
             <Icon.Connected />
             <span>Option 6</span>
-          </Navigation.Item>
+          </Item>
     
           <Navigation.Footer>
-            <Navigation.Item>
+            <Item>
               <Icon.Settings />
               <span>Settings</span>
-            </Navigation.Item>
+            </Item>
           </Navigation.Footer>
         </Navigation>
       </Box>

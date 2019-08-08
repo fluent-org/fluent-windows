@@ -5,8 +5,6 @@ import { omit } from '../utils'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
-import Item from './components/Item'
-import ItemGroup from './components/ItemGroup'
 
 import { StyledHeader, StyledFooter, StyledContent, StyledContainer } from './Navigation.styled'
 import {
@@ -46,9 +44,9 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
     React.Children.forEach(
       children,
       (child: NavigationChild): void => {
-        if (child.type.displayName! === 'FNavigationHeader') {
+        if (child.type && child.type.displayName === 'FNavigationHeader') {
           container.header.push(child)
-        } else if (child.type.displayName === 'FNavigationFooter') {
+        } else if (child.type && child.type.displayName === 'FNavigationFooter') {
           container.footer.push(child)
         } else {
           container.content.push(child)
@@ -69,7 +67,7 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
       (): React.ReactElement[] =>
         container.content.map(
           (child, i): React.ReactElement => {
-            if (child.type.displayName === 'FNavigationItem') {
+            if (child.type && child.type.displayName === 'FItem') {
               return <RevealWrapper key={i}>{child}</RevealWrapper>
             }
             return child
@@ -94,6 +92,7 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
       horizontal: horizontal as boolean
     }
     const others = omit(rest, ['backgroundColor', 'color'])
+
     return (
       <NavigationContext.Provider value={contextValue}>
         <StyledContainer
@@ -131,16 +130,6 @@ Object.defineProperty(Navigation, 'Footer', {
 Object.defineProperty(Navigation, 'Content', {
   get(): typeof Content {
     return Content
-  }
-})
-Object.defineProperty(Navigation, 'Item', {
-  get(): typeof Item {
-    return Item
-  }
-})
-Object.defineProperty(Navigation, 'ItemGroup', {
-  get(): typeof ItemGroup {
-    return ItemGroup
   }
 })
 

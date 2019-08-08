@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { styled, css, variant, th } from '../../styles/styled'
+import { styled, css, variant, th } from '../styles/styled'
 
 export const StyledItemWrapper = styled.div<{
   reveal: boolean

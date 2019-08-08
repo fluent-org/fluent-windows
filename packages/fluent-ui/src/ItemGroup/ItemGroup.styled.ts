@@ -1,5 +1,5 @@
-import { styled, th } from '../../styles/styled'
-import { StyledItemWrapper } from './Item.styled'
+import { styled, th } from '../styles/styled'
+import { StyledItemWrapper } from '../Item/Item.styled'
 
 export const StyledItemGroupWrapper = styled.div``
 

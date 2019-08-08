@@ -14,6 +14,8 @@ export { default as Drawer } from './Drawer'
 export { default as Typography } from './Typography'
 export { default as Dialog } from './Dialog'
 export { default as Portal } from './Portal'
+export { default as Item } from './Item'
+export { default as ItemGroup } from './ItemGroup'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'

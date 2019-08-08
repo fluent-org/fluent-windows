@@ -28,7 +28,7 @@ type: DataDisplay
 ## Positioned Tooltips
 
 ```jsx
-<Box>
+<Box overflow="auto">
   <Box width={600} margin="0 auto">
     <Box display="flex" justifyContent="center">
       <Tooltip title="Add" placement="top-start">
