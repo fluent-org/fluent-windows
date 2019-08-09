@@ -79,4 +79,5 @@ export const StyledItemTextWrapper = styled.div<{ expanded: boolean; hasIcon: bo
   overflow: hidden;
   white-space: nowrap;
   transition: ${th.transition('navigation')};
+  font-size: 14px;
 `

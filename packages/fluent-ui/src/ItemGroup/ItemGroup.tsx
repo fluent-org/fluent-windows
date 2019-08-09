@@ -59,31 +59,12 @@ const ItemGroup = React.memo(
 
     // handle Reveal Effects
     const [RevealWrapper] = useReveal(66)
-    const hasIcon = !!icon
     const titleElement = reveal ? (
       <RevealWrapper>
-        <Item>
-          {hasIcon ? (
-            [
-              React.cloneElement(icon as React.ReactElement, { key: 'StyledItemGroupTitleIcon' }),
-              <span key="StyledItemGroupTitle">{title}</span>
-            ]
-          ) : (
-            <span>{title}</span>
-          )}
-        </Item>
+        <Item icon={icon}>{title}</Item>
       </RevealWrapper>
     ) : (
-      <Item>
-        {hasIcon ? (
-          [
-            React.cloneElement(icon as React.ReactElement, { key: 'StyledItemGroupTitleIcon' }),
-            <span key="StyledItemGroupTitle">{title}</span>
-          ]
-        ) : (
-          <span>{title}</span>
-        )}
-      </Item>
+      <Item icon={icon}>{title}</Item>
     )
     const childElements = reveal
       ? React.Children.map(

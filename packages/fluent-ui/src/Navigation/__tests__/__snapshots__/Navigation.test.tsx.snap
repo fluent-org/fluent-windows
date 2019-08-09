@@ -175,6 +175,7 @@ exports[`Navigation basic 1`] = `
   white-space: nowrap;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
 }
 
 .c11 {
@@ -192,6 +193,7 @@ exports[`Navigation basic 1`] = `
   white-space: nowrap;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
 }
 
 @media (min-width:600px) {
@@ -245,12 +247,6 @@ exports[`Navigation basic 1`] = `
         >
           <svg
             className="c6"
-            style={
-              Object {
-                "height": 16,
-                "width": 16,
-              }
-            }
             viewBox="0 0 2048 2048"
           >
             <path
@@ -279,12 +275,6 @@ exports[`Navigation basic 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -295,15 +285,7 @@ exports[`Navigation basic 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 1
-        </span>
+        Option 1
       </div>
     </div>
     <div
@@ -318,12 +300,6 @@ exports[`Navigation basic 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -334,15 +310,7 @@ exports[`Navigation basic 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 2
-        </span>
+        Option 2
       </div>
     </div>
     <div
@@ -357,12 +325,6 @@ exports[`Navigation basic 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -373,15 +335,7 @@ exports[`Navigation basic 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 3
-        </span>
+        Option 3
       </div>
     </div>
     <div
@@ -396,12 +350,6 @@ exports[`Navigation basic 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -412,15 +360,7 @@ exports[`Navigation basic 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 4
-        </span>
+        Option 4
       </div>
     </div>
   </div>
@@ -439,12 +379,6 @@ exports[`Navigation basic 1`] = `
         >
           <svg
             className="c13"
-            style={
-              Object {
-                "height": 16,
-                "width": 16,
-              }
-            }
             viewBox="0 0 2048 2048"
           >
             <path
@@ -455,15 +389,7 @@ exports[`Navigation basic 1`] = `
         <div
           className="c11"
         >
-          <span
-            style={
-              Object {
-                "fontSize": 14,
-              }
-            }
-          >
-            Settings
-          </span>
+          Settings
         </div>
       </div>
     </div>
@@ -485,7 +411,7 @@ exports[`Navigation controlled 1`] = `
   fill: currentColor;
 }
 
-.c6 {
+.c7 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -631,7 +557,7 @@ exports[`Navigation controlled 1`] = `
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c7 {
+.c6 {
   width: auto;
   opacity: 1;
   padding-left: 0px;
@@ -646,6 +572,7 @@ exports[`Navigation controlled 1`] = `
   white-space: nowrap;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
 }
 
 .c11 {
@@ -663,6 +590,7 @@ exports[`Navigation controlled 1`] = `
   white-space: nowrap;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
 }
 
 @media (min-width:600px) {
@@ -713,15 +641,12 @@ exports[`Navigation controlled 1`] = `
       >
         <div
           className="c5"
+        />
+        <div
+          className="c6"
         >
           <svg
-            className="c6"
-            style={
-              Object {
-                "height": 16,
-                "width": 16,
-              }
-            }
+            className="c7"
             viewBox="0 0 2048 2048"
           >
             <path
@@ -729,9 +654,6 @@ exports[`Navigation controlled 1`] = `
             />
           </svg>
         </div>
-        <div
-          className="c7"
-        />
       </div>
     </div>
   </div>
@@ -750,12 +672,6 @@ exports[`Navigation controlled 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -766,15 +682,7 @@ exports[`Navigation controlled 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 1
-        </span>
+        Option 1
       </div>
     </div>
     <div
@@ -789,12 +697,6 @@ exports[`Navigation controlled 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -805,15 +707,7 @@ exports[`Navigation controlled 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 2
-        </span>
+        Option 2
       </div>
     </div>
     <div
@@ -828,12 +722,6 @@ exports[`Navigation controlled 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -844,15 +732,7 @@ exports[`Navigation controlled 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 3
-        </span>
+        Option 3
       </div>
     </div>
     <div
@@ -867,12 +747,6 @@ exports[`Navigation controlled 1`] = `
       >
         <svg
           className="c10"
-          style={
-            Object {
-              "height": 16,
-              "width": 16,
-            }
-          }
           viewBox="0 0 2048 2048"
         >
           <path
@@ -883,15 +757,7 @@ exports[`Navigation controlled 1`] = `
       <div
         className="c11"
       >
-        <span
-          style={
-            Object {
-              "fontSize": 14,
-            }
-          }
-        >
-          Option 4
-        </span>
+        Option 4
       </div>
     </div>
   </div>
@@ -910,12 +776,6 @@ exports[`Navigation controlled 1`] = `
         >
           <svg
             className="c13"
-            style={
-              Object {
-                "height": 16,
-                "width": 16,
-              }
-            }
             viewBox="0 0 2048 2048"
           >
             <path
@@ -926,15 +786,7 @@ exports[`Navigation controlled 1`] = `
         <div
           className="c11"
         >
-          <span
-            style={
-              Object {
-                "fontSize": 14,
-              }
-            }
-          >
-            Settings
-          </span>
+          Settings
         </div>
       </div>
     </div>

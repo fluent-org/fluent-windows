@@ -9,36 +9,8 @@ import {
 import { NavigationID } from '../Navigation/Navigation.type'
 import { ItemProps } from './Item.type'
 
-type Child = React.ReactChild | any
-
-const Item = React.memo(
-  ({ id, onClick, children, ...rest }: ItemProps): React.ReactElement => {
-    const container: {
-      icon: any
-      content: any
-    } = {
-      icon: null,
-      content: null
-    }
-    React.Children.forEach(
-      children,
-      (child: Child): void => {
-        if (
-          child.type &&
-          child.type.displayName &&
-          String.prototype.includes.call(child.type.displayName, 'FIcon')
-        ) {
-          container.icon = React.cloneElement(child, {
-            style: { width: 16, height: 16 }
-          })
-        } else {
-          container.content = React.cloneElement(child, {
-            style: { fontSize: 14 }
-          })
-        }
-      }
-    )
-
+const Item = React.forwardRef<HTMLDivElement, ItemProps>(
+  ({ id, icon, children, onClick, ...rest }: ItemProps, ref): React.ReactElement => {
     // handle active item
     const { value: activeID, onChange, expanded, reveal, horizontal } = React.useContext(
       NavigationContext
@@ -61,11 +33,11 @@ const Item = React.memo(
       }
     }, [activeID, id])
     return (
-      <StyledItemWrapper onClick={handleItemClick} reveal={reveal} {...rest}>
+      <StyledItemWrapper ref={ref} onClick={handleItemClick} reveal={reveal} {...rest}>
         {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
-        <StyledItemIconWrapper>{container.icon}</StyledItemIconWrapper>
-        <StyledItemTextWrapper expanded={expanded} hasIcon={!!container.icon}>
-          {container.content}
+        <StyledItemIconWrapper>{icon}</StyledItemIconWrapper>
+        <StyledItemTextWrapper expanded={expanded} hasIcon={!!icon}>
+          {children}
         </StyledItemTextWrapper>
       </StyledItemWrapper>
     )

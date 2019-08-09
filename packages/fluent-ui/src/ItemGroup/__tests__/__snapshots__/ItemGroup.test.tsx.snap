@@ -1,0 +1,593 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemGroup basic 1`] = `
+.c8 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c4 {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  color: inherit;
+  fill: currentColor;
+}
+
+.c0 {
+  -webkit-overflow-scrolling: touch;
+}
+
+.c9 {
+  overflow: hidden;
+  -webkit-transition: height 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: height 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  height: 0;
+  visibility: hidden;
+}
+
+.c9.fade-enter {
+  opacity: 0;
+}
+
+.c9.fade-enter-active {
+  opacity: 1;
+}
+
+.c9.fade-exit {
+  opacity: 1;
+}
+
+.c9.fade-exit-active {
+  opacity: 0;
+}
+
+.c9.zoom-enter {
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c9.zoom-enter-done {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c9.zoom-exit {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c9.zoom-exit-active {
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c9.zoom-exit-done {
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c9.slide-enter {
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+}
+
+.c9.slide-enter-done {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c9.slide-exit {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c9.slide-exit-active {
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+}
+
+.c9.slide-exit-done {
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+}
+
+.c9.collapse-enter {
+  height: 0;
+}
+
+.c9.collapse-enter-active {
+  height: 0px;
+}
+
+.c9.collapse-enter-done {
+  height: auto;
+}
+
+.c9.collapse-exit {
+  height: 0px;
+}
+
+.c9.collapse-exit-active {
+  height: 0;
+}
+
+.c2 {
+  position: relative;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  min-height: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  color: inherit;
+  background-color: transparent;
+}
+
+.c2:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.c2:active {
+  color: #000000;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.c3 {
+  height: 100%;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+}
+
+.c5 {
+  width: auto;
+  opacity: 1;
+  padding-left: 12px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
+}
+
+.c11 {
+  width: auto;
+  opacity: 1;
+  padding-left: 0px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
+}
+
+.c6 {
+  position: relative;
+  color: inherit;
+}
+
+.c7 {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  cursor: pointer;
+  margin-top: -12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  z-index: 1;
+  opacity: 1;
+}
+
+.c10 .c1 {
+  padding-left: 52px !important;
+}
+
+.c12 .c1 {
+  padding-left: 64px !important;
+}
+
+.c13 .c1 {
+  padding-left: 76px !important;
+}
+
+@media (min-width:600px) {
+  .c0::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c0::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c0::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    onClick={[Function]}
+  >
+    <div
+      className="c3"
+    >
+      <svg
+        className="c4"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
+        />
+      </svg>
+    </div>
+    <div
+      className="c5"
+    >
+      Option 1
+    </div>
+  </div>
+  <div
+    className="c1 c2"
+    onClick={[Function]}
+  >
+    <div
+      className="c3"
+    >
+      <svg
+        className="c4"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
+        />
+      </svg>
+    </div>
+    <div
+      className="c5"
+    >
+      Option 2
+    </div>
+  </div>
+  <div
+    className="c1 c2"
+    onClick={[Function]}
+  >
+    <div
+      className="c3"
+    >
+      <svg
+        className="c4"
+        viewBox="0 0 2048 2048"
+      >
+        <path
+          d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
+        />
+      </svg>
+    </div>
+    <div
+      className="c5"
+    >
+      Option 3
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="c6"
+      onClick={[Function]}
+    >
+      <div
+        className="c1 c2"
+        onClick={[Function]}
+      >
+        <div
+          className="c3"
+        >
+          <svg
+            className="c4"
+            viewBox="0 0 2048 2048"
+          >
+            <path
+              d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
+            />
+          </svg>
+        </div>
+        <div
+          className="c5"
+        >
+          group
+        </div>
+      </div>
+      <div
+        className="c7"
+        open={false}
+      >
+        <svg
+          className="c8"
+          viewBox="0 0 2048 2048"
+        >
+          <path
+            d="M1024 1657L25 658l121-121 878 878 878-878 121 121-999 999z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c9 c0"
+      type="collapse"
+    >
+      <div
+        className="c0"
+      >
+        <div
+          className="c10"
+        >
+          <div
+            className="c1 c2"
+            onClick={[Function]}
+          >
+            <div
+              className="c3"
+            />
+            <div
+              className="c11"
+            >
+              Option 4
+            </div>
+          </div>
+          <div
+            className="c1 c2"
+            onClick={[Function]}
+          >
+            <div
+              className="c3"
+            />
+            <div
+              className="c11"
+            >
+              Option 5
+            </div>
+          </div>
+          <div
+            className=""
+          >
+            <div
+              className="c6"
+              onClick={[Function]}
+            >
+              <div
+                className="c1 c2"
+                onClick={[Function]}
+              >
+                <div
+                  className="c3"
+                />
+                <div
+                  className="c11"
+                >
+                  group inside
+                </div>
+              </div>
+              <div
+                className="c7"
+                open={false}
+              >
+                <svg
+                  className="c8"
+                  viewBox="0 0 2048 2048"
+                >
+                  <path
+                    d="M1024 1657L25 658l121-121 878 878 878-878 121 121-999 999z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="c9 c0"
+              type="collapse"
+            >
+              <div
+                className="c0"
+              >
+                <div
+                  className="c12"
+                >
+                  <div
+                    className="c1 c2"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="c3"
+                    />
+                    <div
+                      className="c11"
+                    >
+                      Option 7
+                    </div>
+                  </div>
+                  <div
+                    className="c1 c2"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="c3"
+                    />
+                    <div
+                      className="c11"
+                    >
+                      Option 8
+                    </div>
+                  </div>
+                  <div
+                    className=""
+                  >
+                    <div
+                      className="c6"
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="c1 c2"
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c3"
+                        />
+                        <div
+                          className="c11"
+                        >
+                          group inside
+                        </div>
+                      </div>
+                      <div
+                        className="c7"
+                        open={false}
+                      >
+                        <svg
+                          className="c8"
+                          viewBox="0 0 2048 2048"
+                        >
+                          <path
+                            d="M1024 1657L25 658l121-121 878 878 878-878 121 121-999 999z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      className="c9 c0"
+                      type="collapse"
+                    >
+                      <div
+                        className="c0"
+                      >
+                        <div
+                          className="c13"
+                        >
+                          <div
+                            className="c1 c2"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="c3"
+                            />
+                            <div
+                              className="c11"
+                            >
+                              Option 9
+                            </div>
+                          </div>
+                          <div
+                            className="c1 c2"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="c3"
+                            />
+                            <div
+                              className="c11"
+                            >
+                              Option 10
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1 c2"
+    onClick={[Function]}
+  >
+    <div
+      className="c3"
+    />
+    <div
+      className="c11"
+    >
+      Option 6
+    </div>
+  </div>
+</div>
+`;

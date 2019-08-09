@@ -24,7 +24,6 @@ module.exports = {
         start_url: `/`,
         background_color: `#0078d4`,
         theme_color: `#0078d4`,
-        display: `fluent-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
     },

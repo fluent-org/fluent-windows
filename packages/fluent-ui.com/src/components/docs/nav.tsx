@@ -136,7 +136,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                       onClick={handleNavigation.bind(undefined, title, type)}
                       style={{ paddingLeft: expanded ? 24 : 12 }}
                     >
-                      <span>{title}</span>
+                      {title}
                     </Item>
                   )
                 )}
@@ -185,7 +185,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                     onClick={handleNavigation.bind(undefined, title, type)}
                     style={{ paddingLeft: expanded ? 24 : 12 }}
                   >
-                    <span>{title}</span>
+                    {title}
                   </Item>
                 )
               )}
