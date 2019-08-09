@@ -17,9 +17,9 @@ type: Utils
   return (
     <>
       <Toggle checked={visible} onChange={handleVisible} />
-      <Box display="flex">
+      <Box>
         <Transition visible={visible}>
-          <Box width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
+          <Box display="inline-block" width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
         </Transition>
       </Box>
     </>
@@ -66,9 +66,11 @@ The Transition component's `mountOnEnter` property prevents the child component 
   return (
     <>
       <Toggle checked={visible} onChange={handleVisible} />
-      <Transition visible={visible} type="slide" mountOnEnter unmountOnExit>
-        <Box width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
-      </Transition>
+      <Box>
+        <Transition visible={visible} type="slide" mountOnEnter unmountOnExit>
+          <Box display="inline-block" width={50} height={50} margin={2} backgroundColor="standard.light2"></Box>
+        </Transition>
+      </Box>
     </>
   )
 }
@@ -88,6 +90,27 @@ The Transition component's `mountOnEnter` property prevents the child component 
       <Transition visible={visible} type="collapse">
         <Box width={50} height={50} backgroundColor="standard.light2"></Box>
       </Transition>
+    </>
+  )
+}
+```
+
+## Grow
+
+```jsx
+() => {
+  const [visible, setVisible] = React.useState(false)
+  function handleVisible() {
+    setVisible(v => !v)
+  }
+  return (
+    <>
+      <Toggle checked={visible} onChange={handleVisible} />
+      <Box>
+        <Transition visible={visible} type="grow">
+          <Box display="inline-block" width={50} height={50} backgroundColor="standard.light2"></Box>
+        </Transition>
+      </Box>
     </>
   )
 }

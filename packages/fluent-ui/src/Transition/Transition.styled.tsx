@@ -22,13 +22,14 @@ export const fade = css`
 
 export const zoom = css`
   &.zoom-enter {
-    transform: scale3d(0, 0, 0);
+    &-active {
+      transform: scale3d(0, 0, 0);
+    }
     &-done {
       transform: none;
     }
   }
   &.zoom-exit {
-    transform: none;
     &-active {
       transform: scale3d(0, 0, 0);
     }
@@ -74,6 +75,29 @@ export const collapse = css`
   }
 `
 
+export const grow = css`
+  &.grow-enter {
+    &-active {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+    &-done {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  &.grow-exit {
+    &-active {
+      opacity: 0;
+      transform: scale(0.75, 0.5625);
+    }
+    &-done {
+      opacity: 0;
+      transform: scale(0.75, 0.5625);
+    }
+  }
+`
+
 export const type = variant({
   prop: 'type',
   default: 'fade',
@@ -98,6 +122,14 @@ export const type = variant({
       transition: ${createBaseTransition(['height', 'visibility'])};
       ${({ visible, wrapperHeight }: StyledContainerProps): string =>
         visible ? `height: ${wrapperHeight}px;` : `height: 0;visibility: hidden;`}
+    `,
+    grow: css`
+      transform-origin: 0 0 0;
+      transition: ${createBaseTransition(['opacity', 'transform', 'visibility'])};
+      ${({ visible }: StyledContainerProps): string =>
+        visible
+          ? `opacity: 1;transform: none;`
+          : `opacity: 0;transform: scale(0.75, 0.5625);visibility: hidden;`}
     `,
     custom: ({ custom }: StyledContainerProps): FlattenSimpleInterpolation | string => custom || ''
   }
@@ -131,4 +163,5 @@ export const StyledContainer = styled(
   ${zoom}
   ${slide}
   ${collapse}
+  ${grow}
 `
