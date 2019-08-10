@@ -77,6 +77,8 @@ export const collapse = css`
 
 export const grow = css`
   &.grow-enter {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
     &-active {
       opacity: 1;
       transform: scale(1, 1);
