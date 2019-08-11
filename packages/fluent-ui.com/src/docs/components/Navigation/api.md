@@ -26,11 +26,3 @@ Use `Navigation.Header` `Navigation.Footer` inside Navigation so that we knows h
 | onChange | (id: string &or; number) => void |  | Callback executed when a `Item` is selected. |
 
 `Navigation` extends from `Box`, so you can use all the features of `Box`
-
-### ItemGroup Props
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| children | React.ReactElement &or; React.ReactElement[] |  | The content of the `ItemGroup`. |
-| title | string |  | The text displayed by the title. |
-| icon | React.ReactElement |  | The icon displayed by the title. |

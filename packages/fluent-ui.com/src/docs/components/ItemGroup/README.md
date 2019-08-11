@@ -51,6 +51,22 @@ type: DataDisplay
 </Box>
 ```
 
+## Float
+
+```jsx
+<Box width={200}>
+  <ItemGroup title="group" icon={<Icon.Connected />} shrink="float">
+    <Item>Option 1</Item>
+    <Item>Option 2</Item>
+    <ItemGroup title="group inside" shrink="float">
+      <Item>Option 3</Item>
+      <Item>Option 4</Item>
+    </ItemGroup>
+  </ItemGroup>
+  <Item icon={<Icon.Connected />}>option</Item>
+</Box>
+```
+
 ## Use with other components
 
 - Use with [`Navigation`](/components/navigation#itemgroup)
