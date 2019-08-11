@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.11.0...@fluent-ui/core@0.11.1) (2019-08-11)
+
+
+### Bug Fixes
+
+* **ItemGroup:** Fix the arrow shows the problem ([8cc09a3](https://github.com/chenyueban/fluent-ui/commit/8cc09a3)), closes [#3](https://github.com/chenyueban/fluent-ui/issues/3)
+
+
+
+
+
 # [0.11.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.10.1...@fluent-ui/core@0.11.0) (2019-08-11)
 
 

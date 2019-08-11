@@ -1,7 +1,7 @@
 {
   "name": "fluent-ui.com",
   "private": true,
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "fluent-ui.com",
   "keywords": [
     "react",
@@ -28,7 +28,7 @@
     "url": "https://github.com/chenyueban/fluent-ui/issues"
   },
   "dependencies": {
-    "@fluent-ui/core": "^0.11.0",
+    "@fluent-ui/core": "^0.11.1",
     "@fluent-ui/hooks": "^0.7.3",
     "@fluent-ui/icons": "^0.4.0",
     "gatsby": "^2.8.3",
