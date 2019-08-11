@@ -28,19 +28,13 @@ exports[`Input basic 1`] = `
   opacity: 0;
 }
 
-.c2.zoom-enter {
+.c2.zoom-enter-active {
   -webkit-transform: scale3d(0,0,0);
   -ms-transform: scale3d(0,0,0);
   transform: scale3d(0,0,0);
 }
 
 .c2.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.zoom-exit {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -106,6 +100,41 @@ exports[`Input basic 1`] = `
 
 .c2.collapse-exit-active {
   height: 0;
+}
+
+.c2.grow-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c2.grow-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  transform: scale(1,1);
+}
+
+.c2.grow-enter-done {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.grow-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c2.grow-exit-done {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
 }
 
 .c0 {
@@ -219,19 +248,13 @@ exports[`Input prop cleared 1`] = `
   opacity: 0;
 }
 
-.c2.zoom-enter {
+.c2.zoom-enter-active {
   -webkit-transform: scale3d(0,0,0);
   -ms-transform: scale3d(0,0,0);
   transform: scale3d(0,0,0);
 }
 
 .c2.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.zoom-exit {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -297,6 +320,41 @@ exports[`Input prop cleared 1`] = `
 
 .c2.collapse-exit-active {
   height: 0;
+}
+
+.c2.grow-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c2.grow-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  transform: scale(1,1);
+}
+
+.c2.grow-enter-done {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.grow-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c2.grow-exit-done {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
 }
 
 .c0 {
@@ -441,19 +499,13 @@ exports[`Input prop error 1`] = `
   opacity: 0;
 }
 
-.c2.zoom-enter {
+.c2.zoom-enter-active {
   -webkit-transform: scale3d(0,0,0);
   -ms-transform: scale3d(0,0,0);
   transform: scale3d(0,0,0);
 }
 
 .c2.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.zoom-exit {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -519,6 +571,41 @@ exports[`Input prop error 1`] = `
 
 .c2.collapse-exit-active {
   height: 0;
+}
+
+.c2.grow-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c2.grow-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  transform: scale(1,1);
+}
+
+.c2.grow-enter-done {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c2.grow-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c2.grow-exit-done {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
 }
 
 .c0 {

@@ -16,6 +16,7 @@ import { ItemGroup } from '@fluent-ui/core'
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| children | React.ReactElement &or; React.ReactElement[] |  | The content of the `ItemGroupGroup`. |
+| children | React.ReactElement &or; React.ReactElement[] |  | The content of the `ItemGroup`. |
 | title | string |  | The text displayed by the title. |
 | icon | React.ReactElement |  | The icon displayed by the title. |
+| shrink | 'expand' &or; 'float' | 'expand' | How the control group is expanded. |

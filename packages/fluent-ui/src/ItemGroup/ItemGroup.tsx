@@ -1,27 +1,25 @@
 import * as React from 'react'
-import { ChevronDownMed as ChevronDownMedIcon } from '@fluent-ui/icons'
+import {
+  ChevronDownMed as ChevronDownMedIcon,
+  ChevronRightMed as ChevronRightMedIcon
+} from '@fluent-ui/icons'
 import Item from '../Item'
 import Transition from '../Transition'
+import Box from '../Box'
 import {
-  StyledItemGroupWrapper,
   StyledItemGroupTitleWrapper,
   StyledItemGroupTitleIconWrapper,
   StyledItemGroupItemWrapper
 } from './ItemGroup.styled'
 import { ItemGroupProps } from './ItemGroup.type'
 import { NavigationContext } from '../Navigation/Navigation'
-import { useReveal } from '@fluent-ui/hooks'
-
-// TODO horizontal support
+import { useReveal, useHover, usePopper } from '@fluent-ui/hooks'
 
 const ItemGroup = React.memo(
-  ({ children, title, icon, level = 1 }: ItemGroupProps): React.ReactElement => {
-    const { value: activeID, expanded, reveal, acrylic } = React.useContext(NavigationContext)
-
-    const [open, setOpen] = React.useState(false)
-    const handleOpen = React.useCallback((): void => {
-      if (expanded === true) setOpen((v): boolean => !v)
-    }, [expanded])
+  ({ level = 1, children, title, icon, shrink = 'expand' }: ItemGroupProps): React.ReactElement => {
+    const { value: activeID, expanded, reveal, acrylic, horizontal } = React.useContext(
+      NavigationContext
+    )
 
     // handle active item
     const childIds = React.useMemo(
@@ -41,13 +39,18 @@ const ItemGroup = React.memo(
       }
     }, [activeID, childIds])
 
-    // If expanded is false, set open to false
+    // handle click status (shrink expand)
+    const [clickStatus, setOpen] = React.useState(false)
+    const handleOpen = React.useCallback((): void => {
+      if (expanded === true) setOpen((v): boolean => !v)
+    }, [expanded])
+    // If expanded is false, set clickStatus to false
     const openRecords: React.MutableRefObject<boolean> = React.useRef(false)
     React.useEffect((): void => {
       if (expanded === true) {
-        openRecords.current = isActiveGroup || open
+        openRecords.current = isActiveGroup || clickStatus
       }
-    }, [open, isActiveGroup]) // eslint-disable-line
+    }, [clickStatus, isActiveGroup]) // eslint-disable-line
     React.useEffect((): void => {
       if (expanded === false) {
         setOpen(false)
@@ -56,6 +59,24 @@ const ItemGroup = React.memo(
         setOpen(openRecords.current)
       }
     }, [expanded, isActiveGroup])
+
+    // handle hover status (shrink float)
+    const [hoverStatus, bindHover] = useHover()
+    const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
+      placement: horizontal && level === 1 ? 'bottom-start' : 'right-start',
+      eventsEnabled: true,
+      positionFixed: true,
+      modifiers: {
+        preventOverflow: {
+          enabled: true,
+          priority: ['right', 'bottom'],
+          boundariesElement: 'viewport'
+        },
+        flip: {
+          enabled: true
+        }
+      }
+    })
 
     // handle Reveal Effects
     const [RevealWrapper] = useReveal(66)
@@ -91,17 +112,51 @@ const ItemGroup = React.memo(
         )
 
     return (
-      <StyledItemGroupWrapper>
-        <StyledItemGroupTitleWrapper onClick={handleOpen} active={isActiveGroup}>
-          {titleElement}
-          <StyledItemGroupTitleIconWrapper open={open} expanded={expanded} acrylic={acrylic}>
-            <ChevronDownMedIcon />
-          </StyledItemGroupTitleIconWrapper>
-        </StyledItemGroupTitleWrapper>
-        <Transition visible={open} type="collapse">
-          <StyledItemGroupItemWrapper level={level}>{childElements}</StyledItemGroupItemWrapper>
-        </Transition>
-      </StyledItemGroupWrapper>
+      <Box>
+        {shrink === 'expand' && !horizontal && (
+          <>
+            <StyledItemGroupTitleWrapper onClick={handleOpen} active={isActiveGroup}>
+              {titleElement}
+              <StyledItemGroupTitleIconWrapper
+                open={clickStatus}
+                expanded={expanded}
+                acrylic={acrylic}
+              >
+                <ChevronDownMedIcon />
+              </StyledItemGroupTitleIconWrapper>
+            </StyledItemGroupTitleWrapper>
+
+            <Transition visible={clickStatus} type="collapse">
+              <StyledItemGroupItemWrapper level={level} acrylic={acrylic}>
+                {childElements}
+              </StyledItemGroupItemWrapper>
+            </Transition>
+          </>
+        )}
+        {(shrink === 'float' || horizontal) && (
+          <StyledItemGroupTitleWrapper active={isActiveGroup} ref={referenceRef} {...bindHover}>
+            {titleElement}
+            <StyledItemGroupTitleIconWrapper
+              open={hoverStatus}
+              expanded={expanded}
+              acrylic={acrylic}
+              float={shrink === 'float' || horizontal}
+            >
+              <ChevronRightMedIcon />
+            </StyledItemGroupTitleIconWrapper>
+            <Transition visible={hoverStatus} type="grow" wrapper={false}>
+              <StyledItemGroupItemWrapper
+                ref={popperRef}
+                level={level}
+                float={shrink === 'float' || horizontal}
+                acrylic={acrylic}
+              >
+                {childElements}
+              </StyledItemGroupItemWrapper>
+            </Transition>
+          </StyledItemGroupTitleWrapper>
+        )}
+      </Box>
     )
   }
 )

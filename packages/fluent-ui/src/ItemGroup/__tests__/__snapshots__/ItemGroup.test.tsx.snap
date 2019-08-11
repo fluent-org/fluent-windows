@@ -55,19 +55,13 @@ exports[`ItemGroup basic 1`] = `
   opacity: 0;
 }
 
-.c9.zoom-enter {
+.c9.zoom-enter-active {
   -webkit-transform: scale3d(0,0,0);
   -ms-transform: scale3d(0,0,0);
   transform: scale3d(0,0,0);
 }
 
 .c9.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c9.zoom-exit {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -133,6 +127,41 @@ exports[`ItemGroup basic 1`] = `
 
 .c9.collapse-exit-active {
   height: 0;
+}
+
+.c9.grow-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c9.grow-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  transform: scale(1,1);
+}
+
+.c9.grow-enter-done {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c9.grow-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
+}
+
+.c9.grow-exit-done {
+  opacity: 0;
+  -webkit-transform: scale(0.75,0.5625);
+  -ms-transform: scale(0.75,0.5625);
+  transform: scale(0.75,0.5625);
 }
 
 .c2 {
@@ -218,6 +247,10 @@ exports[`ItemGroup basic 1`] = `
   color: inherit;
 }
 
+.c6 > .c1 {
+  padding-right: 36px;
+}
+
 .c7 {
   width: 24px;
   height: 24px;
@@ -248,16 +281,31 @@ exports[`ItemGroup basic 1`] = `
   opacity: 1;
 }
 
+.c10 {
+  overflow: visible;
+  box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
+}
+
 .c10 .c1 {
-  padding-left: 52px !important;
+  padding-left: 52px;
+}
+
+.c12 {
+  overflow: visible;
+  box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
 }
 
 .c12 .c1 {
-  padding-left: 64px !important;
+  padding-left: 64px;
+}
+
+.c13 {
+  overflow: visible;
+  box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
 }
 
 .c13 .c1 {
-  padding-left: 76px !important;
+  padding-left: 76px;
 }
 
 @media (min-width:600px) {
@@ -346,7 +394,7 @@ exports[`ItemGroup basic 1`] = `
     </div>
   </div>
   <div
-    className=""
+    className="c0"
   >
     <div
       className="c6"
@@ -396,7 +444,7 @@ exports[`ItemGroup basic 1`] = `
         className="c0"
       >
         <div
-          className="c10"
+          className="c10 c0"
         >
           <div
             className="c1 c2"
@@ -425,7 +473,7 @@ exports[`ItemGroup basic 1`] = `
             </div>
           </div>
           <div
-            className=""
+            className="c0"
           >
             <div
               className="c6"
@@ -466,7 +514,7 @@ exports[`ItemGroup basic 1`] = `
                 className="c0"
               >
                 <div
-                  className="c12"
+                  className="c12 c0"
                 >
                   <div
                     className="c1 c2"
@@ -495,7 +543,7 @@ exports[`ItemGroup basic 1`] = `
                     </div>
                   </div>
                   <div
-                    className=""
+                    className="c0"
                   >
                     <div
                       className="c6"
@@ -536,7 +584,7 @@ exports[`ItemGroup basic 1`] = `
                         className="c0"
                       >
                         <div
-                          className="c13"
+                          className="c13 c0"
                         >
                           <div
                             className="c1 c2"

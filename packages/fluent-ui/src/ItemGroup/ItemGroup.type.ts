@@ -1,8 +1,9 @@
 import * as React from 'react'
 
 export interface ItemGroupProps extends StyledProps {
+  level?: number
   title?: string
   icon?: React.ReactElement
   children: React.ReactElement | React.ReactElement[]
-  level?: number
+  shrink?: 'expand' | 'float'
 }
