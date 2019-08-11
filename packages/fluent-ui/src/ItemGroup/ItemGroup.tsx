@@ -111,6 +111,8 @@ const ItemGroup = React.memo(
           }
         )
 
+    const isFloat = shrink === 'float' || horizontal
+
     return (
       <Box>
         {shrink === 'expand' && !horizontal && (
@@ -127,29 +129,37 @@ const ItemGroup = React.memo(
             </StyledItemGroupTitleWrapper>
 
             <Transition visible={clickStatus} type="collapse">
-              <StyledItemGroupItemWrapper level={level} acrylic={acrylic}>
+              <StyledItemGroupItemWrapper level={level} acrylic={acrylic && horizontal}>
                 {childElements}
               </StyledItemGroupItemWrapper>
             </Transition>
           </>
         )}
-        {(shrink === 'float' || horizontal) && (
+        {isFloat && (
           <StyledItemGroupTitleWrapper active={isActiveGroup} ref={referenceRef} {...bindHover}>
             {titleElement}
             <StyledItemGroupTitleIconWrapper
               open={hoverStatus}
               expanded={expanded}
               acrylic={acrylic}
-              float={shrink === 'float' || horizontal}
+              float={isFloat}
             >
-              <ChevronRightMedIcon />
+              {horizontal ? (
+                level === 1 ? (
+                  <ChevronDownMedIcon />
+                ) : (
+                  <ChevronRightMedIcon />
+                )
+              ) : (
+                <ChevronRightMedIcon />
+              )}
             </StyledItemGroupTitleIconWrapper>
             <Transition visible={hoverStatus} type="grow" wrapper={false}>
               <StyledItemGroupItemWrapper
                 ref={popperRef}
                 level={level}
-                float={shrink === 'float' || horizontal}
-                acrylic={acrylic}
+                float={isFloat}
+                acrylic={acrylic && isFloat}
               >
                 {childElements}
               </StyledItemGroupItemWrapper>

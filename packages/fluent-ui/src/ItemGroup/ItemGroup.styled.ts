@@ -30,7 +30,6 @@ export const StyledItemGroupTitleIconWrapper = styled.div<{
   transition: ${th.transition('navigation')};
   ${({ open, float }): string => (!float ? `transform: rotate(${open ? 180 : 0}deg);` : '')}
   z-index: ${({ acrylic }): number => (acrylic ? -1 : 1)};
-  opacity: ${({ expanded }): number => (expanded ? 1 : 0)};
 `
 
 export const StyledItemGroupItemWrapper = styled(Box).attrs(
@@ -40,6 +39,7 @@ export const StyledItemGroupItemWrapper = styled(Box).attrs(
 )<{ level: number; float?: boolean }>`
   overflow: visible;
   box-shadow: ${th.shadow('3')};
+  z-index: 9999;
   ${StyledItemWrapper} {
     ${variant({
       prop: 'float',
