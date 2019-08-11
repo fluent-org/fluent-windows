@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.7.2...@fluent-ui/hooks@0.7.3) (2019-08-11)
+
+
+### Bug Fixes
+
+* **bug fix:** Fix circular reference problems ([e1521bc](https://github.com/chenyueban/fluent-ui/commit/e1521bc))
+
+
+
+
+
 ## [0.7.2](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.7.1...@fluent-ui/hooks@0.7.2) (2019-08-02)
 
 

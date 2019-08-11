@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.10.1...@fluent-ui/core@0.11.0) (2019-08-11)
+
+
+### Bug Fixes
+
+* **bug fix:** Fix circular reference problems ([e1521bc](https://github.com/chenyueban/fluent-ui/commit/e1521bc))
+* **fluent-ui.com:** Fix the problem with the acrylic display in the document ([7c954b3](https://github.com/chenyueban/fluent-ui/commit/7c954b3))
+* **Transition:** Make the prop type 'grow' support unmount ([7623484](https://github.com/chenyueban/fluent-ui/commit/7623484))
+
+
+### Features
+
+* **Item:** The icon of the Item is carried by a single prop. ([#3](https://github.com/chenyueban/fluent-ui/issues/3)) ([d089b57](https://github.com/chenyueban/fluent-ui/commit/d089b57))
+* **ItemGroup:** Complete basic content ([#3](https://github.com/chenyueban/fluent-ui/issues/3)) ([6ba7e02](https://github.com/chenyueban/fluent-ui/commit/6ba7e02))
+* **Transition:** Add new type 'grow' ([b701b1f](https://github.com/chenyueban/fluent-ui/commit/b701b1f))
+
+
+
+
+
 ## [0.10.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.10.0...@fluent-ui/core@0.10.1) (2019-08-02)
 
 
