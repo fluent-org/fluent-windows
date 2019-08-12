@@ -1,8 +1,10 @@
-import { styled, css, variant } from '../styles/styled'
+import { styled, css, variant, color, backgroundColor } from '../styles/styled'
 import { TypographyProps } from './Typography.type'
 
 const base = css`
   margin: 0;
+  ${color}
+  ${backgroundColor}
 `
 
 const variants = variant({

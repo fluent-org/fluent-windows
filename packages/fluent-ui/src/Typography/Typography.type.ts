@@ -1,4 +1,5 @@
-import { BoxProps } from '../Box'
+import * as React from 'react'
+import * as CSS from 'csstype'
 
 export interface VariantMapping {
   h1: keyof JSX.IntrinsicElements
@@ -25,10 +26,13 @@ export type Variant =
   | 'body1'
   | 'body2'
 
-export interface TypographyProps extends BoxProps {
+export interface TypographyProps extends StyledProps, React.ComponentPropsWithoutRef<'div'> {
+  children: React.ReactText
   variant?: Variant
   variantMapping?: VariantMapping
   gutterTop?: boolean
   gutterBottom?: boolean
   noWrap?: boolean
+  color?: CSS.Color
+  backgroundColor?: CSS.Color
 }

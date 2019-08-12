@@ -10,7 +10,8 @@ import {
   Badge as BadgeIcon,
   Settings as SettingsIcon,
   LineDisplay as LineDisplayIcon,
-  Feedback as FeedbackIcon
+  Feedback as FeedbackIcon,
+  ProgressRingDots as ProgressRingDotsIcon
 } from '@fluent-ui/icons'
 import { useAction, useMedia } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
@@ -43,6 +44,10 @@ const iconMap = [
   {
     title: 'hooks',
     icon: <BadgeIcon />
+  },
+  {
+    title: 'Progress',
+    icon: <ProgressRingDotsIcon />
   }
 ]
 

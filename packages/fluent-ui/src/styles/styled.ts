@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { th, variant, system, breakpoints } from '@xstyled/system'
+import { th, variant, system, breakpoints, color, backgroundColor } from '@xstyled/system'
 
-export { styled, system, th, variant, breakpoints }
+export { styled, system, th, variant, breakpoints, color, backgroundColor }
 
 export * from 'styled-components'
 export * from '@xstyled/system'

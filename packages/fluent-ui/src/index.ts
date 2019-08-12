@@ -16,6 +16,7 @@ export { default as Dialog } from './Dialog'
 export { default as Portal } from './Portal'
 export { default as Item } from './Item'
 export { default as ItemGroup } from './ItemGroup'
+export { default as Spinner } from './Spinner'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'

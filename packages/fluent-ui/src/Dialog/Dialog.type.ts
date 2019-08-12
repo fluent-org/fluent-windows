@@ -1,7 +1,7 @@
+import * as React from 'react'
 import Title from './components/Title'
 import Content from './components/Content'
 import Actions from './components/Actions'
-import { ReactNode } from 'react'
 
 export type DialogChild =
   | React.ReactComponentElement<typeof Title>
@@ -32,5 +32,5 @@ export interface DialogContextType {
 }
 
 export interface DialogTitleProps {
-  children: ReactNode
+  children: React.ReactText
 }
