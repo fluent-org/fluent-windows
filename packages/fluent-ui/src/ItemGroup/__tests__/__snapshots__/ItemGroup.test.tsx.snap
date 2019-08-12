@@ -278,12 +278,12 @@ exports[`ItemGroup basic 1`] = `
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   z-index: 1;
-  opacity: 1;
 }
 
 .c10 {
   overflow: visible;
   box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
+  z-index: 9999;
 }
 
 .c10 .c1 {
@@ -293,6 +293,7 @@ exports[`ItemGroup basic 1`] = `
 .c12 {
   overflow: visible;
   box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
+  z-index: 9999;
 }
 
 .c12 .c1 {
@@ -302,6 +303,7 @@ exports[`ItemGroup basic 1`] = `
 .c13 {
   overflow: visible;
   box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
+  z-index: 9999;
 }
 
 .c13 .c1 {

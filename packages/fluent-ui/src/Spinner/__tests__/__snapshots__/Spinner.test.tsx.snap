@@ -1,0 +1,513 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner basic 1`] = `
+.c1 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    size="medium"
+  />
+</div>
+`;
+
+exports[`Spinner prop label 1`] = `
+.c1 {
+  margin: 0;
+  color: #0078d4;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.c2 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+  className="c0"
+>
+  <label
+    className="c1"
+    color="primary.default"
+    style={
+      Object {
+        "marginTop": "8px",
+      }
+    }
+  >
+    wait...
+  </label>
+  <div
+    className="c2"
+    size="medium"
+  />
+</div>
+`;
+
+exports[`Spinner prop labelPosition 1`] = `
+Array [
+  .c1 {
+  margin: 0;
+  color: #0078d4;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.c2 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+    className="c0"
+  >
+    <label
+      className="c1"
+      color="primary.default"
+      style={
+        Object {
+          "marginBottom": "8px",
+        }
+      }
+    >
+      Top Label
+    </label>
+    <div
+      className="c2"
+      size="medium"
+    />
+  </div>,
+  .c1 {
+  margin: 0;
+  color: #0078d4;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.c2 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+    className="c0"
+  >
+    <label
+      className="c1"
+      color="primary.default"
+      style={
+        Object {
+          "marginTop": "8px",
+        }
+      }
+    >
+      Bottom Label
+    </label>
+    <div
+      className="c2"
+      size="medium"
+    />
+  </div>,
+  .c1 {
+  margin: 0;
+  color: #0078d4;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.c2 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+<div
+    className="c0"
+  >
+    <label
+      className="c1"
+      color="primary.default"
+      style={
+        Object {
+          "marginRight": "8px",
+        }
+      }
+    >
+      Left Label
+    </label>
+    <div
+      className="c2"
+      size="medium"
+    />
+  </div>,
+  .c1 {
+  margin: 0;
+  color: #0078d4;
+  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.c2 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+<div
+    className="c0"
+  >
+    <label
+      className="c1"
+      color="primary.default"
+      style={
+        Object {
+          "marginLeft": "8px",
+        }
+      }
+    >
+      Right Label
+    </label>
+    <div
+      className="c2"
+      size="medium"
+    />
+  </div>,
+]
+`;
+
+exports[`Spinner prop size 1`] = `
+Array [
+  .c1 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 16px;
+  height: 16px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+    className="c0"
+  >
+    <div
+      className="c1"
+      size="small"
+    />
+  </div>,
+  .c1 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 20px;
+  height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+    className="c0"
+  >
+    <div
+      className="c1"
+      size="medium"
+    />
+  </div>,
+  .c1 {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #0078d4 #78cffa #78cffa;
+  -webkit-animation-name: iVXCSc;
+  animation-name: iVXCSc;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  animation-timing-function: cubic-bezier(0.5,0.2,0.3,0.65);
+  width: 28px;
+  height: 28px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+    className="c0"
+  >
+    <div
+      className="c1"
+      size="large"
+    />
+  </div>,
+]
+`;
