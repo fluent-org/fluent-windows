@@ -2,11 +2,15 @@ import Box from '../Box'
 import { styled, th, variant, css } from '../styles/styled'
 import { StyledItemWrapper } from '../Item/Item.styled'
 
-export const StyledItemGroupTitleWrapper = styled.div<{ active: boolean }>`
+export const StyledItemGroupTitleWrapper = styled.div<{
+  active: boolean
+  float?: boolean
+  horizontal?: boolean
+}>`
   position: relative;
   color: ${({ active }): string => (active ? th.color('primary.default') : 'inherit')};
   & > ${StyledItemWrapper} {
-    padding-right: 36px;
+    ${({ float, horizontal }): string => (horizontal && float ? `padding-right: 36px;` : '')}
   }
 `
 
@@ -15,6 +19,7 @@ export const StyledItemGroupTitleIconWrapper = styled.div<{
   expanded: boolean
   acrylic: boolean
   float?: boolean
+  horizontal?: boolean
 }>`
   width: 24px;
   height: 24px;
@@ -30,6 +35,7 @@ export const StyledItemGroupTitleIconWrapper = styled.div<{
   transition: ${th.transition('navigation')};
   ${({ open, float }): string => (!float ? `transform: rotate(${open ? 180 : 0}deg);` : '')}
   z-index: ${({ acrylic }): number => (acrylic ? -1 : 1)};
+  opacity: ${({ expanded, horizontal }): number => (!horizontal ? (expanded ? 1 : 0) : 1)}
 `
 
 export const StyledItemGroupItemWrapper = styled(Box).attrs(

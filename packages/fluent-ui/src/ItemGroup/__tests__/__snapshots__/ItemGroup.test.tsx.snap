@@ -247,10 +247,6 @@ exports[`ItemGroup basic 1`] = `
   color: inherit;
 }
 
-.c6 > .c1 {
-  padding-right: 36px;
-}
-
 .c7 {
   width: 24px;
   height: 24px;
@@ -278,6 +274,7 @@ exports[`ItemGroup basic 1`] = `
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   z-index: 1;
+  opacity: 1;
 }
 
 .c10 {

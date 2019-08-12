@@ -117,7 +117,11 @@ const ItemGroup = React.memo(
       <Box>
         {shrink === 'expand' && !horizontal && (
           <>
-            <StyledItemGroupTitleWrapper onClick={handleOpen} active={isActiveGroup}>
+            <StyledItemGroupTitleWrapper
+              ref={referenceRef}
+              onClick={handleOpen}
+              active={isActiveGroup}
+            >
               {titleElement}
               <StyledItemGroupTitleIconWrapper
                 open={clickStatus}
@@ -136,13 +140,20 @@ const ItemGroup = React.memo(
           </>
         )}
         {isFloat && (
-          <StyledItemGroupTitleWrapper active={isActiveGroup} ref={referenceRef} {...bindHover}>
+          <StyledItemGroupTitleWrapper
+            ref={referenceRef}
+            active={isActiveGroup}
+            float={isFloat}
+            horizontal={horizontal}
+            {...bindHover}
+          >
             {titleElement}
             <StyledItemGroupTitleIconWrapper
               open={hoverStatus}
               expanded={expanded}
               acrylic={acrylic}
               float={isFloat}
+              horizontal={horizontal}
             >
               {horizontal ? (
                 level === 1 ? (

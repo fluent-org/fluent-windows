@@ -139,7 +139,6 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                       key={title}
                       className={activeId === title ? 'active-item' : ''}
                       onClick={handleNavigation.bind(undefined, title, type)}
-                      style={{ paddingLeft: expanded ? 24 : 12 }}
                     >
                       {title}
                     </Item>
