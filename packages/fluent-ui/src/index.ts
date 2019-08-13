@@ -17,6 +17,7 @@ export { default as Portal } from './Portal'
 export { default as Item } from './Item'
 export { default as ItemGroup } from './ItemGroup'
 export { default as Spinner } from './Spinner'
+export { default as Progress } from './Progress'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'

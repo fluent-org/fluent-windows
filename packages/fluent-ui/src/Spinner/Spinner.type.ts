@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 type SpinnerSize = 'small' | 'medium' | 'large'
 export type SpinnerLabelPosition = 'top' | 'right' | 'bottom' | 'left'
 
