@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.8.1...fluent-ui.com@1.9.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* **Navigation:** Fix arrow bugs ([41a9a2d](https://github.com/chenyueban/fluent-ui/commit/41a9a2d))
+
+
+### Features
+
+* **Progress:** New component Progress ([a0b1912](https://github.com/chenyueban/fluent-ui/commit/a0b1912))
+* **Spinner:** Complete basic content ([b6094d7](https://github.com/chenyueban/fluent-ui/commit/b6094d7))
+
+
+
+
+
 ## [1.8.1](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.8.0...fluent-ui.com@1.8.1) (2019-08-11)
 
 
