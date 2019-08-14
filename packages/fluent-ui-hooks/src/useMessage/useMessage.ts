@@ -65,7 +65,7 @@ export function useMessage(
           handleClose()
         }, duration)
     }
-  }, [content, duration, functionContainer, global.document.body, handleClose, visible])
+  }, [duration, visible, content]) // eslint-disable-line
   React.useEffect((): void => {
     if (visible === false) {
       const unmountResult = ReactDOM.unmountComponentAtNode(ref.current)
