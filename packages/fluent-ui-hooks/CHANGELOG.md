@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.7.3...@fluent-ui/hooks@0.8.0) (2019-08-14)
+
+
+### Bug Fixes
+
+* **@fluent-ui/hooks/useMessage:** Fix deps bug ([0d0b05f](https://github.com/chenyueban/fluent-ui/commit/0d0b05f))
+
+
+### Features
+
+* **@fluent-ui/hooks/useMessage:** New hooks `useMessage` ([a8a0411](https://github.com/chenyueban/fluent-ui/commit/a8a0411))
+
+
+
+
+
 ## [0.7.3](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.7.2...@fluent-ui/hooks@0.7.3) (2019-08-11)
 
 

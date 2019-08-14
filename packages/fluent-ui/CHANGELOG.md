@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.12.0...@fluent-ui/core@0.13.0) (2019-08-14)
+
+
+### Features
+
+* **@fluent-ui/hooks/useMessage:** New hooks `useMessage` ([a8a0411](https://github.com/chenyueban/fluent-ui/commit/a8a0411))
+* **Toast:** New component Toast ([fcd8754](https://github.com/chenyueban/fluent-ui/commit/fcd8754))
+
+
+
+
+
 # [0.12.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.11.1...@fluent-ui/core@0.12.0) (2019-08-13)
 
 
