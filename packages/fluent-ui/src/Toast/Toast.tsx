@@ -14,7 +14,6 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
         <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
           <StyledToast
             ref={ref}
-            boxShadow="3"
             width={{ xs: '288px', sm: 'auto' }}
             minWidth={{ xs: '288px', sm: '340px' }}
             placement={placement}

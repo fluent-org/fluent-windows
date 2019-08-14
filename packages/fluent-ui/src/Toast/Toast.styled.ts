@@ -48,9 +48,13 @@ const placement = variant({
 })
 
 export const StyledToast = styled(Box)<{ placement: Placement }>`
+  background-color: white;
+  box-shadow: 0px 6.4px 14.4px 0px rgba(0, 0, 0, 0.132), 0px 1.2px 3.6px 0px rgba(0, 0, 0, 0.108);
+
   position: fixed;
   z-index: 1001;
   background-color: ${th.color('white.default')};
+  box-shadow: ${th.shadow('3')};
   border-radius: 2px;
   padding: 6px 16px;
   display: flex;
