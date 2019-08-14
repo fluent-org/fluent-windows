@@ -1,0 +1,17 @@
+import * as React from 'react'
+
+export type Placement =
+  | 'top-start'
+  | 'top'
+  | 'top-end'
+  | 'bottom-end'
+  | 'bottom'
+  | 'bottom-start'
+  | 'center'
+
+export interface ToastProps extends StandardProps<React.HTMLAttributes<HTMLDivElement>> {
+  children: React.ReactChild
+  visible: boolean
+  actions?: React.ReactElement | React.ReactElement[]
+  placement?: Placement
+}

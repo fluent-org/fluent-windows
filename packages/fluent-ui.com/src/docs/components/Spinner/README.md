@@ -1,7 +1,7 @@
 ---
 title: Spinner
 components: Spinner
-type: Progress
+type: Feedback
 ---
 
 # Spinner

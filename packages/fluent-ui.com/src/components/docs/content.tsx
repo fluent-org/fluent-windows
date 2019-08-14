@@ -17,7 +17,7 @@ import { StyledTitleA } from './content.styled'
 
 interface TypographyComponentProps {
   id?: string
-  children?: React.ReactNode
+  children: React.ReactNode
 }
 
 const H1 = (props: TypographyComponentProps): React.ReactElement => (

@@ -199,17 +199,20 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
     </Navigation>
   )
 
-  const isMobile = useMedia('xs')
-
   React.useEffect((): void => {
     const activeElement = document.querySelector('.active-item')
     if (activeElement) {
       activeElement.scrollIntoView()
       if (rootRef.current) rootRef.current.scrollTop = 0
     }
-  }, [drawerVisible, isMobile])
+  }, [drawerVisible])
 
-  return isMobile ? mobileChild : pcChild
+  return (
+    <>
+      {mobileChild}
+      {pcChild}
+    </>
+  )
 }
 
 export default Nav

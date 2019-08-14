@@ -1,7 +1,7 @@
 ---
 title: Progress
 components: Progress
-type: Progress
+type: Feedback
 ---
 
 # Progress
