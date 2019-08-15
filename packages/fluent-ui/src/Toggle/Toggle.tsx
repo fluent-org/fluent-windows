@@ -9,7 +9,10 @@ import {
 import { ToggleProps } from './Toggle.type'
 
 const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
-  ({ checked, value, onChange, disabled, children }: ToggleProps, ref): React.ReactElement => {
+  (
+    { checked, value, onChange, disabled, children, ...rest }: ToggleProps,
+    ref
+  ): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }
@@ -24,6 +27,7 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
             value={value}
             onChange={handleChange}
             disabled={disabled}
+            {...rest}
           />
         </StyledToggleWrapper>
         <StyledLabelText>{children}</StyledLabelText>

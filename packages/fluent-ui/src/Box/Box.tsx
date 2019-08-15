@@ -1,15 +1,13 @@
 import * as React from 'react'
-import { omit } from '../utils'
 import { BaseBox, AcrylicBox } from './Box.styled'
 import { BoxProps } from './Box.type'
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
-  (props: BoxProps, ref): React.ReactElement => {
-    const otherProps = omit(props, ['acrylic'])
-    if (props.acrylic) {
-      return <AcrylicBox ref={ref} {...otherProps} />
+  ({ acrylic, ...rest }: BoxProps, ref): React.ReactElement => {
+    if (acrylic) {
+      return <AcrylicBox ref={ref} {...rest} />
     }
-    return <BaseBox ref={ref} {...otherProps} />
+    return <BaseBox ref={ref} {...rest} />
   }
 )
 

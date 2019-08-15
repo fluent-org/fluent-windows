@@ -9,7 +9,7 @@ export type Placement =
   | 'bottom-start'
   | 'center'
 
-export interface ToastProps extends StandardProps<React.HTMLAttributes<HTMLDivElement>> {
+export interface ToastProps extends StandardProps {
   children: React.ReactChild
   visible: boolean
   actions?: React.ReactElement | React.ReactElement[]

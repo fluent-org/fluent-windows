@@ -18,7 +18,7 @@ export const DialogContext = React.createContext<DialogContextType>({
 })
 
 const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
-  ({ children, visible, onChange }: DialogProps, ref): React.ReactElement | null => {
+  ({ children, visible, onChange, ...rest }: DialogProps, ref): React.ReactElement | null => {
     function handleClose(): void {
       onChange && onChange(false)
     }
@@ -60,6 +60,7 @@ const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
               width={{ xs: '288px', sm: 'auto' }}
               maxWidth={{ xs: '340px', sm: '450px' }}
               minWidth={{ xs: '288px', sm: '340px' }}
+              {...rest}
             >
               <DialogContext.Provider value={contextValue}>
                 {!!container.title && container.title}

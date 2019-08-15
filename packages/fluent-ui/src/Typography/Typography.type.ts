@@ -26,7 +26,7 @@ export type Variant =
   | 'body1'
   | 'body2'
 
-export interface TypographyProps extends StyledProps, React.ComponentPropsWithoutRef<'div'> {
+export interface TypographyProps extends StandardProps, StyledProps {
   children: React.ReactChild
   variant?: Variant
   variantMapping?: VariantMapping

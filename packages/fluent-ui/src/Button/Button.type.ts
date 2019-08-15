@@ -1,6 +1,7 @@
+import * as React from 'react'
+
 export interface ButtonProps
-  extends React.ComponentPropsWithoutRef<'button'>,
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends StandardProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
     StyledProps {
   variant?: 'standard' | 'primary'
   disabled?: boolean

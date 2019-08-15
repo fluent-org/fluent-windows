@@ -7,10 +7,13 @@ interface StyledProps {
   href?: string
 }
 
-type StandardProps<T, O extends string = '', AcceptsRef = true> = Omit<T, O> & {
-  ref?: AcceptsRef extends true
-    ? T extends { ref?: infer RefType }
-      ? RefType
-      : React.Ref<HTMLDivElement>
-    : never
-}
+type StandardProps<
+  T = React.HTMLAttributes<HTMLDivElement>,
+  Ref = HTMLDivElement,
+  O extends string = ''
+> = {
+  className?: string
+  style?: React.CSSProperties
+} & Omit<T, O> & {
+    ref?: React.Ref<Ref>
+  }

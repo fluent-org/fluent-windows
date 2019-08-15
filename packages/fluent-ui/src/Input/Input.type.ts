@@ -1,8 +1,7 @@
+import * as React from 'react'
+
 export interface InputProps
-  extends Omit<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    'size' | 'value' | 'onChange' | 'type'
-  > {
+  extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'> {
   value?: string
   onChange?: (value: string) => void
   placeholder?: string

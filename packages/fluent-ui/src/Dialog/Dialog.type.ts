@@ -15,7 +15,8 @@ export interface DialogContainer {
   actions?: React.ReactComponentElement<typeof Actions>
 }
 
-export interface DialogProps {
+export interface DialogProps
+  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'onChange'> {
   children: DialogChild[] | DialogChild
   visible: boolean
   onChange?: (visible: boolean) => void

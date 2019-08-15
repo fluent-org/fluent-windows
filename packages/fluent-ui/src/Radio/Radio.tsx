@@ -4,7 +4,10 @@ import { StyledRadioWrapper, StyledRadio, StyledCircle } from './Radio.styled'
 import { RadioProps } from './Radio.type'
 
 const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
-  ({ checked, value, onChange, disabled, children }: RadioProps, ref): React.ReactElement => {
+  (
+    { checked, value, onChange, disabled, children, ...rest }: RadioProps,
+    ref
+  ): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.value)
     }
@@ -19,6 +22,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
             value={value}
             onChange={handleChange}
             disabled={disabled}
+            {...rest}
           />
         </StyledRadioWrapper>
         <StyledLabelText>{children}</StyledLabelText>

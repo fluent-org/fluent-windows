@@ -2,7 +2,7 @@ import * as React from 'react'
 import { NavigationID } from '../Navigation'
 
 export interface ItemProps
-  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, 'id' | 'prefix'>,
+  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'id' | 'prefix'>,
     StyledProps {
   id?: NavigationID
   prefix?: React.ReactElement

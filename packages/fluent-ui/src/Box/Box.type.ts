@@ -1,5 +1,6 @@
 // https://www.smooth-code.com/open-source/xstyled/docs/system-props/
 import * as CSS from 'csstype'
+import * as React from 'react'
 
 export interface ResponsiveType<T> {
   xs?: T
@@ -166,10 +167,7 @@ export interface StylesProps {
   basics?: string
 }
 
-export interface BoxProps
-  extends StylesProps,
-    React.ComponentPropsWithoutRef<'div'>,
-    React.HTMLAttributes<HTMLDivElement> {
+export interface BoxProps extends StylesProps, StandardProps {
   acrylic?: boolean
   children?: React.ReactNode
   as?: keyof JSX.IntrinsicElements

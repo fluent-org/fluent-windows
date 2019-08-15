@@ -9,7 +9,10 @@ import { Accept as AcceptIcon } from '@fluent-ui/icons'
 import { CheckboxProps } from './Checkbox.type'
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ checked, value, onChange, disabled, children }: CheckboxProps, ref): React.ReactElement => {
+  (
+    { checked, value, onChange, disabled, children, ...rest }: CheckboxProps,
+    ref
+  ): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }
@@ -24,6 +27,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             value={value}
             onChange={handleChange}
             disabled={disabled}
+            {...rest}
           />
         </StyledCheckboxWrapper>
         <StyledLabelText>{children}</StyledLabelText>
