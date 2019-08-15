@@ -10,7 +10,7 @@ describe('Item', (): void => {
   test('basic', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
-        <Item icon={<Connected />}>Option</Item>
+        <Item prefix={<Connected />}>Option</Item>
       </ThemeProvider>
     )
     const tree = component.toJSON()
@@ -20,7 +20,7 @@ describe('Item', (): void => {
   test('without children', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
-        <Item icon={<Connected />} />
+        <Item prefix={<Connected />} />
       </ThemeProvider>
     )
     const tree = component.toJSON()

@@ -8,7 +8,6 @@ export const StyledItemWrapper = styled.div<{
   cursor: pointer;
   text-decoration: none;
   min-height: 40px;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,15 +64,18 @@ export const StyledItemActiveBar = styled.div<{
     }
   })}
 `
-export const StyledItemIconWrapper = styled.div`
+export const StyledItemPrefixWrapper = styled.div`
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: ${th.transition('navigation')};
 `
-export const StyledItemTextWrapper = styled.div<{ expanded: boolean; hasIcon: boolean }>`
+export const StyledItemTextWrapper = styled.div<{ expanded: boolean; hasPrefix: boolean }>`
   width: ${({ expanded }): string => (expanded ? 'auto' : '0px')};
   opacity: ${({ expanded }): number => (expanded ? 1 : 0)};
-  padding-left: ${({ children, expanded, hasIcon }): string =>
-    children ? (expanded ? (hasIcon ? '12px' : '0px') : '0px') : '0px'};
+  padding-left: ${({ children, expanded, hasPrefix }): string =>
+    children ? (expanded ? (hasPrefix ? '12px' : '0px') : '0px') : '0px'};
   flex: 1;
   align-items: center;
   overflow: hidden;

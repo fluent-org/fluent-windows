@@ -19,35 +19,35 @@ import { TemplateProps } from './template'
 const iconMap = [
   {
     title: 'Layout',
-    icon: <GiftboxOpenIcon />
+    prefix: <GiftboxOpenIcon />
   },
   {
     title: 'Inputs',
-    icon: <InputIcon />
+    prefix: <InputIcon />
   },
   {
     title: 'Navigation',
-    icon: <ClosePaneMirroredIcon />
+    prefix: <ClosePaneMirroredIcon />
   },
   {
     title: 'DataDisplay',
-    icon: <LineDisplayIcon />
+    prefix: <LineDisplayIcon />
   },
   {
     title: 'Utils',
-    icon: <SettingsIcon />
+    prefix: <SettingsIcon />
   },
   {
     title: 'Feedback',
-    icon: <FeedbackIcon />
+    prefix: <FeedbackIcon />
   },
   {
     title: 'hooks',
-    icon: <BadgeIcon />
+    prefix: <BadgeIcon />
   },
   {
     title: 'Progress',
-    icon: <ProgressRingDotsIcon />
+    prefix: <ProgressRingDotsIcon />
   }
 ]
 
@@ -87,9 +87,9 @@ const getFrontMatter = (target: TemplateProps['data']): Result[] => {
     })
   )
 }
-function getIconBytitle(title: string): JSX.Element {
+function getPrefixBytitle(title: string): JSX.Element {
   const target = iconMap.find((v): boolean => v.title === title)
-  return target ? target.icon : <ConnectedIcon />
+  return target ? target.prefix : <ConnectedIcon />
 }
 
 const Nav = ({ data }: TemplateProps): React.ReactElement => {
@@ -131,7 +131,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
         {result.map(
           ({ type, titles }): React.ReactFragment => {
             return (
-              <ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
+              <ItemGroup key={type} title={type} prefix={getPrefixBytitle(type)}>
                 {titles.map(
                   (title): React.ReactElement => (
                     <Item
@@ -179,7 +179,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       {result.map(
         ({ type, titles }): React.ReactFragment => {
           return (
-            <ItemGroup key={type} title={type} icon={getIconBytitle(type)}>
+            <ItemGroup key={type} title={type} prefix={getPrefixBytitle(type)}>
               {titles.map(
                 (title): React.ReactElement => (
                   <Item

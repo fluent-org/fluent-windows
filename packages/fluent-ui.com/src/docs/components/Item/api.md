@@ -17,6 +17,6 @@ import { Item } from '@fluent-ui/core'
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | id | string &or; number |  | The uniquely identifies |
-| icon | React.ReactElement |  | The icon displayed. |
+| prefix | React.ReactElement |  | The prefix displayed. |
 | children | React.ReactChild |  | Display portion of text and other content. |
 | onClick | React.MouseEventHandler<HTMLDivElement> |  | Set the handler to handle click event. |

@@ -8,18 +8,28 @@ import Transition from '../Transition'
 import Box from '../Box'
 import {
   StyledItemGroupTitleWrapper,
-  StyledItemGroupTitleIconWrapper,
+  StyledItemGroupTitlePrefixWrapper,
   StyledItemGroupItemWrapper
 } from './ItemGroup.styled'
 import { ItemGroupProps } from './ItemGroup.type'
 import { NavigationContext } from '../Navigation/Navigation'
+import { ListContext } from '../List/List'
 import { useReveal, useHover, usePopper } from '@fluent-ui/hooks'
 
-const ItemGroup = React.memo(
-  ({ level = 1, children, title, icon, shrink = 'expand' }: ItemGroupProps): React.ReactElement => {
-    const { value: activeID, expanded, reveal, acrylic, horizontal } = React.useContext(
-      NavigationContext
-    )
+const ItemGroup = React.forwardRef<HTMLDivElement, ItemGroupProps>(
+  (
+    { level = 1, children, title, prefix, shrink = 'expand', ...rest }: ItemGroupProps,
+    ref
+  ): React.ReactElement => {
+    const {
+      value: activeID,
+      expanded,
+      reveal: navigationReveal,
+      acrylic,
+      horizontal
+    } = React.useContext(NavigationContext)
+    const { reveal: listReveal } = React.useContext(ListContext)
+    const reveal = navigationReveal || listReveal
 
     // handle active item
     const childIds = React.useMemo(
@@ -82,10 +92,10 @@ const ItemGroup = React.memo(
     const [RevealWrapper] = useReveal(66)
     const titleElement = reveal ? (
       <RevealWrapper>
-        <Item icon={icon}>{title}</Item>
+        <Item prefix={prefix}>{title}</Item>
       </RevealWrapper>
     ) : (
-      <Item icon={icon}>{title}</Item>
+      <Item prefix={prefix}>{title}</Item>
     )
     const childElements = reveal
       ? React.Children.map(
@@ -114,7 +124,7 @@ const ItemGroup = React.memo(
     const isFloat = shrink === 'float' || horizontal
 
     return (
-      <Box>
+      <Box ref={ref} {...rest}>
         {shrink === 'expand' && !horizontal && (
           <>
             <StyledItemGroupTitleWrapper
@@ -123,13 +133,13 @@ const ItemGroup = React.memo(
               active={isActiveGroup}
             >
               {titleElement}
-              <StyledItemGroupTitleIconWrapper
+              <StyledItemGroupTitlePrefixWrapper
                 open={clickStatus}
                 expanded={expanded}
                 acrylic={acrylic}
               >
                 <ChevronDownMedIcon />
-              </StyledItemGroupTitleIconWrapper>
+              </StyledItemGroupTitlePrefixWrapper>
             </StyledItemGroupTitleWrapper>
 
             <Transition visible={clickStatus} type="collapse">
@@ -148,7 +158,7 @@ const ItemGroup = React.memo(
             {...bindHover}
           >
             {titleElement}
-            <StyledItemGroupTitleIconWrapper
+            <StyledItemGroupTitlePrefixWrapper
               open={hoverStatus}
               expanded={expanded}
               acrylic={acrylic}
@@ -164,7 +174,7 @@ const ItemGroup = React.memo(
               ) : (
                 <ChevronRightMedIcon />
               )}
-            </StyledItemGroupTitleIconWrapper>
+            </StyledItemGroupTitlePrefixWrapper>
             <Transition visible={hoverStatus} type="grow" wrapper={false}>
               <StyledItemGroupItemWrapper
                 ref={popperRef}

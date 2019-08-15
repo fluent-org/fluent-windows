@@ -11,10 +11,10 @@ describe('ItemGroup', (): void => {
     const component = renderer.create(
       <ThemeProvider theme={theme}>
         <Box>
-          <Item icon={<Connected />}>Option 1</Item>
-          <Item icon={<Connected />}>Option 2</Item>
-          <Item icon={<Connected />}>Option 3</Item>
-          <ItemGroup title="group" icon={<Connected />}>
+          <Item prefix={<Connected />}>Option 1</Item>
+          <Item prefix={<Connected />}>Option 2</Item>
+          <Item prefix={<Connected />}>Option 3</Item>
+          <ItemGroup title="group" prefix={<Connected />}>
             <Item>Option 4</Item>
             <Item>Option 5</Item>
             <ItemGroup title="group inside">

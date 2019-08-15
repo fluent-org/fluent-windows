@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { NavigationID } from '../Navigation'
 
-export interface ItemProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'id'>, StyledProps {
+export interface ItemProps
+  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, 'id' | 'prefix'>,
+    StyledProps {
   id?: NavigationID
-  icon?: React.ReactElement
+  prefix?: React.ReactElement
   children?: React.ReactChild
   onClick?: React.MouseEventHandler<HTMLDivElement>
 }

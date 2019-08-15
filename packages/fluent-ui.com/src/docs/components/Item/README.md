@@ -11,7 +11,7 @@ type: DataDisplay
 ## Use alone
 
 ```jsx
-<Item icon={<Icon.Connected />}>
+<Item prefix={<Icon.Connected />}>
   hello
 </Item>
 ```
@@ -19,3 +19,4 @@ type: DataDisplay
 ## Use with other components
 
 - Use with [`Navigation`](/components/navigation)
+- Use with [`List`](/components/list)

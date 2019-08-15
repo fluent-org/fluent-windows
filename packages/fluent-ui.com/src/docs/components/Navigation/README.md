@@ -19,24 +19,24 @@ type: Navigation
   return (
     <Navigation height={600} value={activeId} onChange={handleActiveId}>
       <Navigation.Header>
-        <Item icon={<Icon.GlobalNavigationButton />} />
+        <Item prefix={<Icon.GlobalNavigationButton />} />
       </Navigation.Header>
 
-      <Item id={1} icon={<Icon.Connected />}>
+      <Item id={1} prefix={<Icon.Connected />}>
         Option 1
       </Item>
-      <Item id={2} icon={<Icon.Connected />}>
+      <Item id={2} prefix={<Icon.Connected />}>
         Option 2
       </Item>
-      <Item id={3} icon={<Icon.Connected />}>
+      <Item id={3} prefix={<Icon.Connected />}>
         Option 3
       </Item>
-      <Item id={4} icon={<Icon.Connected />}>
+      <Item id={4} prefix={<Icon.Connected />}>
         Option 4
       </Item>
 
       <Navigation.Footer>
-        <Item icon={<Icon.Settings />}>
+        <Item prefix={<Icon.Settings />}>
           Settings
         </Item>
       </Navigation.Footer>
@@ -62,37 +62,37 @@ type: Navigation
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation horizontal={true} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Item icon={<Icon.GlobalNavigationButton />} />
+          <Item prefix={<Icon.GlobalNavigationButton />} />
         </Navigation.Header>
 
-        <Item id={1} icon={<Icon.Connected />}>
+        <Item id={1} prefix={<Icon.Connected />}>
           Option 1
         </Item>
-        <Item id={2} icon={<Icon.Connected />}>
+        <Item id={2} prefix={<Icon.Connected />}>
           Option 2
         </Item>
-        <Item id={3} icon={<Icon.Connected />}>
+        <Item id={3} prefix={<Icon.Connected />}>
           Option 3
         </Item>
-        <ItemGroup title="group" icon={<Icon.Connected />}>
-          <Item id={4} icon={<Icon.Connected />}>
+        <ItemGroup title="group" prefix={<Icon.Connected />}>
+          <Item id={4} prefix={<Icon.Connected />}>
             Option 4
           </Item>
-          <Item id={5} icon={<Icon.Connected />}>
+          <Item id={5} prefix={<Icon.Connected />}>
             Option 5
           </Item>
-          <ItemGroup title="group inside" icon={<Icon.Connected />}>
-            <Item id={7} icon={<Icon.Connected />}>
+          <ItemGroup title="group inside" prefix={<Icon.Connected />}>
+            <Item id={7} prefix={<Icon.Connected />}>
               Option 7
             </Item>
-            <Item id={8} icon={<Icon.Connected />}>
+            <Item id={8} prefix={<Icon.Connected />}>
               Option 8
             </Item>
-            <ItemGroup title="group inside" icon={<Icon.Connected />}>
-              <Item id={9} icon={<Icon.Connected />}>
+            <ItemGroup title="group inside" prefix={<Icon.Connected />}>
+              <Item id={9} prefix={<Icon.Connected />}>
                 Option 9
               </Item>
-              <Item id={10} icon={<Icon.Connected />}>
+              <Item id={10} prefix={<Icon.Connected />}>
                 Option 10
               </Item>
             </ItemGroup>
@@ -100,7 +100,7 @@ type: Navigation
         </ItemGroup>
 
         <Navigation.Footer>
-          <Item icon={<Icon.Settings />}>
+          <Item prefix={<Icon.Settings />}>
             Settings
           </Item>
         </Navigation.Footer>
@@ -127,24 +127,24 @@ type: Navigation
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Item icon={<Icon.GlobalNavigationButton />} />
+          <Item prefix={<Icon.GlobalNavigationButton />} />
         </Navigation.Header>
 
-        <Item id={1} icon={<Icon.Connected />}>
+        <Item id={1} prefix={<Icon.Connected />}>
           Option 1
         </Item>
-        <Item id={2} icon={<Icon.Connected />}>
+        <Item id={2} prefix={<Icon.Connected />}>
           Option 2
         </Item>
-        <Item id={3} icon={<Icon.Connected />}>
+        <Item id={3} prefix={<Icon.Connected />}>
           Option 3
         </Item>
-        <Item id={4} icon={<Icon.Connected />}>
+        <Item id={4} prefix={<Icon.Connected />}>
           Option 4
         </Item>
 
         <Navigation.Footer>
-          <Item icon={<Icon.Settings />}>
+          <Item prefix={<Icon.Settings />}>
             Settings
           </Item>
         </Navigation.Footer>
@@ -175,24 +175,24 @@ type: Navigation
       >
         <Navigation acrylic={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
           <Navigation.Header>
-            <Item icon={<Icon.GlobalNavigationButton />} />
+            <Item prefix={<Icon.GlobalNavigationButton />} />
           </Navigation.Header>
 
-          <Item id={1} icon={<Icon.Connected />}>
+          <Item id={1} prefix={<Icon.Connected />}>
             Option 1
           </Item>
-          <Item id={2} icon={<Icon.Connected />}>
+          <Item id={2} prefix={<Icon.Connected />}>
             Option 2
           </Item>
-          <Item id={3} icon={<Icon.Connected />}>
+          <Item id={3} prefix={<Icon.Connected />}>
             Option 3
           </Item>
-          <Item id={4} icon={<Icon.Connected />}>
+          <Item id={4} prefix={<Icon.Connected />}>
             Option 4
           </Item>
 
           <Navigation.Footer>
-            <Item icon={<Icon.Settings />}>
+            <Item prefix={<Icon.Settings />}>
               Settings
             </Item>
           </Navigation.Footer>
@@ -220,24 +220,24 @@ type: Navigation
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation reveal={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Item icon={<Icon.GlobalNavigationButton />} />
+          <Item prefix={<Icon.GlobalNavigationButton />} />
         </Navigation.Header>
 
-        <Item id={1} icon={<Icon.Connected />}>
+        <Item id={1} prefix={<Icon.Connected />}>
           Option 1
         </Item>
-        <Item id={2} icon={<Icon.Connected />}>
+        <Item id={2} prefix={<Icon.Connected />}>
           Option 2
         </Item>
-        <Item id={3} icon={<Icon.Connected />}>
+        <Item id={3} prefix={<Icon.Connected />}>
           Option 3
         </Item>
-        <Item id={4} icon={<Icon.Connected />}>
+        <Item id={4} prefix={<Icon.Connected />}>
           Option 4
         </Item>
 
         <Navigation.Footer>
-          <Item icon={<Icon.Settings />}>
+          <Item prefix={<Icon.Settings />}>
             Settings
           </Item>
         </Navigation.Footer>
@@ -274,19 +274,19 @@ type: Navigation
           expanded={expanded}
         >
           <Navigation.Header>
-            <Item icon={<Icon.GlobalNavigationButton />} />
+            <Item prefix={<Icon.GlobalNavigationButton />} />
           </Navigation.Header>
     
-          <Item id={1} icon={<Icon.Connected />}>
+          <Item id={1} prefix={<Icon.Connected />}>
             Option 1
           </Item>
-          <Item id={2} icon={<Icon.Connected />}>
+          <Item id={2} prefix={<Icon.Connected />}>
             Option 2
           </Item>
-          <Item id={3} icon={<Icon.Connected />}>
+          <Item id={3} prefix={<Icon.Connected />}>
             Option 3
           </Item>
-          <ItemGroup title="group" icon={<Icon.Connected />}>
+          <ItemGroup title="group" prefix={<Icon.Connected />}>
             <Item id={4}>
               Option 4
             </Item>
@@ -315,7 +315,7 @@ type: Navigation
           </Item>
     
           <Navigation.Footer>
-            <Item icon={<Icon.Settings />}>
+            <Item prefix={<Icon.Settings />}>
               Settings
             </Item>
           </Navigation.Footer>

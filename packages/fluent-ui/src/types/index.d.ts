@@ -7,10 +7,7 @@ interface StyledProps {
   href?: string
 }
 
-type StandardProps<T, AcceptsRef = true> = Omit<T, 'classes'> & {
-  className?: string
-  style?: React.CSSProperties
-} & {
+type StandardProps<T, O extends string = '', AcceptsRef = true> = Omit<T, O> & {
   ref?: AcceptsRef extends true
     ? T extends { ref?: infer RefType }
       ? RefType

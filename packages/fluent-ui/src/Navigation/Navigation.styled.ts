@@ -73,17 +73,18 @@ export const StyledFooter = styled(Box)<NavigationProps>`
 export const StyledContent = styled(Box)<NavigationProps>`
   flex: 1;
   display: flex;
-  overflow-x: hidden;
-  overflow-y: auto;
   ${variant({
     prop: 'horizontal',
     default: false,
     variants: {
       true: css`
         flex-direction: row;
+        overflow: hidden;
       `,
       false: css`
         flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
       `
     }
   })};

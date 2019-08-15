@@ -12,24 +12,24 @@ describe('Navigation', (): void => {
       <ThemeProvider theme={theme}>
         <Navigation height={600}>
           <Navigation.Header>
-            <Item icon={<GlobalNavigationButton />} />
+            <Item prefix={<GlobalNavigationButton />} />
           </Navigation.Header>
 
-          <Item id={1} icon={<Connected />}>
+          <Item id={1} prefix={<Connected />}>
             Option 1
           </Item>
-          <Item id={2} icon={<Connected />}>
+          <Item id={2} prefix={<Connected />}>
             Option 2
           </Item>
-          <Item id={3} icon={<Connected />}>
+          <Item id={3} prefix={<Connected />}>
             Option 3
           </Item>
-          <Item id={4} icon={<Connected />}>
+          <Item id={4} prefix={<Connected />}>
             Option 4
           </Item>
 
           <Navigation.Footer>
-            <Item icon={<Settings />}>Settings</Item>
+            <Item prefix={<Settings />}>Settings</Item>
           </Navigation.Footer>
         </Navigation>
       </ThemeProvider>
@@ -52,21 +52,21 @@ describe('Navigation', (): void => {
             </Item>
           </Navigation.Header>
 
-          <Item id={1} icon={<Connected />}>
+          <Item id={1} prefix={<Connected />}>
             Option 1
           </Item>
-          <Item id={2} icon={<Connected />}>
+          <Item id={2} prefix={<Connected />}>
             Option 2
           </Item>
-          <Item id={3} icon={<Connected />}>
+          <Item id={3} prefix={<Connected />}>
             Option 3
           </Item>
-          <Item id={4} icon={<Connected />}>
+          <Item id={4} prefix={<Connected />}>
             Option 4
           </Item>
 
           <Navigation.Footer>
-            <Item icon={<Settings />}>Settings</Item>
+            <Item prefix={<Settings />}>Settings</Item>
           </Navigation.Footer>
         </Navigation>
       </ThemeProvider>

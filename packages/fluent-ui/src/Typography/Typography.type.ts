@@ -27,7 +27,7 @@ export type Variant =
   | 'body2'
 
 export interface TypographyProps extends StyledProps, React.ComponentPropsWithoutRef<'div'> {
-  children: React.ReactText
+  children: React.ReactChild
   variant?: Variant
   variantMapping?: VariantMapping
   gutterTop?: boolean

@@ -1,20 +1,28 @@
 import * as React from 'react'
 import { NavigationContext } from '../Navigation/Navigation'
+import { ListContext } from '../List/List'
 import {
   StyledItemWrapper,
   StyledItemActiveBar,
-  StyledItemIconWrapper,
+  StyledItemPrefixWrapper,
   StyledItemTextWrapper
 } from './Item.styled'
 import { NavigationID } from '../Navigation/Navigation.type'
 import { ItemProps } from './Item.type'
 
 const Item = React.forwardRef<HTMLDivElement, ItemProps>(
-  ({ id, icon, children, onClick, ...rest }: ItemProps, ref): React.ReactElement => {
+  ({ id, prefix, children, onClick, ...rest }: ItemProps, ref): React.ReactElement => {
     // handle active item
-    const { value: activeID, onChange, expanded, reveal, horizontal } = React.useContext(
-      NavigationContext
-    )
+    const {
+      value: activeID,
+      onChange,
+      expanded,
+      reveal: navigationReveal,
+      horizontal
+    } = React.useContext(NavigationContext)
+    const { reveal: listReveal } = React.useContext(ListContext)
+    const reveal = navigationReveal || listReveal
+
     const handleItemClick = React.useCallback(
       (e: React.MouseEvent<HTMLDivElement>): void => {
         onClick && onClick(e)
@@ -35,8 +43,8 @@ const Item = React.forwardRef<HTMLDivElement, ItemProps>(
     return (
       <StyledItemWrapper ref={ref} onClick={handleItemClick} reveal={reveal} {...rest}>
         {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
-        <StyledItemIconWrapper>{icon}</StyledItemIconWrapper>
-        <StyledItemTextWrapper expanded={expanded} hasIcon={!!icon}>
+        <StyledItemPrefixWrapper>{prefix}</StyledItemPrefixWrapper>
+        <StyledItemTextWrapper expanded={expanded} hasPrefix={!!prefix}>
           {children}
         </StyledItemTextWrapper>
       </StyledItemWrapper>

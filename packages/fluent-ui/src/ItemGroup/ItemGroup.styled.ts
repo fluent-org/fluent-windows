@@ -14,7 +14,7 @@ export const StyledItemGroupTitleWrapper = styled.div<{
   }
 `
 
-export const StyledItemGroupTitleIconWrapper = styled.div<{
+export const StyledItemGroupTitlePrefixWrapper = styled.div<{
   open: boolean
   expanded: boolean
   acrylic: boolean

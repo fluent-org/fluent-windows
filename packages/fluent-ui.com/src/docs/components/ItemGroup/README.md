@@ -12,16 +12,16 @@ type: DataDisplay
 
 ```jsx
 <Box>
-  <Item icon={<Icon.Connected />}>
+  <Item prefix={<Icon.Connected />}>
     Option 1
   </Item>
-  <Item icon={<Icon.Connected />}>
+  <Item prefix={<Icon.Connected />}>
     Option 2
   </Item>
-  <Item icon={<Icon.Connected />}>
+  <Item prefix={<Icon.Connected />}>
     Option 3
   </Item>
-  <ItemGroup title="group" icon={<Icon.Connected />}>
+  <ItemGroup title="group" prefix={<Icon.Connected />}>
     <Item>
       Option 4
     </Item>
@@ -55,7 +55,7 @@ type: DataDisplay
 
 ```jsx
 <Box width={200}>
-  <ItemGroup title="group" icon={<Icon.Connected />} shrink="float">
+  <ItemGroup title="group" prefix={<Icon.Connected />} shrink="float">
     <Item>Option 1</Item>
     <Item>Option 2</Item>
     <ItemGroup title="group inside" shrink="float">
@@ -63,10 +63,11 @@ type: DataDisplay
       <Item>Option 4</Item>
     </ItemGroup>
   </ItemGroup>
-  <Item icon={<Icon.Connected />}>option</Item>
+  <Item prefix={<Icon.Connected />}>option</Item>
 </Box>
 ```
 
 ## Use with other components
 
 - Use with [`Navigation`](/components/navigation#itemgroup)
+- Use with [`List`](/components/list#nested-list)
