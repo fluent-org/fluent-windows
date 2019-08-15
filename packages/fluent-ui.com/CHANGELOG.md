@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.10.0...fluent-ui.com@1.11.0) (2019-08-15)
+
+
+### Features
+
+* **List:** New component List ([6465542](https://github.com/chenyueban/fluent-ui/commit/6465542))
+
+
+
+
+
 # [1.10.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.9.0...fluent-ui.com@1.10.0) (2019-08-14)
 
 

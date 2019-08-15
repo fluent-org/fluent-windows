@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.13.0...@fluent-ui/core@0.14.0) (2019-08-15)
+
+
+### Bug Fixes
+
+* **ComponentType:** Fix the basis of each component prop type ([5cab5e9](https://github.com/chenyueban/fluent-ui/commit/5cab5e9))
+
+
+### Features
+
+* **List:** New component List ([6465542](https://github.com/chenyueban/fluent-ui/commit/6465542))
+
+
+
+
+
 # [0.13.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.12.0...@fluent-ui/core@0.13.0) (2019-08-14)
 
 
