@@ -10,6 +10,7 @@ export interface Transitions {
   radio?: CSS.TransitionProperty
   navigation?: CSS.TransitionProperty
   drawer?: CSS.TransitionProperty
+  card?: CSS.TransitionProperty
 }
 
 export const createBaseTransition = (
@@ -35,7 +36,8 @@ function createTransition(transitions: Transitions): Transitions {
     toggle: baseTransition,
     radio: baseTransition,
     navigation: baseTransition,
-    drawer: createBaseTransition(['box-shadow'], 250)
+    drawer: createBaseTransition(['box-shadow'], 250),
+    card: createBaseTransition(['box-shadow', 'transform'])
   }
   return deepMerge(transitions, defaultTransitions)
 }
