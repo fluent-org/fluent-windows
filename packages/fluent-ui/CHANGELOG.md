@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.14.0...@fluent-ui/core@0.15.0) (2019-08-17)
+
+
+### Features
+
+* **Card:** New component Card ([0d85378](https://github.com/chenyueban/fluent-ui/commit/0d85378))
+* **Select:** New component Select ([2e82d78](https://github.com/chenyueban/fluent-ui/commit/2e82d78))
+
+
+
+
+
 # [0.14.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.13.0...@fluent-ui/core@0.14.0) (2019-08-15)
 
 
