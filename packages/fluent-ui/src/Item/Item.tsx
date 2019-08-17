@@ -11,7 +11,7 @@ import { NavigationID } from '../Navigation/Navigation.type'
 import { ItemProps } from './Item.type'
 
 const Item = React.forwardRef<HTMLDivElement, ItemProps>(
-  ({ id, prefix, children, onClick, ...rest }: ItemProps, ref): React.ReactElement => {
+  ({ value, prefix, active, children, onClick, ...rest }: ItemProps, ref): React.ReactElement => {
     // handle active item
     const {
       value: activeID,
@@ -26,23 +26,23 @@ const Item = React.forwardRef<HTMLDivElement, ItemProps>(
     const handleItemClick = React.useCallback(
       (e: React.MouseEvent<HTMLDivElement>): void => {
         onClick && onClick(e)
-        onChange && id && onChange(id as NavigationID)
+        onChange && value && onChange(value as NavigationID)
       },
-      [id, onChange, onClick]
+      [value, onChange, onClick]
     )
-    const [active, setActive] = React.useState(false)
+    const [_active, setActive] = React.useState(false)
     React.useEffect((): void => {
-      if (id && activeID) {
-        if (activeID === id) {
+      if (value && activeID) {
+        if (activeID === value) {
           setActive(true)
         } else {
           setActive(false)
         }
       }
-    }, [activeID, id])
+    }, [activeID, value])
     return (
       <StyledItemWrapper ref={ref} onClick={handleItemClick} reveal={reveal} {...rest}>
-        {!!id && <StyledItemActiveBar active={active} horizontal={horizontal} />}
+        {!!value && <StyledItemActiveBar active={active || _active} horizontal={horizontal} />}
         <StyledItemPrefixWrapper>{prefix}</StyledItemPrefixWrapper>
         <StyledItemTextWrapper expanded={expanded} hasPrefix={!!prefix}>
           {children}

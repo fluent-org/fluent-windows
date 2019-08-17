@@ -13,8 +13,8 @@ type: Navigation
 ```jsx
 () => {
   const [activeId, setActiveId] = React.useState(1)
-  function handleActiveId(id) {
-    setActiveId(id)
+  function handleActiveId(value) {
+    setActiveId(value)
   }
   return (
     <Navigation height={600} value={activeId} onChange={handleActiveId}>
@@ -22,16 +22,16 @@ type: Navigation
         <Item prefix={<Icon.GlobalNavigationButton />} />
       </Navigation.Header>
 
-      <Item id={1} prefix={<Icon.Connected />}>
+      <Item value={1} prefix={<Icon.Connected />}>
         Option 1
       </Item>
-      <Item id={2} prefix={<Icon.Connected />}>
+      <Item value={2} prefix={<Icon.Connected />}>
         Option 2
       </Item>
-      <Item id={3} prefix={<Icon.Connected />}>
+      <Item value={3} prefix={<Icon.Connected />}>
         Option 3
       </Item>
-      <Item id={4} prefix={<Icon.Connected />}>
+      <Item value={4} prefix={<Icon.Connected />}>
         Option 4
       </Item>
 
@@ -50,8 +50,8 @@ type: Navigation
 ```jsx
 () => {
   const [activeId, setActiveId] = React.useState(1)
-  function handleActiveId(id) {
-    setActiveId(id)
+  function handleActiveId(value) {
+    setActiveId(value)
   }
   const [expanded, setExpanded] = React.useState(true)
   function handleExpanded() {
@@ -65,34 +65,34 @@ type: Navigation
           <Item prefix={<Icon.GlobalNavigationButton />} />
         </Navigation.Header>
 
-        <Item id={1} prefix={<Icon.Connected />}>
+        <Item value={1} prefix={<Icon.Connected />}>
           Option 1
         </Item>
-        <Item id={2} prefix={<Icon.Connected />}>
+        <Item value={2} prefix={<Icon.Connected />}>
           Option 2
         </Item>
-        <Item id={3} prefix={<Icon.Connected />}>
+        <Item value={3} prefix={<Icon.Connected />}>
           Option 3
         </Item>
         <ItemGroup title="group" prefix={<Icon.Connected />}>
-          <Item id={4} prefix={<Icon.Connected />}>
+          <Item value={4} prefix={<Icon.Connected />}>
             Option 4
           </Item>
-          <Item id={5} prefix={<Icon.Connected />}>
+          <Item value={5} prefix={<Icon.Connected />}>
             Option 5
           </Item>
           <ItemGroup title="group inside" prefix={<Icon.Connected />}>
-            <Item id={7} prefix={<Icon.Connected />}>
+            <Item value={7} prefix={<Icon.Connected />}>
               Option 7
             </Item>
-            <Item id={8} prefix={<Icon.Connected />}>
+            <Item value={8} prefix={<Icon.Connected />}>
               Option 8
             </Item>
             <ItemGroup title="group inside" prefix={<Icon.Connected />}>
-              <Item id={9} prefix={<Icon.Connected />}>
+              <Item value={9} prefix={<Icon.Connected />}>
                 Option 9
               </Item>
-              <Item id={10} prefix={<Icon.Connected />}>
+              <Item value={10} prefix={<Icon.Connected />}>
                 Option 10
               </Item>
             </ItemGroup>
@@ -115,8 +115,8 @@ type: Navigation
 ```jsx
 () => {
   const [activeId, setActiveId] = React.useState(1)
-  function handleActiveId(id) {
-    setActiveId(id)
+  function handleActiveId(value) {
+    setActiveId(value)
   }
   const [expanded, setExpanded] = React.useState(true)
   function handleExpanded() {
@@ -130,16 +130,16 @@ type: Navigation
           <Item prefix={<Icon.GlobalNavigationButton />} />
         </Navigation.Header>
 
-        <Item id={1} prefix={<Icon.Connected />}>
+        <Item value={1} prefix={<Icon.Connected />}>
           Option 1
         </Item>
-        <Item id={2} prefix={<Icon.Connected />}>
+        <Item value={2} prefix={<Icon.Connected />}>
           Option 2
         </Item>
-        <Item id={3} prefix={<Icon.Connected />}>
+        <Item value={3} prefix={<Icon.Connected />}>
           Option 3
         </Item>
-        <Item id={4} prefix={<Icon.Connected />}>
+        <Item value={4} prefix={<Icon.Connected />}>
           Option 4
         </Item>
 
@@ -159,8 +159,8 @@ type: Navigation
 ```jsx
 () => {
   const [activeId, setActiveId] = React.useState(1)
-  function handleActiveId(id) {
-    setActiveId(id)
+  function handleActiveId(value) {
+    setActiveId(value)
   }
   const [expanded, setExpanded] = React.useState(true)
   function handleExpanded() {
@@ -178,16 +178,16 @@ type: Navigation
             <Item prefix={<Icon.GlobalNavigationButton />} />
           </Navigation.Header>
 
-          <Item id={1} prefix={<Icon.Connected />}>
+          <Item value={1} prefix={<Icon.Connected />}>
             Option 1
           </Item>
-          <Item id={2} prefix={<Icon.Connected />}>
+          <Item value={2} prefix={<Icon.Connected />}>
             Option 2
           </Item>
-          <Item id={3} prefix={<Icon.Connected />}>
+          <Item value={3} prefix={<Icon.Connected />}>
             Option 3
           </Item>
-          <Item id={4} prefix={<Icon.Connected />}>
+          <Item value={4} prefix={<Icon.Connected />}>
             Option 4
           </Item>
 
@@ -208,8 +208,8 @@ type: Navigation
 ```jsx
 () => {
   const [activeId, setActiveId] = React.useState(1)
-  function handleActiveId(id) {
-    setActiveId(id)
+  function handleActiveId(value) {
+    setActiveId(value)
   }
   const [expanded, setExpanded] = React.useState(true)
   function handleExpanded() {
@@ -223,16 +223,16 @@ type: Navigation
           <Item prefix={<Icon.GlobalNavigationButton />} />
         </Navigation.Header>
 
-        <Item id={1} prefix={<Icon.Connected />}>
+        <Item value={1} prefix={<Icon.Connected />}>
           Option 1
         </Item>
-        <Item id={2} prefix={<Icon.Connected />}>
+        <Item value={2} prefix={<Icon.Connected />}>
           Option 2
         </Item>
-        <Item id={3} prefix={<Icon.Connected />}>
+        <Item value={3} prefix={<Icon.Connected />}>
           Option 3
         </Item>
-        <Item id={4} prefix={<Icon.Connected />}>
+        <Item value={4} prefix={<Icon.Connected />}>
           Option 4
         </Item>
 
@@ -252,8 +252,8 @@ type: Navigation
 ```jsx
 () => {
   const [activeId, setActiveId] = React.useState(1)
-  function handleActiveId(id) {
-    setActiveId(id)
+  function handleActiveId(value) {
+    setActiveId(value)
   }
   const [expanded, setExpanded] = React.useState(true)
   function handleExpanded() {
@@ -277,40 +277,40 @@ type: Navigation
             <Item prefix={<Icon.GlobalNavigationButton />} />
           </Navigation.Header>
     
-          <Item id={1} prefix={<Icon.Connected />}>
+          <Item value={1} prefix={<Icon.Connected />}>
             Option 1
           </Item>
-          <Item id={2} prefix={<Icon.Connected />}>
+          <Item value={2} prefix={<Icon.Connected />}>
             Option 2
           </Item>
-          <Item id={3} prefix={<Icon.Connected />}>
+          <Item value={3} prefix={<Icon.Connected />}>
             Option 3
           </Item>
           <ItemGroup title="group" prefix={<Icon.Connected />}>
-            <Item id={4}>
+            <Item value={4}>
               Option 4
             </Item>
-            <Item id={5}>
+            <Item value={5}>
               Option 5
             </Item>
             <ItemGroup title="group inside">
-              <Item id={7}>
+              <Item value={7}>
                 Option 7
               </Item>
-              <Item id={8}>
+              <Item value={8}>
                 Option 8
               </Item>
               <ItemGroup title="group inside">
-                <Item id={9}>
+                <Item value={9}>
                   Option 9
                 </Item>
-                <Item id={10}>
+                <Item value={10}>
                   Option 10
                 </Item>
               </ItemGroup>
             </ItemGroup>
           </ItemGroup>
-          <Item id={6}>
+          <Item value={6}>
             Option 6
           </Item>
     

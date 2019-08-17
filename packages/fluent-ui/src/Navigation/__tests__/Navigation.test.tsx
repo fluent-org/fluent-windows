@@ -15,16 +15,16 @@ describe('Navigation', (): void => {
             <Item prefix={<GlobalNavigationButton />} />
           </Navigation.Header>
 
-          <Item id={1} prefix={<Connected />}>
+          <Item value={1} prefix={<Connected />}>
             Option 1
           </Item>
-          <Item id={2} prefix={<Connected />}>
+          <Item value={2} prefix={<Connected />}>
             Option 2
           </Item>
-          <Item id={3} prefix={<Connected />}>
+          <Item value={3} prefix={<Connected />}>
             Option 3
           </Item>
-          <Item id={4} prefix={<Connected />}>
+          <Item value={4} prefix={<Connected />}>
             Option 4
           </Item>
 
@@ -40,8 +40,8 @@ describe('Navigation', (): void => {
 
   test('controlled', (): void => {
     let activeId = 1
-    function handleActiveId(id: any): void {
-      activeId = id
+    function handleActiveId(value: any): void {
+      activeId = value
     }
     const component = renderer.create(
       <ThemeProvider theme={theme}>
@@ -52,16 +52,16 @@ describe('Navigation', (): void => {
             </Item>
           </Navigation.Header>
 
-          <Item id={1} prefix={<Connected />}>
+          <Item value={1} prefix={<Connected />}>
             Option 1
           </Item>
-          <Item id={2} prefix={<Connected />}>
+          <Item value={2} prefix={<Connected />}>
             Option 2
           </Item>
-          <Item id={3} prefix={<Connected />}>
+          <Item value={3} prefix={<Connected />}>
             Option 3
           </Item>
-          <Item id={4} prefix={<Connected />}>
+          <Item value={4} prefix={<Connected />}>
             Option 4
           </Item>
 

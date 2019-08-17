@@ -34,7 +34,7 @@ const ItemGroup = React.forwardRef<HTMLDivElement, ItemGroupProps>(
     // handle active item
     const childIds = React.useMemo(
       (): number[] =>
-        React.Children.map(children, (child: React.ReactElement): number => child.props.id),
+        React.Children.map(children, (child: React.ReactElement): number => child.props.value),
       [children]
     )
     const [isActiveGroup, setIsActiveGroup] = React.useState(false)

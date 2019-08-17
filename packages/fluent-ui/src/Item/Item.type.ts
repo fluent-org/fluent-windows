@@ -2,10 +2,11 @@ import * as React from 'react'
 import { NavigationID } from '../Navigation'
 
 export interface ItemProps
-  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'id' | 'prefix'>,
+  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'prefix'>,
     StyledProps {
-  id?: NavigationID
+  value?: NavigationID
   prefix?: React.ReactElement
+  active?: boolean
   children?: React.ReactChild
   onClick?: React.MouseEventHandler<HTMLDivElement>
 }

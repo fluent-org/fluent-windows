@@ -135,7 +135,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
                 {titles.map(
                   (title): React.ReactElement => (
                     <Item
-                      id={title}
+                      value={title}
                       key={title}
                       className={activeId === title ? 'active-item' : ''}
                       onClick={handleNavigation.bind(undefined, title, type)}
@@ -183,7 +183,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
               {titles.map(
                 (title): React.ReactElement => (
                   <Item
-                    id={title}
+                    value={title}
                     key={title}
                     className={activeId === title ? 'active-item' : ''}
                     onClick={handleNavigation.bind(undefined, title, type)}
