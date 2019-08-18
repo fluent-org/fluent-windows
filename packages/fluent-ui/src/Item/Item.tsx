@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { NavigationContext } from '../Navigation/Navigation'
 import { ListContext } from '../List/List'
+import { CommandContext } from '../Command/Command'
 import {
   StyledItemWrapper,
   StyledItemActiveBar,
@@ -21,7 +22,8 @@ const Item = React.forwardRef<HTMLDivElement, ItemProps>(
       horizontal
     } = React.useContext(NavigationContext)
     const { reveal: listReveal } = React.useContext(ListContext)
-    const reveal = navigationReveal || listReveal
+    const commandReveal = React.useContext(CommandContext)
+    const reveal = navigationReveal || listReveal || commandReveal
 
     const handleItemClick = React.useCallback(
       (e: React.MouseEvent<HTMLDivElement>): void => {

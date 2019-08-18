@@ -6,7 +6,12 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
 
-import { StyledHeader, StyledFooter, StyledContent, StyledContainer } from './Navigation.styled'
+import {
+  StyledHeader,
+  StyledFooter,
+  StyledContent,
+  StyledNavigationWrapper
+} from './Navigation.styled'
 import {
   NavigationProps,
   NavigationID,
@@ -95,7 +100,7 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
 
     return (
       <NavigationContext.Provider value={contextValue}>
-        <StyledContainer
+        <StyledNavigationWrapper
           ref={ref}
           horizontal={horizontal}
           expanded={expanded as boolean}
@@ -111,7 +116,7 @@ const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
           <StyledFooter horizontal={horizontal}>
             {reveal ? revealFooter : container.footer}
           </StyledFooter>
-        </StyledContainer>
+        </StyledNavigationWrapper>
       </NavigationContext.Provider>
     )
   }

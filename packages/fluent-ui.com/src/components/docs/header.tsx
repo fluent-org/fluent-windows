@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 
-import { Command, CommandButton, Tooltip, Box } from '@fluent-ui/core'
+import { Command, Item, Tooltip, Box } from '@fluent-ui/core'
 import {
   Home as HomeIcon,
   Code as CodeIcon,
@@ -19,21 +19,15 @@ const Header = (): React.ReactElement => {
   return (
     <Command position="sticky" top="0" height={56} style={{ backgroundColor: '#fff' }} zIndex={99}>
       <Tooltip title="Home page">
-        <CommandButton onClick={handleNavigateToHome}>
-          <HomeIcon />
-        </CommandButton>
+        <Item onClick={handleNavigateToHome} prefix={<HomeIcon />} />
       </Tooltip>
       <Tooltip title="Github repository">
-        <CommandButton as="a" href="https://github.com/fluent-org/fluent-ui">
-          <CodeIcon />
-        </CommandButton>
+        <Item as="a" href="https://github.com/fluent-org/fluent-ui" prefix={<CodeIcon />} />
       </Tooltip>
 
       <Command.Content>
         <Box display={{ xs: 'block', sm: 'none' }}>
-          <CommandButton onClick={dispatch}>
-            <GlobalNavigationButtonIcon />
-          </CommandButton>
+          <Item onClick={dispatch} prefix={<GlobalNavigationButtonIcon />} />
         </Box>
       </Command.Content>
     </Command>

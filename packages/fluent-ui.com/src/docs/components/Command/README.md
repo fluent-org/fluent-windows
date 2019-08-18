@@ -13,23 +13,17 @@ type: Navigation
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
-    <CommandButton>
-      <Icon.Back/>
-    </CommandButton>
-    <CommandButton>
-      <Icon.Play/>
-    </CommandButton>
-    <CommandButton>
-      <Icon.Forward/>
-    </CommandButton>
+    <Item prefix={<Icon.Back />} />
+    <Item prefix={<Icon.Play />} />
+    <Item prefix={<Icon.Forward />} />
 
     <Command.Content>
       Now Playing...
     </Command.Content>
 
     <Command.Secondary>
-      <CommandButton>Like</CommandButton>
-      <CommandButton>Dislike</CommandButton>
+      <Item>Like</Item>
+      <Item>Dislike</Item>
     </Command.Secondary>
   </Command>
 </Box>
@@ -40,23 +34,17 @@ type: Navigation
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command reveal>
-    <CommandButton>
-      <Icon.Back/>
-    </CommandButton>
-    <CommandButton>
-      <Icon.Play/>
-    </CommandButton>
-    <CommandButton>
-      <Icon.Forward/>
-    </CommandButton>
+    <Item prefix={<Icon.Back />} />
+    <Item prefix={<Icon.Play />} />
+    <Item prefix={<Icon.Forward />} />
 
     <Command.Content>
       Now Playing...
     </Command.Content>
 
     <Command.Secondary>
-      <CommandButton>Like</CommandButton>
-      <CommandButton>Dislike</CommandButton>
+      <Item>Like</Item>
+      <Item>Dislike</Item>
     </Command.Secondary>
   </Command>
 </Box>
@@ -67,26 +55,17 @@ type: Navigation
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
-    <CommandButton>
-      <Icon.Back/>
-      <span>Back</span>
-    </CommandButton>
-    <CommandButton>
-      <Icon.Play/>
-      <span>Play</span>
-    </CommandButton>
-    <CommandButton>
-      <Icon.Forward/>
-      <span>Forward</span>
-    </CommandButton>
+    <Item prefix={<Icon.Back />}>Back</Item>
+    <Item prefix={<Icon.Play />}>Play</Item>
+    <Item prefix={<Icon.Forward />}>Forward</Item>
 
     <Command.Content>
       Now Playing...
     </Command.Content>
 
     <Command.Secondary>
-      <CommandButton>Like</CommandButton>
-      <CommandButton>Dislike</CommandButton>
+      <Item>Like</Item>
+      <Item>Dislike</Item>
     </Command.Secondary>
   </Command>
 </Box>
@@ -98,15 +77,9 @@ type: Navigation
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Box backgroundColor="none" display="flex" justifyContent="center">
     <Command acrylic>
-      <CommandButton>
-        <Icon.Back/>
-      </CommandButton>
-      <CommandButton>
-        <Icon.Play/>
-      </CommandButton>
-      <CommandButton>
-        <Icon.Forward/>
-      </CommandButton>
+      <Item prefix={<Icon.Back />} />
+      <Item prefix={<Icon.Play />} />
+      <Item prefix={<Icon.Forward />} />
     </Command>
   </Box>
 </Box>

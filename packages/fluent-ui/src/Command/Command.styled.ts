@@ -1,11 +1,12 @@
 import { styled, th } from '../styles/styled'
 import Box from '../Box'
 
-export const StyledContainer = styled(Box).attrs(
+export const StyledCommandWrapper = styled(Box).attrs(
   (props): object => ({
     backgroundColor: th.color('standard.light2').call(undefined, props)
   })
 )`
+  position: relative;
   display: flex;
   overflow: hidden;
 `

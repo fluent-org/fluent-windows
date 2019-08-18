@@ -2,7 +2,7 @@ import { styled, th, variant, css } from '../styles/styled'
 import Box from '../Box'
 import { NavigationProps } from './Navigation.type'
 
-export const StyledContainer = styled(Box).attrs(
+export const StyledNavigationWrapper = styled(Box).attrs(
   (props): any => ({
     backgroundColor: th.color('standard.light2').call(undefined, props)
   })
@@ -32,7 +32,7 @@ export const StyledContainer = styled(Box).attrs(
         max-width: ${({ horizontal }: NavigationProps): string => (horizontal ? '' : '260px')};
       `,
       false: css`
-        max-width: ${({ horizontal }: NavigationProps): string => (horizontal ? '' : '40px')};
+        max-width: ${({ horizontal }: NavigationProps): string => (horizontal ? '' : '44px')};
       `
     }
   })}

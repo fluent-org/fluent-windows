@@ -94,22 +94,20 @@ type: DataDisplay
   const [wifiChecked, setWifiChecked] = React.useState(false)
   const [bluetoothChecked, setbluetoothChecked] = React.useState(false)
   return (
-    <>
-      <List title="Settings">
-        <Item prefix={<Icon.Wifi />}>
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <span>Wi-Fi</span>
-            <Toggle checked={wifiChecked} onChange={() => setWifiChecked(v => !v)} />
-          </Box>
-        </Item>
-        <Item prefix={<Icon.Bluetooth />}>
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <span>Bluetooth</span>
-            <Toggle checked={bluetoothChecked} onChange={() => setbluetoothChecked(v => !v)} />
-          </Box>
-        </Item>
-      </List>
-    </>
+    <List title="Settings">
+      <Item prefix={<Icon.Wifi />}>
+        <Box flex={1} display="flex" justifyContent="space-between" alignItems="center">
+          <span>Wi-Fi</span>
+          <Toggle checked={wifiChecked} onChange={() => setWifiChecked(v => !v)} />
+        </Box>
+      </Item>
+      <Item prefix={<Icon.Bluetooth />}>
+        <Box flex={1} display="flex" justifyContent="space-between" alignItems="center">
+          <span>Bluetooth</span>
+          <Toggle checked={bluetoothChecked} onChange={() => setbluetoothChecked(v => !v)} />
+        </Box>
+      </Item>
+    </List>
   )
 }
 ```
@@ -121,12 +119,10 @@ type: DataDisplay
   const [item1, setItem1] = React.useState(false)
   const [item2, setItem2] = React.useState(false)
   return (
-    <>
-      <List title="Settings">
-        <Item prefix={<Checkbox checked={item1} onChange={() => setItem1(v => !v)} />}>Item1</Item>
-        <Item prefix={<Checkbox checked={item2} onChange={() => setItem2(v => !v)} />}>Item2</Item>
-      </List>
-    </>
+    <List title="Settings">
+      <Item prefix={<Checkbox checked={item1} onChange={() => setItem1(v => !v)} />}>Item1</Item>
+      <Item prefix={<Checkbox checked={item2} onChange={() => setItem2(v => !v)} />}>Item2</Item>
+    </List>
   )
 }
 ```

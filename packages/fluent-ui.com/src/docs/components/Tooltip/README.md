@@ -29,7 +29,7 @@ type: DataDisplay
 
 ```jsx
 <Box overflow="auto">
-  <Box width={600} margin="0 auto">
+  <Box width={600} margin="0 auto" padding="40px 0">
     <Box display="flex" justifyContent="center">
       <Tooltip title="Add" placement="top-start">
         <Button>top-start</Button>

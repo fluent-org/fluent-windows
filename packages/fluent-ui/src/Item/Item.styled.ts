@@ -1,7 +1,8 @@
 import * as CSS from 'csstype'
 import { styled, css, variant, th } from '../styles/styled'
+import Box from '../Box'
 
-export const StyledItemWrapper = styled.div<{
+export const StyledItemWrapper = styled(Box)<{
   reveal: boolean
 }>`
   position: relative;
@@ -11,8 +12,7 @@ export const StyledItemWrapper = styled.div<{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  box-sizing: border-box;
+  padding: 12px 20px;
   transition: ${th.transition('navigation')};
   color: inherit;
   background-color: ${({ reveal }): CSS.ColorProperty =>
@@ -77,6 +77,7 @@ export const StyledItemTextWrapper = styled.div<{ expanded: boolean; hasPrefix: 
   padding-left: ${({ children, expanded, hasPrefix }): string =>
     children ? (expanded ? (hasPrefix ? '12px' : '0px') : '0px') : '0px'};
   flex: 1;
+  display: flex;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;

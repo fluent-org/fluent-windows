@@ -5,13 +5,13 @@ import { omit } from '../utils'
 import {
   StyledContent,
   StyledPrimary,
-  StyledContainer,
+  StyledCommandWrapper,
   StyledSecondaryContainer
 } from './Command.styled'
 import Secondary from './components/Secondary'
 import Content from './components/Content'
-import CommandButton from '../CommandButton'
 import Portal from '../Portal'
+import Item from '../Item'
 import Transition from '../Transition'
 import { CommandProps, CommandContainer, CommandChild, CommandType } from './Command.type'
 
@@ -47,7 +47,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
       setSecondaryVisible((visible: boolean): boolean => !visible)
     }
     // Click on the area outside the More menu to close the More menu.
-    const [referenceRef, popperRef] = usePopper<HTMLButtonElement, HTMLDivElement>({
+    const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
       placement: 'bottom'
     })
     useClickOutside(
@@ -61,7 +61,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
 
     const otherProps = omit(rest, ['display', 'backgroundColor', 'color'])
     return (
-      <StyledContainer ref={ref} acrylic={acrylic} {...otherProps}>
+      <StyledCommandWrapper ref={ref} acrylic={acrylic} {...otherProps}>
         <CommandContext.Provider value={reveal as boolean}>
           {!!container.content.length && <StyledContent>{container.content}</StyledContent>}
           <StyledPrimary>
@@ -74,18 +74,15 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
           {!!container.secondary.length &&
             (reveal ? (
               <RevealWrapper>
-                <CommandButton
+                <Item
                   ref={referenceRef}
                   style={{ height: '100%' }}
                   onClick={handleSecondaryVisible}
-                >
-                  <MoreIcon />
-                </CommandButton>
+                  prefix={<MoreIcon />}
+                />
               </RevealWrapper>
             ) : (
-              <CommandButton ref={referenceRef} onClick={handleSecondaryVisible}>
-                <MoreIcon />
-              </CommandButton>
+              <Item ref={referenceRef} onClick={handleSecondaryVisible} prefix={<MoreIcon />} />
             ))}
 
           <Portal>
@@ -96,7 +93,7 @@ const Command = React.forwardRef<HTMLDivElement, CommandProps>(
             </Transition>
           </Portal>
         </CommandContext.Provider>
-      </StyledContainer>
+      </StyledCommandWrapper>
     )
   }
 )

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Item basic 1`] = `
-.c2 {
+.c3 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -12,6 +12,10 @@ exports[`Item basic 1`] = `
   font-size: inherit;
   color: inherit;
   fill: currentColor;
+}
+
+.c1 {
+  -webkit-overflow-scrolling: touch;
 }
 
 .c0 {
@@ -32,8 +36,7 @@ exports[`Item basic 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 12px;
-  box-sizing: border-box;
+  padding: 12px 20px;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: inherit;
@@ -49,7 +52,7 @@ exports[`Item basic 1`] = `
   background-color: rgba(0,0,0,0.2);
 }
 
-.c1 {
+.c2 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -67,13 +70,17 @@ exports[`Item basic 1`] = `
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c3 {
+.c4 {
   width: auto;
   opacity: 1;
   padding-left: 12px;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -85,15 +92,31 @@ exports[`Item basic 1`] = `
   font-size: 14px;
 }
 
+@media (min-width:600px) {
+  .c1::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c1::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c1::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 <div
-  className="c0"
+  className="c0 c1"
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c2"
   >
     <svg
-      className="c2"
+      className="c3"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -102,7 +125,7 @@ exports[`Item basic 1`] = `
     </svg>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
     Option
   </div>
@@ -110,7 +133,7 @@ exports[`Item basic 1`] = `
 `;
 
 exports[`Item without children 1`] = `
-.c2 {
+.c3 {
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -121,6 +144,10 @@ exports[`Item without children 1`] = `
   font-size: inherit;
   color: inherit;
   fill: currentColor;
+}
+
+.c1 {
+  -webkit-overflow-scrolling: touch;
 }
 
 .c0 {
@@ -141,8 +168,7 @@ exports[`Item without children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 12px;
-  box-sizing: border-box;
+  padding: 12px 20px;
   -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
   color: inherit;
@@ -158,7 +184,7 @@ exports[`Item without children 1`] = `
   background-color: rgba(0,0,0,0.2);
 }
 
-.c1 {
+.c2 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -176,13 +202,17 @@ exports[`Item without children 1`] = `
   transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
 }
 
-.c3 {
+.c4 {
   width: auto;
   opacity: 1;
   padding-left: 0px;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -194,15 +224,31 @@ exports[`Item without children 1`] = `
   font-size: 14px;
 }
 
+@media (min-width:600px) {
+  .c1::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c1::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c1::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 <div
-  className="c0"
+  className="c0 c1"
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c2"
   >
     <svg
-      className="c2"
+      className="c3"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -211,7 +257,7 @@ exports[`Item without children 1`] = `
     </svg>
   </div>
   <div
-    className="c3"
+    className="c4"
   />
 </div>
 `;
