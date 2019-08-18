@@ -124,9 +124,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
     <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
       <Navigation ref={rootRef} value={activeId} expanded={true} acrylic height="100%" width={260}>
         <Navigation.Header>
-          <Item onClick={handleExpanded}>
-            <GlobalNavigationButtonIcon />
-          </Item>
+          <Item onClick={handleExpanded} prefix={<GlobalNavigationButtonIcon />} />
         </Navigation.Header>
         {result.map(
           ({ type, titles }): React.ReactFragment => {
@@ -172,9 +170,7 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       `}
     >
       <Navigation.Header>
-        <Item onClick={handleExpanded}>
-          <GlobalNavigationButtonIcon />
-        </Item>
+        <Item onClick={handleExpanded} prefix={<GlobalNavigationButtonIcon />} />
       </Navigation.Header>
       {result.map(
         ({ type, titles }): React.ReactFragment => {
