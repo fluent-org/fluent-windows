@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs basic 1`] = `
+.c0 {
+  -webkit-overflow-scrolling: touch;
+}
+
+.c2 {
+  background-color: #f5f5f5;
+  box-shadow: 0px 3.2px 7.2px 0px rgba(0,0,0,0.132),0px 0.6px 1.8px 0px rgba(0,0,0,0.108);
+  -webkit-overflow-scrolling: touch;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  overflow: hidden;
+  max-height: 40px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.c5 {
+  position: relative;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 20px;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  color: inherit;
+  background-color: transparent;
+}
+
+.c5:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.c5:active {
+  color: #000000;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.c6 {
+  position: absolute;
+  background-color: #0078d4;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  width: 80%;
+  height: 4px;
+  left: 10%;
+  bottom: 0;
+  -webkit-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+
+.c7 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+}
+
+.c8 {
+  width: auto;
+  opacity: 1;
+  padding-left: 0px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  font-size: 14px;
+}
+
+.c10 {
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+@media (min-width:600px) {
+  .c0::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c0::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c0::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+@media (min-width:600px) {
+  .c2::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .c2::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .c2::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3 c0"
+    />
+    <div
+      className="c4 c0"
+    >
+      <div
+        className="c5 c0"
+        onClick={[Function]}
+      >
+        <div
+          className="c6"
+        />
+        <div
+          className="c7"
+        />
+        <div
+          className="c8"
+        >
+          Item One
+        </div>
+      </div>
+      <div
+        className="c5 c0"
+        onClick={[Function]}
+      >
+        <div
+          className="c6"
+        />
+        <div
+          className="c7"
+        />
+        <div
+          className="c8"
+        >
+          Item Two
+        </div>
+      </div>
+      <div
+        className="c5 c0"
+        onClick={[Function]}
+      >
+        <div
+          className="c6"
+        />
+        <div
+          className="c7"
+        />
+        <div
+          className="c8"
+        >
+          Item Three
+        </div>
+      </div>
+    </div>
+    <div
+      className="c9 c0"
+    />
+  </div>
+  <div
+    className="c10 c0"
+  >
+    <div
+      className="c0"
+      hidden={true}
+      title="Item One"
+      value="one"
+    >
+      Item One
+    </div>
+    <div
+      className="c0"
+      hidden={true}
+      title="Item Two"
+      value="two"
+    >
+      Item Two
+    </div>
+    <div
+      className="c0"
+      hidden={true}
+      title="Item Three"
+      value="three"
+    >
+      Item Three
+    </div>
+  </div>
+</div>
+`;
