@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.12.0...fluent-ui.com@1.13.0) (2019-08-19)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Fix nav header icon ([e0d8c70](https://github.com/chenyueban/fluent-ui/commit/e0d8c70))
+
+
+### Features
+
+* **Tabs:** New component Tabs ([ba14333](https://github.com/chenyueban/fluent-ui/commit/ba14333))
+
+
+
+
+
 # [1.12.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.11.0...fluent-ui.com@1.12.0) (2019-08-17)
 
 

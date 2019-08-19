@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.15.0...@fluent-ui/core@0.16.0) (2019-08-19)
+
+
+### Features
+
+* **Tabs:** New component Tabs ([ba14333](https://github.com/chenyueban/fluent-ui/commit/ba14333))
+
+
+
+
+
 # [0.15.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.14.0...@fluent-ui/core@0.15.0) (2019-08-17)
 
 
