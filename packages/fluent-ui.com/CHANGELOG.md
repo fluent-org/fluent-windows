@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.13.0...fluent-ui.com@1.14.0) (2019-08-21)
+
+
+### Bug Fixes
+
+* **Form:** Fix bugs and improve documentation ([a263370](https://github.com/chenyueban/fluent-ui/commit/a263370))
+
+
+### Features
+
+* **Form:** New component Form ([cde4faa](https://github.com/chenyueban/fluent-ui/commit/cde4faa))
+
+
+
+
+
 # [1.13.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.12.0...fluent-ui.com@1.13.0) (2019-08-19)
 
 
