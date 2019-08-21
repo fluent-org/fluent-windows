@@ -37,7 +37,7 @@ const Field = React.forwardRef<HTMLTableRowElement, FieldProps>(
     }, [dispatch, descriptor, state.values])
 
     const required = React.useMemo(
-      (): boolean => !!rules.find((v): boolean => v.required === true),
+      (): boolean => (rules ? !!rules.find((v): boolean => v.required === true) : false),
       [rules]
     )
 
@@ -59,6 +59,7 @@ const Field = React.forwardRef<HTMLTableRowElement, FieldProps>(
             name,
             value,
             onChange: handleValueChange,
+            error: !!selfError,
             ...rest
           })}
           <Transition visible={!!selfError} wrapper={false} mountOnEnter unmountOnExit>

@@ -11,18 +11,22 @@ const Form = React.forwardRef<HTMLFormElement, FormProps>(
     ref
   ): React.ReactElement => {
     const childrenArray = React.useMemo(
-      (): React.ReactElement[] => React.Children.toArray(children),
+      (): React.ReactElement[] =>
+        React.Children.toArray(children)
+          .map((child): any => !!child.props.rules && child)
+          .filter((v): React.ReactElement => v),
       [children]
     )
     const fields = React.useMemo(
       (): FormValue =>
         initialState ||
-        childrenArray.reduce((acc, cur): FormValue => {
-          return {
+        childrenArray.reduce(
+          (acc, cur): FormValue => ({
             ...acc,
             [cur.props.name]: ''
-          }
-        }, {}),
+          }),
+          {}
+        ),
       [childrenArray, initialState]
     )
     const reducer = React.useCallback(
@@ -55,12 +59,13 @@ const Form = React.forwardRef<HTMLFormElement, FormProps>(
     const [state, dispatch] = React.useReducer(reducer, { values: fields, errors: {} })
     const descriptor = React.useMemo(
       (): FormValue =>
-        childrenArray.reduce((acc, cur): any => {
-          return {
+        childrenArray.reduce(
+          (acc, cur): any => ({
             ...acc,
             [cur.props.name]: cur.props.rules
-          }
-        }, {}),
+          }),
+          {}
+        ),
       [childrenArray]
     )
     const contextValue = {

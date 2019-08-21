@@ -32,5 +32,5 @@ export interface FieldProps
   label?: string
 
   name: string
-  rules: ValidationRule[]
+  rules?: ValidationRule[]
 }
