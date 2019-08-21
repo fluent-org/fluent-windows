@@ -6,6 +6,7 @@ export interface ButtonProps
   variant?: 'standard' | 'primary'
   disabled?: boolean
   size?: 'small' | 'medium' | 'large'
+  block?: boolean
 
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   children: React.ReactNode

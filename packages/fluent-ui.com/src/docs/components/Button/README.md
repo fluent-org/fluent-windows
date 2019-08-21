@@ -47,6 +47,17 @@ Fancy larger or smaller buttons? Use the `size` property.
 </>
 ```
 
+## Block Button
+
+`block` property will make the button fit to its parent width.
+
+```jsx
+<>
+  <Button variant="standard" block>Standard</Button>
+  <Button variant="primary" block>Primary</Button>
+</>
+```
+
 ## As
 
 Thanks to [`styled-components`](https://github.com/styled-components/styled-components), you can use `as` to change the type of DOM tag.

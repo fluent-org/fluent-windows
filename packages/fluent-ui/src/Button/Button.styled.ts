@@ -73,10 +73,22 @@ const sizes = variant({
   }
 })
 
+const blocks = variant({
+  prop: 'block',
+  default: false,
+  variants: {
+    true: css`
+      width: 100%;
+    `,
+    false: css``
+  }
+})
+
 const StyledButton = styled.button<ButtonProps>`
   ${base}
   ${variants}
   ${sizes}
+  ${blocks}
 `
 
 export default StyledButton
