@@ -11,3 +11,5 @@ export * from './useFocus'
 export * from './useReveal'
 export * from './usePopper'
 export * from './useMessage'
+
+export * from './useUpdateEffect'
