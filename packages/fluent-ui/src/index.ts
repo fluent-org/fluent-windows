@@ -23,6 +23,7 @@ export { default as Progress } from './Progress'
 export { default as Portal } from './Portal'
 export { default as Dialog } from './Dialog'
 export { default as Toast } from './Toast'
+export { default as Table } from './Table'
 
 export { ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'
