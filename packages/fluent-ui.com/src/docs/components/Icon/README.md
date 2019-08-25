@@ -1,7 +1,7 @@
 ---
 title: Icon
 components: Icon
-type: DataDisplay
+type: Others
 ---
 
 # Icon
