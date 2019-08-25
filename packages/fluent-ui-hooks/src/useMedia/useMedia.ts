@@ -19,11 +19,15 @@
  */
 
 import * as React from 'react'
-import * as json2mq from 'json2mq'
+import * as json2mq_ from 'json2mq'
 import { useGlobal } from '../useGlobal'
 
+// Cannot call a namespace ('json2mq') https://github.com/rollup/rollup/issues/670
+// eslint-disable-next-line @typescript-eslint/no-angle-bracket-type-assertion
+const json2mq: any = (<any>json2mq_).default || json2mq_
+
 type AllBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-export type MediaQuery = json2mq.QueryObject | json2mq.QueryObject[] | AllBreakpoints | string
+export type MediaQuery = json2mq_.QueryObject | json2mq_.QueryObject[] | AllBreakpoints | string
 
 interface Breakpoints {
   xs: number

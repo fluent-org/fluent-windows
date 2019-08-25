@@ -1,6 +1,7 @@
 // https://www.smooth-code.com/open-source/xstyled/docs/system-props/
 import * as CSS from 'csstype'
 import * as React from 'react'
+import { StandardProps } from '..'
 
 export interface ResponsiveType<T> {
   xs?: T

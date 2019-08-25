@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StandardProps } from '..'
 
 export interface InputProps
   extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'> {

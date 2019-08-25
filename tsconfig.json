@@ -21,6 +21,8 @@
     "node_modules",
     "dist",
     "build",
-    "public"
+    "public",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ]
 }

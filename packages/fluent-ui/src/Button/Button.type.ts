@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StandardProps, StyledProps } from '..'
 
 export interface ButtonProps
   extends StandardProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,

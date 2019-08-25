@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StandardProps } from '..'
 
 export type Placement =
   | 'top-start'

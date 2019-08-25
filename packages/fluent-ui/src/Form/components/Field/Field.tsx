@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StyledFieldWrapper, StyledFieldItem, StyledFieldLabel } from './Field.styled'
-import { FieldProps } from './Field.type'
+import { FieldProps } from '../../Form.type'
 import Typography from '../../../Typography'
 import Transition from '../../../Transition'
 import { FormContext } from '../../Form.context'

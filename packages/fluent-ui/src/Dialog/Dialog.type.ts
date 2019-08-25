@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StandardProps } from '..'
 import Title from './components/Title'
 import Content from './components/Content'
 import Actions from './components/Actions'

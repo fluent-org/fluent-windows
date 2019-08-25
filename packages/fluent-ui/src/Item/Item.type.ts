@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StyledProps } from '..'
 import { NavigationID } from '../Navigation'
 import { BoxProps } from '../Box'
 

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as CSS from 'csstype'
+import { StandardProps, StyledProps } from '..'
 
 export interface VariantMapping {
   h1: keyof JSX.IntrinsicElements

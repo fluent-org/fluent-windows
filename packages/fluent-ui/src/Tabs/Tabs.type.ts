@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StandardProps } from '..'
 import Panel from './components/Panel'
 import { BoxProps } from '../Box'
 import { NavigationProps } from '../Navigation'
