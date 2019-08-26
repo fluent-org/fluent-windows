@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.17.0...@fluent-ui/core@0.18.0) (2019-08-26)
+
+
+### Features
+
+* **@fluent-ui/core:** Add propTypes support for all components ([09c2fa5](https://github.com/fluent-org/fluent-ui/commit/09c2fa5))
+* **Table:** New component Table ([5270561](https://github.com/fluent-org/fluent-ui/commit/5270561))
+
+
+
+
+
 # [0.17.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/core@0.16.0...@fluent-ui/core@0.17.0) (2019-08-21)
 
 

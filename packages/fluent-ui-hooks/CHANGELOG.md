@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/hooks@0.8.0...@fluent-ui/hooks@0.9.0) (2019-08-26)
+
+
+### Features
+
+* **@fluent-ui/core:** Add propTypes support for all components ([09c2fa5](https://github.com/fluent-org/fluent-ui/commit/09c2fa5))
+* **@fluent-ui/hooks:** New hooks useUpdateEffect ([b2e7e72](https://github.com/fluent-org/fluent-ui/commit/b2e7e72))
+
+
+
+
+
 # [0.8.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/hooks@0.7.3...@fluent-ui/hooks@0.8.0) (2019-08-14)
 
 

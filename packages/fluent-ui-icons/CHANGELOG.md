@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.4.0...@fluent-ui/icons@0.5.0) (2019-08-26)
+
+
+### Features
+
+* **@fluent-ui/core:** Add propTypes support for all components ([09c2fa5](https://github.com/fluent-org/fluent-ui/commit/09c2fa5))
+* **@fluent-ui/icons:** Remove unnamed icon ([e91fc15](https://github.com/fluent-org/fluent-ui/commit/e91fc15))
+
+
+
+
+
 # [0.4.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/icons@0.3.2...@fluent-ui/icons@0.4.0) (2019-07-22)
 
 

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.14.0...fluent-ui.com@1.15.0) (2019-08-26)
+
+
+### Features
+
+* **@fluent-ui/core:** Add propTypes support for all components ([09c2fa5](https://github.com/fluent-org/fluent-ui/commit/09c2fa5))
+* **@fluent-ui/hooks:** New hooks useUpdateEffect ([b2e7e72](https://github.com/fluent-org/fluent-ui/commit/b2e7e72))
+* **@fluent-ui/icons:** Remove unnamed icon ([e91fc15](https://github.com/fluent-org/fluent-ui/commit/e91fc15))
+* **Table:** New component Table ([5270561](https://github.com/fluent-org/fluent-ui/commit/5270561))
+
+
+
+
+
 # [1.14.0](https://github.com/chenyueban/fluent-ui/compare/fluent-ui.com@1.13.0...fluent-ui.com@1.14.0) (2019-08-21)
 
 

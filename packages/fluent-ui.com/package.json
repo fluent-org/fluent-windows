@@ -1,7 +1,7 @@
 {
   "name": "fluent-ui.com",
   "private": true,
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "fluent-ui.com",
   "keywords": [
     "react",
@@ -28,9 +28,9 @@
     "url": "https://github.com/fluent-org/fluent-ui/issues"
   },
   "dependencies": {
-    "@fluent-ui/core": "^0.17.0",
-    "@fluent-ui/hooks": "^0.8.0",
-    "@fluent-ui/icons": "^0.4.0",
+    "@fluent-ui/core": "^0.18.0",
+    "@fluent-ui/hooks": "^0.9.0",
+    "@fluent-ui/icons": "^0.5.0",
     "gatsby": "^2.13.83",
     "gatsby-image": "^2.2.14",
     "gatsby-plugin-manifest": "^2.2.9",
