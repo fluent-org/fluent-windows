@@ -17,7 +17,8 @@ import {
   NavigationID,
   NavigationContainer,
   NavigationChild,
-  NavigationType
+  NavigationType,
+  NavigationPropTypes
 } from './Navigation.type'
 
 export const NavigationContext = React.createContext<{
@@ -36,9 +37,18 @@ export const NavigationContext = React.createContext<{
   horizontal: false
 })
 
-const Navigation = React.forwardRef<HTMLDivElement, NavigationProps>(
+const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, NavigationProps>(
   (
-    { horizontal, expanded, acrylic, reveal, value, onChange, children, ...rest }: NavigationProps,
+    {
+      horizontal = false,
+      expanded = true,
+      acrylic = false,
+      reveal,
+      value,
+      onChange,
+      children,
+      ...rest
+    }: NavigationProps,
     ref
   ): React.ReactElement => {
     const container: NavigationContainer = {
@@ -140,10 +150,6 @@ Object.defineProperty(Navigation, 'Content', {
 
 Navigation.displayName = 'FNavigation'
 
-Navigation.defaultProps = {
-  horizontal: false,
-  expanded: true,
-  acrylic: false
-}
+Navigation.propTypes = NavigationPropTypes
 
 export default Navigation as NavigationType

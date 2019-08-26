@@ -2,13 +2,10 @@ import * as React from 'react'
 import { StyledToast, StyledToastContainer, StyledToastActions } from './Toast.styled'
 import Portal from '../Portal'
 import Transition from '../Transition'
-import { ToastProps } from './Toast.type'
+import { ToastProps, ToastPropTypes } from './Toast.type'
 
-const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
-  (
-    { children, visible = false, actions, placement = 'top', ...rest }: ToastProps,
-    ref
-  ): React.ReactElement => {
+const Toast: React.FC<ToastProps> = React.forwardRef<HTMLDivElement, ToastProps>(
+  ({ children, visible = false, actions, placement = 'top', ...rest }, ref): React.ReactElement => {
     return (
       <Portal>
         <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
@@ -29,5 +26,7 @@ const Toast = React.forwardRef<HTMLDivElement, ToastProps>(
 )
 
 Toast.displayName = 'FToast'
+
+Toast.propTypes = ToastPropTypes
 
 export default Toast

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import { StyledProps } from '..'
 import { NavigationID } from '../Navigation'
 import { BoxProps } from '../Box'
@@ -9,4 +10,12 @@ export interface ItemProps extends Omit<BoxProps, 'prefix'>, Omit<StyledProps, '
   active?: boolean
   children?: React.ReactChild
   onClick?: React.MouseEventHandler<HTMLDivElement>
+}
+
+export const ItemPropTypes = {
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  prefix: PropTypes.element,
+  active: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.element]),
+  onClick: PropTypes.func
 }

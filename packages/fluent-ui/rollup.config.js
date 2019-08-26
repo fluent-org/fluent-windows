@@ -24,12 +24,24 @@ const commonjsOptions = {
   include: /node_modules/,
   namedExports: {
     '../../node_modules/prop-types/index.js': [
-      'elementType',
+      'array',
       'bool',
       'func',
+      'number',
       'object',
+      'string',
+      'symbol',
+      'any',
+      'arrayOf',
+      'element',
+      'elementType',
+      'instanceOf',
+      'node',
+      'objectOf',
+      'oneOf',
       'oneOfType',
-      'element'
+      'shape',
+      'exact'
     ],
     '../../node_modules/react-is/index.js': [
       'ForwardRef',

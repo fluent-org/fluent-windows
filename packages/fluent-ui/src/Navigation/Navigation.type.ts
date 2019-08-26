@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { BoxProps } from '../Box'
+import * as PropTypes from 'prop-types'
+import { BoxProps, BoxPropTypes } from '../Box'
 import { ThemeProps } from '../styles/createTheme'
 
 import Header from './components/Header'
@@ -45,4 +46,14 @@ export interface NavigationHeaderProps {
 }
 export interface NavigationFooterProps {
   children: React.ReactNode
+}
+
+export const NavigationPropTypes = {
+  ...BoxPropTypes,
+  horizontal: PropTypes.bool,
+  response: PropTypes.bool,
+  expanded: PropTypes.bool,
+  acrylic: PropTypes.bool,
+  reveal: PropTypes.bool,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }

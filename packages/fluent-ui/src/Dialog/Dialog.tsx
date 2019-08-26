@@ -10,15 +10,16 @@ import {
   DialogType,
   DialogChild,
   DialogContainer,
-  DialogContextType
+  DialogContextType,
+  DialogPropTypes
 } from './Dialog.type'
 
 export const DialogContext = React.createContext<DialogContextType>({
   onChange: (): void => {}
 })
 
-const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
-  ({ children, visible, onChange, ...rest }: DialogProps, ref): React.ReactElement | null => {
+const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogProps>(
+  ({ children, visible, onChange, ...rest }, ref): React.ReactElement | null => {
     function handleClose(): void {
       onChange && onChange(false)
     }
@@ -92,5 +93,7 @@ Object.defineProperty(Dialog, 'Actions', {
 })
 
 Dialog.displayName = 'FDialog'
+
+Dialog.propTypes = DialogPropTypes
 
 export default Dialog as DialogType

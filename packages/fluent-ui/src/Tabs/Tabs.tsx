@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StyledTabsWrapper, StyledTabsPanelWrapper } from './Tabs.styled'
-import { TabsProps, TabsType } from './Tabs.type'
+import { TabsProps, TabsType, TabsPropTypes } from './Tabs.type'
 import Panel from './components/Panel'
 import Navigation from '../Navigation'
 import Item from '../Item'
@@ -10,8 +10,8 @@ interface Values {
   title: string
 }
 
-const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
-  ({ value, onChange, children, ...rest }: TabsProps, ref): React.ReactElement => {
+const Tabs: React.FC<TabsProps> = React.forwardRef<HTMLDivElement, TabsProps>(
+  ({ value, onChange, children, ...rest }, ref): React.ReactElement => {
     const values = React.useMemo(
       (): Values[] =>
         React.Children.map(
@@ -57,5 +57,7 @@ Object.defineProperty(Tabs, 'Panel', {
 })
 
 Tabs.displayName = 'FTabs'
+
+Tabs.propTypes = TabsPropTypes
 
 export default Tabs as TabsType

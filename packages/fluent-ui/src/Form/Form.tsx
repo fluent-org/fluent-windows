@@ -1,19 +1,16 @@
 import * as React from 'react'
 import { StyledFormWrapper, StyledFormTable } from './Form.styled'
-import { FormProps, FormType, FormValue, FormState } from './Form.type'
+import { FormProps, FormType, FormValue, FormState, FormPropTypes } from './Form.type'
 import Field from './components/Field'
 import { FormContext } from './Form.context'
 import { createValidator } from './Form.validator'
 
-const Form = React.forwardRef<HTMLFormElement, FormProps>(
-  (
-    { children, prefix, suffix, initialState, onSubmit, ...rest }: FormProps,
-    ref
-  ): React.ReactElement => {
+const Form: React.FC<FormProps> = React.forwardRef<HTMLFormElement, FormProps>(
+  ({ children, prefix, suffix, initialState, onSubmit, ...rest }, ref): React.ReactElement => {
     const childrenArray = React.useMemo(
       (): React.ReactElement[] =>
         React.Children.toArray(children)
-          .map((child): any => !!child.props.rules && child)
+          .map((child: any): any => !!child.props.rules && child)
           .filter((v): React.ReactElement => v),
       [children]
     )
@@ -95,7 +92,10 @@ const Form = React.forwardRef<HTMLFormElement, FormProps>(
           <StyledFormTable>
             <caption>{prefix}</caption>
             <tbody>
-              {React.Children.map(children, (child): React.ReactElement => child)}
+              {React.Children.map(
+                children,
+                (child: React.ReactElement): React.ReactElement => child
+              )}
               <tr>
                 <td colSpan={2}>{suffix}</td>
               </tr>
@@ -114,5 +114,7 @@ Object.defineProperty(Form, 'Field', {
 })
 
 Form.displayName = 'FForm'
+
+Form.propTypes = FormPropTypes
 
 export default Form as FormType

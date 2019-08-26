@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { IconButtonStyled } from './IconButton.styled'
-import { IconButtonProps } from './IconButton.type'
+import { IconButtonProps, IconButtonPropTypes } from './IconButton.type'
 
-const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
+const IconButton: React.FC<IconButtonProps> = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   (
-    { variant = 'standard', disabled, size, onClick, children, ...rest }: IconButtonProps,
+    { variant = 'standard', disabled, size, onClick, children, ...rest },
     ref
   ): React.ReactElement => {
     return (
@@ -23,5 +23,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
 )
 
 IconButton.displayName = 'FIconButton'
+
+IconButton.propTypes = IconButtonPropTypes
 
 export default IconButton

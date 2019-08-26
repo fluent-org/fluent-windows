@@ -1,142 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input basic 1`] = `
-.c3 {
-  -webkit-overflow-scrolling: touch;
-}
-
-.c2 {
-  -webkit-transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.c2.fade-enter {
-  opacity: 0;
-}
-
-.c2.fade-enter-active {
-  opacity: 1;
-}
-
-.c2.fade-exit {
-  opacity: 1;
-}
-
-.c2.fade-exit-active {
-  opacity: 0;
-}
-
-.c2.zoom-enter-active {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.zoom-exit-active {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.zoom-exit-done {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.slide-enter {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.slide-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.slide-exit {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.slide-exit-active {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.slide-exit-done {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.collapse-enter {
-  height: 0;
-}
-
-.c2.collapse-enter-active {
-  height: 0px;
-}
-
-.c2.collapse-enter-done {
-  height: auto;
-}
-
-.c2.collapse-exit {
-  height: 0px;
-}
-
-.c2.collapse-exit-active {
-  height: 0;
-}
-
-.c2.grow-enter {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
-}
-
-.c2.grow-enter-active {
-  opacity: 1;
-  -webkit-transform: scale(1,1);
-  -ms-transform: scale(1,1);
-  transform: scale(1,1);
-}
-
-.c2.grow-enter-done {
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.grow-exit-active {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
-}
-
-.c2.grow-exit-done {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
-}
-
 .c0 {
   display: inline-block;
   position: relative;
@@ -172,22 +36,6 @@ exports[`Input basic 1`] = `
   pointer-events: none;
 }
 
-@media (min-width:600px) {
-  .c3::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c3::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c3::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
 <span
   className="c0"
 >
@@ -196,14 +44,6 @@ exports[`Input basic 1`] = `
     onChange={[Function]}
     type="text"
   />
-  <div
-    className="c2 c3"
-    type="fade"
-  >
-    <div
-      className="c3"
-    />
-  </div>
 </span>
 `;
 
@@ -472,142 +312,6 @@ exports[`Input prop cleared 1`] = `
 `;
 
 exports[`Input prop error 1`] = `
-.c3 {
-  -webkit-overflow-scrolling: touch;
-}
-
-.c2 {
-  -webkit-transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.c2.fade-enter {
-  opacity: 0;
-}
-
-.c2.fade-enter-active {
-  opacity: 1;
-}
-
-.c2.fade-exit {
-  opacity: 1;
-}
-
-.c2.fade-exit-active {
-  opacity: 0;
-}
-
-.c2.zoom-enter-active {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.zoom-exit-active {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.zoom-exit-done {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.slide-enter {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.slide-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.slide-exit {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.slide-exit-active {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.slide-exit-done {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.collapse-enter {
-  height: 0;
-}
-
-.c2.collapse-enter-active {
-  height: 0px;
-}
-
-.c2.collapse-enter-done {
-  height: auto;
-}
-
-.c2.collapse-exit {
-  height: 0px;
-}
-
-.c2.collapse-exit-active {
-  height: 0;
-}
-
-.c2.grow-enter {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
-}
-
-.c2.grow-enter-active {
-  opacity: 1;
-  -webkit-transform: scale(1,1);
-  -ms-transform: scale(1,1);
-  transform: scale(1,1);
-}
-
-.c2.grow-enter-done {
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.grow-exit-active {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
-}
-
-.c2.grow-exit-done {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
-}
-
 .c0 {
   display: inline-block;
   position: relative;
@@ -653,22 +357,6 @@ exports[`Input prop error 1`] = `
   border-color: #f44336;
 }
 
-@media (min-width:600px) {
-  .c3::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c3::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c3::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
 <span
   className="c0"
 >
@@ -677,13 +365,5 @@ exports[`Input prop error 1`] = `
     onChange={[Function]}
     type="text"
   />
-  <div
-    className="c2 c3"
-    type="fade"
-  >
-    <div
-      className="c3"
-    />
-  </div>
 </span>
 `;

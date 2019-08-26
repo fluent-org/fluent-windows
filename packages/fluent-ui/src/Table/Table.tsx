@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StyledTableWrapper } from './Table.styled'
-import { TableProps, ColumnsType, DataType } from './Table.type'
+import { TableProps, ColumnsType, DataType, TablePropTypes } from './Table.type'
 import Head from './components/Head'
 import Body from './components/Body'
 import Row from './components/Row'
@@ -41,6 +41,8 @@ function getColumnsChildren<T extends DataType>(
 
 class Table<T extends DataType> extends React.Component<TableProps<T>> {
   public static displayName = 'FTable'
+
+  public static propTypes = TablePropTypes
 
   public static Head = Head
   public static Body = Body

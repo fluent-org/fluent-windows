@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StyledListWrapper, StyledListTitle } from './List.styled'
-import { ListProps } from './List.type'
+import { ListProps, ListPropTypes } from './List.type'
 import { useReveal } from '@fluent-ui/hooks'
 
 export const ListContext = React.createContext<{
@@ -11,16 +11,16 @@ export const ListContext = React.createContext<{
   acrylic: false
 })
 
-const List = React.forwardRef<HTMLDivElement, ListProps>(
-  ({ children, title, acrylic, reveal, ...rest }: ListProps, ref): React.ReactElement => {
+const List: React.FC<ListProps> = React.forwardRef<HTMLDivElement, ListProps>(
+  ({ children, title, acrylic, reveal, ...rest }, ref): React.ReactElement => {
     // handle Reveal Effects
     const [RevealWrapper] = useReveal(66)
-    const childs = reveal
+    const theChildren = reveal
       ? React.useMemo(
           (): React.ReactElement[] =>
             React.Children.map(
               children,
-              (child, i): React.ReactElement => {
+              (child: React.ReactElement, i): React.ReactElement => {
                 if (child.type && (child as any).type.displayName === 'FItem') {
                   return <RevealWrapper key={i}>{child}</RevealWrapper>
                 }
@@ -39,7 +39,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
       <ListContext.Provider value={contextValue}>
         <StyledListWrapper ref={ref} acrylic={acrylic} reveal={reveal} {...rest}>
           {title && <StyledListTitle variant="subtitle2">{title}</StyledListTitle>}
-          {childs}
+          {theChildren}
         </StyledListWrapper>
       </ListContext.Provider>
     )
@@ -47,5 +47,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
 )
 
 List.displayName = 'FList'
+
+List.propTypes = ListPropTypes
 
 export default List

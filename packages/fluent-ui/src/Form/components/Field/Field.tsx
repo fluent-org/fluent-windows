@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { StyledFieldWrapper, StyledFieldItem, StyledFieldLabel } from './Field.styled'
-import { FieldProps } from '../../Form.type'
+import { FieldProps, FieldPropTypes } from '../../Form.type'
 import Typography from '../../../Typography'
 import Transition from '../../../Transition'
 import { FormContext } from '../../Form.context'
 import { createValidator } from '../../Form.validator'
 
-const Field = React.forwardRef<HTMLTableRowElement, FieldProps>(
-  ({ children, onChange, label, name, rules, ...rest }: FieldProps, ref): React.ReactElement => {
+const Field: React.FC<FieldProps> = React.forwardRef<HTMLTableRowElement, FieldProps>(
+  ({ children, onChange, label, name, rules, ...rest }, ref): React.ReactElement => {
     const { state, dispatch, descriptor } = React.useContext(FormContext)
 
     const [value, setValue] = React.useState(state.values[name] || '')
@@ -74,5 +74,7 @@ const Field = React.forwardRef<HTMLTableRowElement, FieldProps>(
 )
 
 Field.displayName = 'FFormField'
+
+Field.propTypes = FieldPropTypes
 
 export default Field

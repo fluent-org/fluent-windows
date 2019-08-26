@@ -3,9 +3,9 @@ import { StyledCardWrapper } from './Card.styled'
 import Content from './components/Content'
 import Actions from './components/Actions'
 import Header from './components/Header'
-import { CardProps, CardType } from './Card.type'
+import { CardProps, CardType, CardPropTypes } from './Card.type'
 
-const Card = React.forwardRef<HTMLDivElement, CardProps>(
+const Card: React.FC<CardProps> = React.forwardRef<HTMLDivElement, CardProps>(
   (
     { pure = false, dynamic = false, minWidth = 275, maxWidth = 355, ...rest }: CardProps,
     ref
@@ -40,5 +40,7 @@ Object.defineProperty(Card, 'Header', {
 })
 
 Card.displayName = 'FCard'
+
+Card.propTypes = CardPropTypes
 
 export default Card as CardType

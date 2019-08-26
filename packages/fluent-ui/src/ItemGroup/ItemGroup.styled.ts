@@ -38,11 +38,7 @@ export const StyledItemGroupTitlePrefixWrapper = styled.div<{
   opacity: ${({ expanded, horizontal }): number => (!horizontal ? (expanded ? 1 : 0) : 1)}
 `
 
-export const StyledItemGroupItemWrapper = styled(Box).attrs(
-  (props): any => ({
-    backgroundColor: props.acrylic && th.color('standard.light2').call(undefined, props)
-  })
-)<{ level: number; float?: boolean }>`
+export const StyledItemGroupItemWrapper = styled(Box)<{ level: number; float?: boolean }>`
   overflow: visible;
   box-shadow: ${th.shadow('3')};
   z-index: 9999;

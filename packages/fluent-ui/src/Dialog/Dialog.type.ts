@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 import Title from './components/Title'
 import Content from './components/Content'
@@ -35,4 +36,14 @@ export interface DialogContextType {
 
 export interface DialogTitleProps {
   children: React.ReactText
+}
+
+export const DialogPropTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    // @ts-ignore
+    PropTypes.arrayOf<PropTypes.Requireable<PropTypes.ReactElementLike>>(PropTypes.element)
+  ]).isRequired,
+  visible: PropTypes.bool.isRequired,
+  onChange: PropTypes.func
 }

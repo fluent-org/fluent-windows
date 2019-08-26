@@ -9,10 +9,10 @@ import {
   StyledItemTextWrapper
 } from './Item.styled'
 import { NavigationID } from '../Navigation/Navigation.type'
-import { ItemProps } from './Item.type'
+import { ItemProps, ItemPropTypes } from './Item.type'
 
-const Item = React.forwardRef<HTMLDivElement, ItemProps>(
-  ({ value, prefix, active, children, onClick, ...rest }: ItemProps, ref): React.ReactElement => {
+const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
+  ({ value, prefix, active, children, onClick, ...rest }, ref): React.ReactElement => {
     // handle active item
     const {
       value: activeID,
@@ -55,5 +55,7 @@ const Item = React.forwardRef<HTMLDivElement, ItemProps>(
 )
 
 Item.displayName = 'FItem'
+
+Item.propTypes = ItemPropTypes
 
 export default Item

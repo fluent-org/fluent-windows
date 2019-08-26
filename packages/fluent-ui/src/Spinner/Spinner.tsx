@@ -1,13 +1,10 @@
 import * as React from 'react'
 import { StyledSpinnerWrapper, StyledSpinner } from './Spinner.styled'
-import { SpinnerProps } from './Spinner.type'
+import { SpinnerProps, SpinnerPropTypes } from './Spinner.type'
 import Typography from '../Typography'
 
-const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
-  (
-    { size = 'medium', label, labelPosition = 'bottom', ...rest }: SpinnerProps,
-    ref
-  ): React.ReactElement => {
+const Spinner: React.FC<SpinnerProps> = React.forwardRef<HTMLDivElement, SpinnerProps>(
+  ({ size = 'medium', label, labelPosition = 'bottom', ...rest }, ref): React.ReactElement => {
     const gap = React.useMemo((): object => {
       switch (labelPosition) {
         case 'top':
@@ -34,5 +31,7 @@ const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
 )
 
 Spinner.displayName = 'FSpinner'
+
+Spinner.propTypes = SpinnerPropTypes
 
 export default Spinner

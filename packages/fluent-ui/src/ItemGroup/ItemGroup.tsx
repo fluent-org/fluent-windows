@@ -11,16 +11,13 @@ import {
   StyledItemGroupTitlePrefixWrapper,
   StyledItemGroupItemWrapper
 } from './ItemGroup.styled'
-import { ItemGroupProps } from './ItemGroup.type'
+import { ItemGroupProps, ItemGroupPropTypes } from './ItemGroup.type'
 import { NavigationContext } from '../Navigation/Navigation'
 import { ListContext } from '../List/List'
 import { useReveal, useHover, usePopper } from '@fluent-ui/hooks'
 
-const ItemGroup = React.forwardRef<HTMLDivElement, ItemGroupProps>(
-  (
-    { level = 1, children, title, prefix, shrink = 'expand', ...rest }: ItemGroupProps,
-    ref
-  ): React.ReactElement => {
+const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, ItemGroupProps>(
+  ({ level = 1, children, title, prefix, shrink = 'expand', ...rest }, ref): React.ReactElement => {
     const {
       value: activeID,
       expanded,
@@ -100,7 +97,7 @@ const ItemGroup = React.forwardRef<HTMLDivElement, ItemGroupProps>(
     const childElements = reveal
       ? React.Children.map(
           children,
-          (child, i): React.ReactElement => {
+          (child: React.ReactElement, i): React.ReactElement => {
             if (child.type) {
               if ((child as any).type.displayName === 'FItem') {
                 return <RevealWrapper key={i}>{child}</RevealWrapper>
@@ -113,7 +110,7 @@ const ItemGroup = React.forwardRef<HTMLDivElement, ItemGroupProps>(
         )
       : React.Children.map(
           children,
-          (child): React.ReactElement => {
+          (child: React.ReactElement): React.ReactElement => {
             if (child.type && (child as any).type.displayName === 'FItemGroup') {
               return React.cloneElement(child, { level: level + 1 })
             }
@@ -193,5 +190,7 @@ const ItemGroup = React.forwardRef<HTMLDivElement, ItemGroupProps>(
 )
 
 ItemGroup.displayName = 'FItemGroup'
+
+ItemGroup.propTypes = ItemGroupPropTypes
 
 export default ItemGroup

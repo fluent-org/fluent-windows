@@ -18,7 +18,7 @@ Use `Card.Header` `Card.Content` `Card.Actions` inside Card so that f knows how 
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| children | React.ReactNode |  | The content of the `Card`. |
+| children&nbsp;* | React.ReactNode |  | The content of the `Card`. |
 | pure | boolean |  | If `true`, You will get a basic pure card. |
 | dynamic | boolean |  | If `true`, You will get a dynamic card. |
 

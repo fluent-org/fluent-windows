@@ -1,6 +1,7 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import Item from '../Item'
-import { BoxProps } from '../Box'
+import { BoxProps, BoxPropTypes } from '../Box'
 import { ThemeProps } from '../styles/createTheme'
 
 import Content from './components/Content'
@@ -26,4 +27,14 @@ export interface CommandProps extends BoxProps, ThemeProps {
 export interface CommandType extends React.ForwardRefExoticComponent<CommandProps> {
   Content: typeof Content
   Secondary: typeof Secondary
+}
+
+export const CommandPropTypes = {
+  ...BoxPropTypes,
+  reveal: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    // @ts-ignore
+    PropTypes.arrayOf<PropTypes.Requireable<PropTypes.ReactElementLike>>(PropTypes.element)
+  ]).isRequired
 }

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import Field from './components/Field'
 import { StandardProps } from '..'
 
@@ -63,4 +64,24 @@ export interface FieldProps
 
   name: string
   rules?: ValidationRule[]
+}
+
+export const FormPropTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    // @ts-ignore
+    PropTypes.arrayOf<PropTypes.Requireable<PropTypes.ReactElementLike>>(PropTypes.element)
+  ]).isRequired,
+  prefix: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.element]),
+  suffix: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.element]),
+  initialState: PropTypes.object,
+  onSubmit: PropTypes.func.isRequired
+}
+
+export const FieldPropTypes = {
+  children: PropTypes.element.isRequired,
+  onChange: PropTypes.func,
+  label: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  rules: PropTypes.array
 }

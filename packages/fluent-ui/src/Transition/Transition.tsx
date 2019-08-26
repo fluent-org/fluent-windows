@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { StyledContainer } from './Transition.styled'
-import { TransitionProps } from './Transition.type'
+import { TransitionProps, TransitionPropTypes } from './Transition.type'
 
-const Transition = React.forwardRef<HTMLDivElement, TransitionProps>(
+const Transition: React.FC<TransitionProps> = React.forwardRef<HTMLDivElement, TransitionProps>(
   (
     {
       type = 'fade',
@@ -14,7 +14,7 @@ const Transition = React.forwardRef<HTMLDivElement, TransitionProps>(
       custom,
       children,
       ...rest
-    }: TransitionProps,
+    },
     ref
   ): React.ReactElement => {
     const [wrapperHeight, setWrapperHeight] = React.useState(0)
@@ -37,5 +37,7 @@ const Transition = React.forwardRef<HTMLDivElement, TransitionProps>(
 )
 
 Transition.displayName = 'FTransition'
+
+Transition.propTypes = TransitionPropTypes
 
 export default Transition

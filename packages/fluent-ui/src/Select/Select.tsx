@@ -2,15 +2,12 @@ import * as React from 'react'
 import { usePopper, useClick, useClickOutside } from '@fluent-ui/hooks'
 import { ChevronDownMed as DownIcon } from '@fluent-ui/icons'
 import { StyledSelectWrapper, StyledSelect, StyledSelectIcon } from './Select.styled'
-import { SelectProps } from './Select.type'
+import { SelectProps, SelectPropTypes } from './Select.type'
 import Transition from '../Transition'
 import List from '../List'
 
-const Select = React.forwardRef<HTMLInputElement, SelectProps>(
-  (
-    { value, onChange, disabled = false, children, ...rest }: SelectProps,
-    ref
-  ): React.ReactElement => {
+const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectProps>(
+  ({ value, onChange, disabled = false, children, ...rest }, ref): React.ReactElement => {
     const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
       placement: 'bottom-start',
       positionFixed: false
@@ -35,7 +32,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(
     React.useEffect((): void => {
       React.Children.forEach(
         children,
-        (child): void => {
+        (child: React.ReactElement): void => {
           const active = child.props.value === value
           active && setCurrentText(child.props.children)
         }
@@ -43,7 +40,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(
     }, [children, value])
     const theChildren = React.Children.map(
       children,
-      (child): React.ReactElement => {
+      (child: React.ReactElement): React.ReactElement => {
         function onClick(): void {
           child.props.value && onChange && onChange(child.props.value)
           setCurrentText(child.props.children)
@@ -75,5 +72,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>(
 )
 
 Select.displayName = 'FSelect'
+
+Select.propTypes = SelectPropTypes
 
 export default Select

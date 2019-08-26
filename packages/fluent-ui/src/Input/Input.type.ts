@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 
 export interface InputProps
@@ -10,4 +11,14 @@ export interface InputProps
   cleared?: boolean
   password?: boolean
   error?: boolean
+}
+
+export const InputPropTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  cleared: PropTypes.bool,
+  password: PropTypes.bool,
+  error: PropTypes.bool
 }

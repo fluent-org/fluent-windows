@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 
 export interface RadioProps
@@ -8,4 +9,12 @@ export interface RadioProps
   onChange?: (checked: string) => void
   disabled?: boolean
   children?: React.ReactNode
+}
+
+export const RadioPropTypes = {
+  checked: PropTypes.bool,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  disabled: PropTypes.bool,
+  children: PropTypes.node
 }

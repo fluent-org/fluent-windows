@@ -10,16 +10,16 @@ import {
 import Portal from '../Portal'
 import Transition from '../Transition'
 import { StyledTooltip } from './Tooltip.styled'
-import { TooltipProps } from './Tooltip.type'
+import { TooltipProps, TooltipPropTypes } from './Tooltip.type'
 
-const Tooltip = ({
+const Tooltip: React.FC<TooltipProps> = ({
   children,
   title,
   visible,
   onChange,
   trigger = 'hover',
   ...propperOptions
-}: TooltipProps): React.ReactElement => {
+}): React.ReactElement => {
   const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>(propperOptions)
   const isControlled = React.useMemo((): boolean => !!visible, [visible])
 
@@ -62,5 +62,7 @@ const Tooltip = ({
 }
 
 Tooltip.displayName = 'FTooltip'
+
+Tooltip.propTypes = TooltipPropTypes
 
 export default Tooltip

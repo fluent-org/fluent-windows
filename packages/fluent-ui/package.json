@@ -11,12 +11,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/chenyueban/fluent-ui",
+    "url": "https://github.com/fluent-org/fluent-ui",
     "directory": "packages/fluent-ui"
   },
   "homepage": "https://fluent-ui.com/",
   "bugs": {
-    "url": "https://github.com/chenyueban/fluent-ui/issues"
+    "url": "https://github.com/fluent-org/fluent-ui/issues"
   },
   "license": "MIT",
   "engines": {
@@ -24,14 +24,13 @@
   },
   "scripts": {
     "prebuild": "cross-env NODE_ENV=production rimraf build",
-    "build": "yarn build:cjs && yarn build:es && yarn build:iife && yarn build:umd && yarn build:rename && yarn build:copy-files",
-    "build:cjs": "cross-env tsc --emitDeclarationOnly --outDir ./build && NODE_ENV=production BABEL_ENV=cjs babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\",\"src/**/*.type.ts\" --extensions '.ts','.tsx'",
-    "build:es": "cross-env tsc --emitDeclarationOnly --outDir ./build/es && NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\",\"src/**/*.type.ts\" --extensions '.ts','.tsx'",
+    "build": "yarn build:cjs && yarn build:es && yarn build:iife && yarn build:umd && yarn build:copy-files",
+    "build:cjs": "cross-env tsc --emitDeclarationOnly --outDir ./build && NODE_ENV=production BABEL_ENV=cjs babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\" --extensions '.ts','.tsx'",
+    "build:es": "cross-env tsc --emitDeclarationOnly --outDir ./build/es && NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\" --extensions '.ts','.tsx'",
     "build:iife": "cross-env BABEL_ENV=production-iife rollup -c ./rollup.config.js",
     "build:umd": "cross-env BABEL_ENV=production-umd rollup -c ./rollup.config.js",
     "build:copy-files": "ts-node ../../scripts/copy-files.ts",
-    "build:rename": "ts-node ../../scripts/rename-typets.ts",
-    "start": "cross-env tsc -w --emitDeclarationOnly --outDir ./build/es && NODE_ENV=production BABEL_ENV=es babel -w --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\",\"src/**/*.type.ts\" --extensions '.ts','.tsx'",
+    "start": "cross-env tsc -w --emitDeclarationOnly --outDir ./build/es && NODE_ENV=development BABEL_ENV=es babel -w --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\" --extensions '.ts','.tsx'",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --coverage --watch",
     "test:prod": "cross-env NODE_ENV=test jest --ci --coverage --runInBand --detectOpenHandles --forceExit && yarn codecov",
@@ -48,10 +47,12 @@
     "@xstyled/prop-types": "^1.3.0",
     "@xstyled/system": "^1.7.0",
     "async-validator": "^3.0.3",
+    "prop-types": "^15.7.2",
     "react-transition-group": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^10.11.0",
+    "@types/prop-types": "^15.7.1",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/react-transition-group": "^2.9.2",

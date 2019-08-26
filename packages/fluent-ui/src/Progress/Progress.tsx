@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { StyledProgressWrapper, StyledProgress } from './Progress.styled'
-import { ProgressProps } from './Progress.type'
+import { ProgressProps, ProgressPropTypes } from './Progress.type'
 
-const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
-  ({ value, ...rest }: ProgressProps, ref): React.ReactElement => {
+const Progress: React.FC<ProgressProps> = React.forwardRef<HTMLDivElement, ProgressProps>(
+  ({ value, ...rest }, ref): React.ReactElement => {
     const isIndeterminate = !(typeof value === 'number')
     const transform = !isIndeterminate && value ? value - 100 : false
     return (
@@ -18,5 +18,7 @@ const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
 )
 
 Progress.displayName = 'FProgress'
+
+Progress.propTypes = ProgressPropTypes
 
 export default Progress

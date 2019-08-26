@@ -1,13 +1,10 @@
 import * as React from 'react'
 import { StyledLabel, StyledLabelText } from '../Checkbox/Checkbox.styled'
 import { StyledRadioWrapper, StyledRadio, StyledCircle } from './Radio.styled'
-import { RadioProps } from './Radio.type'
+import { RadioProps, RadioPropTypes } from './Radio.type'
 
-const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
-  (
-    { checked, value, onChange, disabled, children, ...rest }: RadioProps,
-    ref
-  ): React.ReactElement => {
+const Radio: React.FC<RadioProps> = React.forwardRef<HTMLInputElement, RadioProps>(
+  ({ checked, value, onChange, disabled, children, ...rest }, ref): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.value)
     }
@@ -32,5 +29,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
 )
 
 Radio.displayName = 'FRadio'
+
+Radio.propTypes = RadioPropTypes
 
 export default Radio

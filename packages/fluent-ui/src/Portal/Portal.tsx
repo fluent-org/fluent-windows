@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { PortalProps } from './Portal.type'
+import { PortalProps, PortalPropTypes } from './Portal.type'
 import { useGlobal } from '@fluent-ui/hooks'
 
 function getContainer(container: PortalProps['container']): Element | null {
@@ -9,9 +9,9 @@ function getContainer(container: PortalProps['container']): Element | null {
   return ReactDOM.findDOMNode(container) as (Element | null)
 }
 
-const Portal = React.forwardRef<Element, PortalProps>(
+const Portal: React.FC<PortalProps> = React.forwardRef<Element, PortalProps>(
   (
-    { children, container, disablePortal = false, ...rest }: PortalProps,
+    { children, container, disablePortal = false, ...rest },
     ref
   ): React.ReactPortal | React.ReactElement | null => {
     const [mountNode, setMountNode] = React.useState<PortalProps['container']>(
@@ -41,5 +41,7 @@ const Portal = React.forwardRef<Element, PortalProps>(
 )
 
 Portal.displayName = 'FPortal'
+
+Portal.propTypes = PortalPropTypes
 
 export default Portal

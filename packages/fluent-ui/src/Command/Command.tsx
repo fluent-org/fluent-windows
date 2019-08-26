@@ -13,12 +13,18 @@ import Content from './components/Content'
 import Portal from '../Portal'
 import Item from '../Item'
 import Transition from '../Transition'
-import { CommandProps, CommandContainer, CommandChild, CommandType } from './Command.type'
+import {
+  CommandProps,
+  CommandContainer,
+  CommandChild,
+  CommandType,
+  CommandPropTypes
+} from './Command.type'
 
 export const CommandContext = React.createContext(false)
 
-const Command = React.forwardRef<HTMLDivElement, CommandProps>(
-  ({ acrylic, reveal, children, ...rest }: CommandProps, ref): React.ReactElement => {
+const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, CommandProps>(
+  ({ acrylic = false, reveal = false, children, ...rest }, ref): React.ReactElement => {
     const container: CommandContainer = {
       content: [],
       standard: [],
@@ -111,9 +117,6 @@ Object.defineProperty(Command, 'Content', {
 
 Command.displayName = 'FCommand'
 
-Command.defaultProps = {
-  acrylic: false,
-  reveal: false
-}
+Command.propTypes = CommandPropTypes
 
 export default Command as CommandType

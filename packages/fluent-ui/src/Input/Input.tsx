@@ -2,11 +2,11 @@ import * as React from 'react'
 import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
 import Transition from '../Transition'
 import { StyledWrapper, StyledInput, StyledIcon } from './Input.styled'
-import { InputProps } from './Input.type'
+import { InputProps, InputPropTypes } from './Input.type'
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    { value, onChange, placeholder, disabled, cleared, password, error, ...rest }: InputProps,
+    { value, onChange, placeholder, disabled, cleared, password, error, ...rest },
     ref
   ): React.ReactElement => {
     const clearedRef = React.useRef<HTMLSpanElement>(null)
@@ -36,18 +36,20 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           clearedHeight={clearedHeight}
           {...rest}
         />
-        <Transition visible={!!value}>
-          {cleared && (
+        {cleared && (
+          <Transition visible={!!value}>
             <StyledIcon onClick={handleClear} ref={clearedRef} clearedHeight={clearedHeight}>
               <ChromeCloseIcon />
             </StyledIcon>
-          )}
-        </Transition>
+          </Transition>
+        )}
       </StyledWrapper>
     )
   }
 )
 
 Input.displayName = 'FInput'
+
+Input.propTypes = InputPropTypes
 
 export default Input

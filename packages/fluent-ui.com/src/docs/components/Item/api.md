@@ -20,4 +20,4 @@ import { Item } from '@fluent-ui/core'
 | prefix | React.ReactElement |  | The prefix displayed. |
 | active | boolean |  | If `true`, the `Item` will be active, need to match `value`. |
 | children | React.ReactChild |  | Display portion of text and other content. |
-| onClick | React.MouseEventHandler<HTMLDivElement> |  | Set the handler to handle click event. |
+| onClick | React.MouseEventHandler |  | Set the handler to handle click event. |

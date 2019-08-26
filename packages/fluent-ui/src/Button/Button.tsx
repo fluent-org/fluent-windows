@@ -1,18 +1,10 @@
 import * as React from 'react'
 import StyledButton from './Button.styled'
-import { ButtonProps } from './Button.type'
+import { ButtonProps, ButtonPropTypes } from './Button.type'
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    {
-      variant = 'standard',
-      disabled,
-      size,
-      block = false,
-      onClick,
-      children,
-      ...rest
-    }: ButtonProps,
+    { variant = 'standard', disabled, size, block = false, onClick, children, ...rest },
     ref
   ): React.ReactElement => (
     <StyledButton
@@ -30,5 +22,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 
 Button.displayName = 'FButton'
+
+Button.propTypes = ButtonPropTypes
 
 export default Button

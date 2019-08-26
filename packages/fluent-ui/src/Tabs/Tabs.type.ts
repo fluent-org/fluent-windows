@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 import Panel from './components/Panel'
 import { BoxProps } from '../Box'
@@ -18,4 +19,14 @@ export interface TabsPanelProps extends StandardProps {
 
 export interface TabsType extends React.ForwardRefExoticComponent<TabsProps> {
   Panel: typeof Panel
+}
+
+export const TabsPropTypes = {
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onChange: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    // @ts-ignore
+    PropTypes.arrayOf<PropTypes.Requireable<PropTypes.ReactElementLike>>(PropTypes.element)
+  ]).isRequired
 }

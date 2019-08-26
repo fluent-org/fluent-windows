@@ -6,13 +6,10 @@ import {
   StyledToggleCircle,
   StyledToggle
 } from './Toggle.styled'
-import { ToggleProps } from './Toggle.type'
+import { ToggleProps, TogglePropTypes } from './Toggle.type'
 
-const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
-  (
-    { checked, value, onChange, disabled, children, ...rest }: ToggleProps,
-    ref
-  ): React.ReactElement => {
+const Toggle: React.FC<ToggleProps> = React.forwardRef<HTMLInputElement, ToggleProps>(
+  ({ checked, value, onChange, disabled, children, ...rest }, ref): React.ReactElement => {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }
@@ -37,5 +34,7 @@ const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
 )
 
 Toggle.displayName = 'FToggle'
+
+Toggle.propTypes = TogglePropTypes
 
 export default Toggle

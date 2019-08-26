@@ -2,13 +2,10 @@ import * as React from 'react'
 import Portal from '../Portal'
 import Transition from '../Transition'
 import { StyledDrawer, StyledMask, createSwipe } from './Drawer.styled'
-import { DrawerProps } from './Drawer.type'
+import { DrawerProps, DrawerPropTypes } from './Drawer.type'
 
-const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
-  (
-    { children, visible, onChange, anchor = 'left', ...rest }: DrawerProps,
-    ref
-  ): React.ReactElement => {
+const Drawer: React.FC<DrawerProps> = React.forwardRef<HTMLDivElement, DrawerProps>(
+  ({ children, visible, onChange, anchor = 'left', ...rest }, ref): React.ReactElement => {
     function handleClose(): void {
       onChange && onChange(false)
     }
@@ -40,5 +37,7 @@ const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
 )
 
 Drawer.displayName = 'FDrawer'
+
+Drawer.propTypes = DrawerPropTypes
 
 export default Drawer
