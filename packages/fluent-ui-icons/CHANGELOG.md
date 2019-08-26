@@ -15,18 +15,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.4.0](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/icons@0.3.2...@fluent-ui/icons@0.4.0) (2019-07-22)
+# [0.4.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.3.2...@fluent-ui/icons@0.4.0) (2019-07-22)
 
 
 ### Features
 
-* **@fluent-ui/hooks:** add useMedia ([cbf7bd6](https://github.com/chenyueban/fluent-ui/commit/cbf7bd6))
+* **@fluent-ui/hooks:** add useMedia ([cbf7bd6](https://github.com/fluent-org/fluent-ui/commit/cbf7bd6))
 
 
 
 
 
-## [0.3.2](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/icons@0.3.1...@fluent-ui/icons@0.3.2) (2019-07-17)
+## [0.3.2](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.3.1...@fluent-ui/icons@0.3.2) (2019-07-17)
 
 **Note:** Version bump only for package @fluent-ui/icons
 
@@ -34,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.1](https://github.com/chenyueban/fluent-ui/compare/@fluent-ui/icons@0.3.0...@fluent-ui/icons@0.3.1) (2019-07-14)
+## [0.3.1](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.3.0...@fluent-ui/icons@0.3.1) (2019-07-14)
 
 **Note:** Version bump only for package @fluent-ui/icons
 
@@ -47,16 +47,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **Input, Navigation, Icon:** fix Input line-height, Navigation icon does not display ([f6ef8a9](https://github.com/chenyueban/fluent-ui/commit/f6ef8a9))
+* **Input, Navigation, Icon:** fix Input line-height, Navigation icon does not display ([f6ef8a9](https://github.com/fluent-org/fluent-ui/commit/f6ef8a9))
 
 
 ### Features
 
-* **Checkbox:** Complete the basic props of the Checkbox ([9d43174](https://github.com/chenyueban/fluent-ui/commit/9d43174))
-* **Command:** almost done ([1fa706b](https://github.com/chenyueban/fluent-ui/commit/1fa706b))
-* **Icon:** almost done ([2dfe68d](https://github.com/chenyueban/fluent-ui/commit/2dfe68d))
-* **Input:** Complete the basic input component ([fc68cde](https://github.com/chenyueban/fluent-ui/commit/fc68cde))
-* **Navigation:** Complete controlled component related props ([b387416](https://github.com/chenyueban/fluent-ui/commit/b387416))
+* **Checkbox:** Complete the basic props of the Checkbox ([9d43174](https://github.com/fluent-org/fluent-ui/commit/9d43174))
+* **Command:** almost done ([1fa706b](https://github.com/fluent-org/fluent-ui/commit/1fa706b))
+* **Icon:** almost done ([2dfe68d](https://github.com/fluent-org/fluent-ui/commit/2dfe68d))
+* **Input:** Complete the basic input component ([fc68cde](https://github.com/fluent-org/fluent-ui/commit/fc68cde))
+* **Navigation:** Complete controlled component related props ([b387416](https://github.com/fluent-org/fluent-ui/commit/b387416))
 
 
 
@@ -67,13 +67,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **Input, Navigation, Icon:** fix Input line-height, Navigation icon does not display ([f6ef8a9](https://github.com/chenyueban/fluent-ui/commit/f6ef8a9))
+* **Input, Navigation, Icon:** fix Input line-height, Navigation icon does not display ([f6ef8a9](https://github.com/fluent-org/fluent-ui/commit/f6ef8a9))
 
 
 ### Features
 
-* **Checkbox:** Complete the basic props of the Checkbox ([9d43174](https://github.com/chenyueban/fluent-ui/commit/9d43174))
-* **Command:** almost done ([1fa706b](https://github.com/chenyueban/fluent-ui/commit/1fa706b))
-* **Icon:** almost done ([2dfe68d](https://github.com/chenyueban/fluent-ui/commit/2dfe68d))
-* **Input:** Complete the basic input component ([fc68cde](https://github.com/chenyueban/fluent-ui/commit/fc68cde))
-* **Navigation:** Complete controlled component related props ([b387416](https://github.com/chenyueban/fluent-ui/commit/b387416))
+* **Checkbox:** Complete the basic props of the Checkbox ([9d43174](https://github.com/fluent-org/fluent-ui/commit/9d43174))
+* **Command:** almost done ([1fa706b](https://github.com/fluent-org/fluent-ui/commit/1fa706b))
+* **Icon:** almost done ([2dfe68d](https://github.com/fluent-org/fluent-ui/commit/2dfe68d))
+* **Input:** Complete the basic input component ([fc68cde](https://github.com/fluent-org/fluent-ui/commit/fc68cde))
+* **Navigation:** Complete controlled component related props ([b387416](https://github.com/fluent-org/fluent-ui/commit/b387416))
