@@ -6,7 +6,6 @@ export const StyledCommandWrapper = styled(Box).attrs(
     backgroundColor: th.color('standard.light2').call(undefined, props)
   })
 )`
-  position: relative;
   display: flex;
   overflow: hidden;
 `

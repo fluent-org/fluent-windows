@@ -13,7 +13,7 @@ import {
   Feedback as FeedbackIcon,
   ProgressRingDots as ProgressRingDotsIcon
 } from '@fluent-ui/icons'
-import { useAction, useMedia } from '@fluent-ui/hooks'
+import { useAction } from '@fluent-ui/hooks'
 import { TemplateProps } from './template'
 
 const iconMap = [

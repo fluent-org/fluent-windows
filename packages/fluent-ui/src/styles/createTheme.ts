@@ -7,9 +7,6 @@ import shadows, { Shadows } from './createShadow'
 import createBreakpoint, { Breakpoints, defaultBreakpoints } from './createBreakpoint'
 import createTypographies, { Typographies } from './createTypography'
 
-// eslint-disable-next-line
-export interface ThemeProps {}
-
 export interface Theme {
   colors?: Colors
   sizes?: Sizes

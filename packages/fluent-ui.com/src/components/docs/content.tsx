@@ -3,6 +3,7 @@ import Markdown from 'markdown-to-jsx'
 import { Box, Typography } from '@fluent-ui/core'
 
 import Header from './header'
+import SideBar from './sidebar'
 
 import Playground from '../playground'
 import Highlight from '../highlight'
@@ -14,25 +15,53 @@ import Table from '../table'
 import { TemplateProps } from './template'
 
 import { StyledTitleA } from './content.styled'
+import { scrollToAnchor } from '../../utils/scroll'
 
 interface TypographyComponentProps {
   id?: string
-  children: React.ReactNode
+  children: any
 }
 
 const H1 = (props: TypographyComponentProps): React.ReactElement => (
   <Typography variant="h4" as="h1" gutterTop gutterBottom {...props}>
-    <StyledTitleA href={`#${props.id}`}>{props.children}</StyledTitleA>
+    <StyledTitleA
+      href={`#${props.id}`}
+      onClick={e => {
+        e.preventDefault()
+        const target = document.querySelector('#contentRoot')
+        scrollToAnchor(`#${props.id}`, target)
+      }}
+    >
+      {props.children}
+    </StyledTitleA>
   </Typography>
 )
 const H2 = (props: TypographyComponentProps): React.ReactElement => (
   <Typography variant="h5" as="h2" gutterTop gutterBottom {...props}>
-    <StyledTitleA href={`#${props.id}`}>{props.children}</StyledTitleA>
+    <StyledTitleA
+      href={`#${props.id}`}
+      onClick={e => {
+        e.preventDefault()
+        const target = document.querySelector('#contentRoot')
+        scrollToAnchor(`#${props.id}`, target)
+      }}
+    >
+      {props.children}
+    </StyledTitleA>
   </Typography>
 )
 const H3 = (props: TypographyComponentProps): React.ReactElement => (
   <Typography variant="h6" as="h3" gutterTop gutterBottom {...props}>
-    <StyledTitleA href={`#${props.id}`}>{props.children}</StyledTitleA>
+    <StyledTitleA
+      href={`#${props.id}`}
+      onClick={e => {
+        e.preventDefault()
+        const target = document.querySelector('#contentRoot')
+        scrollToAnchor(`#${props.id}`, target)
+      }}
+    >
+      {props.children}
+    </StyledTitleA>
   </Typography>
 )
 
@@ -53,48 +82,53 @@ const typographyOverrides = {
 
 const Content = ({ data }: TemplateProps): React.ReactElement => {
   return (
-    <Box
-      flex={1}
-      transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
-      boxShadow="2"
-      position="relative"
-      zIndex={2}
-      style={{
-        overflowX: 'hidden',
-        overflowY: 'auto'
-      }}
-    >
-      <Header />
-      <Box padding="4" minHeight="100%" backgroundColor="white.default">
-        <Markdown
-          options={{
-            overrides: {
-              pre: data.doc.frontmatter.type !== 'hooks' ? (Playground as any) : Highlight,
-              IconTemplate,
-              ColorTemplate,
-              ...typographyOverrides
-            }
-          }}
-        >
-          {data.doc.rawMarkdownBody}
-        </Markdown>
-        <Markdown
-          options={{
+    <>
+      <SideBar data={data} />
+      <Box
+        id="contentRoot"
+        flex={1}
+        transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
+        boxShadow="2"
+        position="relative"
+        zIndex={2}
+        style={{
+          overflowX: 'hidden',
+          overflowY: 'auto'
+        }}
+      >
+        <Header />
+        <Box padding="4" minHeight="100%" backgroundColor="white.default">
+          <Markdown
             // @ts-ignore
-            namedCodesToUnicode: {
-              or: '|'
-            },
-            overrides: {
-              pre: Highlight,
-              table: Table,
-              ...typographyOverrides
-            }
-          }}
-        >
-          {data.api.rawMarkdownBody}
-        </Markdown>
+            options={{
+              overrides: {
+                pre: data.doc.frontmatter.type !== 'hooks' ? (Playground as any) : Highlight,
+                IconTemplate,
+                ColorTemplate,
+                ...typographyOverrides
+              }
+            }}
+          >
+            {data.doc.rawMarkdownBody}
+          </Markdown>
+          <Markdown
+            options={{
+              // @ts-ignore
+              namedCodesToUnicode: {
+                or: '|'
+              },
+              overrides: {
+                pre: Highlight,
+                table: Table,
+                ...typographyOverrides
+              }
+            }}
+          >
+            {data.api.rawMarkdownBody}
+          </Markdown>
+        </Box>
       </Box>
-    </Box>
+    </>
   )
 }
 

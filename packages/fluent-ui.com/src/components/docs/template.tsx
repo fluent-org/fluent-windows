@@ -22,6 +22,19 @@ export interface TemplateProps {
         type: string
       }
       rawMarkdownBody: string
+      htmlAst: {
+        children: {
+          tagName: string
+          type: string
+          properties: object
+          children: {
+            type: string
+            value: string
+          }[]
+        }[]
+        data: {}
+        type: string
+      }
     }
     api: {
       frontmatter: {
@@ -80,6 +93,7 @@ export const query = graphql`
         type
       }
       rawMarkdownBody
+      htmlAst
     }
     api: markdownRemark(frontmatter: { title: { eq: $title }, api: { eq: true } }) {
       frontmatter {
