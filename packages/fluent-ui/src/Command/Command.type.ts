@@ -2,7 +2,6 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import Item from '../Item'
 import { BoxProps, BoxPropTypes } from '../Box'
-import { ThemeProps } from '../styles/createTheme'
 
 import Content from './components/Content'
 import Secondary from './components/Secondary'
@@ -19,7 +18,7 @@ export interface CommandContainer {
   secondary: React.ReactComponentElement<typeof Secondary>[]
 }
 
-export interface CommandProps extends BoxProps, ThemeProps {
+export interface CommandProps extends BoxProps {
   reveal?: boolean
   children: CommandChild[] | CommandChild
 }

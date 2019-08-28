@@ -65,7 +65,6 @@ exports[`Command acrylic 1`] = `
 }
 
 .c0 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -431,7 +430,6 @@ exports[`Command basic 1`] = `
 }
 
 .c0 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -734,7 +732,6 @@ exports[`Command button with label 1`] = `
 }
 
 .c0 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1065,7 +1062,6 @@ exports[`Command reveal 1`] = `
 }
 
 .c0 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1402,7 +1398,6 @@ exports[`Command without Content and Secondary 1`] = `
 }
 
 .c0 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

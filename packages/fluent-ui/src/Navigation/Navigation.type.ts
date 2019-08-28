@@ -1,7 +1,6 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { BoxProps, BoxPropTypes } from '../Box'
-import { ThemeProps } from '../styles/createTheme'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -9,7 +8,7 @@ import Content from './components/Content'
 
 export type NavigationID = string | number
 
-export interface NavigationProps extends Omit<BoxProps, 'onChange'>, ThemeProps {
+export interface NavigationProps extends Omit<BoxProps, 'onChange'> {
   horizontal?: boolean
   response?: boolean
   expanded?: boolean
