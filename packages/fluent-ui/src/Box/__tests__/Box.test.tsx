@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { render } from '../../test-utils'
-import 'jest-styled-components'
 import '@testing-library/jest-dom/extend-expect'
 
 import Box from '..'
@@ -9,7 +8,7 @@ describe('Box', (): void => {
   const testText = 'Hello World'
   const testChildren = <span>{testText}</span>
 
-  test('renders children', (): void => {
+  test('should render children', (): void => {
     const { container, getByText } = render(<Box>{testChildren}</Box>)
     expect(getByText(testText)).toBeInTheDocument()
     expect(container.firstChild).toMatchSnapshot()

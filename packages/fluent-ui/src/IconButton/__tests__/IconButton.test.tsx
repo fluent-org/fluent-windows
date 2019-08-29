@@ -4,7 +4,6 @@ import 'jest-styled-components'
 
 import { Accept as AcceptIcon } from '@fluent-ui/icons'
 import { ThemeProvider, IconButton } from '../..'
-import { findAllByType } from '../../utils'
 
 describe('IconButton', (): void => {
   const theme = {}
@@ -63,22 +62,6 @@ describe('IconButton', (): void => {
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
-  })
-
-  test('onClick', (): void => {
-    const onClick = jest.fn()
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <IconButton onClick={onClick}>
-          <AcceptIcon />
-        </IconButton>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-
-    const iconButton = findAllByType(tree, 'button')
-    iconButton[0].props.onClick()
-    expect(onClick).toHaveBeenCalled()
   })
 
   test('as', (): void => {

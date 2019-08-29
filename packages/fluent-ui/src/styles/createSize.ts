@@ -7,7 +7,7 @@ export interface Sizes {
   large?: any
 }
 
-function createSize(sizes: Sizes): Sizes {
+function createSize(sizes: Sizes = {}): Sizes {
   const defaultSizes: Sizes = {
     small: {
       button: css`

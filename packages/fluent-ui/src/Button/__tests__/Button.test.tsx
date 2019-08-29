@@ -1,78 +1,56 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
+import { fireEvent } from '@testing-library/react'
+import { render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Button } from '../..'
-import { findAllByType } from '../../utils'
+import Button from '..'
 
 describe('Button', (): void => {
-  const theme = {}
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Button>basic</Button>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  const testText = 'Hello World'
+
+  test('should render children', (): void => {
+    const { container, getByText } = render(<Button>{testText}</Button>)
+    expect(getByText(testText)).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  test('variant', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Button variant="standard">standard</Button>
-        <Button variant="primary">primary</Button>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should render a text primary button', (): void => {
+    const { container } = render(<Button variant="primary">{testText}</Button>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  test('disabled', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Button disabled>disabled</Button>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should render a text disabled button', (): void => {
+    const { container } = render(<Button disabled>{testText}</Button>)
+    expect(container.firstChild).toHaveAttribute('disabled')
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  test('size', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Button size="small">small</Button>
-        <Button size="medium">medium</Button>
-        <Button size="large">large</Button>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should render a small button', (): void => {
+    const { container } = render(<Button size="small">{testText}</Button>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  test('onClick', (): void => {
-    const onClick = jest.fn()
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Button onClick={onClick}>onClick</Button>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-
-    const button = findAllByType(tree, 'button')
-    button[0].props.onClick()
-    expect(onClick).toHaveBeenCalled()
+  test('should render a large button', (): void => {
+    const { container } = render(<Button size="large">{testText}</Button>)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  test('as', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Button as="a" href="#">
-          as a
-        </Button>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should render a block button', (): void => {
+    const { container } = render(<Button block>{testText}</Button>)
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  test('should trigger the specified event', (): void => {
+    const handleClick = jest.fn()
+    const { getByText } = render(<Button onClick={handleClick}>{testText}</Button>)
+    fireEvent.click(getByText(testText))
+    expect(handleClick).toHaveBeenCalled()
+  })
+
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLButtonElement>()
+    const { container } = render(<Button ref={ref}>{testText}</Button>)
+    const { current: element } = ref
+    expect(element).toEqual(container.firstChild)
   })
 })

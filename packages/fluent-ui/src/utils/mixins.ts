@@ -1,10 +1,7 @@
 export const isObject = (item: any): boolean =>
   !!item && typeof item === 'object' && !Array.isArray(item)
 
-export const deepMerge = <T extends object = object>(
-  target: T,
-  ...sources: T[]
-): T => {
+export const deepMerge = <T extends object = object>(target: T, ...sources: T[]): T => {
   if (!sources.length) {
     return target
   }
@@ -43,22 +40,4 @@ export function omit(target: Target, fields: string[]): Omit<Target, string> {
       }),
       {}
     )
-}
-
-export const findAllByType = (component: any, type: string): any[] => {
-  let matches: any[] = []
-
-  if (component.type === type) {
-    matches.push(component)
-  }
-
-  if (component.children) {
-    component.children.forEach(
-      (child: any): void => {
-        matches = matches.concat(findAllByType(child, type))
-      }
-    )
-  }
-
-  return matches
 }
