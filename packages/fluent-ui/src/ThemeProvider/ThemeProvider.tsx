@@ -1,21 +1,29 @@
 import * as React from 'react'
-import { ThemeProvider as BaseProvider } from '../styles/styled'
+import { JssProvider, ThemeProvider as BaseProvider } from '@fluent-ui/styles'
+import { Rule, StyleSheet, SheetsRegistry } from 'jss'
 import createTheme, { Theme } from '../styles/createTheme'
 
 interface ThemeProviderProps {
   theme: Theme
+  registry?: SheetsRegistry
   children: React.ReactNode
+}
+
+const generateId = (rule: Rule, sheet?: StyleSheet<string>): string => {
+  const prefix = sheet && sheet.options.classNamePrefix!.replace(/-/g, '')
+  return `F${prefix}-${rule.key}`
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
   theme,
+  registry,
   children
 }: ThemeProviderProps): React.ReactElement => {
   const customTheme = createTheme(theme)
   return (
-    <BaseProvider theme={customTheme}>
-      <>{children}</>
-    </BaseProvider>
+    <JssProvider generateId={generateId} registry={registry}>
+      <BaseProvider theme={customTheme}>{children}</BaseProvider>
+    </JssProvider>
   )
 }
 

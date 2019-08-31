@@ -1,21 +1,37 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { render } from '@testing-library/react'
+import { render, RenderOptions, RenderResult } from '@testing-library/react'
+import { SheetsRegistry } from 'react-jss'
 import { ThemeProvider } from '../ThemeProvider'
 
 interface WrapperProps {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
-const Wrapper: React.FC<WrapperProps> = ({ children }): React.ReactElement => (
-  <ThemeProvider theme={{}}>{children}</ThemeProvider>
-)
+let sheets: SheetsRegistry
 
+const Wrapper: React.FC<WrapperProps> = ({ children }): React.ReactElement => {
+  sheets = new SheetsRegistry()
+  return (
+    <ThemeProvider theme={{}} registry={sheets}>
+      {children}
+    </ThemeProvider>
+  )
+}
 Wrapper.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 }
 
-const customRender = (ui: React.ReactElement, options: any) =>
-  render(ui, { wrapper: Wrapper, ...options })
+interface Result extends RenderResult {
+  sheets: SheetsRegistry
+}
+
+const customRender = (ui: React.ReactElement, options?: RenderOptions): Result => ({
+  ...render(ui, {
+    wrapper: Wrapper,
+    ...options
+  }),
+  sheets
+})
 
 export { customRender as render }

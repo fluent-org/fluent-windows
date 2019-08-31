@@ -1,19 +1,19 @@
 import { deepMerge } from '../utils'
 
 export interface Breakpoints {
-  xs: number
-  sm: number
-  md: number
-  lg: number
-  xl: number
+  xs: string
+  sm: string
+  md: string
+  lg: string
+  xl: string
 }
 
 export const defaultBreakpoints = {
-  xs: 0,
-  sm: 600,
-  md: 960,
-  lg: 1280,
-  xl: 1920
+  xs: '0px',
+  sm: '600px',
+  md: '960px',
+  lg: '1280px',
+  xl: '1920px'
 }
 
 function createBreakpoint(breakpoints: Breakpoints): Breakpoints {
