@@ -1,17 +1,22 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { render, RenderOptions, RenderResult } from '@testing-library/react'
-import { SheetsRegistry } from 'react-jss'
+import { SheetsRegistry } from '@fluent-ui/styles'
+import { StyleSheet } from 'jss'
 import { ThemeProvider } from '../ThemeProvider'
 
 interface WrapperProps {
   children?: React.ReactNode
 }
 
-let sheets: SheetsRegistry
+interface MySheetsRegistry extends SheetsRegistry {
+  registry: StyleSheet[] | any
+}
+
+let sheets: MySheetsRegistry
 
 const Wrapper: React.FC<WrapperProps> = ({ children }): React.ReactElement => {
-  sheets = new SheetsRegistry()
+  sheets = new SheetsRegistry() as MySheetsRegistry
   return (
     <ThemeProvider theme={{}} registry={sheets}>
       {children}
@@ -23,7 +28,7 @@ Wrapper.propTypes = {
 }
 
 interface Result extends RenderResult {
-  sheets: SheetsRegistry
+  sheets: MySheetsRegistry
 }
 
 const customRender = (ui: React.ReactElement, options?: RenderOptions): Result => ({

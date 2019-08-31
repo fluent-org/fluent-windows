@@ -1,50 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render a block button 1`] = `
-<button
-  class="sc-bdVaJa abdAo"
->
-  Hello World
-</button>
-`;
-
-exports[`Button should render a large button 1`] = `
-<button
-  class="sc-bdVaJa bZabos"
->
-  Hello World
-</button>
-`;
-
-exports[`Button should render a small button 1`] = `
-<button
-  class="sc-bdVaJa hsxKTm"
->
-  Hello World
-</button>
-`;
-
-exports[`Button should render a text disabled button 1`] = `
-<button
-  class="sc-bdVaJa kidJBV"
-  disabled=""
->
-  Hello World
-</button>
-`;
-
-exports[`Button should render a text primary button 1`] = `
-<button
-  class="sc-bdVaJa fWqCje"
->
-  Hello World
-</button>
-`;
-
 exports[`Button should render children 1`] = `
-<button
-  class="sc-bdVaJa kidJBV"
->
-  Hello World
-</button>
+".FButton-root {
+  border: 2px solid;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  min-width: 56px;
+  text-align: center;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,box-shadow 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,padding 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  line-height: 1.5;
+  border-radius: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.FButton-root:disabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #e9e9e9;
+}
+.FButton-variantStandard {
+  color: #000000;
+  border-color: #dedede;
+  background-color: #ffffff;
+}
+.FButton-variantStandard:hover, .FButton-variantStandard:focus {
+  border-color: #b5b5b5;
+}
+.FButton-variantStandard:active {
+  border-color: #595959;
+  background-color: #dedede;
+}
+.FButton-variantPrimary {
+  color: #ffffff;
+  box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
+  border-color: #0078d4;
+  background-color: #0078d4;
+}
+.FButton-variantPrimary:hover, .FButton-variantPrimary:focus {
+  border-color: #005cad;
+  background-color: #005cad;
+}
+.FButton-variantPrimary:active {
+  box-shadow: 0px 12.8px 28.8px 0px rgba(0,0,0,0.132),0px 2.4px 7.2px 0px rgba(0,0,0,0.108);
+  border-color: #002d61;
+  background-color: #002d61;
+}
+.FButton-sizeSmall {
+  padding: 0 8px;
+}
+.FButton-sizeMedium {
+  padding: 3px 12px;
+}
+.FButton-sizeLarge {
+  padding: 8px 42px;
+}
+.FButton-block {
+  width: 100%;
+}"
 `;

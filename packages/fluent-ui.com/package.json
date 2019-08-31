@@ -31,6 +31,7 @@
     "@fluent-ui/core": "^0.18.0",
     "@fluent-ui/hooks": "^0.9.0",
     "@fluent-ui/icons": "^0.5.0",
+    "@fluent-ui/styles": "^0.0.0",
     "gatsby": "^2.13.83",
     "gatsby-image": "^2.2.14",
     "gatsby-plugin-manifest": "^2.2.9",

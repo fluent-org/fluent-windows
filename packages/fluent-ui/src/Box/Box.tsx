@@ -2,18 +2,25 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
 import { styles } from './Box.styled'
-import { BoxProps, BoxPropTypes } from './Box.type'
+import { BoxClassProps, BoxProps, BoxPropTypes } from './Box.type'
 import propTypes from '@styled-system/prop-types'
 import { Theme } from '../styles'
 
-const useStyles = createUseStyles<Theme, 'root' | 'system' | 'acrylic'>(styles, { name: 'Box' })
+export const name = 'Box'
+
+const useStyles = createUseStyles<Theme, BoxClassProps>(styles, { name })
 
 const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
-  (
-    { as: Component = 'div', acrylic = false, className: classNameProp, ...rest },
-    ref
-  ): React.ReactElement => {
-    const classes = useStyles(rest)
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'div',
+      className: classNameProp,
+      id,
+      style,
+      onClick,
+      acrylic = false
+    } = props
+    const classes = useStyles(props)
     const className = classNames(
       classes.root,
       classes.system,
@@ -22,11 +29,21 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
       },
       classNameProp
     )
-    return <Component className={className} ref={ref} {...rest} />
+
+    // TODO Need to be more perfect
+    const _props = {
+      className,
+      ref,
+      id,
+      style,
+      onClick
+    }
+
+    return <Component {..._props} />
   }
 )
 
-Box.displayName = 'FBox'
+Box.displayName = `F${name}`
 
 Box.propTypes = {
   ...propTypes.space,

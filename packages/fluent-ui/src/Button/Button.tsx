@@ -1,27 +1,49 @@
 import * as React from 'react'
-import StyledButton from './Button.styled'
-import { ButtonProps, ButtonPropTypes } from './Button.type'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Button.styled'
+import { ButtonClassProps, ButtonProps, ButtonPropTypes } from './Button.type'
+import { Theme } from '../styles'
+
+export const name = 'Button'
+
+const useStyles = createUseStyles<Theme, ButtonClassProps>(styles, { name })
 
 const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { variant = 'standard', disabled, size, block = false, onClick, children, ...rest },
-    ref
-  ): React.ReactElement => (
-    <StyledButton
-      ref={ref}
-      variant={variant}
-      disabled={disabled}
-      size={size}
-      block={block}
-      onClick={onClick}
-      {...rest}
-    >
-      {children}
-    </StyledButton>
-  )
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'button',
+      className: classNameProp,
+      onClick,
+      children,
+      variant = 'standard',
+      disabled,
+      size,
+      block = false,
+      ...rest
+    } = props
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.variantStandard]: variant === 'standard',
+        [classes.variantPrimary]: variant === 'primary',
+        [classes.sizeSmall]: size === 'small',
+        [classes.sizeMedium]: size === 'medium',
+        [classes.sizeLarge]: size === 'large',
+        [classes.block]: block
+      },
+      classNameProp
+    )
+    return (
+      <Component className={className} ref={ref} onClick={onClick} disabled={disabled} {...rest}>
+        {children}
+      </Component>
+    )
+  }
 )
 
-Button.displayName = 'FButton'
+Button.displayName = `F${name}`
 
 Button.propTypes = ButtonPropTypes
 

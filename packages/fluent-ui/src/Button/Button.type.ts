@@ -5,6 +5,15 @@ import { StandardProps, StyledProps } from '..'
 type Variant = 'standard' | 'primary'
 type Size = 'small' | 'medium' | 'large'
 
+export type ButtonClassProps =
+  | 'root'
+  | 'variantStandard'
+  | 'variantPrimary'
+  | 'sizeSmall'
+  | 'sizeMedium'
+  | 'sizeLarge'
+  | 'block'
+
 export interface ButtonProps
   extends StandardProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
     StyledProps {

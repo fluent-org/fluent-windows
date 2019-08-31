@@ -11,17 +11,18 @@ interface ThemeProviderProps {
 
 const generateId = (rule: Rule, sheet?: StyleSheet<string>): string => {
   const prefix = sheet && sheet.options.classNamePrefix!.replace(/-/g, '')
-  return `F${prefix}-${rule.key}`
+  return prefix ? `F${prefix}-${rule.key}` : rule.key
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
   theme,
   registry,
-  children
+  children,
+  ...rest
 }: ThemeProviderProps): React.ReactElement => {
   const customTheme = createTheme(theme)
   return (
-    <JssProvider generateId={generateId} registry={registry}>
+    <JssProvider generateId={generateId} registry={registry} {...rest}>
       <BaseProvider theme={customTheme}>{children}</BaseProvider>
     </JssProvider>
   )

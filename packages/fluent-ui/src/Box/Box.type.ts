@@ -14,6 +14,8 @@ import {
 } from 'styled-system'
 import { StandardProps } from '..'
 
+export type BoxClassProps = 'root' | 'system' | 'acrylic'
+
 export interface BoxProps
   extends SpaceProps,
     ColorProps,

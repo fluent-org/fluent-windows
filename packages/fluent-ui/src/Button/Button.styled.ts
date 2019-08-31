@@ -1,94 +1,70 @@
-import { styled, css, variant, th } from '../styles/styled'
-import { ButtonProps } from './Button.type'
+import { Styles, Style } from 'jss'
+import { ButtonClassProps } from './Button.type'
+import { Theme } from '../styles'
 
-const base = css`
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  min-width: 56px;
-  vertical-align: middle;
-  border: 2px solid;
-  border-radius: 2px;
-  text-align: center;
-  line-height: 1.5;
-  transition: ${th.transition('button')};
-  &:disabled {
-    color: ${th.color('standard.dark2')};
-    background-color: ${th.color('standard.light1')};
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-`
-
-const variants = variant({
-  prop: 'variant',
-  default: 'standard',
-  variants: {
-    standard: css`
-      color: ${th.color('black.default')};
-      background-color: ${th.color('white.default')};
-      border-color: ${th.color('standard.default')};
-      &:hover,
-      &:focus {
-        border-color: ${th.color('standard.dark1')};
-      }
-      &:active {
-        background-color: ${th.color('standard.default')};
-        border-color: ${th.color('standard.dark3')};
-      }
-    `,
-    primary: css`
-      color: ${th.color('white.default')};
-      background-color: ${th.color('primary.default')};
-      border-color: ${th.color('primary.default')};
-      box-shadow: ${th.shadow(3)};
-      &:hover,
-      &:focus {
-        background-color: ${th.color('primary.dark1')};
-        border-color: ${th.color('primary.dark1')};
-      }
-      &:active {
-        background-color: ${th.color('primary.dark3')};
-        border-color: ${th.color('primary.dark3')};
-        box-shadow: ${th.shadow(4)};
-      }
-    `
+const root = (theme: Theme): Style => ({
+  display: 'inline-block',
+  textDecoration: 'none',
+  outline: 'none',
+  cursor: 'pointer',
+  minWidth: 56,
+  verticalAlign: 'middle',
+  border: '2px solid',
+  borderRadius: 2,
+  textAlign: 'center',
+  lineHeight: 1.5,
+  transition: theme.transitions!.button,
+  '&:disabled': {
+    color: theme.colors!.standard!.dark2,
+    backgroundColor: theme.colors!.standard!.light1,
+    cursor: 'not-allowed',
+    pointerEvents: 'none'
   }
 })
 
-const sizes = variant({
-  prop: 'size',
-  default: 'medium',
-  variants: {
-    small: css`
-      ${th.size('small.button')}
-    `,
-    medium: css`
-      ${th.size('medium.button')}
-    `,
-    large: css`
-      ${th.size('large.button')}
-    `
+const variantStandard = (theme: Theme): Style => ({
+  color: theme.colors!.black!.default,
+  backgroundColor: theme.colors!.white!.default,
+  borderColor: theme.colors!.standard!.default,
+  '&:hover, &:focus': {
+    borderColor: theme.colors!.standard!.dark1
+  },
+  '&:active': {
+    backgroundColor: theme.colors!.standard!.default,
+    borderColor: theme.colors!.standard!.dark3
   }
 })
 
-const blocks = variant({
-  prop: 'block',
-  default: false,
-  variants: {
-    true: css`
-      width: 100%;
-    `,
-    false: css``
+const variantPrimary = (theme: Theme): Style => ({
+  color: theme.colors!.white!.default,
+  backgroundColor: theme.colors!.primary!.default,
+  borderColor: theme.colors!.primary!.default,
+  boxShadow: theme.shadows![3],
+  '&:hover, &:focus': {
+    backgroundColor: theme.colors!.primary!.dark1,
+    borderColor: theme.colors!.primary!.dark1
+  },
+  '&:active': {
+    backgroundColor: theme.colors!.primary!.dark3,
+    borderColor: theme.colors!.primary!.dark3,
+    boxShadow: theme.shadows![4]
   }
 })
 
-const StyledButton = styled.button<ButtonProps>`
-  ${base}
-  ${variants}
-  ${sizes}
-  ${blocks}
-`
+const sizeSmall = (theme: Theme): Style => theme.sizes!.small!.button
+const sizeMedium = (theme: Theme): Style => theme.sizes!.medium!.button
+const sizeLarge = (theme: Theme): Style => theme.sizes!.large!.button
 
-export default StyledButton
+const block = {
+  width: '100%'
+}
+
+export const styles = (theme: Theme): Styles<ButtonClassProps> => ({
+  root: root(theme),
+  variantStandard: variantStandard(theme),
+  variantPrimary: variantPrimary(theme),
+  sizeSmall: sizeSmall(theme),
+  sizeMedium: sizeMedium(theme),
+  sizeLarge: sizeLarge(theme),
+  block
+})
