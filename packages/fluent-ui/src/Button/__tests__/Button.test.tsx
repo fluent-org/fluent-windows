@@ -22,7 +22,7 @@ describe('Button', (): void => {
   test('should render children', (): void => {
     const { container, getByText, sheets } = render(<Button>{testText}</Button>)
     expect(getByText(testText)).toBeInTheDocument()
-    expect(container.firstChild).toHaveClass(classes.variantStandard)
+    expect(container.firstChild).toHaveClass(classes.root)
     expect(sheets.toString()).toMatchSnapshot()
   })
 

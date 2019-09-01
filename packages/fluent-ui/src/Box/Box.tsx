@@ -1,9 +1,10 @@
 import * as React from 'react'
 import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
+import propTypes from '@styled-system/prop-types'
 import { styles } from './Box.styled'
 import { BoxClassProps, BoxProps, BoxPropTypes } from './Box.type'
-import propTypes from '@styled-system/prop-types'
+import { omit } from '../utils'
 import { Theme } from '../styles'
 
 export const name = 'Box'
@@ -18,7 +19,9 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
       id,
       style,
       onClick,
-      acrylic = false
+      children,
+      acrylic = false,
+      ...rest
     } = props
     const classes = useStyles(props)
     const className = classNames(
@@ -30,16 +33,50 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
       classNameProp
     )
 
-    // TODO Need to be more perfect
+    const otherProps = omit(rest, [
+      'minHeight',
+      'minWidth',
+      'maxWidth',
+      'maxHeight',
+      'background',
+      'backgroundClip',
+      'backgroundColor',
+      'backgroundImage',
+      'backgroundOrigin',
+      'backgroundPosition',
+      'backgroundRepeat',
+      'backgroundSize',
+      'backgroundAttachment',
+      'border',
+      'boxShadow',
+      'flex',
+      'flexBasis',
+      'flexDirection',
+      'flexFlow',
+      'flexGrow',
+      'flexShrink',
+      'flexWrap',
+      'order',
+      'alignContent',
+      'alignItems',
+      'alignSelf',
+      'justifyContent',
+      'placeContent',
+      'rowGap',
+      'columnGap',
+      'gap'
+    ])
+
     const _props = {
       className,
       ref,
       id,
       style,
-      onClick
+      onClick,
+      ...otherProps
     }
 
-    return <Component {..._props} />
+    return <Component {..._props}>{children}</Component>
   }
 )
 

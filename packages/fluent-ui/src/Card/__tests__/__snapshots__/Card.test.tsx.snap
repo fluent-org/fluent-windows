@@ -1,344 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card basic 1`] = `
-.c1 {
-  min-width: 275px;
-  max-width: 355px;
+exports[`Card should render children 1`] = `
+".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
-
-.c0 {
-  overflow: hidden;
-  background-color: #ffffff;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,-webkit-transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  box-shadow: 0px 3.2px 7.2px 0px rgba(0,0,0,0.132),0px 0.6px 1.8px 0px rgba(0,0,0,0.108);
-  border-radius: 4px;
-}
-
-@media (min-width:600px) {
-  .c1::-webkit-scrollbar {
+@media screen and (min-width: 600px) {
+  .FBox-root {  }
+  .FBox-root::-webkit-scrollbar {
     width: 8px;
     background: transparent;
   }
-
-  .c1::-webkit-scrollbar-thumb {
+  .FBox-root::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
-
-  .c1::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-<div
-  className="c0 c1"
->
-  basic
-</div>
-`;
-
-exports[`Card prop dynamic 1`] = `
-.c1 {
-  min-width: 275px;
-  max-width: 355px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c0 {
-  overflow: hidden;
-  background-color: #ffffff;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,-webkit-transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  box-shadow: 0px 3.2px 7.2px 0px rgba(0,0,0,0.132),0px 0.6px 1.8px 0px rgba(0,0,0,0.108);
-  border-radius: 4px;
-}
-
-.c0:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-@media (min-width:600px) {
-  .c1::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c1::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c1::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
+  .FBox-root::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
-
-<div
-  className="c0 c1"
->
-  dynamic
-</div>
-`;
-
-exports[`Card prop pure 1`] = `
-.c1 {
-  min-width: 275px;
-  max-width: 355px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c0 {
-  overflow: hidden;
-  background-color: #ffffff;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,-webkit-transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  box-shadow: none;
-}
-
-@media (min-width:600px) {
-  .c1::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
+  .FBox-system {  }
+  .FBox-acrylic {  }
+  .FBox-system-0 {
+    max-width: 355px;
+    min-width: 275px;
   }
-
-  .c1::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
+  .FBox-acrylic-1 {
+    overflow: hidden;
+    position: relative;
   }
-
-  .c1::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .FBox-acrylic-1 {
+    background: none !important;
+    backdrop-filter: blur(10px);
+  }
+  .FBox-acrylic-1::before, .FBox-acrylic-1::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+  }
+  .FBox-acrylic-1::before {
+    opacity: 0.5;
+    z-index: -2;
+  }
+  .FBox-acrylic-1::after {
+    opacity: 0.25;
+    z-index: -1;
+    background-image: url(data:image/png;base64,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);
   }
 }
-
-<div
-  className="c0 c1"
->
-  pure
-</div>
-`;
-
-exports[`Card with derived component 1`] = `
-.c1 {
-  min-width: 275px;
-  max-width: 355px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 16px 16px 0;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c4 {
-  padding: 16px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 8px 16px 16px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c8 {
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  min-width: 56px;
-  vertical-align: middle;
-  border: 2px solid;
-  border-radius: 2px;
-  text-align: center;
-  line-height: 1.5;
-  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,padding 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  color: #000000;
-  background-color: #ffffff;
-  border-color: #dedede;
-  padding: 0 8px;
-}
-
-.c8:disabled {
-  color: #8c8c8c;
-  background-color: #e9e9e9;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c8:hover,
-.c8:focus {
-  border-color: #b5b5b5;
-}
-
-.c8:active {
-  background-color: #dedede;
-  border-color: #595959;
-}
-
-.c0 {
-  overflow: hidden;
-  background-color: #ffffff;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,-webkit-transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  -webkit-transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: box-shadow 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,transform 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  box-shadow: 0px 3.2px 7.2px 0px rgba(0,0,0,0.132),0px 0.6px 1.8px 0px rgba(0,0,0,0.108);
-  border-radius: 4px;
-}
-
-.c3 {
-  margin: 0;
-  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
-
-.c5 {
-  margin: 0;
-  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 0.35em;
-}
-
-.c6 {
-  margin: 0;
-  color: #8c8c8c;
-  font-family: Segoe UI,-apple-system,sans-serif,Roboto,Helvetica,Arial;
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.57;
-  margin-bottom: 0.35em;
-}
-
-@media (min-width:600px) {
-  .c1::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
+@supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
+  .FBox-acrylic-1 {
+    z-index: 1;
+    background: inherit;
   }
-
-  .c1::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
+  .FBox-acrylic-1::before {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    filter: blur(10px);
+    height: calc(100% + 20px);
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: inherit;
   }
-
-  .c1::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
+  .FBox-acrylic-1::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    background-image: url(data:image/png;base64,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);
   }
 }
-
-@media (min-width:600px) {
-  .c2::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
+  .FCard-root {
+    overflow: hidden;
+    box-shadow: 0px 3.2px 7.2px 0px rgba(0,0,0,0.132),0px 0.6px 1.8px 0px rgba(0,0,0,0.108);
+    transition: box-shadow 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,transform 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    border-radius: 4px;
+    background-color: #ffffff;
   }
-
-  .c2::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
+  .FCard-pure {
+    box-shadow: none;
+    border-radius: 0;
   }
-
-  .c2::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-@media (min-width:600px) {
-  .c4::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c4::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c4::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-@media (min-width:600px) {
-  .c7::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c7::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c7::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-<div
-  className="c0 c1"
->
-  <div
-    className="c2"
-    display="flex"
-  >
-    <h2
-      className="c3"
-    >
-      News
-    </h2>
-  </div>
-  <div
-    className="c4"
-  >
-    <h3
-      className="c5"
-    >
-      NASA scientists track Greenland’s melting ice, and the findings are not good
-    </h3>
-    <h6
-      className="c6"
-      color="standard.dark2"
-    >
-      MarketWatch · 11 hours ago
-    </h6>
-  </div>
-  <div
-    className="c7"
-    display="flex"
-  >
-    <button
-      className="c8"
-      size="small"
-    >
-      Learn More
-    </button>
-  </div>
-</div>
+  .FCard-dynamic:hover {
+    transform: scale(1.1);
+  }"
 `;

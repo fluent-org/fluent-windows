@@ -1,20 +1,43 @@
 import * as React from 'react'
-import { StyledCardWrapper } from './Card.styled'
+import classNames from 'classnames'
+import { createUseStyles } from 'react-jss'
+import Box from '../Box'
+import { styles } from './Card.styled'
 import Content from './components/Content'
 import Actions from './components/Actions'
 import Header from './components/Header'
-import { CardProps, CardType, CardPropTypes } from './Card.type'
+import { CardProps, CardType, CardPropTypes, CardClassProps } from './Card.type'
+import { Theme } from '../styles'
+
+export const name = 'Card'
+
+const useStyles = createUseStyles<Theme, CardClassProps>(styles, { name })
 
 const Card: React.FC<CardProps> = React.forwardRef<HTMLDivElement, CardProps>(
-  (
-    { pure = false, dynamic = false, minWidth = 275, maxWidth = 355, ...rest }: CardProps,
-    ref
-  ): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'div',
+      className: classNameProp,
+      pure = false,
+      dynamic = false,
+      minWidth = 275,
+      maxWidth = 355,
+      ...rest
+    } = props
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.pure]: pure,
+        [classes.dynamic]: dynamic
+      },
+      classNameProp
+    )
     return (
-      <StyledCardWrapper
+      <Box
+        as={Component}
+        className={className}
         ref={ref}
-        pure={pure}
-        dynamic={dynamic}
         minWidth={minWidth}
         maxWidth={maxWidth}
         {...rest}
@@ -39,7 +62,7 @@ Object.defineProperty(Card, 'Header', {
   }
 })
 
-Card.displayName = 'FCard'
+Card.displayName = `F${name}`
 
 Card.propTypes = CardPropTypes
 
