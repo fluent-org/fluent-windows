@@ -1,37 +1,34 @@
-import { styled, th } from '../styles/styled'
-import Box from '../Box'
+import { Style, Styles } from 'jss'
+import { CommandClassProps } from './Command.type'
 
-export const StyledCommandWrapper = styled(Box).attrs(
-  (props): object => ({
-    backgroundColor: th.color('standard.light2').call(undefined, props)
-  })
-)`
-  display: flex;
-  overflow: hidden;
-`
+const root: Style = {
+  display: 'flex',
+  overflow: 'hidden'
+}
+const content: Style = {
+  position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
+  padding: '0 10px',
+  marginRight: 5
+}
+const primary: Style = {
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'flex-end',
+  flex: 1
+}
 
-export const StyledContent = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  margin-right: 5px;
-`
+const secondaryRoot: Style = {
+  display: 'flex',
+  flexDirection: 'column',
+  width: 130,
+  zIndex: 1001
+}
 
-export const StyledPrimary = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-`
-
-export const StyledSecondaryContainer = styled(Box).attrs(
-  (props): object => ({
-    backgroundColor: th.color('standard.light2').call(undefined, props)
-  })
-)`
-  display: flex;
-  flex-direction: column;
-  width: 130px;
-  z-index: 1001;
-`
+export const styles: Styles<CommandClassProps> = {
+  root,
+  content,
+  primary,
+  secondaryRoot
+}

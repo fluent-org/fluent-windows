@@ -4,6 +4,6 @@ const Secondary: React.FC = (props): React.ReactElement => {
   return <div {...props} />
 }
 
-Secondary.displayName = 'FCommandSecondary'
+Secondary.displayName = `FCommandSecondary`
 
 export default Secondary

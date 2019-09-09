@@ -38,6 +38,7 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
       'minWidth',
       'maxWidth',
       'maxHeight',
+      'bg',
       'background',
       'backgroundClip',
       'backgroundColor',
@@ -64,7 +65,9 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
       'placeContent',
       'rowGap',
       'columnGap',
-      'gap'
+      'gap',
+      'padding',
+      'margin'
     ])
 
     const _props = {

@@ -6,6 +6,8 @@ import { BoxProps, BoxPropTypes } from '../Box'
 import Content from './components/Content'
 import Secondary from './components/Secondary'
 
+export type CommandClassProps = 'root' | 'content' | 'primary' | 'secondaryRoot'
+
 export type CommandChild =
   | React.ReactComponentElement<typeof Item>
   | React.ReactComponentElement<typeof Content>

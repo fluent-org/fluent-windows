@@ -2475,6 +2475,13 @@
   dependencies:
     "@styled-system/core" "^5.1.1"
 
+"@styled-system/theme-get@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/@styled-system/theme-get/-/theme-get-5.1.1.tgz#aab28c127dda06ca9f32b0a838e48e5d0fe19b62"
+  integrity sha512-NqEcnF0hj+Zyj2AJEcr4/GJvp9yKZnYdgJ8Fxw86eQOuI6s486PNBtI5B4sOoko25N8wfQ7Ndl/wcTNPcTFRZw==
+  dependencies:
+    "@styled-system/core" "^5.1.1"
+
 "@styled-system/typography@^5.1.1":
   version "5.1.1"
   resolved "https://registry.npmjs.org/@styled-system/typography/-/typography-5.1.1.tgz#3fd54a317e1fcb51c16e981f23ba3f03de2cd515"

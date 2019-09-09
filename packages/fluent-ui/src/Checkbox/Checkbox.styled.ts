@@ -1,5 +1,5 @@
-import { Theme } from '@fluent-ui/core/styles'
 import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
 import { CheckboxClassProps } from './Checkbox.type'
 
 const root = (theme: Theme): Style => ({

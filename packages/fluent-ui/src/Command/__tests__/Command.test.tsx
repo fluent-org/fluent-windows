@@ -1,107 +1,102 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
 import { Back as BackIcon, Play as PlayIcon, Forward as ForwardIcon } from '@fluent-ui/icons'
-import { ThemeProvider, Command, Item } from '../../'
+import Command, { name } from '../Command'
+import Item from '../../Item'
+
+import { styles } from '../Command.styled'
+import { CommandClassProps } from '../Command.type'
+
+const classes = getClasses<CommandClassProps>(styles, name)
 
 describe('Command', (): void => {
-  const theme = {}
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Command>
-          <Item prefix={<BackIcon />} />
-          <Item prefix={<PlayIcon />} />
-          <Item prefix={<ForwardIcon />} />
+  const testText = 'Hello World'
 
-          <Command.Content>Now Playing...</Command.Content>
-
-          <Command.Secondary>
-            <Item>Like</Item>
-            <Item>Dislike</Item>
-          </Command.Secondary>
-        </Command>
-      </ThemeProvider>
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLDivElement>()
+    const { container } = render(
+      <Command ref={ref}>{<Command.Content>{testText}</Command.Content>}</Command>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    const { current: element } = ref
+    expect(element).toEqual(container.firstChild)
   })
 
-  test('acrylic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Command acrylic>
-          <Item prefix={<BackIcon />} />
-          <Item prefix={<PlayIcon />} />
-          <Item prefix={<ForwardIcon />} />
-
-          <Command.Content>Now Playing...</Command.Content>
-
-          <Command.Secondary>
-            <Item>Like</Item>
-            <Item>Dislike</Item>
-          </Command.Secondary>
-        </Command>
-      </ThemeProvider>
+  test('should render children', (): void => {
+    const { container, getByText, sheets } = render(
+      <Command>{<Command.Content>{testText}</Command.Content>}</Command>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(getByText(testText)).toBeInTheDocument()
+    expect(container.firstChild).toHaveClass(classes.root)
+    expect(sheets.toString()).toMatchSnapshot()
   })
 
-  test('reveal', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Command reveal>
-          <Item prefix={<BackIcon />} />
-          <Item prefix={<PlayIcon />} />
-          <Item prefix={<ForwardIcon />} />
+  test('should to render Primary Content and Secondary', (): void => {
+    const { container } = render(
+      <Command>
+        <Item prefix={<BackIcon />} />
+        <Item prefix={<PlayIcon />} />
+        <Item prefix={<ForwardIcon />} />
 
-          <Command.Content>Now Playing...</Command.Content>
+        <Command.Content>{testText}</Command.Content>
 
-          <Command.Secondary>
-            <Item>Like</Item>
-            <Item>Dislike</Item>
-          </Command.Secondary>
-        </Command>
-      </ThemeProvider>
+        <Command.Secondary>
+          <Item>Like</Item>
+          <Item>Dislike</Item>
+        </Command.Secondary>
+      </Command>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  test('button with label', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Command>
-          <Item prefix={<BackIcon />}>Back</Item>
-          <Item prefix={<PlayIcon />}>Play</Item>
-          <Item prefix={<ForwardIcon />}>Forward</Item>
+  test('should be rendered with acrylic effects', (): void => {
+    const { container, sheets } = render(
+      <Command acrylic>
+        <Item prefix={<BackIcon />} />
+        <Item prefix={<PlayIcon />} />
+        <Item prefix={<ForwardIcon />} />
 
-          <Command.Content>Now Playing...</Command.Content>
+        <Command.Content>Now Playing...</Command.Content>
 
-          <Command.Secondary>
-            <Item>Like</Item>
-            <Item>Dislike</Item>
-          </Command.Secondary>
-        </Command>
-      </ThemeProvider>
+        <Command.Secondary>
+          <Item>Like</Item>
+          <Item>Dislike</Item>
+        </Command.Secondary>
+      </Command>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
+    expect(sheets.toString()).toMatchSnapshot()
+  })
+
+  test('should be rendered with reveal effects', (): void => {
+    const { container, sheets } = render(
+      <Command reveal>
+        <Item prefix={<BackIcon />} />
+        <Item prefix={<PlayIcon />} />
+        <Item prefix={<ForwardIcon />} />
+
+        <Command.Content>Now Playing...</Command.Content>
+
+        <Command.Secondary>
+          <Item>Like</Item>
+          <Item>Dislike</Item>
+        </Command.Secondary>
+      </Command>
+    )
+    expect(container.firstChild).toMatchSnapshot()
+    expect(sheets.toString()).toMatchSnapshot()
   })
 
   test('without Content and Secondary', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Command acrylic>
-          <Item prefix={<BackIcon />} />
-          <Item prefix={<PlayIcon />} />
-          <Item prefix={<ForwardIcon />} />
-        </Command>
-      </ThemeProvider>
+    const { container, sheets } = render(
+      <Command acrylic>
+        <Item prefix={<BackIcon />} />
+        <Item prefix={<PlayIcon />} />
+        <Item prefix={<ForwardIcon />} />
+      </Command>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
+    expect(sheets.toString()).toMatchSnapshot()
   })
 })

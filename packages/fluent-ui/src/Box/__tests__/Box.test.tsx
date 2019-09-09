@@ -29,7 +29,8 @@ describe('Box', (): void => {
   })
 
   test('should be rendered with acrylic effects', (): void => {
-    const { container } = render(<Box acrylic>{testChildren}</Box>)
+    const { container, sheets } = render(<Box acrylic>{testChildren}</Box>)
     expect(container.firstChild).toMatchSnapshot()
+    expect(sheets.toString()).toMatchSnapshot()
   })
 })

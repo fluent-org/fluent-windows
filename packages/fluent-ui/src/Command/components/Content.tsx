@@ -4,6 +4,6 @@ const Content: React.FC = (props): React.ReactElement => {
   return <div {...props} />
 }
 
-Content.displayName = 'FCommandContent'
+Content.displayName = `FCommandContent`
 
 export default Content
