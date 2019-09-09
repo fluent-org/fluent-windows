@@ -1,91 +1,78 @@
-import { styled, css, th, variant } from '../styles/styled'
+import { Theme } from '../styles'
+import { Style, Styles } from 'jss'
+import { RadioClassProps } from './Radio.type'
 
-const checked = variant({
-  prop: 'checked',
-  default: false,
-  variants: {
-    true: css`
-      border-color: ${th.color('primary.default')};
-      &:hover {
-        border-color: ${th.color('primary.default')};
-      }
-    `,
-    false: css`
-      border-color: ${th.color('standard.default')};
-      &:hover {
-        border-color: ${th.color('standard.dark1')};
-      }
-    `
+const root = (theme: Theme): Style => ({
+  width: 20,
+  height: 20,
+  borderRadius: '50%',
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  border: '2px solid',
+  cursor: 'pointer',
+  transition: theme.transitions!.radio!,
+  backgroundColor: theme.colors!.white!.default,
+  // checked false
+  borderColor: theme.colors!.standard!.default,
+  '&:hover': {
+    borderColor: theme.colors!.standard!.dark1
+  },
+  // input element
+  '& > input': {
+    width: '100%',
+    height: '100%',
+    opacity: 0,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    cursor: 'pointer'
   }
 })
 
-const disabled = variant({
-  prop: 'disabled',
-  default: false,
-  variants: {
-    true: css`
-      background-color: ${th.color('standard.light1')};
-      border-color: ${th.color('standard.default')};
-      cursor: not-allowed;
-      pointer-events: none;
-    `,
-    false: css``
+const checked = (theme: Theme): Style => ({
+  borderColor: theme.colors!.primary!.default,
+  '&:hover': {
+    borderColor: theme.colors!.primary!.default
   }
 })
 
-export const StyledRadioWrapper = styled.div<{
-  checked?: boolean
-  disabled?: boolean
-}>`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid;
-  transition: ${th.transition('radio')};
-  background-color: ${th.color('white.default')};
+const disabled = (theme: Theme): Style => ({
+  backgroundColor: theme.colors!.standard!.light1,
+  borderColor: theme.colors!.standard!.default,
+  cursor: 'not-allowed',
+  pointerEvents: 'none',
+  '& > input': {
+    cursor: 'not-allowed',
+    pointerEvents: 'none'
+  }
+})
 
-  ${checked}
-  ${disabled}
-`
+const circle = (theme: Theme): Style => ({
+  borderRadius: '50%',
+  transition: theme.transitions!.radio,
+  backgroundColor: theme.colors!.black!.default,
+  width: 0,
+  height: 0,
+  opacity: 0
+})
+const circleChecked: Style = {
+  width: 12,
+  height: 12,
+  opacity: 1
+}
+const circleDisable = (theme: Theme): Style => ({
+  backgroundColor: theme.colors!.standard!.dark3
+})
 
-export const StyledRadio = styled.input`
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
-`
-
-export const StyledCircle = styled.div<{
-  disabled?: boolean
-  checked?: boolean
-}>`
-  border-radius: 50%;
-  transition: ${th.transition('radio')};
-  background-color: ${({ disabled }): string =>
-    disabled ? th.color('standard.dark3') : th.color('black.default')};
-  ${variant({
-    prop: 'checked',
-    default: false,
-    variants: {
-      true: css`
-        width: 12px;
-        height: 12px;
-        opacity: 1;
-      `,
-      false: css`
-        width: 0;
-        height: 0;
-        opacity: 0;
-      `
-    }
-  })}
-`
+export const styles = (theme: Theme): Styles<RadioClassProps> => ({
+  root: root(theme),
+  checked: checked(theme),
+  disabled: disabled(theme),
+  circle: circle(theme),
+  circleChecked,
+  circleDisable: circleDisable(theme)
+})

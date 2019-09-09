@@ -1,46 +1,47 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import * as ReactTestUtils from 'react-dom/test-utils'
-import 'jest-styled-components'
+import { fireEvent } from '@testing-library/react'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Radio } from '../..'
+import Radio, { name } from '../Radio'
+import { styles } from '../Radio.styled'
+import { RadioClassProps } from '../Radio.type'
+
+const classes = getClasses<RadioClassProps>(styles, name)
 
 describe('Radio', (): void => {
-  const theme = {}
-
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Radio />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    const { container } = render(<Radio ref={ref} />)
+    const { current: element } = ref
+    const RadioElement = container.querySelector(`input[type='Radio']`) as HTMLInputElement
+    expect(element).toEqual(RadioElement)
   })
 
-  test('controlled', (): void => {
-    let node = React.createRef<HTMLInputElement>()
+  test('should be controlled', async (): Promise<void> => {
     let checked = ''
     function handleChange(c: string): void {
       checked = c
     }
-    ReactTestUtils.renderIntoDocument(
-      <ThemeProvider theme={theme}>
-        <Radio ref={node} value="a" onChange={handleChange} />
-      </ThemeProvider>
+    const { getByTestId } = render(
+      <>
+        <Radio data-testid="a" value="a" checked={checked === 'a'} onChange={handleChange} />
+        <Radio data-testid="b" value="b" checked={checked === 'b'} onChange={handleChange} />
+        <Radio data-testid="c" value="c" checked={checked === 'c'} onChange={handleChange} />
+      </>
     )
-    ;(node.current as HTMLInputElement).checked = true
-    ReactTestUtils.Simulate.change(node.current as HTMLInputElement)
+    fireEvent.click(getByTestId('a'))
     expect(checked).toEqual('a')
+    fireEvent.click(getByTestId('b'))
+    expect(checked).toEqual('b')
+    fireEvent.click(getByTestId('c'))
+    expect(checked).toEqual('c')
   })
 
-  test('prop disabled', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Radio disabled={true} />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should be render a disabled Radio', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    const { container } = render(<Radio ref={ref} disabled={true} />)
+    expect(container.firstChild).toHaveClass(classes.disabled)
+    expect(ref.current!.disabled).toEqual(true)
   })
 })
