@@ -1,39 +1,62 @@
 import * as React from 'react'
-import {
-  StyledLabel,
-  StyledLabelText,
-  StyledToggleWrapper,
-  StyledToggleCircle,
-  StyledToggle
-} from './Toggle.styled'
-import { ToggleProps, TogglePropTypes } from './Toggle.type'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { ToggleClassProps, ToggleProps, TogglePropTypes } from './Toggle.type'
+import { Theme } from '../styles'
+import { styles } from './Toggle.styled'
+
+export const name = 'Toggle'
+
+const useStyles = createUseStyles<Theme, ToggleClassProps>(styles, { name })
 
 const Toggle: React.FC<ToggleProps> = React.forwardRef<HTMLInputElement, ToggleProps>(
-  ({ checked, value, onChange, disabled, children, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'div',
+      className: classNameProp,
+      checked,
+      value,
+      onChange,
+      disabled,
+      ...rest
+    } = props
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.checked]: checked,
+        [classes.disabled]: disabled,
+        [classes.checkedAndDisabled]: checked && disabled
+      },
+      classNameProp
+    )
+    const circleClassName = classNames(classes.circle, {
+      [classes.circleChecked]: checked,
+      [classes.circleDisabled]: disabled,
+      [classes.circleCheckedAndDisabled]: checked && disabled
+    })
+
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
       onChange && onChange(e.target.checked)
     }
     return (
-      <StyledLabel disabled={disabled}>
-        <StyledToggleWrapper checked={checked} disabled={disabled}>
-          <StyledToggleCircle checked={checked} disabled={disabled} />
-          <StyledToggle
-            ref={ref}
-            type="checkbox"
-            checked={checked}
-            value={value}
-            onChange={handleChange}
-            disabled={disabled}
-            {...rest}
-          />
-        </StyledToggleWrapper>
-        <StyledLabelText>{children}</StyledLabelText>
-      </StyledLabel>
+      <Component className={className}>
+        <div className={circleClassName} />
+        <input
+          ref={ref}
+          type="checkbox"
+          checked={checked}
+          value={value}
+          onChange={handleChange}
+          disabled={disabled}
+          {...rest}
+        />
+      </Component>
     )
   }
 )
 
-Toggle.displayName = 'FToggle'
+Toggle.displayName = `F${name}`
 
 Toggle.propTypes = TogglePropTypes
 

@@ -9,12 +9,10 @@ const root = (theme: Theme): Style => ({
   backgroundColor: theme.colors!.white!.default,
   transition: theme.transitions!.card
 })
-
 const pure: Style = {
   boxShadow: 'none',
   borderRadius: 0
 }
-
 const dynamic: Style = {
   '&:hover': {
     transform: 'scale(1.1)'

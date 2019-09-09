@@ -14,7 +14,7 @@ describe('Radio', (): void => {
     const ref = React.createRef<HTMLInputElement>()
     const { container } = render(<Radio ref={ref} />)
     const { current: element } = ref
-    const RadioElement = container.querySelector(`input[type='Radio']`) as HTMLInputElement
+    const RadioElement = container.querySelector(`input[type='radio']`) as HTMLInputElement
     expect(element).toEqual(RadioElement)
   })
 

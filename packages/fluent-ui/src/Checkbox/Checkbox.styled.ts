@@ -37,7 +37,6 @@ const root = (theme: Theme): Style => ({
     zIndex: 1
   }
 })
-
 const checked = (theme: Theme): Style => ({
   color: theme.colors!.white!.default,
   backgroundColor: theme.colors!.primary!.default,
@@ -50,7 +49,6 @@ const checked = (theme: Theme): Style => ({
     borderColor: theme.colors!.primary!.dark3
   }
 })
-
 const disabled = (theme: Theme): Style => ({
   color: theme.colors!.standard!.dark2,
   backgroundColor: theme.colors!.standard!.light1,

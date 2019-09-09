@@ -8,7 +8,7 @@ export type RadioClassProps =
   | 'disabled'
   | 'circle'
   | 'circleChecked'
-  | 'circleDisable'
+  | 'circleDisabled'
 
 export interface RadioProps
   extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'>,

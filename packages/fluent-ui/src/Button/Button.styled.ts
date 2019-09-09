@@ -21,7 +21,6 @@ const root = (theme: Theme): Style => ({
     pointerEvents: 'none'
   }
 })
-
 const variantStandard = (theme: Theme): Style => ({
   color: theme.colors!.black!.default,
   backgroundColor: theme.colors!.white!.default,
@@ -34,7 +33,6 @@ const variantStandard = (theme: Theme): Style => ({
     borderColor: theme.colors!.standard!.dark3
   }
 })
-
 const variantPrimary = (theme: Theme): Style => ({
   color: theme.colors!.white!.default,
   backgroundColor: theme.colors!.primary!.default,
@@ -50,11 +48,9 @@ const variantPrimary = (theme: Theme): Style => ({
     boxShadow: theme.shadows![4]
   }
 })
-
 const sizeSmall = (theme: Theme): Style => theme.sizes!.small!.button
 const sizeMedium = (theme: Theme): Style => theme.sizes!.medium!.button
 const sizeLarge = (theme: Theme): Style => theme.sizes!.large!.button
-
 const block = {
   width: '100%'
 }

@@ -1,5 +1,5 @@
-import { Theme } from '../styles'
 import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
 import { RadioClassProps } from './Radio.type'
 
 const root = (theme: Theme): Style => ({
@@ -32,14 +32,12 @@ const root = (theme: Theme): Style => ({
     cursor: 'pointer'
   }
 })
-
 const checked = (theme: Theme): Style => ({
   borderColor: theme.colors!.primary!.default,
   '&:hover': {
     borderColor: theme.colors!.primary!.default
   }
 })
-
 const disabled = (theme: Theme): Style => ({
   backgroundColor: theme.colors!.standard!.light1,
   borderColor: theme.colors!.standard!.default,
@@ -64,7 +62,7 @@ const circleChecked: Style = {
   height: 12,
   opacity: 1
 }
-const circleDisable = (theme: Theme): Style => ({
+const circleDisabled = (theme: Theme): Style => ({
   backgroundColor: theme.colors!.standard!.dark3
 })
 
@@ -74,5 +72,5 @@ export const styles = (theme: Theme): Styles<RadioClassProps> => ({
   disabled: disabled(theme),
   circle: circle(theme),
   circleChecked,
-  circleDisable: circleDisable(theme)
+  circleDisabled: circleDisabled(theme)
 })
