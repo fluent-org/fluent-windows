@@ -1,92 +1,66 @@
-import { styled, css, th, variant } from '../styles/styled'
+import { Theme } from '@fluent-ui/core/styles'
+import { Style, Styles } from 'jss'
+import { CheckboxClassProps } from './Checkbox.type'
 
-export const StyledLabel = styled.label<{ disabled?: boolean }>`
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  vertical-align: middle;
-  cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
-`
-
-export const StyledLabelText = styled.span`
-  font-size: 0.8em;
-  margin-left: ${({ children }): string => (children ? '4px' : '0')};
-`
-
-const checked = variant({
-  prop: 'checked',
-  default: false,
-  variants: {
-    true: css`
-      color: ${th.color('white.default')};
-      background-color: ${th.color('primary.default')};
-      border-color: ${th.color('primary.default')};
-      &:hover,
-      &:focus {
-        border-color: ${th.color('primary.default')};
-      }
-      &:active {
-        background-color: ${th.color('primary.dark3')};
-        border-color: ${th.color('primary.dark3')};
-      }
-    `,
-    false: css`
-      color: ${th.color('black.default')};
-      background-color: ${th.color('white.default')};
-      border-color: ${th.color('standard.default')};
-      &:hover,
-      &:focus {
-        border-color: ${th.color('standard.dark1')};
-      }
-      &:active {
-        color: ${th.color('white.default')};
-        background-color: ${th.color('primary.default')};
-        border-color: ${th.color('primary.default')};
-      }
-    `
+const root = (theme: Theme): Style => ({
+  width: 20,
+  height: 20,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  position: 'relative',
+  cursor: 'pointer',
+  borderRadius: 2,
+  border: '2px solid',
+  transition: theme.transitions!.checkbox,
+  color: theme.colors!.black!.default,
+  backgroundColor: theme.colors!.white!.default,
+  borderColor: theme.colors!.standard!.default,
+  '&:hover, &:focus': {
+    borderColor: theme.colors!.standard!.dark1
+  },
+  '&:active': {
+    color: theme.colors!.white!.default,
+    backgroundColor: theme.colors!.primary!.default,
+    borderColor: theme.colors!.primary!.default
+  },
+  '& > input': {
+    width: '100%',
+    height: '100%',
+    cursor: 'pointer',
+    opacity: 0,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    zIndex: 1
   }
 })
 
-const disabled = variant({
-  prop: 'disabled',
-  default: false,
-  variants: {
-    true: css`
-      color: ${th.color('standard.dark2')};
-      background-color: ${th.color('standard.light1')};
-      border-color: ${th.color('standard.default')};
-      pointer-events: none;
-    `,
-    false: css``
+const checked = (theme: Theme): Style => ({
+  color: theme.colors!.white!.default,
+  backgroundColor: theme.colors!.primary!.default,
+  borderColor: theme.colors!.primary!.default,
+  '&:hover, &:focus': {
+    borderColor: theme.colors!.primary!.default
+  },
+  '&:active': {
+    backgroundColor: theme.colors!.primary!.dark3,
+    borderColor: theme.colors!.primary!.dark3
   }
 })
 
-export const StyledCheckboxWrapper = styled.div<{
-  checked?: boolean
-  disabled?: boolean
-}>`
-  width: 20px;
-  height: 20px;
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid;
-  border-radius: 2px;
-  transition: ${th.transition('checkbox')};
+const disabled = (theme: Theme): Style => ({
+  color: theme.colors!.standard!.dark2,
+  backgroundColor: theme.colors!.standard!.light1,
+  borderColor: theme.colors!.standard!.default,
+  pointerEvents: 'none',
+  cursor: 'not-allowed'
+})
 
-  ${checked}
-  ${disabled}
-`
-
-export const StyledCheckbox = styled.input`
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
-`
+export const styles = (theme: Theme): Styles<CheckboxClassProps> => ({
+  root: root(theme),
+  checked: checked(theme),
+  disabled: disabled(theme)
+})

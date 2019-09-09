@@ -1,39 +1,61 @@
 import * as React from 'react'
-import {
-  StyledLabel,
-  StyledLabelText,
-  StyledCheckboxWrapper,
-  StyledCheckbox
-} from './Checkbox.styled'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
 import { Accept as AcceptIcon } from '@fluent-ui/icons'
-import { CheckboxProps, CheckboxPropTypes } from './Checkbox.type'
+import { CheckboxProps, CheckboxPropTypes, CheckboxClassProps } from './Checkbox.type'
+import { Theme } from '../styles'
+import { styles } from './Checkbox.styled'
+
+export const name = 'Checkbox'
+
+const useStyles = createUseStyles<Theme, CheckboxClassProps>(styles, { name })
 
 const Checkbox: React.FC<CheckboxProps> = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ checked, value, onChange, disabled, children, ...rest }, ref): React.ReactElement => {
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
-      onChange && onChange(e.target.checked)
-    }
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'div',
+      className: classNameProp,
+      checked,
+      value,
+      onChange,
+      disabled,
+      ...rest
+    } = props
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.checked]: checked,
+        [classes.disabled]: disabled
+      },
+      classNameProp
+    )
+
+    const handleChange = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>): void => {
+        onChange && onChange(e.target.checked)
+      },
+      [onChange]
+    )
+
     return (
-      <StyledLabel disabled={disabled}>
-        <StyledCheckboxWrapper checked={checked} disabled={disabled}>
-          {checked && <AcceptIcon />}
-          <StyledCheckbox
-            ref={ref}
-            type="checkbox"
-            checked={checked}
-            value={value}
-            onChange={handleChange}
-            disabled={disabled}
-            {...rest}
-          />
-        </StyledCheckboxWrapper>
-        <StyledLabelText>{children}</StyledLabelText>
-      </StyledLabel>
+      <Component className={className}>
+        {checked && <AcceptIcon />}
+        <input
+          ref={ref}
+          type="checkbox"
+          checked={checked}
+          value={value}
+          onChange={handleChange}
+          disabled={disabled}
+          {...rest}
+        />
+      </Component>
     )
   }
 )
 
-Checkbox.displayName = 'FCheckbox'
+Checkbox.displayName = `F${name}`
 
 Checkbox.propTypes = CheckboxPropTypes
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import classNames from 'classnames'
-import { createUseStyles } from 'react-jss'
+import { createUseStyles } from '@fluent-ui/styles'
 import Box from '../Box'
 import { styles } from './Card.styled'
 import Content from './components/Content'
