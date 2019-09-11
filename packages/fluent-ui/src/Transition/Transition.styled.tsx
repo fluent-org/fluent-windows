@@ -155,7 +155,11 @@ export const StyledContainer = styled(
         <Box ref={wrapperRef}>{children}</Box>
       </Box>
     ) : (
-      React.cloneElement(children, props)
+      React.cloneElement(children, {
+        ...props,
+        // @ts-ignore
+        className: [children.props.className, props.className]
+      })
     )
   }
 )<StyledContainerProps>`

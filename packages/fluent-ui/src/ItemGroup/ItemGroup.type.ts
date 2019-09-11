@@ -2,6 +2,20 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { BoxProps, BoxPropTypes } from '../Box'
 
+export type ItemGroupClassProps =
+  | 'root'
+  | 'level'
+  | 'float'
+  | 'titleRoot'
+  | 'titleActive'
+  | 'titleFloatAndHorizontal'
+  | 'titlePrefix'
+  | 'titlePrefixAcrylic'
+  | 'titlePrefixNotFloatOpen'
+  | 'titlePrefixNotFloatClose'
+  | 'titlePrefixHorizontal'
+  | 'titlePrefixExpanded'
+
 type Shrink = 'expand' | 'float'
 
 export interface ItemGroupProps extends Omit<BoxProps, 'prefix'> {

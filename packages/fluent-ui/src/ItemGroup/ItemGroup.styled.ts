@@ -1,59 +1,80 @@
-import Box from '../Box'
-import { styled, th, variant, css } from '../styles/styled'
-import { StyledItemWrapper } from '../Item/Item.styled'
+import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
+import { ItemGroupClassProps, ItemGroupProps } from './ItemGroup.type'
 
-export const StyledItemGroupTitleWrapper = styled.div<{
-  active: boolean
-  float?: boolean
-  horizontal?: boolean
-}>`
-  position: relative;
-  color: ${({ active }): string => (active ? th.color('primary.default') : 'inherit')};
-  & > ${StyledItemWrapper} {
-    ${({ float, horizontal }): string => (horizontal && float ? `padding-right: 36px;` : '')}
+const root = (theme: Theme): Style => ({
+  overflow: 'visible',
+  boxShadow: theme.shadows![3],
+  zIndex: 9999
+})
+const level = (props: ItemGroupProps): Style => ({
+  '& .FItem-root': {
+    paddingLeft: props.level && 40 + props.level * 12
   }
-`
-
-export const StyledItemGroupTitlePrefixWrapper = styled.div<{
-  open: boolean
-  expanded: boolean
-  acrylic: boolean
-  float?: boolean
-  horizontal?: boolean
-}>`
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  cursor: pointer;
-  margin-top: -12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  transition: ${th.transition('navigation')};
-  ${({ open, float }): string => (!float ? `transform: rotate(${open ? 180 : 0}deg);` : '')}
-  z-index: ${({ acrylic }): number => (acrylic ? -1 : 1)};
-  opacity: ${({ expanded, horizontal }): number => (!horizontal ? (expanded ? 1 : 0) : 1)}
-`
-
-export const StyledItemGroupItemWrapper = styled(Box)<{ level: number; float?: boolean }>`
-  overflow: visible;
-  box-shadow: ${th.shadow('3')};
-  z-index: 9999;
-  ${StyledItemWrapper} {
-    ${variant({
-      prop: 'float',
-      default: 'false',
-      variants: {
-        true: css`
-          padding-right: 40px;
-        `,
-        false: css`
-          padding-left: ${({ level }: any): number => (level ? 40 + level * 12 : 0)}px;
-        `
-      }
-    })}
+})
+const float: Style = {
+  '& .FItem-root': {
+    paddingRight: 40
   }
-`
+}
+
+const titleRoot: Style = {
+  position: 'relative',
+  color: 'inherit'
+}
+const titleActive = (theme: Theme): Style => ({
+  color: theme.colors!.primary!.default
+})
+const titleFloatAndHorizontal: Style = {
+  '& > .FItem-root': {
+    paddingRight: 36
+  }
+}
+const titlePrefix = (theme: Theme): Style => ({
+  width: 24,
+  height: 24,
+  position: 'absolute',
+  right: 12,
+  top: '50%',
+  cursor: 'pointer',
+  marginTop: -12,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontSize: 12,
+  transition: theme.transitions!.default,
+  // acrylic false
+  zIndex: 1,
+  // horizontal === false && expanded === true
+  opacity: 0
+})
+const titlePrefixAcrylic: Style = {
+  zIndex: -1
+}
+const titlePrefixNotFloatOpen: Style = {
+  transform: 'rotate(180deg)'
+}
+const titlePrefixNotFloatClose: Style = {
+  transform: 'rotate(0deg)'
+}
+const titlePrefixHorizontal: Style = {
+  opacity: 1
+}
+const titlePrefixExpanded: Style = {
+  opacity: 1
+}
+
+export const styles = (theme: Theme): Styles<ItemGroupClassProps> => ({
+  root: root(theme),
+  level,
+  float,
+  titleRoot,
+  titleActive: titleActive(theme),
+  titleFloatAndHorizontal,
+  titlePrefix: titlePrefix(theme),
+  titlePrefixAcrylic,
+  titlePrefixNotFloatOpen,
+  titlePrefixNotFloatClose,
+  titlePrefixHorizontal,
+  titlePrefixExpanded
+})

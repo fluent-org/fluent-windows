@@ -17,7 +17,16 @@ const useStyles = createUseStyles<Theme, ItemClassProps>(styles, { name })
 
 const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
   (props, ref): React.ReactElement => {
-    const { as: Component = 'div', value, prefix, active, children, onClick, ...rest } = props
+    const {
+      as = 'div',
+      className: classNameProp,
+      value,
+      prefix,
+      active,
+      children,
+      onClick,
+      ...rest
+    } = props
     // handle active item
     const {
       value: activeID,
@@ -49,9 +58,13 @@ const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
     }, [activeID, value])
 
     const classes = useStyles(props)
-    const className = classNames(classes.root, {
-      [classes.reveal]: reveal
-    })
+    const className = classNames(
+      classes.root,
+      {
+        [classes.reveal]: reveal
+      },
+      classNameProp
+    )
     const activeBarClassName = classNames(classes.activeBar, {
       [classes.activeBarHorizontal]: horizontal,
       [classes.activeBarActive]: active || _active
@@ -62,7 +75,7 @@ const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
       [classes.textHasPrefix]: !!prefix && expanded
     })
     return (
-      <Box className={className} ref={ref} onClick={handleItemClick} {...rest}>
+      <Box className={className} ref={ref} as={as} onClick={handleItemClick} {...rest}>
         {!!value && <div className={activeBarClassName} />}
         {!!prefix && <div className={classes.prefixRoot}>{prefix}</div>}
         {!!children && <div className={textClassName}>{children}</div>}
@@ -71,7 +84,7 @@ const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
   }
 )
 
-Item.displayName = 'FItem'
+Item.displayName = `F${name}`
 
 Item.propTypes = ItemPropTypes
 

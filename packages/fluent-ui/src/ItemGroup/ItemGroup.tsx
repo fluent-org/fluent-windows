@@ -1,4 +1,7 @@
 import * as React from 'react'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { useReveal, useHover, usePopper } from '@fluent-ui/hooks'
 import {
   ChevronDownMed as ChevronDownMedIcon,
   ChevronRightMed as ChevronRightMedIcon
@@ -6,18 +9,30 @@ import {
 import Item from '../Item'
 import Transition from '../Transition'
 import Box from '../Box'
-import {
-  StyledItemGroupTitleWrapper,
-  StyledItemGroupTitlePrefixWrapper,
-  StyledItemGroupItemWrapper
-} from './ItemGroup.styled'
-import { ItemGroupProps, ItemGroupPropTypes } from './ItemGroup.type'
+
+import { styles } from './ItemGroup.styled'
+import { ItemGroupClassProps, ItemGroupProps, ItemGroupPropTypes } from './ItemGroup.type'
 import { NavigationContext } from '../Navigation/Navigation'
 import { ListContext } from '../List/List'
-import { useReveal, useHover, usePopper } from '@fluent-ui/hooks'
+
+import { Theme } from '../styles'
+
+export const name = 'ItemGroup'
+
+const useStyles = createUseStyles<Theme, ItemGroupClassProps>(styles, { name })
 
 const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, ItemGroupProps>(
-  ({ level = 1, children, title, prefix, shrink = 'expand', ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const {
+      as = 'div',
+      className: classNameProp,
+      level = 1,
+      children,
+      title,
+      prefix,
+      shrink = 'expand',
+      ...rest
+    } = props
     const {
       value: activeID,
       expanded,
@@ -101,7 +116,7 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
             if (child.type) {
               if ((child as any).type.displayName === 'FItem') {
                 return <RevealWrapper key={i}>{child}</RevealWrapper>
-              } else if ((child as any).type.displayName === 'FItemGroup') {
+              } else if ((child as any).type.displayName === `F${name}`) {
                 return React.cloneElement(child, { level: level + 1 })
               }
             }
@@ -111,7 +126,7 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
       : React.Children.map(
           children,
           (child: React.ReactElement): React.ReactElement => {
-            if (child.type && (child as any).type.displayName === 'FItemGroup') {
+            if (child.type && (child as any).type.displayName === `F${name}`) {
               return React.cloneElement(child, { level: level + 1 })
             }
             return child
@@ -120,48 +135,44 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
 
     const isFloat = shrink === 'float' || horizontal
 
+    const classes = useStyles(props)
+    const titleClassName = classNames(classes.titleRoot, {
+      [classes.titleActive]: isActiveGroup,
+      [classes.titleFloatAndHorizontal]: isFloat && horizontal
+    })
+    const titlePrefixClassName = classNames(classes.titlePrefix, {
+      [classes.titlePrefixNotFloatOpen]: !isFloat && clickStatus,
+      [classes.titlePrefixNotFloatClose]: !isFloat && !clickStatus,
+      [classes.titlePrefixHorizontal]: horizontal,
+      [classes.titlePrefixExpanded]: !horizontal && expanded,
+      [classes.titlePrefixAcrylic]: acrylic
+    })
+    const className = classNames(classes.root, {
+      [classes.level]: !isFloat,
+      [classes.float]: isFloat
+    })
     return (
-      <Box ref={ref} {...rest}>
+      <Box className={classNameProp} ref={ref} as={as} {...rest}>
         {shrink === 'expand' && !horizontal && (
           <>
-            <StyledItemGroupTitleWrapper
-              ref={referenceRef}
-              onClick={handleOpen}
-              active={isActiveGroup}
-            >
+            <div className={titleClassName} ref={referenceRef} onClick={handleOpen}>
               {titleElement}
-              <StyledItemGroupTitlePrefixWrapper
-                open={clickStatus}
-                expanded={expanded}
-                acrylic={acrylic}
-              >
+              <div className={titlePrefixClassName}>
                 <ChevronDownMedIcon />
-              </StyledItemGroupTitlePrefixWrapper>
-            </StyledItemGroupTitleWrapper>
+              </div>
+            </div>
 
             <Transition visible={clickStatus} type="collapse">
-              <StyledItemGroupItemWrapper level={level} acrylic={acrylic && horizontal}>
+              <Box className={className} acrylic={acrylic && horizontal}>
                 {childElements}
-              </StyledItemGroupItemWrapper>
+              </Box>
             </Transition>
           </>
         )}
         {isFloat && (
-          <StyledItemGroupTitleWrapper
-            ref={referenceRef}
-            active={isActiveGroup}
-            float={isFloat}
-            horizontal={horizontal}
-            {...bindHover}
-          >
+          <div className={titleClassName} ref={referenceRef} {...bindHover}>
             {titleElement}
-            <StyledItemGroupTitlePrefixWrapper
-              open={hoverStatus}
-              expanded={expanded}
-              acrylic={acrylic}
-              float={isFloat}
-              horizontal={horizontal}
-            >
+            <div className={titlePrefixClassName}>
               {horizontal ? (
                 level === 1 ? (
                   <ChevronDownMedIcon />
@@ -171,26 +182,25 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
               ) : (
                 <ChevronRightMedIcon />
               )}
-            </StyledItemGroupTitlePrefixWrapper>
+            </div>
             <Transition visible={hoverStatus} type="grow" wrapper={false}>
-              <StyledItemGroupItemWrapper
-                ref={popperRef}
-                level={level}
-                float={isFloat}
-                acrylic={acrylic && isFloat}
-              >
+              <Box className={className} ref={popperRef} acrylic={acrylic && isFloat}>
                 {childElements}
-              </StyledItemGroupItemWrapper>
+              </Box>
             </Transition>
-          </StyledItemGroupTitleWrapper>
+          </div>
         )}
       </Box>
     )
   }
 )
 
-ItemGroup.displayName = 'FItemGroup'
+ItemGroup.displayName = `F${name}`
 
 ItemGroup.propTypes = ItemGroupPropTypes
+
+ItemGroup.defaultProps = {
+  level: 1
+}
 
 export default ItemGroup
