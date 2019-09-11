@@ -1,86 +1,102 @@
-import * as CSS from 'csstype'
-import { styled, css, variant, th } from '../styles/styled'
-import Box from '../Box'
+import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
+import { ItemClassProps } from './Item.type'
 
-export const StyledItemWrapper = styled(Box)<{
-  reveal: boolean
-}>`
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  min-height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 20px;
-  transition: ${th.transition('navigation')};
-  color: inherit;
-  background-color: ${({ reveal }): CSS.ColorProperty =>
-    reveal ? th.color('standard.light2') : 'transparent'};
-  &:hover {
-    background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('standard.light1') : th.color('standard.transparent1')};
+const root = (theme: Theme): Style => ({
+  position: 'relative',
+  cursor: 'pointer',
+  textDecoration: 'none',
+  minHeight: 40,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '12px 20px',
+  transition: theme.transitions!.default,
+  color: 'inherit',
+  backgroundColor: 'transparent',
+  '&:hover': {
+    backgroundColor: theme.colors!.standard!.transparent1
+  },
+  '&:active': {
+    color: theme.colors!.black!.default,
+    backgroundColor: theme.colors!.standard!.transparent2
   }
-  &:active {
-    color: ${th.color('black.default')};
-    background-color: ${({ reveal }): CSS.ColorProperty =>
-      reveal ? th.color('standard.dark1') : th.color('standard.transparent2')};
+})
+const reveal = (theme: Theme): Style => ({
+  backgroundColor: theme.colors!.standard!.light2,
+  '&:hover': {
+    backgroundColor: theme.colors!.standard!.light1
+  },
+  '&:active': {
+    backgroundColor: theme.colors!.standard!.dark1
   }
-`
-export const StyledItemActiveBar = styled.div<{
-  active: boolean
-  horizontal: boolean
-}>`
-  position: absolute;
-  background-color: ${th.color('primary.default')};
-  transition: ${th.transition('navigation')};
-  ${variant({
-    prop: 'horizontal',
-    variants: {
-      true: css`
-        width: 80%;
-        height: 4px;
-        left: 10%;
-        bottom: 0;
-      `,
-      false: css`
-        width: 6px;
-        height: 24px;
-        left: 0;
-        top: 50%;
-        margin-top: -12px;
-      `
-    }
-  })}
-  ${variant({
-    prop: 'active',
-    variants: {
-      true: css`
-        transform: scale3d(1, 1, 1);
-      `,
-      false: css`
-        transform: scale3d(0, 0, 0);
-      `
-    }
-  })}
-`
-export const StyledItemPrefixWrapper = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: ${th.transition('navigation')};
-`
-export const StyledItemTextWrapper = styled.div<{ expanded: boolean; hasPrefix: boolean }>`
-  width: ${({ expanded }): string => (expanded ? 'auto' : '0px')};
-  opacity: ${({ expanded }): number => (expanded ? 1 : 0)};
-  padding-left: ${({ children, expanded, hasPrefix }): string =>
-    children ? (expanded ? (hasPrefix ? '12px' : '0px') : '0px') : '0px'};
-  flex: 1;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: ${th.transition('navigation')};
-  font-size: 14px;
-`
+})
+
+const activeBar = (theme: Theme): Style => ({
+  position: 'absolute',
+  backgroundColor: theme.colors!.primary!.default,
+  transition: theme.transitions!.default,
+  // horizontal false
+  width: 6,
+  height: 24,
+  left: 0,
+  top: '50%',
+  marginTop: -12,
+  // active false
+  transform: 'scale3d(0, 0, 0)'
+})
+const activeBarHorizontal: Style = {
+  // horizontal false
+  width: '80%',
+  height: 4,
+  left: '10%',
+  bottom: 0
+}
+const activeBarActive: Style = {
+  transform: 'scale3d(1, 1, 1)'
+}
+
+const prefixRoot = (theme: Theme): Style => ({
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  transition: theme.transitions!.default
+})
+
+const text = (theme: Theme): Style => ({
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  fontSize: 14,
+  transition: theme.transitions!.default,
+  // expanded false
+  width: 0,
+  opacity: 0,
+  paddingLeft: 0
+})
+const textExpanded: Style = {
+  width: 'auto',
+  opacity: 1
+}
+const textNoChildren: Style = {
+  paddingLeft: '0 !important'
+}
+const textHasPrefix: Style = {
+  paddingLeft: 12
+}
+
+export const styles = (theme: Theme): Styles<ItemClassProps> => ({
+  root: root(theme),
+  reveal: reveal(theme),
+  activeBar: activeBar(theme),
+  activeBarHorizontal,
+  activeBarActive,
+  prefixRoot: prefixRoot(theme),
+  text: text(theme),
+  textExpanded,
+  textNoChildren,
+  textHasPrefix
+})

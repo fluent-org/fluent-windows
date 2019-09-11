@@ -1,18 +1,23 @@
 import * as React from 'react'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import Box from '../Box'
+import { styles } from './Item.styled'
+import { ItemClassProps, ItemProps, ItemPropTypes } from './Item.type'
+import { Theme } from '../styles'
+
 import { NavigationContext } from '../Navigation/Navigation'
+import { NavigationID } from '../Navigation/Navigation.type'
 import { ListContext } from '../List/List'
 import { CommandContext } from '../Command/Command'
-import {
-  StyledItemWrapper,
-  StyledItemActiveBar,
-  StyledItemPrefixWrapper,
-  StyledItemTextWrapper
-} from './Item.styled'
-import { NavigationID } from '../Navigation/Navigation.type'
-import { ItemProps, ItemPropTypes } from './Item.type'
+
+export const name = 'Item'
+
+const useStyles = createUseStyles<Theme, ItemClassProps>(styles, { name })
 
 const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
-  ({ value, prefix, active, children, onClick, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const { as: Component = 'div', value, prefix, active, children, onClick, ...rest } = props
     // handle active item
     const {
       value: activeID,
@@ -42,14 +47,26 @@ const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
         }
       }
     }, [activeID, value])
+
+    const classes = useStyles(props)
+    const className = classNames(classes.root, {
+      [classes.reveal]: reveal
+    })
+    const activeBarClassName = classNames(classes.activeBar, {
+      [classes.activeBarHorizontal]: horizontal,
+      [classes.activeBarActive]: active || _active
+    })
+    const textClassName = classNames(classes.text, {
+      [classes.textExpanded]: expanded,
+      [classes.textNoChildren]: !children,
+      [classes.textHasPrefix]: !!prefix && expanded
+    })
     return (
-      <StyledItemWrapper ref={ref} onClick={handleItemClick} reveal={reveal} {...rest}>
-        {!!value && <StyledItemActiveBar active={active || _active} horizontal={horizontal} />}
-        <StyledItemPrefixWrapper>{prefix}</StyledItemPrefixWrapper>
-        <StyledItemTextWrapper expanded={expanded} hasPrefix={!!prefix}>
-          {children}
-        </StyledItemTextWrapper>
-      </StyledItemWrapper>
+      <Box className={className} ref={ref} onClick={handleItemClick} {...rest}>
+        {!!value && <div className={activeBarClassName} />}
+        {!!prefix && <div className={classes.prefixRoot}>{prefix}</div>}
+        {!!children && <div className={textClassName}>{children}</div>}
+      </Box>
     )
   }
 )

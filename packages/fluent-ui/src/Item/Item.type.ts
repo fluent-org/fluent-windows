@@ -4,6 +4,18 @@ import { StyledProps } from '..'
 import { NavigationID } from '../Navigation'
 import { BoxProps } from '../Box'
 
+export type ItemClassProps =
+  | 'root'
+  | 'reveal'
+  | 'activeBar'
+  | 'activeBarHorizontal'
+  | 'activeBarActive'
+  | 'prefixRoot'
+  | 'text'
+  | 'textExpanded'
+  | 'textNoChildren'
+  | 'textHasPrefix'
+
 export interface ItemProps extends Omit<BoxProps, 'prefix'>, Omit<StyledProps, 'as'> {
   value?: NavigationID
   prefix?: React.ReactElement

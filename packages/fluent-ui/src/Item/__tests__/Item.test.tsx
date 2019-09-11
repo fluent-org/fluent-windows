@@ -1,29 +1,35 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
 import { Connected } from '@fluent-ui/icons'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Item } from '../..'
+import Item, { name } from '../Item'
+import { styles } from '../Item.styled'
+import { ItemClassProps } from '../Item.type'
+
+const classes = getClasses<ItemClassProps>(styles, name)
 
 describe('Item', (): void => {
-  const theme = {}
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Item prefix={<Connected />}>Option</Item>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  const testText = 'Hello World'
+
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLDivElement>()
+    const { container } = render(<Item ref={ref}>{testText}</Item>)
+    const { current: element } = ref
+    expect(element).toEqual(container.firstChild)
   })
 
-  test('without children', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Item prefix={<Connected />} />
-      </ThemeProvider>
+  test('should be support prefix', (): void => {
+    const { container, getByTestId } = render(
+      <Item prefix={<Connected data-testid="icon" />}>{testText}</Item>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(getByTestId('icon')).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  test('should be support prefix without children', (): void => {
+    const { container, getByTestId } = render(<Item prefix={<Connected data-testid="icon" />} />)
+    expect(getByTestId('icon')).toBeInTheDocument()
+    expect(container).toMatchSnapshot()
   })
 })
