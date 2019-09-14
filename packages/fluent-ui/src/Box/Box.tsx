@@ -1,6 +1,6 @@
 import * as React from 'react'
 import classNames from 'classnames'
-import { createUseStyles } from '@fluent-ui/styles'
+import { createUseStyles, withTheme } from '@fluent-ui/styles'
 import propTypes from '@styled-system/prop-types'
 import { styles } from './Box.styled'
 import { BoxClassProps, BoxProps, BoxPropTypes } from './Box.type'
@@ -34,6 +34,7 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
     )
 
     const otherProps = omit(rest, [
+      'theme',
       'minHeight',
       'minWidth',
       'maxWidth',
@@ -99,4 +100,5 @@ Box.propTypes = {
   ...BoxPropTypes
 }
 
-export default Box
+// @ts-ignore
+export default withTheme(Box)

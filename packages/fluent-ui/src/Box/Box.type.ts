@@ -13,6 +13,7 @@ import {
   GridProps
 } from 'styled-system'
 import { StandardProps } from '..'
+import { Theme } from '../styles/createTheme'
 
 export type BoxClassProps = 'root' | 'system' | 'acrylic'
 
@@ -28,12 +29,14 @@ export interface BoxProps
     FlexboxProps,
     GridProps,
     StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'color'> {
+  theme?: Theme
   acrylic?: boolean
   children?: React.ReactNode
   as?: React.ElementType
 }
 
 export const BoxPropTypes = {
+  theme: PropTypes.object,
   acrylic: PropTypes.bool,
   children: PropTypes.node,
   as: PropTypes.oneOf<

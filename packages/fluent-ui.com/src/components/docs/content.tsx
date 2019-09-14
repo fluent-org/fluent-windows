@@ -87,17 +87,17 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
       <Box
         id="contentRoot"
         flex={1}
-        transition="all 250ms cubic-bezier(0.4,0,0.2,1) 0ms"
         boxShadow="2"
         position="relative"
         zIndex={2}
         style={{
           overflowX: 'hidden',
-          overflowY: 'auto'
+          overflowY: 'auto',
+          transition: 'all 250ms cubic-bezier(0.4,0,0.2,1) 0ms'
         }}
       >
         <Header />
-        <Box padding="4" minHeight="100%" backgroundColor="white.default">
+        <Box padding="4" minHeight="100%" backgroundColor="#fff">
           <Markdown
             // @ts-ignore
             options={{
