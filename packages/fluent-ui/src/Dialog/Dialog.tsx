@@ -1,5 +1,9 @@
 import * as React from 'react'
-import { StyledDialogMask, StyledDialog, StyledDialogContent } from './Dialog.styled'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Dialog.styled'
+import { Theme } from '../styles'
+
 import Portal from '../Portal'
 import Transition from '../Transition'
 import Title from './components/Title'
@@ -11,15 +15,29 @@ import {
   DialogChild,
   DialogContainer,
   DialogContextType,
-  DialogPropTypes
+  DialogPropTypes,
+  DialogClassProps
 } from './Dialog.type'
+
+export const name = 'Dialog'
+
+const useStyles = createUseStyles<Theme, DialogClassProps>(styles, { name })
 
 export const DialogContext = React.createContext<DialogContextType>({
   onChange: (): void => {}
 })
 
 const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogProps>(
-  ({ children, visible, onChange, ...rest }, ref): React.ReactElement | null => {
+  (props, ref): React.ReactElement | null => {
+    const {
+      as: Component = 'div',
+      className: classNameProp,
+      children,
+      visible,
+      onChange,
+      ...rest
+    } = props
+
     function handleClose(): void {
       onChange && onChange(false)
     }
@@ -32,9 +50,9 @@ const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogPro
     React.Children.forEach(
       children,
       (child: DialogChild): void => {
-        if (child.type.displayName! === 'FDialogTitle') {
+        if (child.type.displayName! === `F${name}Title`) {
           container.title = child
-        } else if (child.type.displayName === 'FDialogActions') {
+        } else if (child.type.displayName === `F${name}Actions`) {
           container.actions = child
         } else {
           container.content.push(child)
@@ -46,16 +64,20 @@ const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogPro
       onChange: onChange as (visible: boolean) => void
     }
 
+    const classes = useStyles(props)
+    const className = classNames(classes.root, classNameProp)
+
     return (
       <>
         <Portal>
           <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-            <StyledDialogMask onClick={handleClose} />
+            <div className={classes.mask} onClick={handleClose} />
           </Transition>
         </Portal>
         <Portal>
           <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-            <StyledDialog
+            <Component
+              className={className}
               ref={ref}
               boxShadow="5"
               width={{ xs: '288px', sm: 'auto' }}
@@ -65,10 +87,10 @@ const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogPro
             >
               <DialogContext.Provider value={contextValue}>
                 {!!container.title && container.title}
-                <StyledDialogContent>{container.content}</StyledDialogContent>
+                <div className={classes.content}>{container.content}</div>
                 {!!container.actions && container.actions}
               </DialogContext.Provider>
-            </StyledDialog>
+            </Component>
           </Transition>
         </Portal>
       </>
@@ -92,7 +114,7 @@ Object.defineProperty(Dialog, 'Actions', {
   }
 })
 
-Dialog.displayName = 'FDialog'
+Dialog.displayName = `F${name}`
 
 Dialog.propTypes = DialogPropTypes
 

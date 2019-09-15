@@ -1,9 +1,11 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { StandardProps } from '..'
+import { StandardProps, StyledProps } from '..'
 import Title from './components/Title'
 import Content from './components/Content'
 import Actions from './components/Actions'
+
+export type DialogClassProps = 'root' | 'title' | 'content' | 'actions' | 'mask'
 
 export type DialogChild =
   | React.ReactComponentElement<typeof Title>
@@ -18,7 +20,8 @@ export interface DialogContainer {
 }
 
 export interface DialogProps
-  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'onChange'> {
+  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'onChange'>,
+    StyledProps {
   children: DialogChild[] | DialogChild
   visible: boolean
   onChange?: (visible: boolean) => void

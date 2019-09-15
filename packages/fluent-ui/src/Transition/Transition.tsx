@@ -1,9 +1,9 @@
 import * as React from 'react'
+import classNames from 'classnames'
 import { CSSTransition } from 'react-transition-group'
 import { styles } from './Transition.styled'
 import { TransitionClassProps, TransitionProps, TransitionPropTypes } from './Transition.type'
 import { createUseStyles } from '@fluent-ui/styles'
-import classNames from 'classnames'
 
 export const name = 'Transition'
 
@@ -42,14 +42,14 @@ const Transition: React.FC<TransitionProps> = React.forwardRef<HTMLDivElement, T
     return (
       <CSSTransition in={visible} appear={appear} timeout={timeout} classNames={type} {...rest}>
         {wrapper ? (
-          <div className={className} {...props} ref={ref}>
+          <div className={className} {...rest} ref={ref}>
             <div ref={wrapperRef}>{children}</div>
           </div>
         ) : (
           React.cloneElement(children, {
-            ...props,
+            ...rest,
             // @ts-ignore
-            className: [children.props.className, className]
+            className: classNames(children.props.className, className)
           })
         )}
       </CSSTransition>

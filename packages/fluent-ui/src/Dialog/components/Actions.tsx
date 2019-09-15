@@ -1,10 +1,19 @@
 import * as React from 'react'
-import { StyledDialogActions } from '../Dialog.styled'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from '../Dialog.styled'
+import { Theme } from '../../styles'
+import { DialogClassProps } from '../Dialog.type'
+import Box from '../../Box'
+
+export const name = 'DialogActions'
+
+const useStyles = createUseStyles<Theme, DialogClassProps>(styles, { name })
 
 const Actions: React.FC = (props): React.ReactElement => {
-  return <StyledDialogActions {...props} />
+  const classes = useStyles(props)
+  return <Box className={classes.actions} {...props} />
 }
 
-Actions.displayName = 'FDialogActions'
+Actions.displayName = `F${name}`
 
 export default Actions

@@ -1,43 +1,52 @@
-import { styled, th } from '../styles/styled'
-import Box from '../Box'
+import { Theme } from '../styles'
+import { Style, Styles } from 'jss'
+import { DialogClassProps } from './Dialog.type'
 
-export const StyledDialogMask = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  background-color: ${th.color('standard.transparent2')};
-`
+const root = (theme: Theme): Style => ({
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  zIndex: 1001,
+  transform: 'translate(-50%, -50%)',
+  backgroundColor: theme.colors!.white!.default,
+  borderRadius: 2,
+  padding: '16px 24px 24px'
+})
 
-export const StyledDialog = styled(Box)`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 1001;
-  transform: translate(-50%, -50%);
-  background-color: ${th.color('white.default')};
-  border-radius: 2px;
-  padding: 16px 24px 24px;
-`
-
-export const StyledDialogTitle = styled(Box)`
-  display: flex;
-  justify-content: space-between;
-`
-export const StyledDialogContent = styled(Box)`
-  margin-top: 16px;
-  min-height: 40px;
-`
-export const StyledDialogActions = styled(Box)`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 16px;
-  > * {
-    margin: 0 4px;
-    &:last-child {
-      margin-right: 0;
+const title: Style = {
+  display: 'flex',
+  justifyContent: 'space-between'
+}
+const content: Style = {
+  marginTop: 16,
+  minHeight: 40
+}
+const actions: Style = {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  marginTop: 16,
+  '> *': {
+    margin: '0 4px',
+    '&:last-child': {
+      marginRight: 0
     }
   }
-`
+}
+
+const mask = (theme: Theme): Style => ({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  zIndex: 1000,
+  width: '100%',
+  height: '100%',
+  backgroundColor: theme.colors!.standard!.transparent2
+})
+
+export const styles = (theme: Theme): Styles<DialogClassProps> => ({
+  root: root(theme),
+  title,
+  content,
+  actions,
+  mask: mask(theme)
+})
