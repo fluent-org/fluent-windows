@@ -2,6 +2,8 @@ import * as PropTypes from 'prop-types'
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
 import { FlattenSimpleInterpolation } from '../styles/styled'
 
+export type TransitionClassProps = 'root' | 'fade' | 'zoom' | 'slide' | 'collapse' | 'grow'
+
 export type TransitionType = 'fade' | 'zoom' | 'slide' | 'collapse' | 'grow' | 'custom'
 
 export interface TransitionProps extends Omit<CSSTransitionProps, 'in'> {
