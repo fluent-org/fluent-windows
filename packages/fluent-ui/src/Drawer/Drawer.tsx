@@ -1,20 +1,41 @@
 import * as React from 'react'
+import { createUseStyles } from '@fluent-ui/styles'
+import { createSwipe, styles } from './Drawer.styled'
+import { DrawerClassProps, DrawerProps, DrawerPropTypes } from './Drawer.type'
+import { Theme } from '../styles'
+
 import Portal from '../Portal'
 import Transition from '../Transition'
-import { StyledDrawer, StyledMask, createSwipe } from './Drawer.styled'
-import { DrawerProps, DrawerPropTypes } from './Drawer.type'
+import classNames from 'classnames'
+import { useCallback } from 'react'
+
+export const name = 'Drawer'
+
+const useStyles = createUseStyles<Theme, DrawerClassProps>(styles, { name })
 
 const Drawer: React.FC<DrawerProps> = React.forwardRef<HTMLDivElement, DrawerProps>(
-  ({ children, visible, onChange, anchor = 'left', ...rest }, ref): React.ReactElement => {
-    function handleClose(): void {
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'div',
+      className: classNameProp,
+      children,
+      visible,
+      onChange,
+      anchor = 'left',
+      ...rest
+    } = props
+    const classes = useStyles(props)
+    const className = classNames(classes.root, classNameProp)
+
+    const handleClose = useCallback((): void => {
       onChange && onChange(false)
-    }
+    }, [onChange])
 
     return (
       <>
         <Portal>
           <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-            <StyledMask onClick={handleClose} />
+            <div className={classes.mask} onClick={handleClose} />
           </Transition>
         </Portal>
         <Portal>
@@ -26,9 +47,9 @@ const Drawer: React.FC<DrawerProps> = React.forwardRef<HTMLDivElement, DrawerPro
             mountOnEnter
             unmountOnExit
           >
-            <StyledDrawer anchor={anchor} ref={ref} {...rest}>
-              {React.cloneElement(children)}
-            </StyledDrawer>
+            <Component className={className} ref={ref} {...rest}>
+              {children}
+            </Component>
           </Transition>
         </Portal>
       </>
@@ -36,8 +57,12 @@ const Drawer: React.FC<DrawerProps> = React.forwardRef<HTMLDivElement, DrawerPro
   }
 )
 
-Drawer.displayName = 'FDrawer'
+Drawer.displayName = `F${name}`
 
 Drawer.propTypes = DrawerPropTypes
+
+Drawer.defaultProps = {
+  anchor: 'left'
+}
 
 export default Drawer

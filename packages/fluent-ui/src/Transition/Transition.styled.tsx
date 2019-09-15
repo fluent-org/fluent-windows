@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Styles, Style } from 'jss'
 import { TransitionClassProps, TransitionProps } from './Transition.type'
 
@@ -99,8 +98,8 @@ const grow: Style = {
   }
 }
 
-const root = ({ type: _type, visible, wrapperHeight, custom }: TransitionProps) => {
-  switch (_type) {
+const root = ({ type, visible, wrapperHeight, custom }: TransitionProps): Style => {
+  switch (type) {
     case 'fade':
       return {
         transition: createBaseTransition(['opacity', 'visibility']),
@@ -169,41 +168,6 @@ const root = ({ type: _type, visible, wrapperHeight, custom }: TransitionProps) 
       return custom
   }
 }
-
-// export const StyledContainer = styled(
-//   ({
-//     children,
-//     forwardRef,
-//     wrapper,
-//     setWrapperHeight,
-//     ...props
-//   }: StyledContainerProps): React.ReactElement => {
-//     const wrapperRef = React.useRef<HTMLDivElement>(null)
-//     const wrapperHeight = (wrapperRef && wrapperRef.current && wrapperRef.current.clientHeight) || 0
-//     React.useEffect((): void => {
-//       setWrapperHeight(wrapperHeight)
-//     }, [setWrapperHeight, wrapperHeight])
-//     return wrapper ? (
-//       <Box {...props} ref={forwardRef}>
-//         <Box ref={wrapperRef}>{children}</Box>
-//       </Box>
-//     ) : (
-//       React.cloneElement(children, {
-//         ...props,
-//         // @ts-ignore
-//         className: [children.props.className, props.className]
-//       })
-//     )
-//   }
-// )<StyledContainerProps>`
-//   ${type}
-//
-//   ${fade}
-//   ${zoom}
-//   ${slide}
-//   ${collapse}
-//   ${grow}
-// `
 
 export const styles: Styles<TransitionClassProps> = {
   root,

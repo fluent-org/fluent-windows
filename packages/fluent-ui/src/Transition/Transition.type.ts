@@ -1,4 +1,5 @@
 import * as PropTypes from 'prop-types'
+import { Style } from 'jss'
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
 import { FlattenSimpleInterpolation } from '../styles/styled'
 
@@ -11,7 +12,7 @@ export interface TransitionProps extends Omit<CSSTransitionProps, 'in'> {
   type?: TransitionType
   visible?: boolean
   wrapper?: boolean
-  custom?: FlattenSimpleInterpolation
+  custom?: Style
 }
 
 export interface StyledContainerProps {

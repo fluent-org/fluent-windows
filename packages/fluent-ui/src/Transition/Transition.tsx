@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group'
 import { styles } from './Transition.styled'
 import { TransitionClassProps, TransitionProps, TransitionPropTypes } from './Transition.type'
 import { createUseStyles } from '@fluent-ui/styles'
+import { omit } from '../utils'
 
 export const name = 'Transition'
 
@@ -20,6 +21,8 @@ const Transition: React.FC<TransitionProps> = React.forwardRef<HTMLDivElement, T
       children,
       ...rest
     } = props
+
+    const otherProps = omit(rest, ['custom'])
 
     const [wrapperHeight, setWrapperHeight] = React.useState(0)
     const wrapperRef = React.useRef<HTMLDivElement>(null)
@@ -40,15 +43,20 @@ const Transition: React.FC<TransitionProps> = React.forwardRef<HTMLDivElement, T
       [classes.grow]: type === 'grow'
     })
     return (
-      <CSSTransition in={visible} appear={appear} timeout={timeout} classNames={type} {...rest}>
+      <CSSTransition
+        in={visible}
+        appear={appear}
+        timeout={timeout}
+        classNames={type}
+        {...otherProps}
+      >
         {wrapper ? (
-          <div className={className} {...rest} ref={ref}>
+          <div className={className} {...otherProps} ref={ref}>
             <div ref={wrapperRef}>{children}</div>
           </div>
         ) : (
           React.cloneElement(children, {
-            ...rest,
-            // @ts-ignore
+            ...otherProps,
             className: classNames(children.props.className, className)
           })
         )}

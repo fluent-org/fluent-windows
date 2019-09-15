@@ -1,11 +1,14 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { StandardProps } from '..'
+import { StandardProps, StyledProps } from '..'
+
+export type DrawerClassProps = 'root' | 'mask'
 
 type Anchor = 'left' | 'top' | 'right' | 'bottom'
 
 export interface DrawerProps
-  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'onChange'> {
+  extends StandardProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement, 'onChange'>,
+    StyledProps {
   children: React.ReactElement
   visible: boolean
   onChange?: (visible: boolean) => void
