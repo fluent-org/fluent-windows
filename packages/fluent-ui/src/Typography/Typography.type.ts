@@ -1,6 +1,9 @@
 import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import * as CSS from 'csstype'
-import { StandardProps, StyledProps } from '..'
+import { BoxProps, BoxPropTypes } from '../Box'
+
+export type TypographyClassProps = 'root' | 'variants' | 'gutterTop' | 'gutterBottom' | 'noWrap'
 
 export interface VariantMapping {
   h1: keyof JSX.IntrinsicElements
@@ -27,13 +30,32 @@ export type Variant =
   | 'body1'
   | 'body2'
 
-export interface TypographyProps extends StandardProps, StyledProps {
-  children: React.ReactChild
+export interface TypographyProps extends Omit<BoxProps, 'children'> {
+  children: React.ReactNode
   variant?: Variant
   variantMapping?: VariantMapping
   gutterTop?: boolean
   gutterBottom?: boolean
   noWrap?: boolean
-  color?: CSS.Color
-  backgroundColor?: CSS.Color
+}
+
+export const TypographyPropTypes = {
+  children: PropTypes.node.isRequired,
+  variant: PropTypes.oneOf<Variant>([
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'subtitle1',
+    'subtitle2',
+    'body1',
+    'body2'
+  ]),
+  variantMapping: PropTypes.any,
+  gutterTop: PropTypes.bool,
+  gutterBottom: PropTypes.bool,
+  noWrap: PropTypes.bool,
+  ...BoxPropTypes
 }

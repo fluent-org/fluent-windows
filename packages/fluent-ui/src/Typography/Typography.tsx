@@ -1,9 +1,18 @@
 import * as React from 'react'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Typography.styled'
+import { Theme } from '../styles'
+import {
+  TypographyClassProps,
+  TypographyProps,
+  TypographyPropTypes,
+  VariantMapping
+} from './Typography.type'
 
-import { TypographyProps, VariantMapping } from './Typography.type'
-import { StyledTypography } from './Typography.styled'
+import Box from '../Box'
+import classNames from 'classnames'
 
-const defaultVariantMapping: VariantMapping = {
+export const defaultVariantMapping: VariantMapping = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
@@ -16,32 +25,50 @@ const defaultVariantMapping: VariantMapping = {
   body2: 'p'
 }
 
-const Typography = React.forwardRef<HTMLDivElement, TypographyProps>(
-  (
-    {
+export const name = 'Typography'
+
+const useStyles = createUseStyles<Theme, TypographyClassProps>(styles, { name })
+
+const Typography: React.FC<TypographyProps> = React.forwardRef<HTMLDivElement, TypographyProps>(
+  (props, ref): React.ReactElement => {
+    const {
       as,
+      className: classNameProp,
       variant = 'body1',
       variantMapping = defaultVariantMapping,
+      gutterTop = false,
       gutterBottom = false,
       noWrap = false,
       ...rest
-    }: TypographyProps,
-    ref
-  ): React.ReactElement => {
-    const component = as || variantMapping[variant] || defaultVariantMapping[variant] || 'span'
-    return (
-      <StyledTypography
-        ref={ref}
-        as={component}
-        variant={variant}
-        gutterBottom={gutterBottom}
-        noWrap={noWrap}
-        {...rest}
-      />
+    } = props
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      classes.variants,
+      {
+        [classes.gutterTop]: gutterTop,
+        [classes.gutterBottom]: gutterBottom,
+        [classes.noWrap]: noWrap
+      },
+      classNameProp
     )
+
+    const component = as || variantMapping[variant] || defaultVariantMapping[variant] || 'span'
+
+    return <Box className={className} ref={ref} as={component} {...rest} />
   }
 )
 
-Typography.displayName = 'FTypography'
+Typography.displayName = `F${name}`
+
+Typography.propTypes = TypographyPropTypes
+
+Typography.defaultProps = {
+  variant: 'body1',
+  variantMapping: defaultVariantMapping,
+  gutterTop: false,
+  gutterBottom: false,
+  noWrap: false
+}
 
 export default Typography

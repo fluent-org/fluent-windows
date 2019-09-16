@@ -1,30 +1,33 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Typography } from '../..'
-import { Variant } from '../Typography.type'
+import Typography, { name, defaultVariantMapping } from '../Typography'
+import { styles } from '../Typography.styled'
+import { TypographyClassProps, Variant } from '../Typography.type'
+
+const classes = getClasses<TypographyClassProps>(styles, name)
 
 describe('Typography', (): void => {
-  const theme = {}
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Typography>basic</Typography>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  const testText = 'Hello World'
+
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLDivElement>()
+    const { container } = render(<Typography ref={ref}>{testText}</Typography>)
+    const { current: element } = ref
+    expect(element).toEqual(container.firstChild)
   })
 
-  test('as', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Typography as="span">as span</Typography>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should render children', (): void => {
+    const { container, getByText, sheets } = render(<Typography>{testText}</Typography>)
+    expect(getByText(testText)).toBeInTheDocument()
+    expect(container.firstChild).toHaveClass(classes.root)
+    expect(sheets.toString()).toMatchSnapshot()
+  })
+
+  test('should be support as', (): void => {
+    const { getByText } = render(<Typography as="span">{testText}</Typography>)
+    expect(getByText(testText).tagName).toStrictEqual('SPAN')
   })
 
   test('variant', (): void => {
@@ -42,46 +45,29 @@ describe('Typography', (): void => {
     ]
     variants.forEach(
       (variant): void => {
-        const component = renderer.create(
-          <ThemeProvider theme={theme}>
-            <Typography variant={variant}>as span</Typography>
-          </ThemeProvider>
+        const { getByText } = render(<Typography variant={variant}>{variant}</Typography>)
+        expect(getByText(variant).tagName).toStrictEqual(
+          defaultVariantMapping[variant].toUpperCase()
         )
-        const tree = component.toJSON()
-        expect(tree).toMatchSnapshot()
       }
     )
   })
 
-  test('gutterTop', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Typography gutterTop>as span</Typography>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toHaveStyleRule('margin-top', '0.65em')
+  test('should be support gutterTop', (): void => {
+    const { container, sheets } = render(<Typography gutterTop>{testText}</Typography>)
+    expect(container.firstChild).toHaveClass(classes.gutterTop)
+    expect(sheets.toString()).toMatchSnapshot()
   })
 
-  test('gutterBottom', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Typography gutterBottom>as span</Typography>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toHaveStyleRule('margin-bottom', '0.35em')
+  test('should be support gutterBottom', (): void => {
+    const { container, sheets } = render(<Typography gutterBottom>{testText}</Typography>)
+    expect(container.firstChild).toHaveClass(classes.gutterBottom)
+    expect(sheets.toString()).toMatchSnapshot()
   })
 
-  test('noWrap', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Typography noWrap>as span</Typography>
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toHaveStyleRule('overflow', 'hidden')
-    expect(tree).toHaveStyleRule('white-space', 'nowrap')
-    expect(tree).toHaveStyleRule('text-overflow', 'ellipsis')
+  test('should be support noWrap', (): void => {
+    const { container, sheets } = render(<Typography noWrap>{testText}</Typography>)
+    expect(container.firstChild).toHaveClass(classes.noWrap)
+    expect(sheets.toString()).toMatchSnapshot()
   })
 })

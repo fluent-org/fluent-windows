@@ -1,55 +1,29 @@
-import { styled, css, variant, color, backgroundColor } from '../styles/styled'
-import { TypographyProps } from './Typography.type'
+import { Styles, Style } from 'jss'
+import { TypographyClassProps, TypographyProps } from './Typography.type'
+import { Theme } from '../styles'
 
-const base = css`
-  margin: 0;
-  ${color}
-  ${backgroundColor}
-`
+const root: Style = {
+  margin: 0
+}
+const variants = (theme: Theme): Style => ({ variant = 'body1' }: TypographyProps): Style => {
+  return theme.typographies!.variants![variant]
+}
+const gutterTop: Style = {
+  marginTop: '0.65em'
+}
+const gutterBottom: Style = {
+  marginBottom: '0.35em'
+}
+const noWrap: Style = {
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  textOverflow: 'ellipsis'
+}
 
-const variants = variant({
-  key: 'typographies.variants',
-  prop: 'variant'
+export const styles = (theme: Theme): Styles<TypographyClassProps> => ({
+  root,
+  variants: variants(theme),
+  gutterTop,
+  gutterBottom,
+  noWrap
 })
-
-const gutterTop = variant({
-  prop: 'gutterTop',
-  default: false,
-  variants: {
-    true: css`
-      margin-top: 0.65em;
-    `,
-    false: css``
-  }
-})
-const gutterBottom = variant({
-  prop: 'gutterBottom',
-  default: false,
-  variants: {
-    true: css`
-      margin-bottom: 0.35em;
-    `,
-    false: css``
-  }
-})
-
-const noWrap = variant({
-  prop: 'noWrap',
-  default: false,
-  variants: {
-    true: css`
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    `,
-    false: css``
-  }
-})
-
-export const StyledTypography = styled.div<TypographyProps>`
-  ${base}
-  ${variants}
-  ${gutterTop}
-  ${gutterBottom}
-  ${noWrap}
-`

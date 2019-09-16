@@ -1,6 +1,6 @@
 import * as CSS from 'csstype'
+import { Style } from 'jss'
 import { deepMerge } from '../utils'
-import { css, FlattenSimpleInterpolation } from './styled'
 
 interface Variants {
   h1?: any
@@ -43,16 +43,12 @@ export const defaultFontWeightBold = 700
 
 const coef = defaultFontSize / 14
 const pxToRem = (size: number): string => `${(size / defaultHtmlFontSize) * coef}rem`
-const buildVariant = (
-  fontWeight: number,
-  size: number,
-  lineHeight: number
-): FlattenSimpleInterpolation => css`
-  font-family: ${defaultFontFamily};
-  font-weight: ${fontWeight};
-  font-size: ${pxToRem(size)};
-  line-height: ${lineHeight};
-`
+const buildVariant = (fontWeight: number, size: number, lineHeight: number): Style => ({
+  fontFamily: defaultFontFamily,
+  fontWeight: fontWeight,
+  fontSize: pxToRem(size),
+  lineHeight: lineHeight
+})
 
 export const defaultVariants: Variants = {
   h1: buildVariant(defaultFontWeightLight, 96, 1),
