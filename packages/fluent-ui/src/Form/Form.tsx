@@ -1,12 +1,36 @@
 import * as React from 'react'
-import { StyledFormWrapper, StyledFormTable } from './Form.styled'
-import { FormProps, FormType, FormValue, FormState, FormPropTypes } from './Form.type'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Form.styled'
+import {
+  FormProps,
+  FormType,
+  FormValue,
+  FormState,
+  FormPropTypes,
+  FormClassProps
+} from './Form.type'
+
 import Field from './components/Field'
 import { FormContext } from './Form.context'
 import { createValidator } from './Form.validator'
+import classNames from 'classnames'
+
+export const name = 'Form'
+
+const useStyles = createUseStyles<FormClassProps>(styles, { name })
 
 const Form: React.FC<FormProps> = React.forwardRef<HTMLFormElement, FormProps>(
-  ({ children, prefix, suffix, initialState, onSubmit, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const {
+      className: classNameProp,
+      children,
+      prefix,
+      suffix,
+      initialState,
+      onSubmit,
+      ...rest
+    } = props
+
     const childrenArray = React.useMemo(
       (): React.ReactElement[] =>
         React.Children.toArray(children)
@@ -86,10 +110,13 @@ const Form: React.FC<FormProps> = React.forwardRef<HTMLFormElement, FormProps>(
       [state, onSubmit, descriptor]
     )
 
+    const classes = useStyles(props)
+    const className = classNames(classes.root, classNameProp)
+
     return (
-      <StyledFormWrapper ref={ref} onSubmit={handleSubmit} {...rest}>
+      <form className={className} ref={ref} onSubmit={handleSubmit} {...rest}>
         <FormContext.Provider value={contextValue}>
-          <StyledFormTable>
+          <table className={classes.table}>
             <caption>{prefix}</caption>
             <tbody>
               {React.Children.map(
@@ -100,9 +127,9 @@ const Form: React.FC<FormProps> = React.forwardRef<HTMLFormElement, FormProps>(
                 <td colSpan={2}>{suffix}</td>
               </tr>
             </tbody>
-          </StyledFormTable>
+          </table>
         </FormContext.Provider>
-      </StyledFormWrapper>
+      </form>
     )
   }
 )

@@ -3,6 +3,9 @@ import * as PropTypes from 'prop-types'
 import Field from './components/Field'
 import { StandardProps } from '..'
 
+export type FormClassProps = 'root' | 'table'
+export type FormFieldClassProps = 'label' | 'labelRequired'
+
 export interface FormValue {
   [K: string]: any
 }

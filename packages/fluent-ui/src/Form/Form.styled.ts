@@ -1,10 +1,16 @@
-import { styled } from '../styles/styled'
+import { Style, Styles } from 'jss'
+import { FormClassProps } from './Form.type'
 
-export const StyledFormWrapper = styled.form`
-  max-width: 300px;
-`
+const root: Style = {
+  maxWidth: 300
+}
 
-export const StyledFormTable = styled.table`
-  width: 100%;
-  border-spacing: 10px;
-`
+const table: Style = {
+  width: '100%',
+  borderSpacing: '10px'
+}
+
+export const styles: Styles<FormClassProps> = {
+  root,
+  table
+}

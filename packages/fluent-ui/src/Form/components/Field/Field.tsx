@@ -1,13 +1,23 @@
 import * as React from 'react'
-import { StyledFieldWrapper, StyledFieldItem, StyledFieldLabel } from './Field.styled'
-import { FieldProps, FieldPropTypes } from '../../Form.type'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Field.styled'
+import { FieldProps, FieldPropTypes, FormFieldClassProps } from '../../Form.type'
+import { Theme } from '../../../styles'
+
 import Typography from '../../../Typography'
 import Transition from '../../../Transition'
 import { FormContext } from '../../Form.context'
 import { createValidator } from '../../Form.validator'
+import classNames from 'classnames'
+
+export const name = 'FormField'
+
+const useStyles = createUseStyles<Theme, FormFieldClassProps>(styles, { name })
 
 const Field: React.FC<FieldProps> = React.forwardRef<HTMLTableRowElement, FieldProps>(
-  ({ children, onChange, label, name, rules, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const { children, onChange, label, name, rules, ...rest } = props
+
     const { state, dispatch, descriptor } = React.useContext(FormContext)
 
     const [value, setValue] = React.useState(state.values[name] || '')
@@ -45,16 +55,21 @@ const Field: React.FC<FieldProps> = React.forwardRef<HTMLTableRowElement, FieldP
     const { errors } = state
     const selfError = errors[name]
 
+    const classes = useStyles(props)
+    const labelClassName = classNames(classes.label, {
+      [classes.labelRequired]: required
+    })
+
     return (
-      <StyledFieldWrapper ref={ref}>
+      <tr ref={ref}>
         {label && (
           <Typography variant="body1" as="td">
-            <StyledFieldLabel htmlFor={name} required={required}>
+            <label className={labelClassName} htmlFor={name}>
               {label}
-            </StyledFieldLabel>
+            </label>
           </Typography>
         )}
-        <StyledFieldItem>
+        <td>
           {React.cloneElement(children, {
             name,
             value,
@@ -67,8 +82,8 @@ const Field: React.FC<FieldProps> = React.forwardRef<HTMLTableRowElement, FieldP
               {selfError}
             </Typography>
           </Transition>
-        </StyledFieldItem>
-      </StyledFieldWrapper>
+        </td>
+      </tr>
     )
   }
 )

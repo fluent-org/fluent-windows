@@ -1,4 +1,5 @@
 import * as React from 'react'
+import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
 import { createSwipe, styles } from './Drawer.styled'
 import { DrawerClassProps, DrawerProps, DrawerPropTypes } from './Drawer.type'
@@ -6,8 +7,6 @@ import { Theme } from '../styles'
 
 import Portal from '../Portal'
 import Transition from '../Transition'
-import classNames from 'classnames'
-import { useCallback } from 'react'
 
 export const name = 'Drawer'
 
@@ -27,7 +26,7 @@ const Drawer: React.FC<DrawerProps> = React.forwardRef<HTMLDivElement, DrawerPro
     const classes = useStyles(props)
     const className = classNames(classes.root, classNameProp)
 
-    const handleClose = useCallback((): void => {
+    const handleClose = React.useCallback((): void => {
       onChange && onChange(false)
     }, [onChange])
 

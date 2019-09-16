@@ -1,26 +1,23 @@
-import { styled, variant, css, th } from '../../../styles/styled'
+import { Style, Styles } from 'jss'
+import { FormFieldClassProps } from '../../Form.type'
+import { Theme } from '../../../styles'
 
-export const StyledFieldWrapper = styled.tr``
+const label: Style = {
+  position: 'relative'
+}
 
-export const StyledFieldLabel = styled.label<{ required?: boolean }>`
-  position: relative;
-  ${variant({
-    prop: 'required',
-    default: false,
-    variants: {
-      true: css`
-        &::after {
-          content: '*';
-          position: absolute;
-          right: -9px;
-          top: 0;
-          font-size: 14px;
-          color: ${th.color('error.default')};
-        }
-      `,
-      false: css``
-    }
-  })}
-`
+const labelRequired = (theme: Theme): Style => ({
+  '&::after': {
+    content: '*',
+    position: 'absolute',
+    right: -9,
+    top: 0,
+    fontSize: 14,
+    color: theme.colors!.error!.default
+  }
+})
 
-export const StyledFieldItem = styled.td``
+export const styles = (theme: Theme): Styles<FormFieldClassProps> => ({
+  label,
+  labelRequired: labelRequired(theme)
+})
