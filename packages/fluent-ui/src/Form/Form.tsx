@@ -140,7 +140,7 @@ Object.defineProperty(Form, 'Field', {
   }
 })
 
-Form.displayName = 'FForm'
+Form.displayName = `F${name}`
 
 Form.propTypes = FormPropTypes
 

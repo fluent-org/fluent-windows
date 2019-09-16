@@ -47,4 +47,8 @@ Button.displayName = `F${name}`
 
 Button.propTypes = ButtonPropTypes
 
+Button.defaultProps = {
+  variant: 'standard'
+}
+
 export default Button
