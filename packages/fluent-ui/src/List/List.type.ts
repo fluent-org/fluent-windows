@@ -2,6 +2,8 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { BoxProps, BoxPropTypes } from '../Box'
 
+export type ListClassProps = 'root' | 'title'
+
 export interface ListProps extends Omit<BoxProps, 'title'> {
   title?: React.ReactChild
   children: React.ReactElement | React.ReactElement[]

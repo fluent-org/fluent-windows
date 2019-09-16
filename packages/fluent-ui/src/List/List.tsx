@@ -1,7 +1,13 @@
 import * as React from 'react'
-import { StyledListWrapper, StyledListTitle } from './List.styled'
-import { ListProps, ListPropTypes } from './List.type'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './List.styled'
+import { Theme } from '../styles'
+import { ListClassProps, ListProps, ListPropTypes } from './List.type'
 import { useReveal } from '@fluent-ui/hooks'
+
+import Box from '../Box'
+import Typography from '../Typography'
 
 export const ListContext = React.createContext<{
   reveal: boolean
@@ -11,8 +17,22 @@ export const ListContext = React.createContext<{
   acrylic: false
 })
 
+export const name = 'List'
+
+const useStyles = createUseStyles<Theme, ListClassProps>(styles, { name })
+
 const List: React.FC<ListProps> = React.forwardRef<HTMLDivElement, ListProps>(
-  ({ children, title, acrylic, reveal, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const {
+      as = 'div',
+      className: classNameProp,
+      children,
+      title,
+      acrylic,
+      reveal,
+      ...rest
+    } = props
+
     // handle Reveal Effects
     const [RevealWrapper] = useReveal(66)
     const theChildren = reveal
@@ -35,18 +55,25 @@ const List: React.FC<ListProps> = React.forwardRef<HTMLDivElement, ListProps>(
       reveal: reveal as boolean,
       acrylic: acrylic as boolean
     }
+
+    const classes = useStyles(props)
+    const className = classNames(classes.root, classNameProp)
     return (
       <ListContext.Provider value={contextValue}>
-        <StyledListWrapper ref={ref} acrylic={acrylic} reveal={reveal} {...rest}>
-          {title && <StyledListTitle variant="subtitle2">{title}</StyledListTitle>}
+        <Box className={className} ref={ref} as={as} acrylic={acrylic} reveal={reveal} {...rest}>
+          {title && (
+            <Typography className={classes.title} variant="subtitle2">
+              {title}
+            </Typography>
+          )}
           {theChildren}
-        </StyledListWrapper>
+        </Box>
       </ListContext.Provider>
     )
   }
 )
 
-List.displayName = 'FList'
+List.displayName = `F${name}`
 
 List.propTypes = ListPropTypes
 

@@ -1,11 +1,11 @@
 import * as React from 'react'
 import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
-import Box from '../Box'
 import { styles } from './Item.styled'
 import { ItemClassProps, ItemProps, ItemPropTypes } from './Item.type'
 import { Theme } from '../styles'
 
+import Box from '../Box'
 import { NavigationContext } from '../Navigation/Navigation'
 import { NavigationID } from '../Navigation/Navigation.type'
 import { ListContext } from '../List/List'
