@@ -1,369 +1,284 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input basic 1`] = `
-.c0 {
+exports[`Input prop error 1`] = `
+".FInput-root {
+  font: inherit;
+  width: 100%;
+  border: 2px solid;
+  outline: none;
+  padding: 6px 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  border-color: #dedede;
+  border-radius: 2px;
+}
+.FInput-root:hover {
+  border-color: #b5b5b5;
+}
+.FInput-root:active, .FInput-root:focus {
+  border-color: #0078d4;
+}
+.FInput-root:disabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #e9e9e9;
+}
+.FInput-error {
+  border-color: #f44336;
+}
+.FInput-error:hover {
+  border-color: #f44336;
+}
+.FInput-error:active, .FInput-error:focus {
+  border-color: #f44336;
+}
+.FInput-wrapper {
+  font: inherit;
   display: inline-block;
   position: relative;
   min-width: 200px;
-  font: inherit;
 }
-
-.c1 {
-  outline: none;
-  font: inherit;
-  width: 100%;
-  border-radius: 2px;
-  border: 2px solid;
-  border-color: #dedede;
-  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  padding: 6px 12px;
+.FInput-clearedIcon {
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  height: 100%;
+  display: inline-flex;
+  position: absolute;
+  font-size: 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  align-items: center;
+  justify-content: center;
 }
-
-.c1:hover {
-  border-color: #b5b5b5;
-}
-
-.c1:active,
-.c1:focus {
-  border-color: #0078d4;
-}
-
-.c1:disabled {
-  color: #8c8c8c;
-  background-color: #e9e9e9;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-<span
-  className="c0"
->
-  <input
-    className="c1"
-    onChange={[Function]}
-    type="text"
-  />
-</span>
+.FInput-clearedIcon:hover {
+  color: #ffffff;
+  background-color: #0078d4;
+}"
 `;
 
-exports[`Input prop cleared 1`] = `
-.c3 {
-  -webkit-overflow-scrolling: touch;
-}
+exports[`Input should be support cleared 1`] = `
+<div
+  class="FInput-wrapper"
+>
+  <input
+    class="FInput-root"
+    style="padding-right: 0px;"
+    type="text"
+    value=""
+  />
+  <span
+    class="FInput-clearedIcon FTransition-root FTransition-root-0 FTransition-fade"
+    style="width: 0px;"
+  >
+    <svg
+      class="sc-kQsIoO elwqFk"
+      viewBox="0 0 2048 2048"
+    >
+      <path
+        d="M1169 1024l879 879-145 145-879-879-879 879L0 1903l879-879L0 145 145 0l879 879L1903 0l145 145z"
+      />
+    </svg>
+  </span>
+</div>
+`;
 
-.c5 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c2 {
-  -webkit-transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: opacity 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,visibility 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+exports[`Input should be support cleared 2`] = `
+".FTransition-root {}
+.FTransition-fade {}
+.FTransition-fade.fade-enter {
   opacity: 0;
+}
+.FTransition-fade.fade-exit {
+  opacity: 1;
+}
+.FTransition-fade.fade-exit-active {
+  opacity: 0;
+}
+.FTransition-fade.fade-enter-active {
+  opacity: 1;
+}
+.FTransition-zoom {}
+.FTransition-zoom.zoom-enter {}
+.FTransition-zoom.zoom-exit {}
+.FTransition-zoom.zoom-exit-active {
+  transform: scale3d(0, 0, 0);
+}
+.FTransition-zoom.zoom-exit-done {
+  transform: scale3d(0, 0, 0);
+}
+.FTransition-zoom.zoom-enter-active {
+  transform: scale3d(0, 0, 0);
+}
+.FTransition-zoom.zoom-enter-done {
+  transform: none;
+}
+.FTransition-slide {}
+.FTransition-slide.slide-enter {
+  transform: translateY(100vh);
+}
+.FTransition-slide.slide-exit {
+  transform: none;
+}
+.FTransition-slide.slide-exit-active {
+  transform: translateY(100vh);
+}
+.FTransition-slide.slide-exit-done {
+  transform: translateY(100vh);
+}
+.FTransition-slide.slide-enter-done {
+  transform: none;
+}
+.FTransition-collapse {}
+.FTransition-grow {}
+.FTransition-grow.grow-enter {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+}
+.FTransition-grow.grow-exit {}
+.FTransition-grow.grow-exit-active {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+}
+.FTransition-grow.grow-exit-done {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+}
+.FTransition-grow.grow-enter-active {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.FTransition-grow.grow-enter-done {
+  opacity: 1;
+  transform: none;
+}
+.FTransition-root-0 {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
   visibility: hidden;
 }
-
-.c2.fade-enter {
-  opacity: 0;
-}
-
-.c2.fade-enter-active {
-  opacity: 1;
-}
-
-.c2.fade-exit {
-  opacity: 1;
-}
-
-.c2.fade-exit-active {
-  opacity: 0;
-}
-
-.c2.zoom-enter-active {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.zoom-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.zoom-exit-active {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.zoom-exit-done {
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c2.slide-enter {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.slide-enter-done {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.slide-exit {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c2.slide-exit-active {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.slide-exit-done {
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-
-.c2.collapse-enter {
+.FTransition-collapse-1 {}
+.FTransition-collapse-1.collapse-enter {
   height: 0;
 }
-
-.c2.collapse-enter-active {
-  height: 0px;
+.FTransition-collapse-1.collapse-exit {
+  height: 0;
 }
-
-.c2.collapse-enter-done {
+.FTransition-collapse-1.collapse-exit-active {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-enter-active {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-enter-done {
   height: auto;
 }
-
-.c2.collapse-exit {
-  height: 0px;
+.FInput-root {
+  font: inherit;
+  width: 100%;
+  border: 2px solid;
+  outline: none;
+  padding: 6px 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  border-color: #dedede;
+  border-radius: 2px;
 }
-
-.c2.collapse-exit-active {
-  height: 0;
+.FInput-root:hover {
+  border-color: #b5b5b5;
 }
-
-.c2.grow-enter {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
+.FInput-root:active, .FInput-root:focus {
+  border-color: #0078d4;
 }
-
-.c2.grow-enter-active {
-  opacity: 1;
-  -webkit-transform: scale(1,1);
-  -ms-transform: scale(1,1);
-  transform: scale(1,1);
+.FInput-root:disabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #e9e9e9;
 }
-
-.c2.grow-enter-done {
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+.FInput-error {
+  border-color: #f44336;
 }
-
-.c2.grow-exit-active {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
+.FInput-error:hover {
+  border-color: #f44336;
 }
-
-.c2.grow-exit-done {
-  opacity: 0;
-  -webkit-transform: scale(0.75,0.5625);
-  -ms-transform: scale(0.75,0.5625);
-  transform: scale(0.75,0.5625);
+.FInput-error:active, .FInput-error:focus {
+  border-color: #f44336;
 }
-
-.c0 {
+.FInput-wrapper {
+  font: inherit;
   display: inline-block;
   position: relative;
   min-width: 200px;
-  font: inherit;
 }
-
-.c1 {
-  outline: none;
-  font: inherit;
-  width: 100%;
-  border-radius: 2px;
-  border: 2px solid;
-  border-color: #dedede;
-  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  padding: 6px 12px;
-  padding-right: 0px;
-}
-
-.c1:hover {
-  border-color: #b5b5b5;
-}
-
-.c1:active,
-.c1:focus {
-  border-color: #0078d4;
-}
-
-.c1:disabled {
-  color: #8c8c8c;
-  background-color: #e9e9e9;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c4 {
-  width: 0px;
-  height: 100%;
-  position: absolute;
-  right: 0;
+.FInput-clearedIcon {
   top: 0;
-  font-size: 12px;
+  right: 0;
   cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
+  height: 100%;
   display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  position: absolute;
+  font-size: 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
   align-items: center;
-  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  justify-content: center;
 }
-
-.c4:hover {
-  background-color: #0078d4;
+.FInput-clearedIcon:hover {
   color: #ffffff;
-}
-
-@media (min-width:600px) {
-  .c3::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c3::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c3::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-<span
-  className="c0"
->
-  <input
-    className="c1"
-    onChange={[Function]}
-    type="text"
-  />
-  <div
-    className="c2 c3"
-    type="fade"
-  >
-    <div
-      className="c3"
-    >
-      <span
-        className="c4"
-        onClick={[Function]}
-      >
-        <svg
-          className="c5"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1169 1024l879 879-145 145-879-879-879 879L0 1903l879-879L0 145 145 0l879 879L1903 0l145 145z"
-          />
-        </svg>
-      </span>
-    </div>
-  </div>
-</span>
+  background-color: #0078d4;
+}"
 `;
 
-exports[`Input prop error 1`] = `
-.c0 {
+exports[`Input should be support error 1`] = `
+".FInput-root {
+  font: inherit;
+  width: 100%;
+  border: 2px solid;
+  outline: none;
+  padding: 6px 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  border-color: #dedede;
+  border-radius: 2px;
+}
+.FInput-root:hover {
+  border-color: #b5b5b5;
+}
+.FInput-root:active, .FInput-root:focus {
+  border-color: #0078d4;
+}
+.FInput-root:disabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #e9e9e9;
+}
+.FInput-error {
+  border-color: #f44336;
+}
+.FInput-error:hover {
+  border-color: #f44336;
+}
+.FInput-error:active, .FInput-error:focus {
+  border-color: #f44336;
+}
+.FInput-wrapper {
+  font: inherit;
   display: inline-block;
   position: relative;
   min-width: 200px;
-  font: inherit;
 }
-
-.c1 {
-  outline: none;
-  font: inherit;
-  width: 100%;
-  border-radius: 2px;
-  border: 2px solid;
-  border-color: #dedede;
-  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  padding: 6px 12px;
-  border-color: #f44336;
+.FInput-clearedIcon {
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  height: 100%;
+  display: inline-flex;
+  position: absolute;
+  font-size: 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  align-items: center;
+  justify-content: center;
 }
-
-.c1:hover {
-  border-color: #b5b5b5;
-}
-
-.c1:active,
-.c1:focus {
-  border-color: #0078d4;
-}
-
-.c1:disabled {
-  color: #8c8c8c;
-  background-color: #e9e9e9;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c1:hover {
-  border-color: #f44336;
-}
-
-.c1:active,
-.c1:focus {
-  border-color: #f44336;
-}
-
-<span
-  className="c0"
->
-  <input
-    className="c1"
-    onChange={[Function]}
-    type="text"
-  />
-</span>
+.FInput-clearedIcon:hover {
+  color: #ffffff;
+  background-color: #0078d4;
+}"
 `;

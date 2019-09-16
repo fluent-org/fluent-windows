@@ -1,90 +1,67 @@
-import { styled, css, variant, th } from '../styles/styled'
-import { InputProps } from './Input.type'
+import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
+import { InputClassProps } from './Input.type'
 
-export const StyledWrapper = styled.span`
-  display: inline-block;
-  position: relative;
-  min-width: 200px;
-  font: inherit;
-`
-
-const base = css`
-  outline: none;
-  font: inherit;
-  width: 100%;
-  border-radius: 2px;
-  border: 2px solid;
-  border-color: ${th.color('standard.default')};
-  transition: ${th.transition('input')};
-  ${th.size('medium.input')};
-  &:hover {
-    border-color: ${th.color('standard.dark1')};
-  }
-  &:active,
-  &:focus {
-    border-color: ${th.color('primary.default')};
-  }
-  &:disabled {
-    color: ${th.color('standard.dark2')};
-    background-color: ${th.color('standard.light1')};
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-`
-
-const cleared = variant({
-  prop: 'cleared',
-  default: false,
-  variants: {
-    true: css`
-      padding-right: ${({ clearedHeight }: StyledInputProps): string => `${clearedHeight}px`};
-    `,
-    false: css``
-  }
-})
-
-const error = variant({
-  prop: 'error',
-  default: false,
-  variants: {
-    true: css`
-      border-color: ${th.color('error.default')};
-      &:hover {
-        border-color: ${th.color('error.default')};
-      }
-      &:active,
-      &:focus {
-        border-color: ${th.color('error.default')};
-      }
-    `,
-    false: css``
-  }
-})
-
-interface StyledInputProps extends Omit<InputProps, 'onChange'> {
-  clearedHeight: number
+const wrapper: Style = {
+  display: 'inline-block',
+  position: 'relative',
+  minWidth: 200,
+  font: 'inherit'
 }
 
-export const StyledInput = styled.input<StyledInputProps>`
-  ${base}
-  ${cleared}
-  ${error}
-`
-
-export const StyledIcon = styled.span<{ clearedHeight: number }>`
-  width: ${({ clearedHeight }): string => `${clearedHeight}px`};
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 12px;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: ${th.transition('input')};
-  &:hover {
-    background-color: ${th.color('primary.default')};
-    color: ${th.color('white.default')};
+const root = (theme: Theme) => ({
+  outline: 'none',
+  font: 'inherit',
+  width: '100%',
+  borderRadius: 2,
+  border: '2px solid',
+  borderColor: theme.colors!.standard!.default,
+  transition: theme.transitions!.input,
+  // ${th.size('medium.input')},
+  '&:hover': {
+    borderColor: theme.colors!.standard!.dark1
+  },
+  '&:active, &:focus': {
+    borderColor: theme.colors!.primary!.default
+  },
+  '&:disabled': {
+    color: theme.colors!.standard!.dark2,
+    backgroundColor: theme.colors!.standard!.light1,
+    cursor: 'not-allowed',
+    pointerEvents: 'none'
+  },
+  ...theme.sizes!.medium!.input
+})
+const error = (theme: Theme): Style => ({
+  borderColor: theme.colors!.error!.default,
+  '&:hover': {
+    borderColor: theme.colors!.error!.default
+  },
+  '&:active, &:focus': {
+    borderColor: theme.colors!.error!.default
   }
-`
+})
+
+const clearedIcon = (theme: Theme): Style => ({
+  height: '100%',
+  position: 'absolute',
+  right: 0,
+  top: 0,
+  fontSize: 12,
+  cursor: 'pointer',
+  display: 'inline-flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  transition: theme.transitions!.input,
+  '&:hover': {
+    backgroundColor: theme.colors!.primary!.default,
+    color: theme.colors!.white!.default
+  }
+})
+
+export const styles = (theme: Theme): Styles<InputClassProps> => ({
+  root: root(theme),
+  error: error(theme),
+  wrapper,
+  clearedIcon: clearedIcon(theme)
+})

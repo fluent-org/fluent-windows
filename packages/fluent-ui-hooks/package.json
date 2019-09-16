@@ -40,7 +40,8 @@
   },
   "dependencies": {
     "json2mq": "^0.2.0",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+    "react-fast-compare": "^2.0.4"
   },
   "devDependencies": {
     "@types/json2mq": "^0.2.0"

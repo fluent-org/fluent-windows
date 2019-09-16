@@ -1,87 +1,79 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import * as ReactTestUtils from 'react-dom/test-utils'
-import 'jest-styled-components'
+import { fireEvent } from '@testing-library/react'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Input } from '../..'
+import Input, { name } from '../Input'
+import { styles } from '../Input.styled'
+import { InputClassProps } from '../Input.type'
+
+const classes = getClasses<InputClassProps>(styles, name)
 
 describe('Input', (): void => {
-  const theme = {}
   const text = 'Hint Text'
 
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Input />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    const { getByTestId } = render(<Input ref={ref} data-testid="input" />)
+    const { current: element } = ref
+    expect(element).toEqual(getByTestId('input'))
   })
 
-  test('controlled', (): void => {
-    let node = React.createRef<HTMLInputElement>()
+  test('should be controlled', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
     let value = ''
-    function handleChange(e: string): void {
-      value = e
+    function handleChange(v: string): void {
+      value = v
     }
-    ReactTestUtils.renderIntoDocument(
-      <ThemeProvider theme={theme}>
-        <Input ref={node} value={value} onChange={handleChange} />
-      </ThemeProvider>
-    )
-    ;(node.current as HTMLInputElement).value = text
-    ReactTestUtils.Simulate.change(node.current as HTMLInputElement)
+    const { container } = render(<Input ref={ref} value={value} onChange={handleChange} />)
+    fireEvent.change(ref.current!, { target: { value: text } })
     expect(value).toEqual(text)
+    expect(container.firstChild).toHaveClass(classes.wrapper)
+    expect(ref.current!).toHaveClass(classes.root)
   })
 
-  test('prop placeholder', (): void => {
-    let node = React.createRef<HTMLInputElement>()
-    ReactTestUtils.renderIntoDocument(
-      <ThemeProvider theme={theme}>
-        <Input ref={node} placeholder={text} />
-      </ThemeProvider>
-    )
-    expect((node.current as HTMLInputElement).placeholder).toEqual(text)
+  test('should be support placeholder', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    render(<Input ref={ref} placeholder={text} />)
+    expect((ref.current as HTMLInputElement).placeholder).toEqual(text)
   })
 
-  test('prop disabled', (): void => {
-    let node = React.createRef<HTMLInputElement>()
-    ReactTestUtils.renderIntoDocument(
-      <ThemeProvider theme={theme}>
-        <Input ref={node} disabled={true} />
-      </ThemeProvider>
-    )
-    expect((node.current as HTMLInputElement).disabled).toEqual(true)
+  test('should be support disabled', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    render(<Input ref={ref} disabled={true} />)
+    expect((ref.current as HTMLInputElement).disabled).toEqual(true)
   })
 
-  test('prop cleared', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Input cleared={true} />
-      </ThemeProvider>
+  test('should be support cleared', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    let value = ''
+    function handleChange(v: string): void {
+      value = v
+    }
+    const { container, sheets } = render(
+      <Input ref={ref} value={value} onChange={handleChange} cleared={true} />
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+
+    expect(container.firstChild).toMatchSnapshot()
+    expect(sheets.toString()).toMatchSnapshot()
+
+    fireEvent.change(ref.current!, { target: { value: text } })
+    expect(value).toEqual(text)
+
+    fireEvent.click(container.querySelector('.FInput-clearedIcon')!)
+    expect(value).toEqual('')
   })
 
-  test('prop password', (): void => {
-    let node = React.createRef<HTMLInputElement>()
-    ReactTestUtils.renderIntoDocument(
-      <ThemeProvider theme={theme}>
-        <Input ref={node} password={true} />
-      </ThemeProvider>
-    )
-    expect((node.current as HTMLInputElement).type).toEqual('password')
+  test('should be support password', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    render(<Input ref={ref} password={true} />)
+    expect((ref.current as HTMLInputElement).type).toEqual('password')
   })
 
-  test('prop error', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Input error={true} />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should be support error', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    const { sheets } = render(<Input ref={ref} error={true} />)
+    expect(ref.current as HTMLInputElement).toHaveClass(classes.error)
+    expect(sheets.toString()).toMatchSnapshot()
   })
 })

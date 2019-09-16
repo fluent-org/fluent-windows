@@ -2,6 +2,8 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 
+export type InputClassProps = 'root' | 'error' | 'wrapper' | 'clearedIcon'
+
 export interface InputProps
   extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'> {
   value?: string

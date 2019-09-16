@@ -13,3 +13,4 @@ export * from './usePopper'
 export * from './useMessage'
 
 export * from './useUpdateEffect'
+export * from './useDeepCompareEffect'
