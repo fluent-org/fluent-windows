@@ -6,6 +6,17 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
 
+export type NavigationClassProps =
+  | 'root'
+  | 'horizontal'
+  | 'expanded'
+  | 'header'
+  | 'headerHorizontal'
+  | 'footer'
+  | 'footerHorizontal'
+  | 'content'
+  | 'contentHorizontal'
+
 export type NavigationID = string | number
 
 export interface NavigationProps extends Omit<BoxProps, 'onChange'> {

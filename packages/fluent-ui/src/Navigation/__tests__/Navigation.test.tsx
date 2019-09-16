@@ -1,77 +1,77 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
-import { GlobalNavigationButton, Connected, Settings } from '@fluent-ui/icons'
+import { fireEvent } from '@testing-library/react'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Navigation, Item } from '../../'
+import Navigation, { name } from '../Navigation'
+import { styles } from '../Navigation.styled'
+import { NavigationClassProps } from '../Navigation.type'
+import Item from '../../Item'
+
+const classes = getClasses<NavigationClassProps>(styles, name)
 
 describe('Navigation', (): void => {
-  const theme = {}
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Navigation height={600}>
-          <Navigation.Header>
-            <Item prefix={<GlobalNavigationButton />} />
-          </Navigation.Header>
+  const testText = 'Hello World'
 
-          <Item value={1} prefix={<Connected />}>
-            Option 1
-          </Item>
-          <Item value={2} prefix={<Connected />}>
-            Option 2
-          </Item>
-          <Item value={3} prefix={<Connected />}>
-            Option 3
-          </Item>
-          <Item value={4} prefix={<Connected />}>
-            Option 4
-          </Item>
-
-          <Navigation.Footer>
-            <Item prefix={<Settings />}>Settings</Item>
-          </Navigation.Footer>
-        </Navigation>
-      </ThemeProvider>
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLDivElement>()
+    const { container } = render(
+      <Navigation ref={ref}>
+        <Item value={1}>Option 1</Item>
+        <Item value={2}>Option 2</Item>
+      </Navigation>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    const { current: element } = ref
+    expect(element).toEqual(container.firstChild)
   })
 
-  test('controlled', (): void => {
+  test('should render children', (): void => {
+    const { container, getByText, sheets } = render(
+      <Navigation height={600}>
+        <Item>{testText}</Item>
+      </Navigation>
+    )
+    expect(getByText(testText)).toBeInTheDocument()
+    expect(container.firstChild).toHaveClass(classes.root)
+    expect(sheets.toString()).toMatchSnapshot()
+  })
+
+  test('should be controlled', (): void => {
     let activeId = 1
     function handleActiveId(value: any): void {
       activeId = value
     }
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Navigation height={600} value={activeId} onChange={handleActiveId}>
-          <Navigation.Header>
-            <Item>
-              <GlobalNavigationButton />
-            </Item>
-          </Navigation.Header>
-
-          <Item value={1} prefix={<Connected />}>
-            Option 1
-          </Item>
-          <Item value={2} prefix={<Connected />}>
-            Option 2
-          </Item>
-          <Item value={3} prefix={<Connected />}>
-            Option 3
-          </Item>
-          <Item value={4} prefix={<Connected />}>
-            Option 4
-          </Item>
-
-          <Navigation.Footer>
-            <Item prefix={<Settings />}>Settings</Item>
-          </Navigation.Footer>
-        </Navigation>
-      </ThemeProvider>
+    const { getByTestId } = render(
+      <Navigation height={600} value={activeId} onChange={handleActiveId}>
+        <Item value={1} data-testid="item1">
+          Option 1
+        </Item>
+        <Item value={2} data-testid="item2">
+          Option 2
+        </Item>
+      </Navigation>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    fireEvent.click(getByTestId('item2'))
+    expect(activeId).toEqual(2)
+  })
+
+  test('should render a horizontal Navigation', (): void => {
+    const { container } = render(
+      <Navigation horizontal>
+        <Item value={1}>Option 1</Item>
+        <Item value={2}>Option 2</Item>
+      </Navigation>
+    )
+    expect(container.firstChild).toHaveClass(classes.horizontal)
+  })
+
+  test('should render a expanded Navigation', (): void => {
+    const { container } = render(
+      <Navigation expanded>
+        <Item value={1}>Option 1</Item>
+        <Item value={2}>Option 2</Item>
+      </Navigation>
+    )
+    expect(container.firstChild).toHaveClass(classes.expanded)
   })
 })

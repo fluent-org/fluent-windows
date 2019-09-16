@@ -78,7 +78,7 @@ const Item: React.FC<ItemProps> = React.forwardRef<HTMLDivElement, ItemProps>(
       <Box className={className} ref={ref} as={as} onClick={handleItemClick} {...rest}>
         {!!value && <div className={activeBarClassName} />}
         {!!prefix && <div className={classes.prefixRoot}>{prefix}</div>}
-        {!!children && <div className={textClassName}>{children}</div>}
+        <div className={textClassName}>{children}</div>
       </Box>
     )
   }

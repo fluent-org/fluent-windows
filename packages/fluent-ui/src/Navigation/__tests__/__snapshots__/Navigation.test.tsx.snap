@@ -1,831 +1,414 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navigation basic 1`] = `
-.c10 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
+exports[`Navigation should render children 1`] = `
+".FBox-root {
+  -webkit-overflow-scrolling: touch;
 }
-
-.c6 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c13 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c1 {
-  background-color: #f5f5f5;
+.FBox-system {}
+.FBox-acrylic {}
+.FBox-system-0 {
   height: 600px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.c3 {
-  -webkit-overflow-scrolling: touch;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  overflow: hidden;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-width: 260px;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.c4 {
-  position: relative;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  min-height: 40px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 20px;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  color: inherit;
-  background-color: transparent;
-}
-
-.c4:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.c4:active {
-  color: #000000;
-  background-color: rgba(0,0,0,0.2);
-}
-
-.c9 {
-  position: absolute;
-  background-color: #0078d4;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  width: 6px;
-  height: 24px;
-  left: 0;
-  top: 50%;
-  margin-top: -12px;
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c5 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-}
-
-.c7 {
-  width: auto;
-  opacity: 1;
-  padding-left: 0px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  font-size: 14px;
-}
-
-.c11 {
-  width: auto;
-  opacity: 1;
-  padding-left: 12px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  font-size: 14px;
-}
-
-@media (min-width:600px) {
-  .c1::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c1::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c1::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-@media (min-width:600px) {
-  .c3::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-  }
-
-  .c3::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .c3::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
-  }
-}
-
-<div
-  className="c0 c1"
-  height={600}
->
-  <div
-    className="c2 c3"
-  >
-    <div
-      className="c3"
-    >
-      <div
-        className="c4 c3"
-        onClick={[Function]}
-      >
-        <div
-          className="c5"
-        >
-          <svg
-            className="c6"
-            viewBox="0 0 2048 2048"
-          >
-            <path
-              d="M2048 640H0V512h2048v128zm0 1024H0v-128h2048v128zm0-513H0v-127h2048v127z"
-            />
-          </svg>
-        </div>
-        <div
-          className="c7"
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="c8 c3"
-  >
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 1
-      </div>
-    </div>
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 2
-      </div>
-    </div>
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 3
-      </div>
-    </div>
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 4
-      </div>
-    </div>
-  </div>
-  <div
-    className="c12 c3"
-  >
-    <div
-      className="c3"
-    >
-      <div
-        className="c4 c3"
-        onClick={[Function]}
-      >
-        <div
-          className="c5"
-        >
-          <svg
-            className="c13"
-            viewBox="0 0 2048 2048"
-          >
-            <path
-              d="M1783 988q0 9 .5 18t.5 18-.5 18-.5 18l259 161-159 383-297-68q-24 26-50 50l68 297-383 159-161-259q-9 0-18 .5t-18 .5-18-.5-18-.5l-161 259-383-159 68-297q-26-24-50-50l-297 68L6 1221l259-161q0-9-.5-18t-.5-18 .5-18 .5-18L6 827l159-383 297 68q24-26 50-50l-68-297L827 6l161 259q9 0 18-.5t18-.5 18 .5 18 .5L1221 6l383 159-68 297q26 24 50 50l297-68 159 383zm-117 130q2-24 4-47.5t2-47.5q0-23-2-47t-4-47l236-147-86-208-271 63q-31-38-63.5-70t-70.5-64l63-271-208-86-148 236q-23-2-47-4t-47-2q-24 0-47.5 2t-47.5 4L782 146l-208 86 63 271q-38 31-70 63.5T503 637l-271-63-86 208 236 148q-2 24-4 47.5t-2 47.5q0 23 2 47t4 47l-236 147 86 208 271-63q31 38 63.5 70t70.5 64l-63 271 208 86 148-236q23 2 47 4t47 2q24 0 47.5-2t47.5-4l147 236 208-86-63-271q38-31 70-63.5t64-70.5l271 63 86-208zm-642-470q78 0 146.5 29.5T1290 758t80.5 119.5T1400 1024t-29.5 146.5T1290 1290t-119.5 80.5T1024 1400t-146.5-29.5T758 1290t-80.5-119.5T648 1024t29.5-146.5T758 758t119.5-80.5T1024 648zm0 640q55 0 103-20.5t84-56.5 56.5-84 20.5-103-20.5-103-56.5-84-84-56.5-103-20.5-103 20.5-84 56.5-56.5 84-20.5 103 20.5 103 56.5 84 84 56.5 103 20.5z"
-            />
-          </svg>
-        </div>
-        <div
-          className="c11"
-        >
-          Settings
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Navigation controlled 1`] = `
-.c10 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c7 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c13 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
-}
-
-.c1 {
   background-color: #f5f5f5;
-  height: 600px;
-  -webkit-overflow-scrolling: touch;
 }
-
-.c3 {
-  -webkit-overflow-scrolling: touch;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+.FBox-acrylic-1 {
   overflow: hidden;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-width: 260px;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.c4 {
   position: relative;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  min-height: 40px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 20px;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  color: inherit;
-  background-color: transparent;
 }
-
-.c4:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.c4:active {
-  color: #000000;
-  background-color: rgba(0,0,0,0.2);
-}
-
-.c9 {
-  position: absolute;
-  background-color: #0078d4;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  width: 6px;
-  height: 24px;
-  left: 0;
-  top: 50%;
-  margin-top: -12px;
-  -webkit-transform: scale3d(0,0,0);
-  -ms-transform: scale3d(0,0,0);
-  transform: scale3d(0,0,0);
-}
-
-.c5 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-}
-
-.c6 {
-  width: auto;
-  opacity: 1;
-  padding-left: 0px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  font-size: 14px;
-}
-
-.c11 {
-  width: auto;
-  opacity: 1;
-  padding-left: 12px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: all 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  font-size: 14px;
-}
-
-@media (min-width:600px) {
-  .c1::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .FBox-acrylic-1 {
+    background: none !important;
+    backdrop-filter: blur(10px);
   }
-
-  .c1::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
+  .FBox-acrylic-1::before, .FBox-acrylic-1::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
   }
-
-  .c1::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
+  .FBox-acrylic-1::before {
+    opacity: 0.5;
+    z-index: -2;
+    background-color: #f5f5f5;
+  }
+  .FBox-acrylic-1::after {
+    opacity: 0.25;
+    z-index: -1;
+    background-image: url(data:image/png;base64,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);
   }
 }
-
-@media (min-width:600px) {
-  .c3::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
+@supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
+  .FBox-acrylic-1 {
+    z-index: 1;
+    background: inherit;
   }
-
-  .c3::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.2);
+  .FBox-acrylic-1::before {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    filter: blur(10px);
+    height: calc(100% + 20px);
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: inherit;
   }
-
-  .c3::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0,0,0,0.4);
+  .FBox-acrylic-1::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    background-color: #f5f5f5;
+    background-image: url(data:image/png;base64,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);
   }
 }
-
-<div
-  className="c0 c1"
-  height={600}
->
-  <div
-    className="c2 c3"
-  >
-    <div
-      className="c3"
-    >
-      <div
-        className="c4 c3"
-        onClick={[Function]}
-      >
-        <div
-          className="c5"
-        />
-        <div
-          className="c6"
-        >
-          <svg
-            className="c7"
-            viewBox="0 0 2048 2048"
-          >
-            <path
-              d="M2048 640H0V512h2048v128zm0 1024H0v-128h2048v128zm0-513H0v-127h2048v127z"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c8 c3"
-  >
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 1
-      </div>
-    </div>
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 2
-      </div>
-    </div>
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 3
-      </div>
-    </div>
-    <div
-      className="c4 c3"
-      onClick={[Function]}
-    >
-      <div
-        className="c9"
-      />
-      <div
-        className="c5"
-      >
-        <svg
-          className="c10"
-          viewBox="0 0 2048 2048"
-        >
-          <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
-          />
-        </svg>
-      </div>
-      <div
-        className="c11"
-      >
-        Option 4
-      </div>
-    </div>
-  </div>
-  <div
-    className="c12 c3"
-  >
-    <div
-      className="c3"
-    >
-      <div
-        className="c4 c3"
-        onClick={[Function]}
-      >
-        <div
-          className="c5"
-        >
-          <svg
-            className="c13"
-            viewBox="0 0 2048 2048"
-          >
-            <path
-              d="M1783 988q0 9 .5 18t.5 18-.5 18-.5 18l259 161-159 383-297-68q-24 26-50 50l68 297-383 159-161-259q-9 0-18 .5t-18 .5-18-.5-18-.5l-161 259-383-159 68-297q-26-24-50-50l-297 68L6 1221l259-161q0-9-.5-18t-.5-18 .5-18 .5-18L6 827l159-383 297 68q24-26 50-50l-68-297L827 6l161 259q9 0 18-.5t18-.5 18 .5 18 .5L1221 6l383 159-68 297q26 24 50 50l297-68 159 383zm-117 130q2-24 4-47.5t2-47.5q0-23-2-47t-4-47l236-147-86-208-271 63q-31-38-63.5-70t-70.5-64l63-271-208-86-148 236q-23-2-47-4t-47-2q-24 0-47.5 2t-47.5 4L782 146l-208 86 63 271q-38 31-70 63.5T503 637l-271-63-86 208 236 148q-2 24-4 47.5t-2 47.5q0 23 2 47t4 47l-236 147 86 208 271-63q31 38 63.5 70t70.5 64l-63 271 208 86 148-236q23 2 47 4t47 2q24 0 47.5-2t47.5-4l147 236 208-86-63-271q38-31 70-63.5t64-70.5l271 63 86-208zm-642-470q78 0 146.5 29.5T1290 758t80.5 119.5T1400 1024t-29.5 146.5T1290 1290t-119.5 80.5T1024 1400t-146.5-29.5T758 1290t-80.5-119.5T648 1024t29.5-146.5T758 758t119.5-80.5T1024 648zm0 640q55 0 103-20.5t84-56.5 56.5-84 20.5-103-20.5-103-56.5-84-84-56.5-103-20.5-103 20.5-84 56.5-56.5 84-20.5 103 20.5 103 56.5 84 84 56.5 103 20.5z"
-            />
-          </svg>
-        </div>
-        <div
-          className="c11"
-        >
-          Settings
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  .FBox-system-2 {  }
+  .FBox-acrylic-3 {
+    overflow: hidden;
+    position: relative;
+  }
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .FBox-acrylic-3 {
+    background: none !important;
+    backdrop-filter: blur(10px);
+  }
+  .FBox-acrylic-3::before, .FBox-acrylic-3::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+  }
+  .FBox-acrylic-3::before {
+    opacity: 0.5;
+    z-index: -2;
+  }
+  .FBox-acrylic-3::after {
+    opacity: 0.25;
+    z-index: -1;
+    background-image: url(data:image/png;base64,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);
+  }
+}
+@supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
+  .FBox-acrylic-3 {
+    z-index: 1;
+    background: inherit;
+  }
+  .FBox-acrylic-3::before {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    filter: blur(10px);
+    height: calc(100% + 20px);
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: inherit;
+  }
+  .FBox-acrylic-3::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    background-image: url(data:image/png;base64,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);
+  }
+}
+  .FBox-system-4 {  }
+  .FBox-acrylic-5 {
+    overflow: hidden;
+    position: relative;
+  }
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .FBox-acrylic-5 {
+    background: none !important;
+    backdrop-filter: blur(10px);
+  }
+  .FBox-acrylic-5::before, .FBox-acrylic-5::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+  }
+  .FBox-acrylic-5::before {
+    opacity: 0.5;
+    z-index: -2;
+  }
+  .FBox-acrylic-5::after {
+    opacity: 0.25;
+    z-index: -1;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==);
+  }
+}
+@supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
+  .FBox-acrylic-5 {
+    z-index: 1;
+    background: inherit;
+  }
+  .FBox-acrylic-5::before {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    filter: blur(10px);
+    height: calc(100% + 20px);
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: inherit;
+  }
+  .FBox-acrylic-5::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    background-image: url(data:image/png;base64,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);
+  }
+}
+  .FBox-system-6 {  }
+  .FBox-acrylic-7 {
+    overflow: hidden;
+    position: relative;
+  }
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .FBox-acrylic-7 {
+    background: none !important;
+    backdrop-filter: blur(10px);
+  }
+  .FBox-acrylic-7::before, .FBox-acrylic-7::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+  }
+  .FBox-acrylic-7::before {
+    opacity: 0.5;
+    z-index: -2;
+  }
+  .FBox-acrylic-7::after {
+    opacity: 0.25;
+    z-index: -1;
+    background-image: url(data:image/png;base64,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);
+  }
+}
+@supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
+  .FBox-acrylic-7 {
+    z-index: 1;
+    background: inherit;
+  }
+  .FBox-acrylic-7::before {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    filter: blur(10px);
+    height: calc(100% + 20px);
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: inherit;
+  }
+  .FBox-acrylic-7::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    background-image: url(data:image/png;base64,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);
+  }
+}
+  .FBox-system-8 {  }
+  .FBox-acrylic-9 {
+    overflow: hidden;
+    position: relative;
+  }
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  .FBox-acrylic-9 {
+    background: none !important;
+    backdrop-filter: blur(10px);
+  }
+  .FBox-acrylic-9::before, .FBox-acrylic-9::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+  }
+  .FBox-acrylic-9::before {
+    opacity: 0.5;
+    z-index: -2;
+  }
+  .FBox-acrylic-9::after {
+    opacity: 0.25;
+    z-index: -1;
+    background-image: url(data:image/png;base64,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);
+  }
+}
+@supports (not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)))) {
+  .FBox-acrylic-9 {
+    z-index: 1;
+    background: inherit;
+  }
+  .FBox-acrylic-9::before {
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    filter: blur(10px);
+    height: calc(100% + 20px);
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: inherit;
+  }
+  .FBox-acrylic-9::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==);
+  }
+}
+  .FNavigation-root {  }
+  .FNavigation-horizontal {
+    max-height: 40px;
+    flex-direction: row;
+  }
+  .FNavigation-expanded {  }
+  .FNavigation-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .FNavigation-headerHorizontal {
+    flex-direction: row;
+  }
+  .FNavigation-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .FNavigation-footerHorizontal {
+    flex-direction: row;
+  }
+  .FNavigation-content {
+    flex: 1;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+  .FNavigation-contentHorizontal {
+    overflow: hidden;
+    flex-direction: row;
+  }
+  .FNavigation-root-0 {
+    display: flex;
+    overflow: hidden;
+    max-width: 44px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .FNavigation-expanded-1 {
+    max-width: 260px;
+  }
+  .FItem-root {
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    padding: 12px 20px;
+    position: relative;
+    min-height: 40px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .FItem-root:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .FItem-root:active {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FItem-reveal {
+    background-color: #f5f5f5;
+  }
+  .FItem-reveal:hover {
+    background-color: #e9e9e9;
+  }
+  .FItem-reveal:active {
+    background-color: #b5b5b5;
+  }
+  .FItem-activeBar {
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 24px;
+    position: absolute;
+    transform: scale3d(0, 0, 0);
+    margin-top: -12px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    background-color: #0078d4;
+  }
+  .FItem-activeBarHorizontal {
+    left: 10%;
+    width: 80%;
+    bottom: 0;
+    height: 4px;
+  }
+  .FItem-activeBarActive {
+    transform: scale3d(1, 1, 1);
+  }
+  .FItem-prefixRoot {
+    height: 100%;
+    display: flex;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+  }
+  .FItem-text {
+    flex: 1;
+    width: 0;
+    display: flex;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 14px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 0;
+  }
+  .FItem-textExpanded {
+    width: auto;
+    opacity: 1;
+  }
+  .FItem-textNoChildren {
+    padding-left: 0 !important;
+  }
+  .FItem-textHasPrefix {
+    padding-left: 12px;
+  }"
 `;

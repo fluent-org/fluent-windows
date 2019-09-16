@@ -1,25 +1,24 @@
 import * as React from 'react'
-import { useReveal } from '@fluent-ui/hooks' // TODO treeShaking
-import { omit } from '../utils'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Content from './components/Content'
-
-import {
-  StyledHeader,
-  StyledFooter,
-  StyledContent,
-  StyledNavigationWrapper
-} from './Navigation.styled'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Navigation.styled'
+import { Theme } from '../styles'
 import {
   NavigationProps,
   NavigationID,
   NavigationContainer,
   NavigationChild,
   NavigationType,
-  NavigationPropTypes
+  NavigationPropTypes,
+  NavigationClassProps
 } from './Navigation.type'
+import { useReveal } from '@fluent-ui/hooks' // TODO treeShaking
+import { omit } from '../utils'
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Content from './components/Content'
+import Box from '../Box'
 
 export const NavigationContext = React.createContext<{
   value: NavigationID
@@ -37,9 +36,15 @@ export const NavigationContext = React.createContext<{
   horizontal: false
 })
 
+export const name = 'Navigation'
+
+const useStyles = createUseStyles<Theme, NavigationClassProps>(styles, { name })
+
 const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, NavigationProps>(
-  (
-    {
+  (props, ref): React.ReactElement => {
+    const {
+      as = 'div',
+      className: classNameProp,
       horizontal = false,
       expanded = true,
       acrylic = false,
@@ -48,9 +53,8 @@ const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, N
       onChange,
       children,
       ...rest
-    }: NavigationProps,
-    ref
-  ): React.ReactElement => {
+    } = props
+
     const container: NavigationContainer = {
       header: [],
       footer: [],
@@ -69,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, N
       }
     )
 
-    reveal = acrylic ? false : reveal
+    const _reveal = acrylic ? false : reveal
     const [RevealWrapper] = useReveal(66)
     const revealHeader = React.useMemo(
       (): React.ReactElement[] =>
@@ -102,32 +106,45 @@ const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, N
       value: value as NavigationID,
       onChange: onChange as (id: NavigationID) => void,
       expanded: expanded as boolean,
-      reveal: reveal as boolean,
+      reveal: _reveal as boolean,
       acrylic: acrylic as boolean,
       horizontal: horizontal as boolean
     }
     const others = omit(rest, ['backgroundColor', 'color'])
 
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.horizontal]: horizontal,
+        [classes.expanded]: expanded
+      },
+      classNameProp
+    )
+    const headerClassName = classNames(classes.header, {
+      [classes.headerHorizontal]: horizontal
+    })
+    const contentClassName = classNames(classes.content, {
+      [classes.contentHorizontal]: horizontal
+    })
+    const footerClassName = classNames(classes.footer, {
+      [classes.footerHorizontal]: horizontal
+    })
+
     return (
-      <NavigationContext.Provider value={contextValue}>
-        <StyledNavigationWrapper
-          ref={ref}
-          horizontal={horizontal}
-          expanded={expanded as boolean}
-          acrylic={acrylic}
-          {...others}
-        >
-          <StyledHeader horizontal={horizontal}>
-            {reveal ? revealHeader : container.header}
-          </StyledHeader>
-          <StyledContent horizontal={horizontal}>
-            {reveal ? revealContent : container.content}
-          </StyledContent>
-          <StyledFooter horizontal={horizontal}>
-            {reveal ? revealFooter : container.footer}
-          </StyledFooter>
-        </StyledNavigationWrapper>
-      </NavigationContext.Provider>
+      <Box
+        className={className}
+        ref={ref}
+        acrylic={acrylic}
+        backgroundColor="standard.light2"
+        {...others}
+      >
+        <NavigationContext.Provider value={contextValue}>
+          <Box className={headerClassName}>{_reveal ? revealHeader : container.header}</Box>
+          <Box className={contentClassName}>{_reveal ? revealContent : container.content}</Box>
+          <Box className={footerClassName}>{_reveal ? revealFooter : container.footer}</Box>
+        </NavigationContext.Provider>
+      </Box>
     )
   }
 )
@@ -148,8 +165,14 @@ Object.defineProperty(Navigation, 'Content', {
   }
 })
 
-Navigation.displayName = 'FNavigation'
+Navigation.displayName = `F${name}`
 
 Navigation.propTypes = NavigationPropTypes
+
+Navigation.defaultProps = {
+  horizontal: false,
+  expanded: true,
+  acrylic: false
+}
 
 export default Navigation as NavigationType
