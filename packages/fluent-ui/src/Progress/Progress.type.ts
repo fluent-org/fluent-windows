@@ -1,7 +1,9 @@
 import * as PropTypes from 'prop-types'
-import { StandardProps } from '..'
+import { StandardProps, StyledProps } from '..'
 
-export interface ProgressProps extends StandardProps {
+export type ProgressClassProps = 'root' | 'progress' | 'isIndeterminate'
+
+export interface ProgressProps extends StandardProps, StyledProps {
   value?: number
 }
 

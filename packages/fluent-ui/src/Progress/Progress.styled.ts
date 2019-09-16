@@ -1,48 +1,47 @@
-import { styled, th, variant, css, keyframes } from '../styles/styled'
+import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
+import { ProgressClassProps } from './Progress.type'
 
-export const StyledProgressWrapper = styled.div`
-  position: relative;
-  overflow: hidden;
-  height: 4px;
-  background-color: ${th.color('standard.default')};
-`
-
-const indeterminateProgress = keyframes`
-  from {
-    transform: translateX(-130%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-`
-
-const isIndeterminate = variant({
-  prop: 'isIndeterminate',
-  default: false,
-  variants: {
-    true: css`
-      background: linear-gradient(
-        to right,
-        ${th.color('standard.default')} 0%,
-        ${th.color('primary.default')} 50%,
-        ${th.color('standard.default')} 100%
-      );
-      animation: ${indeterminateProgress} 2.6s infinite;
-    `,
-    false: css`
-      background: ${th.color('primary.default')};
-      transition: transform 0.43s linear;
-    `
-  }
+const root = (theme: Theme): Style => ({
+  position: 'relative',
+  overflow: 'hidden',
+  height: 4,
+  backgroundColor: theme.colors!.standard!.default
 })
 
-export const StyledProgress = styled.div<{ isIndeterminate: boolean }>`
-  width: 100%;
-  transform-origin: left;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+const progress = (theme: Theme): Style => ({
+  width: '100%',
+  transformOrigin: 'left',
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  bottom: 0,
+  // isIndeterminate false
+  background: theme.colors!.primary!.default,
+  transition: 'transform 0.43s linear',
+  // keyframes
+  '@global': {
+    '@keyframes indeterminateProgress': {
+      from: {
+        transform: 'translateX(-130%)'
+      },
+      to: {
+        transform: 'translateX(100%)'
+      }
+    }
+  }
+})
+const isIndeterminate = (theme: Theme): Style => ({
+  background: `linear-gradient(to right,
+    ${theme.colors!.standard!.default} 0%,
+    ${theme.colors!.primary!.default} 50%,
+    ${theme.colors!.standard!.default} 100%
+  )`,
+  animation: '$indeterminateProgress 2.6s infinite'
+})
 
-  ${isIndeterminate}
-`
+export const styles = (theme: Theme): Styles<ProgressClassProps> => ({
+  root: root(theme),
+  progress: progress(theme),
+  isIndeterminate: isIndeterminate(theme)
+})

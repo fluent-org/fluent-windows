@@ -1,70 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Progress basic 1`] = `
-.c0 {
-  position: relative;
-  overflow: hidden;
+exports[`Progress should be controlled 1`] = `
+".FProgress-root {
   height: 4px;
+  overflow: hidden;
+  position: relative;
   background-color: #dedede;
 }
-
-.c1 {
-  width: 100%;
-  -webkit-transform-origin: left;
-  -ms-transform-origin: left;
-  transform-origin: left;
-  position: absolute;
-  left: 0;
+.FProgress-progress {
   top: 0;
+  left: 0;
+  width: 100%;
   bottom: 0;
-  background: linear-gradient( to right, #dedede 0%, #0078d4 50%, #dedede 100% );
-  -webkit-animation: fjEpQY 2.6s infinite;
-  animation: fjEpQY 2.6s infinite;
+  position: absolute;
+  background: #0078d4;
+  transition: transform 0.43s linear;
+  transform-origin: left;
 }
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    style={Object {}}
-  />
-</div>
+.FProgress-isIndeterminate {
+  animation: FProgress-keyframes-indeterminateProgress 2.6s infinite;
+  background: linear-gradient(to right,
+    #dedede 0%,
+    #0078d4 50%,
+    #dedede 100%
+  );
+}
+@keyframes FProgress-keyframes-indeterminateProgress {
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}"
 `;
 
-exports[`Progress prop value 1`] = `
-.c0 {
-  position: relative;
-  overflow: hidden;
+exports[`Progress should be support ref 1`] = `
+".FProgress-root {
   height: 4px;
+  overflow: hidden;
+  position: relative;
   background-color: #dedede;
 }
-
-.c1 {
-  width: 100%;
-  -webkit-transform-origin: left;
-  -ms-transform-origin: left;
-  transform-origin: left;
-  position: absolute;
-  left: 0;
+.FProgress-progress {
   top: 0;
+  left: 0;
+  width: 100%;
   bottom: 0;
+  position: absolute;
   background: #0078d4;
-  -webkit-transition: -webkit-transform 0.43s linear;
-  -webkit-transition: transform 0.43s linear;
   transition: transform 0.43s linear;
+  transform-origin: left;
 }
+.FProgress-isIndeterminate {
+  animation: FProgress-keyframes-indeterminateProgress 2.6s infinite;
+  background: linear-gradient(to right,
+    #dedede 0%,
+    #0078d4 50%,
+    #dedede 100%
+  );
+}
+@keyframes FProgress-keyframes-indeterminateProgress {
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}"
+`;
 
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    style={
-      Object {
-        "transform": "translateX(-50%)",
-      }
-    }
-  />
-</div>
+exports[`Progress should render a indeterminate progress 1`] = `
+".FProgress-root {
+  height: 4px;
+  overflow: hidden;
+  position: relative;
+  background-color: #dedede;
+}
+.FProgress-progress {
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background: #0078d4;
+  transition: transform 0.43s linear;
+  transform-origin: left;
+}
+.FProgress-isIndeterminate {
+  animation: FProgress-keyframes-indeterminateProgress 2.6s infinite;
+  background: linear-gradient(to right,
+    #dedede 0%,
+    #0078d4 50%,
+    #dedede 100%
+  );
+}
+@keyframes FProgress-keyframes-indeterminateProgress {
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}"
 `;
