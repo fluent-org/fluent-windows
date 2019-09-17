@@ -18,6 +18,15 @@ const Transition: React.FC<TransitionProps> = React.forwardRef<HTMLDivElement, T
       appear = true,
       timeout = 250,
       visible,
+      mountOnEnter,
+      unmountOnExit,
+      addEndListener,
+      onEnter,
+      onEntering,
+      onEntered,
+      onExit,
+      onExiting,
+      onExited,
       children,
       ...rest
     } = props
@@ -44,10 +53,19 @@ const Transition: React.FC<TransitionProps> = React.forwardRef<HTMLDivElement, T
     })
     return (
       <CSSTransition
+        classNames={type}
         in={visible}
         appear={appear}
         timeout={timeout}
-        classNames={type}
+        mountOnEnter={mountOnEnter}
+        unmountOnExit={unmountOnExit}
+        addEndListener={addEndListener}
+        onEnter={onEnter}
+        onEntering={onEntering}
+        onEntered={onEntered}
+        onExit={onExit}
+        onExiting={onExiting}
+        onExited={onExited}
         {...otherProps}
       >
         {wrapper ? (

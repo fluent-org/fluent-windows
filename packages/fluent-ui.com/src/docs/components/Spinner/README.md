@@ -20,19 +20,19 @@ type: Feedback
 
 ```jsx
 <>
-  <Box as="center">
+  <Box textAlign="center">
     <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned below</Typography>
     <FormLabel label="Top Label" position="top"><Spinner /></FormLabel>
   </Box>
-  <Box as="center">
+  <Box textAlign="center">
     <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned above</Typography>
     <FormLabel label="Bottom Label" position="bottom"><Spinner /></FormLabel>
   </Box>
-  <Box as="center">
+  <Box textAlign="center">
     <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned to right</Typography>
     <FormLabel label="Left Label" position="left"><Spinner /></FormLabel>
   </Box>
-  <Box as="center">
+  <Box textAlign="center">
     <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned to left</Typography>
     <FormLabel label="Right Label" position="right"><Spinner /></FormLabel>
   </Box>

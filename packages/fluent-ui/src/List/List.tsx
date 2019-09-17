@@ -60,7 +60,7 @@ const List: React.FC<ListProps> = React.forwardRef<HTMLDivElement, ListProps>(
     const className = classNames(classes.root, classNameProp)
     return (
       <ListContext.Provider value={contextValue}>
-        <Box className={className} ref={ref} as={as} acrylic={acrylic} reveal={reveal} {...rest}>
+        <Box className={className} ref={ref} as={as} acrylic={acrylic} {...rest}>
           {title && (
             <Typography className={classes.title} variant="subtitle2">
               {title}

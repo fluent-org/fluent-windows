@@ -22,9 +22,9 @@ type: Navigation
   return (
     <>
       {types.map(t => (
-        <Radio key={t} value={t} checked={type === t} onChange={handleSetType}>
-          {t}
-        </Radio>
+        <FormLabel label={t} key={t}>
+          <Radio value={t} checked={type === t} onChange={handleSetType} />
+        </FormLabel>
       ))}
       <Button onClick={handleSetVisible}>toggle</Button>
       <Drawer visible={visible} onChange={handleSetVisible} anchor={type}>

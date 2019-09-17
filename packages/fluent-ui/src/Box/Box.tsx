@@ -6,6 +6,7 @@ import { styles } from './Box.styled'
 import { BoxClassProps, BoxProps, BoxPropTypes } from './Box.type'
 import { omit } from '../utils'
 import { Theme } from '../styles'
+import { omitProps } from './omitProps'
 
 export const name = 'Box'
 
@@ -33,43 +34,7 @@ const Box: React.FC<BoxProps> = React.forwardRef<HTMLDivElement, BoxProps>(
       classNameProp
     )
 
-    const otherProps = omit(rest, [
-      'theme',
-      'minHeight',
-      'minWidth',
-      'maxWidth',
-      'maxHeight',
-      'bg',
-      'background',
-      'backgroundClip',
-      'backgroundColor',
-      'backgroundImage',
-      'backgroundOrigin',
-      'backgroundPosition',
-      'backgroundRepeat',
-      'backgroundSize',
-      'backgroundAttachment',
-      'border',
-      'boxShadow',
-      'flex',
-      'flexBasis',
-      'flexDirection',
-      'flexFlow',
-      'flexGrow',
-      'flexShrink',
-      'flexWrap',
-      'order',
-      'alignContent',
-      'alignItems',
-      'alignSelf',
-      'justifyContent',
-      'placeContent',
-      'rowGap',
-      'columnGap',
-      'gap',
-      'padding',
-      'margin'
-    ])
+    const otherProps = omit(rest, omitProps)
 
     const _props = {
       className,
