@@ -10,8 +10,7 @@ const name = 'FluentUIIcons'
 const input = './src/index.ts'
 const globals = {
   react: 'React',
-  'react-dom': 'ReactDOM',
-  'styled-components': 'StyledComponents'
+  'react-dom': 'ReactDOM'
 }
 const babelOptions = {
   extensions,

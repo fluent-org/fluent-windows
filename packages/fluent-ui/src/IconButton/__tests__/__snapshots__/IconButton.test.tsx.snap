@@ -23,8 +23,12 @@ exports[`IconButton should render children 1`] = `
   color: #0078d4;
   background-color: transparent;
 }
-.FIconButton-variantStandard:hover, .FIconButton-variantStandard:focus {}
-.FIconButton-variantStandard:active {}
+.FIconButton-variantStandard:hover, .FIconButton-variantStandard:focus {
+  background-color: rgba(NaN, NaN, NaN, NaN, NaN, NaN, 0.08);
+}
+.FIconButton-variantStandard:active {
+  background-color: rgba(NaN, NaN, NaN, NaN, NaN, NaN, 0.36);
+}
 .FIconButton-variantPrimary {
   color: #ffffff;
   box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
@@ -48,12 +52,5 @@ exports[`IconButton should render children 1`] = `
 .FIconButton-sizeLarge {
   padding: 16px;
   font-size: 1.2em;
-}
-.FIconButton-variantStandard-0 {}
-.FIconButton-variantStandard-0:hover, .FIconButton-variantStandard-0:focus {
-  background-color: rgba(NaN, NaN, NaN, NaN, NaN, NaN, 0.08);
-}
-.FIconButton-variantStandard-0:active {
-  background-color: rgba(NaN, NaN, NaN, NaN, NaN, NaN, 0.36);
 }"
 `;

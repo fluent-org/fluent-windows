@@ -60,7 +60,7 @@ Fancy larger or smaller buttons? Use the `size` property.
 
 ## As
 
-Thanks to [`styled-components`](https://github.com/styled-components/styled-components), you can use `as` to change the type of DOM tag.
+You can use `as` to change the type of DOM tag.
 
 ```jsx
 <Button as="a" href="#">As a</Button>

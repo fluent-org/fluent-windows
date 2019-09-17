@@ -1,7 +1,6 @@
-import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import * as CSS from 'csstype'
 import { BoxProps, BoxPropTypes } from '../Box'
+import { StyledProps } from '../'
 
 export type TypographyClassProps = 'root' | 'variants' | 'gutterTop' | 'gutterBottom' | 'noWrap'
 
@@ -30,8 +29,7 @@ export type Variant =
   | 'body1'
   | 'body2'
 
-export interface TypographyProps extends Omit<BoxProps, 'children'> {
-  children: React.ReactNode
+export interface TypographyProps extends BoxProps, StyledProps {
   variant?: Variant
   variantMapping?: VariantMapping
   gutterTop?: boolean

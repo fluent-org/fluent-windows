@@ -1,7 +1,6 @@
 import * as PropTypes from 'prop-types'
 import { Style } from 'jss'
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
-import { FlattenSimpleInterpolation } from '../styles/styled'
 
 export type TransitionClassProps = 'root' | 'fade' | 'zoom' | 'slide' | 'collapse' | 'grow'
 
@@ -23,7 +22,7 @@ export interface StyledContainerProps {
   wrapper?: boolean
   wrapperHeight: number
   setWrapperHeight: React.Dispatch<number>
-  custom?: FlattenSimpleInterpolation
+  custom?: Style
 }
 
 export const TransitionPropTypes = {

@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { render, getClasses } from '../../test-utils'
+import { render, getClasses } from './index'
 import '@testing-library/jest-dom/extend-expect'
 
-import Box, { name } from '../Box'
-import { BoxClassProps } from '../Box.type'
-import { styles } from '../Box.styled'
+import Box, { name } from '../Box/Box'
+import { BoxClassProps } from '../Box/Box.type'
+import { styles } from '../Box/Box.styled'
 
 const testText = 'Hello World'
 

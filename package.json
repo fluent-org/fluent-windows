@@ -40,7 +40,6 @@
     "husky": "^2.4.0",
     "jest": "^24.8.0",
     "jest-config": "^24.8.0",
-    "jest-styled-components": "^6.3.3",
     "lerna": "^3.14.1",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",

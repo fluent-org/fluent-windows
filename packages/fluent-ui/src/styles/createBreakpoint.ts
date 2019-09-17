@@ -1,23 +1,9 @@
-import { deepMerge } from '../utils'
+export type Breakpoints = [string, string, string, string]
 
-export interface Breakpoints {
-  xs: string
-  sm: string
-  md: string
-  lg: string
-  xl: string
-}
-
-export const defaultBreakpoints = {
-  xs: '0px',
-  sm: '600px',
-  md: '960px',
-  lg: '1280px',
-  xl: '1920px'
-}
+export const defaultBreakpoints: Breakpoints = ['600px', '960px', '1280px', '1920px']
 
 function createBreakpoint(breakpoints: Breakpoints): Breakpoints {
-  return deepMerge(defaultBreakpoints, breakpoints)
+  return breakpoints
 }
 
 export default createBreakpoint

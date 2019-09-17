@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Markdown from 'markdown-to-jsx'
 import { Box, Typography } from '@fluent-ui/core'
+import { createUseStyles } from '@fluent-ui/styles'
 
 import Header from './header'
 import SideBar from './sidebar'
@@ -14,7 +15,7 @@ import Table from '../table'
 
 import { TemplateProps } from './template'
 
-import { StyledTitleA } from './content.styled'
+import { styles } from './content.styled'
 import { scrollToAnchor } from '../../utils/scroll'
 
 interface TypographyComponentProps {
@@ -22,48 +23,62 @@ interface TypographyComponentProps {
   children: any
 }
 
-const H1 = (props: TypographyComponentProps): React.ReactElement => (
-  <Typography variant="h4" as="h1" gutterTop gutterBottom {...props}>
-    <StyledTitleA
-      href={`#${props.id}`}
-      onClick={e => {
-        e.preventDefault()
-        const target = document.querySelector('#contentRoot')
-        scrollToAnchor(`#${props.id}`, target)
-      }}
-    >
-      {props.children}
-    </StyledTitleA>
-  </Typography>
-)
-const H2 = (props: TypographyComponentProps): React.ReactElement => (
-  <Typography variant="h5" as="h2" gutterTop gutterBottom {...props}>
-    <StyledTitleA
-      href={`#${props.id}`}
-      onClick={e => {
-        e.preventDefault()
-        const target = document.querySelector('#contentRoot')
-        scrollToAnchor(`#${props.id}`, target)
-      }}
-    >
-      {props.children}
-    </StyledTitleA>
-  </Typography>
-)
-const H3 = (props: TypographyComponentProps): React.ReactElement => (
-  <Typography variant="h6" as="h3" gutterTop gutterBottom {...props}>
-    <StyledTitleA
-      href={`#${props.id}`}
-      onClick={e => {
-        e.preventDefault()
-        const target = document.querySelector('#contentRoot')
-        scrollToAnchor(`#${props.id}`, target)
-      }}
-    >
-      {props.children}
-    </StyledTitleA>
-  </Typography>
-)
+const useStyles = createUseStyles(styles)
+
+const H1 = (props: TypographyComponentProps): React.ReactElement => {
+  const classes = useStyles()
+  return (
+    <Typography variant="h4" as="h1" gutterTop gutterBottom {...props}>
+      <a
+        className={classes.titleA}
+        href={`#${props.id}`}
+        onClick={e => {
+          e.preventDefault()
+          const target = document.querySelector('#contentRoot')
+          scrollToAnchor(`#${props.id}`, target)
+        }}
+      >
+        {props.children}
+      </a>
+    </Typography>
+  )
+}
+const H2 = (props: TypographyComponentProps): React.ReactElement => {
+  const classes = useStyles()
+  return (
+    <Typography variant="h5" as="h2" gutterTop gutterBottom {...props}>
+      <a
+        className={classes.titleA}
+        href={`#${props.id}`}
+        onClick={e => {
+          e.preventDefault()
+          const target = document.querySelector('#contentRoot')
+          scrollToAnchor(`#${props.id}`, target)
+        }}
+      >
+        {props.children}
+      </a>
+    </Typography>
+  )
+}
+const H3 = (props: TypographyComponentProps): React.ReactElement => {
+  const classes = useStyles()
+  return (
+    <Typography variant="h6" as="h3" gutterTop gutterBottom {...props}>
+      <a
+        className={classes.titleA}
+        href={`#${props.id}`}
+        onClick={e => {
+          e.preventDefault()
+          const target = document.querySelector('#contentRoot')
+          scrollToAnchor(`#${props.id}`, target)
+        }}
+      >
+        {props.children}
+      </a>
+    </Typography>
+  )
+}
 
 const Subtitle = (props: TypographyComponentProps): React.ReactElement => (
   <Typography variant="subtitle1" as="h6" gutterBottom {...props} />

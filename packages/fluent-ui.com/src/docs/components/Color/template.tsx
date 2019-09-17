@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { ReactElement } from 'react'
-import styled from 'styled-components'
+// @ts-ignore
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import { Box } from '@fluent-ui/core'
-import { colors } from '@fluent-ui/core'
+import { Box, colors } from '@fluent-ui/core'
+import { createUseStyles } from '@fluent-ui/styles'
+import { Styles } from 'jss'
 
 interface Item {
   key: string
@@ -21,28 +22,38 @@ const colorList = Object.entries(colors).map(
   })
 )
 
-const Block = styled(
-  ({ type, value, ...rest }): ReactElement => (
-    <Box {...rest}>
+interface BlockProps {
+  type: string
+  value: string
+}
+
+const useStyles = createUseStyles({
+  block: (props: BlockProps) => ({
+    boxSizing: 'border-box',
+    height: 40,
+    padding: 8,
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: props.value,
+    color: props.type.includes('light') ? 'black' : 'white',
+    cursor: 'pointer',
+    transition: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+    '&:hover': {
+      marginRight: -8
+    }
+  })
+})
+const Block = (props: BlockProps): ReactElement => {
+  const { type, value, ...rest } = props
+  const classes = useStyles(props)
+  return (
+    <Box className={classes.block} {...rest}>
       <Box flex={1}>{type}</Box>
       <Box>{value}</Box>
     </Box>
   )
-)`
-  box-sizing: border-box;
-  height: 40px;
-  padding: 8px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: ${({ value }): string => value};
-  color: ${({ type }): string => (type.includes('light') ? 'black' : 'white')};
-  cursor: pointer;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  &:hover {
-    margin-right: -8px;
-  }
-`
+}
 
 const Template = (): ReactElement => {
   return (

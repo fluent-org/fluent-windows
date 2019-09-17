@@ -12,7 +12,6 @@
 [![CircleCI](https://img.shields.io/circleci/build/github/fluent-org/fluent-ui/master.svg?style=flat-square)](https://circleci.com/gh/fluent-org/fluent-ui/tree/master)
 [![codecov](https://img.shields.io/codecov/c/github/fluent-org/fluent-ui.svg?style=flat-square)](https://codecov.io/gh/fluent-org/fluent-ui)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/fluent-org/fluent-ui/blob/master/LICENSE)
-[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e&style=flat-square)](https://github.com/styled-components/styled-components)
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lerna.js.org/)
 

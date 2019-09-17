@@ -175,6 +175,7 @@ exports[`List should render children 1`] = `
     background-color: #0078d4;
   }
   .FItem-activeBarHorizontal {
+    top: auto;
     left: 10%;
     width: 80%;
     bottom: 0;

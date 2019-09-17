@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 import { Navigation, Drawer, Item, ItemGroup } from '@fluent-ui/core'
+import { createUseStyles } from '@fluent-ui/styles'
 import {
   GlobalNavigationButton as GlobalNavigationButtonIcon,
   Connected as ConnectedIcon,
@@ -92,6 +93,20 @@ function getPrefixBytitle(title: string): JSX.Element {
   return target ? target.prefix : <ConnectedIcon />
 }
 
+const useStyles = createUseStyles({
+  pc: {
+    '@media (max-width: 600px)': {
+      width: 0,
+      opacity: 0,
+      display: 'none',
+      visibility: 'hidden'
+    },
+    '@media (min-width: 600px)': {
+      width: 260
+    }
+  }
+})
+
 const Nav = ({ data }: TemplateProps): React.ReactElement => {
   const activeId = data.doc.frontmatter.title
 
@@ -149,25 +164,15 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       </Navigation>
     </Drawer>
   )
+  const pcClasses = useStyles()
   const pcChild = (
-    // @ts-ignore
     <Navigation
+      className={pcClasses.pc}
       ref={rootRef}
       value={activeId}
       expanded={expanded}
       acrylic
       height="100%"
-      css={`
-        @media (max-width: 600px) {
-          width: 0;
-          opacity: 0;
-          display: none;
-          visibility: hidden;
-        }
-        @media (min-width: 600px) {
-          width: 260px;
-        }
-      `}
     >
       <Navigation.Header>
         <Item onClick={handleExpanded} prefix={<GlobalNavigationButtonIcon />} />

@@ -294,7 +294,7 @@ exports[`Navigation should render children 1`] = `
   .FNavigation-root {  }
   .FNavigation-horizontal {
     max-height: 40px;
-    flex-direction: row;
+    flex-direction: row !important;
   }
   .FNavigation-expanded {  }
   .FNavigation-header {
@@ -374,6 +374,7 @@ exports[`Navigation should render children 1`] = `
     background-color: #0078d4;
   }
   .FItem-activeBarHorizontal {
+    top: auto;
     left: 10%;
     width: 80%;
     bottom: 0;

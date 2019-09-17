@@ -51,19 +51,16 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-live": "^2.2.0",
-    "styled-components": "^4.3.2"
+    "react-live": "^2.2.0"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "^6.9.0",
     "@types/react-copy-to-clipboard": "^4.2.6",
     "@types/react-helmet": "^5.0.8",
-    "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
     "gatsby-plugin-eslint": "^2.0.5",
-    "gatsby-plugin-styled-components": "^3.0.7",
     "prettier": "^1.17.1"
   },
   "scripts": {

@@ -38,10 +38,6 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {}
-    },
-    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#333`,

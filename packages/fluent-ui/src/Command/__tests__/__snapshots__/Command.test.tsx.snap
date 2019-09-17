@@ -15,13 +15,13 @@ exports[`Command should be rendered with acrylic effects 1`] = `
     class="FCommand-primary"
   >
     <div
-      class="FBox-root FBox-system FBox-system-2 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-2 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-gPEVay dvHBPq"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -30,17 +30,17 @@ exports[`Command should be rendered with acrylic effects 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
     <div
-      class="FBox-root FBox-system FBox-system-4 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-4 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-dTOuAs kUGVSr"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -49,17 +49,17 @@ exports[`Command should be rendered with acrylic effects 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
     <div
-      class="FBox-root FBox-system FBox-system-6 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-6 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-cSYcjD lhitew"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -68,18 +68,18 @@ exports[`Command should be rendered with acrylic effects 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
   </div>
   <div
-    class="FBox-root FBox-system FBox-system-8 sc-ivnqEn eNFwQO"
+    class="FBox-root FBox-system FBox-system-8 FItem-root"
   >
     <div
-      class="sc-dDDicx kSaHUs"
+      class="FItem-prefixRoot"
     >
       <svg
-        class="sc-flvzOl iEQSPW"
+        style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -88,7 +88,7 @@ exports[`Command should be rendered with acrylic effects 1`] = `
       </svg>
     </div>
     <div
-      class="sc-briLRg cqzyIa"
+      class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
     />
   </div>
 </div>
@@ -101,7 +101,7 @@ exports[`Command should be rendered with acrylic effects 2`] = `
 .FBox-system {}
 .FBox-acrylic {}
 .FBox-system-0 {
-  background-color: standard.light2;
+  background-color: #f5f5f5;
 }
 .FBox-acrylic-1 {
   overflow: hidden;
@@ -384,6 +384,174 @@ exports[`Command should be rendered with acrylic effects 2`] = `
     background-image: url(data:image/png;base64,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);
   }
 }
+  .FItem-root {
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    padding: 12px 20px;
+    position: relative;
+    min-height: 40px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .FItem-root:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .FItem-root:active {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FItem-reveal {
+    background-color: #f5f5f5;
+  }
+  .FItem-reveal:hover {
+    background-color: #e9e9e9;
+  }
+  .FItem-reveal:active {
+    background-color: #b5b5b5;
+  }
+  .FItem-activeBar {
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 24px;
+    position: absolute;
+    transform: scale3d(0, 0, 0);
+    margin-top: -12px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    background-color: #0078d4;
+  }
+  .FItem-activeBarHorizontal {
+    top: auto;
+    left: 10%;
+    width: 80%;
+    bottom: 0;
+    height: 4px;
+  }
+  .FItem-activeBarActive {
+    transform: scale3d(1, 1, 1);
+  }
+  .FItem-prefixRoot {
+    height: 100%;
+    display: flex;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+  }
+  .FItem-text {
+    flex: 1;
+    width: 0;
+    display: flex;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 14px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 0;
+  }
+  .FItem-textExpanded {
+    width: auto;
+    opacity: 1;
+  }
+  .FItem-textNoChildren {
+    padding-left: 0 !important;
+  }
+  .FItem-textHasPrefix {
+    padding-left: 12px;
+  }
+  .FTransition-root {  }
+  .FTransition-fade {  }
+  .FTransition-fade.fade-enter {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-exit {
+    opacity: 1;
+  }
+  .FTransition-fade.fade-exit-active {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-enter-active {
+    opacity: 1;
+  }
+  .FTransition-zoom {  }
+  .FTransition-zoom.zoom-enter {  }
+  .FTransition-zoom.zoom-exit {  }
+  .FTransition-zoom.zoom-exit-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-exit-done {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-done {
+    transform: none;
+  }
+  .FTransition-slide {  }
+  .FTransition-slide.slide-enter {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit {
+    transform: none;
+  }
+  .FTransition-slide.slide-exit-active {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit-done {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-enter-done {
+    transform: none;
+  }
+  .FTransition-collapse {  }
+  .FTransition-grow {  }
+  .FTransition-grow.grow-enter {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit {  }
+  .FTransition-grow.grow-exit-active {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit-done {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-enter-active {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  .FTransition-grow.grow-enter-done {
+    opacity: 1;
+    transform: none;
+  }
+  .FTransition-root-0 {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    visibility: hidden;
+  }
+  .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-enter {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-done {
+    height: auto;
+  }
   .FCommand-root {
     display: flex;
     overflow: hidden;
@@ -427,13 +595,13 @@ exports[`Command should be rendered with reveal effects 1`] = `
       style="margin: 1px; padding: 1px;"
     >
       <div
-        class="FBox-root FBox-system FBox-system-2 sc-ivnqEn kWtnom"
+        class="FBox-root FBox-system FBox-system-2 FItem-root FItem-reveal"
       >
         <div
-          class="sc-dDDicx kSaHUs"
+          class="FItem-prefixRoot"
         >
           <svg
-            class="sc-gPEVay dvHBPq"
+            style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
             viewBox="0 0 2048 2048"
           >
             <path
@@ -442,7 +610,7 @@ exports[`Command should be rendered with reveal effects 1`] = `
           </svg>
         </div>
         <div
-          class="sc-briLRg cqzyIa"
+          class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
         />
       </div>
     </div>
@@ -450,13 +618,13 @@ exports[`Command should be rendered with reveal effects 1`] = `
       style="margin: 1px; padding: 1px;"
     >
       <div
-        class="FBox-root FBox-system FBox-system-4 sc-ivnqEn kWtnom"
+        class="FBox-root FBox-system FBox-system-4 FItem-root FItem-reveal"
       >
         <div
-          class="sc-dDDicx kSaHUs"
+          class="FItem-prefixRoot"
         >
           <svg
-            class="sc-dTOuAs kUGVSr"
+            style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
             viewBox="0 0 2048 2048"
           >
             <path
@@ -465,7 +633,7 @@ exports[`Command should be rendered with reveal effects 1`] = `
           </svg>
         </div>
         <div
-          class="sc-briLRg cqzyIa"
+          class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
         />
       </div>
     </div>
@@ -473,13 +641,13 @@ exports[`Command should be rendered with reveal effects 1`] = `
       style="margin: 1px; padding: 1px;"
     >
       <div
-        class="FBox-root FBox-system FBox-system-6 sc-ivnqEn kWtnom"
+        class="FBox-root FBox-system FBox-system-6 FItem-root FItem-reveal"
       >
         <div
-          class="sc-dDDicx kSaHUs"
+          class="FItem-prefixRoot"
         >
           <svg
-            class="sc-cSYcjD lhitew"
+            style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
             viewBox="0 0 2048 2048"
           >
             <path
@@ -488,7 +656,7 @@ exports[`Command should be rendered with reveal effects 1`] = `
           </svg>
         </div>
         <div
-          class="sc-briLRg cqzyIa"
+          class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
         />
       </div>
     </div>
@@ -497,14 +665,14 @@ exports[`Command should be rendered with reveal effects 1`] = `
     style="margin: 1px; padding: 1px;"
   >
     <div
-      class="FBox-root FBox-system FBox-system-8 sc-ivnqEn kWtnom"
+      class="FBox-root FBox-system FBox-system-8 FItem-root FItem-reveal"
       style="height: 100%;"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-flvzOl iEQSPW"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -513,7 +681,7 @@ exports[`Command should be rendered with reveal effects 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
   </div>
@@ -527,7 +695,7 @@ exports[`Command should be rendered with reveal effects 2`] = `
 .FBox-system {}
 .FBox-acrylic {}
 .FBox-system-0 {
-  background-color: standard.light2;
+  background-color: #f5f5f5;
 }
 .FBox-acrylic-1 {
   overflow: hidden;
@@ -810,6 +978,174 @@ exports[`Command should be rendered with reveal effects 2`] = `
     background-image: url(data:image/png;base64,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);
   }
 }
+  .FItem-root {
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    padding: 12px 20px;
+    position: relative;
+    min-height: 40px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .FItem-root:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .FItem-root:active {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FItem-reveal {
+    background-color: #f5f5f5;
+  }
+  .FItem-reveal:hover {
+    background-color: #e9e9e9;
+  }
+  .FItem-reveal:active {
+    background-color: #b5b5b5;
+  }
+  .FItem-activeBar {
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 24px;
+    position: absolute;
+    transform: scale3d(0, 0, 0);
+    margin-top: -12px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    background-color: #0078d4;
+  }
+  .FItem-activeBarHorizontal {
+    top: auto;
+    left: 10%;
+    width: 80%;
+    bottom: 0;
+    height: 4px;
+  }
+  .FItem-activeBarActive {
+    transform: scale3d(1, 1, 1);
+  }
+  .FItem-prefixRoot {
+    height: 100%;
+    display: flex;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+  }
+  .FItem-text {
+    flex: 1;
+    width: 0;
+    display: flex;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 14px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 0;
+  }
+  .FItem-textExpanded {
+    width: auto;
+    opacity: 1;
+  }
+  .FItem-textNoChildren {
+    padding-left: 0 !important;
+  }
+  .FItem-textHasPrefix {
+    padding-left: 12px;
+  }
+  .FTransition-root {  }
+  .FTransition-fade {  }
+  .FTransition-fade.fade-enter {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-exit {
+    opacity: 1;
+  }
+  .FTransition-fade.fade-exit-active {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-enter-active {
+    opacity: 1;
+  }
+  .FTransition-zoom {  }
+  .FTransition-zoom.zoom-enter {  }
+  .FTransition-zoom.zoom-exit {  }
+  .FTransition-zoom.zoom-exit-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-exit-done {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-done {
+    transform: none;
+  }
+  .FTransition-slide {  }
+  .FTransition-slide.slide-enter {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit {
+    transform: none;
+  }
+  .FTransition-slide.slide-exit-active {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit-done {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-enter-done {
+    transform: none;
+  }
+  .FTransition-collapse {  }
+  .FTransition-grow {  }
+  .FTransition-grow.grow-enter {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit {  }
+  .FTransition-grow.grow-exit-active {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit-done {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-enter-active {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  .FTransition-grow.grow-enter-done {
+    opacity: 1;
+    transform: none;
+  }
+  .FTransition-root-0 {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    visibility: hidden;
+  }
+  .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-enter {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-done {
+    height: auto;
+  }
   .FCommand-root {
     display: flex;
     overflow: hidden;
@@ -842,7 +1178,7 @@ exports[`Command should render children 1`] = `
 .FBox-system {}
 .FBox-acrylic {}
 .FBox-system-0 {
-  background-color: standard.light2;
+  background-color: #f5f5f5;
 }
 .FBox-acrylic-1 {
   overflow: hidden;
@@ -901,6 +1237,95 @@ exports[`Command should render children 1`] = `
     background-image: url(data:image/png;base64,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);
   }
 }
+  .FTransition-root {  }
+  .FTransition-fade {  }
+  .FTransition-fade.fade-enter {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-exit {
+    opacity: 1;
+  }
+  .FTransition-fade.fade-exit-active {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-enter-active {
+    opacity: 1;
+  }
+  .FTransition-zoom {  }
+  .FTransition-zoom.zoom-enter {  }
+  .FTransition-zoom.zoom-exit {  }
+  .FTransition-zoom.zoom-exit-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-exit-done {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-done {
+    transform: none;
+  }
+  .FTransition-slide {  }
+  .FTransition-slide.slide-enter {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit {
+    transform: none;
+  }
+  .FTransition-slide.slide-exit-active {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit-done {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-enter-done {
+    transform: none;
+  }
+  .FTransition-collapse {  }
+  .FTransition-grow {  }
+  .FTransition-grow.grow-enter {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit {  }
+  .FTransition-grow.grow-exit-active {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit-done {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-enter-active {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  .FTransition-grow.grow-enter-done {
+    opacity: 1;
+    transform: none;
+  }
+  .FTransition-root-0 {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    visibility: hidden;
+  }
+  .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-enter {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-done {
+    height: auto;
+  }
   .FCommand-root {
     display: flex;
     overflow: hidden;
@@ -941,13 +1366,13 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
     class="FCommand-primary"
   >
     <div
-      class="FBox-root FBox-system FBox-system-2 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-2 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-gPEVay dvHBPq"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -956,17 +1381,17 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
     <div
-      class="FBox-root FBox-system FBox-system-4 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-4 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-dTOuAs kUGVSr"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -975,17 +1400,17 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
     <div
-      class="FBox-root FBox-system FBox-system-6 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-6 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-cSYcjD lhitew"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -994,18 +1419,18 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
   </div>
   <div
-    class="FBox-root FBox-system FBox-system-8 sc-ivnqEn eNFwQO"
+    class="FBox-root FBox-system FBox-system-8 FItem-root"
   >
     <div
-      class="sc-dDDicx kSaHUs"
+      class="FItem-prefixRoot"
     >
       <svg
-        class="sc-flvzOl iEQSPW"
+        style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -1014,7 +1439,7 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
       </svg>
     </div>
     <div
-      class="sc-briLRg cqzyIa"
+      class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
     />
   </div>
 </div>
@@ -1028,13 +1453,13 @@ exports[`Command without Content and Secondary 1`] = `
     class="FCommand-primary"
   >
     <div
-      class="FBox-root FBox-system FBox-system-2 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-2 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-gPEVay dvHBPq"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -1043,17 +1468,17 @@ exports[`Command without Content and Secondary 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
     <div
-      class="FBox-root FBox-system FBox-system-4 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-4 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-dTOuAs kUGVSr"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -1062,17 +1487,17 @@ exports[`Command without Content and Secondary 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
     <div
-      class="FBox-root FBox-system FBox-system-6 sc-ivnqEn eNFwQO"
+      class="FBox-root FBox-system FBox-system-6 FItem-root"
     >
       <div
-        class="sc-dDDicx kSaHUs"
+        class="FItem-prefixRoot"
       >
         <svg
-          class="sc-cSYcjD lhitew"
+          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -1081,7 +1506,7 @@ exports[`Command without Content and Secondary 1`] = `
         </svg>
       </div>
       <div
-        class="sc-briLRg cqzyIa"
+        class="FItem-text FItem-textExpanded FItem-textNoChildren FItem-textHasPrefix"
       />
     </div>
   </div>
@@ -1095,7 +1520,7 @@ exports[`Command without Content and Secondary 2`] = `
 .FBox-system {}
 .FBox-acrylic {}
 .FBox-system-0 {
-  background-color: standard.light2;
+  background-color: #f5f5f5;
 }
 .FBox-acrylic-1 {
   overflow: hidden;
@@ -1322,6 +1747,174 @@ exports[`Command without Content and Secondary 2`] = `
     background-image: url(data:image/png;base64,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);
   }
 }
+  .FItem-root {
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    padding: 12px 20px;
+    position: relative;
+    min-height: 40px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .FItem-root:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .FItem-root:active {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FItem-reveal {
+    background-color: #f5f5f5;
+  }
+  .FItem-reveal:hover {
+    background-color: #e9e9e9;
+  }
+  .FItem-reveal:active {
+    background-color: #b5b5b5;
+  }
+  .FItem-activeBar {
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 24px;
+    position: absolute;
+    transform: scale3d(0, 0, 0);
+    margin-top: -12px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    background-color: #0078d4;
+  }
+  .FItem-activeBarHorizontal {
+    top: auto;
+    left: 10%;
+    width: 80%;
+    bottom: 0;
+    height: 4px;
+  }
+  .FItem-activeBarActive {
+    transform: scale3d(1, 1, 1);
+  }
+  .FItem-prefixRoot {
+    height: 100%;
+    display: flex;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    justify-content: center;
+  }
+  .FItem-text {
+    flex: 1;
+    width: 0;
+    display: flex;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 14px;
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 0;
+  }
+  .FItem-textExpanded {
+    width: auto;
+    opacity: 1;
+  }
+  .FItem-textNoChildren {
+    padding-left: 0 !important;
+  }
+  .FItem-textHasPrefix {
+    padding-left: 12px;
+  }
+  .FTransition-root {  }
+  .FTransition-fade {  }
+  .FTransition-fade.fade-enter {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-exit {
+    opacity: 1;
+  }
+  .FTransition-fade.fade-exit-active {
+    opacity: 0;
+  }
+  .FTransition-fade.fade-enter-active {
+    opacity: 1;
+  }
+  .FTransition-zoom {  }
+  .FTransition-zoom.zoom-enter {  }
+  .FTransition-zoom.zoom-exit {  }
+  .FTransition-zoom.zoom-exit-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-exit-done {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-active {
+    transform: scale3d(0, 0, 0);
+  }
+  .FTransition-zoom.zoom-enter-done {
+    transform: none;
+  }
+  .FTransition-slide {  }
+  .FTransition-slide.slide-enter {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit {
+    transform: none;
+  }
+  .FTransition-slide.slide-exit-active {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-exit-done {
+    transform: translateY(100vh);
+  }
+  .FTransition-slide.slide-enter-done {
+    transform: none;
+  }
+  .FTransition-collapse {  }
+  .FTransition-grow {  }
+  .FTransition-grow.grow-enter {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit {  }
+  .FTransition-grow.grow-exit-active {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-exit-done {
+    opacity: 0;
+    transform: scale(0.75, 0.5625);
+  }
+  .FTransition-grow.grow-enter-active {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  .FTransition-grow.grow-enter-done {
+    opacity: 1;
+    transform: none;
+  }
+  .FTransition-root-0 {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+    visibility: hidden;
+  }
+  .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-enter {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-exit-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-active {
+    height: 0;
+  }
+  .FTransition-collapse-1.collapse-enter-done {
+    height: auto;
+  }
   .FCommand-root {
     display: flex;
     overflow: hidden;

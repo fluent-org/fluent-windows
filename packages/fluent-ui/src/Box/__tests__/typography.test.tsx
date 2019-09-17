@@ -1,4 +1,4 @@
-import { getStyle } from './test_unit'
+import { getStyle } from '../../test-utils'
 import '@testing-library/jest-dom/extend-expect'
 
 describe('Box typography', (): void => {

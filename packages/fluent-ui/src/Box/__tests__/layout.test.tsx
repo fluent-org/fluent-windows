@@ -1,5 +1,6 @@
-import { getStyle } from './test_unit'
+import { getStyle } from '../../test-utils'
 import '@testing-library/jest-dom/extend-expect'
+import { defaultBreakpoints } from '../../styles/createBreakpoint'
 
 describe('Box layout', (): void => {
   test('returns layout styles', (): void => {
@@ -12,10 +13,10 @@ describe('Box layout', (): void => {
       width: '100%',
       'max-width': '768px',
       'min-height': '32px',
-      '@media screen and (min-width: 40em)': {
+      [`@media screen and (min-width: ${defaultBreakpoints[0]})`]: {
         width: '50%'
       },
-      '@media screen and (min-width: 52em)': {
+      [`@media screen and (min-width: ${defaultBreakpoints[1]})`]: {
         width: '25%'
       }
     })

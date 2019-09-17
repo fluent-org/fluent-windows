@@ -36,10 +36,14 @@
   },
   "peerDependencies": {
     "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0",
-    "styled-components": ">= 4.X"
+    "react-dom": ">= 16.8.0"
+  },
+  "dependencies": {
+    "@fluent-ui/styles": "^0.0.0",
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.9",
     "@types/svgo": "^1.2.0",
     "htm": "^2.1.1",
     "omit-deep-lodash": "^1.1.4",

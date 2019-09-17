@@ -1,25 +1,35 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
 
 export type Children = [string, any]
 export type JSX = ['svg', any, Children]
 
-function createIcon(jsx: JSX, componentName: string): React.ForwardRefExoticComponent<{}> {
-  const [type, props, children] = jsx
-  function Icon(_props: any): any {
-    return React.createElement(type, { ...props, ..._props }, React.createElement(...children))
+const useStyles = createUseStyles({
+  icon: {
+    width: '1em',
+    height: '1em',
+    display: 'inline-block',
+    userSelect: 'none',
+    fontSize: 'inherit',
+    color: 'inherit',
+    fill: 'currentColor'
   }
-  const SvgIconStyled = styled(Icon)`
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    user-select: none;
-    font-size: inherit;
-    color: inherit;
-    fill: currentColor;
-  `
-  SvgIconStyled.displayName = `FIcon${componentName}`
-  return SvgIconStyled
+})
+
+function createIcon(jsx: JSX, componentName: string): React.FC {
+  const [type, props, children] = jsx
+  const Icon: React.FC = ({ className: classNameProp, ...rest }: any): React.ReactElement => {
+    const classes = useStyles()
+    const className = classNames(classes.icon, classNameProp)
+    return React.createElement(
+      type,
+      { ...props, ...rest, className },
+      React.createElement(...children)
+    )
+  }
+  Icon.displayName = `FIcon${componentName}`
+  return Icon
 }
 
 export default createIcon

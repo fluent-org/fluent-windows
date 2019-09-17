@@ -1,5 +1,6 @@
-import { getStyle } from './test_unit'
+import { getStyle } from '../../test-utils'
 import '@testing-library/jest-dom/extend-expect'
+import { defaultBreakpoints } from '../../styles/createBreakpoint'
 
 describe('Box space', (): void => {
   test('returns style objects', (): void => {
@@ -50,8 +51,8 @@ describe('Box space', (): void => {
     })
     expect(styles).toEqual({
       margin: 0,
-      '@media screen and (min-width: 40em)': { margin: '8px' },
-      '@media screen and (min-width: 52em)': { margin: '16px' }
+      [`@media screen and (min-width: ${defaultBreakpoints[0]})`]: { margin: '8px' },
+      [`@media screen and (min-width: ${defaultBreakpoints[1]})`]: { margin: '16px' }
     })
   })
 
@@ -197,10 +198,10 @@ describe('Box space', (): void => {
     })
     expect(styles).toEqual({
       margin: 0,
-      '@media screen and (min-width: 40em)': {
+      [`@media screen and (min-width: ${defaultBreakpoints[0]})`]: {
         margin: '4px'
       },
-      '@media screen and (min-width: 52em)': {
+      [`@media screen and (min-width: ${defaultBreakpoints[1]})`]: {
         margin: '8px'
       }
     })

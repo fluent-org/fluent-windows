@@ -1,31 +1,33 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { Box, Typography } from '@fluent-ui/core'
-import styled from 'styled-components'
+import { Box, Theme, Typography } from '@fluent-ui/core'
+import { createUseStyles } from '@fluent-ui/styles'
 import { TemplateProps } from './template'
-import { th } from '@fluent-ui/core'
 import { scrollToAnchor } from '../../utils/scroll'
 
-const StyledSideBarRoot = styled.div`
-  position: fixed;
-  top: 114px;
-  right: -80px;
-  z-index: 100 !important;
-  transition: ${th.transition('default')};
-  &:hover {
-    right: 0;
+type Styles = 'sideBar' | 'subTitle'
+const useStyles = createUseStyles<Theme, Styles>((theme: Theme) => ({
+  sideBar: {
+    position: 'fixed',
+    top: 114,
+    right: -80,
+    zIndex: '100 !important',
+    transition: theme.transitions!.default,
+    '&:hover': {
+      right: 0
+    }
+  },
+  subTitle: {
+    textDecoration: 'none',
+    marginTop: 4,
+    color: theme.colors!.standard!.dark1,
+    transition: theme.transitions!.default,
+    cursor: 'pointer',
+    '&:hover': {
+      color: theme.colors!.standard!.dark3
+    }
   }
-`
-const StyledSubTitle = styled(Typography)`
-  text-decoration: none;
-  margin-top: 4px;
-  color: ${th.color('standard.dark1')};
-  transition: ${th.transition('default')};
-  cursor: pointer;
-  &:hover {
-    color: ${th.color('standard.dark3')};
-  }
-`
+}))
 
 interface SidebarProps {
   data: TemplateProps['data']
@@ -41,8 +43,10 @@ function toLine(name: string) {
 const SideBar: React.FC<SidebarProps> = ({ data }): React.ReactElement => {
   const [title] = data.doc.htmlAst.children.filter((element): boolean => element.tagName === 'h1')
   const subtitles = data.doc.htmlAst.children.filter((element): boolean => element.tagName === 'h2')
+
+  const classes = useStyles()
   return (
-    <StyledSideBarRoot>
+    <div className={classes.sideBar}>
       <Box
         acrylic
         as="nav"
@@ -66,7 +70,8 @@ const SideBar: React.FC<SidebarProps> = ({ data }): React.ReactElement => {
             (t): React.ReactElement => {
               const value = t.children[0].value
               return (
-                <StyledSubTitle
+                <Typography
+                  className={classes.subTitle}
                   key={value}
                   variant="body2"
                   as="a"
@@ -78,13 +83,13 @@ const SideBar: React.FC<SidebarProps> = ({ data }): React.ReactElement => {
                   }}
                 >
                   {value}
-                </StyledSubTitle>
+                </Typography>
               )
             }
           )}
         </Box>
       </Box>
-    </StyledSideBarRoot>
+    </div>
   )
 }
 

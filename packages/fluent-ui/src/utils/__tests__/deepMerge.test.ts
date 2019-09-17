@@ -45,16 +45,19 @@ describe('deepMerge', (): void => {
       c: 'C',
       d: null
     }
+    // @ts-ignore
     expect(deepMerge({}, obj1, obj2)).toEqual(obj3)
   })
   it('should behave like Object.assign on the top level', (): void => {
     const obj1 = { a: { a1: 'A1' }, c: 'C' }
     const obj2 = { a: undefined, b: { b1: 'B1' } }
+    // @ts-ignore
     expect(deepMerge({}, obj1, obj2)).toEqual(Object.assign({}, obj1, obj2))
   })
   it('should not merge array values, just override', (): void => {
     const obj1 = { a: ['A', 'B'] }
     const obj2 = { a: ['C'], b: ['D'] }
+    // @ts-ignore
     expect(deepMerge({}, obj1, obj2)).toEqual({ a: ['C'], b: ['D'] })
   })
 })
