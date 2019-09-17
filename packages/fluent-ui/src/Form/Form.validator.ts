@@ -5,10 +5,12 @@ export const createValidator = (
   values: any,
   callback: (errors: any[]) => void
 ): any => {
+  // @ts-ignore
   schema.warning = (): void => {}
   const validator = new schema(descriptor)
   validator.validate(
     values,
+    // @ts-ignore
     (errors: any[]): void => {
       callback(errors)
     }
