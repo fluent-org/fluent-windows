@@ -1,37 +1,39 @@
 import * as React from 'react'
-import { StyledSpinnerWrapper, StyledSpinner } from './Spinner.styled'
-import { SpinnerProps, SpinnerPropTypes } from './Spinner.type'
-import Typography from '../Typography'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Spinner.styled'
+import { Theme } from '../styles'
+import { SpinnerClassProps, SpinnerProps, SpinnerPropTypes } from './Spinner.type'
+
+export const name = 'Spinner'
+
+const useStyles = createUseStyles<Theme, SpinnerClassProps>(styles, { name })
 
 const Spinner: React.FC<SpinnerProps> = React.forwardRef<HTMLDivElement, SpinnerProps>(
-  ({ size = 'medium', label, labelPosition = 'bottom', ...rest }, ref): React.ReactElement => {
-    const gap = React.useMemo((): object => {
-      switch (labelPosition) {
-        case 'top':
-          return { marginBottom: '8px' }
-        case 'bottom':
-          return { marginTop: '8px' }
-        case 'left':
-          return { marginRight: '8px' }
-        case 'right':
-          return { marginLeft: '8px' }
-      }
-    }, [labelPosition])
-    return (
-      <StyledSpinnerWrapper labelPosition={labelPosition} {...rest}>
-        {label && (
-          <Typography variant="body2" as="label" color="primary.default" style={gap}>
-            {label}
-          </Typography>
-        )}
-        <StyledSpinner ref={ref} size={size} />
-      </StyledSpinnerWrapper>
+  (props, ref): React.ReactElement => {
+    const { as: Component = 'span', className: classNameProp, size = 'medium', ...rest } = props
+
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.sizeSmall]: size === 'small',
+        [classes.sizeMedium]: size === 'medium',
+        [classes.sizeLarge]: size === 'large'
+      },
+      classNameProp
     )
+
+    return <Component className={className} ref={ref} {...rest} />
   }
 )
 
-Spinner.displayName = 'FSpinner'
+Spinner.displayName = `F${name}`
 
 Spinner.propTypes = SpinnerPropTypes
+
+Spinner.defaultProps = {
+  size: 'medium'
+}
 
 export default Spinner

@@ -1,53 +1,31 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Spinner } from '../..'
+import Spinner, { name } from '../Spinner'
+import { styles } from '../Spinner.styled'
+import { SpinnerClassProps } from '../Spinner.type'
+
+const classes = getClasses<SpinnerClassProps>(styles, name)
 
 describe('Spinner', (): void => {
-  const theme = {}
-  test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Spinner />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should be support ref', (): void => {
+    const ref = React.createRef<HTMLDivElement>()
+    const { container } = render(<Spinner ref={ref} />)
+    const { current: element } = ref
+    expect(element).toEqual(container.firstChild)
   })
 
-  test('prop size', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Spinner size="small" />
-        <Spinner size="medium" />
-        <Spinner size="large" />
-      </ThemeProvider>
+  test('should support size', (): void => {
+    const { getByTestId } = render(
+      <>
+        <Spinner size="small" data-testid="small" />
+        <Spinner size="medium" data-testid="medium" />
+        <Spinner size="large" data-testid="large" />
+      </>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('prop label', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Spinner label="wait..." />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-
-  test('prop labelPosition', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Spinner label="Top Label" labelPosition="top" />
-        <Spinner label="Bottom Label" labelPosition="bottom" />
-        <Spinner label="Left Label" labelPosition="left" />
-        <Spinner label="Right Label" labelPosition="right" />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(getByTestId('small')).toHaveClass(classes.sizeSmall)
+    expect(getByTestId('medium')).toHaveClass(classes.sizeMedium)
+    expect(getByTestId('large')).toHaveClass(classes.sizeLarge)
   })
 })

@@ -31,7 +31,9 @@ type: Inputs
     set(c)
   }
   return (
-    <Checkbox checked={checked} onChange={handleChange}>Checkbox</Checkbox>
+    <FormLabel label="Checkbox">
+      <Checkbox checked={checked} onChange={handleChange} />
+    </FormLabel>
   )
 }
 ```

@@ -14,6 +14,7 @@ const Radio: React.FC<RadioProps> = React.forwardRef<HTMLInputElement, RadioProp
     const {
       as: Component = 'div',
       className: classNameProp,
+      style,
       checked,
       value,
       onChange,
@@ -38,7 +39,7 @@ const Radio: React.FC<RadioProps> = React.forwardRef<HTMLInputElement, RadioProp
       onChange && onChange(e.target.value)
     }
     return (
-      <Component className={className}>
+      <Component className={className} style={style}>
         <div className={circleClassName} />
         <input
           ref={ref}

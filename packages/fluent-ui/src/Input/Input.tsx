@@ -16,6 +16,7 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
   (props, ref): React.ReactElement => {
     const {
       className: classNameProp,
+      style,
       value,
       onChange,
       placeholder,
@@ -61,7 +62,7 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
     )
 
     return (
-      <div className={classes.wrapper}>
+      <div className={classes.wrapper} style={style}>
         <input
           className={className}
           ref={ref}

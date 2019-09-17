@@ -1,18 +1,14 @@
-import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { StandardProps } from '..'
+import { StandardProps, StyledProps } from '..'
+
+export type SpinnerClassProps = 'root' | 'sizeSmall' | 'sizeMedium' | 'sizeLarge'
 
 type SpinnerSize = 'small' | 'medium' | 'large'
-export type SpinnerLabelPosition = 'top' | 'right' | 'bottom' | 'left'
 
-export interface SpinnerProps extends StandardProps {
+export interface SpinnerProps extends StandardProps, StyledProps {
   size?: SpinnerSize
-  label?: React.ReactText
-  labelPosition?: SpinnerLabelPosition
 }
 
 export const SpinnerPropTypes = {
-  size: PropTypes.oneOf<SpinnerSize>(['small', 'medium', 'large']),
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  labelPosition: PropTypes.oneOf<SpinnerLabelPosition>(['top', 'right', 'bottom', 'left'])
+  size: PropTypes.oneOf<SpinnerSize>(['small', 'medium', 'large'])
 }

@@ -16,23 +16,25 @@ type: Feedback
 </>
 ```
 
-## Label
-
-```jsx
-<Spinner label="wait..." />
-```
-
 ## LabelPosition
 
 ```jsx
 <>
-  <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned below</Typography>
-  <Spinner label="Top Label" labelPosition="top" />
-  <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned above</Typography>
-  <Spinner label="Bottom Label" labelPosition="bottom" />
-  <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned to right</Typography>
-  <Spinner label="Left Label" labelPosition="left" />
-  <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned to left</Typography>
-  <Spinner label="Right Label" labelPosition="right" />
+  <Box as="center">
+    <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned below</Typography>
+    <FormLabel label="Top Label" position="top"><Spinner /></FormLabel>
+  </Box>
+  <Box as="center">
+    <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned above</Typography>
+    <FormLabel label="Bottom Label" position="bottom"><Spinner /></FormLabel>
+  </Box>
+  <Box as="center">
+    <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned to right</Typography>
+    <FormLabel label="Left Label" position="left"><Spinner /></FormLabel>
+  </Box>
+  <Box as="center">
+    <Typography variant="subtitle2" style={{ textAlign: 'center' }}>Spinner with label positioned to left</Typography>
+    <FormLabel label="Right Label" position="right"><Spinner /></FormLabel>
+  </Box>
 </>
 ```

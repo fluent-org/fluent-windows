@@ -7,7 +7,7 @@ const root = (theme: Theme): Style => ({
   height: 20,
   borderRadius: '50%',
   position: 'relative',
-  display: 'flex',
+  display: 'inline-flex',
   justifyContent: 'center',
   alignItems: 'center',
   border: '2px solid',

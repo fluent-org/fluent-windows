@@ -19,6 +19,7 @@ const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectP
     const {
       as: Component = 'span',
       className: classNameProp,
+      style,
       value,
       onChange,
       disabled = false,
@@ -88,7 +89,7 @@ const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectP
     })
 
     return (
-      <Component className={className} ref={referenceRef} {...bind}>
+      <Component className={className} style={style} ref={referenceRef} {...bind}>
         <button className={selectClassName}>{currentText}</button>
         <span className={iconClassName}>
           <DownIcon />

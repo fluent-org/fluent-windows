@@ -15,6 +15,7 @@ const Checkbox: React.FC<CheckboxProps> = React.forwardRef<HTMLInputElement, Che
     const {
       as: Component = 'div',
       className: classNameProp,
+      style,
       checked,
       value,
       onChange,
@@ -39,7 +40,7 @@ const Checkbox: React.FC<CheckboxProps> = React.forwardRef<HTMLInputElement, Che
     )
 
     return (
-      <Component className={className}>
+      <Component className={className} style={style}>
         {checked && <AcceptIcon />}
         <input
           ref={ref}

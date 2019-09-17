@@ -14,6 +14,7 @@ const Toggle: React.FC<ToggleProps> = React.forwardRef<HTMLInputElement, ToggleP
     const {
       as: Component = 'div',
       className: classNameProp,
+      style,
       checked,
       value,
       onChange,
@@ -40,7 +41,7 @@ const Toggle: React.FC<ToggleProps> = React.forwardRef<HTMLInputElement, ToggleP
       onChange && onChange(e.target.checked)
     }
     return (
-      <Component className={className}>
+      <Component className={className} style={style}>
         <div className={circleClassName} />
         <input
           ref={ref}

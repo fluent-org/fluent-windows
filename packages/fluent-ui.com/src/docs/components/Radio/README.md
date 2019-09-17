@@ -36,9 +36,15 @@ type: Inputs
   }
   return (
     <>
-      <Radio value='a' checked={checked === 'a'} onChange={handleChange}>aaa</Radio>
-      <Radio value='b' checked={checked === 'b'} onChange={handleChange}>bbb</Radio>
-      <Radio value='c' checked={checked === 'c'} onChange={handleChange}>ccc</Radio>
+      <FormLabel label="a">
+        <Radio value='a' checked={checked === 'a'} onChange={handleChange} />
+      </FormLabel>
+      <FormLabel label="b">
+        <Radio value='b' checked={checked === 'b'} onChange={handleChange} />
+      </FormLabel>
+      <FormLabel label="b">
+        <Radio value='c' checked={checked === 'c'} onChange={handleChange} />
+      </FormLabel>
     </>
   )
 }
