@@ -14,7 +14,7 @@ const root = (theme: Theme): Style => ({ horizontal }: NavigationProps): Style =
 })
 const horizontal: Style = {
   maxHeight: 40,
-  flexDirection: 'row'
+  flexDirection: 'row !important'
 }
 const expanded = ({ horizontal }: NavigationProps): Style => ({
   maxWidth: horizontal ? '' : 260

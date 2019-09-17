@@ -1,17 +1,27 @@
 import * as React from 'react'
-import { StyledTabsWrapper, StyledTabsPanelWrapper } from './Tabs.styled'
-import { TabsProps, TabsType, TabsPropTypes } from './Tabs.type'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Tabs.styled'
+import { Theme } from '../styles'
+import { TabsProps, TabsType, TabsPropTypes, TabsClassProps } from './Tabs.type'
 import Panel from './components/Panel'
 import Navigation from '../Navigation'
 import Item from '../Item'
+import Box from '../Box'
 
 interface Values {
   value: string | number
   title: string
 }
 
+export const name = 'Tabs'
+
+const useStyles = createUseStyles<Theme, TabsClassProps>(styles, { name })
+
 const Tabs: React.FC<TabsProps> = React.forwardRef<HTMLDivElement, TabsProps>(
-  ({ value, onChange, children, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const { as = 'div', className: classNameProp, value, onChange, children, ...rest } = props
+
     const values = React.useMemo(
       (): Values[] =>
         React.Children.map(
@@ -33,8 +43,11 @@ const Tabs: React.FC<TabsProps> = React.forwardRef<HTMLDivElement, TabsProps>(
       [children, value]
     )
 
+    const classes = useStyles(props)
+    const className = classNames(classes.root, classNameProp)
+
     return (
-      <StyledTabsWrapper ref={ref} {...rest}>
+      <Box className={className} ref={ref} {...rest}>
         <Navigation horizontal value={value} onChange={onChange} boxShadow="2" {...rest}>
           {values.map(
             ({ value, title }): React.ReactElement => (
@@ -44,8 +57,8 @@ const Tabs: React.FC<TabsProps> = React.forwardRef<HTMLDivElement, TabsProps>(
             )
           )}
         </Navigation>
-        <StyledTabsPanelWrapper>{theChildren}</StyledTabsPanelWrapper>
-      </StyledTabsWrapper>
+        <Box className={classes.panel}>{theChildren}</Box>
+      </Box>
     )
   }
 )
@@ -56,7 +69,7 @@ Object.defineProperty(Tabs, 'Panel', {
   }
 })
 
-Tabs.displayName = 'FTabs'
+Tabs.displayName = `F${name}`
 
 Tabs.propTypes = TabsPropTypes
 

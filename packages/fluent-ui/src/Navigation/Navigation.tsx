@@ -134,6 +134,7 @@ const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, N
     return (
       <Box
         className={className}
+        as={as}
         ref={ref}
         acrylic={acrylic}
         backgroundColor="standard.light2"

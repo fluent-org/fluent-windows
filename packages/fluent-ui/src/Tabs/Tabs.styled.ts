@@ -1,9 +1,15 @@
-import { styled, th } from '../styles/styled'
-import Box from '../Box'
+import { Style, Styles } from 'jss'
+import { Theme } from '../styles'
+import { TabsClassProps } from './Tabs.type'
 
-export const StyledTabsWrapper = styled(Box)``
+const root: Style = {}
 
-export const StyledTabsPanelWrapper = styled(Box)`
-  padding: 24px;
-  background-color: ${th.color('white.default')};
-`
+const panel = (theme: Theme): Style => ({
+  padding: 24,
+  backgroundColor: theme.colors!.white!.default
+})
+
+export const styles = (theme: Theme): Styles<TabsClassProps> => ({
+  root,
+  panel: panel(theme)
+})

@@ -5,6 +5,8 @@ import Panel from './components/Panel'
 import { BoxProps } from '../Box'
 import { NavigationProps } from '../Navigation'
 
+export type TabsClassProps = 'root' | 'panel'
+
 export interface TabsProps extends Omit<BoxProps, 'onChange'>, NavigationProps {
   value?: React.ReactText
   onChange?: (value: React.ReactText) => void

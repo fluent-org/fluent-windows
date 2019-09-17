@@ -50,6 +50,7 @@ const activeBarHorizontal: Style = {
   width: '80%',
   height: 4,
   left: '10%',
+  top: 'auto',
   bottom: 0
 }
 const activeBarActive: Style = {
