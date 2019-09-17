@@ -1,6 +1,7 @@
-export const themeGet = (path: string, defaultValue?: number | string): ((theme: any) => any) => (
-  theme: any
-): any => {
+export const themeGet = <T = any>(
+  path: string,
+  defaultValue?: number | string
+): ((theme: any) => T) => (theme: any): T => {
   const result = String.prototype.split
     .call(path, /[,[\].]+?/)
     .filter(Boolean)

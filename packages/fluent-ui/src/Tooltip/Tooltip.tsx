@@ -1,4 +1,5 @@
 import * as React from 'react'
+import classNames from 'classnames'
 import {
   usePopper,
   useHover,
@@ -7,19 +8,29 @@ import {
   useFocus,
   useClickOutside
 } from '@fluent-ui/hooks'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Tooltip.styled'
+import { Theme } from '../styles'
+import { TooltipClassProps, TooltipProps, TooltipPropTypes } from './Tooltip.type'
+
 import Portal from '../Portal'
 import Transition from '../Transition'
-import { StyledTooltip } from './Tooltip.styled'
-import { TooltipProps, TooltipPropTypes } from './Tooltip.type'
 
-const Tooltip: React.FC<TooltipProps> = ({
-  children,
-  title,
-  visible,
-  onChange,
-  trigger = 'hover',
-  ...propperOptions
-}): React.ReactElement => {
+export const name = 'Tooltip'
+
+const useStyles = createUseStyles<Theme, TooltipClassProps>(styles, { name })
+
+const Tooltip: React.FC<TooltipProps> = (props): React.ReactElement => {
+  const {
+    as: Component = 'div',
+    className: classNameProp,
+    children,
+    title,
+    visible,
+    onChange,
+    trigger = 'hover',
+    ...propperOptions
+  } = props
   const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>(propperOptions)
   const isControlled = React.useMemo((): boolean => !!visible, [visible])
 
@@ -43,9 +54,14 @@ const Tooltip: React.FC<TooltipProps> = ({
   const [currentStatus, bind] = triggerMap[trigger]
   const isVisible = isControlled ? visible : currentStatus
 
+  const classes = useStyles(props)
+  const className = classNames(classes.root, classNameProp)
+
   const content =
     typeof title === 'string' ? (
-      <StyledTooltip ref={popperRef}>{title}</StyledTooltip>
+      <Component className={className} ref={popperRef}>
+        {title}
+      </Component>
     ) : (
       React.cloneElement(title, { ref: popperRef, ...bind })
     )
@@ -64,5 +80,9 @@ const Tooltip: React.FC<TooltipProps> = ({
 Tooltip.displayName = 'FTooltip'
 
 Tooltip.propTypes = TooltipPropTypes
+
+Tooltip.defaultProps = {
+  trigger: 'hover'
+}
 
 export default Tooltip

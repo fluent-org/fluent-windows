@@ -1,9 +1,16 @@
+import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { usePropperOptions } from '@fluent-ui/hooks'
+import { StandardProps, StyledProps } from '../'
+
+export type TooltipClassProps = 'root'
 
 type Trigger = 'hover' | 'click' | 'touch' | 'focus'
 
-export interface TooltipProps extends usePropperOptions {
+export interface TooltipProps
+  extends usePropperOptions,
+    Omit<StandardProps, 'title' | 'onChange'>,
+    StyledProps {
   children: React.ReactElement
   title: React.ReactElement | string
   visible?: boolean
