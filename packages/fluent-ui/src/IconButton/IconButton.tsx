@@ -16,7 +16,7 @@ const IconButton: React.FC<IconButtonProps> = React.forwardRef<HTMLButtonElement
       className: classNameProp,
       variant = 'standard',
       disabled,
-      size,
+      size = 'medium',
       onClick,
       children,
       ...rest
@@ -46,7 +46,8 @@ IconButton.displayName = `F${name}`
 IconButton.propTypes = IconButtonPropTypes
 
 IconButton.defaultProps = {
-  variant: 'standard'
+  variant: 'standard',
+  size: 'medium'
 }
 
 export default IconButton
