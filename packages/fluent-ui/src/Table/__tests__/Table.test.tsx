@@ -1,8 +1,13 @@
 import * as React from 'react'
-import * as renderer from 'react-test-renderer'
-import 'jest-styled-components'
+import { getClasses, render } from '../../test-utils'
+import '@testing-library/jest-dom/extend-expect'
 
-import { ThemeProvider, Table } from '../..'
+import Table, { name } from '../Table'
+import { TableGroup } from '../TableGroup'
+import { styles } from '../Table.styled'
+import { TableClassProps } from '../Table.type'
+
+const classes = getClasses<TableClassProps>(styles, name)
 import { ColumnsType, DataType } from '../Table.type'
 
 interface Data extends DataType {
@@ -13,7 +18,6 @@ interface Data extends DataType {
 }
 
 describe('Table', (): void => {
-  const theme = {}
   const data: Data[] = [
     { key: '1', name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 22 },
     { key: '2', name: 'John', surname: 'Brown', birthYear: 1977, birthCity: 32 },
@@ -33,44 +37,39 @@ describe('Table', (): void => {
       field: 'birthCity'
     }
   ]
+
   test('basic', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Table>
-          <Table.Head>
-            <Table.Row>
-              <Table.Cell>Name</Table.Cell>
-              <Table.Cell>Surname</Table.Cell>
-              <Table.Cell>BirthYear</Table.Cell>
-              <Table.Cell>BirthCity</Table.Cell>
-            </Table.Row>
-          </Table.Head>
-          <Table.Body>
-            {data.map(
-              (row): React.ReactElement => (
-                <Table.Row key={row.key}>
-                  <Table.Cell>{row.name}</Table.Cell>
-                  <Table.Cell>{row.surname}</Table.Cell>
-                  <Table.Cell>{row.birthYear}</Table.Cell>
-                  <Table.Cell>{row.birthCity}</Table.Cell>
-                </Table.Row>
-              )
-            )}
-          </Table.Body>
-        </Table>
-      </ThemeProvider>
+    const { container } = render(
+      <Table>
+        <TableGroup.Head>
+          <TableGroup.Row>
+            <TableGroup.Cell>Name</TableGroup.Cell>
+            <TableGroup.Cell>Surname</TableGroup.Cell>
+            <TableGroup.Cell>BirthYear</TableGroup.Cell>
+            <TableGroup.Cell>BirthCity</TableGroup.Cell>
+          </TableGroup.Row>
+        </TableGroup.Head>
+        <TableGroup.Body>
+          {data.map(
+            (row): React.ReactElement => (
+              <TableGroup.Row key={row.key}>
+                <TableGroup.Cell>{row.name}</TableGroup.Cell>
+                <TableGroup.Cell>{row.surname}</TableGroup.Cell>
+                <TableGroup.Cell>{row.birthYear}</TableGroup.Cell>
+                <TableGroup.Cell>{row.birthCity}</TableGroup.Cell>
+              </TableGroup.Row>
+            )
+          )}
+        </TableGroup.Body>
+      </Table>
     )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toHaveClass(classes.root)
   })
 
-  test('prop column', (): void => {
-    const component = renderer.create(
-      <ThemeProvider theme={theme}>
-        <Table<Data> columns={columns} data={data} />
-      </ThemeProvider>
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
+  test('should support column', (): void => {
+    const { container } = render(<Table<Data> columns={columns} data={data} />)
+    expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toHaveClass(classes.root)
   })
 })

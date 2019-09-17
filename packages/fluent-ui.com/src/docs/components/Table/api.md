@@ -8,8 +8,9 @@ api: true
 
 ```
 import Table from '@fluent-ui/core/Table'
+import { TableGroup } from '@fluent-ui/core/Table'
 // or
-import { Table } from '@fluent-ui/core'
+import { Table, TableGroup } from '@fluent-ui/core'
 ```
 
 ### Props

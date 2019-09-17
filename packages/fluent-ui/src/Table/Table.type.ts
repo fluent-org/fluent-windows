@@ -2,6 +2,20 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 
+export type TableClassProps =
+  | 'root'
+  | 'headRoot'
+  | 'bodyRoot'
+  | 'footRoot'
+  | 'rowRoot'
+  | 'rowBody'
+  | 'cellRoot'
+  | 'headCellRoot'
+  | 'cellTextAlignLeft'
+  | 'cellTextAlignRight'
+  | 'cellTextAlignCenter'
+  | 'cellTextAlignJustify'
+
 export interface DataType {
   key: string
   [name: string]: React.ReactText
@@ -21,7 +35,8 @@ export interface TableProps<T>
 }
 
 export type TextAlign = 'inherit' | 'left' | 'center' | 'right' | 'justify'
-export interface TableCellProps {
+export interface TableCellProps
+  extends StandardProps<React.TableHTMLAttributes<HTMLTableCellElement>, HTMLTableCellElement> {
   textAlign?: TextAlign
   children: React.ReactChild
 }

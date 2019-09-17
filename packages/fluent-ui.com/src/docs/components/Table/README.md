@@ -19,24 +19,24 @@ type: DataDisplay
   ]
   return (
     <Table>
-      <Table.Head>
-        <Table.Row>
-          <Table.Cell>Name</Table.Cell>
-          <Table.Cell>Surname</Table.Cell>
-          <Table.Cell>BirthYear</Table.Cell>
-          <Table.Cell>BirthCity</Table.Cell>
-        </Table.Row>
-      </Table.Head>
-      <Table.Body>
+      <TableGroup.Head>
+        <TableGroup.Row>
+          <TableGroup.Cell>Name</TableGroup.Cell>
+          <TableGroup.Cell>Surname</TableGroup.Cell>
+          <TableGroup.Cell>BirthYear</TableGroup.Cell>
+          <TableGroup.Cell>BirthCity</TableGroup.Cell>
+        </TableGroup.Row>
+      </TableGroup.Head>
+      <TableGroup.Body>
         {data.map(row => (
-          <Table.Row key={row.key}>
-            <Table.Cell>{row.name}</Table.Cell>
-            <Table.Cell>{row.surname}</Table.Cell>
-            <Table.Cell>{row.birthYear}</Table.Cell>
-            <Table.Cell>{row.birthCity}</Table.Cell>
-          </Table.Row>
+          <TableGroup.Row key={row.key}>
+            <TableGroup.Cell>{row.name}</TableGroup.Cell>
+            <TableGroup.Cell>{row.surname}</TableGroup.Cell>
+            <TableGroup.Cell>{row.birthYear}</TableGroup.Cell>
+            <TableGroup.Cell>{row.birthCity}</TableGroup.Cell>
+          </TableGroup.Row>
         ))}
-      </Table.Body>
+      </TableGroup.Body>
     </Table>
   )
 }

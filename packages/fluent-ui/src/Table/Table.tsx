@@ -1,11 +1,14 @@
 import * as React from 'react'
-import { StyledTableWrapper } from './Table.styled'
-import { TableProps, ColumnsType, DataType, TablePropTypes } from './Table.type'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { Theme } from '../styles'
+import { styles } from './Table.styled'
+import { TableProps, ColumnsType, DataType, TablePropTypes, TableClassProps } from './Table.type'
+
 import Head from './components/Head'
 import Body from './components/Body'
 import Row from './components/Row'
 import Cell from './components/Cell'
-import Footer from './components/Footer'
 
 function getColumnsChildren<T extends DataType>(
   columns: ColumnsType<T>[],
@@ -39,27 +42,27 @@ function getColumnsChildren<T extends DataType>(
   )
 }
 
-class Table<T extends DataType> extends React.Component<TableProps<T>> {
-  public static displayName = 'FTable'
+export const name = 'Table'
 
-  public static propTypes = TablePropTypes
+const useStyles = createUseStyles<Theme, TableClassProps>(styles, { name })
 
-  public static Head = Head
-  public static Body = Body
-  public static Footer = Footer
-  public static Row = Row
-  public static Cell = Cell
+function Table<T extends DataType>(props: TableProps<T>): React.ReactElement {
+  const { className: classNameProp, data, columns, children, ...rest }: TableProps<T> = props
+  const theChildren = columns
+    ? getColumnsChildren<T>(columns as ColumnsType<T>[], data as T[])
+    : children
 
-  private get theColumnsChildren(): React.ReactFragment {
-    const { data, columns }: TableProps<T> = this.props
-    return getColumnsChildren<T>(columns as ColumnsType<T>[], data as T[])
-  }
-
-  public render(): React.ReactElement {
-    const { columns, children, ...rest }: TableProps<T> = this.props
-    const theChildren = columns ? this.theColumnsChildren : children
-    return <StyledTableWrapper {...rest}>{theChildren}</StyledTableWrapper>
-  }
+  const classes = useStyles(props)
+  const className = classNames(classes.root, classNameProp)
+  return (
+    <table className={className} {...rest}>
+      {theChildren}
+    </table>
+  )
 }
+
+Table.displayName = `F${name}`
+
+Table.propTypes = TablePropTypes
 
 export default Table
