@@ -33,9 +33,9 @@ const breakpoint = (theme: Theme): Style =>
       },
       '&::-webkit-scrollbar-thumb': {
         borderRadius: 8,
-        backgroundColor: theme.colors!.standard!.transparent2,
+        backgroundColor: themeGet(`colors.standard.transparent2`, 'rgba(0, 0, 0, 0.2)')(theme),
         '&:hover': {
-          backgroundColor: theme.colors!.standard!.transparent3
+          backgroundColor: themeGet(`colors.standard.transparent3`, 'rgba(0, 0, 0, 0.4)')(theme)
         }
       }
     }

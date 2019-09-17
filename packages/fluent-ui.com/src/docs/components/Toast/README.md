@@ -49,35 +49,27 @@ type: Feedback
       <Box>
         <Button onClick={handleVisibleChange}>open</Button>
       </Box>
-      <Radio value="top-start" checked={placement === 'top-start'} onChange={handlePlacementChange}>
-        top-start
-      </Radio>
-      <Radio value="top" checked={placement === 'top'} onChange={handlePlacementChange}>
-        top
-      </Radio>
-      <Radio value="top-end" checked={placement === 'top-end'} onChange={handlePlacementChange}>
-        top-end
-      </Radio>
-      <Radio
-        value="bottom-start"
-        checked={placement === 'bottom-start'}
-        onChange={handlePlacementChange}
-      >
-        bottom-start
-      </Radio>
-      <Radio value="bottom" checked={placement === 'bottom'} onChange={handlePlacementChange}>
-        bottom
-      </Radio>
-      <Radio
-        value="bottom-end"
-        checked={placement === 'bottom-end'}
-        onChange={handlePlacementChange}
-      >
-        bottom-end
-      </Radio>
-      <Radio value="center" checked={placement === 'center'} onChange={handlePlacementChange}>
-        center
-      </Radio>
+      <FormLabel label="top-start">
+        <Radio value='top-start' checked={placement === 'top-start'} onChange={handlePlacementChange} />
+      </FormLabel>
+      <FormLabel label="top">
+        <Radio value='top' checked={placement === 'top'} onChange={handlePlacementChange} />
+      </FormLabel>
+      <FormLabel label="top-end">
+        <Radio value='top-end' checked={placement === 'top-end'} onChange={handlePlacementChange} />
+      </FormLabel>
+      <FormLabel label="bottom-start">
+        <Radio value='bottom-start' checked={placement === 'bottom-start'} onChange={handlePlacementChange} />
+      </FormLabel>
+      <FormLabel label="bottom">
+        <Radio value='bottom' checked={placement === 'bottom'} onChange={handlePlacementChange} />
+      </FormLabel>
+      <FormLabel label="bottom-end">
+        <Radio value='bottom-end' checked={placement === 'bottom-end'} onChange={handlePlacementChange} />
+      </FormLabel>
+      <FormLabel label="center">
+        <Radio value='center' checked={placement === 'center'} onChange={handlePlacementChange} />
+      </FormLabel>
 
       <Toast
         visible={visible}

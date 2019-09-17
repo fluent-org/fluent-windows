@@ -1,6 +1,18 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { StandardProps } from '..'
+import { StandardProps, StyledProps } from '..'
+
+export type ToastClassProps =
+  | 'root'
+  | 'placementTopStart'
+  | 'placementTop'
+  | 'placementTopEnd'
+  | 'placementBottomStart'
+  | 'placementBottom'
+  | 'placementBottomEnd'
+  | 'placementCenter'
+  | 'container'
+  | 'actions'
 
 export type Placement =
   | 'top-start'
@@ -11,7 +23,7 @@ export type Placement =
   | 'bottom-start'
   | 'center'
 
-export interface ToastProps extends StandardProps {
+export interface ToastProps extends StandardProps, StyledProps {
   children: React.ReactChild
   visible: boolean
   actions?: React.ReactElement | React.ReactElement[]
