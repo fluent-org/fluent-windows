@@ -1,9 +1,18 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { StandardProps } from '..'
+import { StandardProps, StyledProps } from '..'
+
+export type SelectClassProps =
+  | 'root'
+  | 'disabled'
+  | 'select'
+  | 'selectDisabled'
+  | 'icon'
+  | 'disabledIcon'
 
 export interface SelectProps
-  extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'> {
+  extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'>,
+    StyledProps {
   value?: string | number
   onChange?: (value: string | number) => void
   disabled?: boolean

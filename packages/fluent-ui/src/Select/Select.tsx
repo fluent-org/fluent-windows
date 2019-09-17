@@ -1,13 +1,31 @@
 import * as React from 'react'
+import classNames from 'classnames'
+import { createUseStyles } from '@fluent-ui/styles'
+import { styles } from './Select.styled'
+import { Theme } from '../styles'
+
 import { usePopper, useClick, useClickOutside } from '@fluent-ui/hooks'
 import { ChevronDownMed as DownIcon } from '@fluent-ui/icons'
-import { StyledSelectWrapper, StyledSelect, StyledSelectIcon } from './Select.styled'
-import { SelectProps, SelectPropTypes } from './Select.type'
+import { SelectClassProps, SelectProps, SelectPropTypes } from './Select.type'
 import Transition from '../Transition'
 import List from '../List'
 
+export const name = 'Select'
+
+const useStyles = createUseStyles<Theme, SelectClassProps>(styles, { name })
+
 const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectProps>(
-  ({ value, onChange, disabled = false, children, ...rest }, ref): React.ReactElement => {
+  (props, ref): React.ReactElement => {
+    const {
+      as: Component = 'span',
+      className: classNameProp,
+      value,
+      onChange,
+      disabled = false,
+      children,
+      ...rest
+    } = props
+
     const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
       placement: 'bottom-start',
       positionFixed: false
@@ -54,25 +72,44 @@ const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectP
       }
     )
 
+    const classes = useStyles(props)
+    const className = classNames(
+      classes.root,
+      {
+        [classes.disabled]: disabled
+      },
+      classNameProp
+    )
+    const selectClassName = classNames(classes.select, {
+      [classes.selectDisabled]: disabled
+    })
+    const iconClassName = classNames(classes.icon, {
+      [classes.disabledIcon]: disabled
+    })
+
     return (
-      <StyledSelectWrapper ref={referenceRef} {...bind}>
-        <StyledSelect disabled={disabled}>{currentText}</StyledSelect>
-        <StyledSelectIcon disabled={disabled}>
+      <Component className={className} ref={referenceRef} {...bind}>
+        <button className={selectClassName}>{currentText}</button>
+        <span className={iconClassName}>
           <DownIcon />
-        </StyledSelectIcon>
-        <input type="hidden" value={value} ref={ref} {...rest} />
+        </span>
+        <input type="hidden" value={value} disabled={disabled} ref={ref} {...rest} />
         <Transition type="grow" visible={visible} wrapper={false} mountOnEnter unmountOnExit>
           <List zIndex={1002} ref={popperRef}>
             {theChildren}
           </List>
         </Transition>
-      </StyledSelectWrapper>
+      </Component>
     )
   }
 )
 
-Select.displayName = 'FSelect'
+Select.displayName = `F${name}`
 
 Select.propTypes = SelectPropTypes
+
+Select.defaultProps = {
+  disabled: false
+}
 
 export default Select

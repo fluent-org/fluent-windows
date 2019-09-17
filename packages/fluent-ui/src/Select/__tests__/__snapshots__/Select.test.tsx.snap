@@ -1,107 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select basic 1`] = `
-.c3 {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: inherit;
-  color: inherit;
-  fill: currentColor;
+exports[`Select should render children 1`] = `
+".FTransition-root {}
+.FTransition-fade {}
+.FTransition-fade.fade-enter {
+  opacity: 0;
 }
-
-.c0 {
+.FTransition-fade.fade-exit {
+  opacity: 1;
+}
+.FTransition-fade.fade-exit-active {
+  opacity: 0;
+}
+.FTransition-fade.fade-enter-active {
+  opacity: 1;
+}
+.FTransition-zoom {}
+.FTransition-zoom.zoom-enter {}
+.FTransition-zoom.zoom-exit {}
+.FTransition-zoom.zoom-exit-active {
+  transform: scale3d(0, 0, 0);
+}
+.FTransition-zoom.zoom-exit-done {
+  transform: scale3d(0, 0, 0);
+}
+.FTransition-zoom.zoom-enter-active {
+  transform: scale3d(0, 0, 0);
+}
+.FTransition-zoom.zoom-enter-done {
+  transform: none;
+}
+.FTransition-slide {}
+.FTransition-slide.slide-enter {
+  transform: translateY(100vh);
+}
+.FTransition-slide.slide-exit {
+  transform: none;
+}
+.FTransition-slide.slide-exit-active {
+  transform: translateY(100vh);
+}
+.FTransition-slide.slide-exit-done {
+  transform: translateY(100vh);
+}
+.FTransition-slide.slide-enter-done {
+  transform: none;
+}
+.FTransition-collapse {}
+.FTransition-grow {}
+.FTransition-grow.grow-enter {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+}
+.FTransition-grow.grow-exit {}
+.FTransition-grow.grow-exit-active {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+}
+.FTransition-grow.grow-exit-done {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+}
+.FTransition-grow.grow-enter-active {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.FTransition-grow.grow-enter-done {
+  opacity: 1;
+  transform: none;
+}
+.FTransition-root-0 {
+  opacity: 0;
+  transform: scale(0.75, 0.5625);
+  transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,transform 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  visibility: hidden;
+  transform-origin: 0 0 0;
+}
+.FTransition-collapse-1 {}
+.FTransition-collapse-1.collapse-enter {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-exit {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-exit-active {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-enter-active {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-enter-done {
+  height: auto;
+}
+.FTransition-collapse-1.collapse-enter {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-exit {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-exit-active {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-enter-active {
+  height: 0;
+}
+.FTransition-collapse-1.collapse-enter-done {
+  height: auto;
+}
+.FSelect-root {
+  font: inherit;
+  cursor: pointer;
+  height: 32px;
   display: inline-block;
   position: relative;
   min-width: 160px;
-  height: 32px;
-  font: inherit;
 }
-
-.c1 {
-  outline: none;
+.FSelect-disabled {
+  cursor: not-allowed;
+}
+.FSelect-select {
   font: inherit;
   width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border-radius: 2px;
   border: 2px solid;
-  padding-left: 12px;
-  padding-right: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  cursor: pointer;
+  height: 100%;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  outline: none;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
   align-items: center;
   border-color: #dedede;
-  -webkit-transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
-  transition: background-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms,border-color 250ms cubic-bezier(0.76,0.24,0.23,0.94) 0ms;
+  padding-left: 12px;
+  border-radius: 2px;
+  padding-right: 32px;
 }
-
-.c1:hover {
+.FSelect-select:hover {
   border-color: #b5b5b5;
 }
-
-.c1:active,
-.c1:focus {
+.FSelect-select:active, .FSelect-select:focus {
   border-color: #0078d4;
 }
-
-.c2 {
-  width: 32px;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 12px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #595959;
-  cursor: pointer;
+.FSelect-selectDisabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  background-color: #e9e9e9;
 }
-
-<span
-  className="c0"
-  onMouseUp={[Function]}
->
-  <button
-    className="c1"
-    disabled={false}
-  >
-    
-  </button>
-  <span
-    className="c2"
-    disabled={false}
-  >
-    <svg
-      className="c3"
-      viewBox="0 0 2048 2048"
-    >
-      <path
-        d="M1024 1657L25 658l121-121 878 878 878-878 121 121-999 999z"
-      />
-    </svg>
-  </span>
-  <input
-    type="hidden"
-  />
-</span>
+.FSelect-selectDisabled:hover, .FSelect-selectDisabled:active, .FSelect-selectDisabled:focus {
+  border-color: #dedede;
+}
+.FSelect-icon {
+  top: 0;
+  color: #595959;
+  right: 0;
+  width: 32px;
+  cursor: pointer;
+  height: 100%;
+  display: inline-flex;
+  position: absolute;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.FSelect-disabledIcon {
+  color: #8c8c8c;
+  cursor: not-allowed;
+}"
 `;
