@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.18.0...@fluent-ui/core@0.19.0) (2019-09-18)
+
+
+### Bug Fixes
+
+* **Box:** Fix the problem that the `Box` does not support color ([878689b](https://github.com/fluent-org/fluent-ui/commit/878689b))
+* **bugs:** Some repair error ([959c605](https://github.com/fluent-org/fluent-ui/commit/959c605))
+* **IconButton:** Fix IconButton does not have default size ([217cfdd](https://github.com/fluent-org/fluent-ui/commit/217cfdd))
+
+
+### Features
+
+* **unit_test:** Remove styled-components dependencies, and fix the test file ([ea7ab43](https://github.com/fluent-org/fluent-ui/commit/ea7ab43))
+
+
+
+
+
 # [0.18.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.17.0...@fluent-ui/core@0.18.0) (2019-08-26)
 
 
