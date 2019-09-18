@@ -24,6 +24,10 @@ const GlobalStyle = createGlobalStyle({
     fontSize: '85%',
     margin: 0,
     padding: '0.2em 0.4em'
+  },
+  img: {
+    display: 'block',
+    width: '100%'
   }
 })
 

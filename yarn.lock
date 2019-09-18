@@ -7397,6 +7397,13 @@ gatsby-plugin-eslint@^2.0.5:
   resolved "https://registry.npmjs.org/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.5.tgz#be02f5aff9b7f4a37927f3f917e82ad9f3d67f09"
   integrity sha512-7dgcNtFOGgPLseDA55DDjqqnSW+2Pe91erL6nFjLFs/vlFlT9+GbR/4zkQH9WjWOHSfCtgrUzi59cxM1rBm4kw==
 
+gatsby-plugin-jss@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.npmjs.org/gatsby-plugin-jss/-/gatsby-plugin-jss-2.1.6.tgz#0b94da28ac0cbaedb07d6f883d3a5827e80f44e3"
+  integrity sha512-HroagnFc0uuZTp03AeS/3qfK5LlFMmg+/u+AySbO2YWEElhvtnL/K70+HOSJPCL/Tt/CUdIIFIoJOngFw/MN5w==
+  dependencies:
+    "@babel/runtime" "^7.6.0"
+
 gatsby-plugin-manifest@^2.2.9:
   version "2.2.16"
   resolved "https://registry.npmjs.org/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.16.tgz#ce83838602390e96375212d6535aea25d4037bba"
