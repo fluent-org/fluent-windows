@@ -8,8 +8,8 @@ exports[`Item should be support prefix 1`] = `
     class="FItem-prefixRoot"
   >
     <svg
+      class="icon"
       data-testid="icon"
-      style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -34,8 +34,8 @@ exports[`Item should be support prefix without children 1`] = `
       class="FItem-prefixRoot"
     >
       <svg
+        class="icon"
         data-testid="icon"
-        style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
         viewBox="0 0 2048 2048"
       >
         <path

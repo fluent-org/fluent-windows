@@ -35,41 +35,6 @@ exports[`Progress should be controlled 1`] = `
 }"
 `;
 
-exports[`Progress should be support ref 1`] = `
-".FProgress-root {
-  height: 4px;
-  overflow: hidden;
-  position: relative;
-  background-color: #dedede;
-}
-.FProgress-progress {
-  top: 0;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background: #0078d4;
-  transition: transform 0.43s linear;
-  transform-origin: left;
-}
-.FProgress-isIndeterminate {
-  animation: FProgress-keyframes-indeterminateProgress 2.6s infinite;
-  background: linear-gradient(to right,
-    #dedede 0%,
-    #0078d4 50%,
-    #dedede 100%
-  );
-}
-@keyframes FProgress-keyframes-indeterminateProgress {
-  from {
-    transform: translateX(-130%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}"
-`;
-
 exports[`Progress should render a indeterminate progress 1`] = `
 ".FProgress-root {
   height: 4px;

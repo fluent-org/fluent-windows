@@ -14,8 +14,8 @@ exports[`ItemGroup should be support prefix 1`] = `
         class="FItem-prefixRoot"
       >
         <svg
+          class="icon"
           data-testid="icon"
-          style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
           viewBox="0 0 2048 2048"
         >
           <path
@@ -31,7 +31,7 @@ exports[`ItemGroup should be support prefix 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixNotFloatClose FItemGroup-titlePrefixExpanded"
     >
       <svg
-        style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
+        class="icon"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -80,7 +80,7 @@ exports[`ItemGroup should be support shrink float 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixExpanded"
     >
       <svg
-        style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
+        class="icon"
         viewBox="0 0 2048 2048"
       >
         <path
@@ -108,7 +108,16 @@ exports[`ItemGroup should be support shrink float 1`] = `
 `;
 
 exports[`ItemGroup should render children 1`] = `
-".FBox-root {
+".icon {
+  fill: currentColor;
+  color: inherit;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: inherit;
+  user-select: none;
+}
+.FBox-root {
   -webkit-overflow-scrolling: touch;
 }
 .FBox-system {}

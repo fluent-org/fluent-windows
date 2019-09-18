@@ -15,7 +15,7 @@ exports[`Input should be support cleared 1`] = `
     style="width: 0px;"
   >
     <svg
-      style="width: 1em; height: 1em; display: inline-block; user-select: none; font-size: inherit; fill: currentColor;"
+      class="icon"
       viewBox="0 0 2048 2048"
     >
       <path
@@ -27,7 +27,16 @@ exports[`Input should be support cleared 1`] = `
 `;
 
 exports[`Input should be support cleared 2`] = `
-".FTransition-root {}
+".icon {
+  fill: currentColor;
+  color: inherit;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: inherit;
+  user-select: none;
+}
+.FTransition-root {}
 .FTransition-fade {}
 .FTransition-fade.fade-enter {
   opacity: 0;
