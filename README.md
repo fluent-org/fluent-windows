@@ -1,4 +1,10 @@
 <p align="center">
+  <a href="https://fluent-ui.com/" target="_blank">
+    <img width="150" src="https://fluent-ui.com/fluent-ui.svg" alt="Fluent-UI logo">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://fluent-ui.com/" rel="noopener" target="_blank">
     <h1 align="center">Fluent-UI</h1>
   </a>
