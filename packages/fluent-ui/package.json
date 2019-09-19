@@ -33,6 +33,7 @@
     "start": "cross-env tsc -w --emitDeclarationOnly --outDir ./build/es && NODE_ENV=development BABEL_ENV=es babel -w --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\" --extensions '.ts','.tsx'",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --coverage --watch",
+    "test:update": "cross-env NODE_ENV=test jest --updateSnapshot",
     "test:prod": "cross-env NODE_ENV=test jest --ci --coverage --runInBand --detectOpenHandles --forceExit && yarn codecov",
     "codecov": "cross-env NODE_ENV=test codecov"
   },
