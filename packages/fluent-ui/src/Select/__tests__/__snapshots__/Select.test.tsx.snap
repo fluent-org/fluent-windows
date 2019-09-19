@@ -86,6 +86,9 @@ exports[`Select should render children 1`] = `
   transform-origin: 0 0 0;
 }
 .FTransition-collapse-1 {}
+.FTransition-collapse-1.collapse-appear {
+  height: auto;
+}
 .FTransition-collapse-1.collapse-enter {
   height: 0;
 }
@@ -99,6 +102,9 @@ exports[`Select should render children 1`] = `
   height: 0;
 }
 .FTransition-collapse-1.collapse-enter-done {
+  height: auto;
+}
+.FTransition-collapse-1.collapse-appear {
   height: auto;
 }
 .FTransition-collapse-1.collapse-enter {

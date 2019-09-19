@@ -4,13 +4,27 @@ exports[`Tabs should render children 1`] = `
 ".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
-.FBox-system {}
-.FBox-acrylic {}
-.FBox-system-0 {}
-.FBox-acrylic-1 {
-  overflow: hidden;
-  position: relative;
+@media screen and (min-width: 600px) {
+  .FBox-root {  }
+  .FBox-root::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  .FBox-root::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FBox-root::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
+  .FBox-system {  }
+  .FBox-acrylic {  }
+  .FBox-system-0 {  }
+  .FBox-acrylic-1 {
+    overflow: hidden;
+    position: relative;
+  }
 @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
   .FBox-acrylic-1 {
     background: none !important;

@@ -98,15 +98,29 @@ exports[`Command should be rendered with acrylic effects 2`] = `
 ".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
-.FBox-system {}
-.FBox-acrylic {}
-.FBox-system-0 {
-  background-color: #f5f5f5;
+@media screen and (min-width: 600px) {
+  .FBox-root {  }
+  .FBox-root::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  .FBox-root::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FBox-root::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
-.FBox-acrylic-1 {
-  overflow: hidden;
-  position: relative;
-}
+  .FBox-system {  }
+  .FBox-acrylic {  }
+  .FBox-system-0 {
+    background-color: #f5f5f5;
+  }
+  .FBox-acrylic-1 {
+    overflow: hidden;
+    position: relative;
+  }
 @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
   .FBox-acrylic-1 {
     background: none !important;
@@ -546,6 +560,9 @@ exports[`Command should be rendered with acrylic effects 2`] = `
     visibility: hidden;
   }
   .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-appear {
+    height: auto;
+  }
   .FTransition-collapse-1.collapse-enter {
     height: 0;
   }
@@ -701,15 +718,29 @@ exports[`Command should be rendered with reveal effects 2`] = `
 ".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
-.FBox-system {}
-.FBox-acrylic {}
-.FBox-system-0 {
-  background-color: #f5f5f5;
+@media screen and (min-width: 600px) {
+  .FBox-root {  }
+  .FBox-root::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  .FBox-root::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FBox-root::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
-.FBox-acrylic-1 {
-  overflow: hidden;
-  position: relative;
-}
+  .FBox-system {  }
+  .FBox-acrylic {  }
+  .FBox-system-0 {
+    background-color: #f5f5f5;
+  }
+  .FBox-acrylic-1 {
+    overflow: hidden;
+    position: relative;
+  }
 @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
   .FBox-acrylic-1 {
     background: none !important;
@@ -1149,6 +1180,9 @@ exports[`Command should be rendered with reveal effects 2`] = `
     visibility: hidden;
   }
   .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-appear {
+    height: auto;
+  }
   .FTransition-collapse-1.collapse-enter {
     height: 0;
   }
@@ -1193,15 +1227,29 @@ exports[`Command should render children 1`] = `
 ".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
-.FBox-system {}
-.FBox-acrylic {}
-.FBox-system-0 {
-  background-color: #f5f5f5;
+@media screen and (min-width: 600px) {
+  .FBox-root {  }
+  .FBox-root::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  .FBox-root::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FBox-root::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
-.FBox-acrylic-1 {
-  overflow: hidden;
-  position: relative;
-}
+  .FBox-system {  }
+  .FBox-acrylic {  }
+  .FBox-system-0 {
+    background-color: #f5f5f5;
+  }
+  .FBox-acrylic-1 {
+    overflow: hidden;
+    position: relative;
+  }
 @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
   .FBox-acrylic-1 {
     background: none !important;
@@ -1329,6 +1377,9 @@ exports[`Command should render children 1`] = `
     visibility: hidden;
   }
   .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-appear {
+    height: auto;
+  }
   .FTransition-collapse-1.collapse-enter {
     height: 0;
   }
@@ -1535,15 +1586,29 @@ exports[`Command without Content and Secondary 2`] = `
 ".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
-.FBox-system {}
-.FBox-acrylic {}
-.FBox-system-0 {
-  background-color: #f5f5f5;
+@media screen and (min-width: 600px) {
+  .FBox-root {  }
+  .FBox-root::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  .FBox-root::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .FBox-root::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
-.FBox-acrylic-1 {
-  overflow: hidden;
-  position: relative;
-}
+  .FBox-system {  }
+  .FBox-acrylic {  }
+  .FBox-system-0 {
+    background-color: #f5f5f5;
+  }
+  .FBox-acrylic-1 {
+    overflow: hidden;
+    position: relative;
+  }
 @supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
   .FBox-acrylic-1 {
     background: none !important;
@@ -1927,6 +1992,9 @@ exports[`Command without Content and Secondary 2`] = `
     visibility: hidden;
   }
   .FTransition-collapse-1 {  }
+  .FTransition-collapse-1.collapse-appear {
+    height: auto;
+  }
   .FTransition-collapse-1.collapse-enter {
     height: 0;
   }

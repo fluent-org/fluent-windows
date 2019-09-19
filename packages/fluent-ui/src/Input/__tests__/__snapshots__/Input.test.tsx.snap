@@ -110,6 +110,9 @@ exports[`Input should be support cleared 2`] = `
   visibility: hidden;
 }
 .FTransition-collapse-1 {}
+.FTransition-collapse-1.collapse-appear {
+  height: auto;
+}
 .FTransition-collapse-1.collapse-enter {
   height: 0;
 }
