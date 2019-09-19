@@ -44,12 +44,15 @@ Here is a quick example to get you started.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@fluent-ui/core/Button';
+import ThemeProvider from '@fluent-ui/core/ThemeProvider';
 
 function App() {
   return (
-    <Button variant="primary">
-      Hello World
-    </Button>
+    <ThemeProvider>
+      <Button variant="primary">
+        Hello World
+      </Button>
+    </ThemeProvider>
   );
 }
 

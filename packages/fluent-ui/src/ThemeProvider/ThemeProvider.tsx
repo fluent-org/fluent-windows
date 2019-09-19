@@ -4,7 +4,7 @@ import { Rule, StyleSheet, SheetsRegistry } from 'jss'
 import createTheme, { Theme } from '../styles/createTheme'
 
 interface ThemeProviderProps {
-  theme: Theme
+  theme?: Theme
   registry?: SheetsRegistry
   children: React.ReactNode
 }
@@ -15,7 +15,7 @@ const generateId = (rule: Rule, sheet?: StyleSheet<string>): string => {
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  theme,
+  theme = {},
   registry,
   children,
   ...rest
