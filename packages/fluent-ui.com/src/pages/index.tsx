@@ -39,7 +39,7 @@ const IndexPage = (): React.ReactElement => {
         width="100vw"
         height="100vh"
         backgroundColor="standard.light1"
-        background="url(icon-arrangement.png) 100% center / cover no-repeat fixed"
+        background="url(/icon-arrangement.png) 100% center / cover no-repeat fixed"
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -47,10 +47,10 @@ const IndexPage = (): React.ReactElement => {
         <Box width="80%" marginTop="-10em">
           <Box>
             <Box className={classes.logo} display={['block', 'none']}>
-              <img src="fluent-ui.svg" alt="fluent-ui" />
+              <img src="/images/fluent-ui.svg" alt="fluent-ui" />
             </Box>
             <Box className={classes.logoPure} width={[100, 233]} display={['none', 'block']}>
-              <img src="fluent-ui-pure.svg" alt="fluent-ui" />
+              <img src="/images/fluent-ui-pure.svg" alt="fluent-ui" />
             </Box>
             <Box
               className={classes.title}
