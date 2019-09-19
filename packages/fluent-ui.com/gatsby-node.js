@@ -1,12 +1,21 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 const path = require('path')
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const {
+      frontmatter: { title, type }
+    } = node
+    const value = type === 'hooks' ? `/hooks/${title}` : `/components/${title.toLowerCase()}`
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -16,14 +25,19 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(filter: { frontmatter: { api: { nin: true } } }) {
-        nodes {
-          frontmatter {
-            title
-            type
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              type
+            }
+            rawMarkdownBody
+            html
+            fileAbsolutePath
           }
-          rawMarkdownBody
-          html
-          fileAbsolutePath
         }
       }
     }
@@ -32,14 +46,15 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.nodes.forEach(node => {
-      const {
-        frontmatter: { title, type }
-      } = node
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach((post) => {
       createPage({
-        path: type === 'hooks' ? `/hooks/${title}` : `/components/${title.toLowerCase()}`,
+        path: post.node.fields.slug,
         component: docs,
-        context: { title } // additional data can be passed via context
+        context: {
+          title: post.node.frontmatter.title
+        }
       })
     })
   })
