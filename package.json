@@ -9,11 +9,13 @@
     "lint": "eslint --fix . && echo 'Lint complete.'",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
+    "build:copy-files": "lerna run build:copy-files",
     "test": "lerna run test",
     "test:watch": "lerna run test:watch",
     "test:update": "lerna run test:update",
     "test:prod": "lerna run test:prod",
-    "release": "npm run build && lerna publish --contents build --conventional-commits"
+    "version": "lerna version --conventional-commits",
+    "release": "npm run version && npm run build && lerna publish --contents build"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
