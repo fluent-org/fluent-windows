@@ -25,7 +25,10 @@ export function useClickOutside(
   useEffect((): (() => void) => {
     const listener = (event: MouseEvent | TouchEvent): void => {
       // @ts-ignore
-      if (!ref.current || ref.current.contains(event.target)) {
+      if (
+        !ref.current ||
+        (typeof ref.current.contains === 'function' && ref.current.contains(event.target))
+      ) {
         return
       }
 

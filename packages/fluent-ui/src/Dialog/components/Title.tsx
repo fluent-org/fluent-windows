@@ -24,11 +24,7 @@ const Title: React.FC<DialogTitleProps> = (props): React.ReactElement => {
   return (
     <div className={classes.title} {...rest}>
       <Typography variant="h6">{children}</Typography>
-      <IconButton
-        size="small"
-        style={{ marginRight: '-10px', height: '100%' }}
-        onClick={handleClose}
-      >
+      <IconButton size="small" style={{ height: '100%' }} onClick={handleClose}>
         <CancelIcon />
       </IconButton>
     </div>

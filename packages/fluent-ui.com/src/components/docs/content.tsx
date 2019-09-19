@@ -101,7 +101,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
   const pre =
     data.doc.frontmatter.type === 'hooks' || data.doc.frontmatter.type === 'GettingStarted'
       ? Highlight
-      : (Playground as any)
+      : Playground
   return (
     <>
       <SideBar data={data} />

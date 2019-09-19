@@ -24,10 +24,10 @@ const variantStandard = (theme: Theme): Style => ({
   color: theme.colors!.primary!.default,
   backgroundColor: 'transparent',
   '&:hover, &:focus': {
-    backgroundColor: lighten('primary.light1', 0.08)
+    backgroundColor: lighten(theme.colors!.primary!.light1!, 0.08)
   },
   '&:active': {
-    backgroundColor: lighten('primary.light1', 0.36)
+    backgroundColor: lighten(theme.colors!.primary!.light1!, 0.36)
   }
 })
 const variantPrimary = (theme: Theme): Style => ({
