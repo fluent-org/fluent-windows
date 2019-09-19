@@ -1,11 +1,10 @@
 import * as React from 'react'
-import { ReactElement } from 'react'
 // @ts-ignore
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import { Box, colors } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
-import { Styles } from 'jss'
+import { Style } from 'jss'
 
 interface Item {
   key: string
@@ -28,7 +27,7 @@ interface BlockProps {
 }
 
 const useStyles = createUseStyles({
-  block: (props: BlockProps) => ({
+  block: (props: BlockProps): Style => ({
     boxSizing: 'border-box',
     height: 40,
     padding: 8,
@@ -44,7 +43,7 @@ const useStyles = createUseStyles({
     }
   })
 })
-const Block = (props: BlockProps): ReactElement => {
+const Block = (props: BlockProps): React.ReactElement => {
   const { type, value, ...rest } = props
   const classes = useStyles(props)
   return (
@@ -55,16 +54,22 @@ const Block = (props: BlockProps): ReactElement => {
   )
 }
 
-const Template = (): ReactElement => {
+const Template = (): React.ReactElement => {
   return (
-    <Box display="flex" flexWrap="wrap" justifyContent="space-between">
+    <Box
+      display="flex"
+      flexWrap="wrap"
+      justifyContent="space-between"
+      backgroundColor="standard.light3"
+      padding={20}
+    >
       {colorList.map(
-        ({ type, items }): ReactElement => (
+        ({ type, items }): React.ReactElement => (
           <Box key={type} width="30%" display="inline-block">
-            <h1>{type}</h1>
+            <h3>{type}</h3>
             <Box>
               {items.map(
-                ({ key, value }): ReactElement => (
+                ({ key, value }): React.ReactElement => (
                   <CopyToClipboard key={key} text={value}>
                     <Block type={key} value={value} />
                   </CopyToClipboard>

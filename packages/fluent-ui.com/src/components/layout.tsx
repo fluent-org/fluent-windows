@@ -1,17 +1,10 @@
 import * as React from 'react'
 import { createGlobalStyle } from '@fluent-ui/styles'
 import { ThemeProvider, Normalize, Theme } from '@fluent-ui/core'
+import { useAction } from '@fluent-ui/hooks'
 
 interface LayoutProps {
   children: React.ReactNode
-}
-
-const theme: Theme = {
-  colors: {
-    standard: {
-      // light2: '#000'
-    }
-  }
 }
 
 const GlobalStyle = createGlobalStyle({
@@ -31,12 +24,29 @@ const GlobalStyle = createGlobalStyle({
   }
 })
 
-const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactElement => (
-  <ThemeProvider theme={theme}>
-    <Normalize />
-    <GlobalStyle />
-    {children}
-  </ThemeProvider>
-)
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactElement => {
+  const [theme, setTheme] = React.useState<Theme>({})
+  useAction(
+    'theme/setPrimaryColor',
+    (primaryColor: string): void => {
+      setTheme({
+        colors: {
+          primary: {
+            default: primaryColor
+          }
+        }
+      })
+    },
+    []
+  )
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Normalize />
+      <GlobalStyle />
+      {children}
+    </ThemeProvider>
+  )
+}
 
 export default Layout

@@ -11,6 +11,8 @@ import Highlight from '../highlight'
 
 import IconTemplate from '../../docs/components/Icon/template'
 import ColorTemplate from '../../docs/components/Color/template'
+import ColorTool from '../../docs/components/Color/ColorTool'
+import ThemeTemplate from '../../docs/gettingStarted/theme/template'
 import Table from '../table'
 
 import { TemplateProps } from './template'
@@ -32,7 +34,7 @@ const H1 = (props: TypographyComponentProps): React.ReactElement => {
       <a
         className={classes.titleA}
         href={`#${props.id}`}
-        onClick={e => {
+        onClick={(e): void => {
           e.preventDefault()
           const target = document.querySelector('#contentRoot')
           scrollToAnchor(`#${props.id}`, target)
@@ -50,7 +52,7 @@ const H2 = (props: TypographyComponentProps): React.ReactElement => {
       <a
         className={classes.titleA}
         href={`#${props.id}`}
-        onClick={e => {
+        onClick={(e): void => {
           e.preventDefault()
           const target = document.querySelector('#contentRoot')
           scrollToAnchor(`#${props.id}`, target)
@@ -68,7 +70,7 @@ const H3 = (props: TypographyComponentProps): React.ReactElement => {
       <a
         className={classes.titleA}
         href={`#${props.id}`}
-        onClick={e => {
+        onClick={(e): void => {
           e.preventDefault()
           const target = document.querySelector('#contentRoot')
           scrollToAnchor(`#${props.id}`, target)
@@ -96,6 +98,10 @@ const typographyOverrides = {
 }
 
 const Content = ({ data }: TemplateProps): React.ReactElement => {
+  const pre =
+    data.doc.frontmatter.type === 'hooks' || data.doc.frontmatter.type === 'GettingStarted'
+      ? Highlight
+      : (Playground as any)
   return (
     <>
       <SideBar data={data} />
@@ -117,30 +123,34 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
             // @ts-ignore
             options={{
               overrides: {
-                pre: data.doc.frontmatter.type !== 'hooks' ? (Playground as any) : Highlight,
+                pre,
                 IconTemplate,
                 ColorTemplate,
+                ColorTool,
+                ThemeTemplate,
                 ...typographyOverrides
               }
             }}
           >
             {data.doc.rawMarkdownBody}
           </Markdown>
-          <Markdown
-            options={{
-              // @ts-ignore
-              namedCodesToUnicode: {
-                or: '|'
-              },
-              overrides: {
-                pre: Highlight,
-                table: Table,
-                ...typographyOverrides
-              }
-            }}
-          >
-            {data.api.rawMarkdownBody}
-          </Markdown>
+          {data.api && (
+            <Markdown
+              options={{
+                // @ts-ignore
+                namedCodesToUnicode: {
+                  or: '|'
+                },
+                overrides: {
+                  pre: Highlight,
+                  table: Table,
+                  ...typographyOverrides
+                }
+              }}
+            >
+              {data.api.rawMarkdownBody}
+            </Markdown>
+          )}
         </Box>
       </Box>
     </>

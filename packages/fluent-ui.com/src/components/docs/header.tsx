@@ -2,7 +2,10 @@ import * as React from 'react'
 import { navigate } from 'gatsby'
 
 import { Command, Item, Tooltip, Box } from '@fluent-ui/core'
-import { GlobalNavigationButton as GlobalNavigationButtonIcon } from '@fluent-ui/icons'
+import {
+  GlobalNavigationButton as GlobalNavigationButtonIcon,
+  Color as ColorIcon
+} from '@fluent-ui/icons'
 import { useDispatch } from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
 
@@ -16,6 +19,9 @@ const Header = (): React.ReactElement => {
   function handleNavigateToHome(): void {
     navigate(`/`)
   }
+  function handleNavigateToColorTool(): void {
+    navigate(`/components/color/#color-tool`)
+  }
 
   const dispatch = useDispatch({ type: 'navigation/expand', payload: (v: boolean): boolean => !v })
 
@@ -26,6 +32,9 @@ const Header = (): React.ReactElement => {
 
   return (
     <Command position="sticky" top="0" height={56} style={{ backgroundColor: '#fff' }} zIndex={99}>
+      <Tooltip title="Edit website colors">
+        <Item onClick={handleNavigateToColorTool} prefix={<ColorIcon />} />
+      </Tooltip>
       <Tooltip title="Home page">
         <Item onClick={handleNavigateToHome} prefix={home} />
       </Tooltip>

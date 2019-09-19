@@ -49,10 +49,12 @@
     "prism-react-renderer": "^0.1.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-color": "^2.17.3",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-live": "^2.2.0"
+    "react-live": "^2.2.0",
+    "react-object-inspector": "^0.2.1"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "^6.9.0",

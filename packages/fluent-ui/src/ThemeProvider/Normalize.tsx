@@ -2,7 +2,6 @@
  * Based on normalize.css
  * https://github.com/necolas/normalize.css
  */
-import * as React from 'react'
 import { Style } from 'jss'
 import { createGlobalStyle } from '@fluent-ui/styles'
 
