@@ -7,11 +7,10 @@ const root = (theme: Theme): Style => ({
   height: 20,
   borderRadius: '50%',
   position: 'relative',
-  display: 'inline-flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  display: 'inline-block',
   border: '2px solid',
   cursor: 'pointer',
+  overflow: 'hidden',
   transition: theme.transitions!.radio!,
   backgroundColor: theme.colors!.white!.default,
   // checked false
@@ -53,13 +52,16 @@ const circle = (theme: Theme): Style => ({
   borderRadius: '50%',
   transition: theme.transitions!.radio,
   backgroundColor: theme.colors!.black!.default,
-  width: 0,
-  height: 0,
+  position: 'absolute',
+  left: '50%',
+  top: '50%',
+  width: 12,
+  height: 12,
+  marginLeft: -6,
+  marginTop: -6,
   opacity: 0
 })
 const circleChecked: Style = {
-  width: 12,
-  height: 12,
   opacity: 1
 }
 const circleDisabled = (theme: Theme): Style => ({
