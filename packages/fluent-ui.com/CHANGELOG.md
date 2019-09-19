@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.3](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.16.2...fluent-ui.com@1.16.3) (2019-09-19)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Display of props not fix the problem ([ce70c86](https://github.com/fluent-org/fluent-ui/commit/ce70c86))
+
+
+
+
+
 ## [1.16.2](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.16.1...fluent-ui.com@1.16.2) (2019-09-18)
 
 **Note:** Version bump only for package fluent-ui.com

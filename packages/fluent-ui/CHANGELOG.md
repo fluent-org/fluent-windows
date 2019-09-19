@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.19.2...@fluent-ui/core@0.20.0) (2019-09-19)
+
+
+### Bug Fixes
+
+* **Checkbox:** Fix display problems that may arise misplaced ([3e744d2](https://github.com/fluent-org/fluent-ui/commit/3e744d2))
+* **Navigation:** Navigation for the first time into the repair error loading animation ([4109389](https://github.com/fluent-org/fluent-ui/commit/4109389))
+* **Radio:** Fix display problems that may arise misplaced ([c9749a0](https://github.com/fluent-org/fluent-ui/commit/c9749a0))
+
+
+### Features
+
+* **Box:** Box breakpoint fix the problem is not in force ([6cae488](https://github.com/fluent-org/fluent-ui/commit/6cae488))
+
+
+
+
+
 ## [0.19.2](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.19.1...@fluent-ui/core@0.19.2) (2019-09-18)
 
 **Note:** Version bump only for package @fluent-ui/core

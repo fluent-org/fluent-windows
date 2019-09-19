@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/styles@0.1.0...@fluent-ui/styles@0.2.0) (2019-09-19)
+
+
+### Features
+
+* **Box:** Box breakpoint fix the problem is not in force ([6cae488](https://github.com/fluent-org/fluent-ui/commit/6cae488))
+
+
+
+
+
 # 0.1.0 (2019-09-18)
 
 
