@@ -14,12 +14,12 @@ const useStyles = createUseStyles({
     fontFamily: 'monospace, PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto',
     color: 'rgb(57, 58, 52)',
     '-webkit-overflow-scrolling': 'touch',
-    thead: {
+    '& thead': {
       color: 'rgba(0, 0, 0, 0.54)',
       fontWeight: 500,
-      tr: {
+      '& tr': {
         height: 64,
-        th: {
+        '& th': {
           padding: '0 16px 0 8px',
           textAlign: 'left',
           fontWeight: 500,
@@ -31,12 +31,12 @@ const useStyles = createUseStyles({
         }
       }
     },
-    tbody: {
+    '& tbody': {
       color: 'rgba(0, 0, 0, 0.87)',
       lineHeight: 1.5,
-      tr: {
+      '& tr': {
         height: 48,
-        td: {
+        '& td': {
           padding: '8px 16px 8px 8px',
           textAlign: 'left',
           borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
@@ -57,9 +57,13 @@ const useStyles = createUseStyles({
   }
 })
 
-function Table(): React.ReactElement {
+function Table({
+  children
+}: JSX.IntrinsicAttributes &
+  React.ClassAttributes<HTMLTableElement> &
+  React.TableHTMLAttributes<HTMLTableElement>): React.ReactElement {
   const classes = useStyles()
-  return <table className={classes.table} />
+  return <table className={classes.table}>{children}</table>
 }
 
 export default Table
