@@ -1,26 +1,36 @@
 import { Theme } from '@fluent-ui/core/styles'
 import { Style, Styles } from 'jss'
+import { lighten } from '../styles'
 import { CardClassProps } from './Card.type'
 
 const root = (theme: Theme): Style => ({
-  boxShadow: theme.shadows![2],
-  borderRadius: 4,
   overflow: 'hidden',
+  borderRadius: 4,
+  boxShadow: theme.shadows![2],
   backgroundColor: theme.colors!.white!.default,
   transition: theme.transitions!.card
 })
-const pure: Style = {
-  boxShadow: 'none',
-  borderRadius: 0
-}
-const dynamic: Style = {
+const hover = (theme: Theme): Style => ({
   '&:hover': {
-    transform: 'scale(1.1)'
+    cursor: 'pointer',
+    boxShadow: theme.shadows![3]
   }
-}
+})
+const acrylic = (theme: Theme): Style => ({
+  '&::before': {
+    transition: theme.transitions!.default,
+    boxShadow: `inset 0 0 2px 1px ${lighten(theme.colors!.white!.default!, 0.2)}`
+  },
+  '&:hover': {
+    '&::before': {
+      backgroundColor: lighten(theme.colors!.white!.default!, 0.08),
+      boxShadow: `inset 0 0 2px 1px ${lighten(theme.colors!.white!.default!, 0.4)}`
+    }
+  }
+})
 
 export const styles = (theme: Theme): Styles<CardClassProps> => ({
   root: root(theme),
-  pure,
-  dynamic
+  hover: hover(theme),
+  acrylic: acrylic(theme)
 })

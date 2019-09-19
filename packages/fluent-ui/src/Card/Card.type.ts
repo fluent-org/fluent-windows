@@ -5,7 +5,7 @@ import Content from './components/Content'
 import Actions from './components/Actions'
 import Header from './components/Header'
 
-export type CardClassProps = 'root' | 'pure' | 'dynamic'
+export type CardClassProps = 'root' | 'hover' | 'acrylic'
 
 export interface CardProps extends BoxProps {
   children: React.ReactNode

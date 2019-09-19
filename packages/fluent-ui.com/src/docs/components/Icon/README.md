@@ -6,6 +6,6 @@ type: Others
 
 # Icon
 
-Based on the extension of [Micon](https://github.com/xtoolkit/Micon), thanks Micon!
+Based on the extension of [Micon](https://github.com/xtoolkit/Micon).
 
 <IconTemplate />

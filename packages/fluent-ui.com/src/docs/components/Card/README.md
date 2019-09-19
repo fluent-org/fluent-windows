@@ -55,19 +55,3 @@ type: DataDisplay
   </Card>
 </Box>
 ```
-
-## Pure Card
-
-```jsx
-<Card pure>
-  <Card.Content>pure card</Card.Content>
-</Card>
-```
-
-## Dynamic Card
-
-```jsx
-<Card dynamic>
-  <Card.Content>dynamic card</Card.Content>
-</Card>
-```

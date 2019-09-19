@@ -18,8 +18,7 @@ const Card: React.FC<CardProps> = React.forwardRef<HTMLDivElement, CardProps>(
     const {
       as: Component = 'div',
       className: classNameProp,
-      pure = false,
-      dynamic = false,
+      acrylic,
       minWidth = 275,
       maxWidth = 355,
       ...rest
@@ -27,9 +26,9 @@ const Card: React.FC<CardProps> = React.forwardRef<HTMLDivElement, CardProps>(
     const classes = useStyles(props)
     const className = classNames(
       classes.root,
+      classes.hover,
       {
-        [classes.pure]: pure,
-        [classes.dynamic]: dynamic
+        [classes.acrylic]: acrylic
       },
       classNameProp
     )
@@ -40,6 +39,7 @@ const Card: React.FC<CardProps> = React.forwardRef<HTMLDivElement, CardProps>(
         ref={ref}
         minWidth={minWidth}
         maxWidth={maxWidth}
+        acrylic={acrylic}
         {...rest}
       />
     )
