@@ -56,6 +56,9 @@ const slide: Style = {
 }
 
 const collapse = ({ wrapperHeight }: TransitionProps): Style => ({
+  '&.collapse-appear': {
+    height: 'auto'
+  },
   '&.collapse-enter': {
     height: 0,
     '&-active': {

@@ -49,20 +49,18 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
         React.Children.map(children, (child: React.ReactElement): number => child.props.value),
       [children]
     )
-    const [isActiveGroup, setIsActiveGroup] = React.useState(false)
-    React.useEffect((): void => {
+    const isActiveGroup = React.useMemo((): boolean => {
       if (activeID) {
         const target = childIds.find((v): boolean => v === activeID)
         if (target !== undefined) {
-          setIsActiveGroup(true)
-        } else {
-          setIsActiveGroup(false)
+          return true
         }
       }
+      return false
     }, [activeID, childIds])
-
     // handle click status (shrink expand)
-    const [clickStatus, setOpen] = React.useState(false)
+    const [clickStatus, setOpen] = React.useState(isActiveGroup)
+
     const handleOpen = React.useCallback((): void => {
       if (expanded === true) setOpen((v): boolean => !v)
     }, [expanded])
