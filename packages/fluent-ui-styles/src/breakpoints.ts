@@ -2,13 +2,19 @@ import { Styles } from 'jss'
 import { styleFn } from 'styled-system'
 
 interface BreakpointsValues {
-  xs?: Styles
   sm?: Styles
   md?: Styles
   lg?: Styles
   xl?: Styles
 }
 type Key = keyof BreakpointsValues
+
+const map = {
+  sm: 0,
+  md: 1,
+  lg: 2,
+  xl: 3
+}
 
 export const breakpoints = (values: BreakpointsValues): ((theme: any) => styleFn) => (
   theme: any
@@ -19,7 +25,7 @@ export const breakpoints = (values: BreakpointsValues): ((theme: any) => styleFn
     const rules = values[key]
     const themeBreakpoints = theme.breakpoints
     const result = {
-      [`@media screen and (min-width: ${themeBreakpoints[key]})`]: rules
+      [`@media screen and (min-width: ${themeBreakpoints[map[key]]})`]: rules
     }
     return {
       ...acc,

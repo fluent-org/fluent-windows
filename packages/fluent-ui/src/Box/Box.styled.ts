@@ -39,7 +39,7 @@ const breakpoint = (theme: Theme): Style =>
         }
       }
     }
-  })
+  })(theme)
 
 const system = compose(
   space,
@@ -112,13 +112,11 @@ const acrylic = (theme: Theme): ((props: BoxProps) => Style) => (props: BoxProps
   }
 }
 
-export const styles = (theme: Theme): Styles<BoxClassProps> => {
-  return {
-    root: {
-      ...base,
-      ...breakpoint(theme)
-    },
-    system,
-    acrylic: acrylic(theme)
-  }
-}
+export const styles = (theme: Theme): Styles<BoxClassProps> => ({
+  root: {
+    ...base,
+    ...breakpoint(theme)
+  },
+  system,
+  acrylic: acrylic(theme)
+})

@@ -60,18 +60,15 @@ const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, N
       footer: [],
       content: []
     }
-    React.Children.forEach(
-      children,
-      (child: NavigationChild): void => {
-        if (child.type && child.type.displayName === 'FNavigationHeader') {
-          container.header.push(child)
-        } else if (child.type && child.type.displayName === 'FNavigationFooter') {
-          container.footer.push(child)
-        } else {
-          container.content.push(child)
-        }
+    React.Children.forEach(children, (child: NavigationChild): void => {
+      if (child.type && child.type.displayName === 'FNavigationHeader') {
+        container.header.push(child)
+      } else if (child.type && child.type.displayName === 'FNavigationFooter') {
+        container.footer.push(child)
+      } else {
+        container.content.push(child)
       }
-    )
+    })
 
     const _reveal = acrylic ? false : reveal
     const [RevealWrapper] = useReveal(66)
