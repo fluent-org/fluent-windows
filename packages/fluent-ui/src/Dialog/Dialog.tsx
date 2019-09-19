@@ -4,6 +4,7 @@ import { createUseStyles } from '@fluent-ui/styles'
 import { styles } from './Dialog.styled'
 import { Theme } from '../styles'
 
+import Box from '../Box'
 import Portal from '../Portal'
 import Transition from '../Transition'
 import Title from './components/Title'
@@ -29,14 +30,7 @@ export const DialogContext = React.createContext<DialogContextType>({
 
 const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogProps>(
   (props, ref): React.ReactElement | null => {
-    const {
-      as: Component = 'div',
-      className: classNameProp,
-      children,
-      visible,
-      onChange,
-      ...rest
-    } = props
+    const { as = 'div', className: classNameProp, children, visible, onChange, ...rest } = props
 
     function handleClose(): void {
       onChange && onChange(false)
@@ -47,18 +41,15 @@ const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogPro
       content: [],
       actions: undefined
     }
-    React.Children.forEach(
-      children,
-      (child: DialogChild): void => {
-        if (child.type.displayName! === `F${name}Title`) {
-          container.title = child
-        } else if (child.type.displayName === `F${name}Actions`) {
-          container.actions = child
-        } else {
-          container.content.push(child)
-        }
+    React.Children.forEach(children, (child: DialogChild): void => {
+      if (child.type.displayName! === `F${name}Title`) {
+        container.title = child
+      } else if (child.type.displayName === `F${name}Actions`) {
+        container.actions = child
+      } else {
+        container.content.push(child)
       }
-    )
+    })
 
     const contextValue: DialogContextType = {
       onChange: onChange as (visible: boolean) => void
@@ -76,21 +67,13 @@ const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogPro
         </Portal>
         <Portal>
           <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-            <Component
-              className={className}
-              ref={ref}
-              boxShadow="5"
-              width={{ xs: '288px', sm: 'auto' }}
-              maxWidth={{ xs: '340px', sm: '450px' }}
-              minWidth={{ xs: '288px', sm: '340px' }}
-              {...rest}
-            >
+            <Box className={className} ref={ref} as={as} boxShadow="5" {...rest}>
               <DialogContext.Provider value={contextValue}>
                 {!!container.title && container.title}
                 <div className={classes.content}>{container.content}</div>
                 {!!container.actions && container.actions}
               </DialogContext.Provider>
-            </Component>
+            </Box>
           </Transition>
         </Portal>
       </>

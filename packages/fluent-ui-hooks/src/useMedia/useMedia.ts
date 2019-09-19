@@ -26,18 +26,16 @@ import { useGlobal } from '../useGlobal'
 // eslint-disable-next-line @typescript-eslint/no-angle-bracket-type-assertion
 const json2mq: any = (<any>json2mq_).default || json2mq_
 
-type AllBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type AllBreakpoints = 'sm' | 'md' | 'lg' | 'xl'
 export type MediaQuery = json2mq_.QueryObject | json2mq_.QueryObject[] | AllBreakpoints | string
 
 interface Breakpoints {
-  xs: number
   sm: number
   md: number
   lg: number
   xl: number
 }
 interface TransformedModel {
-  xs: string
   sm: string
   md: string
   lg: string
@@ -49,15 +47,13 @@ interface Option {
 }
 
 const defaultBreakpoints: Breakpoints = {
-  xs: 0,
   sm: 600,
   md: 960,
   lg: 1280,
   xl: 1920
 }
 
-const model = ({ xs, sm, md, lg, xl }: Breakpoints): TransformedModel => ({
-  xs: json2mq({ screen: true, minWidth: xs, maxWidth: sm }),
+const model = ({ sm, md, lg, xl }: Breakpoints): TransformedModel => ({
   sm: json2mq({ screen: true, minWidth: sm }),
   md: json2mq({ screen: true, minWidth: md }),
   lg: json2mq({ screen: true, minWidth: lg }),

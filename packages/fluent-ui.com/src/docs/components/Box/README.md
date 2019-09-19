@@ -28,7 +28,7 @@ Please use the chrome browser, if the chrome browser incompatibility, please fol
 
 ```jsx
 <Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
-  <Box acrylic={true} padding={{ xs: 15, sm: 25 }}>
+  <Box acrylic={true} padding={[15, 25]}>
     Acrylic
   </Box>
 </Box>

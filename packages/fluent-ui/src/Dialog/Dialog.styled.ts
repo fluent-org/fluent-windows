@@ -10,12 +10,28 @@ const root = (theme: Theme): Style => ({
   transform: 'translate(-50%, -50%)',
   backgroundColor: theme.colors!.white!.default,
   borderRadius: 2,
-  padding: '16px 24px 24px'
+  padding: '16px 24px 24px',
+  width: 288,
+  maxWidth: 340,
+  minWidth: 288,
+  '@media screen and (min-width: 600px)': {
+    '&': {
+      width: 'auto',
+      maxWidth: 450,
+      minWidth: 340
+    }
+  }
 })
 
 const title: Style = {
-  display: 'flex',
-  justifyContent: 'space-between'
+  width: '100%',
+  display: 'inline-flex',
+  justifyContent: 'space-between',
+  overflow: 'hidden',
+  '& > h6': {
+    flex: 1,
+    overflow: 'hidden'
+  }
 }
 const content: Style = {
   marginTop: 16,

@@ -41,15 +41,7 @@ const Toast: React.FC<ToastProps> = React.forwardRef<HTMLDivElement, ToastProps>
     return (
       <Portal>
         <Transition visible={visible} wrapper={false} mountOnEnter unmountOnExit>
-          <Box
-            className={className}
-            ref={ref}
-            as={as}
-            width={{ xs: '288px', sm: 'auto' }}
-            minWidth={{ xs: '288px', sm: '340px' }}
-            placement={placement}
-            {...rest}
-          >
+          <Box className={className} ref={ref} as={as} placement={placement} {...rest}>
             <div className={classes.container}>{children}</div>
             <div className={classes.actions}>{actions}</div>
           </Box>

@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
 
 const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): React.ReactElement => {
   // @ts-ignore
-  const code = children.props.children
+  const code = typeof children === 'string' ? children : children.props.children
 
   const classes = useStyles()
 

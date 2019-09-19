@@ -15,7 +15,15 @@ const root = (theme: Theme): Style => ({
   padding: '6px 16px',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  width: 288,
+  minWidth: 288,
+  '@media screen and (min-width: 600px)': {
+    '&': {
+      width: 'auto',
+      minWidth: 340
+    }
+  }
 })
 const baseSpace = 24
 const placementTopStart: Style = {
