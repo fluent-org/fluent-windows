@@ -10381,7 +10381,7 @@ jss-preset-default@10.0.0-alpha.25:
     jss-plugin-template "10.0.0-alpha.25"
     jss-plugin-vendor-prefixer "10.0.0-alpha.25"
 
-jss@10.0.0-alpha.25, jss@^10.0.0-alpha.24:
+jss@10.0.0-alpha.25, jss@^10.0.0-alpha.25:
   version "10.0.0-alpha.25"
   resolved "https://registry.npmjs.org/jss/-/jss-10.0.0-alpha.25.tgz#20a506d8159e3f6bd91e133d54ffd3df0ffd3010"
   integrity sha512-zqKnXv181B9vue2yYhmVhc+6ggbbxHF/33rjXfXEjaa22nOvknTI21QDfq3oZ8uCC50kcFp3Z8KU1ghUXdFvIA==
@@ -13713,7 +13713,7 @@ react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
-react-jss@^10.0.0-alpha.24:
+react-jss@^10.0.0-alpha.25:
   version "10.0.0-alpha.25"
   resolved "https://registry.npmjs.org/react-jss/-/react-jss-10.0.0-alpha.25.tgz#ae3bc57bfb910602b0bbf992048c0ecb85c3fc37"
   integrity sha512-4IGRNJbF9Q7DSrnEy300BhvuWn+x2rvg4MuGLJ0iAGIt/K6f8SesrjvvMuI+SzNkr9RyGa8KEF0GSmsQLhJ/kg==
@@ -15654,7 +15654,7 @@ style-to-object@^0.2.1:
   dependencies:
     inline-style-parser "0.1.1"
 
-styled-system@^5.1.1:
+styled-system@^5.1.1, styled-system@^5.1.2:
   version "5.1.2"
   resolved "https://registry.npmjs.org/styled-system/-/styled-system-5.1.2.tgz#26a105a4b9110874b5857bb34de20dada8695130"
   integrity sha512-gbiohoqYYtvg9Q6nA3EagQSouHI9ylmcKUHHaUvCQrPpnPeJlUJAvj9vfyDgsJjw/oBogggfojF1X9EShfPffg==

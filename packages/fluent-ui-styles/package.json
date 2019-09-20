@@ -38,9 +38,9 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
-    "jss": "^10.0.0-alpha.24",
-    "react-jss": "^10.0.0-alpha.24",
-    "styled-system": "^5.1.1"
+    "jss": "^10.0.0-alpha.25",
+    "react-jss": "^10.0.0-alpha.25",
+    "styled-system": "^5.1.2"
   },
   "devDependencies": {
     "@types/styled-system": "^5.1.1"
