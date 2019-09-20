@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.1](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.21.0...@fluent-ui/core@0.21.1) (2019-09-20)
+
+
+### Bug Fixes
+
+* **ThemeProvider:** Corrections ThemeProvider the default export ([b79dbc1](https://github.com/fluent-org/fluent-ui/commit/b79dbc1))
+
+
+
+
+
 # [0.21.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.20.0...@fluent-ui/core@0.21.0) (2019-09-20)
 
 

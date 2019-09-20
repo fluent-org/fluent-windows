@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.17.0...fluent-ui.com@1.17.1) (2019-09-20)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Fix `document is not define`. ([9a54723](https://github.com/fluent-org/fluent-ui/commit/9a54723))
+* **ThemeProvider:** Corrections ThemeProvider the default export ([b79dbc1](https://github.com/fluent-org/fluent-ui/commit/b79dbc1))
+
+
+
+
+
 # [1.17.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.16.3...fluent-ui.com@1.17.0) (2019-09-20)
 
 
