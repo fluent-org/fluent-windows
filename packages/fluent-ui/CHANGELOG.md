@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.2](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.21.1...@fluent-ui/core@0.21.2) (2019-09-20)
+
+
+### Bug Fixes
+
+* **test-utils/createRender:** Refers to fix errors ([d65dfcd](https://github.com/fluent-org/fluent-ui/commit/d65dfcd))
+
+
+
+
+
 ## [0.21.1](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.21.0...@fluent-ui/core@0.21.1) (2019-09-20)
 
 
