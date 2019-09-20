@@ -86,11 +86,16 @@ exports[`Card should render children 1`] = `
     border-radius: 4px;
     background-color: #ffffff;
   }
-  .FCard-pure {
-    box-shadow: none;
-    border-radius: 0;
+  .FCard-hover:hover {
+    cursor: pointer;
+    box-shadow: 0px 6.4px 14.4px 0px rgba(0,0,0,0.132),0px 1.2px 3.6px 0px rgba(0,0,0,0.108);
   }
-  .FCard-dynamic:hover {
-    transform: scale(1.1);
+  .FCard-acrylic::before {
+    box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2);
+    transition: all 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  }
+  .FCard-acrylic:hover::before {
+    box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.08);
   }"
 `;

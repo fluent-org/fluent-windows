@@ -27,7 +27,9 @@ export function useClickOutside(
       // @ts-ignore
       if (
         !ref.current ||
-        (typeof ref.current.contains === 'function' && ref.current.contains(event.target))
+        (typeof ref.current.contains === 'function' &&
+          event.target &&
+          ref.current.contains(event.target as Node))
       ) {
         return
       }

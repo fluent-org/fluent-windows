@@ -24,10 +24,10 @@ exports[`IconButton should render children 1`] = `
   background-color: transparent;
 }
 .FIconButton-variantStandard:hover, .FIconButton-variantStandard:focus {
-  background-color: rgba(NaN, NaN, NaN, NaN, NaN, NaN, 0.08);
+  background-color: rgba(36, 149, 224, 0.08);
 }
 .FIconButton-variantStandard:active {
-  background-color: rgba(NaN, NaN, NaN, NaN, NaN, NaN, 0.36);
+  background-color: rgba(36, 149, 224, 0.36);
 }
 .FIconButton-variantPrimary {
   color: #ffffff;

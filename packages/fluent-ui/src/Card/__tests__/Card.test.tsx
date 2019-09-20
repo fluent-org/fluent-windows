@@ -37,14 +37,4 @@ describe('Card', (): void => {
     expect(getByTestId('content')).toHaveTextContent('content')
     expect(getByTestId('actions')).toHaveTextContent('actions')
   })
-
-  test('should render a pure card', (): void => {
-    const { container } = render(<Card pure>pure</Card>)
-    expect(container.firstChild).toHaveClass(classes.pure)
-  })
-
-  test('should render a dynamic card', (): void => {
-    const { container } = render(<Card dynamic>dynamic</Card>)
-    expect(container.firstChild).toHaveClass(classes.dynamic)
-  })
 })
