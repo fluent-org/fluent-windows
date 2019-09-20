@@ -4,12 +4,14 @@ import { Box, Typography, Dialog, Theme } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import * as Icons from '@fluent-ui/icons'
 import { Styles } from 'jss'
-
+import { VirtuosoGrid } from 'react-virtuoso'
+const Virtuoso = VirtuosoGrid as any
 import Highlight from '../../../components/highlight'
 
 type Classes =
-  | 'iconRoot'
-  | 'icons'
+  | 'list'
+  | 'iconContainer'
+  | 'iconWrapper'
   | 'title'
   | 'bigIcon'
   | 'smallIcon'
@@ -21,16 +23,26 @@ type Classes =
   | 'blackIcon'
 const useStyles = createUseStyles<Theme, Classes>(
   (theme: Theme): Styles => ({
-    iconRoot: {
-      width: 90,
-      display: 'inline-block',
-      cursor: 'pointer'
+    list: {
+      display: 'flex',
+      flexWrap: 'wrap'
     },
-    icons: {
+    iconContainer: {
+      width: '33%',
+      '@media screen and (min-width: 600px)': {
+        width: '25%'
+      },
+      '@media screen and (min-width: 960px)': {
+        width: '20%'
+      }
+    },
+    iconWrapper: {
+      width: '100%',
+      fontSize: 26,
       padding: 16,
-      margin: '4px 0',
       borderRadius: 4,
       textAlign: 'center',
+      cursor: 'pointer',
       '&:hover': {
         backgroundColor: '#fff'
       }
@@ -103,22 +115,25 @@ const Template = (): React.ReactElement => {
   )
 
   return (
-    <Box backgroundColor="standard.light3" padding={20}>
-      {IconArray.map(
-        (Icon): React.ReactElement => {
+    <Box backgroundColor="standard.light3" marginTop={20}>
+      <Virtuoso
+        totalCount={IconArray.length}
+        listClassName={classes.list}
+        itemClassName={classes.iconContainer}
+        item={(index: number): React.ReactElement => {
+          const Icon = IconArray[index]
           const name = String.prototype.substring.call(Icon.displayName, 5)
           return (
-            <div className={classes.iconRoot} onClick={handleVisible.bind(null, name)} key={name}>
-              <div className={classes.icons}>
-                <Icon />
-              </div>
+            <div className={classes.iconWrapper} onClick={handleVisible.bind(null, name)}>
+              <Icon />
               <Typography className={classes.title} variant="subtitle2" color="standard.dark1">
                 {name}
               </Typography>
             </div>
           )
-        }
-      )}
+        }}
+        style={{ height: '500px' }}
+      />
       <Dialog visible={visible} onChange={handleVisible}>
         <Dialog.Title>{currentSelectIcon}</Dialog.Title>
 

@@ -54,7 +54,8 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.0",
-    "react-object-inspector": "^0.2.1"
+    "react-object-inspector": "^0.2.1",
+    "react-virtuoso": "^0.12.1"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "^6.9.0",
