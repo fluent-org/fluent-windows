@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types'
 import { render, RenderOptions, RenderResult } from '@testing-library/react'
 import { SheetsRegistry } from '@fluent-ui/styles'
 import { StyleSheet } from 'jss'
-import { ThemeProvider } from '../ThemeProvider'
+import ThemeProvider from '../ThemeProvider'
 
 interface WrapperProps {
   children?: React.ReactNode
