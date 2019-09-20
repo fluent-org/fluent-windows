@@ -3,8 +3,10 @@ import * as React from 'react'
 import { ChromePicker } from 'react-color'
 import { useDispatch } from '@fluent-ui/hooks'
 
-import { Box, Button } from '@fluent-ui/core'
+import { Box, Button, Theme } from '@fluent-ui/core'
 import { createUseStyles, useTheme } from '@fluent-ui/styles'
+
+import { getCookie } from '../../../utils'
 
 const useStyles = createUseStyles({
   buttons: {
@@ -18,26 +20,29 @@ const useStyles = createUseStyles({
 const Template = (): React.ReactElement => {
   const classes = useStyles()
 
-  const theme = useTheme()
+  const theme = useTheme() as Theme
   // @ts-ignore
-  const [color, setColor] = React.useState(theme!.colors!.primary!.default)
-
-  const dispatch = React.useCallback((_color: string): void => {
-    // eslint-disable-next-line
-    useDispatch({ type: 'theme/setPrimaryColor', payload: _color })()
-  }, [])
+  const [color, setColor] = React.useState<string>(
+    (): string => getCookie('primaryColor') || theme.colors!.primary!.default!
+  )
 
   const handleChangeComplete = React.useCallback((primaryColor): void => {
     setColor(primaryColor.hex)
   }, [])
 
+  const setPrimaryColorDispatch = React.useCallback((_color: string): void => {
+    // eslint-disable-next-line
+    useDispatch({ type: 'theme/setPrimaryColor', payload: _color })()
+  }, [])
+  const resetPrimaryColorDispatch = useDispatch({ type: 'theme/resetPrimaryColor' })
+
   const handleSetClick = React.useCallback((): void => {
-    dispatch(color)
-  }, [color, dispatch])
+    setPrimaryColorDispatch(color)
+  }, [color, setPrimaryColorDispatch])
   const handleResetClick = React.useCallback((): void => {
-    dispatch('#0078d4')
+    resetPrimaryColorDispatch()
     setColor('#0078d4')
-  }, [dispatch])
+  }, [resetPrimaryColorDispatch])
 
   return (
     <Box backgroundColor="standard.light3" padding={20}>

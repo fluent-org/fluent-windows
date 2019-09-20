@@ -2,6 +2,7 @@ import * as React from 'react'
 import { createGlobalStyle } from '@fluent-ui/styles'
 import { ThemeProvider, Normalize, Theme } from '@fluent-ui/core'
 import { useAction } from '@fluent-ui/hooks'
+import { getCookie } from '../utils'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -29,6 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
   useAction(
     'theme/setPrimaryColor',
     (primaryColor: string): void => {
+      document.cookie = `primaryColor=${primaryColor};path=/;max-age=31536000`
       setTheme({
         colors: {
           primary: {
@@ -39,6 +41,33 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
     },
     []
   )
+  useAction(
+    'theme/resetPrimaryColor',
+    (): void => {
+      document.cookie = `primaryColor=;path=/;max-age=31536000`
+      setTheme({
+        colors: {
+          primary: {
+            default: '#0078D4'
+          }
+        }
+      })
+    },
+    []
+  )
+  React.useEffect((): void => {
+    // @ts-ignore
+    if (process.browser) {
+      const primaryColor = getCookie('primaryColor') || '#0078D4'
+      setTheme({
+        colors: {
+          primary: {
+            default: primaryColor
+          }
+        }
+      })
+    }
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>
