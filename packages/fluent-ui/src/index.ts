@@ -27,7 +27,7 @@ export { default as Toast } from './Toast'
 export * from './Table'
 export { default as Table } from './Table'
 
-export { ThemeProvider, Normalize } from './ThemeProvider'
+export { default as ThemeProvider, Normalize } from './ThemeProvider'
 export * from './styles'
 
 import * as colors from './colors'
