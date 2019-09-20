@@ -36,8 +36,7 @@ Fluent-UI provides an optional `Normalize` component. It fixes some inconsistenc
 It is based on the [normalize.css](https://github.com/necolas/normalize.css)
 
 ```jsx
-import ThemeProvider from '@fluent-ui/core/ThemeProvider';
-import Normalize from '@fluent-ui/core/ThemeProvider/Normalize';
+import ThemeProvider, { Normalize } from '@fluent-ui/core/ThemeProvider';
 
 function Layout({ children }) {
   return (
