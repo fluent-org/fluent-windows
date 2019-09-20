@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/hooks@0.9.1...@fluent-ui/hooks@0.10.0) (2019-09-20)
+
+
+### Bug Fixes
+
+* **@fluent-ui/hooks:** Fix `useClickOutside` type error and update snapshots ([82080e2](https://github.com/fluent-org/fluent-ui/commit/82080e2))
+
+
+### Features
+
+* **fluent-ui.com:** The new icon interaction ([24c82d3](https://github.com/fluent-org/fluent-ui/commit/24c82d3))
+
+
+
+
+
 ## [0.9.1](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/hooks@0.9.0...@fluent-ui/hooks@0.9.1) (2019-09-18)
 
 **Note:** Version bump only for package @fluent-ui/hooks

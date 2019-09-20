@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.20.0...@fluent-ui/core@0.21.0) (2019-09-20)
+
+
+### Bug Fixes
+
+* **@fluent-ui/hooks:** Fix `useClickOutside` type error and update snapshots ([82080e2](https://github.com/fluent-org/fluent-ui/commit/82080e2))
+
+
+### Features
+
+* **fluent-ui.com:** The new icon interaction ([24c82d3](https://github.com/fluent-org/fluent-ui/commit/24c82d3))
+* **ThemeProvider:** The theme for the optional attribute adjustment ThemeProvider ([b85e7e9](https://github.com/fluent-org/fluent-ui/commit/b85e7e9))
+
+
+### Performance Improvements
+
+* **fluent-ui.com:** Icon document pages to improve rendering performance ([b454c26](https://github.com/fluent-org/fluent-ui/commit/b454c26))
+
+
+
+
+
 # [0.20.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.19.2...@fluent-ui/core@0.20.0) (2019-09-19)
 
 

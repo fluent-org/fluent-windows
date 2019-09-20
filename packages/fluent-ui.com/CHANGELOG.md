@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.16.3...fluent-ui.com@1.17.0) (2019-09-20)
+
+
+### Features
+
+* **fluent-ui.com:** ColorTool color changes recorded in cookie ([ec79f59](https://github.com/fluent-org/fluent-ui/commit/ec79f59))
+* **fluent-ui.com:** The new icon interaction ([24c82d3](https://github.com/fluent-org/fluent-ui/commit/24c82d3))
+
+
+### Performance Improvements
+
+* **fluent-ui.com:** Icon document pages to improve rendering performance ([b454c26](https://github.com/fluent-org/fluent-ui/commit/b454c26))
+
+
+
+
+
 ## [1.16.3](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.16.2...fluent-ui.com@1.16.3) (2019-09-19)
 
 
