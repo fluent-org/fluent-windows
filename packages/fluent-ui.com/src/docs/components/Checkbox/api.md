@@ -2,6 +2,7 @@
 title: Checkbox
 components: Checkbox
 api: true
+langKey: "en"
 ---
 
 ## API

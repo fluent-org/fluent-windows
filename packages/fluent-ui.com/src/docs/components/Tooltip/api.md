@@ -2,6 +2,7 @@
 title: Tooltip
 components: Tooltip
 api: true
+langKey: "en"
 ---
 
 ## API

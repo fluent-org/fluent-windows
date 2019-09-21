@@ -2,6 +2,7 @@
 title: Form
 components: Form
 api: true
+langKey: "en"
 ---
 
 ## API

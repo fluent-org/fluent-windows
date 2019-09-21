@@ -2,6 +2,7 @@
 title: useGlobal
 hooks: useGlobal
 api: true
+langKey: "en"
 ---
 
 ## API

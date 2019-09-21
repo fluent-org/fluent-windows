@@ -2,6 +2,7 @@
 title: Typography
 components: Typography
 api: true
+langKey: "en"
 ---
 
 ## API

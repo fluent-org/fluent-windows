@@ -2,6 +2,7 @@
 title: Item
 components: Item
 api: true
+langKey: "en"
 ---
 
 ## API

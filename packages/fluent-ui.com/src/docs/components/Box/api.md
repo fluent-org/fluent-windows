@@ -2,6 +2,7 @@
 title: Box
 components: Box
 api: true
+langKey: "en"
 ---
 
 ## API

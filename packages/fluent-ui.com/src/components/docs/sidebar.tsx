@@ -2,32 +2,35 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { Box, Theme, Typography } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
-import { TemplateProps } from './template'
+import { TemplateProps } from '../../templates/docs'
 import { scrollToAnchor } from '../../utils/scroll'
+import { Styles } from 'jss'
 
-type Styles = 'sideBar' | 'subTitle'
-const useStyles = createUseStyles<Theme, Styles>((theme: Theme) => ({
-  sideBar: {
-    position: 'fixed',
-    top: 114,
-    right: -80,
-    zIndex: '100 !important',
-    transition: theme.transitions!.default,
-    '&:hover': {
-      right: 0
+type Classes = 'sideBar' | 'subTitle'
+const useStyles = createUseStyles<Theme, Classes>(
+  (theme: Theme): Styles => ({
+    sideBar: {
+      position: 'fixed',
+      top: 114,
+      right: -80,
+      zIndex: '100 !important',
+      transition: theme.transitions!.default,
+      '&:hover': {
+        right: 0
+      }
+    },
+    subTitle: {
+      textDecoration: 'none',
+      marginTop: 4,
+      color: theme.colors!.standard!.dark1,
+      transition: theme.transitions!.default,
+      cursor: 'pointer',
+      '&:hover': {
+        color: theme.colors!.standard!.dark3
+      }
     }
-  },
-  subTitle: {
-    textDecoration: 'none',
-    marginTop: 4,
-    color: theme.colors!.standard!.dark1,
-    transition: theme.transitions!.default,
-    cursor: 'pointer',
-    '&:hover': {
-      color: theme.colors!.standard!.dark3
-    }
-  }
-}))
+  })
+)
 
 interface SidebarProps {
   data: TemplateProps['data']

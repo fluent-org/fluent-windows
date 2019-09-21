@@ -2,6 +2,7 @@
 title: useClick
 hooks: useClick
 api: true
+langKey: "en"
 ---
 
 ## API

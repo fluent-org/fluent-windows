@@ -2,6 +2,7 @@
 title: Spinner
 components: Spinner
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: Tabs
 components: Tabs
 api: true
+langKey: "en"
 ---
 
 ## API

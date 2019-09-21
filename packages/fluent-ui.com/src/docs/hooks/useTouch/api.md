@@ -2,6 +2,7 @@
 title: useTouch
 hooks: useTouch
 api: true
+langKey: "en"
 ---
 
 ## API

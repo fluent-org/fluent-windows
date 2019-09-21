@@ -2,6 +2,7 @@
 title: Select
 components: Select
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: Radio
 components: Radio
 api: true
+langKey: "en"
 ---
 
 ## API

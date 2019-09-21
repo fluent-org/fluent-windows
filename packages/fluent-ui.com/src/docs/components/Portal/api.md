@@ -2,6 +2,7 @@
 title: Portal
 components: Portal
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: FormLabel
 components: FormLabel
 api: true
+langKey: "en"
 ---
 
 ## API

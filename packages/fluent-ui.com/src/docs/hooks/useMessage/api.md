@@ -2,6 +2,7 @@
 title: useMessage
 hooks: useMessage
 api: true
+langKey: "en"
 ---
 
 ## API

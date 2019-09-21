@@ -2,6 +2,7 @@
 title: useMedia
 hooks: useMedia
 api: true
+langKey: "en"
 ---
 
 ## API

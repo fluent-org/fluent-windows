@@ -2,6 +2,7 @@
 title: Card
 components: Card
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Fluent-UI`,
-    description: `React components that implement Microsoft's Fluent Design System.`,
+    description: `React components that inspired Microsoft's Fluent Design System.`,
     author: `@chenyueban`
   },
   plugins: [
@@ -13,7 +13,7 @@ module.exports = {
       options: {
         name: `Fluent-UI`,
         short_name: `fluent`,
-        description: `React components that implement Microsoft's Fluent Design System.`,
+        description: `React components that inspired Microsoft's Fluent Design System.`,
         start_url: `/`,
         background_color: `#0078d4`,
         theme_color: `#0078d4`,
@@ -45,6 +45,14 @@ module.exports = {
         disable: true
       }
     },
-    `gatsby-plugin-jss`
+    `gatsby-plugin-jss`,
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        useLangKeyLayout: false,
+        prefixDefault: false
+      }
+    }
   ]
 }

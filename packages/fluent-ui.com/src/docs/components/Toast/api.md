@@ -2,6 +2,7 @@
 title: Toast
 components: Toast
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: useUpdateEffect
 hooks: useUpdateEffect
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: Table
 components: Table
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: Input
 components: Input
 api: true
+langKey: "en"
 ---
 
 ## API

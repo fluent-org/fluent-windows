@@ -2,6 +2,7 @@
 title: Command
 components: Command
 api: true
+langKey: "en"
 ---
 
 ## API

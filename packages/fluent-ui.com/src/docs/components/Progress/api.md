@@ -2,6 +2,7 @@
 title: Progress
 components: Progress
 api: true
+langKey: "en"
 ---
 
 ## API

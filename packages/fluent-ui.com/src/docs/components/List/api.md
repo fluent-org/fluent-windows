@@ -2,6 +2,7 @@
 title: List
 components: List
 api: true
+langKey: "en"
 ---
 
 ## API

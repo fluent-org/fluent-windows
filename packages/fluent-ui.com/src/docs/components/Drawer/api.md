@@ -2,6 +2,7 @@
 title: Drawer
 components: Drawer
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -36,13 +36,10 @@ const Tooltip: React.FC<TooltipProps> = (props): React.ReactElement => {
 
   const hoverHandler = useHover(onChange)
   const clickHandler = useClick(onChange)
-  useClickOutside(
-    referenceRef,
-    (): void => {
-      clickHandler[2] && clickHandler[2](false)
-      onChange && onChange(false)
-    }
-  )
+  useClickOutside(referenceRef, (): void => {
+    clickHandler[2] && clickHandler[2](false)
+    onChange && onChange(false)
+  })
   const touchHandler = useTouch(onChange)
   const focusHandler = useFocus(onChange)
   const triggerMap = {

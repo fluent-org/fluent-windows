@@ -2,6 +2,7 @@
 title: Dialog
 components: Dialog
 api: true
+langKey: "en"
 ---
 
 ## API

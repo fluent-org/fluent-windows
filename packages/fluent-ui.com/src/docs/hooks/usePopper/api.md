@@ -2,6 +2,7 @@
 title: usePopper
 hooks: usePopper
 api: true
+langKey: "en"
 ---
 
 ## API

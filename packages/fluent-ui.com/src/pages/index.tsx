@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 
-import { Box, Button, Typography } from '@fluent-ui/core'
+import { Box, Button } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 
 import Layout from '../components/layout'
@@ -25,10 +25,12 @@ const useStyles = createUseStyles({
   }
 })
 
-const IndexPage = (): React.ReactElement => {
+const IndexPage = (props: any): React.ReactElement => {
   const handleLink = React.useCallback((): void => {
-    navigate('/components/box', { replace: true })
-  }, [])
+    const { langKey } = props.pageContext
+    const prefix = langKey === 'en' ? '/' : `/${langKey}/`
+    navigate(`${prefix}getting-started/installation`, { replace: true })
+  }, [props.pageContext.langKey]) // eslint-disable-line
 
   const classes = useStyles()
 
@@ -71,7 +73,7 @@ const IndexPage = (): React.ReactElement => {
             fontSize={['1em', '1.25em']}
             fontFamily={`Georgia, Cambria, "Times New Roman", Times, serif`}
           >
-            React components that implement Microsoft Fluent Design System.
+            React components that inspired Microsoft Fluent Design System.
           </Box>
           <Box marginTop="1.2em">
             <Box display={['block', 'inline-block']}>

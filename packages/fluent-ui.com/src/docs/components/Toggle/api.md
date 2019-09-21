@@ -2,6 +2,7 @@
 title: Toggle
 components: Toggle
 api: true
+langKey: "en"
 ---
 
 ## API

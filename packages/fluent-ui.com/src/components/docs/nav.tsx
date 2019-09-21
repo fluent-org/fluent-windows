@@ -15,7 +15,9 @@ import {
   ProgressRingDots as ProgressRingDotsIcon
 } from '@fluent-ui/icons'
 import { useAction } from '@fluent-ui/hooks'
-import { TemplateProps } from './template'
+import { useIntl } from 'react-intl'
+import { toLine } from '../../utils'
+import { TemplateProps } from '../../templates/docs'
 
 const iconMap = [
   {
@@ -52,35 +54,37 @@ const iconMap = [
   }
 ]
 
-interface Acc {
-  [key: string]: string[]
-}
-interface Elem {
-  type: string
+interface Title {
   title: string
+  slug: string
+}
+interface Acc {
+  [key: string]: Title[]
 }
 interface Result {
   type: string
-  titles: string[]
+  titles: Title[]
 }
-const getFrontMatter = (target: TemplateProps['data']): Result[] => {
+const getFrontMatter = (target: TemplateProps['data'], langKey: string): Result[] => {
   const classify: {
-    [type: string]: string[]
+    [type: string]: Title[]
   } = target.docs.edges
-    .map((v): Elem => v.node.frontmatter)
+    .filter((v): boolean => v.node.frontmatter.langKey === langKey)
     .reduce((acc, elem): Acc => {
-      const { type, title } = elem
+      const { type, title } = elem.node.frontmatter
+      const { slug } = elem.node.fields
       if ((acc as Acc)[type]) {
         return {
           ...acc,
-          [type]: [...(acc as Acc)[type], title]
+          [type]: [...(acc as Acc)[type], { title, slug }]
         }
       }
       return {
         ...acc,
-        [type]: [title]
+        [type]: [{ title, slug }]
       }
     }, {})
+
   return Object.keys(classify).map(
     (type): Result => ({
       type,
@@ -107,7 +111,7 @@ const useStyles = createUseStyles({
   }
 })
 
-const Nav = ({ data }: TemplateProps): React.ReactElement => {
+const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
   const activeId = data.doc.frontmatter.title
 
   const [expanded, setExpanded] = React.useState(true)
@@ -127,13 +131,15 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
     []
   )
 
-  const handleNavigation = React.useCallback((title: string, type: string): void => {
-    type === 'hooks' ? navigate(`/hooks/${title}`) : navigate(`/components/${title.toLowerCase()}`)
+  const handleNavigation = React.useCallback((slug: string): void => {
+    navigate(slug)
   }, [])
 
-  const result = getFrontMatter(data)
+  const result = getFrontMatter(data, pageContext.langKey)
 
   const rootRef = React.useRef<HTMLDivElement>(null)
+
+  const { formatMessage } = useIntl()
 
   const mobileChild = (
     <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
@@ -144,14 +150,18 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
         {result.map(
           ({ type, titles }): React.ReactFragment => {
             return (
-              <ItemGroup key={type} title={type} prefix={getPrefixBytitle(type)}>
+              <ItemGroup
+                key={type}
+                title={formatMessage({ id: `nav.${toLine(type)}` })}
+                prefix={getPrefixBytitle(type)}
+              >
                 {titles.map(
-                  (title): React.ReactElement => (
+                  ({ title, slug }): React.ReactElement => (
                     <Item
                       value={title}
                       key={title}
                       className={activeId === title ? 'active-item' : ''}
-                      onClick={handleNavigation.bind(undefined, title, type)}
+                      onClick={handleNavigation.bind(undefined, slug)}
                     >
                       {title}
                     </Item>
@@ -180,14 +190,18 @@ const Nav = ({ data }: TemplateProps): React.ReactElement => {
       {result.map(
         ({ type, titles }): React.ReactFragment => {
           return (
-            <ItemGroup key={type} title={type} prefix={getPrefixBytitle(type)}>
+            <ItemGroup
+              key={type}
+              title={formatMessage({ id: `nav.${toLine(type)}` })}
+              prefix={getPrefixBytitle(type)}
+            >
               {titles.map(
-                (title): React.ReactElement => (
+                ({ title, slug }): React.ReactElement => (
                   <Item
                     value={title}
                     key={title}
                     className={activeId === title ? 'active-item' : ''}
-                    onClick={handleNavigation.bind(undefined, title, type)}
+                    onClick={handleNavigation.bind(undefined, slug)}
                   >
                     {title}
                   </Item>

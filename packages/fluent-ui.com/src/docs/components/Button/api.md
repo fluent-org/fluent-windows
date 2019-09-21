@@ -2,6 +2,7 @@
 title: Button
 components: Button
 api: true
+langKey: "en"
 ---
 
 ## API

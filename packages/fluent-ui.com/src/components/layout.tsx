@@ -2,6 +2,8 @@ import * as React from 'react'
 import { createGlobalStyle } from '@fluent-ui/styles'
 import { ThemeProvider, Normalize, Theme } from '@fluent-ui/core'
 import { useAction } from '@fluent-ui/hooks'
+import { IntlProvider } from 'react-intl'
+import * as messages from '../translations'
 import { getCookie } from '../utils'
 
 interface LayoutProps {
@@ -26,6 +28,15 @@ const GlobalStyle = createGlobalStyle({
 })
 
 const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactElement => {
+  const [langKey, setLangKey] = React.useState<messages.LangKey>('en')
+  useAction(
+    'i18n/set',
+    (lang): void => {
+      setLangKey(lang)
+    },
+    []
+  )
+
   const [colors, setColors] = React.useState({})
   const global = typeof document !== `undefined` ? document : null
   useAction(
@@ -69,11 +80,13 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <Normalize />
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+    <IntlProvider locale={langKey} messages={messages[langKey]}>
+      <ThemeProvider theme={theme}>
+        <Normalize />
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    </IntlProvider>
   )
 }
 

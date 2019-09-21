@@ -2,6 +2,7 @@
 title: useClickOutside
 hooks: useClickOutside
 api: true
+langKey: "en"
 ---
 
 ## API

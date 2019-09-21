@@ -2,6 +2,7 @@
 title: Navigation
 components: Navigation
 api: true
+langKey: "en"
 ---
 
 ## API

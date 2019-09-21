@@ -2,6 +2,7 @@
 title: useReveal
 hooks: useReveal
 api: true
+langKey: "en"
 ---
 
 ## API

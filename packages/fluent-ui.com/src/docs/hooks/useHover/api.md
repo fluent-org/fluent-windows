@@ -2,6 +2,7 @@
 title: useHover
 hooks: useHover
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -12,10 +12,10 @@ import Highlight from '../highlight'
 import IconTemplate from '../../docs/components/Icon/template'
 import ColorTemplate from '../../docs/components/Color/template'
 import ColorTool from '../../docs/components/Color/ColorTool'
-import ThemeTemplate from '../../docs/gettingStarted/theme/template'
+import ThemeTemplate from '../../docs/getting-started/theme/template'
 import Table from '../table'
 
-import { TemplateProps } from './template'
+import { TemplateProps } from '../../templates/docs'
 
 import { styles } from './content.styled'
 import { scrollToAnchor } from '../../utils/scroll'
@@ -99,9 +99,10 @@ const typographyOverrides = {
 
 const Content = ({ data }: TemplateProps): React.ReactElement => {
   const pre =
-    data.doc.frontmatter.type === 'hooks' || data.doc.frontmatter.type === 'GettingStarted'
+    data.doc.frontmatter.type === 'hooks' || data.doc.frontmatter.type === 'getting-started'
       ? Highlight
       : Playground
+
   return (
     <>
       <SideBar data={data} />
@@ -118,10 +119,11 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
         }}
       >
         <Header />
-        <Box padding="4" minHeight="100%" backgroundColor="#fff">
+        <Box padding="4" minHeight="100%" backgroundColor="white.default">
           <Markdown
             // @ts-ignore
             options={{
+              slugify: (str: string): string => str,
               overrides: {
                 pre,
                 IconTemplate,
@@ -137,6 +139,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
           {data.api && (
             <Markdown
               options={{
+                slugify: (str: string): string => str,
                 // @ts-ignore
                 namedCodesToUnicode: {
                   or: '|'

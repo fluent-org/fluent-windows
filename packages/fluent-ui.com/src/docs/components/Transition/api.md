@@ -2,6 +2,7 @@
 title: Transition
 components: Transition
 api: true
+langKey: "en"
 ---
 
 ## API

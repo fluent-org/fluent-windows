@@ -2,6 +2,7 @@
 title: ItemGroup
 components: ItemGroup
 api: true
+langKey: "en"
 ---
 
 ## API

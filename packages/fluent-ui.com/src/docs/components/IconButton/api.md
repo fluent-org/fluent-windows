@@ -2,6 +2,7 @@
 title: IconButton
 components: IconButton
 api: true
+langKey: "en"
 ---
 
 ## API

@@ -2,6 +2,7 @@
 title: useAction
 hooks: useAction
 api: true
+langKey: "en"
 ---
 
 ## API

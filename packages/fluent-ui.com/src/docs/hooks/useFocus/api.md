@@ -2,6 +2,7 @@
 title: useFocus
 hooks: useFocus
 api: true
+langKey: "en"
 ---
 
 ## API
