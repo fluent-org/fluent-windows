@@ -48,7 +48,7 @@ const H1 = (props: TypographyComponentProps): React.ReactElement => {
 const H2 = (props: TypographyComponentProps): React.ReactElement => {
   const classes = useStyles()
   return (
-    <Typography variant="h5" as="h2" gutterTop gutterBottom {...props}>
+    <Typography variant="h5" as="h2" gutterBottom marginTop="2em" {...props}>
       <a
         className={classes.titleA}
         href={`#${props.id}`}

@@ -26,17 +26,15 @@ const GlobalStyle = createGlobalStyle({
 })
 
 const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactElement => {
-  const [theme, setTheme] = React.useState<Theme>({})
+  const [colors, setColors] = React.useState({})
   const global = typeof document !== `undefined` ? document : null
   useAction(
     'theme/setPrimaryColor',
     (primaryColor: string): void => {
       if (global) global.cookie = `primaryColor=${primaryColor};path=/;max-age=31536000`
-      setTheme({
-        colors: {
-          primary: {
-            default: primaryColor
-          }
+      setColors({
+        primary: {
+          default: primaryColor
         }
       })
     },
@@ -46,11 +44,9 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
     'theme/resetPrimaryColor',
     (): void => {
       if (global) global.cookie = `primaryColor=;path=/;max-age=31536000`
-      setTheme({
-        colors: {
-          primary: {
-            default: '#0078D4'
-          }
+      setColors({
+        primary: {
+          default: '#0078D4'
         }
       })
     },
@@ -60,15 +56,17 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): React.ReactEl
     // @ts-ignore
     if (process.browser) {
       const primaryColor = getCookie('primaryColor') || '#0078D4'
-      setTheme({
-        colors: {
-          primary: {
-            default: primaryColor
-          }
+      setColors({
+        primary: {
+          default: primaryColor
         }
       })
     }
   }, [])
+
+  const theme: Theme = {
+    colors
+  }
 
   return (
     <ThemeProvider theme={theme}>

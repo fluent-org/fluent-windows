@@ -19,14 +19,12 @@ interface PlaygroundProps {
 const styles = {
   editor: {
     position: 'relative',
-    '& textarea': {
-      fontSize: 14,
+    '& textarea, & pre': {
       maxHeight: 1000,
       overflow: 'auto !important',
-      backgroundColor: '#fff !important',
-      borderBottom: '1px dashed #f5f5f5',
       '-webkit-overflow-scrolling': 'touch',
-      outline: 'none'
+      outline: 'none',
+      borderBottom: '1px dashed #f5f5f5 !important'
     },
     '&:hover': {
       '& .copy': {

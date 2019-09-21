@@ -30,7 +30,6 @@ const styles: Style = {
     overflow: 'visible'
   },
   pre: {
-    fontFamily: 'monospace, monospace',
     fontSize: '1em'
   },
   a: {

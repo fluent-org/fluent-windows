@@ -43,8 +43,13 @@ export const defaultFontWeightBold = 700
 
 const coef = defaultFontSize / 14
 const pxToRem = (size: number): string => `${(size / defaultHtmlFontSize) * coef}rem`
-const buildVariant = (fontWeight: number, size: number, lineHeight: number): Style => ({
-  fontFamily: defaultFontFamily,
+const buildVariant = (
+  fontWeight: number,
+  size: number,
+  lineHeight: number,
+  fontFamily = defaultFontFamily
+): Style => ({
+  fontFamily,
   fontWeight: fontWeight,
   fontSize: pxToRem(size),
   lineHeight: lineHeight
@@ -71,9 +76,20 @@ function createTypography(typographies: Typographies): Typographies {
     fontWeightLight = defaultFontWeightLight,
     fontWeightRegular = defaultFontWeightRegular,
     fontWeightMedium = defaultFontWeightMedium,
-    fontWeightBold = defaultFontWeightBold,
-    variants = defaultVariants
+    fontWeightBold = defaultFontWeightBold
   } = typographies
+  const variants: Variants = {
+    h1: buildVariant(fontWeightLight, 96, 1, fontFamily),
+    h2: buildVariant(fontWeightLight, 60, 1, fontFamily),
+    h3: buildVariant(fontWeightRegular, 48, 1.04, fontFamily),
+    h4: buildVariant(fontWeightRegular, 34, 1.17, fontFamily),
+    h5: buildVariant(fontWeightRegular, 24, 1.33, fontFamily),
+    h6: buildVariant(fontWeightMedium, 20, 1.6, fontFamily),
+    subtitle1: buildVariant(fontWeightRegular, 16, 1.75, fontFamily),
+    subtitle2: buildVariant(fontWeightMedium, 14, 1.57, fontFamily),
+    body1: buildVariant(fontWeightRegular, 16, 1.5, fontFamily),
+    body2: buildVariant(fontWeightRegular, 14, 1.43, fontFamily)
+  }
   const defaultTypographies = {
     fontFamily,
     fontSize,
