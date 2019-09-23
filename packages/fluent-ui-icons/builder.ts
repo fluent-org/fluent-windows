@@ -1,80 +1,60 @@
 /* eslint-disable no-console */
-import { readdir, readFile, writeFile, PathLike } from 'fs'
-import { resolve } from 'path'
+import { readdir, readFile, stat, writeFile } from 'fs'
+import { extname, basename, resolve } from 'path'
 import { promisify } from 'util'
-import * as SVGO from 'svgo'
+
+import * as prettier from 'prettier'
 // @ts-ignore
 import * as htm from 'htm'
+
+function toHump(name: string, capitalized: boolean = true): string {
+  return capitalized
+    ? name
+        .replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
+        .replace(/( |^)[a-z]/g, (all): string => all.toUpperCase())
+    : name.replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
+}
+
 function h(type: string, props: any, ...children: any[]): any {
-  return [type, props, ...children]
+  const allPropKey = props ? Object.keys(props) : []
+  const match = allPropKey.find((prop): boolean => prop.includes('-'))
+  if (match) {
+    props[toHump(match, false)] = props[match]
+    delete props[match]
+  }
+  return { type, props, children }
 }
 const html = htm.bind(h)
-// @ts-ignore
-import * as omitDeep from 'omit-deep-lodash'
-import * as prettier from 'prettier'
 
 const readdirAsync = promisify(readdir)
 const readFileAsync = promisify(readFile)
 const writeFileAsync = promisify(writeFile)
+const statAsync = promisify(stat)
 
-const basePath = resolve(__dirname, './svg')
+const basePath = resolve(__dirname, './remix')
 
-const svgo = new SVGO({
-  floatPrecision: 4,
-  plugins: [
-    { cleanupAttrs: true },
-    { removeDoctype: true },
-    { removeXMLProcInst: true },
-    { removeComments: true },
-    { removeMetadata: true },
-    { removeTitle: true },
-    { removeDesc: true },
-    { removeUselessDefs: true },
-    { removeXMLNS: true },
-    { removeEditorsNSData: true },
-    { removeEmptyAttrs: true },
-    { removeHiddenElems: true },
-    { removeEmptyText: true },
-    { removeEmptyContainers: true },
-    { removeViewBox: true },
-    { cleanupEnableBackground: true },
-    { minifyStyles: true },
-    { convertStyleToAttrs: true },
-    { convertColors: true },
-    { convertPathData: true },
-    { convertTransform: true },
-    { removeUnknownsAndDefaults: true },
-    { removeNonInheritableGroupAttrs: true },
-    { removeUselessStrokeAndFill: true },
-    { removeUnusedNS: true },
-    { cleanupIDs: true },
-    { cleanupNumericValues: true },
-    { cleanupListOfValues: true },
-    { moveElemsAttrsToGroup: true },
-    { moveGroupAttrsToElems: true },
-    { collapseGroups: true },
-    { removeRasterImages: true },
-    { mergePaths: true },
-    { convertShapeToPath: true },
-    { sortAttrs: true },
-    { removeDimensions: true },
-    { removeAttrs: true },
-    { removeElementsByAttr: true },
-    { removeStyleElement: true },
-    { removeScriptElement: true }
-  ]
-})
-
-function toJson(data: any): string {
+function toJson(data: object): string {
   return JSON.stringify(data, null, '\t')
 }
 
-async function getAllSvgs(path: PathLike): Promise<string[]> {
-  return await readdirAsync(path, { encoding: 'utf8' })
+async function getAllSvgs(dir: string): Promise<string[]> {
+  const files = await readdirAsync(dir)
+  const allFiles = await Promise.all(
+    files.map(
+      (file): Promise<Promise<string[]> | string> => {
+        const path = resolve(dir, file)
+        // @ts-ignore
+        return statAsync(path).then((stat): Promise<string[]> | string =>
+          stat.isDirectory() ? getAllSvgs(path) : path
+        )
+      }
+    )
+  )
+  return Array.prototype.concat(...allFiles).filter((file): boolean => extname(file) === '.svg')
 }
 
-async function optimizeSvg(svg: string): Promise<any> {
-  return await svgo.optimize(svg)
+function getComponentName(fileName: string, withSuffix: boolean): string {
+  return withSuffix ? basename(fileName) : basename(fileName).split('.')[0]
 }
 
 async function worker(): Promise<void> {
@@ -82,13 +62,11 @@ async function worker(): Promise<void> {
     const allSvg = await getAllSvgs(basePath)
     const template = await readFileAsync(resolve(__dirname, './template'), { encoding: 'utf8' })
     for (const svg of allSvg) {
-      const file = await readFileAsync(resolve(basePath, svg), { encoding: 'utf8' })
-      const { data } = await optimizeSvg(file)
-      const jsx = (html as any)([data])
-      const jsxOmit = omitDeep(jsx, '_owner', '_store', 'key', 'ref')
-      const componentName = svg.split('.')[0]
+      const data = await readFileAsync(svg, { encoding: 'utf8' })
+      const jsx = html([data])
+      const componentName = getComponentName(svg, false)
       const jsxReplace = template
-        .replace('{{jsx}}', toJson(jsxOmit))
+        .replace('{{jsx}}', toJson(jsx))
         .replace('{{componentName}}', componentName)
       await writeFileAsync(
         resolve(__dirname, `src/${componentName}.ts`),
@@ -97,8 +75,8 @@ async function worker(): Promise<void> {
     }
 
     const index = allSvg.reduce((acc, cur): string => {
-      const componentName = cur.split('.')[0]
-      return acc + `export { default as ${componentName} } from './${componentName}'\n`
+      const componentName = getComponentName(cur, false)
+      return acc + `export { default as ${toHump(componentName)} } from './${componentName}'\n`
     }, '')
     await writeFileAsync(resolve(__dirname, `src/index.ts`), index)
   } catch (error) {

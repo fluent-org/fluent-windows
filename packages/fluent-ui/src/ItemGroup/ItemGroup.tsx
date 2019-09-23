@@ -3,8 +3,8 @@ import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
 import { useReveal, useHover, usePopper } from '@fluent-ui/hooks'
 import {
-  ChevronDownMed as ChevronDownMedIcon,
-  ChevronRightMed as ChevronRightMedIcon
+  ArrowDownSLine as ArrowDownSLineIcon,
+  ArrowRightSLine as ArrowRightSLineIcon
 } from '@fluent-ui/icons'
 import Item from '../Item'
 import Transition from '../Transition'
@@ -156,7 +156,7 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
             <div className={titleClassName} ref={referenceRef} onClick={handleOpen}>
               {titleElement}
               <div className={titlePrefixClassName}>
-                <ChevronDownMedIcon />
+                <ArrowDownSLineIcon />
               </div>
             </div>
 
@@ -173,12 +173,12 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
             <div className={titlePrefixClassName}>
               {horizontal ? (
                 level === 1 ? (
-                  <ChevronDownMedIcon />
+                  <ArrowDownSLineIcon />
                 ) : (
-                  <ChevronRightMedIcon />
+                  <ArrowRightSLineIcon />
                 )
               ) : (
-                <ChevronRightMedIcon />
+                <ArrowRightSLineIcon />
               )}
             </div>
             <Transition visible={hoverStatus} type="grow" wrapper={false}>

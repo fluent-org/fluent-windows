@@ -8,7 +8,7 @@ import { DialogContext } from '../Dialog'
 
 import Typography from '../../Typography'
 import IconButton from '../../IconButton'
-import { Cancel as CancelIcon } from '@fluent-ui/icons'
+import { CloseLine as CloseLineIcon } from '@fluent-ui/icons'
 
 export const name = 'DialogTitle'
 
@@ -25,7 +25,7 @@ const Title: React.FC<DialogTitleProps> = (props): React.ReactElement => {
     <div className={classes.title} {...rest}>
       <Typography variant="h6">{children}</Typography>
       <IconButton size="small" style={{ height: '100%' }} onClick={handleClose}>
-        <CancelIcon />
+        <CloseLineIcon />
       </IconButton>
     </div>
   )

@@ -66,7 +66,7 @@ const Playground: React.FC<PlaygroundProps> = ({
       <LiveProvider code={code} scope={scope} theme={theme}>
         <Command height={46}>
           <Tooltip title="code" placement="top">
-            <Item onClick={handleCodeVisible} prefix={<Icon.Code />} />
+            <Item onClick={handleCodeVisible} prefix={<Icon.CodeSLine />} />
           </Tooltip>
         </Command>
         <Transition visible={codeVisible} type="collapse">
@@ -74,7 +74,7 @@ const Playground: React.FC<PlaygroundProps> = ({
             <LiveEditor />
             <CopytoClipboard text={code}>
               <IconButton className={classes.copy} variant="standard" size="small">
-                <Icon.Copy></Icon.Copy>
+                <Icon.ClipboardLine />
               </IconButton>
             </CopytoClipboard>
           </div>

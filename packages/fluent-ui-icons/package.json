@@ -2,13 +2,15 @@
   "name": "@fluent-ui/icons",
   "private": false,
   "version": "0.6.2",
-  "description": "Fluent-UI Svg Icons.",
+  "description": "Fluent-UI Svg Icons Based on RemixIcon.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
     "react",
     "fluent-design",
     "fluent-ui",
-    "icons"
+    "icons",
+    "remix",
+    "remixicon"
   ],
   "repository": {
     "type": "git",
@@ -38,16 +40,9 @@
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
   },
-  "dependencies": {
-    "@fluent-ui/styles": "^0.2.1",
-    "classnames": "^2.2.6"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/classnames": "^2.2.9",
-    "@types/svgo": "^1.2.0",
-    "htm": "^2.1.1",
-    "omit-deep-lodash": "^1.1.4",
-    "svgo": "^1.2.2"
+    "htm": "^2.2.1"
   },
   "publishConfig": {
     "access": "public"

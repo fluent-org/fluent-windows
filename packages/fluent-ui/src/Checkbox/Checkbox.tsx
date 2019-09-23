@@ -1,7 +1,7 @@
 import * as React from 'react'
 import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
-import { Accept as AcceptIcon } from '@fluent-ui/icons'
+import { CheckLine as CheckLineIcon } from '@fluent-ui/icons'
 import { CheckboxProps, CheckboxPropTypes, CheckboxClassProps } from './Checkbox.type'
 import { Theme } from '../styles'
 import { styles } from './Checkbox.styled'
@@ -41,7 +41,7 @@ const Checkbox: React.FC<CheckboxProps> = React.forwardRef<HTMLInputElement, Che
 
     return (
       <Component className={className} style={style}>
-        {checked && <AcceptIcon />}
+        {checked && <CheckLineIcon />}
         <input
           ref={ref}
           type="checkbox"

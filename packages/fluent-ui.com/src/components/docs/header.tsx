@@ -4,10 +4,10 @@ import { useIntl, IntlContext } from 'react-intl'
 
 import { Command, Item, Tooltip, Box, List, Transition, Portal } from '@fluent-ui/core'
 import {
-  Characters as CharactersIcon,
-  GlobalNavigationButton as GlobalNavigationButtonIcon,
-  Color as ColorIcon
-} from '@fluent-ui/icons'
+  EarthLine as EarthLineIcon,
+  PaletteLine as PaletteLineIcon,
+  MenuLine as MenuLineIcon
+} from '@fluent-ui/icons' // TODO tree-shaking
 import { useDispatch, usePopper, useClickOutside, useGlobal } from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
 
@@ -67,11 +67,11 @@ const Header = (): React.ReactElement => {
       <Command position="sticky" top="0" height={56} backgroundColor="white.default" zIndex={99}>
         <Tooltip title={formatMessage({ id: 'command.change-language' })}>
           <div onClick={handleChangeLanguageVisible} style={{ display: 'flex' }}>
-            <Item ref={referenceRef} prefix={<CharactersIcon />} />
+            <Item ref={referenceRef} prefix={<EarthLineIcon />} />
           </div>
         </Tooltip>
         <Tooltip title={formatMessage({ id: 'command.edit-website-colors' })}>
-          <Item onClick={handleNavigateToColorTool} prefix={<ColorIcon />} />
+          <Item onClick={handleNavigateToColorTool} prefix={<PaletteLineIcon />} />
         </Tooltip>
         <Tooltip title={formatMessage({ id: 'command.home-page' })}>
           <Item onClick={handleNavigateToHome} prefix={home} />
@@ -82,7 +82,7 @@ const Header = (): React.ReactElement => {
 
         <Command.Content>
           <Box display={['block', 'none']}>
-            <Item onClick={dispatch} prefix={<GlobalNavigationButtonIcon />} />
+            <Item onClick={dispatch} prefix={<MenuLineIcon />} />
           </Box>
         </Command.Content>
       </Command>

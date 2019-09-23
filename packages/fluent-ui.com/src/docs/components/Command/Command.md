@@ -14,9 +14,9 @@ langKey: "en"
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
-    <Item prefix={<Icon.Back />} />
-    <Item prefix={<Icon.Play />} />
-    <Item prefix={<Icon.Forward />} />
+    <Item prefix={<Icon.SkipBackMiniLine />} />
+    <Item prefix={<Icon.PlayMiniLine />} />
+    <Item prefix={<Icon.SkipForwardMiniLine />} />
 
     <Command.Content>
       Now Playing...
@@ -35,9 +35,9 @@ langKey: "en"
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command reveal>
-    <Item prefix={<Icon.Back />} />
-    <Item prefix={<Icon.Play />} />
-    <Item prefix={<Icon.Forward />} />
+    <Item prefix={<Icon.SkipBackMiniLine />} />
+    <Item prefix={<Icon.PlayMiniLine />} />
+    <Item prefix={<Icon.SkipForwardMiniLine />} />
 
     <Command.Content>
       Now Playing...
@@ -56,9 +56,9 @@ langKey: "en"
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Command acrylic>
-    <Item prefix={<Icon.Back />}>Back</Item>
-    <Item prefix={<Icon.Play />}>Play</Item>
-    <Item prefix={<Icon.Forward />}>Forward</Item>
+    <Item prefix={<Icon.SkipBackMiniLine />}>Back</Item>
+    <Item prefix={<Icon.PlayMiniLine />}>Play</Item>
+    <Item prefix={<Icon.SkipForwardMiniLine />}>Forward</Item>
 
     <Command.Content>
       Now Playing...
@@ -78,9 +78,9 @@ langKey: "en"
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
   <Box backgroundColor="none" display="flex" justifyContent="center">
     <Command acrylic>
-      <Item prefix={<Icon.Back />} />
-      <Item prefix={<Icon.Play />} />
-      <Item prefix={<Icon.Forward />} />
+      <Item prefix={<Icon.SkipBackMiniLine />} />
+      <Item prefix={<Icon.PlayMiniLine />} />
+      <Item prefix={<Icon.SkipForwardMiniLine />} />
     </Command>
   </Box>
 </Box>

@@ -20,24 +20,24 @@ langKey: "en"
   return (
     <Navigation height={600} value={activeId} onChange={handleActiveId}>
       <Navigation.Header>
-        <Item prefix={<Icon.GlobalNavigationButton />} />
+        <Item prefix={<Icon.MenuLine />} />
       </Navigation.Header>
 
-      <Item value={1} prefix={<Icon.Connected />}>
+      <Item value={1} prefix={<Icon.MenuLine />}>
         Option 1
       </Item>
-      <Item value={2} prefix={<Icon.Connected />}>
+      <Item value={2} prefix={<Icon.MenuLine />}>
         Option 2
       </Item>
-      <Item value={3} prefix={<Icon.Connected />}>
+      <Item value={3} prefix={<Icon.MenuLine />}>
         Option 3
       </Item>
-      <Item value={4} prefix={<Icon.Connected />}>
+      <Item value={4} prefix={<Icon.MenuLine />}>
         Option 4
       </Item>
 
       <Navigation.Footer>
-        <Item prefix={<Icon.Settings />}>
+        <Item prefix={<Icon.Settings4Line />}>
           Settings
         </Item>
       </Navigation.Footer>
@@ -63,37 +63,37 @@ langKey: "en"
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation horizontal={true} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Item prefix={<Icon.GlobalNavigationButton />} />
+          <Item prefix={<Icon.MenuLine />} />
         </Navigation.Header>
 
-        <Item value={1} prefix={<Icon.Connected />}>
+        <Item value={1} prefix={<Icon.MenuLine />}>
           Option 1
         </Item>
-        <Item value={2} prefix={<Icon.Connected />}>
+        <Item value={2} prefix={<Icon.MenuLine />}>
           Option 2
         </Item>
-        <Item value={3} prefix={<Icon.Connected />}>
+        <Item value={3} prefix={<Icon.MenuLine />}>
           Option 3
         </Item>
-        <ItemGroup title="group" prefix={<Icon.Connected />}>
-          <Item value={4} prefix={<Icon.Connected />}>
+        <ItemGroup title="group" prefix={<Icon.MenuLine />}>
+          <Item value={4} prefix={<Icon.MenuLine />}>
             Option 4
           </Item>
-          <Item value={5} prefix={<Icon.Connected />}>
+          <Item value={5} prefix={<Icon.MenuLine />}>
             Option 5
           </Item>
-          <ItemGroup title="group inside" prefix={<Icon.Connected />}>
-            <Item value={7} prefix={<Icon.Connected />}>
+          <ItemGroup title="group inside" prefix={<Icon.MenuLine />}>
+            <Item value={7} prefix={<Icon.MenuLine />}>
               Option 7
             </Item>
-            <Item value={8} prefix={<Icon.Connected />}>
+            <Item value={8} prefix={<Icon.MenuLine />}>
               Option 8
             </Item>
-            <ItemGroup title="group inside" prefix={<Icon.Connected />}>
-              <Item value={9} prefix={<Icon.Connected />}>
+            <ItemGroup title="group inside" prefix={<Icon.MenuLine />}>
+              <Item value={9} prefix={<Icon.MenuLine />}>
                 Option 9
               </Item>
-              <Item value={10} prefix={<Icon.Connected />}>
+              <Item value={10} prefix={<Icon.MenuLine />}>
                 Option 10
               </Item>
             </ItemGroup>
@@ -101,7 +101,7 @@ langKey: "en"
         </ItemGroup>
 
         <Navigation.Footer>
-          <Item prefix={<Icon.Settings />}>
+          <Item prefix={<Icon.Settings4Line />}>
             Settings
           </Item>
         </Navigation.Footer>
@@ -128,24 +128,24 @@ langKey: "en"
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Item prefix={<Icon.GlobalNavigationButton />} />
+          <Item prefix={<Icon.MenuLine />} />
         </Navigation.Header>
 
-        <Item value={1} prefix={<Icon.Connected />}>
+        <Item value={1} prefix={<Icon.MenuLine />}>
           Option 1
         </Item>
-        <Item value={2} prefix={<Icon.Connected />}>
+        <Item value={2} prefix={<Icon.MenuLine />}>
           Option 2
         </Item>
-        <Item value={3} prefix={<Icon.Connected />}>
+        <Item value={3} prefix={<Icon.MenuLine />}>
           Option 3
         </Item>
-        <Item value={4} prefix={<Icon.Connected />}>
+        <Item value={4} prefix={<Icon.MenuLine />}>
           Option 4
         </Item>
 
         <Navigation.Footer>
-          <Item prefix={<Icon.Settings />}>
+          <Item prefix={<Icon.Settings4Line />}>
             Settings
           </Item>
         </Navigation.Footer>
@@ -176,24 +176,24 @@ langKey: "en"
       >
         <Navigation acrylic={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
           <Navigation.Header>
-            <Item prefix={<Icon.GlobalNavigationButton />} />
+            <Item prefix={<Icon.MenuLine />} />
           </Navigation.Header>
 
-          <Item value={1} prefix={<Icon.Connected />}>
+          <Item value={1} prefix={<Icon.MenuLine />}>
             Option 1
           </Item>
-          <Item value={2} prefix={<Icon.Connected />}>
+          <Item value={2} prefix={<Icon.MenuLine />}>
             Option 2
           </Item>
-          <Item value={3} prefix={<Icon.Connected />}>
+          <Item value={3} prefix={<Icon.MenuLine />}>
             Option 3
           </Item>
-          <Item value={4} prefix={<Icon.Connected />}>
+          <Item value={4} prefix={<Icon.MenuLine />}>
             Option 4
           </Item>
 
           <Navigation.Footer>
-            <Item prefix={<Icon.Settings />}>
+            <Item prefix={<Icon.Settings4Line />}>
               Settings
             </Item>
           </Navigation.Footer>
@@ -221,24 +221,24 @@ langKey: "en"
       <Button onClick={handleExpanded}>toggle</Button>
       <Navigation reveal={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
         <Navigation.Header>
-          <Item prefix={<Icon.GlobalNavigationButton />} />
+          <Item prefix={<Icon.MenuLine />} />
         </Navigation.Header>
 
-        <Item value={1} prefix={<Icon.Connected />}>
+        <Item value={1} prefix={<Icon.MenuLine />}>
           Option 1
         </Item>
-        <Item value={2} prefix={<Icon.Connected />}>
+        <Item value={2} prefix={<Icon.MenuLine />}>
           Option 2
         </Item>
-        <Item value={3} prefix={<Icon.Connected />}>
+        <Item value={3} prefix={<Icon.MenuLine />}>
           Option 3
         </Item>
-        <Item value={4} prefix={<Icon.Connected />}>
+        <Item value={4} prefix={<Icon.MenuLine />}>
           Option 4
         </Item>
 
         <Navigation.Footer>
-          <Item prefix={<Icon.Settings />}>
+          <Item prefix={<Icon.Settings4Line />}>
             Settings
           </Item>
         </Navigation.Footer>
@@ -275,19 +275,19 @@ langKey: "en"
           expanded={expanded}
         >
           <Navigation.Header>
-            <Item prefix={<Icon.GlobalNavigationButton />} />
+            <Item prefix={<Icon.MenuLine />} />
           </Navigation.Header>
     
-          <Item value={1} prefix={<Icon.Connected />}>
+          <Item value={1} prefix={<Icon.MenuLine />}>
             Option 1
           </Item>
-          <Item value={2} prefix={<Icon.Connected />}>
+          <Item value={2} prefix={<Icon.MenuLine />}>
             Option 2
           </Item>
-          <Item value={3} prefix={<Icon.Connected />}>
+          <Item value={3} prefix={<Icon.MenuLine />}>
             Option 3
           </Item>
-          <ItemGroup title="group" prefix={<Icon.Connected />}>
+          <ItemGroup title="group" prefix={<Icon.MenuLine />}>
             <Item value={4}>
               Option 4
             </Item>
@@ -316,7 +316,7 @@ langKey: "en"
           </Item>
     
           <Navigation.Footer>
-            <Item prefix={<Icon.Settings />}>
+            <Item prefix={<Icon.Settings4Line4Line />}>
               Settings
             </Item>
           </Navigation.Footer>

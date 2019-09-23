@@ -1,16 +1,34 @@
 import createIcon, { JSX } from './utils/createIcon'
 
-const jsx: JSX = [
-  'svg',
-  {
-    viewBox: '0 0 2048 2048'
+export const jsx: JSX = {
+  type: 'svg',
+  props: {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 24 24'
   },
-  [
-    'path',
+  children: [
     {
-      d: 'M1302 0h134L754 2048H619L1302 0z'
+      type: 'g',
+      props: null,
+      children: [
+        {
+          type: 'path',
+          props: {
+            fill: 'none',
+            d: 'M0 0h24v24H0z'
+          },
+          children: []
+        },
+        {
+          type: 'path',
+          props: {
+            d: 'M15 20H7v-2h2.927l2.116-12H9V4h8v2h-2.927l-2.116 12H15z'
+          },
+          children: []
+        }
+      ]
     }
   ]
-]
+}
 
-export default createIcon(jsx, 'Italic')
+export default createIcon(jsx, 'italic')

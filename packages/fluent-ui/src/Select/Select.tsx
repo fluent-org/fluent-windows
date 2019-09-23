@@ -5,7 +5,7 @@ import { styles } from './Select.styled'
 import { Theme } from '../styles'
 
 import { usePopper, useClick, useClickOutside } from '@fluent-ui/hooks'
-import { ChevronDownMed as DownIcon } from '@fluent-ui/icons'
+import { ArrowDownSLine as ArrowDownSLineIcon } from '@fluent-ui/icons'
 import { SelectClassProps, SelectProps, SelectPropTypes } from './Select.type'
 import Transition from '../Transition'
 import List from '../List'
@@ -40,22 +40,16 @@ const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectP
       [disabled]
     )
     const [_, bind] = useClick(handleVisible)
-    useClickOutside(
-      referenceRef,
-      (): void => {
-        setVisible(false)
-      }
-    )
+    useClickOutside(referenceRef, (): void => {
+      setVisible(false)
+    })
 
     const [currentText, setCurrentText] = React.useState('')
     React.useEffect((): void => {
-      React.Children.forEach(
-        children,
-        (child: React.ReactElement): void => {
-          const active = child.props.value === value
-          active && setCurrentText(child.props.children)
-        }
-      )
+      React.Children.forEach(children, (child: React.ReactElement): void => {
+        const active = child.props.value === value
+        active && setCurrentText(child.props.children)
+      })
     }, [children, value])
     const theChildren = React.Children.map(
       children,
@@ -92,7 +86,7 @@ const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectP
       <Component className={className} style={style} ref={referenceRef} {...bind}>
         <button className={selectClassName}>{currentText}</button>
         <span className={iconClassName}>
-          <DownIcon />
+          <ArrowDownSLineIcon />
         </span>
         <input type="hidden" value={value} disabled={disabled} ref={ref} {...rest} />
         <Transition type="grow" visible={visible} wrapper={false} mountOnEnter unmountOnExit>

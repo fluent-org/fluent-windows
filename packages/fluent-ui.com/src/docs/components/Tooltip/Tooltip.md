@@ -15,12 +15,12 @@ langKey: "en"
 <>
   <Tooltip title="Add">
     <IconButton>
-      <Icon.Add />
+      <Icon.AddLine />
     </IconButton>
   </Tooltip>
   <Tooltip title="Add">
     <IconButton variant="primary">
-      <Icon.Add />
+      <Icon.AddLine />
     </IconButton>
   </Tooltip>
 </>
@@ -119,7 +119,7 @@ langKey: "en"
   return (
     <Tooltip title="Add" visible={visible} onChange={handleVisible}>
       <IconButton>
-        <Icon.Add />
+        <Icon.AddLine />
       </IconButton>
     </Tooltip>
   )

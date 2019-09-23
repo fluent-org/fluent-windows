@@ -1,17 +1,34 @@
 import createIcon, { JSX } from './utils/createIcon'
 
-const jsx: JSX = [
-  'svg',
-  {
-    viewBox: '0 0 2048 2048'
+export const jsx: JSX = {
+  type: 'svg',
+  props: {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 24 24'
   },
-  [
-    'path',
+  children: [
     {
-      d:
-        'M1664 0v1152q0 133-50 249.5T1477 1605t-203.5 137-249.5 50-249.5-50T571 1605t-137-203.5-50-249.5V0h128v1152q0 106 40.5 199t110 162.5 162.5 110 199 40.5 199-40.5 162.5-110 110-162.5 40.5-199V0h128zM384 1920h1280v128H384v-128z'
+      type: 'g',
+      props: null,
+      children: [
+        {
+          type: 'path',
+          props: {
+            fill: 'none',
+            d: 'M0 0h24v24H0z'
+          },
+          children: []
+        },
+        {
+          type: 'path',
+          props: {
+            d: 'M8 3v9a4 4 0 1 0 8 0V3h2v9a6 6 0 1 1-12 0V3h2zM4 20h16v2H4v-2z'
+          },
+          children: []
+        }
+      ]
     }
   ]
-]
+}
 
-export default createIcon(jsx, 'Underline')
+export default createIcon(jsx, 'underline')

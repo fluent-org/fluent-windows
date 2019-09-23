@@ -1,0 +1,34 @@
+import createIcon, { JSX } from './utils/createIcon'
+
+export const jsx: JSX = {
+  type: 'svg',
+  props: {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 24 24'
+  },
+  children: [
+    {
+      type: 'g',
+      props: null,
+      children: [
+        {
+          type: 'path',
+          props: {
+            fill: 'none',
+            d: 'M0 0h24v24H0z'
+          },
+          children: []
+        },
+        {
+          type: 'path',
+          props: {
+            d: 'M18 11V8l4 4-4 4v-3h-5v5h3l-4 4-4-4h3v-5H6v3l-4-4 4-4v3h5V6H8l4-4 4 4h-3v5z'
+          },
+          children: []
+        }
+      ]
+    }
+  ]
+}
+
+export default createIcon(jsx, 'drag-move-2-fill')

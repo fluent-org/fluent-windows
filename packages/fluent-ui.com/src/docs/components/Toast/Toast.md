@@ -22,7 +22,7 @@ langKey: "en"
         visible={visible}
         actions={
           <IconButton onClick={handleChange}>
-            <Icon.Cancel />
+            <Icon.CloseLine />
           </IconButton>
         }
       >
@@ -76,7 +76,7 @@ langKey: "en"
         visible={visible}
         actions={
           <IconButton onClick={handleVisibleChange}>
-            <Icon.Cancel />
+            <Icon.CloseLine />
           </IconButton>
         }
         placement={placement}
@@ -100,7 +100,7 @@ You can also use a functional way to show, from [`@fluent-ui/hooks/useMessage`](
         visible={visible}
         actions={
           <IconButton onClick={close}>
-            <Icon.Cancel />
+            <Icon.CloseLine />
           </IconButton>
         }
       >

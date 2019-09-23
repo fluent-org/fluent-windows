@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { More as MoreIcon } from '@fluent-ui/icons' // TODO treeShaking
+import { MoreLine as MoreLineIcon } from '@fluent-ui/icons' // TODO treeShaking
 import { useClickOutside, useReveal, usePopper } from '@fluent-ui/hooks' // TODO treeShaking
 import { omit } from '../utils'
 import Box from '../Box'
@@ -44,18 +44,15 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
       standard: [],
       secondary: []
     }
-    React.Children.forEach(
-      children,
-      (child: CommandChild): void => {
-        if (child.type.displayName! === 'FCommandContent') {
-          container.content.push(child)
-        } else if (child.type.displayName === 'FCommandSecondary') {
-          container.secondary = child.props.children
-        } else {
-          container.standard.push(child)
-        }
+    React.Children.forEach(children, (child: CommandChild): void => {
+      if (child.type.displayName! === 'FCommandContent') {
+        container.content.push(child)
+      } else if (child.type.displayName === 'FCommandSecondary') {
+        container.secondary = child.props.children
+      } else {
+        container.standard.push(child)
       }
-    )
+    })
     // Reveal does not take effect when using acrylic
     const _reveal = acrylic ? false : reveal
     const [RevealWrapper] = useReveal()
@@ -69,14 +66,11 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
     const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
       placement: 'bottom'
     })
-    useClickOutside(
-      popperRef,
-      (event: MouseEvent | TouchEvent): void => {
-        // @ts-ignore
-        if (!referenceRef.current || referenceRef.current.contains(event.target)) return
-        setSecondaryVisible((visible: boolean): boolean => !visible)
-      }
-    )
+    useClickOutside(popperRef, (event: MouseEvent | TouchEvent): void => {
+      // @ts-ignore
+      if (!referenceRef.current || referenceRef.current.contains(event.target)) return
+      setSecondaryVisible((visible: boolean): boolean => !visible)
+    })
     const otherProps = omit(rest, ['display', 'backgroundColor', 'color'])
     return (
       <Box
@@ -103,11 +97,11 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
                   ref={referenceRef}
                   style={{ height: '100%' }}
                   onClick={handleSecondaryVisible}
-                  prefix={<MoreIcon />}
+                  prefix={<MoreLineIcon />}
                 />
               </RevealWrapper>
             ) : (
-              <Item ref={referenceRef} onClick={handleSecondaryVisible} prefix={<MoreIcon />} />
+              <Item ref={referenceRef} onClick={handleSecondaryVisible} prefix={<MoreLineIcon />} />
             ))}
 
           <Portal>

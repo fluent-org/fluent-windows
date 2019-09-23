@@ -5,7 +5,7 @@ import { styles } from './Input.styled'
 import { Theme } from '../styles'
 import { InputClassProps, InputProps, InputPropTypes } from './Input.type'
 
-import { ChromeClose as ChromeCloseIcon } from '@fluent-ui/icons'
+import { CloseLine as CloseLineIconIcon } from '@fluent-ui/icons'
 import Transition from '../Transition'
 
 export const name = 'Input'
@@ -84,7 +84,7 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
                 width: clearedHeight
               }}
             >
-              <ChromeCloseIcon />
+              <CloseLineIconIcon />
             </span>
           </Transition>
         )}

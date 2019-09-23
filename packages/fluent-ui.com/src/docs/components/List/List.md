@@ -51,7 +51,7 @@ langKey: "en"
 ```jsx
 <List title="List Items">
   <Item>Option 1</Item>
-  <ItemGroup title="group" prefix={<Icon.Connected />}>
+  <ItemGroup title="group" prefix={<Icon.MenuLine />}>
     <Item>Option 2</Item>
     <Item>Option 3</Item>
     <ItemGroup title="group inside">
@@ -67,19 +67,19 @@ langKey: "en"
 
 ```jsx
 <List title="List Items">
-  <Item prefix={<Icon.Audio />}>
+  <Item prefix={<Icon.MusicLine />}>
     <Box>
       <Typography variant="subtitle1">Music</Typography>
       <Typography variant="subtitle2" color="standard.dark1">Jan 1, 2019</Typography>
     </Box>
   </Item>
-  <Item prefix={<Icon.Movies />}>
+  <Item prefix={<Icon.Movie2Line />}>
     <Box>
       <Typography variant="subtitle1">Movie</Typography>
       <Typography variant="subtitle2" color="standard.dark1">Jan 2, 2019</Typography>
     </Box>
   </Item>
-  <Item prefix={<Icon.Photo2 />}>
+  <Item prefix={<Icon.ImageLine />}>
     <Box>
       <Typography variant="subtitle1">Photo</Typography>
       <Typography variant="subtitle2" color="standard.dark1">Jan 3, 2019</Typography>
@@ -96,13 +96,13 @@ langKey: "en"
   const [bluetoothChecked, setbluetoothChecked] = React.useState(false)
   return (
     <List title="Settings">
-      <Item prefix={<Icon.Wifi />}>
+      <Item prefix={<Icon.WifiLine />}>
         <Box flex={1} display="flex" justifyContent="space-between" alignItems="center">
           <span>Wi-Fi</span>
           <Toggle checked={wifiChecked} onChange={() => setWifiChecked(v => !v)} />
         </Box>
       </Item>
-      <Item prefix={<Icon.Bluetooth />}>
+      <Item prefix={<Icon.BluetoothLine />}>
         <Box flex={1} display="flex" justifyContent="space-between" alignItems="center">
           <span>Bluetooth</span>
           <Toggle checked={bluetoothChecked} onChange={() => setbluetoothChecked(v => !v)} />

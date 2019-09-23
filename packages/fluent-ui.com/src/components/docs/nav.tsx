@@ -3,17 +3,18 @@ import { navigate } from 'gatsby'
 import { Navigation, Drawer, Item, ItemGroup } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import {
-  GlobalNavigationButton as GlobalNavigationButtonIcon,
-  Connected as ConnectedIcon,
-  Input as InputIcon,
-  GiftboxOpen as GiftboxOpenIcon,
-  ClosePaneMirrored as ClosePaneMirroredIcon,
-  Badge as BadgeIcon,
-  Settings as SettingsIcon,
-  LineDisplay as LineDisplayIcon,
-  Feedback as FeedbackIcon,
-  ProgressRingDots as ProgressRingDotsIcon
-} from '@fluent-ui/icons'
+  MenuLine as MenuLineIcon,
+  LayoutLine as LayoutLineIcon,
+  InputMethodLine as InputMethodLineIcon,
+  NavigationLine as NavigationLineIcon,
+  PieChart2Line as PieChart2LineIcon,
+  ProjectorLine as ProjectorLineIcon,
+  FeedbackLine as FeedbackLineIcon,
+  MagicLine as MagicLineIcon,
+  Loader2Line as Loader2LineIcon,
+  MoreLine as MoreLineIcon,
+  GuideLine as GuideLineIcon
+} from '@fluent-ui/icons' // TODO tree-shaking
 import { useAction } from '@fluent-ui/hooks'
 import { useIntl } from 'react-intl'
 import { toLine } from '../../utils'
@@ -22,35 +23,43 @@ import { TemplateProps } from '../../templates/docs'
 const iconMap = [
   {
     title: 'Layout',
-    prefix: <GiftboxOpenIcon />
+    prefix: <LayoutLineIcon />
   },
   {
     title: 'Inputs',
-    prefix: <InputIcon />
+    prefix: <InputMethodLineIcon />
   },
   {
     title: 'Navigation',
-    prefix: <ClosePaneMirroredIcon />
+    prefix: <NavigationLineIcon />
   },
   {
     title: 'DataDisplay',
-    prefix: <LineDisplayIcon />
+    prefix: <PieChart2LineIcon />
   },
   {
     title: 'Utils',
-    prefix: <SettingsIcon />
+    prefix: <ProjectorLineIcon />
   },
   {
     title: 'Feedback',
-    prefix: <FeedbackIcon />
+    prefix: <FeedbackLineIcon />
   },
   {
     title: 'hooks',
-    prefix: <BadgeIcon />
+    prefix: <MagicLineIcon />
   },
   {
     title: 'Progress',
-    prefix: <ProgressRingDotsIcon />
+    prefix: <Loader2LineIcon />
+  },
+  {
+    title: 'Others',
+    prefix: <MoreLineIcon />
+  },
+  {
+    title: 'getting-started',
+    prefix: <GuideLineIcon />
   }
 ]
 
@@ -94,7 +103,7 @@ const getFrontMatter = (target: TemplateProps['data'], langKey: string): Result[
 }
 function getPrefixBytitle(title: string): JSX.Element {
   const target = iconMap.find((v): boolean => v.title === title)
-  return target ? target.prefix : <ConnectedIcon />
+  return target ? target.prefix : <MenuLineIcon />
 }
 
 const useStyles = createUseStyles({
@@ -145,7 +154,7 @@ const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
     <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
       <Navigation ref={rootRef} value={activeId} expanded={true} acrylic height="100%" width={260}>
         <Navigation.Header>
-          <Item onClick={handleExpanded} prefix={<GlobalNavigationButtonIcon />} />
+          <Item onClick={handleExpanded} prefix={<MenuLineIcon />} />
         </Navigation.Header>
         {result.map(
           ({ type, titles }): React.ReactFragment => {
@@ -185,7 +194,7 @@ const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
       height="100%"
     >
       <Navigation.Header>
-        <Item onClick={handleExpanded} prefix={<GlobalNavigationButtonIcon />} />
+        <Item onClick={handleExpanded} prefix={<MenuLineIcon />} />
       </Navigation.Header>
       {result.map(
         ({ type, titles }): React.ReactFragment => {

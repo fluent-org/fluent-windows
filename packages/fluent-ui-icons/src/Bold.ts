@@ -1,17 +1,35 @@
 import createIcon, { JSX } from './utils/createIcon'
 
-const jsx: JSX = [
-  'svg',
-  {
-    viewBox: '0 0 2048 2048'
+export const jsx: JSX = {
+  type: 'svg',
+  props: {
+    xmlns: 'http://www.w3.org/2000/svg',
+    viewBox: '0 0 24 24'
   },
-  [
-    'path',
+  children: [
     {
-      d:
-        'M1184 960q99 0 186.5 37.5t153 103 103 153T1664 1440t-37.5 186.5-103 153-153 103T1184 1920H384V128h800q86 0 162 32.5t132.5 89 89 132.5 32.5 162-32.5 162-89 132.5-132.5 89-162 32.5zm-416-64h192q52 0 99-20.5t81.5-55 55-81T1216 640q0-52-20.5-99t-55-81.5-81.5-55-99-20.5H768v512zm256 768q52 0 99-20.5t81.5-55 55-81 20.5-99.5q0-52-20.5-99t-55-81.5-81.5-55-99-20.5H768v512h256z'
+      type: 'g',
+      props: null,
+      children: [
+        {
+          type: 'path',
+          props: {
+            fill: 'none',
+            d: 'M0 0h24v24H0z'
+          },
+          children: []
+        },
+        {
+          type: 'path',
+          props: {
+            d:
+              'M8 11h4.5a2.5 2.5 0 1 0 0-5H8v5zm10 4.5a4.5 4.5 0 0 1-4.5 4.5H6V4h6.5a4.5 4.5 0 0 1 3.256 7.606A4.498 4.498 0 0 1 18 15.5zM8 13v5h5.5a2.5 2.5 0 1 0 0-5H8z'
+          },
+          children: []
+        }
+      ]
     }
   ]
-]
+}
 
-export default createIcon(jsx, 'Bold')
+export default createIcon(jsx, 'bold')

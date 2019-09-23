@@ -20,7 +20,7 @@ There are two styles of buttons, controlled by the variant prop.
 
 ```jsx
 <IconButton>
-  <Icon.Accept />
+  <Icon.CheckLine />
 </IconButton>
 ```
 
@@ -28,7 +28,7 @@ There are two styles of buttons, controlled by the variant prop.
 
 ```jsx
 <IconButton variant="primary">
-  <Icon.Accept />
+  <Icon.CheckLine />
 </IconButton>
 ```
 
@@ -38,7 +38,7 @@ Whether the button is disabled.
 
 ```jsx
 <IconButton disabled>
-  <Icon.Accept />
+  <Icon.CheckLine />
 </IconButton>
 ```
 
@@ -49,13 +49,13 @@ Fancy larger or smaller buttons? Use the `size` property.
 ```jsx
 <>
   <IconButton size="small" variant="primary">
-    <Icon.Accept />
+    <Icon.CheckLine />
   </IconButton>
   <IconButton size="medium" variant="primary">
-    <Icon.Accept />
+    <Icon.CheckLine />
   </IconButton>
   <IconButton size="large" variant="primary">
-    <Icon.Accept />
+    <Icon.CheckLine />
   </IconButton>
 </>
 ```
@@ -66,6 +66,6 @@ You can use `as` to change the type of DOM tag.
 
 ```jsx
 <IconButton as="a" href="#">
-  <Icon.Accept />
+  <Icon.CheckLine />
 </IconButton>
 ```

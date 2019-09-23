@@ -12,7 +12,7 @@ langKey: "en"
 ## Use alone
 
 ```jsx
-<Item prefix={<Icon.Connected />}>
+<Item prefix={<Icon.MenuLine />}>
   hello
 </Item>
 ```
@@ -21,10 +21,10 @@ langKey: "en"
 
 ```jsx
 <Box>
-  <Item value={1} prefix={<Icon.Connected />} active>
+  <Item value={1} prefix={<Icon.MenuLine />} active>
     hello
   </Item>
-  <Item value={2} prefix={<Icon.Connected />}>
+  <Item value={2} prefix={<Icon.MenuLine />}>
     hello
   </Item>
 </Box>

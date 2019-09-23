@@ -2,7 +2,10 @@ import { Styles, Style } from 'jss'
 import { TypographyClassProps, TypographyProps } from './Typography.type'
 import { Theme } from '../styles'
 
-const root: Style = {}
+const root: Style = {
+  marginTop: 0,
+  marginBottom: 0
+}
 const variants = (theme: Theme): Style => ({ variant = 'body1' }: TypographyProps): Style => {
   return theme.typographies!.variants![variant]
 }

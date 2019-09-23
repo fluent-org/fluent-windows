@@ -1,6 +1,6 @@
 # @fluent-ui/icons
 
-React components that inspired by Microsoft's Fluent Design System.
+Fluent-UI Svg Icons Based on [RemixIcon](https://remixicon.com/).
 
 ## Installation
 

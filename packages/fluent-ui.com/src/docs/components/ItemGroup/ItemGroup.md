@@ -13,16 +13,16 @@ langKey: "en"
 
 ```jsx
 <Box>
-  <Item prefix={<Icon.Connected />}>
+  <Item prefix={<Icon.MenuLine />}>
     Option 1
   </Item>
-  <Item prefix={<Icon.Connected />}>
+  <Item prefix={<Icon.MenuLine />}>
     Option 2
   </Item>
-  <Item prefix={<Icon.Connected />}>
+  <Item prefix={<Icon.MenuLine />}>
     Option 3
   </Item>
-  <ItemGroup title="group" prefix={<Icon.Connected />}>
+  <ItemGroup title="group" prefix={<Icon.MenuLine />}>
     <Item>
       Option 4
     </Item>
@@ -56,7 +56,7 @@ langKey: "en"
 
 ```jsx
 <Box width={200}>
-  <ItemGroup title="group" prefix={<Icon.Connected />} shrink="float">
+  <ItemGroup title="group" prefix={<Icon.MenuLine />} shrink="float">
     <Item>Option 1</Item>
     <Item>Option 2</Item>
     <ItemGroup title="group inside" shrink="float">
@@ -64,7 +64,7 @@ langKey: "en"
       <Item>Option 4</Item>
     </ItemGroup>
   </ItemGroup>
-  <Item prefix={<Icon.Connected />}>option</Item>
+  <Item prefix={<Icon.MenuLine />}>option</Item>
 </Box>
 ```
 
