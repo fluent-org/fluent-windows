@@ -16,7 +16,7 @@ import { pathnameToLanguage } from '../../utils'
 
 const useStyles = createUseStyles({
   iconButton: {
-    width: '1.2em'
+    width: '1em'
   }
 })
 

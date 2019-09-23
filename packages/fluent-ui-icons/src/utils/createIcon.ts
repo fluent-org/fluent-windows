@@ -39,8 +39,8 @@ function toHump(name: string, capitalized: boolean = true): string {
 function createIcon(jsx: JSX, componentName: string): React.FC {
   const Icon: React.FC = ({ ...rest }: React.HTMLAttributes<SVGElement>): React.ReactElement => {
     const style = {
-      width: '1.3em',
-      height: '1.3em',
+      width: '1em',
+      height: '1em',
       display: 'inline-block',
       fontSize: 'inherit',
       color: 'inherit',

@@ -40,7 +40,6 @@ const useStyles = createUseStyles<Theme, Classes>(
     },
     iconWrapper: {
       width: '100%',
-      fontSize: 26,
       padding: 16,
       borderRadius: 4,
       textAlign: 'center',
