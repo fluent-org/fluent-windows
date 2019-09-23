@@ -15,7 +15,7 @@ exports[`Input should be support cleared 1`] = `
     style="width: 0px;"
   >
     <svg
-      style="width: 1.5em; height: 1.5em; display: inline-block; font-size: inherit; fill: currentColor;"
+      style="width: 1.3em; height: 1.3em; display: inline-block; font-size: inherit; fill: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -44,9 +44,9 @@ async function getAllSvgs(dir: string): Promise<string[]> {
       (file): Promise<Promise<string[]> | string> => {
         const path = resolve(dir, file)
         // @ts-ignore
-        return statAsync(path).then((stat): Promise<string[]> | string =>
-          stat.isDirectory() ? getAllSvgs(path) : path
-        )
+        return statAsync(path).then((stat): Promise<string[]> | string => {
+          return stat.isDirectory() ? getAllSvgs(path) : path
+        })
       }
     )
   )
