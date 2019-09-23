@@ -7,7 +7,7 @@ langKey: "en"
 
 # useHover
 
-<p class="description">Subscribe to focus events based on `onMouseEnter`, `onMouseLeave`.</p>
+<p class="description">Subscribe to hover events based on `onMouseEnter`, `onMouseLeave`.</p>
 
 ## Demo
 

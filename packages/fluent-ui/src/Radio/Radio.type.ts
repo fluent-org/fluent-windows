@@ -17,13 +17,11 @@ export interface RadioProps
   value?: string
   onChange?: (checked: string) => void
   disabled?: boolean
-  children?: React.ReactNode
 }
 
 export const RadioPropTypes = {
   checked: PropTypes.bool,
   value: PropTypes.string,
   onChange: PropTypes.func,
-  disabled: PropTypes.bool,
-  children: PropTypes.node
+  disabled: PropTypes.bool
 }

@@ -21,4 +21,3 @@ import { Radio } from '@fluent-ui/core'
 | value | string |  | As the sole indication of `Radio` |
 | onChange | (checked: boolean) => void |  | Callback fired when the state is changed. |
 | disabled | boolean | false | 	If `true`, the `Radio` will be disabled. |
-| children | React.ReactNode |  | Render as the label of `Radio`. |

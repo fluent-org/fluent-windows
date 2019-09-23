@@ -9,7 +9,7 @@ langKey: "en"
 
 <p class="description">Tabs make it easy to explore and switch between different views.</p>
 
-## Simple Tabs
+## SimpleTabs
 
 ```jsx
 () => {
@@ -38,7 +38,7 @@ langKey: "en"
 }
 ```
 
-## Acrylic Tabs
+## Acrylic
 
 ```jsx
 () => {

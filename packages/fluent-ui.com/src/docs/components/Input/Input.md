@@ -31,7 +31,7 @@ langKey: "en"
 
 ## Disabled
 
-Whether the button is disabled.
+Whether the input is disabled.
 
 ```jsx
 <Input value='Hint text' disabled />

@@ -1,11 +1,13 @@
 ---
 title: Typography
 components: Typography
-type: DataDisplay
+type: Layout
 langKey: "en"
 ---
 
 # Typography
+
+## Default
 
 ```jsx
 <Box>

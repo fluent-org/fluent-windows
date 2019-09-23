@@ -10,7 +10,7 @@ langKey: "en"
 <p class="description">The portal component renders its children into a new "subtree" outside of current component hierarchy.
 </p>
 
-## Simple Portal
+## SimplePortal
 
 ```jsx
 () => {

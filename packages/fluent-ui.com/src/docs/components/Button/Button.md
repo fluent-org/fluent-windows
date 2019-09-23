@@ -16,13 +16,13 @@ There are two styles of buttons, controlled by the variant prop.
 - standard
 - primary
 
-### Default style - standard
+### Default-standard
 
 ```jsx
 <Button>Standard</Button>
 ```
 
-### Highlighted button - primary
+### Highlighted-primary
 
 ```jsx
 <Button variant="primary">Primary</Button>
@@ -48,7 +48,7 @@ Fancy larger or smaller buttons? Use the `size` property.
 </>
 ```
 
-## Block Button
+## BlockButton
 
 `block` property will make the button fit to its parent width.
 

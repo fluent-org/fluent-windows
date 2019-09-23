@@ -13,7 +13,7 @@ import Card from '@fluent-ui/core/Card'
 import { Card } from '@fluent-ui/core'
 ```
 
-Use `Card.Header` `Card.Content` `Card.Actions` inside Card so that f knows how to render to the target location.
+Use `Card.Header` `Card.Content` `Card.Actions` inside Card so that card knows how to render to the target location.
 
 ### Props
 

@@ -7,7 +7,7 @@ langKey: "en"
 
 # Progress
 
-## Default with value
+## DefaultWithValue
 
 ```jsx
 <Progress value={50} />

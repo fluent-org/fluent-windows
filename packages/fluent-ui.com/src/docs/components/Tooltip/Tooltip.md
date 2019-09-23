@@ -7,9 +7,9 @@ langKey: "en"
 
 # Tooltip
 
-<p class="description">Keep the tooltip text concise. Tooltips are perfect for short sentences and sentence fragments. Large blocks of text are difficult to read and overwhelming. Use images when appropriate. Sometimes it's better to use an image in a tooltip. For example, when the user touches a hyperlink, you can use a tooltip to show a preview of the linked page.</p>
+<p class="description">Tooltips display informative text when users hover over, focus on, or tap an element.</p>
 
-## Simple Tooltips
+## Simple
 
 ```jsx
 <>
@@ -26,7 +26,7 @@ langKey: "en"
 </>
 ```
 
-## Positioned Tooltips
+## Positioned
 
 ```jsx
 <Box overflow="auto">

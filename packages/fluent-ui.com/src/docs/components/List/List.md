@@ -7,9 +7,9 @@ langKey: "en"
 
 # List
 
-<p class="description">Common component that can be used with multiple components.</p>
+<p class="description">Lists are continuous, vertical indexes of text or images.</p>
 
-## Simple List
+## Simple
 
 ```jsx
 <List title="List Items">
@@ -20,7 +20,7 @@ langKey: "en"
 </List>
 ```
 
-## Acrylic List
+## Acrylic
 
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
@@ -33,7 +33,7 @@ langKey: "en"
 </Box>
 ```
 
-## Reveal List
+## Reveal
 
 ```jsx
 <Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
@@ -46,7 +46,7 @@ langKey: "en"
 </Box>
 ```
 
-## Nested List
+## Nested
 
 ```jsx
 <List title="List Items">
@@ -63,7 +63,7 @@ langKey: "en"
 </List>
 ```
 
-## Folder List
+## Folder
 
 ```jsx
 <List title="List Items">
@@ -88,7 +88,7 @@ langKey: "en"
 </List>
 ```
 
-## With Toggle
+## WithToggle
 
 ```jsx
 () => {
@@ -113,7 +113,7 @@ langKey: "en"
 }
 ```
 
-## With Checkbox
+## WithCheckbox
 
 ```jsx
 () => {

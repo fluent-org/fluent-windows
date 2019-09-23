@@ -23,7 +23,7 @@ langKey: "en"
 }
 ```
 
-## With Label
+## With FormLabel
 
 ```jsx
 () => {

@@ -316,7 +316,7 @@ langKey: "en"
           </Item>
     
           <Navigation.Footer>
-            <Item prefix={<Icon.Settings4Line4Line />}>
+            <Item prefix={<Icon.Settings4Line />}>
               Settings
             </Item>
           </Navigation.Footer>

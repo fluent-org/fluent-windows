@@ -39,7 +39,6 @@ import { Form } from '@fluent-ui/core'
 | --- | --- | --- | --- |
 | message | React.ReactNode |  | validation error message. |
 | type | React.ReactNode | 'string' | built-in validation type, available options: https://github.com/yiminghe/async-validator#type. |
-| message | string |  | validation error message. |
 | required | boolean |  | indicates whether field is required. |
 | whitespace | boolean |  | treat required fields that only contain whitespace as errors. |
 | len | number |  | validate the exact length of a field. |

@@ -7,9 +7,9 @@ langKey: "en"
 
 # Item
 
-<p class="description">Common component that can be used with multiple components.</p>
+<p class="description">May be used in conjunction with a plurality of components, usually represented as a list of items.</p>
 
-## Use alone
+## UseAlone
 
 ```jsx
 <Item prefix={<Icon.MenuLine />}>
@@ -17,7 +17,7 @@ langKey: "en"
 </Item>
 ```
 
-## Active Item
+## ActiveItem
 
 ```jsx
 <Box>
@@ -30,7 +30,7 @@ langKey: "en"
 </Box>
 ```
 
-## Use with other components
+## UseWithOtherComponents
 
 - Use with [`Navigation`](/components/navigation)
 - Use with [`List`](/components/list)

@@ -87,36 +87,3 @@ langKey: "en"
   )
 }
 ```
-
-## With `useMessage`
-
-You can also use a functional way to show, from [`@fluent-ui/hooks/useMessage`](/hooks/useMessage)
-
-```jsx
-() => {
-  const [handleOpen, handleClose] = useMessage(
-    (visible, content, close) => (
-      <Toast
-        visible={visible}
-        actions={
-          <IconButton onClick={close}>
-            <Icon.CloseLine />
-          </IconButton>
-        }
-      >
-        {content}
-      </Toast>
-    ),
-    0
-  )
-  function handleClick() {
-    handleOpen('hello world!')
-  }
-  return (
-    <>
-      <Button onClick={handleClick}>open</Button>
-      <Button onClick={handleClose}>close</Button>
-    </>
-  )
-}
-```

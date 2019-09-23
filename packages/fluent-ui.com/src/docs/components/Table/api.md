@@ -30,7 +30,7 @@ import { Table, TableGroup } from '@fluent-ui/core'
 | title&nbsp;* | string |  | Title of the table. |
 | render | (text: React.ReactText, record?: T, index?: number) => React.ReactElement |  | Render function for complex situations, which will be applied to the cell corresponding to each `field`(The parameters are expressed as: current cell value, current row data, current row index). |
 
-#### Used in TypeScript
+#### UsedInTypeScript
 
 It's worth noting that in order to support typescript more friendly, I gave up `React.forwardRef`, which means that using `ref` for the `Table` won't get what you want.
 

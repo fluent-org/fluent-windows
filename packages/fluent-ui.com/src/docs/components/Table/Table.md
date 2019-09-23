@@ -9,7 +9,7 @@ langKey: "en"
 
 <p class="description">Data tables display sets of data.</p>
 
-## Simple Table
+## SimpleTable
 
 ```jsx
 () => {
@@ -43,7 +43,7 @@ langKey: "en"
 }
 ```
 
-## With Columns Table
+## WithColumnsTable
 
 ```jsx
 () => {
