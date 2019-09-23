@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Connected } from '@fluent-ui/icons'
+import { MenuLine } from '@fluent-ui/icons'
 import { render } from '../../test-utils'
 import '@testing-library/jest-dom/extend-expect'
 
@@ -33,7 +33,7 @@ describe('ItemGroup', (): void => {
 
   test('should be support prefix', (): void => {
     const { container, getByTestId } = render(
-      <ItemGroup prefix={<Connected data-testid="icon" />}>
+      <ItemGroup prefix={<MenuLine data-testid="icon" />}>
         <Item>{testText}</Item>
       </ItemGroup>
     )

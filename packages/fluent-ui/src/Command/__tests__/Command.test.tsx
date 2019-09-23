@@ -2,7 +2,7 @@ import * as React from 'react'
 import { getClasses, render } from '../../test-utils'
 import '@testing-library/jest-dom/extend-expect'
 
-import { Back as BackIcon, Play as PlayIcon, Forward as ForwardIcon } from '@fluent-ui/icons'
+import { MenuLine } from '@fluent-ui/icons'
 import Command, { name } from '../Command'
 import Item from '../../Item'
 
@@ -35,9 +35,7 @@ describe('Command', (): void => {
   test('should to render Primary Content and Secondary', (): void => {
     const { container } = render(
       <Command>
-        <Item prefix={<BackIcon />} />
-        <Item prefix={<PlayIcon />} />
-        <Item prefix={<ForwardIcon />} />
+        <Item prefix={<MenuLine />} />
 
         <Command.Content>{testText}</Command.Content>
 
@@ -53,9 +51,7 @@ describe('Command', (): void => {
   test('should be rendered with acrylic effects', (): void => {
     const { container, sheets } = render(
       <Command acrylic>
-        <Item prefix={<BackIcon />} />
-        <Item prefix={<PlayIcon />} />
-        <Item prefix={<ForwardIcon />} />
+        <Item prefix={<MenuLine />} />
 
         <Command.Content>Now Playing...</Command.Content>
 
@@ -72,9 +68,7 @@ describe('Command', (): void => {
   test('should be rendered with reveal effects', (): void => {
     const { container, sheets } = render(
       <Command reveal>
-        <Item prefix={<BackIcon />} />
-        <Item prefix={<PlayIcon />} />
-        <Item prefix={<ForwardIcon />} />
+        <Item prefix={<MenuLine />} />
 
         <Command.Content>Now Playing...</Command.Content>
 
@@ -91,9 +85,7 @@ describe('Command', (): void => {
   test('without Content and Secondary', (): void => {
     const { container, sheets } = render(
       <Command acrylic>
-        <Item prefix={<BackIcon />} />
-        <Item prefix={<PlayIcon />} />
-        <Item prefix={<ForwardIcon />} />
+        <Item prefix={<MenuLine />} />
       </Command>
     )
     expect(container.firstChild).toMatchSnapshot()

@@ -124,7 +124,8 @@ exports[`FormLabel should render children 1`] = `
   }
 }
   .FTypography-root {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .FTypography-variants {  }
   .FTypography-gutterTop {

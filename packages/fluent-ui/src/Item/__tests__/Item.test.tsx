@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Connected } from '@fluent-ui/icons'
+import { MenuLine } from '@fluent-ui/icons'
 import { getClasses, render } from '../../test-utils'
 import '@testing-library/jest-dom/extend-expect'
 
@@ -21,14 +21,14 @@ describe('Item', (): void => {
 
   test('should be support prefix', (): void => {
     const { container, getByTestId } = render(
-      <Item prefix={<Connected data-testid="icon" />}>{testText}</Item>
+      <Item prefix={<MenuLine data-testid="icon" />}>{testText}</Item>
     )
     expect(getByTestId('icon')).toBeInTheDocument()
     expect(container.firstChild).toMatchSnapshot()
   })
 
   test('should be support prefix without children', (): void => {
-    const { container, getByTestId } = render(<Item prefix={<Connected data-testid="icon" />} />)
+    const { container, getByTestId } = render(<Item prefix={<MenuLine data-testid="icon" />} />)
     expect(getByTestId('icon')).toBeInTheDocument()
     expect(container).toMatchSnapshot()
   })

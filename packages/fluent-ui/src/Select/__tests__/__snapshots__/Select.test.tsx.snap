@@ -1,16 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select should render children 1`] = `
-".icon {
-  fill: currentColor;
-  color: inherit;
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  font-size: inherit;
-  user-select: none;
-}
-.FTransition-root {}
+".FTransition-root {}
 .FTransition-fade {}
 .FTransition-fade.fade-enter {
   opacity: 0;

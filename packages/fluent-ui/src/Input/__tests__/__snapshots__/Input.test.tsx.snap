@@ -15,11 +15,16 @@ exports[`Input should be support cleared 1`] = `
     style="width: 0px;"
   >
     <svg
-      class="icon"
-      viewBox="0 0 2048 2048"
+      style="width: 1.5em; height: 1.5em; display: inline-block; font-size: inherit; fill: currentColor;"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M1169 1024l879 879-145 145-879-879-879 879L0 1903l879-879L0 145 145 0l879 879L1903 0l145 145z"
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
       />
     </svg>
   </span>
@@ -27,16 +32,7 @@ exports[`Input should be support cleared 1`] = `
 `;
 
 exports[`Input should be support cleared 2`] = `
-".icon {
-  fill: currentColor;
-  color: inherit;
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  font-size: inherit;
-  user-select: none;
-}
-.FTransition-root {}
+".FTransition-root {}
 .FTransition-fade {}
 .FTransition-fade.fade-enter {
   opacity: 0;

@@ -14,12 +14,17 @@ exports[`ItemGroup should be support prefix 1`] = `
         class="FItem-prefixRoot"
       >
         <svg
-          class="icon"
           data-testid="icon"
-          viewBox="0 0 2048 2048"
+          style="width: 1.5em; height: 1.5em; display: inline-block; font-size: inherit; fill: currentColor;"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M1664 1408q53 0 99.5 20t81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5q0-71 35-130l-289-289q-59 35-130 35t-130-35l-289 289q35 59 35 130 0 53-20 99.5t-55 81.5-81.5 55-99.5 20-99.5-20-81.5-55-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20q71 0 130 35l289-289q-35-59-35-130t35-130L514 605q-59 35-130 35-53 0-99.5-20T203 565t-55-81.5-20-99.5 20-99.5 55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5q0 71-35 130l289 289q59-35 130-35t130 35l289-289q-35-59-35-130 0-53 20-99.5t55-81.5 81.5-55 99.5-20 99.5 20 81.5 55 55 81.5 20 99.5-20 99.5-55 81.5-81.5 55-99.5 20q-71 0-130-35l-289 289q35 59 35 130t-35 130l289 289q59-35 130-35zm0-1152q-27 0-50 10t-40.5 27.5T1546 334t-10 50 10 50 27.5 40.5T1614 502t50 10 50-10 40.5-27.5T1782 434t10-50-10-50-27.5-40.5T1714 266t-50-10zM256 384q0 27 10 50t27.5 40.5T334 502t50 10 50-10 40.5-27.5T502 434t10-50-10-50-27.5-40.5T434 266t-50-10-50 10-40.5 27.5T266 334t-10 50zm128 1408q27 0 50-10t40.5-27.5T502 1714t10-50-10-50-27.5-40.5T434 1546t-50-10-50 10-40.5 27.5T266 1614t-10 50 10 50 27.5 40.5T334 1782t50 10zm640-640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5T1074 906t-50-10-50 10-40.5 27.5T906 974t-10 50 10 50 27.5 40.5T974 1142t50 10zm640 640q27 0 50-10t40.5-27.5 27.5-40.5 10-50-10-50-27.5-40.5-40.5-27.5-50-10-50 10-40.5 27.5-27.5 40.5-10 50 10 50 27.5 40.5 40.5 27.5 50 10z"
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
           />
         </svg>
       </div>
@@ -31,11 +36,16 @@ exports[`ItemGroup should be support prefix 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixNotFloatClose FItemGroup-titlePrefixExpanded"
     >
       <svg
-        class="icon"
-        viewBox="0 0 2048 2048"
+        style="width: 1.5em; height: 1.5em; display: inline-block; font-size: inherit; fill: currentColor;"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M1024 1657L25 658l121-121 878 878 878-878 121 121-999 999z"
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"
         />
       </svg>
     </div>
@@ -80,11 +90,16 @@ exports[`ItemGroup should be support shrink float 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixExpanded"
     >
       <svg
-        class="icon"
-        viewBox="0 0 2048 2048"
+        style="width: 1.5em; height: 1.5em; display: inline-block; font-size: inherit; fill: currentColor;"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M658 2023l-121-121 878-878-878-878L658 25l999 999-999 999z"
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
         />
       </svg>
     </div>
@@ -108,16 +123,7 @@ exports[`ItemGroup should be support shrink float 1`] = `
 `;
 
 exports[`ItemGroup should render children 1`] = `
-".icon {
-  fill: currentColor;
-  color: inherit;
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-  font-size: inherit;
-  user-select: none;
-}
-.FBox-root {
+".FBox-root {
   -webkit-overflow-scrolling: touch;
 }
 @media screen and (min-width: 600px) {

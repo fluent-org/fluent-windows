@@ -77,7 +77,8 @@ exports[`Typography should be support gutterBottom 1`] = `
   }
 }
   .FTypography-root {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .FTypography-variants {  }
   .FTypography-gutterTop {
@@ -176,7 +177,8 @@ exports[`Typography should be support gutterTop 1`] = `
   }
 }
   .FTypography-root {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .FTypography-variants {  }
   .FTypography-gutterTop {
@@ -275,7 +277,8 @@ exports[`Typography should be support noWrap 1`] = `
   }
 }
   .FTypography-root {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .FTypography-variants {  }
   .FTypography-gutterTop {
@@ -374,7 +377,8 @@ exports[`Typography should render children 1`] = `
   }
 }
   .FTypography-root {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .FTypography-variants {  }
   .FTypography-gutterTop {
