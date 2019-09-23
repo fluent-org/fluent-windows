@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.6.2...@fluent-ui/icons@0.7.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* **@fluent-ui/icons:** Re-build icons ([c142a74](https://github.com/fluent-org/fluent-ui/commit/c142a74))
+
+
+### Features
+
+* **@flunet-ui/icons:** Icon library switch to remix ([32cb171](https://github.com/fluent-org/fluent-ui/commit/32cb171))
+
+
+
+
+
 ## [0.6.2](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.6.1...@fluent-ui/icons@0.6.2) (2019-09-20)
 
 **Note:** Version bump only for package @fluent-ui/icons

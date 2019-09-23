@@ -1,7 +1,7 @@
 {
   "name": "@fluent-ui/icons",
   "private": false,
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Fluent-UI Svg Icons Based on RemixIcon.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
@@ -40,7 +40,6 @@
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
   },
-  "dependencies": {},
   "devDependencies": {
     "htm": "^2.2.1"
   },

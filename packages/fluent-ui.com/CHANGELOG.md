@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.17.3...fluent-ui.com@1.18.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Fix icon name error ([35fa23d](https://github.com/fluent-org/fluent-ui/commit/35fa23d))
+
+
+### Features
+
+* **@flunet-ui/icons:** Icon library switch to remix ([32cb171](https://github.com/fluent-org/fluent-ui/commit/32cb171))
+* **fluent-ui.com:** Adjust the style ([2916ad4](https://github.com/fluent-org/fluent-ui/commit/2916ad4))
+* **i18n:** fluent-ui.com complete the framework of multi-language switch ([65aa506](https://github.com/fluent-org/fluent-ui/commit/65aa506))
+
+
+
+
+
 ## [1.17.3](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.17.2...fluent-ui.com@1.17.3) (2019-09-20)
 
 **Note:** Version bump only for package fluent-ui.com
