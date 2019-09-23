@@ -7,6 +7,6 @@ langKey: "en"
 
 # Icon
 
-Based on the extension of [Micon](https://github.com/xtoolkit/Micon).
+Fluent-UI Svg Icons Based on [RemixIcon](https://remixicon.com/).
 
 <IconTemplate />

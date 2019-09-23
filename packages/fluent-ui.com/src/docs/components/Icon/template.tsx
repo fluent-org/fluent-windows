@@ -7,6 +7,8 @@ import { Styles } from 'jss'
 import { VirtuosoGrid } from 'react-virtuoso'
 const Virtuoso = VirtuosoGrid as any
 import Highlight from '../../../components/highlight'
+// @ts-ignore
+import tags from './tags.json'
 
 type Classes =
   | 'list'
@@ -56,7 +58,7 @@ const useStyles = createUseStyles<Theme, Classes>(
     },
     bigIcon: {
       color: theme.colors!.primary!.default,
-      fontSize: 180,
+      fontSize: 150,
       backgroundSize: '30px 30px',
       backgroundColor: '#fff',
       backgroundImage:
@@ -96,7 +98,7 @@ const useStyles = createUseStyles<Theme, Classes>(
 
 const Template = (): React.ReactElement => {
   // @ts-ignore
-  const IconArray = Object.keys(Icons).map((key): React.ComponentElement => Icons[key])
+  const IconArray = Object.keys(Icons).map(key => Icons[key])
   const classes = useStyles()
 
   const [visible, setVisible] = React.useState(false)
@@ -122,7 +124,7 @@ const Template = (): React.ReactElement => {
         itemClassName={classes.iconContainer}
         item={(index: number): React.ReactElement => {
           const Icon = IconArray[index]
-          const name = String.prototype.substring.call(Icon.displayName, 5)
+          const name = String.prototype.substring.call(Icon.displayName, 9)
           return (
             <div className={classes.iconWrapper} onClick={handleVisible.bind(null, name)}>
               <Icon />
@@ -141,7 +143,9 @@ const Template = (): React.ReactElement => {
           <Highlight>{code}</Highlight>
           {CurrentSelectIcon && (
             <Box display="flex" width="100%" marginTop={34}>
-              <CurrentSelectIcon className={classes.bigIcon} />
+              <Box className={classes.bigIcon}>
+                <CurrentSelectIcon />
+              </Box>
               <Box flex={1} paddingLeft={20}>
                 <Box textAlign="center">
                   <Box className={[classes.smallIcon, classes.primaryPureIcon]}>
