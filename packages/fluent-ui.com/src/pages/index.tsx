@@ -41,7 +41,7 @@ const IndexPage = (props: any): React.ReactElement => {
         width="100vw"
         height="100vh"
         backgroundColor="standard.light1"
-        background="url(/icon-arrangement.png) 100% center / cover no-repeat fixed"
+        background="url(/images/icon-arrangement.png) 100% center / cover no-repeat fixed"
         display="flex"
         justifyContent="center"
         alignItems="center"

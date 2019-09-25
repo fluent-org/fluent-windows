@@ -87,7 +87,7 @@ const Template: React.FC<TemplateProps> = ({
       <SEO title={data.doc.frontmatter.title} />
       <Box
         as="main"
-        background="url(/wall.jpg) 50% center / cover no-repeat fixed"
+        background="url(/images/wall.jpg) 50% center / cover no-repeat fixed"
         padding={[0, '3.6rem 3rem']}
         width="100vw"
         height="100vh"

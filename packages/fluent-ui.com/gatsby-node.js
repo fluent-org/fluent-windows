@@ -11,18 +11,14 @@ exports.onCreateNode = ({ node, actions }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const {
-      frontmatter: { langKey = 'en' },
+      frontmatter: { langKey = 'en', components },
       fileAbsolutePath
     } = node
-    // hooks 文档 type 统一为 `hooks`
-    // components 文档 type 分别为各自所属的类别
-    // gettingStarted 文档 type 为 `GettingStarted`
-    // langKey 默认为 `en`
     const prefix = langKey === 'en' ? '/' : `/${langKey}/`
     const type = path.basename(path.dirname(path.dirname(fileAbsolutePath)))
-    const title = path.basename(fileAbsolutePath).split('.')[0]
-    const value = `${prefix}${type}/${toLine(title)}`
-
+    const value = components
+      ? `${prefix}${type}/${toLine(components)}`
+      : `${prefix}${type}/${toLine(path.basename(fileAbsolutePath).split('.')[0])}`
     createNodeField({
       name: `slug`,
       node,

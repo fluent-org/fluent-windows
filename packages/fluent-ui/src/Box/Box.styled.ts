@@ -69,7 +69,9 @@ const acrylic = (theme: Theme): ((props: BoxProps) => Style) => (props: BoxProps
         left: 0,
         right: 0,
         top: 0,
-        bottom: 0
+        bottom: 0,
+        width: '100%',
+        height: '100%'
       },
       '&::before': {
         zIndex: -2,
@@ -103,6 +105,8 @@ const acrylic = (theme: Theme): ((props: BoxProps) => Style) => (props: BoxProps
         top: 0,
         right: 0,
         bottom: 0,
+        width: '100%',
+        height: '100%',
         zIndex: -1,
         opacity: 0.5,
         backgroundColor: themeBg,

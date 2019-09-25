@@ -15,7 +15,7 @@ exports[`ItemGroup should be support prefix 1`] = `
       >
         <svg
           data-testid="icon"
-          style="width: 1.3em; height: 1.3em; display: inline-block; font-size: inherit; fill: currentColor;"
+          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -36,7 +36,7 @@ exports[`ItemGroup should be support prefix 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixNotFloatClose FItemGroup-titlePrefixExpanded"
     >
       <svg
-        style="width: 1.3em; height: 1.3em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -90,7 +90,7 @@ exports[`ItemGroup should be support shrink float 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixExpanded"
     >
       <svg
-        style="width: 1.3em; height: 1.3em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -156,7 +156,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -190,7 +192,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;
@@ -212,7 +216,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -246,7 +252,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;
@@ -268,7 +276,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -302,7 +312,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;
@@ -324,7 +336,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -358,7 +372,9 @@ exports[`ItemGroup should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;

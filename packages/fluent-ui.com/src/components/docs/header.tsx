@@ -11,6 +11,7 @@ import {
 import { useDispatch, usePopper, useClickOutside, useGlobal } from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
 
+import Search from '../Search'
 import { langKeys, LangKey } from '../../translations'
 import { pathnameToLanguage } from '../../utils'
 
@@ -81,6 +82,9 @@ const Header = (): React.ReactElement => {
         </Tooltip>
 
         <Command.Content>
+          <Box display={['none', 'block']}>
+            <Search />
+          </Box>
           <Box display={['block', 'none']}>
             <Item onClick={dispatch} prefix={<MenuLineIcon />} />
           </Box>

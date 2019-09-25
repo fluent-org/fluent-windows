@@ -2,8 +2,7 @@ import { Style, Styles } from 'jss'
 import { CommandClassProps } from './Command.type'
 
 const root: Style = {
-  display: 'flex',
-  overflow: 'hidden'
+  display: 'flex'
 }
 const content: Style = {
   position: 'relative',

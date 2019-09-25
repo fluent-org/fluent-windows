@@ -9,7 +9,7 @@ exports[`Item should be support prefix 1`] = `
   >
     <svg
       data-testid="icon"
-      style="width: 1.3em; height: 1.3em; display: inline-block; font-size: inherit; fill: currentColor;"
+      style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -40,7 +40,7 @@ exports[`Item should be support prefix without children 1`] = `
     >
       <svg
         data-testid="icon"
-        style="width: 1.3em; height: 1.3em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >

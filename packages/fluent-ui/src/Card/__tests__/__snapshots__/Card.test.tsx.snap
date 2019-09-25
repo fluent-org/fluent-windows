@@ -37,7 +37,9 @@ exports[`Card should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -71,7 +73,9 @@ exports[`Card should render children 1`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;

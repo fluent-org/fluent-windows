@@ -52,7 +52,9 @@ exports[`Box should be rendered with acrylic effects 2`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -86,7 +88,9 @@ exports[`Box should be rendered with acrylic effects 2`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;
@@ -140,7 +144,9 @@ exports[`Box should render children 2`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     position: absolute;
   }
@@ -174,7 +180,9 @@ exports[`Box should render children 2`] = `
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     bottom: 0;
+    height: 100%;
     content: '';
     opacity: 0.5;
     z-index: -1;
