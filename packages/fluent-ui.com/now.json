@@ -2,15 +2,15 @@
   "version": 2,
   "name": "fluent-ui.com",
   "env": {
-    "GATSBY_ALGOLIA_APP_ID": "@GATSBY_ALGOLIA_APP_ID",
-    "GATSBY_ALGOLIA_SEARCH_KEY": "@GATSBY_ALGOLIA_APP_ID",
-    "ALGOLIA_ADMIN_KEY": "@GATSBY_ALGOLIA_APP_ID"
+    "GATSBY_ALGOLIA_APP_ID": "@gatsby_algolia_app_id",
+    "GATSBY_ALGOLIA_SEARCH_KEY": "@gatsby_algolia_search_key",
+    "ALGOLIA_ADMIN_KEY": "@algolia_admin_key"
   },
   "build": {
     "env": {
-      "GATSBY_ALGOLIA_APP_ID": "@GATSBY_ALGOLIA_APP_ID",
-      "GATSBY_ALGOLIA_SEARCH_KEY": "@GATSBY_ALGOLIA_APP_ID",
-      "ALGOLIA_ADMIN_KEY": "@GATSBY_ALGOLIA_APP_ID"
+      "GATSBY_ALGOLIA_APP_ID": "@gatsby_algolia_app_id",
+      "GATSBY_ALGOLIA_SEARCH_KEY": "@gatsby_algolia_search_key",
+      "ALGOLIA_ADMIN_KEY": "@algolia_admin_key"
     }
   },
   "builds": [

@@ -78,8 +78,8 @@
     "prettier": "^1.17.1"
   },
   "scripts": {
-    "start": "now dev",
-    "now-dev": "gatsby develop",
+    "start": "gatsby develop",
+    "now-dev": "npm run start",
     "now-build": "gatsby build"
   }
 }
