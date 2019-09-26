@@ -7,8 +7,8 @@ import { InstantSearch, Index } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
 
 import { styles } from './styles'
-import Results from './Results'
-import Input from './Input'
+import Results from './results'
+import Input from './input'
 
 type SearchClassName = 'hits' | 'powerBy'
 const useStyles = createUseStyles<Theme, SearchClassName>(styles)
