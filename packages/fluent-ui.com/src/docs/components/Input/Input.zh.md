@@ -80,3 +80,12 @@ langKey: "zh"
   )
 }
 ```
+
+## 前置和后置
+
+```jsx
+<>
+  <Input prefix="¥" suffix="RMB" />
+  <Input prefix={<Icon.UserSmileLine />} suffix={<Icon.InformationLine />} />
+</>
+```

@@ -24,3 +24,5 @@ import { Input } from '@fluent-ui/core'
 | cleared | boolean | false | 是否显示一个按钮清除输入元素的值。 |
 | password | boolean |  | `input` 元素将被渲染为 `<input type="password" />` |
 | error | boolean |  | 	如果 `true`, `input` 将会表示为错误状态。 |
+| prefix | React.ReactNode | null | 输入框的前置内容。 |
+| suffix | React.ReactNode | null | 输入框的后置内容。 |

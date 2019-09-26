@@ -2,10 +2,14 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 
-export type InputClassProps = 'root' | 'error' | 'wrapper' | 'clearedIcon'
+export type InputClassProps = 'root' | 'error' | 'wrapper' | 'clearedIcon' | 'prefix' | 'suffix'
 
 export interface InputProps
-  extends StandardProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement, 'onChange'> {
+  extends StandardProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement,
+    'onChange' | 'prefix'
+  > {
   value?: string
   onChange?: (value: string) => void
   placeholder?: string
@@ -13,6 +17,8 @@ export interface InputProps
   cleared?: boolean
   password?: boolean
   error?: boolean
+  prefix?: React.ReactNode
+  suffix?: React.ReactNode
 }
 
 export const InputPropTypes = {
@@ -22,5 +28,7 @@ export const InputPropTypes = {
   disabled: PropTypes.bool,
   cleared: PropTypes.bool,
   password: PropTypes.bool,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  prefix: PropTypes.node,
+  suffix: PropTypes.node
 }

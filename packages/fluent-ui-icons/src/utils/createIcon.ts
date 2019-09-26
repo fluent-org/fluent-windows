@@ -8,7 +8,7 @@ export interface JSX {
 
 function createElement(
   jsx: JSX,
-  otherProps: React.HTMLAttributes<SVGElement> = {}
+  otherProps: React.HTMLAttributes<SVGElement> & React.RefAttributes<SVGElement> = {}
 ): React.ReactSVGElement {
   const { type, props, children: childrenAttr } = jsx
   const children = childrenAttr.map((child): React.ReactSVGElement[] =>
@@ -36,18 +36,23 @@ function toHump(name: string, capitalized: boolean = true): string {
     : name.replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
 }
 
-function createIcon(jsx: JSX, componentName: string): React.FC {
-  const Icon: React.FC = ({ ...rest }: React.HTMLAttributes<SVGElement>): React.ReactElement => {
-    const style = {
-      width: '1em',
-      height: '1em',
-      display: 'inline-block',
-      fontSize: 'inherit',
-      color: 'inherit',
-      fill: 'currentColor'
+function createIcon(
+  jsx: JSX,
+  componentName: string
+): React.ForwardRefExoticComponent<React.RefAttributes<SVGElement>> {
+  const Icon = React.forwardRef<SVGElement>(
+    ({ ...rest }: React.HTMLAttributes<SVGElement>, ref): React.ReactElement => {
+      const style = {
+        width: '1em',
+        height: '1em',
+        display: 'inline-block',
+        fontSize: 'inherit',
+        color: 'inherit',
+        fill: 'currentColor'
+      }
+      return createElement(jsx, { ...rest, style, ref })
     }
-    return createElement(jsx, { ...rest, style })
-  }
+  )
   Icon.displayName = `RemixIcon${toHump(componentName)}`
   return Icon
 }

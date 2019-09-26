@@ -1,6 +1,6 @@
 import { Style, Styles } from 'jss'
 import { Theme } from '../styles'
-import { InputClassProps } from './Input.type'
+import { InputClassProps, InputProps } from './Input.type'
 
 const wrapper: Style = {
   display: 'inline-block',
@@ -9,7 +9,7 @@ const wrapper: Style = {
   font: 'inherit'
 }
 
-const root = (theme: Theme) => ({
+const root = (theme: Theme): Style => ({
   outline: 'none',
   font: 'inherit',
   width: '100%',
@@ -17,7 +17,6 @@ const root = (theme: Theme) => ({
   border: '2px solid',
   borderColor: theme.colors!.standard!.default,
   transition: theme.transitions!.input,
-  // ${th.size('medium.input')},
   '&:hover': {
     borderColor: theme.colors!.standard!.dark1
   },
@@ -30,7 +29,13 @@ const root = (theme: Theme) => ({
     cursor: 'not-allowed',
     pointerEvents: 'none'
   },
-  ...theme.sizes!.medium!.input
+  ...theme.sizes!.medium!.input,
+  '&:not(:first-child)': {
+    paddingLeft: 30
+  },
+  '&:not(:last-child)': {
+    paddingRight: 30
+  }
 })
 const error = (theme: Theme): Style => ({
   borderColor: theme.colors!.error!.default,
@@ -59,9 +64,29 @@ const clearedIcon = (theme: Theme): Style => ({
   }
 })
 
+const extra = (theme: Theme): Style => ({
+  position: 'absolute',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color: theme.colors!.standard!.transparent3
+})
+const prefix = (theme: Theme): Style => ({
+  ...extra(theme),
+  left: 12
+})
+const suffix = (theme: Theme): Style => (props: InputProps): Style => ({
+  ...extra(theme),
+  right: 12 + (props.suffix && !!props.value ? 30 : 0)
+})
+
 export const styles = (theme: Theme): Styles<InputClassProps> => ({
   root: root(theme),
   error: error(theme),
   wrapper,
-  clearedIcon: clearedIcon(theme)
+  clearedIcon: clearedIcon(theme),
+  prefix: prefix(theme),
+  suffix: suffix(theme)
 })

@@ -24,6 +24,8 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
       cleared,
       password,
       error,
+      prefix = null,
+      suffix = null,
       ...rest
     } = props
 
@@ -55,14 +57,15 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
       (): object =>
         cleared
           ? {
-              paddingRight: clearedHeight
+              paddingRight: clearedHeight + (suffix ? 30 : 0)
             }
           : {},
-      [cleared, clearedHeight]
+      [cleared, clearedHeight, suffix]
     )
 
     return (
       <div className={classes.wrapper} style={style}>
+        {prefix && <div className={classes.prefix}>{prefix}</div>}
         <input
           className={className}
           ref={ref}
@@ -74,6 +77,7 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
           style={clearedInputStyle}
           {...rest}
         />
+        {suffix && <div className={classes.suffix}>{suffix}</div>}
         {cleared && (
           <Transition visible={!!value} wrapper={false}>
             <span
@@ -96,5 +100,10 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
 Input.displayName = `F${name}`
 
 Input.propTypes = InputPropTypes
+
+Input.defaultProps = {
+  prefix: null,
+  suffix: null
+}
 
 export default Input

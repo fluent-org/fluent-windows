@@ -76,4 +76,18 @@ describe('Input', (): void => {
     expect(ref.current as HTMLInputElement).toHaveClass(classes.error)
     expect(sheets.toString()).toMatchSnapshot()
   })
+
+  test('should be support prefix', (): void => {
+    const { getByText, sheets } = render(<Input prefix={text} />)
+    expect(getByText(text)).toBeInTheDocument()
+    expect(getByText(text)).toHaveClass(classes.prefix)
+    expect(sheets.toString()).toMatchSnapshot()
+  })
+
+  test('should be support suffix', (): void => {
+    const { getByText, sheets } = render(<Input suffix={text} />)
+    expect(getByText(text)).toBeInTheDocument()
+    expect(getByText(text)).toHaveClass(classes.suffix)
+    expect(sheets.toString()).toMatchSnapshot()
+  })
 })

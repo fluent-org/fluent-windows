@@ -80,3 +80,12 @@ Show a button to clear your input.
   )
 }
 ```
+
+## PrefixAndSuffix
+
+```jsx
+<>
+  <Input prefix="¥" suffix="RMB" />
+  <Input prefix={<Icon.UserSmileLine />} suffix={<Icon.InformationLine />} />
+</>
+```
