@@ -78,11 +78,9 @@
     "prettier": "^1.17.1"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "now-dev": "gatsby develop -p $PORT",
-    "now-build": "npm run build"
+    "now-dev": "gatsby develop",
+    "now-build": "gatsby build"
   }
 }

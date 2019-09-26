@@ -16,3 +16,4 @@ design
 local_test.tsx
 test.bash
 .env
+.env.build

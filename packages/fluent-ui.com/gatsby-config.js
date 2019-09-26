@@ -1,5 +1,5 @@
 const queries = require('./src/utils/algolia')
-require('dotenv').config()
+// require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
