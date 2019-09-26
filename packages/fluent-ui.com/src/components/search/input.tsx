@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Input } from '@fluent-ui/core'
+import { SearchLine as SearchLineIcon } from '@fluent-ui/icons'
 import { connectSearchBox } from 'react-instantsearch-dom'
 import { useDebouncedCallback } from 'use-debounce'
 
@@ -16,9 +17,9 @@ export default connectSearchBox(
     return (
       <Input
         placeholder="Search"
-        aria-label="Search"
         onChange={debouncedCallback}
         onFocus={onFocus}
+        prefix={<SearchLineIcon />}
       />
     )
   }
