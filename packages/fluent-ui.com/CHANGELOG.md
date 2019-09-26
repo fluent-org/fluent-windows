@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.18.0...fluent-ui.com@1.19.0) (2019-09-26)
+
+
+### Bug Fixes
+
+* **@fluent-ui/icons:** Adjust font size icon ([9e5042f](https://github.com/fluent-org/fluent-ui/commit/9e5042f))
+* **fluent-ui.com:** Change fluent-ui.com local start-up mode ([8b01876](https://github.com/fluent-org/fluent-ui/commit/8b01876))
+* **fluent-ui.com:** Fix components/header reference location error ([9cae0e8](https://github.com/fluent-org/fluent-ui/commit/9cae0e8))
+* **fluent-ui.com:** Fix components/search reference location error ([e44aac8](https://github.com/fluent-org/fluent-ui/commit/e44aac8))
+* **fluent-ui.com:** Use the environment variable for now ([d805a72](https://github.com/fluent-org/fluent-ui/commit/d805a72))
+
+
+### Features
+
+* **fluent-ui.com:** Adding search with Algolia ([ece2f46](https://github.com/fluent-org/fluent-ui/commit/ece2f46)), closes [#9](https://github.com/fluent-org/fluent-ui/issues/9)
+* **fluent-ui.com:** Front to join the search box icon ([956ef6e](https://github.com/fluent-org/fluent-ui/commit/956ef6e))
+* **Input:** Add prefix/suffix support ([4c7728c](https://github.com/fluent-org/fluent-ui/commit/4c7728c)), closes [#10](https://github.com/fluent-org/fluent-ui/issues/10)
+
+
+
+
+
 # [1.18.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.17.3...fluent-ui.com@1.18.0) (2019-09-23)
 
 

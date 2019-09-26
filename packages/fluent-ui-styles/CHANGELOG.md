@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/styles@0.2.1...@fluent-ui/styles@0.2.2) (2019-09-26)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Fix components/header reference location error ([9cae0e8](https://github.com/fluent-org/fluent-ui/commit/9cae0e8))
+
+
+
+
+
 ## [0.2.1](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/styles@0.2.0...@fluent-ui/styles@0.2.1) (2019-09-20)
 
 **Note:** Version bump only for package @fluent-ui/styles

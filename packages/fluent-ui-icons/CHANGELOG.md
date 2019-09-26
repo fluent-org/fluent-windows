@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.7.0...@fluent-ui/icons@0.8.0) (2019-09-26)
+
+
+### Bug Fixes
+
+* **@fluent-ui/icons:** Adjust font size icon ([9e5042f](https://github.com/fluent-org/fluent-ui/commit/9e5042f))
+* **@fluent-ui/icons:** Repair Git capitalization errors ([754f003](https://github.com/fluent-org/fluent-ui/commit/754f003))
+
+
+### Features
+
+* **Input:** Add prefix/suffix support ([4c7728c](https://github.com/fluent-org/fluent-ui/commit/4c7728c)), closes [#10](https://github.com/fluent-org/fluent-ui/issues/10)
+
+
+
+
+
 # [0.7.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.6.2...@fluent-ui/icons@0.7.0) (2019-09-23)
 
 

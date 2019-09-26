@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.23.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.22.0...@fluent-ui/core@0.23.0) (2019-09-26)
+
+
+### Features
+
+* **fluent-ui.com:** Adding search with Algolia ([ece2f46](https://github.com/fluent-org/fluent-ui/commit/ece2f46)), closes [#9](https://github.com/fluent-org/fluent-ui/issues/9)
+* **Input:** Add prefix/suffix support ([4c7728c](https://github.com/fluent-org/fluent-ui/commit/4c7728c)), closes [#10](https://github.com/fluent-org/fluent-ui/issues/10)
+
+
+
+
+
 # [0.22.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.21.3...@fluent-ui/core@0.22.0) (2019-09-23)
 
 

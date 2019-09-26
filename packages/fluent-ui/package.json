@@ -1,7 +1,7 @@
 {
   "name": "@fluent-ui/core",
   "private": false,
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "React components that inspired by Microsoft's Fluent Design System.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "@fluent-ui/hooks": "^0.10.0",
-    "@fluent-ui/icons": "^0.7.0",
-    "@fluent-ui/styles": "^0.2.1",
+    "@fluent-ui/icons": "^0.8.0",
+    "@fluent-ui/styles": "^0.2.2",
     "@styled-system/prop-types": "^5.1.1",
     "async-validator": "^3.0.3",
     "classnames": "^2.2.6",
