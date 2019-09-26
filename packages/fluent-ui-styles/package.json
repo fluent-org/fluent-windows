@@ -31,7 +31,7 @@
     "build:iife": "cross-env BABEL_ENV=production-iife rollup -c ./rollup.config.js",
     "build:umd": "cross-env BABEL_ENV=production-umd rollup -c ./rollup.config.js",
     "build:copy-files": "ts-node ../../scripts/copy-files.ts",
-    "start": "cross-env tsc -w --emitDeclarationOnly --outDir ./build/es && NODE_ENV=development BABEL_ENV=cjs babel -w --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\" --extensions '.ts','.tsx'"
+    "start": "cross-env tsc -w --emitDeclarationOnly --outDir ./build/es && NODE_ENV=development BABEL_ENV=es babel -w --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"src/**/*.test.ts\",\"src/**/*.test.tsx\" --extensions '.ts','.tsx'"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",

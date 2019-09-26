@@ -11,7 +11,7 @@ import {
 import { useDispatch, usePopper, useClickOutside, useGlobal } from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
 
-import Search from '../Search'
+import Search from '../search'
 import { langKeys, LangKey } from '../../translations'
 import { pathnameToLanguage } from '../../utils'
 
