@@ -90,4 +90,11 @@ describe('Input', (): void => {
     expect(getByText(text)).toHaveClass(classes.suffix)
     expect(sheets.toString()).toMatchSnapshot()
   })
+
+  test('should be support ghost', (): void => {
+    const ref = React.createRef<HTMLInputElement>()
+    const { sheets } = render(<Input ref={ref} ghost={true} />)
+    expect(ref.current as HTMLInputElement).toHaveClass(classes.ghost)
+    expect(sheets.toString()).toMatchSnapshot()
+  })
 })

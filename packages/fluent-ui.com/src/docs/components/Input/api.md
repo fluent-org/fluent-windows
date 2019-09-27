@@ -26,3 +26,4 @@ import { Input } from '@fluent-ui/core'
 | error | boolean |  | 	If `true`, the `input` will indicate an error. |
 | prefix | React.ReactNode | null | Pre-content input box. |
 | suffix | React.ReactNode | null | Rear content input box. |
+| ghost | boolean |  | Ghost button, background transparent. |

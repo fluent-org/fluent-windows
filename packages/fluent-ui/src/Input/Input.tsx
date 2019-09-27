@@ -26,6 +26,7 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
       error,
       prefix = null,
       suffix = null,
+      ghost,
       ...rest
     } = props
 
@@ -49,7 +50,8 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
     const className = classNames(
       classes.root,
       {
-        [classes.error]: error
+        [classes.error]: error,
+        [classes.ghost]: ghost
       },
       classNameProp
     )

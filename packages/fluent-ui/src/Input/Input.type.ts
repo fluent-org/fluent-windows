@@ -2,7 +2,14 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
 
-export type InputClassProps = 'root' | 'error' | 'wrapper' | 'clearedIcon' | 'prefix' | 'suffix'
+export type InputClassProps =
+  | 'root'
+  | 'error'
+  | 'wrapper'
+  | 'clearedIcon'
+  | 'prefix'
+  | 'suffix'
+  | 'ghost'
 
 export interface InputProps
   extends StandardProps<
@@ -19,6 +26,7 @@ export interface InputProps
   error?: boolean
   prefix?: React.ReactNode
   suffix?: React.ReactNode
+  ghost?: boolean
 }
 
 export const InputPropTypes = {
@@ -30,5 +38,6 @@ export const InputPropTypes = {
   password: PropTypes.bool,
   error: PropTypes.bool,
   prefix: PropTypes.node,
-  suffix: PropTypes.node
+  suffix: PropTypes.node,
+  ghost: PropTypes.bool
 }

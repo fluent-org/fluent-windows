@@ -3,7 +3,6 @@ import * as PropTypes from 'prop-types'
 import { Box, Theme, Typography } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import { TemplateProps } from '../../templates/docs'
-import { scrollToAnchor } from '../../utils/scroll'
 import { Styles } from 'jss'
 
 type Classes = 'sideBar' | 'subTitle'
@@ -79,11 +78,6 @@ const SideBar: React.FC<SidebarProps> = ({ data }): React.ReactElement => {
                   variant="body2"
                   as="a"
                   href={`#${toLine(value)}`}
-                  onClick={(e: any) => {
-                    e.preventDefault()
-                    const target = document.querySelector('#contentRoot')
-                    scrollToAnchor(`#${toLine(value)}`, target)
-                  }}
                 >
                   {value}
                 </Typography>

@@ -26,3 +26,4 @@ import { Input } from '@fluent-ui/core'
 | error | boolean |  | 	如果 `true`, `input` 将会表示为错误状态。 |
 | prefix | React.ReactNode | null | 输入框的前置内容。 |
 | suffix | React.ReactNode | null | 输入框的后置内容。 |
+| ghost | boolean |  | 幽灵按钮，背景透明。 |

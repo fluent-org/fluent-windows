@@ -7,7 +7,10 @@ export function getCookie(name: string): string {
 }
 
 export function toLine(name: string): string {
-  const target = name.replace(/([A-Z])/g, '-$1').toLowerCase()
+  const target = name
+    .replace(/([A-Z])/g, '-$1')
+    .toLowerCase()
+    .replace(/\s+/g, '')
   if (target[0] === '-') return target.substr(1)
   return target
 }

@@ -15,10 +15,11 @@ import ColorTool from '../../docs/components/Color/ColorTool'
 import ThemeTemplate from '../../docs/getting-started/theme/template'
 import Table from '../table'
 
+import { toLine } from '../../utils'
+
 import { TemplateProps } from '../../templates/docs'
 
 import { styles } from './content.styled'
-import { scrollToAnchor } from '../../utils/scroll'
 
 interface TypographyComponentProps {
   id?: string
@@ -29,17 +30,10 @@ const useStyles = createUseStyles(styles)
 
 const H1 = (props: TypographyComponentProps): React.ReactElement => {
   const classes = useStyles()
+  const name = toLine(props.id as string)
   return (
     <Typography variant="h4" as="h1" gutterTop gutterBottom {...props}>
-      <a
-        className={classes.titleA}
-        href={`#${props.id}`}
-        onClick={(e): void => {
-          e.preventDefault()
-          const target = document.querySelector('#contentRoot')
-          scrollToAnchor(`#${props.id}`, target)
-        }}
-      >
+      <a className={classes.titleA} href={`#${name}`}>
         {props.children}
       </a>
     </Typography>
@@ -47,6 +41,7 @@ const H1 = (props: TypographyComponentProps): React.ReactElement => {
 }
 const H2 = (props: TypographyComponentProps): React.ReactElement => {
   const classes = useStyles()
+  const name = toLine(props.id as string)
   return (
     <Typography
       variant="h5"
@@ -57,15 +52,7 @@ const H2 = (props: TypographyComponentProps): React.ReactElement => {
       }}
       {...props}
     >
-      <a
-        className={classes.titleA}
-        href={`#${props.id}`}
-        onClick={(e): void => {
-          e.preventDefault()
-          const target = document.querySelector('#contentRoot')
-          scrollToAnchor(`#${props.id}`, target)
-        }}
-      >
+      <a className={classes.titleA} href={`#${name}`}>
         {props.children}
       </a>
     </Typography>
@@ -73,17 +60,10 @@ const H2 = (props: TypographyComponentProps): React.ReactElement => {
 }
 const H3 = (props: TypographyComponentProps): React.ReactElement => {
   const classes = useStyles()
+  const name = toLine(props.id as string)
   return (
     <Typography variant="h6" as="h3" gutterTop gutterBottom {...props}>
-      <a
-        className={classes.titleA}
-        href={`#${props.id}`}
-        onClick={(e): void => {
-          e.preventDefault()
-          const target = document.querySelector('#contentRoot')
-          scrollToAnchor(`#${props.id}`, target)
-        }}
-      >
+      <a className={classes.titleA} href={`#${name}`}>
         {props.children}
       </a>
     </Typography>
@@ -126,12 +106,12 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
           transition: 'all 250ms cubic-bezier(0.4,0,0.2,1) 0ms'
         }}
       >
-        <Header />
+        {/*<Header />*/}
         <Box padding="4" minHeight="100%" backgroundColor="white.default">
           <Markdown
             // @ts-ignore
             options={{
-              slugify: (str: string): string => str,
+              slugify: (str: string): string => toLine(str),
               overrides: {
                 pre,
                 IconTemplate,

@@ -89,3 +89,11 @@ langKey: "zh"
   <Input prefix={<Icon.UserSmileLine />} suffix={<Icon.InformationLine />} />
 </>
 ```
+
+## 幽灵按钮
+
+```jsx
+<Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+  <Input ghost />
+</Box>
+```

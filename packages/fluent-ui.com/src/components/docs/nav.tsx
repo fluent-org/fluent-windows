@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation, Drawer, Item, ItemGroup } from '@fluent-ui/core'
+import { Navigation, Drawer, Item, ItemGroup, Input } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import {
   MenuLine as MenuLineIcon,
+  SearchLine as SearchLineIcon,
   LayoutLine as LayoutLineIcon,
   InputMethodLine as InputMethodLineIcon,
   NavigationLine as NavigationLineIcon,
@@ -156,6 +157,11 @@ const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
         <Navigation.Header>
           <Item onClick={handleExpanded} prefix={<MenuLineIcon />} />
         </Navigation.Header>
+        <Navigation.Footer>
+          <Item prefix={<SearchLineIcon />}>
+            <Input ghost />
+          </Item>
+        </Navigation.Footer>
         {result.map(
           ({ type, titles }): React.ReactFragment => {
             return (
@@ -196,6 +202,11 @@ const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
       <Navigation.Header>
         <Item onClick={handleExpanded} prefix={<MenuLineIcon />} />
       </Navigation.Header>
+      <Navigation.Footer>
+        <Item prefix={<SearchLineIcon />}>
+          <Input ghost />
+        </Item>
+      </Navigation.Footer>
       {result.map(
         ({ type, titles }): React.ReactFragment => {
           return (

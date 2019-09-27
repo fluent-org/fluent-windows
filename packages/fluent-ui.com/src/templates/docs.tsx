@@ -88,7 +88,7 @@ const Template: React.FC<TemplateProps> = ({
       <Box
         as="main"
         background="url(/images/wall.jpg) 50% center / cover no-repeat fixed"
-        padding={[0, '3.6rem 3rem']}
+        padding={[0, '2.6rem 1.8rem']}
         width="100vw"
         height="100vh"
         display="flex"

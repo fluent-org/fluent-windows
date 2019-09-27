@@ -5,7 +5,7 @@ import { InputClassProps, InputProps } from './Input.type'
 const wrapper: Style = {
   display: 'inline-block',
   position: 'relative',
-  minWidth: 200,
+  minWidth: 160,
   font: 'inherit'
 }
 
@@ -82,11 +82,23 @@ const suffix = (theme: Theme): Style => (props: InputProps): Style => ({
   right: 12 + (props.suffix && !!props.value ? 30 : 0)
 })
 
+const ghost = (theme: Theme): Style => ({
+  backgroundColor: 'transparent',
+  borderColor: theme.colors!.standard!.transparent1,
+  '&:hover': {
+    borderColor: theme.colors!.standard!.transparent2
+  },
+  '&:active, &:focus': {
+    borderColor: theme.colors!.standard!.transparent3
+  }
+})
+
 export const styles = (theme: Theme): Styles<InputClassProps> => ({
   root: root(theme),
   error: error(theme),
   wrapper,
   clearedIcon: clearedIcon(theme),
   prefix: prefix(theme),
-  suffix: suffix(theme)
+  suffix: suffix(theme),
+  ghost: ghost(theme)
 })
