@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Box, Typography, Transition, Theme } from '@fluent-ui/core'
+import { Box, Typography, Transition, Theme, Portal } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
-import { useClickOutside } from '@fluent-ui/hooks'
+import { useClickOutside, usePopper } from '@fluent-ui/hooks'
 import { InstantSearch, Index } from 'react-instantsearch-dom'
 // @ts-ignore
 import algoliasearch from 'algoliasearch/lite'
@@ -34,6 +34,10 @@ export default function Search(): React.ReactElement {
   useClickOutside(ref, (): void => {
     setFocus(false)
   })
+  const [referenceRef, popperRef] = usePopper<HTMLInputElement, HTMLDivElement>({
+    placement: 'bottom-start',
+    positionFixed: true
+  })
 
   return (
     <InstantSearch
@@ -48,31 +52,34 @@ export default function Search(): React.ReactElement {
         onFocus={(): void => {
           setFocus(true)
         }}
+        innerRef={referenceRef}
       />
-      <Transition visible={query.length > 0 && focus} wrapper={false}>
-        <Box className={classes.hits}>
-          {indices.map(
-            ({ name, title }): React.ReactElement => (
-              <Index indexName={name} key={name}>
-                <Results>
-                  <Typography
-                    variant="subtitle1"
-                    as="header"
-                    gutterBottom
-                    borderBottom="1px solid #eee"
-                    paddingBottom="0.4em"
-                  >
-                    {title}
-                  </Typography>
-                </Results>
-              </Index>
-            )
-          )}
-          <a className={classes.powerBy} href="https://www.algolia.com/docsearch">
-            <img src="/images/algolia.svg" alt="algolia" />
-          </a>
-        </Box>
-      </Transition>
+      <Portal>
+        <Transition visible={query.length > 0 && focus} wrapper={false} mountOnEnter unmountOnExit>
+          <Box className={classes.hits} ref={popperRef}>
+            {indices.map(
+              ({ name, title }): React.ReactElement => (
+                <Index indexName={name} key={name}>
+                  <Results>
+                    <Typography
+                      variant="subtitle1"
+                      as="header"
+                      gutterBottom
+                      borderBottom="1px solid #eee"
+                      paddingBottom="0.4em"
+                    >
+                      {title}
+                    </Typography>
+                  </Results>
+                </Index>
+              )
+            )}
+            <a className={classes.powerBy} href="https://www.algolia.com/docsearch">
+              <img src="/images/algolia.svg" alt="algolia" />
+            </a>
+          </Box>
+        </Transition>
+      </Portal>
     </InstantSearch>
   )
 }

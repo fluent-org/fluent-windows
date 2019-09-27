@@ -49,7 +49,7 @@ const titlePrefix = (theme: Theme): Style => ({
   opacity: 0
 })
 const titlePrefixAcrylic: Style = {
-  zIndex: -1
+  zIndex: 1
 }
 const titlePrefixNotFloatOpen: Style = {
   transform: 'rotate(180deg)'

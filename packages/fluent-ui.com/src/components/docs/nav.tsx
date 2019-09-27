@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation, Drawer, Item, ItemGroup, Input } from '@fluent-ui/core'
+import { Navigation, Drawer, Item, ItemGroup } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import {
   MenuLine as MenuLineIcon,
@@ -18,6 +18,9 @@ import {
 } from '@fluent-ui/icons' // TODO tree-shaking
 import { useAction } from '@fluent-ui/hooks'
 import { useIntl } from 'react-intl'
+import Search from '../search'
+import NavFooter from './nav-footer'
+
 import { toLine } from '../../utils'
 import { TemplateProps } from '../../templates/docs'
 
@@ -155,13 +158,14 @@ const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
     <Drawer visible={drawerVisible} onChange={handleDrawerVisible}>
       <Navigation ref={rootRef} value={activeId} expanded={true} acrylic height="100%" width={260}>
         <Navigation.Header>
-          <Item onClick={handleExpanded} prefix={<MenuLineIcon />} />
+          <Item prefix={<SearchLineIcon />}>
+            <Search />
+          </Item>
         </Navigation.Header>
         <Navigation.Footer>
-          <Item prefix={<SearchLineIcon />}>
-            <Input ghost />
-          </Item>
+          <NavFooter />
         </Navigation.Footer>
+
         {result.map(
           ({ type, titles }): React.ReactFragment => {
             return (
@@ -201,12 +205,14 @@ const Nav = ({ data, pageContext }: TemplateProps): React.ReactElement => {
     >
       <Navigation.Header>
         <Item onClick={handleExpanded} prefix={<MenuLineIcon />} />
+        <Item prefix={<SearchLineIcon />}>
+          <Search />
+        </Item>
       </Navigation.Header>
       <Navigation.Footer>
-        <Item prefix={<SearchLineIcon />}>
-          <Input ghost />
-        </Item>
+        <NavFooter />
       </Navigation.Footer>
+
       {result.map(
         ({ type, titles }): React.ReactFragment => {
           return (

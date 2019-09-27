@@ -9,7 +9,7 @@ langKey: "zh"
 
 <ColorTemplate />
 
-## Color 工具
+## Color tool
 
 你可以选择一个颜色来改变本网站的样子。
 

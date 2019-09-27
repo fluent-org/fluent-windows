@@ -2,16 +2,11 @@ import * as React from 'react'
 import { navigate } from 'gatsby'
 import { useIntl, IntlContext } from 'react-intl'
 
-import { Command, Item, Tooltip, Box, List, Transition, Portal } from '@fluent-ui/core'
-import {
-  EarthLine as EarthLineIcon,
-  PaletteLine as PaletteLineIcon,
-  MenuLine as MenuLineIcon
-} from '@fluent-ui/icons' // TODO tree-shaking
-import { useDispatch, usePopper, useClickOutside, useGlobal } from '@fluent-ui/hooks'
+import { Item, Box, List, Transition, Portal } from '@fluent-ui/core'
+import { EarthLine as EarthLineIcon, PaletteLine as PaletteLineIcon } from '@fluent-ui/icons' // TODO tree-shaking
+import { usePopper, useClickOutside, useGlobal } from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
 
-import Search from '../search'
 import { langKeys, LangKey } from '../../translations'
 import { pathnameToLanguage } from '../../utils'
 
@@ -21,9 +16,7 @@ const useStyles = createUseStyles({
   }
 })
 
-const Header = (): React.ReactElement => {
-  const dispatch = useDispatch({ type: 'navigation/expand', payload: (v: boolean): boolean => !v })
-
+const NavFooter = (): React.ReactElement => {
   const classes = useStyles()
 
   const home = <img className={classes.iconButton} src="/images/fluent-ui.svg" alt="fluent-ui" />
@@ -33,7 +26,7 @@ const Header = (): React.ReactElement => {
 
   const [changeLanguageVisible, setChangeLanguageVisible] = React.useState(false)
   const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
-    placement: 'bottom-start',
+    placement: 'right-start',
     positionFixed: true
   })
   const handleChangeLanguageVisible = React.useCallback((): void => {
@@ -65,35 +58,22 @@ const Header = (): React.ReactElement => {
 
   return (
     <>
-      <Command position="sticky" top="0" height={56} backgroundColor="white.default" zIndex={99}>
-        <Tooltip title={formatMessage({ id: 'command.change-language' })}>
-          <div onClick={handleChangeLanguageVisible} style={{ display: 'flex' }}>
-            <Item ref={referenceRef} prefix={<EarthLineIcon />} />
-          </div>
-        </Tooltip>
-        <Tooltip title={formatMessage({ id: 'command.edit-website-colors' })}>
-          <Item onClick={handleNavigateToColorTool} prefix={<PaletteLineIcon />} />
-        </Tooltip>
-        <Tooltip title={formatMessage({ id: 'command.home-page' })}>
-          <Item onClick={handleNavigateToHome} prefix={home} />
-        </Tooltip>
-        <Tooltip title={formatMessage({ id: 'command.github-repository' })}>
-          <Item as="a" href="https://github.com/fluent-org/fluent-ui" prefix={github} />
-        </Tooltip>
-
-        <Command.Content>
-          <Box display={['none', 'block']}>
-            <Search />
-          </Box>
-          <Box display={['block', 'none']}>
-            <Item onClick={dispatch} prefix={<MenuLineIcon />} />
-          </Box>
-        </Command.Content>
-      </Command>
+      <Item ref={referenceRef} prefix={<EarthLineIcon />} onClick={handleChangeLanguageVisible}>
+        {formatMessage({ id: 'command.change-language' })}
+      </Item>
+      <Item onClick={handleNavigateToColorTool} prefix={<PaletteLineIcon />}>
+        {formatMessage({ id: 'command.edit-website-colors' })}
+      </Item>
+      <Item onClick={handleNavigateToHome} prefix={home}>
+        {formatMessage({ id: 'command.home-page' })}
+      </Item>
+      <Item as="a" href="https://github.com/fluent-org/fluent-ui" prefix={github}>
+        {formatMessage({ id: 'command.github-repository' })}
+      </Item>
 
       <Portal>
         <Transition visible={changeLanguageVisible} wrapper={false} mountOnEnter unmountOnExit>
-          <Box ref={popperRef} zIndex={1000} width={160}>
+          <Box ref={popperRef} zIndex={1003} width={160}>
             <List>
               {(Object.keys(langKeys) as LangKey[]).map(
                 (langKey): React.ReactElement => {
@@ -122,4 +102,4 @@ const Header = (): React.ReactElement => {
   )
 }
 
-export default Header
+export default NavFooter

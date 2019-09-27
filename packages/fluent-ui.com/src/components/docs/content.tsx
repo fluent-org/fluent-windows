@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Markdown from 'markdown-to-jsx'
-import { Box, Typography } from '@fluent-ui/core'
+import { Box, Typography, IconButton } from '@fluent-ui/core'
+import { useDispatch } from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
+import { MenuLine as MenuLineIcon } from '@fluent-ui/icons'
 
-import Header from './header'
 import SideBar from './sidebar'
 
 import Playground from '../playground'
@@ -85,11 +86,27 @@ const typographyOverrides = {
   p: Body
 }
 
+const useContentStyles = createUseStyles({
+  menuButton: {
+    position: 'fixed',
+    left: 5,
+    top: 10,
+    zIndex: 1002
+  }
+})
+
 const Content = ({ data }: TemplateProps): React.ReactElement => {
   const pre =
     data.doc.frontmatter.type === 'hooks' || data.doc.frontmatter.type === 'getting-started'
       ? Highlight
       : Playground
+
+  const mobileMenuDispatch = useDispatch({
+    type: 'navigation/expand',
+    payload: (v: boolean): boolean => !v
+  })
+
+  const classes = useContentStyles()
 
   return (
     <>
@@ -106,7 +123,9 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
           transition: 'all 250ms cubic-bezier(0.4,0,0.2,1) 0ms'
         }}
       >
-        {/*<Header />*/}
+        <Box className={classes.menuButton} display={['block', 'none']}>
+          <IconButton onClick={mobileMenuDispatch}>{<MenuLineIcon />}</IconButton>
+        </Box>
         <Box padding="4" minHeight="100%" backgroundColor="white.default">
           <Markdown
             // @ts-ignore

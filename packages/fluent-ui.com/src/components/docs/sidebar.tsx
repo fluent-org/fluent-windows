@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types'
 import { Box, Theme, Typography } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import { TemplateProps } from '../../templates/docs'
+import { toLine } from '../../utils'
 import { Styles } from 'jss'
 
 type Classes = 'sideBar' | 'subTitle'
@@ -33,13 +34,6 @@ const useStyles = createUseStyles<Theme, Classes>(
 
 interface SidebarProps {
   data: TemplateProps['data']
-}
-
-function toLine(name: string) {
-  return name
-    .replace(/(\s+)/g, '-$1') // Turn hump
-    .replace(/\s+/g, '') // Remove spaces
-    .toLowerCase()
 }
 
 const SideBar: React.FC<SidebarProps> = ({ data }): React.ReactElement => {
