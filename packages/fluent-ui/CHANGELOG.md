@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.23.0...@fluent-ui/core@0.24.0) (2019-09-27)
+
+
+### Features
+
+* **Button:** Add prop ghost ([5d0e502](https://github.com/fluent-org/fluent-ui/commit/5d0e502))
+* **fluent-ui.com:** Document button to increase editPage ([e0152b3](https://github.com/fluent-org/fluent-ui/commit/e0152b3))
+* **fluent-ui.com:** Remove the header and move the content to the nav ([735aea1](https://github.com/fluent-org/fluent-ui/commit/735aea1))
+* **Input:** Add prop ghost ([54d6154](https://github.com/fluent-org/fluent-ui/commit/54d6154))
+
+
+
+
+
 # [0.23.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.22.0...@fluent-ui/core@0.23.0) (2019-09-26)
 
 
