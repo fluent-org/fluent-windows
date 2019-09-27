@@ -20,6 +20,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Button
       disabled,
       size = 'medium',
       block = false,
+      ghost,
       ...rest
     } = props
     const classes = useStyles(props)
@@ -31,7 +32,8 @@ const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Button
         [classes.sizeSmall]: size === 'small',
         [classes.sizeMedium]: size === 'medium',
         [classes.sizeLarge]: size === 'large',
-        [classes.block]: block
+        [classes.block]: block,
+        [classes.ghost]: ghost
       },
       classNameProp
     )

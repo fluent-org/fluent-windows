@@ -55,6 +55,20 @@ const block = {
   width: '100%'
 }
 
+const ghost = (theme: Theme): Style => ({
+  color: 'inherit',
+  backgroundColor: 'transparent',
+  borderColor: theme.colors!.standard!.transparent1,
+  '&:hover, &:focus': {
+    backgroundColor: 'transparent',
+    borderColor: theme.colors!.standard!.transparent2
+  },
+  '&:active': {
+    backgroundColor: 'transparent',
+    borderColor: theme.colors!.standard!.transparent3
+  }
+})
+
 export const styles = (theme: Theme): Styles<ButtonClassProps> => ({
   root: root(theme),
   variantStandard: variantStandard(theme),
@@ -62,5 +76,6 @@ export const styles = (theme: Theme): Styles<ButtonClassProps> => ({
   sizeSmall: sizeSmall(theme),
   sizeMedium: sizeMedium(theme),
   sizeLarge: sizeLarge(theme),
-  block
+  block,
+  ghost: ghost(theme)
 })

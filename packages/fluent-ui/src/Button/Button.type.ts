@@ -13,6 +13,7 @@ export type ButtonClassProps =
   | 'sizeMedium'
   | 'sizeLarge'
   | 'block'
+  | 'ghost'
 
 export interface ButtonProps
   extends StandardProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
@@ -21,6 +22,7 @@ export interface ButtonProps
   disabled?: boolean
   size?: Size
   block?: boolean
+  ghost?: boolean
 
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   children: React.ReactNode
@@ -31,6 +33,7 @@ export const ButtonPropTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.oneOf<Size>(['small', 'medium', 'large']),
   block: PropTypes.bool,
+  ghost: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.node.isRequired
 }

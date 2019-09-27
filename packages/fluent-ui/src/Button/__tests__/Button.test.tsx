@@ -51,6 +51,11 @@ describe('Button', (): void => {
     expect(container.firstChild).toHaveClass(classes.block)
   })
 
+  test('should render a ghost button', (): void => {
+    const { container } = render(<Button ghost>{testText}</Button>)
+    expect(container.firstChild).toHaveClass(classes.ghost)
+  })
+
   test('should trigger the specified event', (): void => {
     const handleClick = jest.fn()
     const { getByText } = render(<Button onClick={handleClick}>{testText}</Button>)

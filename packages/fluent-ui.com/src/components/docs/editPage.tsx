@@ -26,7 +26,7 @@ const EditPage: React.FC<EditPageProps> = ({ data }: EditPageProps): React.React
   const markdownLocation = data.doc.fileAbsolutePath
   const href = SOURCE_CODE_ROOT_URL + markdownLocation.slice(markdownLocation.lastIndexOf('/docs/'))
   return (
-    <Button className={classes.editButton} as="a" href={href} target="_blank" size="small">
+    <Button className={classes.editButton} as="a" href={href} target="_blank" size="small" ghost>
       {formatMessage({ id: 'editPage' })}
     </Button>
   )
