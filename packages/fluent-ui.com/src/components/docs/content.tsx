@@ -6,6 +6,7 @@ import { createUseStyles } from '@fluent-ui/styles'
 import { MenuLine as MenuLineIcon } from '@fluent-ui/icons'
 
 import SideBar from './sidebar'
+import EditPage from './editPage'
 
 import Playground from '../playground'
 import Highlight from '../highlight'
@@ -123,6 +124,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
           transition: 'all 250ms cubic-bezier(0.4,0,0.2,1) 0ms'
         }}
       >
+        <EditPage data={data} />
         <Box className={classes.menuButton} display={['block', 'none']}>
           <IconButton onClick={mobileMenuDispatch}>{<MenuLineIcon />}</IconButton>
         </Box>

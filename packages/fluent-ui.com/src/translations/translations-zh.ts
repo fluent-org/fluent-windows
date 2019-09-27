@@ -11,5 +11,6 @@ export default {
   'nav.feedback': 'Feedback（用户反馈）',
   'nav.utils': 'Utils（工具）',
   'nav.others': 'Others（其他）',
-  'nav.hooks': 'react-hooks'
+  'nav.hooks': 'react-hooks',
+  editPage: '改进此页面内容'
 }

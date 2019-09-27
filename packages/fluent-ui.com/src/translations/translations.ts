@@ -11,5 +11,6 @@ export default {
   'nav.feedback': 'Feedback',
   'nav.utils': 'Utils',
   'nav.others': 'Others',
-  'nav.hooks': 'react-hooks'
+  'nav.hooks': 'react-hooks',
+  editPage: 'edit this page'
 }

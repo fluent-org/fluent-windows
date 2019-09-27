@@ -26,6 +26,7 @@ export interface TemplateProps {
         type: string
         langKey: string
       }
+      fileAbsolutePath: string
       rawMarkdownBody: string
       htmlAst: {
         children: {
@@ -50,6 +51,7 @@ export interface TemplateProps {
         title: string
         langKey: string
       }
+      fileAbsolutePath: string
       rawMarkdownBody: string
     }
     docs: {
@@ -63,6 +65,7 @@ export interface TemplateProps {
             type: string
             langKey: string
           }
+          fileAbsolutePath: string
         }
       }[]
     }
@@ -121,6 +124,7 @@ export const query = graphql`
         type
         langKey
       }
+      fileAbsolutePath
       rawMarkdownBody
       htmlAst
     }
@@ -133,6 +137,7 @@ export const query = graphql`
         title
         langKey
       }
+      fileAbsolutePath
       rawMarkdownBody
     }
     docs: allMarkdownRemark(filter: { frontmatter: { api: { nin: true } } }) {
@@ -146,6 +151,7 @@ export const query = graphql`
             type
             langKey
           }
+          fileAbsolutePath
         }
       }
     }

@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Button
       children,
       variant = 'standard',
       disabled,
-      size,
+      size = 'medium',
       block = false,
       ...rest
     } = props
@@ -48,7 +48,9 @@ Button.displayName = `F${name}`
 Button.propTypes = ButtonPropTypes
 
 Button.defaultProps = {
-  variant: 'standard'
+  variant: 'standard',
+  size: 'medium',
+  block: false
 }
 
 export default Button

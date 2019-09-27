@@ -592,7 +592,7 @@ exports[`ItemGroup should render children 1`] = `
     justify-content: center;
   }
   .FItemGroup-titlePrefixAcrylic {
-    z-index: -1;
+    z-index: 1;
   }
   .FItemGroup-titlePrefixNotFloatOpen {
     transform: rotate(180deg);

@@ -36,6 +36,7 @@ export { colors }
 export interface StyledProps {
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
   href?: string
+  target?: '_self' | '_blank' | '_parent' | '_top'
 }
 
 export type StandardProps<
