@@ -6,11 +6,13 @@
   "version": "independent",
   "useWorkspaces": true,
   "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    },
     "publish": {
       "npmClient": "npm",
       "verifyAccess": false,
-      "ignoreChanges": ["*.md", "**/test/**"],
-      "message": "chore(release): publish"
+      "ignoreChanges": ["*.md", "**/test/**"]
     }
   }
 }

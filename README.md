@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://fluent-ui.com/" target="_blank">
-    <img width="150" src="https://fluent-ui.com/fluent-ui.svg" alt="Fluent-UI logo">
+    <img width="150" src="https://fluent-ui.com/images/fluent-ui.svg" alt="Fluent-UI logo">
   </a>
 </p>
 
