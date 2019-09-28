@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { StandardProps } from '..'
+import TextArea from './components/TextArea'
 
 export type InputClassProps =
   | 'root'
@@ -40,4 +41,8 @@ export const InputPropTypes = {
   prefix: PropTypes.node,
   suffix: PropTypes.node,
   ghost: PropTypes.bool
+}
+
+export interface InputType extends React.ForwardRefExoticComponent<InputProps> {
+  TextArea: typeof TextArea
 }

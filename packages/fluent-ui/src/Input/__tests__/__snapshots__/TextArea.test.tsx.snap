@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input.TextArea should be support error 1`] = `
+".FTextArea-root {
+  font: inherit;
+  border: 2px solid;
+  outline: none;
+  padding: 6px 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  border-color: #dedede;
+  border-radius: 2px;
+}
+.FTextArea-root:hover {
+  border-color: #b5b5b5;
+}
+.FTextArea-root:active, .FTextArea-root:focus {
+  border-color: #0078d4;
+}
+.FTextArea-root:disabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #e9e9e9;
+}
+.FTextArea-error {
+  border-color: #f44336;
+}
+.FTextArea-error:hover {
+  border-color: #f44336;
+}
+.FTextArea-error:active, .FTextArea-error:focus {
+  border-color: #f44336;
+}
+.FTextArea-ghost {
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+.FTextArea-ghost:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.FTextArea-ghost:active, .FTextArea-ghost:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.FTextArea-resize {}
+.FTextArea-resize-0 {
+  resize: both;
+}"
+`;
+
+exports[`Input.TextArea should be support ghost 1`] = `
+".FTextArea-root {
+  font: inherit;
+  border: 2px solid;
+  outline: none;
+  padding: 6px 12px;
+  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  border-color: #dedede;
+  border-radius: 2px;
+}
+.FTextArea-root:hover {
+  border-color: #b5b5b5;
+}
+.FTextArea-root:active, .FTextArea-root:focus {
+  border-color: #0078d4;
+}
+.FTextArea-root:disabled {
+  color: #8c8c8c;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #e9e9e9;
+}
+.FTextArea-error {
+  border-color: #f44336;
+}
+.FTextArea-error:hover {
+  border-color: #f44336;
+}
+.FTextArea-error:active, .FTextArea-error:focus {
+  border-color: #f44336;
+}
+.FTextArea-ghost {
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+.FTextArea-ghost:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.FTextArea-ghost:active, .FTextArea-ghost:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.FTextArea-resize {}
+.FTextArea-resize-0 {
+  resize: both;
+}"
+`;

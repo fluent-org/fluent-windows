@@ -97,3 +97,33 @@ Show a button to clear your input.
   <Input ghost />
 </Box>
 ```
+
+## TextArea
+
+```jsx
+<Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+  <Input.TextArea
+    rows={4}
+    placeholder="default"
+    resize="none"
+  />
+  <Input.TextArea
+    rows={4}
+    placeholder="ghost"
+    ghost
+    resize="horizontal"
+  />
+  <Input.TextArea
+    rows={4}
+    placeholder="error"
+    error
+    resize="vertical"
+  />
+  <Input.TextArea
+    rows={4}
+    placeholder="disabled"
+    disabled
+    resize="none"
+  />
+</Box>
+```

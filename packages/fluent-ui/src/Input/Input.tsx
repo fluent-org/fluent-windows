@@ -3,10 +3,11 @@ import classNames from 'classnames'
 import { createUseStyles } from '@fluent-ui/styles'
 import { styles } from './Input.styled'
 import { Theme } from '../styles'
-import { InputClassProps, InputProps, InputPropTypes } from './Input.type'
+import { InputClassProps, InputProps, InputPropTypes, InputType } from './Input.type'
 
 import { CloseLine as CloseLineIconIcon } from '@fluent-ui/icons'
 import Transition from '../Transition'
+import TextArea from './components/TextArea'
 
 export const name = 'Input'
 
@@ -99,6 +100,12 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
   }
 )
 
+Object.defineProperty(Input, 'TextArea', {
+  get(): typeof TextArea {
+    return TextArea
+  }
+})
+
 Input.displayName = `F${name}`
 
 Input.propTypes = InputPropTypes
@@ -108,4 +115,4 @@ Input.defaultProps = {
   suffix: null
 }
 
-export default Input
+export default Input as InputType
