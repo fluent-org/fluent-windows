@@ -3,6 +3,7 @@ export default {
   'command.edit-website-colors': 'Edit website colors',
   'command.home-page': 'Home page',
   'command.github-repository': 'Github repository',
+  'command.copy-code': 'Copy',
   'nav.getting-started': 'GettingStarted',
   'nav.layout': 'Layout',
   'nav.inputs': 'Inputs',

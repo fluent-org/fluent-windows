@@ -3,6 +3,7 @@ export default {
   'command.edit-website-colors': '编辑本网站颜色',
   'command.home-page': '主页',
   'command.github-repository': 'Github 仓库',
+  'command.copy-code': '复制',
   'nav.getting-started': '开始',
   'nav.layout': 'Layout（布局）',
   'nav.inputs': 'Inputs（输入）',

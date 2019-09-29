@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     borderSpacing: 0,
     borderCollapse: 'collapse',
     fontSize: 14,
-    fontFamily: 'monospace, PingFangSC-Regular, sans-serif, Arial, Helvetica, Roboto',
+    fontFamily: 'inherit',
     color: 'rgb(57, 58, 52)',
     '-webkit-overflow-scrolling': 'touch',
     '& thead': {

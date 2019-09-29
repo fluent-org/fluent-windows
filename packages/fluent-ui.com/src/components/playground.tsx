@@ -4,11 +4,12 @@ import * as Fluent from '@fluent-ui/core'
 import * as Icon from '@fluent-ui/icons'
 import * as Hooks from '@fluent-ui/hooks'
 import { createUseStyles } from '@fluent-ui/styles'
+import { useIntl } from 'react-intl'
 // @ts-ignore
 import CopytoClipboard from 'react-copy-to-clipboard'
 import { theme } from '../utils/theme'
 
-const { Box, Command, Item, Transition, Tooltip, IconButton } = Fluent
+const { Box, Command, Item, Transition, Tooltip } = Fluent
 
 const scope = { ...Fluent, Icon, ...Hooks }
 
@@ -19,25 +20,14 @@ interface PlaygroundProps {
 const styles = {
   editor: {
     position: 'relative',
-    '& textarea, & pre': {
-      maxHeight: 1000,
-      overflow: 'auto !important',
-      '-webkit-overflow-scrolling': 'touch',
-      outline: 'none',
-      borderBottom: '1px dashed #f5f5f5 !important'
-    },
     '&:hover': {
       '& .copy': {
         opacity: 1
       }
     }
   },
-  copy: {
-    position: 'absolute',
-    right: 6,
-    top: 6,
-    opacity: 0,
-    transition: 'opacity 250ms linear'
+  title: {
+    textTransform: 'uppercase'
   },
   preview: {
     padding: '0.6em',
@@ -58,9 +48,17 @@ const Playground: React.FC<PlaygroundProps> = ({
     setCodeVisible((v): boolean => !v)
   }, [])
 
+  const code = children.props.children
+  const lang =
+    typeof children === 'string'
+      ? 'js'
+      : (children as React.ReactElement).props.className
+      ? (children as React.ReactElement).props.className.split('-')[1]
+      : 'js'
+  const { formatMessage } = useIntl()
+
   const classes = useStyles()
 
-  const code = children.props.children
   return (
     <Box as="section" boxShadow="1" borderRadius="2px">
       <LiveProvider code={code} scope={scope} theme={theme}>
@@ -68,15 +66,35 @@ const Playground: React.FC<PlaygroundProps> = ({
           <Tooltip title="code" placement="top">
             <Item onClick={handleCodeVisible} prefix={<Icon.CodeSLine />} />
           </Tooltip>
+
+          <Command.Content>
+            <Transition visible={codeVisible}>
+              <Box className={classes.title}>{lang}</Box>
+            </Transition>
+          </Command.Content>
+
+          <Command.Secondary>
+            <CopytoClipboard text={code}>
+              <Item prefix={<Icon.ClipboardLine />}>
+                {formatMessage({ id: 'command.copy-code' })}
+              </Item>
+            </CopytoClipboard>
+          </Command.Secondary>
         </Command>
         <Transition visible={codeVisible} type="collapse">
           <div className={classes.editor}>
-            <LiveEditor />
-            <CopytoClipboard text={code}>
-              <IconButton className={classes.copy} variant="standard" size="small">
-                <Icon.ClipboardLine />
-              </IconButton>
-            </CopytoClipboard>
+            <LiveEditor
+              style={{
+                maxHeight: 1000,
+                overflow: 'auto',
+                WebkitOverflowScrolling: 'touch',
+                outline: 'none',
+                borderBottom: '1px dashed #f6f8fa',
+                backgroundColor: '#f6f8fa',
+                fontSize: '0.8em',
+                lineHeight: 1.5
+              }}
+            />
           </div>
         </Transition>
         <LivePreview className={classes.preview} />
