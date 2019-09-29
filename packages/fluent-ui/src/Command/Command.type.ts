@@ -17,7 +17,7 @@ export type CommandChild =
 export interface CommandContainer {
   standard: React.ReactComponentElement<typeof Item>[]
   content: React.ReactComponentElement<typeof Content>[]
-  secondary: React.ReactComponentElement<typeof Secondary>[]
+  secondary: React.ReactComponentElement<typeof Secondary>[] | null
 }
 
 export interface CommandProps extends BoxProps {

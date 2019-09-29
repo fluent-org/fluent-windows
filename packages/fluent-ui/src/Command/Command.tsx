@@ -42,7 +42,7 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
     const container: CommandContainer = {
       content: [],
       standard: [],
-      secondary: []
+      secondary: null
     }
     React.Children.forEach(children, (child: CommandChild): void => {
       if (child.type.displayName! === 'FCommandContent') {
@@ -72,6 +72,7 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
       setSecondaryVisible((visible: boolean): boolean => !visible)
     })
     const otherProps = omit(rest, ['display', 'backgroundColor', 'color'])
+
     return (
       <Box
         ref={ref}
@@ -90,7 +91,7 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
                 )
               : container.standard}
           </div>
-          {!!container.secondary.length &&
+          {container.secondary !== null &&
             (_reveal ? (
               <RevealWrapper>
                 <Item
