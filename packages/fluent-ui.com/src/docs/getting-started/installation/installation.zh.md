@@ -2,6 +2,7 @@
 title: 安装
 type: getting-started
 langKey: "zh"
+order: 1
 ---
 
 # 安装
@@ -12,7 +13,7 @@ Fluent-UI 是一个 [npm 包](https://www.npmjs.com/package/@fluent-ui/core).
 
 ## Install
 
-```bash
+```shell
 // with npm
 npm install @fluent-ui/core
 
@@ -26,7 +27,7 @@ yarn add @fluent-ui/core
 
 为了使用预先构建的 Fluent icons 图标, 必须先安装 `@fluent-ui/icons` 包:
 
-```bash
+```shell
 // with npm
 npm install @fluent-ui/icons
 

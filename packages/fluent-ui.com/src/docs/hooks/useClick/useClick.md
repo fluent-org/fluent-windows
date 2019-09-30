@@ -3,6 +3,7 @@ title: useClick
 hooks: useClick
 type: hooks
 langKey: "en"
+order: 2
 ---
 
 # useClick

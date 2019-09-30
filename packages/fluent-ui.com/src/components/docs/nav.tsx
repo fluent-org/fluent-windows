@@ -26,6 +26,10 @@ import { TemplateProps } from '../../templates/docs'
 
 const iconMap = [
   {
+    title: 'getting-started',
+    prefix: <GuideLineIcon />
+  },
+  {
     title: 'Layout',
     prefix: <LayoutLineIcon />
   },
@@ -42,34 +46,31 @@ const iconMap = [
     prefix: <PieChart2LineIcon />
   },
   {
-    title: 'Utils',
-    prefix: <ProjectorLineIcon />
-  },
-  {
     title: 'Feedback',
     prefix: <FeedbackLineIcon />
-  },
-  {
-    title: 'hooks',
-    prefix: <MagicLineIcon />
   },
   {
     title: 'Progress',
     prefix: <Loader2LineIcon />
   },
   {
+    title: 'Utils',
+    prefix: <ProjectorLineIcon />
+  },
+  {
     title: 'Others',
     prefix: <MoreLineIcon />
   },
   {
-    title: 'getting-started',
-    prefix: <GuideLineIcon />
+    title: 'hooks',
+    prefix: <MagicLineIcon />
   }
 ]
 
 interface Title {
   title: string
   slug: string
+  order: number | null
 }
 interface Acc {
   [key: string]: Title[]
@@ -83,27 +84,43 @@ const getFrontMatter = (target: TemplateProps['data'], langKey: string): Result[
     [type: string]: Title[]
   } = target.docs.edges
     .filter((v): boolean => v.node.frontmatter.langKey === langKey)
-    .reduce((acc, elem): Acc => {
-      const { type, title } = elem.node.frontmatter
+    .reduce<Acc>((acc, elem) => {
+      const { type, title, order } = elem.node.frontmatter
       const { slug } = elem.node.fields
-      if ((acc as Acc)[type]) {
+
+      if (acc[type]) {
+        const value = [...acc[type], { title, slug, order }]
         return {
           ...acc,
-          [type]: [...(acc as Acc)[type], { title, slug }]
+          [type]: value
         }
       }
+
+      const value = [{ title, slug, order }]
       return {
         ...acc,
-        [type]: [{ title, slug }]
+        [type]: value
       }
     }, {})
 
-  return Object.keys(classify).map(
-    (type): Result => ({
-      type,
-      titles: classify[type]
-    })
-  )
+  return Object.keys(classify)
+    .map(
+      (type): Result => {
+        // @ts-ignore
+        const titles = classify[type].sort((a, b) => {
+          if (a.order !== null && b.order !== null) return a.order - b.order
+          return a.title.toUpperCase() < b.title.toUpperCase() ? -1 : 1
+        })
+        return {
+          type,
+          titles: titles
+        }
+      }
+    )
+    .sort(
+      (a, b) =>
+        iconMap.findIndex(e => e.title === a.type) - iconMap.findIndex(e => e.title === b.type)
+    )
 }
 function getPrefixBytitle(title: string): JSX.Element {
   const target = iconMap.find((v): boolean => v.title === title)

@@ -3,7 +3,10 @@ import { PrismTheme } from 'prism-react-renderer'
 export const theme: PrismTheme = {
   plain: {
     color: '#393A34',
-    fontFamily: 'inherit'
+    backgroundColor: '#f6f8fa',
+    fontSize: 16,
+    fontFamily: 'Operator Mono Lig',
+    lineHeight: 1.45
   },
   styles: [
     {

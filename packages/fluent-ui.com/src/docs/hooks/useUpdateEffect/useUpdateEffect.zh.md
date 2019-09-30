@@ -3,6 +3,7 @@ title: useUpdateEffect（componentDidUpdate）
 hooks: useUpdateEffect
 type: hooks
 langKey: "zh"
+order: 12
 ---
 
 # useUpdateEffect

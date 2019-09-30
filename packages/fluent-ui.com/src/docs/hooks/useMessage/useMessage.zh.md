@@ -3,6 +3,7 @@ title: useMessage（函数式调用信息组件）
 hooks: useMessage
 type: hooks
 langKey: "zh"
+order: 8
 ---
 
 # useMessage

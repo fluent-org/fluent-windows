@@ -64,6 +64,7 @@ export interface TemplateProps {
             title: string
             type: string
             langKey: string
+            order: number | null
           }
           fileAbsolutePath: string
         }
@@ -150,6 +151,7 @@ export const query = graphql`
             title
             type
             langKey
+            order
           }
           fileAbsolutePath
         }

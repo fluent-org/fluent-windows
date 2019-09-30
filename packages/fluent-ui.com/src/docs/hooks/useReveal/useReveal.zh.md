@@ -3,6 +3,7 @@ title: useReveal（创建 Reveal 效果）
 hooks: useReveal
 type: hooks
 langKey: "zh"
+order: 10
 ---
 
 # useReveal

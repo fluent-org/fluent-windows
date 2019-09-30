@@ -3,6 +3,7 @@ title: useClickOutside（订阅点击外部事件）
 hooks: useClickOutside
 type: hooks
 langKey: "zh"
+order: 3
 ---
 
 # useClickOutside

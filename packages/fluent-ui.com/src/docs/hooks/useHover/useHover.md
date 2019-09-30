@@ -3,6 +3,7 @@ title: useHover
 hooks: useHover
 type: hooks
 langKey: "en"
+order: 6
 ---
 
 # useHover

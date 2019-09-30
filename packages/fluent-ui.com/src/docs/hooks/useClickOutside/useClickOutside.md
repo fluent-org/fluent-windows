@@ -3,6 +3,7 @@ title: useClickOutside
 hooks: useClickOutside
 type: hooks
 langKey: "en"
+order: 3
 ---
 
 # useClickOutside

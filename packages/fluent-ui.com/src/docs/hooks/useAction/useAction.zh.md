@@ -3,6 +3,7 @@ title: useAction（全局事件通信）
 hooks: useAction
 type: hooks
 langKey: "zh"
+order: 1
 ---
 
 # useAction

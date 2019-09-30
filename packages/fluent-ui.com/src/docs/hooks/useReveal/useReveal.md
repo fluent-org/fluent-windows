@@ -3,6 +3,7 @@ title: useReveal
 hooks: useReveal
 type: hooks
 langKey: "en"
+order: 10
 ---
 
 # useReveal

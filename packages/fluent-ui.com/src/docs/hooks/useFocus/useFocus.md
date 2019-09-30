@@ -3,6 +3,7 @@ title: useFocus
 hooks: useFocus
 type: hooks
 langKey: "en"
+order: 4
 ---
 
 # useFocus

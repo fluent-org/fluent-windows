@@ -3,6 +3,7 @@ title: useMessage
 hooks: useMessage
 type: hooks
 langKey: "en"
+order: 8
 ---
 
 # useMessage

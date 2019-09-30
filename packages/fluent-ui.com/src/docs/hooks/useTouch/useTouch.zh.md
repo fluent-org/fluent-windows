@@ -3,6 +3,7 @@ title: useTouch（订阅 touch 事件）
 hooks: useTouch
 type: hooks
 langKey: "zh"
+order: 11
 ---
 
 # useTouch

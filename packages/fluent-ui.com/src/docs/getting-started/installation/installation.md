@@ -2,6 +2,7 @@
 title: Installation
 type: getting-started
 langKey: "en"
+order: 1
 ---
 
 # Installation
@@ -12,7 +13,7 @@ Fluent-UI is available as an [npm package](https://www.npmjs.com/package/@fluent
 
 ## Install
 
-```bash
+```shell
 // with npm
 npm install @fluent-ui/core
 
@@ -26,7 +27,7 @@ Please note that [react](https://www.npmjs.com/package/react) >= 16.8.0 and [rea
 
 In order to use prebuilt SVG Fluent icons, you must first install the `@fluent-ui/icons` package:
 
-```bash
+```shell
 // with npm
 npm install @fluent-ui/icons
 

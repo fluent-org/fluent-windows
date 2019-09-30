@@ -44,6 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
               title
               type
               langKey
+              order
             }
             rawMarkdownBody
             html

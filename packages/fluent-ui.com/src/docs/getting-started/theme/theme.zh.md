@@ -2,6 +2,7 @@
 title: theme（主题）
 type: getting-started
 langKey: "zh"
+order: 3
 ---
 
 # 主题

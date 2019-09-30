@@ -3,6 +3,7 @@ title: useGlobal
 hooks: useGlobal
 type: hooks
 langKey: "en"
+order: 5
 ---
 
 # useGlobal

@@ -3,6 +3,7 @@ title: useMedia
 hooks: useMedia
 type: hooks
 langKey: "en"
+order: 7
 ---
 
 # useMedia

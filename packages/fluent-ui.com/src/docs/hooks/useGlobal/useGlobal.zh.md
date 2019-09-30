@@ -3,6 +3,7 @@ title: useGlobal（获取全局 this）
 hooks: useGlobal
 type: hooks
 langKey: "zh"
+order: 5
 ---
 
 # useGlobal

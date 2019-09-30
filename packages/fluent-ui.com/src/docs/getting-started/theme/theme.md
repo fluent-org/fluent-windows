@@ -2,6 +2,7 @@
 title: theme
 type: getting-started
 langKey: "en"
+order: 3
 ---
 
 # theme

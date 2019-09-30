@@ -2,6 +2,7 @@
 title: Usage（使用）
 type: getting-started
 langKey: "zh"
+order: 2
 ---
 
 # 使用

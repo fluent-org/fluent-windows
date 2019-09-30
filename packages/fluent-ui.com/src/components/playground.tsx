@@ -89,10 +89,7 @@ const Playground: React.FC<PlaygroundProps> = ({
                 overflow: 'auto',
                 WebkitOverflowScrolling: 'touch',
                 outline: 'none',
-                borderBottom: '1px dashed #f6f8fa',
-                backgroundColor: '#f6f8fa',
-                fontSize: '0.8em',
-                lineHeight: 1.5
+                borderBottom: '1px dashed #f6f8fa'
               }}
             />
           </div>

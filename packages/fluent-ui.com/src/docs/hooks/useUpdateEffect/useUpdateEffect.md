@@ -3,6 +3,7 @@ title: useUpdateEffect
 hooks: useUpdateEffect
 type: hooks
 langKey: "en"
+order: 12
 ---
 
 # useUpdateEffect

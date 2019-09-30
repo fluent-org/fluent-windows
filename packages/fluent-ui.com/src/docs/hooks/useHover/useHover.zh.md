@@ -3,6 +3,7 @@ title: useHover（订阅悬停事件）
 hooks: useHover
 type: hooks
 langKey: "zh"
+order: 6
 ---
 
 # useHover

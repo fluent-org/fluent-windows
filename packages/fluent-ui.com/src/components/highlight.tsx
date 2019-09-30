@@ -17,6 +17,7 @@ const useStyles = createUseStyles({
     position: 'relative',
     padding: '1.2em 1em',
     backgroundColor: '#f6f8fa',
+    borderRadius: 3,
     '-webkit-overflow-scrolling': 'touch',
     '& > pre': {
       margin: 0,
@@ -74,7 +75,7 @@ const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): Reac
             <Typography className={classes.lang} as="div">
               {lang}
             </Typography>
-            <Typography as="pre" style={style}>
+            <div style={style}>
               {tokens.map(
                 (line, i): React.ReactElement => (
                   <div key={i} {...getLineProps({ line, key: i })}>
@@ -86,7 +87,7 @@ const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): Reac
                   </div>
                 )
               )}
-            </Typography>
+            </div>
             <CopytoClipboard text={code}>
               <IconButton className={classes.copy} variant="standard" size="small">
                 <ClipboardLineIcon />

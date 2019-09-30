@@ -3,6 +3,7 @@ title: useTouch
 hooks: useTouch
 type: hooks
 langKey: "en"
+order: 11
 ---
 
 # useTouch

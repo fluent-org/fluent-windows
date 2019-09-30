@@ -3,6 +3,7 @@ title: usePopper
 hooks: usePopper
 type: hooks
 langKey: "en"
+order: 9
 ---
 
 # usePopper

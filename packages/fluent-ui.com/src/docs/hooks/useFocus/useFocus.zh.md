@@ -3,6 +3,7 @@ title: useFocus（订阅焦点事件）
 hooks: useFocus
 type: hooks
 langKey: "zh"
+order: 4
 ---
 
 # useFocus

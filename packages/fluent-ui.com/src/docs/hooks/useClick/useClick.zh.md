@@ -3,6 +3,7 @@ title: useClick（订阅点击事件）
 hooks: useClick
 type: hooks
 langKey: "zh"
+order: 2
 ---
 
 # useClick
