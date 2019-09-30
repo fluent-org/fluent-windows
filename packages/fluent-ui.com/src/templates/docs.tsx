@@ -89,13 +89,13 @@ const Template: React.FC<TemplateProps> = ({
   const window = useGlobal() as Window
   const defaultBg = '/images/wall.jpg'
   const [bg, setBg] = React.useState((): string => {
-    const dataUrl = window.localStorage.getItem('bg')
+    const dataUrl = window.localStorage && window.localStorage.getItem('bg')
     return dataUrl || defaultBg
   })
   useAction(
     'theme/setBg',
     (bg: string): void => {
-      window.localStorage.setItem('bg', bg)
+      window.localStorage && window.localStorage.setItem('bg', bg)
       setBg(bg)
     },
     []
@@ -103,7 +103,7 @@ const Template: React.FC<TemplateProps> = ({
   useAction(
     'theme/resetBg',
     (): void => {
-      window.localStorage.removeItem('bg')
+      window.localStorage && window.localStorage.removeItem('bg')
       setBg(defaultBg)
     },
     []

@@ -7146,6 +7146,11 @@ filepond-plugin-file-validate-size@^2.2.0:
   resolved "https://registry.npmjs.org/filepond-plugin-file-validate-size/-/filepond-plugin-file-validate-size-2.2.0.tgz#89e393e4c757c38467b8b2f7049760682d036716"
   integrity sha512-Czlj4JLrxWRXBm50QO4rzvEVZVGfB4Gst0denBAGTKTZtuj566KB7vwDQy/daZoYtXOQdoVvfJgrJGifZ5n9KA==
 
+filepond-plugin-file-validate-type@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.npmjs.org/filepond-plugin-file-validate-type/-/filepond-plugin-file-validate-type-1.2.4.tgz#ce7f5f469dbc7ce0da12fdef7b0f24e4c263c410"
+  integrity sha512-K1qD8mfahJoz2zRlWWvYoHuy4k/8tHggsoGbm/blpTp63OyahOdJBzMN3VK7USYn5OZ58uOFdMTMyi8ibFpW/Q==
+
 filepond-plugin-image-exif-orientation@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/filepond-plugin-image-exif-orientation/-/filepond-plugin-image-exif-orientation-1.0.6.tgz#75920935a5da298884718bfd454f03362ad783e8"

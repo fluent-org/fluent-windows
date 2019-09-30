@@ -11,12 +11,15 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
 // @ts-ignore
 import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size'
+// @ts-ignore
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type'
 
 // Register the plugins
 registerPlugin(
   FilePondPluginImageExifOrientation,
   FilePondPluginImagePreview,
-  FilePondPluginFileValidateSize
+  FilePondPluginFileValidateSize,
+  FilePondPluginFileValidateType
 )
 
 const Template = (): React.ReactElement => {
@@ -30,6 +33,7 @@ const Template = (): React.ReactElement => {
   return (
     <Box padding={20}>
       <FilePond
+        acceptedFileTypes={['image/*']}
         maxFileSize="1MB"
         labelMaxFileSizeExceeded="File is too large"
         allowMultiple={false}

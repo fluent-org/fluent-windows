@@ -12,7 +12,7 @@ import { theme } from '../utils/theme'
 const { Box, Command, Item, Transition, Tooltip } = Fluent
 
 const window = Hooks.useGlobal() as Window
-const bg = window.localStorage.getItem('bg') || '/images/wall.jpg'
+const bg = (window.localStorage && window.localStorage.getItem('bg')) || '/images/wall.jpg'
 
 const scope = { ...Fluent, Icon, ...Hooks, bg }
 

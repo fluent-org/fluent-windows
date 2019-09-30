@@ -37,6 +37,7 @@
     "dotenv": "^8.1.0",
     "filepond": "^4.7.2",
     "filepond-plugin-file-validate-size": "^2.2.0",
+    "filepond-plugin-file-validate-type": "^1.2.4",
     "filepond-plugin-image-exif-orientation": "^1.0.6",
     "filepond-plugin-image-preview": "^4.4.0",
     "gatsby": "^2.15.18",
