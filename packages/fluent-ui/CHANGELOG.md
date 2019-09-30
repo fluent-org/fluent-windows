@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.25.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.24.0...@fluent-ui/core@0.25.0) (2019-09-30)
+
+
+### Bug Fixes
+
+* **Command:** The problem is not repaired Secondary display when only one child ([ce3d74c](https://github.com/fluent-org/fluent-ui/commit/ce3d74c))
+
+
+### Features
+
+* **fluent-ui.com:** Card added more examples ([67b97ab](https://github.com/fluent-org/fluent-ui/commit/67b97ab))
+* **fluent-ui.com:** Change the background image inside the document, Fine-tuning the card component ([10db49f](https://github.com/fluent-org/fluent-ui/commit/10db49f))
+* **fluent-ui.com:** New background change function ([e71561c](https://github.com/fluent-org/fluent-ui/commit/e71561c))
+* **Input:** Add child component `TextArea` ([d04f622](https://github.com/fluent-org/fluent-ui/commit/d04f622)), closes [#10](https://github.com/fluent-org/fluent-ui/issues/10)
+
+
+
+
+
 # [0.24.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.23.0...@fluent-ui/core@0.24.0) (2019-09-27)
 
 

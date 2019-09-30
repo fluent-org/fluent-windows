@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.20.0...fluent-ui.com@1.21.0) (2019-09-30)
+
+
+### Features
+
+* **fluent-ui.com:** Card added more examples ([67b97ab](https://github.com/fluent-org/fluent-ui/commit/67b97ab))
+* **fluent-ui.com:** Change the background image inside the document, Fine-tuning the card component ([10db49f](https://github.com/fluent-org/fluent-ui/commit/10db49f))
+* **fluent-ui.com:** Display and playground for the highlight of Language Category ([d861584](https://github.com/fluent-org/fluent-ui/commit/d861584))
+* **fluent-ui.com:** Navigation title sort ([2460dd5](https://github.com/fluent-org/fluent-ui/commit/2460dd5))
+* **fluent-ui.com:** New background change function ([e71561c](https://github.com/fluent-org/fluent-ui/commit/e71561c))
+* **Input:** Add child component `TextArea` ([d04f622](https://github.com/fluent-org/fluent-ui/commit/d04f622)), closes [#10](https://github.com/fluent-org/fluent-ui/issues/10)
+
+
+
+
+
 # [1.20.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.19.0...fluent-ui.com@1.20.0) (2019-09-27)
 
 
