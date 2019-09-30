@@ -23,7 +23,7 @@ const acrylic = (theme: Theme): Style => ({
   },
   '&:hover': {
     '&::before': {
-      backgroundColor: lighten(theme.colors!.white!.default!, 0.08),
+      filter: 'brightness(105%)',
       boxShadow: `inset 0 0 2px 1px ${lighten(theme.colors!.white!.default!, 0.4)}`
     }
   }

@@ -85,7 +85,6 @@ const Playground: React.FC<PlaygroundProps> = ({
           <div className={classes.editor}>
             <LiveEditor
               style={{
-                maxHeight: 1000,
                 overflow: 'auto',
                 WebkitOverflowScrolling: 'touch',
                 outline: 'none',

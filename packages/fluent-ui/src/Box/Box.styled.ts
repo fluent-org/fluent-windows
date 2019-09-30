@@ -76,7 +76,7 @@ const acrylic = (theme: Theme): ((props: BoxProps) => Style) => (props: BoxProps
       '&::before': {
         zIndex: -2,
         opacity: 0.5,
-        backgroundColor: themeBg
+        background: themeBg
       },
       '&::after': {
         zIndex: -1,
