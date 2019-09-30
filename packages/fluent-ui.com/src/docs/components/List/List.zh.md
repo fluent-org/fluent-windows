@@ -23,7 +23,7 @@ langKey: "zh"
 ## Acrylic
 
 ```jsx
-<Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={10} background="url(/images/wall.jpg) center/cover fixed">
   <List title="List Items" acrylic>
     <Item>Option 1</Item>
     <Item>Option 2</Item>
@@ -36,7 +36,7 @@ langKey: "zh"
 ## Reveal
 
 ```jsx
-<Box padding={10} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={10} background="url(/images/wall.jpg) center/cover fixed">
   <List title="List Items" reveal>
     <Item>Option 1</Item>
     <Item>Option 2</Item>

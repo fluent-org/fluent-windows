@@ -20,7 +20,7 @@ langKey: "zh"
   return (
     <Box
       padding={10}
-      background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed"
+      background="url(/images/wall.jpg) center/cover fixed"
     >
       <Tabs value={active} onChange={handleChange}>
         <Tabs.Panel value="one" title="Item One">
@@ -49,7 +49,7 @@ langKey: "zh"
   return (
     <Box
       padding={10}
-      background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed"
+      background="url(/images/wall.jpg) center/cover fixed"
     >
       <Tabs value={active} onChange={handleChange} acrylic>
         <Tabs.Panel value="one" title="Item One">

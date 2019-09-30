@@ -35,7 +35,7 @@ langKey: "zh"
 ## Acrylic Card
 
 ```jsx
-<Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
   <Card acrylic>
     <Card.Header>
       <Typography variant="h6" as="h2">

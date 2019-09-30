@@ -37,7 +37,7 @@ function createTransition(transitions: Transitions): Transitions {
     radio: baseTransition,
     navigation: baseTransition,
     drawer: createBaseTransition(['box-shadow'], 250),
-    card: createBaseTransition(['box-shadow', 'transform'])
+    card: createBaseTransition(['box-shadow', 'filter'])
   }
   return deepMerge(transitions, defaultTransitions)
 }

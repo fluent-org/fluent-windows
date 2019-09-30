@@ -18,7 +18,7 @@ const hover = (theme: Theme): Style => ({
 })
 const acrylic = (theme: Theme): Style => ({
   '&::before': {
-    transition: theme.transitions!.default,
+    transition: theme.transitions!.card,
     boxShadow: `inset 0 0 2px 1px ${lighten(theme.colors!.white!.default!, 0.2)}`
   },
   '&:hover': {

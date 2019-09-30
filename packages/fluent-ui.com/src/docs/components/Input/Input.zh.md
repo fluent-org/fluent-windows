@@ -93,7 +93,7 @@ langKey: "zh"
 ## 幽灵按钮
 
 ```jsx
-<Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
   <Input ghost />
 </Box>
 ```
@@ -101,7 +101,7 @@ langKey: "zh"
 ## TextArea
 
 ```jsx
-<Box padding={20} background="url(https://i.loli.net/2019/06/08/5cfb6d5a7456419123.jpg) center/cover fixed">
+<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
   <Input.TextArea
     rows={4}
     placeholder="default"
