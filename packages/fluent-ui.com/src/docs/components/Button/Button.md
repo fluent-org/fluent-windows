@@ -70,7 +70,7 @@ You can use `as` to change the type of DOM tag.
 ## Ghost
 
 ```jsx
-<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Button ghost>Ghost</Button>
 </Box>
 ```

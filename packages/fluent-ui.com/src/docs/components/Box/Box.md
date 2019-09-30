@@ -30,7 +30,7 @@ Please use the chrome browser, if the chrome browser incompatibility, please fol
 > Chrome77 supported by default check yourself upgrade your browser
 
 ```jsx
-<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Box acrylic={true} padding={[15, 25]}>
     Acrylic
   </Box>

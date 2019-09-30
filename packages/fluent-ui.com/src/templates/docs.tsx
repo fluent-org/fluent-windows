@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Box } from '@fluent-ui/core'
-import { useDispatch } from '@fluent-ui/hooks'
+import { useDispatch, useGlobal, useAction } from '@fluent-ui/hooks'
 
 import SEO from '../components/seo'
 import Nav from '../components/docs/nav'
@@ -86,12 +86,35 @@ const Template: React.FC<TemplateProps> = ({
     dispatch()
   }, [pageContext.langKey])
 
+  const window = useGlobal() as Window
+  const defaultBg = '/images/wall.jpg'
+  const [bg, setBg] = React.useState((): string => {
+    const dataUrl = window.localStorage.getItem('bg')
+    return dataUrl || defaultBg
+  })
+  useAction(
+    'theme/setBg',
+    (bg: string): void => {
+      window.localStorage.setItem('bg', bg)
+      setBg(bg)
+    },
+    []
+  )
+  useAction(
+    'theme/resetBg',
+    (): void => {
+      window.localStorage.removeItem('bg')
+      setBg(defaultBg)
+    },
+    []
+  )
+
   return (
     <Layout>
       <SEO title={data.doc.frontmatter.title} />
       <Box
         as="main"
-        background="url(/images/wall.jpg) 50% center / cover no-repeat fixed"
+        background={`url(${bg}) 50% center / cover no-repeat fixed`}
         padding={[0, '2.6rem 1.8rem']}
         width="100vw"
         height="100vh"

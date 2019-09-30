@@ -1,6 +1,6 @@
 export default {
   'command.change-language': '更改语言',
-  'command.edit-website-colors': '编辑本网站颜色',
+  'command.edit-website-colors': '编辑本网站样式',
   'command.home-page': '主页',
   'command.github-repository': 'Github 仓库',
   'command.copy-code': '复制',

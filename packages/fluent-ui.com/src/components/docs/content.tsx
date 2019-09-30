@@ -14,6 +14,7 @@ import Highlight from '../highlight'
 import IconTemplate from '../../docs/components/Icon/template'
 import ColorTemplate from '../../docs/components/Color/template'
 import ColorTool from '../../docs/components/Color/ColorTool'
+import BgTool from '../../docs/components/Color/BgTool'
 import ThemeTemplate from '../../docs/getting-started/theme/template'
 import Table from '../table'
 
@@ -138,6 +139,7 @@ const Content = ({ data }: TemplateProps): React.ReactElement => {
                 IconTemplate,
                 ColorTemplate,
                 ColorTool,
+                BgTool,
                 ThemeTemplate,
                 ...typographyOverrides
               }

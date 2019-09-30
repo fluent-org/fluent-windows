@@ -46,7 +46,7 @@ exports[`Navigation should render children 1`] = `
   .FBox-acrylic-1::before {
     opacity: 0.5;
     z-index: -2;
-    background-color: #f5f5f5;
+    background: #f5f5f5;
   }
   .FBox-acrylic-1::after {
     opacity: 0.25;

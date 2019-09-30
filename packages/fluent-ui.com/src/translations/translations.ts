@@ -1,6 +1,6 @@
 export default {
   'command.change-language': 'Change language',
-  'command.edit-website-colors': 'Edit website colors',
+  'command.edit-website-colors': 'Edit website styles',
   'command.home-page': 'Home page',
   'command.github-repository': 'Github repository',
   'command.copy-code': 'Copy',

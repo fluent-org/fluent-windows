@@ -11,7 +11,10 @@ import { theme } from '../utils/theme'
 
 const { Box, Command, Item, Transition, Tooltip } = Fluent
 
-const scope = { ...Fluent, Icon, ...Hooks }
+const window = Hooks.useGlobal() as Window
+const bg = window.localStorage.getItem('bg') || '/images/wall.jpg'
+
+const scope = { ...Fluent, Icon, ...Hooks, bg }
 
 interface PlaygroundProps {
   children: any

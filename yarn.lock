@@ -2548,6 +2548,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-filepond@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.npmjs.org/@types/react-filepond/-/react-filepond-5.0.4.tgz#91a55dceab86fa9f521c0e976346e60c5859104e"
+  integrity sha512-0PqWJpzEf14l6j3SygTjzhJ1ACOY3D096vAjPs+n26OtNk63/RGicNoBycsOhzcxPB0lyIZ5m7jcr135ysgRXQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-helmet@^5.0.8":
   version "5.0.10"
   resolved "https://registry.npmjs.org/@types/react-helmet/-/react-helmet-5.0.10.tgz#f47fdda88fe750880089904fde4446612f79b63d"
@@ -7133,6 +7140,26 @@ filenamify@^2.0.0:
     filename-reserved-regex "^2.0.0"
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
+
+filepond-plugin-file-validate-size@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/filepond-plugin-file-validate-size/-/filepond-plugin-file-validate-size-2.2.0.tgz#89e393e4c757c38467b8b2f7049760682d036716"
+  integrity sha512-Czlj4JLrxWRXBm50QO4rzvEVZVGfB4Gst0denBAGTKTZtuj566KB7vwDQy/daZoYtXOQdoVvfJgrJGifZ5n9KA==
+
+filepond-plugin-image-exif-orientation@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/filepond-plugin-image-exif-orientation/-/filepond-plugin-image-exif-orientation-1.0.6.tgz#75920935a5da298884718bfd454f03362ad783e8"
+  integrity sha512-CxoZSa3tjZaoQrRAvsYgDuYhyQPtylnOJ5usbbH5qo/m4x/CbZpkrbFjWXr3MvdiKz3SV8d+CadsLbSXKgWKjA==
+
+filepond-plugin-image-preview@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/filepond-plugin-image-preview/-/filepond-plugin-image-preview-4.4.0.tgz#4f8c618ebd899e25fb908f7c081ff2005976b040"
+  integrity sha512-Kx0Sg9+0ob9mbLyyLZWoo9htVzLiiZQzGgqse8NJp9YeQWPiRwkfloHyzw5eAgvtsM3geXJG6QKfi09u/aEVFg==
+
+filepond@^4.7.2:
+  version "4.7.2"
+  resolved "https://registry.npmjs.org/filepond/-/filepond-4.7.2.tgz#5b61d4b437c0e0f9cad7afcb9ffc6e9d16c0ceec"
+  integrity sha512-OqG35MnmvrGnq2KgHO0PS8uujzRqQL/bMlSy0StqRn6RRAM6wBM9gzQl22IvWLwMyw6g8aIZTZAhMaiTS1LZsA==
 
 filesize@3.5.11:
   version "3.5.11"
@@ -13929,6 +13956,11 @@ react-fast-compare@^2.0.2, react-fast-compare@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
+
+react-filepond@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.npmjs.org/react-filepond/-/react-filepond-7.0.1.tgz#caf96526287140884a31a1476b8328d9d6ecdee2"
+  integrity sha512-PitNM44JP0K5hXnkSYV3HRlkObsWbhqaJRWizMrdHpS3pPz9/iyiOGmRpc+4T4ST3vblmiUTLRYq/+1bDcSqQw==
 
 react-helmet@^5.2.1:
   version "5.2.1"

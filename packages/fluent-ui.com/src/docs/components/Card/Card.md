@@ -35,7 +35,7 @@ langKey: "en"
 ## Acrylic Card
 
 ```jsx
-<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Card acrylic>
     <Card.Header>
       <Typography variant="h6" as="h2">
@@ -73,7 +73,7 @@ langKey: "en"
   return (
     <Box
       padding={20}
-      background="url(/images/wall.jpg) center/cover fixed"
+      background={`url(${bg}) center/cover fixed`}
       display="flex"
       flexWrap="wrap"
       justifyContent="center"

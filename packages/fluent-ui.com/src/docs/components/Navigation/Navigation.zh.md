@@ -171,7 +171,7 @@ langKey: "zh"
     <>
       <Button onClick={handleExpanded}>toggle</Button>
       <Box
-        background="url(/images/wall.jpg) center/cover fixed"
+        background={`url(${bg}) center/cover fixed`}
         padding={10}
       >
         <Navigation acrylic={true} height={600} value={activeId} onChange={handleActiveId} expanded={expanded}>
@@ -264,7 +264,7 @@ langKey: "zh"
     <>
       <Button onClick={handleExpanded}>toggle</Button>
       <Box
-        background="url(/images/wall.jpg) center/cover fixed"
+        background={`url(${bg}) center/cover fixed`}
         padding={10}
       >
         <Navigation

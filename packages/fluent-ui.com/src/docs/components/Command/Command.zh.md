@@ -12,7 +12,7 @@ langKey: "zh"
 ## 默认
 
 ```jsx
-<Box padding={10} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={10} background={`url(${bg}) center/cover fixed`}>
   <Command acrylic>
     <Item prefix={<Icon.SkipBackMiniLine />} />
     <Item prefix={<Icon.PlayMiniLine />} />
@@ -33,7 +33,7 @@ langKey: "zh"
 ## reveal 效果
 
 ```jsx
-<Box padding={10} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={10} background={`url(${bg}) center/cover fixed`}>
   <Command reveal>
     <Item prefix={<Icon.SkipBackMiniLine />} />
     <Item prefix={<Icon.PlayMiniLine />} />
@@ -54,7 +54,7 @@ langKey: "zh"
 ## With label
 
 ```jsx
-<Box padding={10} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={10} background={`url(${bg}) center/cover fixed`}>
   <Command acrylic>
     <Item prefix={<Icon.SkipBackMiniLine />}>Back</Item>
     <Item prefix={<Icon.PlayMiniLine />}>Play</Item>
@@ -75,7 +75,7 @@ langKey: "zh"
 ## 去除头尾
 
 ```jsx
-<Box padding={10} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={10} background={`url(${bg}) center/cover fixed`}>
   <Box backgroundColor="none" display="flex" justifyContent="center">
     <Command acrylic>
       <Item prefix={<Icon.SkipBackMiniLine />} />

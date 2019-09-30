@@ -30,7 +30,7 @@ langKey: "zh"
 > Chrome77 默认支持 请自行检查升级浏览器
 
 ```jsx
-<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Box acrylic={true} padding={[15, 25]}>
     Acrylic
   </Box>

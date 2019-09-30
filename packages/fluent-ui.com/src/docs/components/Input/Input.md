@@ -93,7 +93,7 @@ Show a button to clear your input.
 ## Ghost
 
 ```jsx
-<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Input ghost />
 </Box>
 ```
@@ -101,7 +101,7 @@ Show a button to clear your input.
 ## TextArea
 
 ```jsx
-<Box padding={20} background="url(/images/wall.jpg) center/cover fixed">
+<Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Input.TextArea
     rows={4}
     placeholder="default"

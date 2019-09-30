@@ -20,7 +20,7 @@ langKey: "en"
   return (
     <Box
       padding={10}
-      background="url(/images/wall.jpg) center/cover fixed"
+      background={`url(${bg}) center/cover fixed`}
     >
       <Tabs value={active} onChange={handleChange}>
         <Tabs.Panel value="one" title="Item One">
@@ -49,7 +49,7 @@ langKey: "en"
   return (
     <Box
       padding={10}
-      background="url(/images/wall.jpg) center/cover fixed"
+      background={`url(${bg}) center/cover fixed`}
     >
       <Tabs value={active} onChange={handleChange} acrylic>
         <Tabs.Panel value="one" title="Item One">
