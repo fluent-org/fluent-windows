@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.1](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.22.0...fluent-ui.com@1.22.1) (2019-10-01)
+
+**Note:** Version bump only for package fluent-ui.com
+
+
+
+
+
 # [1.22.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.21.0...fluent-ui.com@1.22.0) (2019-10-01)
 
 

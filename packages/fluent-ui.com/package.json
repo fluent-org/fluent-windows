@@ -1,7 +1,7 @@
 {
   "name": "fluent-ui.com",
   "private": true,
-  "version": "1.22.0",
+  "version": "1.22.1",
   "description": "fluent-ui.com",
   "keywords": [
     "react",
@@ -28,9 +28,9 @@
     "url": "https://github.com/fluent-org/fluent-ui/issues"
   },
   "dependencies": {
-    "@fluent-ui/core": "^0.25.1",
+    "@fluent-ui/core": "^0.25.2",
     "@fluent-ui/hooks": "^0.10.0",
-    "@fluent-ui/icons": "^0.9.0",
+    "@fluent-ui/icons": "^0.9.1",
     "@fluent-ui/styles": "^0.2.2",
     "algoliasearch": "^3.34.0",
     "classnames": "^2.2.6",

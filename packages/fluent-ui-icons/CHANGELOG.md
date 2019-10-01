@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.9.0...@fluent-ui/icons@0.9.1) (2019-10-01)
+
+
+### Bug Fixes
+
+* **@fluent-ui/icons:** Delete icon `book-mark` ([13ee0a5](https://github.com/fluent-org/fluent-ui/commit/13ee0a5))
+* **@fluent-ui/icons:** Fix icon name ([5fc4218](https://github.com/fluent-org/fluent-ui/commit/5fc4218))
+* **@fluent-ui/icons:** Fix icon name ([fb83864](https://github.com/fluent-org/fluent-ui/commit/fb83864))
+
+
+
+
+
 # [0.9.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.8.0...@fluent-ui/icons@0.9.0) (2019-10-01)
 
 

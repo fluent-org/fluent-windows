@@ -1,7 +1,7 @@
 {
   "name": "@fluent-ui/icons",
   "private": false,
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Fluent-UI Svg Icons Based on RemixIcon.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
