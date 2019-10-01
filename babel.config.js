@@ -3,12 +3,6 @@ const defaultPresets =
     ? ['@babel/typescript', '@babel/preset-react']
     : ['@babel/preset-env', '@babel/typescript', '@babel/preset-react']
 
-// const defaultAlias = {
-//   '@fluent-ui/core': './packages/fluent-ui/src',
-//   '@fluent-ui/icons': './packages/fluent-ui-icons/src',
-//   '@fluent-ui/hooks': './packages/fluent-ui-hooks/src'
-// }
-
 const productionPlugins = ['@babel/proposal-class-properties']
 
 module.exports = {

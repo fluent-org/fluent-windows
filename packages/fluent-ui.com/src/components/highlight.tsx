@@ -75,7 +75,7 @@ const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): Reac
             <Typography className={classes.lang} as="div">
               {lang}
             </Typography>
-            <div style={style}>
+            <pre style={style}>
               {tokens.map(
                 (line, i): React.ReactElement => (
                   <div key={i} {...getLineProps({ line, key: i })}>
@@ -87,7 +87,7 @@ const Highlight: React.FC<HighlightProps> = ({ children }: HighlightProps): Reac
                   </div>
                 )
               )}
-            </div>
+            </pre>
             <CopytoClipboard text={code}>
               <IconButton className={classes.copy} variant="standard" size="small">
                 <ClipboardLineIcon />
