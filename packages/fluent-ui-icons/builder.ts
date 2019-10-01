@@ -61,24 +61,25 @@ async function worker(): Promise<void> {
   try {
     const allSvg = await getAllSvgs(basePath)
     const template = await readFileAsync(resolve(__dirname, './template'), { encoding: 'utf8' })
+
     for (const svg of allSvg) {
       const data = await readFileAsync(svg, { encoding: 'utf8' })
       const jsx = html([data])
-      const componentName = getComponentName(svg, false)
+      const componentName = toHump(getComponentName(svg, false))
       const jsxReplace = template
         .replace('{{jsx}}', toJson(jsx))
-        .replace('{{componentName}}', toHump(componentName))
+        .replace('{{componentName}}', componentName)
+
       await writeFileAsync(
-        resolve(__dirname, `src/${toHump(componentName)}.ts`),
-        prettier.format(jsxReplace, { singleQuote: true, semi: false, parser: 'typescript' })
+        resolve(__dirname, `src/${componentName}.ts`),
+        prettier.format(jsxReplace, { singleQuote: true, semi: false, parser: 'typescript' }),
+        { flag: 'wx' }
       )
     }
 
     const index = allSvg.reduce((acc, cur): string => {
-      const componentName = getComponentName(cur, false)
-      return (
-        acc + `export { default as ${toHump(componentName)} } from './${toHump(componentName)}'\n`
-      )
+      const componentName = toHump(getComponentName(cur, false))
+      return acc + `export { default as ${componentName} } from './${componentName}'\n`
     }, '')
     await writeFileAsync(resolve(__dirname, `src/index.ts`), index)
   } catch (error) {

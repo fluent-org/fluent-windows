@@ -22,8 +22,7 @@ export const jsx: JSX = {
         {
           type: 'path',
           props: {
-            d:
-              'M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1z'
+            d: 'M12 6v15h-2v-5a6 6 0 1 1 0-12h10v2h-3v15h-2V6h-3zm-2 0a4 4 0 1 0 0 8V6z'
           },
           children: []
         }
@@ -32,4 +31,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'BookmarkFill')
+export default createIcon(jsx, 'Paragraph')
