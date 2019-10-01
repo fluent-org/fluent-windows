@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.8.0...@fluent-ui/icons@0.9.0) (2019-10-01)
+
+
+### Features
+
+* **@fluent-ui/icons:** Enable icons to be introduced on demand ([7faf606](https://github.com/fluent-org/fluent-ui/commit/7faf606))
+
+
+
+
+
 # [0.8.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/icons@0.7.0...@fluent-ui/icons@0.8.0) (2019-09-26)
 
 

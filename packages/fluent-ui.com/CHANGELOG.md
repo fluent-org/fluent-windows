@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.21.0...fluent-ui.com@1.22.0) (2019-10-01)
+
+
+### Features
+
+* **fluent-ui.com:** Fix build errors and upload images to category restrictions ([384b2ad](https://github.com/fluent-org/fluent-ui/commit/384b2ad))
+
+
+
+
+
 # [1.21.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.20.0...fluent-ui.com@1.21.0) (2019-09-30)
 
 
