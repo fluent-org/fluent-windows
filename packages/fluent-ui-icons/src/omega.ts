@@ -33,4 +33,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'omega')
+export default createIcon(jsx, 'Omega')

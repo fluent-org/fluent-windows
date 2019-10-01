@@ -28,14 +28,6 @@ function createElement(
   return React.createElement(type, { ...props, ...otherProps }, ...children)
 }
 
-function toHump(name: string, capitalized: boolean = true): string {
-  return capitalized
-    ? name
-        .replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
-        .replace(/( |^)[a-z]/g, (all): string => all.toUpperCase())
-    : name.replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
-}
-
 function createIcon(
   jsx: JSX,
   componentName: string
@@ -53,7 +45,7 @@ function createIcon(
       return createElement(jsx, { ...rest, style, ref })
     }
   )
-  Icon.displayName = `RemixIcon${toHump(componentName)}`
+  Icon.displayName = `RemixIcon${componentName}`
   return Icon
 }
 

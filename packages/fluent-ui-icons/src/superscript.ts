@@ -32,4 +32,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'superscript')
+export default createIcon(jsx, 'Superscript')

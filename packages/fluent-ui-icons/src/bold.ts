@@ -32,4 +32,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'bold')
+export default createIcon(jsx, 'Bold')

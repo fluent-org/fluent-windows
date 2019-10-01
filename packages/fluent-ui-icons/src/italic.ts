@@ -31,4 +31,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'italic')
+export default createIcon(jsx, 'Italic')

@@ -32,4 +32,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'hashtag')
+export default createIcon(jsx, 'Hashtag')

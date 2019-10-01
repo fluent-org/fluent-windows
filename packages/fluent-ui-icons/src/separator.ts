@@ -31,4 +31,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'separator')
+export default createIcon(jsx, 'Separator')

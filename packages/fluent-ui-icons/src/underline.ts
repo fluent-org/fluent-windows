@@ -31,4 +31,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'underline')
+export default createIcon(jsx, 'Underline')

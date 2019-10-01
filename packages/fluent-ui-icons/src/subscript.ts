@@ -32,4 +32,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'subscript')
+export default createIcon(jsx, 'Subscript')

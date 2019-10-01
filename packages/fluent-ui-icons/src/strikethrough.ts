@@ -32,4 +32,4 @@ export const jsx: JSX = {
   ]
 }
 
-export default createIcon(jsx, 'strikethrough')
+export default createIcon(jsx, 'Strikethrough')

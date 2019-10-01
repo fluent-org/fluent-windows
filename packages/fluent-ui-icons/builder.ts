@@ -67,16 +67,18 @@ async function worker(): Promise<void> {
       const componentName = getComponentName(svg, false)
       const jsxReplace = template
         .replace('{{jsx}}', toJson(jsx))
-        .replace('{{componentName}}', componentName)
+        .replace('{{componentName}}', toHump(componentName))
       await writeFileAsync(
-        resolve(__dirname, `src/${componentName}.ts`),
+        resolve(__dirname, `src/${toHump(componentName)}.ts`),
         prettier.format(jsxReplace, { singleQuote: true, semi: false, parser: 'typescript' })
       )
     }
 
     const index = allSvg.reduce((acc, cur): string => {
       const componentName = getComponentName(cur, false)
-      return acc + `export { default as ${toHump(componentName)} } from './${componentName}'\n`
+      return (
+        acc + `export { default as ${toHump(componentName)} } from './${toHump(componentName)}'\n`
+      )
     }, '')
     await writeFileAsync(resolve(__dirname, `src/index.ts`), index)
   } catch (error) {
