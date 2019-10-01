@@ -6,7 +6,7 @@
     "jsx": "react",
     "declaration": true,
     "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "strict": true,
     "experimentalDecorators": true,
     "noErrorTruncation": true,
