@@ -1,20 +1,19 @@
 import * as React from 'react'
-
-import { Box, Typography, Dialog, Theme, Spinner } from '@fluent-ui/core'
+import { Box, Dialog, Theme, Input, FormLabel, Radio } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
-import * as Icons from '@fluent-ui/icons'
 import { Styles } from 'jss'
+import * as Icons from '@fluent-ui/icons'
 import Highlight from '../../../components/highlight'
-import { toHump } from '../../../utils'
-import LazyLoad from 'react-lazyload'
+import FlexSearch from 'flexsearch'
+import { useDebouncedCallback } from 'use-debounce'
 // @ts-ignore
 import tags from './tags.json'
+import Icon from './Icon'
+import { toLine } from '../../../utils'
 
 type Classes =
-  | 'list'
-  | 'iconContainer'
-  | 'iconWrapper'
-  | 'title'
+  | 'commandTag'
+  | 'commandSearch'
   | 'bigIcon'
   | 'smallIcon'
   | 'primaryPureIcon'
@@ -25,29 +24,15 @@ type Classes =
   | 'blackIcon'
 const useStyles = createUseStyles<Theme, Classes>(
   (theme: Theme): Styles => ({
-    iconContainer: {
+    commandTag: {
       display: 'inline-block',
-      width: '25%',
-      '@media screen and (min-width: 600px)': {
-        width: '16.6667%'
+      '& > label': {
+        marginRight: 10
       }
     },
-    iconWrapper: {
-      width: '100%',
-      padding: 16,
-      borderRadius: 4,
-      textAlign: 'center',
-      cursor: 'pointer',
-      '&:hover': {
-        backgroundColor: '#fff'
-      }
-    },
-    title: {
-      width: '100%',
-      textAlign: 'center',
-      overflow: 'hidden',
-      whiteSpace: 'nowrap',
-      textOverflow: 'ellipsis'
+    commandSearch: {
+      display: 'inline-block',
+      paddingLeft: 10
     },
     bigIcon: {
       color: theme.colors!.primary!.default,
@@ -89,17 +74,68 @@ const useStyles = createUseStyles<Theme, Classes>(
   })
 )
 
-const tagList = Object.keys(tags)
+const tagList = Object.keys(tags).reduce(
+  (acc, cur): {} => ({
+    ...acc,
+    ...tags[cur]
+  }),
+  {}
+)
+
+const searchIndex = FlexSearch.create({
+  async: true,
+  tokenize: 'full'
+})
+
+interface IconType {
+  key: string
+  tag: string
+  Icon: any
+}
+const allIconsMap: { [name: string]: IconType } = {}
+const allIcons = Object.keys(Icons)
+  .sort()
+  .map(
+    (key): IconType => {
+      let tag
+      if (key.indexOf('Line') !== -1) {
+        tag = 'Line'
+      } else if (key.indexOf('Fill') !== -1) {
+        tag = 'Fill'
+      } else {
+        tag = ''
+      }
+
+      let searchable = toLine(key.replace(/(Line|Fill)$/, ''))
+      if ((tagList as any)[toLine(searchable)]) {
+        searchable += ` ${(tagList as any)[toLine(searchable)]}`
+      }
+      searchIndex.add(key, searchable)
+
+      const icon = {
+        key,
+        tag,
+        Icon: (Icons as any)[key]
+      }
+      allIconsMap[key] = icon
+      return icon
+    }
+  )
 
 const Template = (): React.ReactElement => {
   const classes = useStyles()
 
   const [visible, setVisible] = React.useState(false)
   const [currentSelectIcon, setCurrentSelectIcon] = React.useState('')
+  const [searchValue, setSearchValue] = React.useState('')
+  const [tag, setTag] = React.useState('Line')
+  const [keys, setKeys] = React.useState<string[] | null>(null)
 
-  const handleVisible = React.useCallback((name): void => {
-    setVisible((v): boolean => !v)
-    setCurrentSelectIcon(name)
+  const handleVisible = React.useCallback((name): (() => void) => {
+    return (): void => {
+      setVisible((v): boolean => !v)
+      setCurrentSelectIcon(name)
+    }
   }, [])
 
   // @ts-ignore
@@ -109,87 +145,66 @@ const Template = (): React.ReactElement => {
     [currentSelectIcon]
   )
 
+  const [debouncedCallback] = useDebouncedCallback((value): void => {
+    if (value === '') {
+      setKeys(null)
+    } else {
+      searchIndex.search(value).then((results: any): void => {
+        setKeys(results)
+      })
+    }
+  }, 250)
+  const handleSearchChange = React.useCallback(
+    (v): void => {
+      debouncedCallback(v)
+      setSearchValue(v)
+    },
+    [debouncedCallback]
+  )
+
+  const icons = React.useMemo(
+    (): IconType[] =>
+      (keys === null ? allIcons : keys.map((key: string): IconType => allIconsMap[key])).filter(
+        (icon: IconType): boolean => tag === icon.tag
+      ),
+    [tag, keys]
+  )
+
   return (
     <Box backgroundColor="standard.light3" marginTop={20}>
       <Box padding="20px">
-        {tagList.map(
-          (title): React.ReactElement => {
-            return (
-              <Box key={title}>
-                <Typography variant="h6" gutterBottom gutterTop>
-                  {title}
-                </Typography>
-                <Box>
-                  {Object.keys(tags[title]).map(
-                    (icon): React.ReactElement => {
-                      const Hump = toHump(icon)
-                      // @ts-ignore
-                      const LineIcon = Icons[`${Hump}Line`]
-                      // @ts-ignore
-                      const FillIcon = Icons[`${Hump}Fill`]
-                      // @ts-ignore
-                      const OtherIcon = Icons[Hump]
-                      // eslint-disable-next-line
-                      return React.useMemo(
-                        (): React.ReactElement => (
-                          <LazyLoad
-                            scrollContainer="#contentRoot"
-                            height={144}
-                            placeholder={<Spinner />}
-                            throttle={200}
-                            once={true}
-                            key={icon}
-                          >
-                            <div className={classes.iconContainer}>
-                              {!!LineIcon && (
-                                <Box
-                                  className={classes.iconWrapper}
-                                  onClick={handleVisible.bind(null, `${Hump}Line`)}
-                                >
-                                  <LineIcon />
-                                  <Typography
-                                    className={classes.title}
-                                    variant="subtitle2"
-                                  >{`${Hump}Line`}</Typography>
-                                </Box>
-                              )}
-                              {!!FillIcon && (
-                                <Box
-                                  className={classes.iconWrapper}
-                                  onClick={handleVisible.bind(null, `${Hump}Fill`)}
-                                >
-                                  <FillIcon />
-                                  <Typography
-                                    className={classes.title}
-                                    variant="subtitle2"
-                                  >{`${Hump}Fill`}</Typography>
-                                </Box>
-                              )}
-                              {!!OtherIcon && (
-                                <Box
-                                  className={classes.iconWrapper}
-                                  onClick={handleVisible.bind(null, Hump)}
-                                >
-                                  <OtherIcon />
-                                  <Typography className={classes.title} variant="subtitle2">
-                                    {Hump}
-                                  </Typography>
-                                </Box>
-                              )}
-                            </div>
-                          </LazyLoad>
-                        ),
-                        [FillIcon, Hump, LineIcon, OtherIcon, icon]
-                      )
-                    }
-                  )}
-                </Box>
-              </Box>
-            )
-          }
-        )}
+        <Box display="flex" alignItems="center" marginBottom={10}>
+          <Box className={classes.commandTag}>
+            {['Line', 'Fill'].map(
+              (key): React.ReactElement => {
+                return (
+                  <FormLabel label={key} key={key}>
+                    <Radio
+                      value={key}
+                      checked={tag === key}
+                      onChange={(): void => {
+                        setTag(key)
+                      }}
+                    />
+                  </FormLabel>
+                )
+              }
+            )}
+          </Box>
+          <Box className={classes.commandSearch} flex={1}>
+            <Input
+              value={searchValue}
+              onChange={handleSearchChange}
+              prefix={<Icons.SearchLine />}
+              placeholder="Search Icons"
+              cleared
+            />
+          </Box>
+        </Box>
+        <Icon icons={icons} callback={handleVisible} />
       </Box>
-      <Dialog visible={visible} onChange={handleVisible}>
+
+      <Dialog visible={visible} onChange={handleVisible('')}>
         <Dialog.Title>{currentSelectIcon}</Dialog.Title>
 
         <div>

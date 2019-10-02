@@ -40,6 +40,7 @@
     "filepond-plugin-file-validate-type": "^1.2.4",
     "filepond-plugin-image-exif-orientation": "^1.0.6",
     "filepond-plugin-image-preview": "^4.4.0",
+    "flexsearch": "^0.6.30",
     "gatsby": "^2.15.18",
     "gatsby-image": "^2.2.19",
     "gatsby-plugin-algolia": "^0.3.4",
@@ -66,7 +67,6 @@
     "react-helmet": "^5.2.1",
     "react-instantsearch-dom": "^5.7.0",
     "react-intl": "^3.3.0",
-    "react-lazyload": "^2.6.2",
     "react-live": "^2.2.0",
     "react-object-inspector": "^0.2.1",
     "use-debounce": "^3.0.1"
@@ -78,7 +78,6 @@
     "@types/react-filepond": "^5.0.4",
     "@types/react-helmet": "^5.0.8",
     "@types/react-instantsearch-dom": "^5.2.6",
-    "@types/react-lazyload": "^2.5.0",
     "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
