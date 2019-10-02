@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.22.1...fluent-ui.com@1.23.0) (2019-10-02)
+
+
+### Features
+
+* **@fluent-ui/icons:** Icon rearrangement document using `react-lazyload` ([00dd5d6](https://github.com/fluent-org/fluent-ui/commit/00dd5d6))
+
+
+
+
+
 ## [1.22.1](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.22.0...fluent-ui.com@1.22.1) (2019-10-01)
 
 **Note:** Version bump only for package fluent-ui.com
