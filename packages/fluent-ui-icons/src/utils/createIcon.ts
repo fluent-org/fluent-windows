@@ -33,7 +33,7 @@ function createIcon(
   componentName: string
 ): React.ForwardRefExoticComponent<React.RefAttributes<SVGElement>> {
   const Icon = React.forwardRef<SVGElement>(
-    ({ ...rest }: React.HTMLAttributes<SVGElement>, ref): React.ReactElement => {
+    (props: React.HTMLAttributes<SVGElement>, ref): React.ReactElement => {
       const style = {
         width: '1em',
         height: '1em',
@@ -42,7 +42,7 @@ function createIcon(
         color: 'inherit',
         fill: 'currentColor'
       }
-      return createElement(jsx, { ...rest, style, ref })
+      return createElement(jsx, { style, ref, ...props })
     }
   )
   Icon.displayName = `RemixIcon${componentName}`

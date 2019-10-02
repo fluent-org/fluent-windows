@@ -15,6 +15,14 @@ export function toLine(name: string): string {
   return target
 }
 
+export function toHump(name: string, capitalized: boolean = true): string {
+  return capitalized
+    ? name
+        .replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
+        .replace(/( |^)[a-z]/g, (all): string => all.toUpperCase())
+    : name.replace(/-(\w)/g, (all, letter): string => letter.toUpperCase())
+}
+
 export function pathnameToLanguage(
   pathname: string
 ): {

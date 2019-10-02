@@ -2578,6 +2578,13 @@
     "@types/react" "*"
     "@types/react-instantsearch-core" "*"
 
+"@types/react-lazyload@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/@types/react-lazyload/-/react-lazyload-2.5.0.tgz#7d8dd04c9a711fc0f1ea3419786acdcc01fb11dc"
+  integrity sha512-+SFmsxcC0l9mSXmoQMRtTbIW6YJQH+WxDWFG5N1b1JCiyTHZqekYcNKhGFTBvKktYOi3ET75+B4SeD52V7P1uw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@^16.8.2":
   version "16.9.0"
   resolved "https://registry.npmjs.org/@types/react-test-renderer/-/react-test-renderer-16.9.0.tgz#d60f530ecf4c906721511603cca711b4fa830d41"
@@ -14058,6 +14065,11 @@ react-jss@^10.0.0-alpha.25:
     theming "3.2.0"
     tiny-warning "^1.0.2"
 
+react-lazyload@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.npmjs.org/react-lazyload/-/react-lazyload-2.6.2.tgz#6a1660de6e8653632797539189d19d64e924482c"
+  integrity sha512-zbFiwI3H7W0/Qvb6T/ew2NiGe2wj+soYNW7vv5Dte1eZuJDvvyUOHo8GpYfEeWoP5x4Rree2Hwop+lCISalBwg==
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -14123,13 +14135,6 @@ react-transition-group@^4.2.1:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
-
-react-virtuoso@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.npmjs.org/react-virtuoso/-/react-virtuoso-0.12.1.tgz#82ad71156bb34538e46fb37b908fc39fa0996dcc"
-  integrity sha512-H5cdMHhsb+sjTxkTzIwS+uXhIzGao3GdkTw7ifyvzES9dJ/aA5I80RgTPu+VB1w4lvkRL/WlVVNHtMzJBG6+3w==
-  dependencies:
-    resize-observer-polyfill "^1.5.1"
 
 react@^16.9.0:
   version "16.9.0"
@@ -14680,11 +14685,6 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
-
-resize-observer-polyfill@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
-  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"

@@ -66,9 +66,9 @@
     "react-helmet": "^5.2.1",
     "react-instantsearch-dom": "^5.7.0",
     "react-intl": "^3.3.0",
+    "react-lazyload": "^2.6.2",
     "react-live": "^2.2.0",
     "react-object-inspector": "^0.2.1",
-    "react-virtuoso": "^0.12.1",
     "use-debounce": "^3.0.1"
   },
   "devDependencies": {
@@ -78,6 +78,7 @@
     "@types/react-filepond": "^5.0.4",
     "@types/react-helmet": "^5.0.8",
     "@types/react-instantsearch-dom": "^5.2.6",
+    "@types/react-lazyload": "^2.5.0",
     "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",

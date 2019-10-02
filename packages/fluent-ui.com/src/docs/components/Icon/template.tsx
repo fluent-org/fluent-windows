@@ -1,12 +1,12 @@
 import * as React from 'react'
 
-import { Box, Typography, Dialog, Theme } from '@fluent-ui/core'
+import { Box, Typography, Dialog, Theme, Spinner } from '@fluent-ui/core'
 import { createUseStyles } from '@fluent-ui/styles'
 import * as Icons from '@fluent-ui/icons'
 import { Styles } from 'jss'
-import { VirtuosoGrid } from 'react-virtuoso'
-const Virtuoso = VirtuosoGrid as any
 import Highlight from '../../../components/highlight'
+import { toHump } from '../../../utils'
+import LazyLoad from 'react-lazyload'
 // @ts-ignore
 import tags from './tags.json'
 
@@ -25,17 +25,11 @@ type Classes =
   | 'blackIcon'
 const useStyles = createUseStyles<Theme, Classes>(
   (theme: Theme): Styles => ({
-    list: {
-      display: 'flex',
-      flexWrap: 'wrap'
-    },
     iconContainer: {
-      width: '33%',
+      display: 'inline-block',
+      width: '25%',
       '@media screen and (min-width: 600px)': {
-        width: '25%'
-      },
-      '@media screen and (min-width: 960px)': {
-        width: '20%'
+        width: '16.6667%'
       }
     },
     iconWrapper: {
@@ -95,9 +89,9 @@ const useStyles = createUseStyles<Theme, Classes>(
   })
 )
 
+const tagList = Object.keys(tags)
+
 const Template = (): React.ReactElement => {
-  // @ts-ignore
-  const IconArray = Object.keys(Icons).map(key => Icons[key])
   const classes = useStyles()
 
   const [visible, setVisible] = React.useState(false)
@@ -117,24 +111,84 @@ const Template = (): React.ReactElement => {
 
   return (
     <Box backgroundColor="standard.light3" marginTop={20}>
-      <Virtuoso
-        totalCount={IconArray.length}
-        listClassName={classes.list}
-        itemClassName={classes.iconContainer}
-        item={(index: number): React.ReactElement => {
-          const Icon = IconArray[index]
-          const name = String.prototype.substring.call(Icon.displayName, 9)
-          return (
-            <div className={classes.iconWrapper} onClick={handleVisible.bind(null, name)}>
-              <Icon />
-              <Typography className={classes.title} variant="subtitle2" color="standard.dark1">
-                {name}
-              </Typography>
-            </div>
-          )
-        }}
-        style={{ height: '500px' }}
-      />
+      <Box padding="20px">
+        {tagList.map(
+          (title): React.ReactElement => {
+            return (
+              <Box key={title}>
+                <Typography variant="h6" gutterBottom gutterTop>
+                  {title}
+                </Typography>
+                <Box>
+                  {Object.keys(tags[title]).map(
+                    (icon): React.ReactElement => {
+                      const Hump = toHump(icon)
+                      // @ts-ignore
+                      const LineIcon = Icons[`${Hump}Line`]
+                      // @ts-ignore
+                      const FillIcon = Icons[`${Hump}Fill`]
+                      // @ts-ignore
+                      const OtherIcon = Icons[Hump]
+                      // eslint-disable-next-line
+                      return React.useMemo(
+                        (): React.ReactElement => (
+                          <LazyLoad
+                            scrollContainer="#contentRoot"
+                            height={144}
+                            placeholder={<Spinner />}
+                            throttle={200}
+                            once={true}
+                            key={icon}
+                          >
+                            <div className={classes.iconContainer}>
+                              {!!LineIcon && (
+                                <Box
+                                  className={classes.iconWrapper}
+                                  onClick={handleVisible.bind(null, `${Hump}Line`)}
+                                >
+                                  <LineIcon />
+                                  <Typography
+                                    className={classes.title}
+                                    variant="subtitle2"
+                                  >{`${Hump}Line`}</Typography>
+                                </Box>
+                              )}
+                              {!!FillIcon && (
+                                <Box
+                                  className={classes.iconWrapper}
+                                  onClick={handleVisible.bind(null, `${Hump}Fill`)}
+                                >
+                                  <FillIcon />
+                                  <Typography
+                                    className={classes.title}
+                                    variant="subtitle2"
+                                  >{`${Hump}Fill`}</Typography>
+                                </Box>
+                              )}
+                              {!!OtherIcon && (
+                                <Box
+                                  className={classes.iconWrapper}
+                                  onClick={handleVisible.bind(null, Hump)}
+                                >
+                                  <OtherIcon />
+                                  <Typography className={classes.title} variant="subtitle2">
+                                    {Hump}
+                                  </Typography>
+                                </Box>
+                              )}
+                            </div>
+                          </LazyLoad>
+                        ),
+                        [FillIcon, Hump, LineIcon, OtherIcon, icon]
+                      )
+                    }
+                  )}
+                </Box>
+              </Box>
+            )
+          }
+        )}
+      </Box>
       <Dialog visible={visible} onChange={handleVisible}>
         <Dialog.Title>{currentSelectIcon}</Dialog.Title>
 
