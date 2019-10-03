@@ -43,7 +43,7 @@
     "husky": "^2.4.0",
     "jest": "^24.8.0",
     "jest-config": "^24.8.0",
-    "lerna": "^3.14.1",
+    "lerna": "^3.16.4",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
     "react": "^16.9.0",
