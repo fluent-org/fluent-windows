@@ -6,6 +6,7 @@
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
     "react",
+    "react components",
     "fluent-design",
     "fluent-ui",
     "styles"
@@ -38,8 +39,8 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
-    "jss": "^10.0.0-alpha.25",
-    "react-jss": "^10.0.0-alpha.25",
+    "jss": "^10.0.0",
+    "react-jss": "^10.0.0",
     "styled-system": "^5.1.2"
   },
   "devDependencies": {
