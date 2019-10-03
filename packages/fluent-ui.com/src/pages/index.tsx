@@ -73,7 +73,7 @@ const IndexPage = (props: any): React.ReactElement => {
             fontSize={['1em', '1.25em']}
             fontFamily={`Georgia, Cambria, "Times New Roman", Times, serif`}
           >
-            React components that inspired Microsoft Fluent Design System.
+            React components that inspired by Microsoft Fluent Design System.
           </Box>
           <Box marginTop="1.2em">
             <Box display={['block', 'inline-block']}>

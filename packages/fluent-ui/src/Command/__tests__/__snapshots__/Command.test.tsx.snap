@@ -443,6 +443,7 @@ exports[`Command should be rendered with acrylic effects 2`] = `
   }
   .FCommand-root {
     display: flex;
+    overflow: hidden;
   }
   .FCommand-content {
     display: flex;
@@ -917,6 +918,7 @@ exports[`Command should be rendered with reveal effects 2`] = `
   }
   .FCommand-root {
     display: flex;
+    overflow: hidden;
   }
   .FCommand-content {
     display: flex;
@@ -1117,6 +1119,7 @@ exports[`Command should render children 1`] = `
   }
   .FCommand-root {
     display: flex;
+    overflow: hidden;
   }
   .FCommand-content {
     display: flex;
@@ -1557,6 +1560,7 @@ exports[`Command without Content and Secondary 2`] = `
   }
   .FCommand-root {
     display: flex;
+    overflow: hidden;
   }
   .FCommand-content {
     display: flex;
