@@ -103,7 +103,7 @@ const allIcons = Object.keys(Icons)
       } else if (key.indexOf('Fill') !== -1) {
         tag = 'Fill'
       } else {
-        tag = ''
+        tag = 'Other'
       }
 
       let searchable = toLine(key.replace(/(Line|Fill)$/, ''))
@@ -175,7 +175,7 @@ const Template = (): React.ReactElement => {
       <Box padding="20px">
         <Box display="flex" alignItems="center" marginBottom={10}>
           <Box className={classes.commandTag}>
-            {['Line', 'Fill'].map(
+            {['Line', 'Fill', 'Other'].map(
               (key): React.ReactElement => {
                 return (
                   <FormLabel label={key} key={key}>
