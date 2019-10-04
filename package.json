@@ -17,8 +17,7 @@
     "prerelease": "lerna version --conventional-commits",
     "release": "npm run build && lerna publish from-package --contents build",
     "prerelease:alpha": "lerna version --conventional-commits --conventional-prerelease && git add -u .",
-    "release:alpha": "npm run build && lerna publish from-package --contents build --pre-dist-tag alpha",
-    "postrelease:alpha": "git commit -m 'chore(release): Publish alpha' && git push"
+    "release:alpha": "npm run build && lerna publish from-package --contents build --pre-dist-tag alpha"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
