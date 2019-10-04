@@ -1,7 +1,7 @@
 {
   "name": "@fluent-ui/icons",
   "private": false,
-  "version": "0.10.0",
+  "version": "1.0.0-alpha.0",
   "description": "Fluent-UI Svg Icons.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [

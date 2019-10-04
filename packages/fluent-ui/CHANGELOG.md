@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.0](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.25.3...@fluent-ui/core@1.0.0-alpha.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **Command:** Fix Command overflow issue, fix documentation ([db01a88](https://github.com/fluent-org/fluent-ui/commit/db01a88))
+
+
+
+
+
 ## [0.25.3](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@0.25.2...@fluent-ui/core@0.25.3) (2019-10-02)
 
 **Note:** Version bump only for package @fluent-ui/core

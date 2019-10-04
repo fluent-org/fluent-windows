@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.23.0...fluent-ui.com@2.0.0-alpha.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **Command:** Fix Command overflow issue, fix documentation ([db01a88](https://github.com/fluent-org/fluent-ui/commit/db01a88))
+
+
+
+
+
 # [1.23.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.22.1...fluent-ui.com@1.23.0) (2019-10-02)
 
 
