@@ -13,6 +13,7 @@
 
 import * as React from 'react'
 import * as CSS from 'csstype'
+import { useGlobal } from '../useGlobal'
 
 type Return = [React.FC<RevealWrapperProps>]
 
@@ -20,33 +21,45 @@ interface RevealWrapperProps {
   children: React.ReactElement
 }
 
+const global = useGlobal() as Window
+
 const createRevealWrapper = (
   gradientSize: number,
   lightColor: CSS.ColorProperty
 ): React.FC<RevealWrapperProps> => {
   const RevealWrapper = ({ children }: RevealWrapperProps): React.ReactElement => {
-    const [background, setBackground] = React.useState()
     const ref = React.useRef<HTMLDivElement>() as React.RefObject<HTMLDivElement>
+
     const listener = React.useCallback(
       (e: MouseEvent): void => {
-        const rect = ref.current && ref.current.getBoundingClientRect()
-        if (ref.current && rect) {
-          const x = e.pageX - rect.left - window.scrollX
-          const y = e.pageY - rect.top - window.scrollY
-          const gradient = `radial-gradient(circle ${gradientSize}px at ${x}px ${y}px, ${lightColor}, rgba(255,255,255,0))`
-          setBackground(gradient)
-        }
+        global.requestAnimationFrame((): void => {
+          const rect = ref.current && ref.current.getBoundingClientRect()
+          if (ref.current && rect) {
+            const x = e.pageX - rect.left - global.scrollX
+            const y = e.pageY - rect.top - global.scrollY
+            ref.current.style.setProperty('--x', x + 'px')
+            ref.current.style.setProperty('--y', y + 'px')
+          }
+        })
       },
       [ref]
     )
+
     React.useEffect((): (() => void) => {
-      document.addEventListener('mousemove', listener)
+      global.addEventListener('mousemove', listener)
       return (): void => {
-        document.removeEventListener('mousemove', listener)
+        global.removeEventListener('mousemove', listener)
       }
     }, [listener])
+
+    const gradient = React.useMemo(
+      (): string =>
+        `radial-gradient(circle ${gradientSize}px at var(--x) var(--y), ${lightColor}, rgba(255,255,255,0))`,
+      []
+    )
+
     return (
-      <div ref={ref} style={{ background, margin: 1, padding: 1 }}>
+      <div ref={ref} style={{ background: gradient, margin: 1, padding: 1 }}>
         {React.cloneElement(children)}
       </div>
     )
