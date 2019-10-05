@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.1](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@2.0.0-alpha.0...fluent-ui.com@2.0.0-alpha.1) (2019-10-05)
+
+
+### Performance Improvements
+
+* **fluent-ui.com:** Add Offline Support with a Service Worker ([b771797](https://github.com/fluent-org/fluent-ui/commit/b771797))
+
+
+
+
+
 # [2.0.0-alpha.0](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@1.23.0...fluent-ui.com@2.0.0-alpha.0) (2019-10-04)
 
 
