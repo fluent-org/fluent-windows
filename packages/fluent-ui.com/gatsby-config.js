@@ -4,7 +4,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Fluent-UI`,
-    description: `React components that inspired Microsoft's Fluent Design System.`,
+    description: `React components that inspired by Microsoft's Fluent Design System.`,
     author: `@chenyueban`
   },
   plugins: [
@@ -16,13 +16,14 @@ module.exports = {
       options: {
         name: `Fluent-UI`,
         short_name: `fluent`,
-        description: `React components that inspired Microsoft's Fluent Design System.`,
+        description: `React components that inspired by Microsoft's Fluent Design System.`,
         start_url: `/`,
         background_color: `#0078d4`,
         theme_color: `#0078d4`,
         icon: `static/images/fluent-ui.png` // This path is relative to the root of the site.
       }
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-eslint`,
     {
