@@ -25,13 +25,7 @@ const useStyles = createUseStyles({
   }
 })
 
-const IndexPage = (props: any): React.ReactElement => {
-  const handleLink = React.useCallback((): void => {
-    const { langKey } = props.pageContext
-    const prefix = langKey === 'en' ? '/' : `/${langKey}/`
-    navigate(`${prefix}getting-started/installation`, { replace: true })
-  }, [props.pageContext.langKey]) // eslint-disable-line
-
+const IndexPage = (): React.ReactElement => {
   const classes = useStyles()
 
   return (
@@ -77,7 +71,7 @@ const IndexPage = (props: any): React.ReactElement => {
           </Box>
           <Box marginTop="1.2em">
             <Box display={['block', 'inline-block']}>
-              <Button variant="primary" size="large" onClick={handleLink}>
+              <Button as="a" href="/getting-started/installation" variant="primary" size="large">
                 GET START
               </Button>
             </Box>
