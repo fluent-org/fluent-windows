@@ -81,7 +81,7 @@ const queries = [
     transformer: ({ data }) => data.gettingStarted.edges.map(({ node }) => node),
     indexName: `fluent-ui_getting-started`,
     settings
-  },
+  }
 ]
 
 module.exports = queries
