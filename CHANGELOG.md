@@ -1,4 +1,4 @@
-# 1.0.0-alpha.1 (2019-10-07)
+# 1.0.0-alpha (2019-10-07)
 
 
 ### Bug Fixes
@@ -7,7 +7,13 @@
 * **@fluent-ui/hooks:** Add hooks: useHover, usePopper ([9479180](https://github.com/fluent-org/fluent-ui/commit/9479180))
 * **@fluent-ui/hooks:** Fix `useClickOutside` type error and update snapshots ([82080e2](https://github.com/fluent-org/fluent-ui/commit/82080e2))
 * **@fluent-ui/hooks:** Split hooks into separate packages ([7897849](https://github.com/fluent-org/fluent-ui/commit/7897849))
+* **@fluent-ui/hooks/useMessage:** Fix deps bug ([0d0b05f](https://github.com/fluent-org/fluent-ui/commit/0d0b05f))
+* **@fluent-ui/icons:** Adjust font size icon ([9e5042f](https://github.com/fluent-org/fluent-ui/commit/9e5042f))
+* **@fluent-ui/icons:** Delete icon `book-mark` ([13ee0a5](https://github.com/fluent-org/fluent-ui/commit/13ee0a5))
+* **@fluent-ui/icons:** Fix icon name ([fb83864](https://github.com/fluent-org/fluent-ui/commit/fb83864))
+* **@fluent-ui/icons:** Fix icon name ([5fc4218](https://github.com/fluent-org/fluent-ui/commit/5fc4218))
 * **@fluent-ui/icons:** Re-build icons ([c142a74](https://github.com/fluent-org/fluent-ui/commit/c142a74))
+* **@fluent-ui/icons:** Repair Git capitalization errors ([754f003](https://github.com/fluent-org/fluent-ui/commit/754f003))
 * **Box:** Fix the problem that the `Box` does not support color ([878689b](https://github.com/fluent-org/fluent-ui/commit/878689b))
 * **bug fix:** Fix circular reference problems ([e1521bc](https://github.com/fluent-org/fluent-ui/commit/e1521bc))
 * **bugs:** Some repair error ([959c605](https://github.com/fluent-org/fluent-ui/commit/959c605))
@@ -17,9 +23,18 @@
 * **Command:** The problem is not repaired Secondary display when only one child ([ce3d74c](https://github.com/fluent-org/fluent-ui/commit/ce3d74c))
 * **Command, Navigation:** Fix Command, Navigation child rendering position does not meet expectation ([735a629](https://github.com/fluent-org/fluent-ui/commit/735a629))
 * **ComponentType:** Fix the basis of each component prop type ([5cab5e9](https://github.com/fluent-org/fluent-ui/commit/5cab5e9))
+* **fluent-ui.com:** Change fluent-ui.com local start-up mode ([8b01876](https://github.com/fluent-org/fluent-ui/commit/8b01876))
+* **fluent-ui.com:** Display of props not fix the problem ([ce70c86](https://github.com/fluent-org/fluent-ui/commit/ce70c86))
+* **fluent-ui.com:** Fix `document is not define`. ([9a54723](https://github.com/fluent-org/fluent-ui/commit/9a54723))
+* **fluent-ui.com:** Fix components/header reference location error ([9cae0e8](https://github.com/fluent-org/fluent-ui/commit/9cae0e8))
+* **fluent-ui.com:** Fix components/search reference location error ([e44aac8](https://github.com/fluent-org/fluent-ui/commit/e44aac8))
+* **fluent-ui.com:** Fix icon name error ([35fa23d](https://github.com/fluent-org/fluent-ui/commit/35fa23d))
+* **fluent-ui.com:** Fix nav header icon ([e0d8c70](https://github.com/fluent-org/fluent-ui/commit/e0d8c70))
+* **fluent-ui.com:** Fix now build errors ([0150002](https://github.com/fluent-org/fluent-ui/commit/0150002))
 * **fluent-ui.com:** Fix the problem with the acrylic display in the document ([7c954b3](https://github.com/fluent-org/fluent-ui/commit/7c954b3))
 * **fluent-ui.com:** Join the homepage and adjust the style of the details ([c12250d](https://github.com/fluent-org/fluent-ui/commit/c12250d))
 * **fluent-ui.com:** Navigation Persistent record of scroll position ([1d67613](https://github.com/fluent-org/fluent-ui/commit/1d67613))
+* **fluent-ui.com:** Use the environment variable for now ([d805a72](https://github.com/fluent-org/fluent-ui/commit/d805a72))
 * **Form:** Fix bugs and improve documentation ([a263370](https://github.com/fluent-org/fluent-ui/commit/a263370))
 * **IconButton:** Fix IconButton does not have default size ([217cfdd](https://github.com/fluent-org/fluent-ui/commit/217cfdd))
 * **IconButton:** fix the background-color of IconButton in Safari ([67198da](https://github.com/fluent-org/fluent-ui/commit/67198da))
@@ -39,6 +54,7 @@
 * **Tooltip:** Fix problem with tooltip not showing ([81921b2](https://github.com/fluent-org/fluent-ui/commit/81921b2))
 * **Tooltip:** Fix the Tooltip title types ([09d5838](https://github.com/fluent-org/fluent-ui/commit/09d5838))
 * **Transition:** Make the prop type 'grow' support unmount ([7623484](https://github.com/fluent-org/fluent-ui/commit/7623484))
+* **tsconfig.json:** Set forceConsistentCasingInFileNames to false ([74fb81d](https://github.com/fluent-org/fluent-ui/commit/74fb81d))
 * **Typography:** Fix Variant type ([4b76252](https://github.com/fluent-org/fluent-ui/commit/4b76252))
 
 
@@ -47,7 +63,11 @@
 * **@fluent-ui/core:** Add propTypes support for all components ([09c2fa5](https://github.com/fluent-org/fluent-ui/commit/09c2fa5))
 * **@fluent-ui/core:** Change directory structure ([67e69b2](https://github.com/fluent-org/fluent-ui/commit/67e69b2))
 * **@fluent-ui/hooks:** add useMedia ([cbf7bd6](https://github.com/fluent-org/fluent-ui/commit/cbf7bd6))
+* **@fluent-ui/hooks:** New hooks useUpdateEffect ([b2e7e72](https://github.com/fluent-org/fluent-ui/commit/b2e7e72))
 * **@fluent-ui/hooks/useMessage:** New hooks `useMessage` ([a8a0411](https://github.com/fluent-org/fluent-ui/commit/a8a0411))
+* **@fluent-ui/icons:** Enable icons to be introduced on demand ([7faf606](https://github.com/fluent-org/fluent-ui/commit/7faf606))
+* **@fluent-ui/icons:** Icon rearrangement document using `react-lazyload` ([00dd5d6](https://github.com/fluent-org/fluent-ui/commit/00dd5d6))
+* **@fluent-ui/icons:** Remove unnamed icon ([e91fc15](https://github.com/fluent-org/fluent-ui/commit/e91fc15))
 * **@flunet-ui/icons:** Icon library switch to remix ([32cb171](https://github.com/fluent-org/fluent-ui/commit/32cb171))
 * **Box:** Add polyfill for box acrylic ([c611f28](https://github.com/fluent-org/fluent-ui/commit/c611f28))
 * **Box:** Box breakpoint fix the problem is not in force ([6cae488](https://github.com/fluent-org/fluent-ui/commit/6cae488))
@@ -66,9 +86,15 @@
 * **Drawer:** Add component Drawer ([4ca6967](https://github.com/fluent-org/fluent-ui/commit/4ca6967))
 * **fluent-ui.com:** Adding search with Algolia ([ece2f46](https://github.com/fluent-org/fluent-ui/commit/ece2f46)), closes [#9](https://github.com/fluent-org/fluent-ui/issues/9)
 * **fluent-ui.com:** Adjust the style ([2916ad4](https://github.com/fluent-org/fluent-ui/commit/2916ad4))
+* **fluent-ui.com:** Build code display component ([e34596d](https://github.com/fluent-org/fluent-ui/commit/e34596d))
 * **fluent-ui.com:** Card added more examples ([67b97ab](https://github.com/fluent-org/fluent-ui/commit/67b97ab))
 * **fluent-ui.com:** Change the background image inside the document, Fine-tuning the card component ([10db49f](https://github.com/fluent-org/fluent-ui/commit/10db49f))
+* **fluent-ui.com:** ColorTool color changes recorded in cookie ([ec79f59](https://github.com/fluent-org/fluent-ui/commit/ec79f59))
+* **fluent-ui.com:** Display and playground for the highlight of Language Category ([d861584](https://github.com/fluent-org/fluent-ui/commit/d861584))
 * **fluent-ui.com:** Document button to increase editPage ([e0152b3](https://github.com/fluent-org/fluent-ui/commit/e0152b3))
+* **fluent-ui.com:** Fix build errors and upload images to category restrictions ([384b2ad](https://github.com/fluent-org/fluent-ui/commit/384b2ad))
+* **fluent-ui.com:** Front to join the search box icon ([956ef6e](https://github.com/fluent-org/fluent-ui/commit/956ef6e))
+* **fluent-ui.com:** Navigation title sort ([2460dd5](https://github.com/fluent-org/fluent-ui/commit/2460dd5))
 * **fluent-ui.com:** New background change function ([e71561c](https://github.com/fluent-org/fluent-ui/commit/e71561c))
 * **fluent-ui.com:** Remove the header and move the content to the nav ([735aea1](https://github.com/fluent-org/fluent-ui/commit/735aea1))
 * **fluent-ui.com:** The new icon interaction ([24c82d3](https://github.com/fluent-org/fluent-ui/commit/24c82d3))
@@ -118,7 +144,10 @@
 
 ### Performance Improvements
 
+* **@fluent-ui/hooks:** Improve the performance of useReveal ([93c6041](https://github.com/fluent-org/fluent-ui/commit/93c6041))
+* **fluent-ui.com:** Add Offline Support with a Service Worker ([b771797](https://github.com/fluent-org/fluent-ui/commit/b771797))
 * **fluent-ui.com:** Icon document pages to improve rendering performance ([b454c26](https://github.com/fluent-org/fluent-ui/commit/b454c26))
+* **fluent-ui.com:** Replace the Home page's GetStarted button with the a tag ([213def9](https://github.com/fluent-org/fluent-ui/commit/213def9))
 * **useReveal:** Reduce redundant rendering with useCallback ([05f56c0](https://github.com/fluent-org/fluent-ui/commit/05f56c0))
 
 
