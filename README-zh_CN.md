@@ -12,7 +12,7 @@
 
 <div align="center">
 
-[React](https://reactjs.org/) components that inspired by [Microsoft's Fluent Design System](https://www.microsoft.com/design/fluent/).
+一套受 [Microsoft's Fluent Design System](https://www.microsoft.com/design/fluent/) 启发的 [React](https://reactjs.org/) 组件库。
 
 [![npm](https://img.shields.io/npm/v/@fluent-ui/core.svg?style=flat-square)](https://www.npmjs.com/package/@fluent-ui/core)
 [![CircleCI](https://img.shields.io/circleci/build/github/fluent-org/fluent-ui/master.svg?style=flat-square)](https://circleci.com/gh/fluent-org/fluent-ui/tree/master)
@@ -23,11 +23,11 @@
 
 </div>
 
-English | [简体中文](https://github.com/fluent-org/fluent-ui/blob/master/README-zh_CN.md)
+[English](https://github.com/fluent-org/fluent-ui/blob/master/README.md) | 简体中文
 
-## Installation
+## 安装
 
-Install the package in your project directory with:
+使用以下命令安装在项目目录中：
 
 ```
 // with npm
@@ -37,9 +37,9 @@ npm install @fluent-ui/core
 yarn add @fluent-ui/core
 ```
 
-## Usage
+## 用法
 
-Here is a quick example to get you started.
+这是一个快速入门的示例。
 
 ```jsx
 import React from 'react';
@@ -62,20 +62,20 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 
 [![Edit basic-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nervous-ellis-4e44e?fontsize=14)
 
-## Documentation
+## 文档
 
-Check out our [documentation website](https://fluent-ui.com).
+查看我们的[文档网站](https://fluent-ui.com)。
 
-## Changelog
+## 更新日志
 
-Recently Updated? Please read the [changelog](https://github.com/fluent-org/fluent-ui/blob/master/CHANGELOG.md).
+查看最近更新的内容请看 [changelog](https://github.com/fluent-org/fluent-ui/blob/master/CHANGELOG.md).
 
-## Links
+## 链接
 
-- [Fluent-UI-Icons](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-icons/README.md) - [demo/docs](https://fluent-ui.com/components/icon)
-- [Fluent-UI-Hooks](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-hooks/README.md) - [demo/docs](https://fluent-ui.com/hooks/use-action)
+- [Fluent-UI-Icons](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-icons/README.md) - [示例/文档](https://fluent-ui.com/components/icon)
+- [Fluent-UI-Hooks](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-hooks/README.md) - [示例/文档](https://fluent-ui.com/hooks/use-action)
 - [Fluent-UI-Styles](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-styles/README.md)
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/fluent-org/fluent-ui/blob/master/LICENSE).
+该项目遵循 [MIT license](https://github.com/fluent-org/fluent-ui/blob/master/LICENSE).
