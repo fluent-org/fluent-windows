@@ -14,7 +14,7 @@
 
 import * as React from 'react'
 
-export function useHover(
+function useHover(
   statusHandler?: (status: boolean) => void
 ): [
   boolean,
@@ -36,3 +36,5 @@ export function useHover(
 
   return [isHovered, bind]
 }
+
+export default useHover

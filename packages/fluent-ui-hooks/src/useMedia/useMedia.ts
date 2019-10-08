@@ -20,7 +20,7 @@
 
 import * as React from 'react'
 import * as json2mq_ from 'json2mq'
-import { useGlobal } from '../useGlobal'
+import useGlobal from '../useGlobal'
 
 // Cannot call a namespace ('json2mq') https://github.com/rollup/rollup/issues/670
 // eslint-disable-next-line @typescript-eslint/no-angle-bracket-type-assertion
@@ -60,7 +60,7 @@ const model = ({ sm, md, lg, xl }: Breakpoints): TransformedModel => ({
   xl: json2mq({ screen: true, minWidth: xl })
 })
 
-export function useMedia(
+function useMedia(
   mediaQuery: MediaQuery,
   option: Option = { breakpoints: defaultBreakpoints }
 ): boolean {
@@ -103,3 +103,5 @@ export function useMedia(
 
   return state
 }
+
+export default useMedia

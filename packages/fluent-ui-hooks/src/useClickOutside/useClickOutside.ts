@@ -16,13 +16,13 @@
  * <div ref={reference}>xxx</div>
  */
 
-import { useEffect, RefObject } from 'react'
+import * as React from 'react'
 
-export function useClickOutside(
-  ref: RefObject<HTMLDivElement>,
+function useClickOutside(
+  ref: React.RefObject<HTMLDivElement>,
   handler: (e: MouseEvent | TouchEvent) => void
 ): void {
-  useEffect((): (() => void) => {
+  React.useEffect((): (() => void) => {
     const listener = (event: MouseEvent | TouchEvent): void => {
       // @ts-ignore
       if (
@@ -46,3 +46,5 @@ export function useClickOutside(
     }
   }, [ref, handler])
 }
+
+export default useClickOutside

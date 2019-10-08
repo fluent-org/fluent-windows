@@ -1,1 +1,1 @@
-export * from './useReveal'
+export { default } from './useReveal'

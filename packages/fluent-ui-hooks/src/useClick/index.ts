@@ -1,1 +1,1 @@
-export * from './useClick'
+export { default } from './useClick'

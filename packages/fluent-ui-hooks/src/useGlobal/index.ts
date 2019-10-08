@@ -1,1 +1,1 @@
-export * from './useGlobal'
+export { default } from './useGlobal'

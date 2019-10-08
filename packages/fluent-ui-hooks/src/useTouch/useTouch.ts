@@ -14,7 +14,7 @@
 
 import * as React from 'react'
 
-export function useTouch(
+function useTouch(
   statusHandler?: (status: boolean) => void
 ): [
   boolean,
@@ -36,3 +36,5 @@ export function useTouch(
 
   return [isTouched, bind]
 }
+
+export default useTouch

@@ -1,1 +1,1 @@
-export * from './useMedia'
+export { default } from './useMedia'

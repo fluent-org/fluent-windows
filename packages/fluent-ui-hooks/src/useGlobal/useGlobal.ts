@@ -7,6 +7,8 @@
  * const global = useGlobal()
  */
 
-export function useGlobal(): Window | NodeJS.Global {
+function useGlobal(): Window | NodeJS.Global {
   return typeof window !== 'undefined' ? window : global
 }
+
+export default useGlobal

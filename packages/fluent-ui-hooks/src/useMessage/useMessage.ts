@@ -32,7 +32,7 @@
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { useGlobal } from '../useGlobal'
+import useGlobal from '../useGlobal'
 
 type Open = (content: React.ReactChild) => void
 type Close = () => void
@@ -45,10 +45,7 @@ type FunctionContainer = (
 type Duration = number
 type Return = [Open, Close]
 
-export function useMessage(
-  functionContainer: FunctionContainer,
-  duration: Duration = 3000
-): Return {
+function useMessage(functionContainer: FunctionContainer, duration: Duration = 3000): Return {
   const [visible, setVisible] = React.useState(false)
   const [content, setContent] = React.useState<React.ReactChild>('')
   const handleClose = React.useCallback((): void => {
@@ -80,3 +77,5 @@ export function useMessage(
   }, [])
   return [handleOpen, handleClose]
 }
+
+export default useMessage

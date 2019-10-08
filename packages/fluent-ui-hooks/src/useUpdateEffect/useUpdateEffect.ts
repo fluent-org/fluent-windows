@@ -30,7 +30,7 @@ import * as React from 'react'
 type EffectCallback = () => void | (() => void | undefined)
 type DependencyList = any[]
 
-export function useUpdateEffect(effect: EffectCallback, deps: DependencyList): void {
+function useUpdateEffect(effect: EffectCallback, deps: DependencyList): void {
   const isInitialMount = React.useRef(true)
   React.useEffect((): void | (() => void | undefined) => {
     if (isInitialMount.current) {
@@ -40,3 +40,5 @@ export function useUpdateEffect(effect: EffectCallback, deps: DependencyList): v
     }
   }, deps) // eslint-disable-line
 }
+
+export default useUpdateEffect

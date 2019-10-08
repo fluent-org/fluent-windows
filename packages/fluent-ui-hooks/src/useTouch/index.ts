@@ -1,1 +1,1 @@
-export * from './useTouch'
+export { default } from './useTouch'

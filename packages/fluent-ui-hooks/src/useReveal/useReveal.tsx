@@ -13,7 +13,7 @@
 
 import * as React from 'react'
 import * as CSS from 'csstype'
-import { useGlobal } from '../useGlobal'
+import useGlobal from '../useGlobal'
 
 type Return = [React.FC<RevealWrapperProps>]
 
@@ -67,10 +67,12 @@ const createRevealWrapper = (
   return RevealWrapper
 }
 
-export function useReveal(
+function useReveal(
   gradientSize: number = 80,
   lightColor: CSS.ColorProperty = 'rgba(160, 160, 160, 1)'
 ): Return {
   const RevealWrapper = createRevealWrapper(gradientSize, lightColor)
   return [RevealWrapper]
 }
+
+export default useReveal

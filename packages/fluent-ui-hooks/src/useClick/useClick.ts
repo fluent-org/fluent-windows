@@ -14,7 +14,7 @@
 
 import * as React from 'react'
 
-export function useClick(
+function useClick(
   statusHandler?: (status: boolean) => void
 ): [
   boolean,
@@ -33,3 +33,5 @@ export function useClick(
 
   return [isClicked, bind, setClicked]
 }
+
+export default useClick

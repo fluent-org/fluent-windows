@@ -8,8 +8,7 @@ langKey: "zh"
 ## API
 
 ```
-import useAction from '@fluent-ui/hooks/useAction'
-import useDispatch from '@fluent-ui/hooks/useDispatch'
+import { useAction, useDispatch } from '@fluent-ui/hooks/useAction'
 // or
 import { useAction, useDispatch } from '@fluent-ui/hooks'
 ```

@@ -16,7 +16,7 @@ import PopperJS from 'popper.js'
 // eslint-disable-next-line
 export interface usePropperOptions extends PopperJS.PopperOptions {}
 
-export function usePopper<Reference, Popper>({
+function usePopper<Reference, Popper>({
   placement = 'bottom',
   positionFixed = true,
   eventsEnabled = true,
@@ -65,3 +65,5 @@ export function usePopper<Reference, Popper>({
 
   return [referenceRef, popperRef]
 }
+
+export default usePopper

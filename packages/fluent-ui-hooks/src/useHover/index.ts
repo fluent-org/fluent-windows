@@ -1,1 +1,1 @@
-export * from './useHover'
+export { default } from './useHover'
