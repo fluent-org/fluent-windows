@@ -73,7 +73,7 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 ## 链接
 
 - [Fluent-UI-Icons](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-icons/README.md) - [示例/文档](https://fluent-ui.com/components/icon)
-- [Fluent-UI-Hooks](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-hooks/README.md) - [示例/文档](https://fluent-ui.com/hooks/use-action)
+- [Fluent-UI-Hooks](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-hooks/README.md) - [示例/文档](https://fluent-ui.com/hooks/guide)
 - [Fluent-UI-Styles](https://github.com/fluent-org/fluent-ui/blob/master/packages/fluent-ui-styles/README.md)
 
 ## License
