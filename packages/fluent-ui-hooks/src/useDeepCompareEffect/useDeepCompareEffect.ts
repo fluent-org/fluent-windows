@@ -2,9 +2,9 @@ import { DependencyList, EffectCallback, useEffect, useRef } from 'react'
 // @ts-ignore
 import isEqual from 'react-fast-compare'
 
-const isPrimitive = (val: any) => val !== Object(val)
+const isPrimitive = (val: any): boolean => val !== Object(val)
 
-export const useDeepCompareEffect = (effect: EffectCallback, deps: any[]) => {
+export const useDeepCompareEffect = (effect: EffectCallback, deps: any[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     if (!deps || !deps.length) {
       // eslint-disable-next-line no-console

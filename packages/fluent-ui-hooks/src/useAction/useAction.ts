@@ -54,11 +54,9 @@ function dispatch(param?: Dispatch): void {
   const { type, payload } = param!
   if (!type) return
   if (!subscribers.has(type)) return
-  getAction(type)!.forEach(
-    (callback): void => {
-      callback.call(undefined, payload)
-    }
-  )
+  getAction(type)!.forEach((callback): void => {
+    callback.call(undefined, payload)
+  })
 }
 
 export function useAction(type: Type, callback: Callback, deps: Deps = []): typeof dispatch {
