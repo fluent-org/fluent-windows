@@ -23,9 +23,12 @@ const TextArea: React.FC<TextAreaProps> = React.forwardRef<HTMLTextAreaElement, 
       ...rest
     } = props
 
-    function handleChange(e: React.ChangeEvent<HTMLTextAreaElement> | null): void {
-      onChange && onChange(e ? e.target.value : '')
-    }
+    const handleChange = React.useCallback(
+      (e: React.ChangeEvent<HTMLTextAreaElement> | null): void => {
+        onChange && onChange(e ? e.target.value : '')
+      },
+      [onChange]
+    )
 
     const classes = useStyles(props)
     const className = classNames(

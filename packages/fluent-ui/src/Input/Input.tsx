@@ -38,14 +38,20 @@ const Input: React.FC<InputProps> = React.forwardRef<HTMLInputElement, InputProp
         setClearedHeight(clearedRef.current.offsetHeight)
       }
     }, [])
-    function handleChange(e: React.ChangeEvent<HTMLInputElement> | null): void {
-      onChange && onChange(e ? e.target.value : '')
-    }
-    function handleClear(e: React.MouseEvent<HTMLElement>): void {
-      e.preventDefault()
-      e.stopPropagation()
-      handleChange(null)
-    }
+    const handleChange = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement> | null): void => {
+        onChange && onChange(e ? e.target.value : '')
+      },
+      [onChange]
+    )
+    const handleClear = React.useCallback(
+      (e: React.MouseEvent<HTMLElement>): void => {
+        e.preventDefault()
+        e.stopPropagation()
+        handleChange(null)
+      },
+      [handleChange]
+    )
 
     const classes = useStyles(props)
     const className = classNames(
