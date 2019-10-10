@@ -13,7 +13,6 @@ import Actions from './components/Actions'
 import {
   DialogProps,
   DialogType,
-  DialogChild,
   DialogContainer,
   DialogContextType,
   DialogPropTypes,
@@ -32,24 +31,38 @@ const Dialog: React.FC<DialogProps> = React.forwardRef<HTMLDivElement, DialogPro
   (props, ref): React.ReactElement | null => {
     const { as = 'div', className: classNameProp, children, visible, onChange, ...rest } = props
 
-    function handleClose(): void {
+    const handleClose = React.useCallback((): void => {
       onChange && onChange(false)
-    }
+    }, [onChange])
 
-    const container: DialogContainer = {
-      title: undefined,
-      content: [],
-      actions: undefined
-    }
-    React.Children.forEach(children, (child: DialogChild): void => {
-      if (child.type.displayName! === `F${name}Title`) {
-        container.title = child
-      } else if (child.type.displayName === `F${name}Actions`) {
-        container.actions = child
-      } else {
-        container.content.push(child)
-      }
-    })
+    const container = React.useMemo<DialogContainer>(
+      (): DialogContainer =>
+        React.Children.toArray(children).reduce<DialogContainer>(
+          (acc, cur): DialogContainer => {
+            if (cur.type.displayName! === `F${name}Title`) {
+              return {
+                ...acc,
+                title: cur
+              }
+            } else if (cur.type.displayName === `F${name}Actions`) {
+              return {
+                ...acc,
+                actions: cur
+              }
+            }
+            return {
+              ...acc,
+              content: [...acc.content, cur]
+            }
+          },
+          {
+            title: undefined,
+            content: [],
+            actions: undefined
+          }
+        ),
+      [children]
+    )
 
     const contextValue: DialogContextType = {
       onChange: onChange as (visible: boolean) => void

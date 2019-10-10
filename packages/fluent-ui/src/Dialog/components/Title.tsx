@@ -18,9 +18,9 @@ const Title: React.FC<DialogTitleProps> = (props): React.ReactElement => {
   const { children, ...rest } = props
   const classes = useStyles(props)
   const { onChange } = React.useContext(DialogContext)
-  function handleClose(): void {
+  const handleClose = React.useCallback((): void => {
     onChange && onChange(false)
-  }
+  }, [onChange])
   return (
     <div className={classes.title} {...rest}>
       <Typography variant="h6">{children}</Typography>
