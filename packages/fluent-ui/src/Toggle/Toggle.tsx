@@ -37,9 +37,12 @@ const Toggle: React.FC<ToggleProps> = React.forwardRef<HTMLInputElement, ToggleP
       [classes.circleCheckedAndDisabled]: checked && disabled
     })
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
-      onChange && onChange(e.target.checked)
-    }
+    const handleChange = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>): void => {
+        onChange && onChange(e.target.checked)
+      },
+      [onChange]
+    )
     return (
       <Component className={className} style={style}>
         <div className={circleClassName} />

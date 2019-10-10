@@ -51,20 +51,24 @@ const Select: React.FC<SelectProps> = React.forwardRef<HTMLInputElement, SelectP
         active && setCurrentText(child.props.children)
       })
     }, [children, value])
-    const theChildren = React.Children.map(
-      children,
-      (child: React.ReactElement): React.ReactElement => {
-        function onClick(): void {
-          child.props.value && onChange && onChange(child.props.value)
-          setCurrentText(child.props.children)
-          setVisible(false)
-        }
-        const active = child.props.value === value
-        return React.cloneElement(child, {
-          onClick,
-          active
-        })
-      }
+    const theChildren = React.useMemo(
+      (): React.ReactElement[] =>
+        React.Children.map(
+          children,
+          (child: React.ReactElement): React.ReactElement => {
+            function onClick(): void {
+              child.props.value && onChange && onChange(child.props.value)
+              setCurrentText(child.props.children)
+              setVisible(false)
+            }
+            const active = child.props.value === value
+            return React.cloneElement(child, {
+              onClick,
+              active
+            })
+          }
+        ),
+      [children, value, setCurrentText, setVisible, onChange]
     )
 
     const classes = useStyles(props)

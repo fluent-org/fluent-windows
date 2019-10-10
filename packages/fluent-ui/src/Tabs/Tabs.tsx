@@ -47,7 +47,7 @@ const Tabs: React.FC<TabsProps> = React.forwardRef<HTMLDivElement, TabsProps>(
     const className = classNames(classes.root, classNameProp)
 
     return (
-      <Box className={className} ref={ref} {...rest}>
+      <Box className={className} as={as} ref={ref} {...rest}>
         <Navigation horizontal value={value} onChange={onChange} boxShadow="2" {...rest}>
           {values.map(
             ({ value, title }): React.ReactElement => (

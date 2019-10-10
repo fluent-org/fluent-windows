@@ -54,14 +54,18 @@ const Tooltip: React.FC<TooltipProps> = (props): React.ReactElement => {
   const classes = useStyles(props)
   const className = classNames(classes.root, classNameProp)
 
-  const content =
-    typeof title === 'string' ? (
-      <Component className={className} ref={popperRef}>
-        {title}
-      </Component>
-    ) : (
-      React.cloneElement(title, { ref: popperRef, ...bind })
-    )
+  const content = React.useMemo(
+    (): React.ReactElement =>
+      typeof title === 'string' ? (
+        <Component className={className} ref={popperRef}>
+          {title}
+        </Component>
+      ) : (
+        React.cloneElement(title, { ref: popperRef, ...bind })
+      ),
+    [title, className, popperRef, bind]
+  )
+
   return (
     <>
       {React.cloneElement(children, { ref: referenceRef, ...bind })}

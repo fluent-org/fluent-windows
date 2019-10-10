@@ -35,9 +35,12 @@ const Radio: React.FC<RadioProps> = React.forwardRef<HTMLInputElement, RadioProp
       [classes.circleDisabled]: disabled
     })
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
-      onChange && onChange(e.target.value)
-    }
+    const handleChange = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>): void => {
+        onChange && onChange(e.target.value)
+      },
+      [onChange]
+    )
     return (
       <Component className={className} style={style}>
         <div className={circleClassName} />
