@@ -12,7 +12,6 @@ import Transition from '../Transition'
 import {
   CommandProps,
   CommandContainer,
-  CommandChild,
   CommandType,
   CommandPropTypes,
   CommandClassProps
@@ -39,32 +38,47 @@ const Command: React.FC<CommandProps> = React.forwardRef<HTMLDivElement, Command
     const classes = useStyles(props)
     const className = classNames(classes.root, classNameProp)
 
-    const container: CommandContainer = {
-      content: [],
-      standard: [],
-      secondary: null
-    }
-    React.Children.forEach(children, (child: CommandChild): void => {
-      if (child.type.displayName! === 'FCommandContent') {
-        container.content.push(child)
-      } else if (child.type.displayName === 'FCommandSecondary') {
-        container.secondary = child.props.children
-      } else {
-        container.standard.push(child)
-      }
-    })
+    const container = React.useMemo<CommandContainer>(
+      (): CommandContainer =>
+        React.Children.toArray(children).reduce<CommandContainer>(
+          (acc, cur): CommandContainer => {
+            if (cur.type.displayName! === 'FCommandContent') {
+              return {
+                ...acc,
+                content: [...acc.content, cur]
+              }
+            } else if (cur.type.displayName === 'FCommandSecondary') {
+              return {
+                ...acc,
+                secondary: cur.props.children
+              }
+            }
+            return {
+              ...acc,
+              standard: [...acc.standard, cur]
+            }
+          },
+          {
+            content: [],
+            standard: [],
+            secondary: null
+          }
+        ),
+      [children]
+    )
+
     // Reveal does not take effect when using acrylic
-    const _reveal = acrylic ? false : reveal
+    const _reveal = React.useMemo((): boolean => (acrylic ? false : reveal), [acrylic, reveal])
     const [RevealWrapper] = useReveal()
     // Secondary Popup related
     const [secondaryVisible, setSecondaryVisible] = React.useState(false)
-    function handleSecondaryVisible(): void {
+    const handleSecondaryVisible = React.useCallback((): void => {
       if (secondaryVisible) return
       setSecondaryVisible((visible: boolean): boolean => !visible)
-    }
+    }, [secondaryVisible])
     // Click on the area outside the More menu to close the More menu.
     const [referenceRef, popperRef] = usePopper<HTMLDivElement, HTMLDivElement>({
-      placement: 'bottom'
+      placement: 'bottom-end'
     })
     useClickOutside(popperRef, (event: MouseEvent | TouchEvent): void => {
       // @ts-ignore
