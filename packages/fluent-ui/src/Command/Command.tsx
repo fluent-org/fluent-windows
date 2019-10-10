@@ -152,4 +152,8 @@ Command.displayName = `F${name}`
 
 Command.propTypes = CommandPropTypes
 
+Command.defaultProps = {
+  reveal: false
+}
+
 export default Command as CommandType

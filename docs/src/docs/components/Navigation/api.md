@@ -22,7 +22,7 @@ Use `Navigation.Header` `Navigation.Footer` inside Navigation so that we knows h
 | children | any[] |  | The content of the `Navigation`. |
 | horizontal | boolean | false | If `true`, `Navigation` will become vertical. |
 | expanded | boolean | true | If `false`, `Navigation` will become compact. |
-| reveal | boolean |  | [Reveal](https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal) is a lighting effect that highlights interactive elements, such as command bars, when the user moves the pointer near them. |
+| reveal | boolean | false | [Reveal](https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal) is a lighting effect that highlights interactive elements, such as command bars, when the user moves the pointer near them. |
 | value | string &or; number |  | Currently selected `Item`. |
 | onChange | (id: string &or; number) => void |  | Callback executed when a `Item` is selected. |
 

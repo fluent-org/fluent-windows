@@ -22,7 +22,7 @@ import { Navigation } from '@fluent-ui/core'
 | children | any[] |  | `Navigation` 的内容。 |
 | horizontal | boolean | false | 如果 `true`, `Navigation` 将变为水平样式。 |
 | expanded | boolean | true | 如果 `false`, `Navigation` 将变为紧凑样式。 |
-| reveal | boolean |  | [Reveal](https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal) 是一种照明效果，当用户将指针移动到交互元素附近时，它会高亮显示交互元素。 |
+| reveal | boolean | false | [Reveal](https://docs.microsoft.com/en-us/windows/uwp/design/style/reveal) 是一种照明效果，当用户将指针移动到交互元素附近时，它会高亮显示交互元素。 |
 | value | string &or; number |  | 当前被选中的 `Item`。 |
 | onChange | (id: string &or; number) => void |  | `Item` 被转中时的回调。 |
 

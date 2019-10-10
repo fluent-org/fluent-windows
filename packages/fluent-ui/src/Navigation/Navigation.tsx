@@ -48,29 +48,43 @@ const Navigation: React.FC<NavigationProps> = React.forwardRef<HTMLDivElement, N
       horizontal = false,
       expanded = true,
       acrylic = false,
-      reveal,
+      reveal = false,
       value,
       onChange,
       children,
       ...rest
     } = props
 
-    const container: NavigationContainer = {
-      header: [],
-      footer: [],
-      content: []
-    }
-    React.Children.forEach(children, (child: NavigationChild): void => {
-      if (child.type && child.type.displayName === 'FNavigationHeader') {
-        container.header.push(child)
-      } else if (child.type && child.type.displayName === 'FNavigationFooter') {
-        container.footer.push(child)
-      } else {
-        container.content.push(child)
-      }
-    })
+    const container = React.useMemo<NavigationContainer>(
+      (): NavigationContainer =>
+        React.Children.toArray(children).reduce<NavigationContainer>(
+          (acc, cur: NavigationChild): NavigationContainer => {
+            if (cur.type && cur.type.displayName === 'FNavigationHeader') {
+              return {
+                ...acc,
+                header: [...acc.header, cur]
+              }
+            } else if (cur.type && cur.type.displayName === 'FNavigationFooter') {
+              return {
+                ...acc,
+                footer: [...acc.footer, cur]
+              }
+            }
+            return {
+              ...acc,
+              content: [...acc.content, cur]
+            }
+          },
+          {
+            header: [],
+            footer: [],
+            content: []
+          }
+        ),
+      [children]
+    )
 
-    const _reveal = acrylic ? false : reveal
+    const _reveal = React.useMemo((): boolean => (acrylic ? false : reveal), [acrylic, reveal])
     const [RevealWrapper] = useReveal(66)
     const revealHeader = React.useMemo(
       (): React.ReactElement[] =>
@@ -170,7 +184,8 @@ Navigation.propTypes = NavigationPropTypes
 Navigation.defaultProps = {
   horizontal: false,
   expanded: true,
-  acrylic: false
+  acrylic: false,
+  reveal: false
 }
 
 export default Navigation as NavigationType
