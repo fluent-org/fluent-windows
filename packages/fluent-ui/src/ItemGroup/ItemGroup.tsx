@@ -100,36 +100,44 @@ const ItemGroup: React.FC<ItemGroupProps> = React.forwardRef<HTMLDivElement, Ite
 
     // handle Reveal Effects
     const [RevealWrapper] = useReveal(66)
-    const titleElement = reveal ? (
-      <RevealWrapper>
-        <Item prefix={prefix}>{title}</Item>
-      </RevealWrapper>
-    ) : (
-      <Item prefix={prefix}>{title}</Item>
+    const titleElement = React.useMemo(
+      (): React.ReactElement =>
+        reveal ? (
+          <RevealWrapper>
+            <Item prefix={prefix}>{title}</Item>
+          </RevealWrapper>
+        ) : (
+          <Item prefix={prefix}>{title}</Item>
+        ),
+      [reveal, prefix, title]
     )
-    const childElements = reveal
-      ? React.Children.map(
-          children,
-          (child: React.ReactElement, i): React.ReactElement => {
-            if (child.type) {
-              if ((child as any).type.displayName === 'FItem') {
-                return <RevealWrapper key={i}>{child}</RevealWrapper>
-              } else if ((child as any).type.displayName === `F${name}`) {
-                return React.cloneElement(child, { level: level + 1 })
+    const childElements = React.useMemo(
+      (): React.ReactElement[] =>
+        reveal
+          ? React.Children.map(
+              children,
+              (child: React.ReactElement, i): React.ReactElement => {
+                if (child.type) {
+                  if ((child as any).type.displayName === 'FItem') {
+                    return <RevealWrapper key={i}>{child}</RevealWrapper>
+                  } else if ((child as any).type.displayName === `F${name}`) {
+                    return React.cloneElement(child, { level: level + 1 })
+                  }
+                }
+                return child
               }
-            }
-            return child
-          }
-        )
-      : React.Children.map(
-          children,
-          (child: React.ReactElement): React.ReactElement => {
-            if (child.type && (child as any).type.displayName === `F${name}`) {
-              return React.cloneElement(child, { level: level + 1 })
-            }
-            return child
-          }
-        )
+            )
+          : React.Children.map(
+              children,
+              (child: React.ReactElement): React.ReactElement => {
+                if (child.type && (child as any).type.displayName === `F${name}`) {
+                  return React.cloneElement(child, { level: level + 1 })
+                }
+                return child
+              }
+            ),
+      [reveal, children, level]
+    )
 
     const isFloat = shrink === 'float' || horizontal
 
