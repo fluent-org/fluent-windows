@@ -21,7 +21,7 @@ exports[`Command should be rendered with acrylic effects 1`] = `
         class="FItem-prefixRoot"
       >
         <svg
-          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -46,7 +46,7 @@ exports[`Command should be rendered with acrylic effects 1`] = `
       class="FItem-prefixRoot"
     >
       <svg
-        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -490,7 +490,7 @@ exports[`Command should be rendered with reveal effects 1`] = `
           class="FItem-prefixRoot"
         >
           <svg
-            style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+            style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -520,7 +520,7 @@ exports[`Command should be rendered with reveal effects 1`] = `
         class="FItem-prefixRoot"
       >
         <svg
-          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1163,7 +1163,7 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
         class="FItem-prefixRoot"
       >
         <svg
-          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1188,7 +1188,7 @@ exports[`Command should to render Primary Content and Secondary 1`] = `
       class="FItem-prefixRoot"
     >
       <svg
-        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1222,7 +1222,7 @@ exports[`Command without Content and Secondary 1`] = `
         class="FItem-prefixRoot"
       >
         <svg
-          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

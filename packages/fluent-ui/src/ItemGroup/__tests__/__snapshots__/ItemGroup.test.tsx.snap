@@ -15,7 +15,7 @@ exports[`ItemGroup should be support prefix 1`] = `
       >
         <svg
           data-testid="icon"
-          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+          style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -36,7 +36,7 @@ exports[`ItemGroup should be support prefix 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixNotFloatClose FItemGroup-titlePrefixExpanded"
     >
       <svg
-        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -90,7 +90,7 @@ exports[`ItemGroup should be support shrink float 1`] = `
       class="FItemGroup-titlePrefix FItemGroup-titlePrefixExpanded"
     >
       <svg
-        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor;"
+        style="width: 1em; height: 1em; display: inline-block; font-size: inherit; fill: currentColor; vertical-align: middle;"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
