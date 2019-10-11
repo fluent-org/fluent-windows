@@ -40,7 +40,8 @@ function createIcon(
         display: 'inline-block',
         fontSize: 'inherit',
         color: 'inherit',
-        fill: 'currentColor'
+        fill: 'currentColor',
+        verticalAlign: 'middle'
       }
       return createElement(jsx, { style, ref, ...props })
     }
