@@ -71,5 +71,8 @@ exports[`Button should render children 1`] = `
 .FButton-ghost:active {
   border-color: rgba(0, 0, 0, 0.4);
   background-color: transparent;
+}
+.FButton-rounded {
+  border-radius: 44px;
 }"
 `;

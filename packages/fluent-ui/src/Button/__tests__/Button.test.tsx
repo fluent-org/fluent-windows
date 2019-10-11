@@ -56,6 +56,11 @@ describe('Button', (): void => {
     expect(container.firstChild).toHaveClass(classes.ghost)
   })
 
+  test('should render a rounded button', (): void => {
+    const { container } = render(<Button rounded>{testText}</Button>)
+    expect(container.firstChild).toHaveClass(classes.rounded)
+  })
+
   test('should trigger the specified event', (): void => {
     const handleClick = jest.fn()
     const { getByText } = render(<Button onClick={handleClick}>{testText}</Button>)

@@ -21,6 +21,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Button
       size = 'medium',
       block = false,
       ghost,
+      rounded = false,
       ...rest
     } = props
     const classes = useStyles(props)
@@ -33,7 +34,8 @@ const Button: React.FC<ButtonProps> = React.forwardRef<HTMLButtonElement, Button
         [classes.sizeMedium]: size === 'medium',
         [classes.sizeLarge]: size === 'large',
         [classes.block]: block,
-        [classes.ghost]: ghost
+        [classes.ghost]: ghost,
+        [classes.rounded]: rounded
       },
       classNameProp
     )
@@ -52,7 +54,8 @@ Button.propTypes = ButtonPropTypes
 Button.defaultProps = {
   variant: 'standard',
   size: 'medium',
-  block: false
+  block: false,
+  rounded: false
 }
 
 export default Button

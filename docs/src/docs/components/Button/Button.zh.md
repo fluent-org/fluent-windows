@@ -74,3 +74,14 @@ langKey: "zh"
   <Button ghost>Ghost</Button>
 </Box>
 ```
+
+## 弧形按钮
+
+```jsx
+<>
+  <Button rounded>round</Button>
+  <Button variant="primary" rounded>
+    <Icon.EmotionLine />
+  </Button>
+</>
+```

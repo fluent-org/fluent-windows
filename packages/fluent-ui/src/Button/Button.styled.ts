@@ -69,6 +69,10 @@ const ghost = (theme: Theme): Style => ({
   }
 })
 
+const rounded: Style = {
+  borderRadius: 44
+}
+
 export const styles = (theme: Theme): Styles<ButtonClassProps> => ({
   root: root(theme),
   variantStandard: variantStandard(theme),
@@ -77,5 +81,6 @@ export const styles = (theme: Theme): Styles<ButtonClassProps> => ({
   sizeMedium: sizeMedium(theme),
   sizeLarge: sizeLarge(theme),
   block,
-  ghost: ghost(theme)
+  ghost: ghost(theme),
+  rounded
 })

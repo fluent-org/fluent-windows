@@ -74,3 +74,14 @@ You can use `as` to change the type of DOM tag.
   <Button ghost>Ghost</Button>
 </Box>
 ```
+
+## Rounded
+
+```jsx
+<>
+  <Button rounded>round</Button>
+  <Button variant="primary" rounded>
+    <Icon.EmotionLine />
+  </Button>
+</>
+```
