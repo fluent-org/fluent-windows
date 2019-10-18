@@ -8,7 +8,7 @@ exports[`IconButton should render children 1`] = `
   display: inline-flex;
   outline: none;
   overflow: hidden;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,box-shadow 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,padding 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,box-shadow 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,padding 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   align-items: center;
   border-radius: 50%;
   flex-direction: column;

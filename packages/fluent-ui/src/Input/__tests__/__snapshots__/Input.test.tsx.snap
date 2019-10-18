@@ -102,7 +102,7 @@ exports[`Input should be support cleared 2`] = `
 }
 .FTransition-root-0 {
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,visibility 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: opacity 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,visibility 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   visibility: hidden;
 }
 .FTransition-collapse-1 {}
@@ -130,7 +130,7 @@ exports[`Input should be support cleared 2`] = `
   border: 2px solid;
   outline: none;
   padding: 6px 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;
 }
@@ -175,7 +175,7 @@ exports[`Input should be support cleared 2`] = `
   display: inline-flex;
   position: absolute;
   font-size: 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   align-items: center;
   justify-content: center;
 }
@@ -223,7 +223,7 @@ exports[`Input should be support error 1`] = `
   border: 2px solid;
   outline: none;
   padding: 6px 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;
 }
@@ -268,7 +268,7 @@ exports[`Input should be support error 1`] = `
   display: inline-flex;
   position: absolute;
   font-size: 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   align-items: center;
   justify-content: center;
 }
@@ -316,7 +316,7 @@ exports[`Input should be support ghost 1`] = `
   border: 2px solid;
   outline: none;
   padding: 6px 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;
 }
@@ -361,7 +361,7 @@ exports[`Input should be support ghost 1`] = `
   display: inline-flex;
   position: absolute;
   font-size: 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   align-items: center;
   justify-content: center;
 }
@@ -409,7 +409,7 @@ exports[`Input should be support prefix 1`] = `
   border: 2px solid;
   outline: none;
   padding: 6px 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;
 }
@@ -454,7 +454,7 @@ exports[`Input should be support prefix 1`] = `
   display: inline-flex;
   position: absolute;
   font-size: 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   align-items: center;
   justify-content: center;
 }
@@ -502,7 +502,7 @@ exports[`Input should be support suffix 1`] = `
   border: 2px solid;
   outline: none;
   padding: 6px 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;
 }
@@ -547,7 +547,7 @@ exports[`Input should be support suffix 1`] = `
   display: inline-flex;
   position: absolute;
   font-size: 12px;
-  transition: background-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms,border-color 250ms cubic-bezier(0.76, 0.24, 0.23, 0.94) 0ms;
+  transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   align-items: center;
   justify-content: center;
 }
