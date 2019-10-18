@@ -16,7 +16,7 @@ export interface Transitions {
 export const createBaseTransition = (
   type: string[],
   duration = 250,
-  cubicBezier = '0.76, 0.24, 0.23, 0.94'
+  cubicBezier = '0.7, 0.1, 0.33, 1'
 ): CSS.TransitionProperty =>
   type
     .map((v): CSS.SingleTransition => `${v} ${duration}ms cubic-bezier(${cubicBezier}) 0ms`)
