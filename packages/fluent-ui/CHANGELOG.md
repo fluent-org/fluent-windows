@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@1.0.0-alpha.2...@fluent-ui/core@1.0.0-alpha.3) (2019-10-18)
+
+
+### Features
+
+* **Button:** Add prop rounded ([13fb985](https://github.com/fluent-org/fluent-ui/commit/13fb985))
+* **theme.space:** Increase default support for space ([9224c24](https://github.com/fluent-org/fluent-ui/commit/9224c24))
+* **theme.transitions:** Adjust the transition to a more comfortable number ([3272527](https://github.com/fluent-org/fluent-ui/commit/3272527))
+
+
+
+
+
 # 1.0.0-alpha.2 (2019-10-10)
 
 

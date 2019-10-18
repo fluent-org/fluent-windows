@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.3](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@2.0.0-alpha.2...fluent-ui.com@2.0.0-alpha.3) (2019-10-18)
+
+
+### Bug Fixes
+
+* **fluent-ui.com:** Fix document page edit-this-page address error ([7e6332d](https://github.com/fluent-org/fluent-ui/commit/7e6332d))
+
+
+### Features
+
+* **Button:** Add prop rounded ([13fb985](https://github.com/fluent-org/fluent-ui/commit/13fb985))
+
+
+
+
+
 # 2.0.0-alpha.2 (2019-10-10)
 
 
