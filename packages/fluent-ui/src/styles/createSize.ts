@@ -5,6 +5,9 @@ interface ElementType {
   button?: Style
   iconButton?: Style
   input?: Style
+  inputWithLabel?: Style
+  inputLabel?: Style
+  inputLabelFocus?: Style
 }
 export interface Sizes {
   small?: ElementType
@@ -31,7 +34,16 @@ function createSize(sizes: Sizes = {}): Sizes {
         padding: 12
       },
       input: {
-        padding: '6px 12px'
+        padding: '11px 6px'
+      },
+      inputWithLabel: {
+        padding: '16px 6px 6px'
+      },
+      inputLabel: {
+        transform: 'translate(16px, 12px)'
+      },
+      inputLabelFocus: {
+        transform: 'scale(0.65) translate(12px, 8px)'
       }
     },
     large: {

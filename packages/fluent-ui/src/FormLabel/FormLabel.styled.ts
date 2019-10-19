@@ -6,6 +6,9 @@ const root: Style = {
   justifyContent: 'center',
   alignItems: 'center'
 }
+const text: Style = {
+  letterSpacing: '0.007em'
+}
 
 const positionTop: Style = {
   flexDirection: 'column'
@@ -22,6 +25,7 @@ const positionRight: Style = {
 
 export const styles: Styles<FormLabelClassProps> = {
   root,
+  text,
   positionTop,
   positionBottom,
   positionLeft,

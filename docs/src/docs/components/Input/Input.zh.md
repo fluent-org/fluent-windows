@@ -12,7 +12,7 @@ langKey: "zh"
 ## 默认
 
 ```jsx
-<Input placeholder='Hint text' />
+<Input label='text' placeholder='Hint text' />
 ```
 
 ## 受控的
@@ -24,7 +24,7 @@ langKey: "zh"
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} />
+    <Input label='text' value={value} onChange={handleChange} />
   )
 }
 ```
@@ -34,7 +34,7 @@ langKey: "zh"
 是否禁用输入框
 
 ```jsx
-<Input value='Hint text' disabled />
+<Input label='text' value='Hint text' disabled />
 ```
 
 ## Cleared
@@ -48,7 +48,7 @@ langKey: "zh"
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} cleared />
+    <Input label='text' value={value} onChange={handleChange} cleared />
   )
 }
 ```
@@ -62,7 +62,7 @@ langKey: "zh"
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} password />
+    <Input label='password' value={value} onChange={handleChange} password />
   )
 }
 ```
@@ -76,17 +76,17 @@ langKey: "zh"
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} error />
+    <Input label='error' value={value} onChange={handleChange} error />
   )
 }
 ```
 
-## 前置和后置
+## 后置
 
 ```jsx
 <>
-  <Input prefix="¥" suffix="RMB" />
-  <Input prefix={<Icon.UserSmileLine />} suffix={<Icon.InformationLine />} />
+  <Input suffix="RMB" />
+  <Input suffix={<Icon.InformationLine />} />
 </>
 ```
 
@@ -94,7 +94,7 @@ langKey: "zh"
 
 ```jsx
 <Box padding={20} background={`url(${bg}) center/cover fixed`}>
-  <Input ghost />
+  <Input label='ghost' ghost />
 </Box>
 ```
 

@@ -8,7 +8,11 @@ exports[`FormLabel should be support position 1`] = `
     class="FBox-root FBox-system FBox-system-2 FTypography-root FTypography-variants FTypography-variants-0 FFormLabel-root FFormLabel-positionTop"
     data-testid="top"
   >
-    Hello World
+    <span
+      class="FFormLabel-text"
+    >
+      Hello World
+    </span>
     <input
       style="margin-top: 8px;"
       type="text"
@@ -18,7 +22,11 @@ exports[`FormLabel should be support position 1`] = `
     class="FBox-root FBox-system FBox-system-4 FTypography-root FTypography-variants FTypography-variants-1 FFormLabel-root FFormLabel-positionBottom"
     data-testid="bottom"
   >
-    Hello World
+    <span
+      class="FFormLabel-text"
+    >
+      Hello World
+    </span>
     <input
       style="margin-bottom: 8px;"
       type="text"
@@ -28,7 +36,11 @@ exports[`FormLabel should be support position 1`] = `
     class="FBox-root FBox-system FBox-system-6 FTypography-root FTypography-variants FTypography-variants-2 FFormLabel-root FFormLabel-positionLeft"
     data-testid="left"
   >
-    Hello World
+    <span
+      class="FFormLabel-text"
+    >
+      Hello World
+    </span>
     <input
       style="margin-left: 8px;"
       type="text"
@@ -38,7 +50,11 @@ exports[`FormLabel should be support position 1`] = `
     class="FBox-root FBox-system FBox-system-8 FTypography-root FTypography-variants FTypography-variants-3 FFormLabel-root FFormLabel-positionRight"
     data-testid="right"
   >
-    Hello World
+    <span
+      class="FFormLabel-text"
+    >
+      Hello World
+    </span>
     <input
       style="margin-right: 8px;"
       type="text"
@@ -153,6 +169,9 @@ exports[`FormLabel should render children 1`] = `
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+  .FFormLabel-text {
+    letter-spacing: 0.007em;
   }
   .FFormLabel-positionTop {
     flex-direction: column;

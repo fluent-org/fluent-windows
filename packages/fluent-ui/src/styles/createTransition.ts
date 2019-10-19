@@ -5,6 +5,7 @@ export interface Transitions {
   default?: CSS.TransitionProperty
   button?: CSS.TransitionProperty
   input?: CSS.TransitionProperty
+  inputLabel?: CSS.TransitionProperty
   checkbox?: CSS.TransitionProperty
   toggle?: CSS.TransitionProperty
   radio?: CSS.TransitionProperty
@@ -32,6 +33,7 @@ function createTransition(transitions: Transitions): Transitions {
       250
     ),
     input: createBaseTransition(['background-color', 'color', 'border-color'], 250),
+    inputLabel: createBaseTransition(['transform'], 180),
     checkbox: baseTransition,
     toggle: baseTransition,
     radio: baseTransition,

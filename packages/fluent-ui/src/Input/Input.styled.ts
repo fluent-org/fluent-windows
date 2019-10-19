@@ -2,65 +2,82 @@ import { Style, Styles } from 'jss'
 import { Theme } from '../styles'
 import { InputClassProps, InputProps } from './Input.type'
 
-const wrapper: Style = {
+const PADDING_RIGHT = 34
+
+const wrapper = (theme: Theme): Style => (
+  props: InputProps & { focus: boolean; _value: string }
+): Style => ({
   display: 'inline-block',
   position: 'relative',
-  minWidth: 160,
-  font: 'inherit'
+  minWidth: 180,
+  '& > span': {
+    fontWeight: 600,
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    cursor: 'text',
+    transition: theme.transitions!.inputLabel,
+    transformOrigin: 'top left',
+    ...theme.sizes!.medium!.inputLabel,
+    color: props.focus ? theme.colors!.black!.default : theme.colors!.standard!.dark2,
+    ...((props.focus || props._value) && theme.sizes!.medium!.inputLabelFocus)
+  },
+  '& > div': { margin: '0 !important' },
+  ...(!props.disabled && {
+    '&:hover': {
+      '& input': {
+        borderColor: theme.colors!.standard!.transparent1
+      }
+    }
+  })
+})
+const disabled: Style = {
+  cursor: 'not-allowed'
 }
 
-const root = (theme: Theme): Style => ({
+const root = (theme: Theme): Style => (
+  props: InputProps & { focus: boolean; _value: string }
+): Style => ({
+  boxSizing: 'border-box',
   outline: 'none',
   font: 'inherit',
   width: '100%',
   borderRadius: 2,
   border: '2px solid',
-  borderColor: theme.colors!.standard!.default,
+  borderColor: 'transparent',
   transition: theme.transitions!.input,
-  '&:hover': {
-    borderColor: theme.colors!.standard!.dark1
+  backgroundColor: theme.colors!.standard!.transparent1,
+  '&::placeholder': {
+    color: 'transparent',
+    transition: theme.transitions!.input
   },
   '&:active, &:focus': {
-    borderColor: theme.colors!.primary!.default
+    borderColor: `${props.error ? '' : theme.colors!.black!.default} ${
+      props.disabled ? '' : '!important'
+    }`,
+    backgroundColor: theme.colors!.white!.default,
+    '&::placeholder': {
+      color: theme.colors!.standard!.dark2
+    }
   },
   '&:disabled': {
-    color: theme.colors!.standard!.dark2,
-    backgroundColor: theme.colors!.standard!.light1,
-    cursor: 'not-allowed',
+    color: theme.colors!.standard!.dark3,
+    backgroundColor: theme.colors!.standard!.default,
+    borderColor: theme.colors!.standard!.default,
     pointerEvents: 'none'
   },
-  ...theme.sizes!.medium!.input,
-  '&:not(:first-child)': {
-    paddingLeft: 30
-  },
+  ...(props.label ? theme.sizes!.medium!.inputWithLabel : theme.sizes!.medium!.input),
   '&:not(:last-child)': {
-    paddingRight: 30
+    paddingRight: PADDING_RIGHT
   }
 })
 const error = (theme: Theme): Style => ({
-  borderColor: theme.colors!.error!.default,
+  borderColor: `${theme.colors!.error!.default} !important`,
   '&:hover': {
-    borderColor: theme.colors!.error!.default
+    borderColor: `${theme.colors!.error!.default} !important`
   },
   '&:active, &:focus': {
-    borderColor: theme.colors!.error!.default
-  }
-})
-
-const clearedIcon = (theme: Theme): Style => ({
-  height: '100%',
-  position: 'absolute',
-  right: 0,
-  top: 0,
-  fontSize: 12,
-  cursor: 'pointer',
-  display: 'inline-flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  transition: theme.transitions!.input,
-  '&:hover': {
-    backgroundColor: theme.colors!.primary!.default,
-    color: theme.colors!.white!.default
+    borderColor: `${theme.colors!.error!.default} !important`
   }
 })
 
@@ -73,13 +90,13 @@ const extra = (theme: Theme): Style => ({
   alignItems: 'center',
   color: theme.colors!.standard!.transparent3
 })
-const prefix = (theme: Theme): Style => ({
+const clearedIcon = (theme: Theme): Style => ({
   ...extra(theme),
-  left: 12
+  right: 6
 })
-const suffix = (theme: Theme): Style => (props: InputProps): Style => ({
+const suffix = (theme: Theme): Style => ({
   ...extra(theme),
-  right: 12 + (props.suffix && !!props.value ? 30 : 0)
+  right: 6
 })
 
 const ghost = (theme: Theme): Style => ({
@@ -94,11 +111,11 @@ const ghost = (theme: Theme): Style => ({
 })
 
 export const styles = (theme: Theme): Styles<InputClassProps> => ({
+  wrapper: wrapper(theme),
+  disabled,
   root: root(theme),
   error: error(theme),
-  wrapper,
   clearedIcon: clearedIcon(theme),
-  prefix: prefix(theme),
   suffix: suffix(theme),
   ghost: ghost(theme)
 })

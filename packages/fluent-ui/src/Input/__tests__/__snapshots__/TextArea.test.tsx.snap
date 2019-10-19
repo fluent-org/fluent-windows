@@ -5,7 +5,7 @@ exports[`Input.TextArea should be support error 1`] = `
   font: inherit;
   border: 2px solid;
   outline: none;
-  padding: 6px 12px;
+  padding: 11px 6px;
   transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;
@@ -52,7 +52,7 @@ exports[`Input.TextArea should be support ghost 1`] = `
   font: inherit;
   border: 2px solid;
   outline: none;
-  padding: 6px 12px;
+  padding: 11px 6px;
   transition: background-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms,border-color 250ms cubic-bezier(0.7, 0.1, 0.33, 1) 0ms;
   border-color: #dedede;
   border-radius: 2px;

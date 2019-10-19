@@ -48,7 +48,7 @@ const FormLabel: React.FC<FormLabelProps> = React.forwardRef<HTMLDivElement, For
 
     return (
       <Typography className={className} variant="body2" as={as} ref={ref} {...rest}>
-        {label}
+        <span className={classes.text}>{label}</span>
         {React.cloneElement(children, { style: gap })}
       </Typography>
     )

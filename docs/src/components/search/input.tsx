@@ -16,7 +16,8 @@ export default connectSearchBox(
     }, 1000)
     return (
       <Input
-        placeholder="Search"
+        label="Search"
+        placeholder="Enter Keyword"
         onChange={debouncedCallback}
         onFocus={onFocus}
         ref={innerRef}

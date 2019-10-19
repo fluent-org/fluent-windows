@@ -12,7 +12,7 @@ langKey: "en"
 ## Default
 
 ```jsx
-<Input placeholder='Hint text' />
+<Input label='text' placeholder='Hint text' />
 ```
 
 ## Controlled
@@ -24,7 +24,7 @@ langKey: "en"
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} />
+    <Input label='text' value={value} onChange={handleChange} />
   )
 }
 ```
@@ -34,7 +34,7 @@ langKey: "en"
 Whether the input is disabled.
 
 ```jsx
-<Input value='Hint text' disabled />
+<Input label='text' value='Hint text' disabled />
 ```
 
 ## Cleared
@@ -48,7 +48,7 @@ Show a button to clear your input.
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} cleared />
+    <Input label='text' value={value} onChange={handleChange} cleared />
   )
 }
 ```
@@ -62,7 +62,7 @@ Show a button to clear your input.
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} password />
+    <Input label='password' value={value} onChange={handleChange} password />
   )
 }
 ```
@@ -76,17 +76,17 @@ Show a button to clear your input.
     setValue(v)
   }
   return (
-    <Input value={value} onChange={handleChange} error />
+    <Input label='error' value={value} onChange={handleChange} error />
   )
 }
 ```
 
-## PrefixAndSuffix
+## suffix
 
 ```jsx
 <>
-  <Input prefix="¥" suffix="RMB" />
-  <Input prefix={<Icon.UserSmileLine />} suffix={<Icon.InformationLine />} />
+  <Input suffix="RMB" />
+  <Input suffix={<Icon.InformationLine />} />
 </>
 ```
 
@@ -94,7 +94,7 @@ Show a button to clear your input.
 
 ```jsx
 <Box padding={20} background={`url(${bg}) center/cover fixed`}>
-  <Input ghost />
+  <Input label='ghost' ghost />
 </Box>
 ```
 

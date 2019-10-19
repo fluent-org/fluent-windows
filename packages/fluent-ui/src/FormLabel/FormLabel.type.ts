@@ -4,6 +4,7 @@ import { StandardProps, StyledProps } from '..'
 
 export type FormLabelClassProps =
   | 'root'
+  | 'text'
   | 'positionTop'
   | 'positionBottom'
   | 'positionLeft'

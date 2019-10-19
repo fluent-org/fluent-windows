@@ -26,7 +26,6 @@ import { Input } from '@fluent-ui/core'
 | cleared | boolean | false | Whether to display a button to clear the value of the `input` element |
 | password | boolean |  | The `input` element will be rendered as `<input type="password" />` |
 | error | boolean |  | 	If `true`, the `input` will indicate an error. |
-| prefix | React.ReactNode | null | Pre-content input box. |
 | suffix | React.ReactNode | null | Rear content input box. |
 | ghost | boolean |  | Ghost button, background transparent. |
 

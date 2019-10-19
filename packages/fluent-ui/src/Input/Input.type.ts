@@ -6,9 +6,9 @@ import TextArea from './components/TextArea'
 export type InputClassProps =
   | 'root'
   | 'error'
+  | 'disabled'
   | 'wrapper'
   | 'clearedIcon'
-  | 'prefix'
   | 'suffix'
   | 'ghost'
 
@@ -20,12 +20,12 @@ export interface InputProps
   > {
   value?: string
   onChange?: (value: string) => void
+  label?: string
   placeholder?: string
   disabled?: boolean
   cleared?: boolean
   password?: boolean
   error?: boolean
-  prefix?: React.ReactNode
   suffix?: React.ReactNode
   ghost?: boolean
 }
@@ -33,12 +33,12 @@ export interface InputProps
 export const InputPropTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
+  label: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   cleared: PropTypes.bool,
   password: PropTypes.bool,
   error: PropTypes.bool,
-  prefix: PropTypes.node,
   suffix: PropTypes.node,
   ghost: PropTypes.bool
 }
