@@ -46,19 +46,23 @@ const root = (theme: Theme): Style => (
   border: '2px solid',
   borderColor: 'transparent',
   transition: theme.transitions!.input,
-  backgroundColor: theme.colors!.standard!.transparent1,
+  backgroundColor: theme.colors!.standard!.light2,
   '&::placeholder': {
-    color: 'transparent',
-    transition: theme.transitions!.input
+    transition: theme.transitions!.input,
+    ...(!props.disabled && {
+      color: 'transparent'
+    })
   },
   '&:active, &:focus': {
     borderColor: `${props.error ? '' : theme.colors!.black!.default} ${
       props.disabled ? '' : '!important'
     }`,
     backgroundColor: theme.colors!.white!.default,
-    '&::placeholder': {
-      color: theme.colors!.standard!.dark2
-    }
+    ...(!props.disabled && {
+      '&::placeholder': {
+        color: theme.colors!.standard!.dark2
+      }
+    })
   },
   '&:disabled': {
     color: theme.colors!.standard!.dark3,
@@ -100,7 +104,7 @@ const suffix = (theme: Theme): Style => ({
 })
 
 const ghost = (theme: Theme): Style => ({
-  backgroundColor: 'transparent',
+  backgroundColor: `${theme.colors!.standard!.transparent1} !important`,
   borderColor: theme.colors!.standard!.transparent1,
   '&:hover': {
     borderColor: theme.colors!.standard!.transparent2

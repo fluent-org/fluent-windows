@@ -90,7 +90,7 @@ langKey: "zh"
 </>
 ```
 
-## 幽灵按钮
+## 幽灵
 
 ```jsx
 <Box padding={20} background={`url(${bg}) center/cover fixed`}>
@@ -103,11 +103,13 @@ langKey: "zh"
 ```jsx
 <Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Input.TextArea
+    label="default"
     rows={4}
     placeholder="default"
     resize="none"
   />
   <Input.TextArea
+    label="ghost"
     rows={4}
     placeholder="ghost"
     ghost

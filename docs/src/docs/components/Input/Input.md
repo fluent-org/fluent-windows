@@ -103,11 +103,13 @@ Show a button to clear your input.
 ```jsx
 <Box padding={20} background={`url(${bg}) center/cover fixed`}>
   <Input.TextArea
+    label="default"
     rows={4}
     placeholder="default"
     resize="none"
   />
   <Input.TextArea
+    label="ghost"
     rows={4}
     placeholder="ghost"
     ghost
