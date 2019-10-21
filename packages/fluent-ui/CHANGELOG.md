@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.4](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@1.0.0-alpha.3...@fluent-ui/core@1.0.0-alpha.4) (2019-10-21)
+
+
+### Features
+
+* **Input:** Brand new style and deprecated prefix ([0caf131](https://github.com/fluent-org/fluent-ui/commit/0caf131))
+* **Input:** Sync TextArea to new style too ([80c0685](https://github.com/fluent-org/fluent-ui/commit/80c0685))
+
+
+### BREAKING CHANGES
+
+* **Input:** Deprecated prefix
+
+
+
+
+
 # [1.0.0-alpha.3](https://github.com/fluent-org/fluent-ui/compare/@fluent-ui/core@1.0.0-alpha.2...@fluent-ui/core@1.0.0-alpha.3) (2019-10-18)
 
 
