@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Navigation from '@fluent-ui/core/Navigation'
+import Navigation from '@fluent-windows/core/Navigation'
 // or
-import { Navigation } from '@fluent-ui/core'
+import { Navigation } from '@fluent-windows/core'
 ```
 
 在 Navigation 内使用 `Navigation.Header` `Navigation.Footer` 来使目标渲染到指定位置。

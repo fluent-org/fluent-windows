@@ -13,7 +13,7 @@ order: 6
 ## Demo
 
 ```tsx
-import { useHover } from '@fluent-ui/hooks'
+import { useHover } from '@fluent-windows/hooks'
 
 function handleChange() {
   // ...

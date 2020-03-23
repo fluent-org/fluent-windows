@@ -8,10 +8,10 @@ langKey: "zh"
 ## API
 
 ```
-import Table from '@fluent-ui/core/Table'
-import { TableGroup } from '@fluent-ui/core/Table'
+import Table from '@fluent-windows/core/Table'
+import { TableGroup } from '@fluent-windows/core/Table'
 // or
-import { Table, TableGroup } from '@fluent-ui/core'
+import { Table, TableGroup } from '@fluent-windows/core'
 ```
 
 ### Props
@@ -35,7 +35,7 @@ import { Table, TableGroup } from '@fluent-ui/core'
 为了更友好地支持typescript，我放弃了 `React.forwardRef`，这意味着 `Table` 组件不能正常使用 `ref`。
 
 ```tsx
-import { ColumnsType, DataType } from '@fluent-ui/core/Table'
+import { ColumnsType, DataType } from '@fluent-windows/core/Table'
 
 interface Data extends DataType {
   name: React.ReactText

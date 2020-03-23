@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Navigation from '@fluent-ui/core/Navigation'
+import Navigation from '@fluent-windows/core/Navigation'
 // or
-import { Navigation } from '@fluent-ui/core'
+import { Navigation } from '@fluent-windows/core'
 ```
 
 Use `Navigation.Header` `Navigation.Footer` inside Navigation so that we knows how to render to the target location.

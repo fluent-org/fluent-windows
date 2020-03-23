@@ -18,7 +18,7 @@ order: 3
 你可以通过为 `ThemeProvider` 传入 `theme` 属性来改变 **默认主题**
 
 ```jsx
-import ThemeProvider from '@fluent-ui/core/ThemeProvider';
+import ThemeProvider from '@fluent-windows/core/ThemeProvider';
 
 const theme = {
   colors: {
@@ -43,8 +43,8 @@ function App() {
 
 ```tsx
 import * as React from 'react';
-import ThemeProvider from '@fluent-ui/core/ThemeProvider';
-import { Theme } from '@fluent-ui/core'
+import ThemeProvider from '@fluent-windows/core/ThemeProvider';
+import { Theme } from '@fluent-windows/core'
 
 const theme: Theme = {
   colors: {

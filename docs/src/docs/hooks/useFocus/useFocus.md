@@ -13,7 +13,7 @@ order: 4
 ## Demo
 
 ```tsx
-import { useFocus } from '@fluent-ui/hooks'
+import { useFocus } from '@fluent-windows/hooks'
 
 function handleChange() {
   // ...

@@ -14,10 +14,10 @@ Encapsulates many useful react hooks.
 
 ```shell
 // with npm
-npm install @fluent-ui/hooks
+npm install @fluent-windows/hooks
 
 // with yarn
-yarn add @fluent-ui/hooks
+yarn add @fluent-windows/hooks
 ```
 
 ## List

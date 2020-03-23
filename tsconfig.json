@@ -12,8 +12,8 @@
     "noErrorTruncation": true,
     "baseUrl": "./packages",
     "paths": {
-      "@fluent-ui/core": ["./fluent-ui/src"],
-      "@fluent-ui/core/*": ["./fluent-ui/src/*"]
+      "@fluent-windows/core": ["./fluent-windows/src"],
+      "@fluent-windows/core/*": ["./fluent-windows/src/*"]
     }
   },
   "exclude": [

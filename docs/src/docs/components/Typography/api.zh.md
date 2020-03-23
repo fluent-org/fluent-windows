@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Typography from '@fluent-ui/core/Typography'
+import Typography from '@fluent-windows/core/Typography'
 // or
-import { Typography } from '@fluent-ui/core'
+import { Typography } from '@fluent-windows/core'
 ```
 
 ### Props

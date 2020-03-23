@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import usePopper from '@fluent-ui/hooks/usePopper'
+import usePopper from '@fluent-windows/hooks/usePopper'
 // or
-import { usePopper } from '@fluent-ui/hooks'
+import { usePopper } from '@fluent-windows/hooks'
 ```
 
 ### usePopper 参数

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 
-import { Box, Button } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Box, Button } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -43,10 +43,10 @@ const IndexPage = (): React.ReactElement => {
         <Box width="80%" marginTop="-10em">
           <Box>
             <Box className={classes.logo} display={['block', 'none']}>
-              <img src="/images/fluent-ui.svg" alt="fluent-ui" />
+              <img src="/images/fluent-windows.svg" alt="fluent-windows" />
             </Box>
             <Box className={classes.logoPure} width={[100, 233]} display={['none', 'block']}>
-              <img src="/images/fluent-ui-pure.svg" alt="fluent-ui" />
+              <img src="/images/fluent-windows-pure.svg" alt="fluent-windows" />
             </Box>
             <Box
               className={classes.title}
@@ -76,7 +76,7 @@ const IndexPage = (): React.ReactElement => {
               </Button>
             </Box>
             <Box margin={['0.6em 0 0 0', '0 0 0 1.2em']} display={['block', 'inline-block']}>
-              <Button as="a" href="https://github.com/fluent-org/fluent-ui" size="large">
+              <Button as="a" href="https://github.com/fluent-org/fluent-windows" size="large">
                 GITHUB
               </Button>
             </Box>

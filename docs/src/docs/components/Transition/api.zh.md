@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Transition from '@fluent-ui/core/Transition'
+import Transition from '@fluent-windows/core/Transition'
 // or
-import { Transition } from '@fluent-ui/core'
+import { Transition } from '@fluent-windows/core'
 ```
 
 ### Props

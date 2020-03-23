@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Select from '@fluent-ui/core/Select'
+import Select from '@fluent-windows/core/Select'
 // or
-import { Select } from '@fluent-ui/core'
+import { Select } from '@fluent-windows/core'
 ```
 
 ### Props

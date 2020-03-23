@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import ItemGroup from '@fluent-ui/core/ItemGroup'
+import ItemGroup from '@fluent-windows/core/ItemGroup'
 // or
-import { ItemGroup } from '@fluent-ui/core'
+import { ItemGroup } from '@fluent-windows/core'
 ```
 
 ### Props

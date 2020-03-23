@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [2.0.0-alpha.4](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@2.0.0-alpha.3...fluent-ui.com@2.0.0-alpha.4) (2019-10-21)
+# [2.0.0-alpha.4](https://github.com/fluent-org/fluent-windows/compare/fluent-windows.com@2.0.0-alpha.3...fluent-windows.com@2.0.0-alpha.4) (2019-10-21)
 
 
 ### Features
 
-* **Input:** Brand new style and deprecated prefix ([0caf131](https://github.com/fluent-org/fluent-ui/commit/0caf131))
-* **Input:** Sync TextArea to new style too ([80c0685](https://github.com/fluent-org/fluent-ui/commit/80c0685))
+* **Input:** Brand new style and deprecated prefix ([0caf131](https://github.com/fluent-org/fluent-windows/commit/0caf131))
+* **Input:** Sync TextArea to new style too ([80c0685](https://github.com/fluent-org/fluent-windows/commit/80c0685))
 
 
 ### BREAKING CHANGES
@@ -20,17 +20,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [2.0.0-alpha.3](https://github.com/fluent-org/fluent-ui/compare/fluent-ui.com@2.0.0-alpha.2...fluent-ui.com@2.0.0-alpha.3) (2019-10-18)
+# [2.0.0-alpha.3](https://github.com/fluent-org/fluent-windows/compare/fluent-windows.com@2.0.0-alpha.2...fluent-windows.com@2.0.0-alpha.3) (2019-10-18)
 
 
 ### Bug Fixes
 
-* **fluent-ui.com:** Fix document page edit-this-page address error ([7e6332d](https://github.com/fluent-org/fluent-ui/commit/7e6332d))
+* **fluent-windows.com:** Fix document page edit-this-page address error ([7e6332d](https://github.com/fluent-org/fluent-windows/commit/7e6332d))
 
 
 ### Features
 
-* **Button:** Add prop rounded ([13fb985](https://github.com/fluent-org/fluent-ui/commit/13fb985))
+* **Button:** Add prop rounded ([13fb985](https://github.com/fluent-org/fluent-windows/commit/13fb985))
 
 
 
@@ -41,8 +41,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **@fluent-ui/hooks:** Document page added hooks/guide, Delete hooks useDeepCompareEffect. ([683ff73](https://github.com/fluent-org/fluent-ui/commit/683ff73))
-* **@fluent-ui/hooks:** Modify the export method to support on-demand introduction ([8fd7cc8](https://github.com/fluent-org/fluent-ui/commit/8fd7cc8))
+* **@fluent-windows/hooks:** Document page added hooks/guide, Delete hooks useDeepCompareEffect. ([683ff73](https://github.com/fluent-org/fluent-windows/commit/683ff73))
+* **@fluent-windows/hooks:** Modify the export method to support on-demand introduction ([8fd7cc8](https://github.com/fluent-org/fluent-windows/commit/8fd7cc8))
 
 
 

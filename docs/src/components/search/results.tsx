@@ -2,7 +2,7 @@ import * as React from 'react'
 import { connectStateResults, Highlight, Snippet } from 'react-instantsearch-dom'
 import { IntlContext } from 'react-intl'
 import { Link } from 'gatsby'
-import { Typography, Box } from '@fluent-ui/core'
+import { Typography, Box } from '@fluent-windows/core'
 
 const Results = connectStateResults(({ searchResults, children }): any => {
   const intl = React.useContext(IntlContext)

@@ -8,10 +8,10 @@ langKey: "en"
 ## API
 
 ```
-import Table from '@fluent-ui/core/Table'
-import { TableGroup } from '@fluent-ui/core/Table'
+import Table from '@fluent-windows/core/Table'
+import { TableGroup } from '@fluent-windows/core/Table'
 // or
-import { Table, TableGroup } from '@fluent-ui/core'
+import { Table, TableGroup } from '@fluent-windows/core'
 ```
 
 ### Props
@@ -35,7 +35,7 @@ import { Table, TableGroup } from '@fluent-ui/core'
 It's worth noting that in order to support typescript more friendly, I gave up `React.forwardRef`, which means that using `ref` for the `Table` won't get what you want.
 
 ```tsx
-import { ColumnsType, DataType } from '@fluent-ui/core/Table'
+import { ColumnsType, DataType } from '@fluent-windows/core/Table'
 
 interface Data extends DataType {
   name: React.ReactText

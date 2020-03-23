@@ -13,7 +13,7 @@ order: 2
 ## Demo
 
 ```tsx
-import { useClick } from '@fluent-ui/hooks'
+import { useClick } from '@fluent-windows/hooks'
 
 function handleChange() {
   // ...

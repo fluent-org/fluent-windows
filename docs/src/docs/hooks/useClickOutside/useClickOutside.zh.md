@@ -13,7 +13,7 @@ order: 3
 ## 例子
 
 ```tsx
-import { useClickOutside } from '@fluent-ui/hooks'
+import { useClickOutside } from '@fluent-windows/hooks'
 
 const reference = React.useRef(null)
 

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Input } from '@fluent-ui/core'
+import { Input } from '@fluent-windows/core'
 import { connectSearchBox } from 'react-instantsearch-dom'
 import { useDebouncedCallback } from 'use-debounce'
 

@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Radio from '@fluent-ui/core/Radio'
+import Radio from '@fluent-windows/core/Radio'
 // or
-import { Radio } from '@fluent-ui/core'
+import { Radio } from '@fluent-windows/core'
 ```
 
 ### Props

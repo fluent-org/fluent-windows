@@ -1,7 +1,7 @@
 version: 2.1
 
 defaults: &defaults
-  working_directory: /tmp/fluent-ui
+  working_directory: /tmp/fluent-windows
   docker:
     - image: circleci/node:10.15.3
 

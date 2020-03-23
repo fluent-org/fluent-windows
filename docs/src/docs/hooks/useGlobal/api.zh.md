@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import useGlobal from '@fluent-ui/hooks/useGlobal'
+import useGlobal from '@fluent-windows/hooks/useGlobal'
 // or
-import { useGlobal } from '@fluent-ui/hooks'
+import { useGlobal } from '@fluent-windows/hooks'
 ```
 
 ### useGlobal 参数

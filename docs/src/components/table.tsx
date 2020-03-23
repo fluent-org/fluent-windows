@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createUseStyles } from '@fluent-ui/styles'
+import { createUseStyles } from '@fluent-windows/styles'
 
 const useStyles = createUseStyles({
   table: {

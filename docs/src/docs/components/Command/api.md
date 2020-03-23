@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Command from '@fluent-ui/core/Command'
+import Command from '@fluent-windows/core/Command'
 // or
-import { Command } from '@fluent-ui/core'
+import { Command } from '@fluent-windows/core'
 ```
 
 Use `Command.Content` `Command.Secondary` inside Command so that f knows how to render to the target location.

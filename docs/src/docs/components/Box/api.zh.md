@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Box from '@fluent-ui/core/Box'
+import Box from '@fluent-windows/core/Box'
 // or
-import { Box } from '@fluent-ui/core'
+import { Box } from '@fluent-windows/core'
 ```
 
 ### Props

@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import FormLabel from '@fluent-ui/core/FormLabel'
+import FormLabel from '@fluent-windows/core/FormLabel'
 // or
-import { FormLabel } from '@fluent-ui/core'
+import { FormLabel } from '@fluent-windows/core'
 ```
 
 ### Props

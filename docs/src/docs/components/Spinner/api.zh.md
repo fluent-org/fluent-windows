@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Spinner from '@fluent-ui/core/Spinner'
+import Spinner from '@fluent-windows/core/Spinner'
 // or
-import { Spinner } from '@fluent-ui/core'
+import { Spinner } from '@fluent-windows/core'
 ```
 
 ### Props

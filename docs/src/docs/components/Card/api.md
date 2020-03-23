@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Card from '@fluent-ui/core/Card'
+import Card from '@fluent-windows/core/Card'
 // or
-import { Card } from '@fluent-ui/core'
+import { Card } from '@fluent-windows/core'
 ```
 
 Use `Card.Header` `Card.Content` `Card.Actions` inside Card so that card knows how to render to the target location.

@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import useReveal from '@fluent-ui/hooks/useReveal'
+import useReveal from '@fluent-windows/hooks/useReveal'
 // or
-import { useReveal } from '@fluent-ui/hooks'
+import { useReveal } from '@fluent-windows/hooks'
 ```
 
 ### useReveal parameter

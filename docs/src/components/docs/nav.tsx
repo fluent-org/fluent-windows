@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import { Navigation, Drawer, Item, ItemGroup } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Navigation, Drawer, Item, ItemGroup } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
 import {
   MenuLine as MenuLineIcon,
   SearchLine as SearchLineIcon,
@@ -15,8 +15,8 @@ import {
   Loader2Line as Loader2LineIcon,
   MoreLine as MoreLineIcon,
   GuideLine as GuideLineIcon
-} from '@fluent-ui/icons' // TODO tree-shaking
-import { useAction } from '@fluent-ui/hooks'
+} from '@fluent-windows/icons' // TODO tree-shaking
+import { useAction } from '@fluent-windows/hooks'
 import { useIntl } from 'react-intl'
 import Search from '../search'
 import NavFooter from './nav-footer'

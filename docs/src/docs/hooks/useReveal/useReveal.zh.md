@@ -13,7 +13,7 @@ order: 10
 ## 例子
 
 ```tsx
-import { useReveal } from '@fluent-ui/hooks'
+import { useReveal } from '@fluent-windows/hooks'
 
 const [RevealWrapper] = useReveal(66)
 

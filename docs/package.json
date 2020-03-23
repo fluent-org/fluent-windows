@@ -1,17 +1,17 @@
 {
-  "name": "fluent-ui.com",
+  "name": "fluent-windows.com",
   "private": true,
   "version": "2.0.0-alpha.4",
-  "description": "fluent-ui.com",
+  "description": "fluent-windows.com",
   "keywords": [
     "react",
     "gatsby",
     "fluent-design",
-    "fluent-ui",
-    "fluent-ui.com"
+    "fluent-windows",
+    "fluent-windows.com"
   ],
   "author": "chenyueban <jasonchan0527@gmail.com>",
-  "homepage": "https://fluent-ui.com",
+  "homepage": "https://fluent-windows.com",
   "license": "MIT",
   "directories": {
     "lib": "lib",
@@ -22,16 +22,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fluent-org/fluent-ui.git"
+    "url": "git+https://github.com/fluent-org/fluent-windows.git"
   },
   "bugs": {
-    "url": "https://github.com/fluent-org/fluent-ui/issues"
+    "url": "https://github.com/fluent-org/fluent-windows/issues"
   },
   "dependencies": {
-    "@fluent-ui/core": "^1.0.0-alpha.4",
-    "@fluent-ui/hooks": "^1.0.0-alpha.2",
-    "@fluent-ui/icons": "^1.0.0-alpha.2",
-    "@fluent-ui/styles": "^1.0.0-alpha.1",
+    "@fluent-windows/core": "^1.0.0-alpha.4",
+    "@fluent-windows/hooks": "^1.0.0-alpha.2",
+    "@fluent-windows/icons": "^1.0.0-alpha.2",
+    "@fluent-windows/styles": "^1.0.0-alpha.1",
     "algoliasearch": "^3.34.0",
     "classnames": "^2.2.6",
     "dotenv": "^8.1.0",
@@ -85,7 +85,7 @@
     "prettier": "^1.17.1"
   },
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop -p 10010",
     "now-dev": "npm run start",
     "now-build": "gatsby build"
   }

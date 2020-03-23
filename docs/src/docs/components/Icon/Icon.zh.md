@@ -7,7 +7,7 @@ langKey: "zh"
 
 # Icon（图标）
 
-Fluent-UI 的图标基于 [RemixIcon](https://remixicon.com/) 二次开发。
+Fluent-Windows 的图标基于 [RemixIcon](https://remixicon.com/) 二次开发。
 
 ## 引入
 
@@ -15,12 +15,12 @@ Fluent-UI 的图标基于 [RemixIcon](https://remixicon.com/) 二次开发。
 
 - 选项 1:
 `
-import BankFillIcon from '@fluent-ui/icons/BankFill';
+import BankFillIcon from '@fluent-windows/icons/BankFill';
 `
 
 - 选项 2:
 `
-import { BankFillIcon as BankFillIcon } from '@fluent-ui/icons'
+import { BankFillIcon as BankFillIcon } from '@fluent-windows/icons'
 `
 
 更健康的方式是 选项 1 但是 选项 2 可以带来更好的开发体验。在使用 选项 2 之前，请确保遵循[最小化打包大小](/zh/getting-started/minimizing-bundle-size)指南。

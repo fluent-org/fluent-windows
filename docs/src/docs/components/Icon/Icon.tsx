@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Box, Typography } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Box, Typography } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
 
 const useStyles = createUseStyles({
   iconContainer: {

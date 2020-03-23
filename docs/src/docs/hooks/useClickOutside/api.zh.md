@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import useClickOutside from '@fluent-ui/hooks/useClickOutside'
+import useClickOutside from '@fluent-windows/hooks/useClickOutside'
 // or
-import { useClickOutside } from '@fluent-ui/hooks'
+import { useClickOutside } from '@fluent-windows/hooks'
 ```
 
 ### useClickOutside 参数

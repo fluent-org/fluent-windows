@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Input from '@fluent-ui/core/Input'
+import Input from '@fluent-windows/core/Input'
 // or
-import { Input } from '@fluent-ui/core'
+import { Input } from '@fluent-windows/core'
 ```
 
 ### Props

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import classNames from 'classnames'
-import { IconButton, Typography } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
-import { ClipboardLine as ClipboardLineIcon } from '@fluent-ui/icons' // TODO tree-shaking
+import { IconButton, Typography } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
+import { ClipboardLine as ClipboardLineIcon } from '@fluent-windows/icons' // TODO tree-shaking
 import HighlightBase, { defaultProps } from 'prism-react-renderer'
 // @ts-ignore
 import CopytoClipboard from 'react-copy-to-clipboard'

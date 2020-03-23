@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Tabs from '@fluent-ui/core/Tabs'
+import Tabs from '@fluent-windows/core/Tabs'
 // or
-import { Tabs } from '@fluent-ui/core'
+import { Tabs } from '@fluent-windows/core'
 ```
 
 ### Props

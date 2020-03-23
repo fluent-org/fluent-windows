@@ -1,8 +1,5 @@
 {
-  "packages": [
-    "packages/*",
-    "docs"
-  ],
+  "packages": ["packages/*", "docs"],
   "npmClient": "yarn",
   "version": "independent",
   "useWorkspaces": true,
@@ -17,7 +14,7 @@
     }
   },
   "changelog": {
-    "repo": "fluent-org/fluent-ui",
+    "repo": "fluent-org/fluent-windows",
     "labels": {
       "PR: New Feature": ":rocket: New Features",
       "PR: Breaking Change": ":boom: Breaking Changes",

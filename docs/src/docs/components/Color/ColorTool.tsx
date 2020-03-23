@@ -1,10 +1,10 @@
 import * as React from 'react'
 // @ts-ignore
 import { ChromePicker } from 'react-color'
-import { useDispatch } from '@fluent-ui/hooks'
+import { useDispatch } from '@fluent-windows/hooks'
 
-import { Box, Button, Theme } from '@fluent-ui/core'
-import { createUseStyles, useTheme } from '@fluent-ui/styles'
+import { Box, Button, Theme } from '@fluent-windows/core'
+import { createUseStyles, useTheme } from '@fluent-windows/styles'
 
 import { getCookie } from '../../../utils'
 

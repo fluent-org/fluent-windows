@@ -13,7 +13,7 @@ order: 5
 ## 例子
 
 ```tsx
-import { useGlobal } from '@fluent-ui/hooks'
+import { useGlobal } from '@fluent-windows/hooks'
 
 const global = useGlobal()
 ```

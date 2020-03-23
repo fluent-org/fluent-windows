@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import useMessage from '@fluent-ui/hooks/useMessage'
+import useMessage from '@fluent-windows/hooks/useMessage'
 // or
-import { useMessage } from '@fluent-ui/hooks'
+import { useMessage } from '@fluent-windows/hooks'
 ```
 
 ### useMessage 参数

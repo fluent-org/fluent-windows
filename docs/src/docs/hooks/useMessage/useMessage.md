@@ -13,7 +13,7 @@ order: 8
 ## Demo
 
 ```tsx
-import { useMessage } from '@fluent-ui/hooks'
+import { useMessage } from '@fluent-windows/hooks'
 
 const [handleOpen, handleClose] = useMessage(
   (visible, content, close) => (

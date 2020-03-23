@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Card from '@fluent-ui/core/Card'
+import Card from '@fluent-windows/core/Card'
 // or
-import { Card } from '@fluent-ui/core'
+import { Card } from '@fluent-windows/core'
 ```
 
 在 Card 内使用 `Card.Header` `Card.Content` `Card.Actions` 来使目标渲染到指定位置。

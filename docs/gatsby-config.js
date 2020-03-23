@@ -3,7 +3,7 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Fluent-UI`,
+    title: `Fluent-Windows`,
     description: `React components that inspired by Microsoft's Fluent Design System.`,
     author: `@chenyueban`
   },
@@ -14,13 +14,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Fluent-UI`,
+        name: `Fluent-Windows`,
         short_name: `fluent`,
         description: `React components that inspired by Microsoft's Fluent Design System.`,
         start_url: `/`,
         background_color: `#0078d4`,
         theme_color: `#0078d4`,
-        icon: `static/images/fluent-ui.png` // This path is relative to the root of the site.
+        icon: `static/images/fluent-windows.png` // This path is relative to the root of the site.
       }
     },
     `gatsby-plugin-offline`,

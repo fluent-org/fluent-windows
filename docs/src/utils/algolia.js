@@ -67,19 +67,19 @@ const queries = [
   {
     query: componentsQuery,
     transformer: ({ data }) => data.components.edges.map(({ node }) => node),
-    indexName: `fluent-ui_components`,
+    indexName: `fluent-windows_components`,
     settings
   },
   {
     query: hooksQuery,
     transformer: ({ data }) => data.hooks.edges.map(({ node }) => node),
-    indexName: `fluent-ui_hooks`,
+    indexName: `fluent-windows_hooks`,
     settings
   },
   {
     query: gettingStartedQuery,
     transformer: ({ data }) => data.gettingStarted.edges.map(({ node }) => node),
-    indexName: `fluent-ui_getting-started`,
+    indexName: `fluent-windows_getting-started`,
     settings
   }
 ]

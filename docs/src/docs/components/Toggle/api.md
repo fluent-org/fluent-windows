@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Toggle from '@fluent-ui/core/Toggle'
+import Toggle from '@fluent-windows/core/Toggle'
 // or
-import { Toggle } from '@fluent-ui/core'
+import { Toggle } from '@fluent-windows/core'
 ```
 
 ### Props

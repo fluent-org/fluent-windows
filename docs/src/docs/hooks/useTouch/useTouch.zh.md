@@ -13,7 +13,7 @@ order: 11
 ## 例子
 
 ```tsx
-import { useTouch } from '@fluent-ui/hooks'
+import { useTouch } from '@fluent-windows/hooks'
 
 function handleChange() {
   // ...

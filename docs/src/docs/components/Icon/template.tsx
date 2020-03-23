@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Box, Dialog, Theme, Input, FormLabel, Radio } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Box, Dialog, Theme, Input, FormLabel, Radio } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
 import { Styles } from 'jss'
-import * as Icons from '@fluent-ui/icons'
+import * as Icons from '@fluent-windows/icons'
 import Highlight from '../../../components/highlight'
 import FlexSearch from 'flexsearch'
 import { useDebouncedCallback } from 'use-debounce'
@@ -141,7 +141,8 @@ const Template = (): React.ReactElement => {
   // @ts-ignore
   const CurrentSelectIcon = React.useMemo((): any => Icons[currentSelectIcon], [currentSelectIcon])
   const code = React.useMemo(
-    (): string => `import ${currentSelectIcon}Icon from '@fluent-ui/icons/${currentSelectIcon}'`,
+    (): string =>
+      `import ${currentSelectIcon}Icon from '@fluent-windows/icons/${currentSelectIcon}'`,
     [currentSelectIcon]
   )
 

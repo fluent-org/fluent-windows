@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Progress from '@fluent-ui/core/Progress'
+import Progress from '@fluent-windows/core/Progress'
 // or
-import { Progress } from '@fluent-ui/core'
+import { Progress } from '@fluent-windows/core'
 ```
 
 ### Props

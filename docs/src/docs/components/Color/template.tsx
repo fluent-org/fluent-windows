@@ -2,8 +2,8 @@ import * as React from 'react'
 // @ts-ignore
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import { Box, colors } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Box, colors } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
 import { Style } from 'jss'
 
 interface Item {

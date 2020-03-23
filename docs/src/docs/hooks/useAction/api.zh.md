@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import { useAction, useDispatch } from '@fluent-ui/hooks/useAction'
+import { useAction, useDispatch } from '@fluent-windows/hooks/useAction'
 // or
-import { useAction, useDispatch } from '@fluent-ui/hooks'
+import { useAction, useDispatch } from '@fluent-windows/hooks'
 ```
 
 ### useAction 参数

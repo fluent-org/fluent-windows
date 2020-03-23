@@ -13,7 +13,7 @@ order: 9
 ## 例子
 
 ```tsx
-import { usePopper } from '@fluent-ui/hooks'
+import { usePopper } from '@fluent-windows/hooks'
 
 const [referenceRef, popperRef] = usePopper({ placement = 'bottom' })
 

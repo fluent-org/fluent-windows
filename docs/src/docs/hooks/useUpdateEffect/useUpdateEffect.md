@@ -13,7 +13,7 @@ order: 12
 ## Demo
 
 ```tsx
-import { useUpdateEffect } from '@fluent-ui/hooks'
+import { useUpdateEffect } from '@fluent-windows/hooks'
 
 const [count, setCount] = React.useState(0)
 React.useEffect(() => {

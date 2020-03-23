@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import useMedia from '@fluent-ui/hooks/useMedia'
+import useMedia from '@fluent-windows/hooks/useMedia'
 // or
-import { useMedia } from '@fluent-ui/hooks'
+import { useMedia } from '@fluent-windows/hooks'
 ```
 
 ### useMedia 参数

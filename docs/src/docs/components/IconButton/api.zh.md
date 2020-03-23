@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import IconButton from '@fluent-ui/core/IconButton'
+import IconButton from '@fluent-windows/core/IconButton'
 // or
-import { IconButton } from '@fluent-ui/core'
+import { IconButton } from '@fluent-windows/core'
 ```
 
 ### Props

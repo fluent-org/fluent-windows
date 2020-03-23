@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Button } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Button } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
 import { TemplateProps } from '../../templates/docs'
 import { useIntl } from 'react-intl'
 
-const SOURCE_CODE_ROOT_URL = 'https://github.com/fluent-org/fluent-ui/blob/master/docs/src'
+const SOURCE_CODE_ROOT_URL = 'https://github.com/fluent-org/fluent-windows/blob/master/docs/src'
 
 const useStyles = createUseStyles({
   editButton: {

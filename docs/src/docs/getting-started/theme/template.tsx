@@ -2,8 +2,8 @@ import * as React from 'react'
 // @ts-ignore
 import ObjectInspector from 'react-object-inspector'
 
-import { Box } from '@fluent-ui/core'
-import { useTheme } from '@fluent-ui/styles'
+import { Box } from '@fluent-windows/core'
+import { useTheme } from '@fluent-windows/styles'
 
 const Template = (): React.ReactElement => {
   const theme = useTheme()

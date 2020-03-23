@@ -14,7 +14,7 @@ order: 4
 Usually I will import components in the following way:
 
 ```js
-import { Button, Input } from '@fluent-ui/core';
+import { Button, Input } from '@fluent-windows/core';
 ```
 
 There is no doubt that this is very convenient, but there are some problems:
@@ -29,14 +29,14 @@ If this is an issue for you, you have various options:
 You can use path imports to avoid pulling in unused modules. For instance, instead of:
 
 ```js
-import { Button, Input } from '@fluent-ui/core';
+import { Button, Input } from '@fluent-windows/core';
 ```
 
 use:
 
 ```js
-import Button from '@fluent-ui/core/Button';
-import Input from '@fluent-ui/core/Input';
+import Button from '@fluent-windows/core/Button';
+import Input from '@fluent-windows/core/Input';
 ```
 
 ### Option 2
@@ -54,7 +54,7 @@ const plugins = [
   [
     'babel-plugin-import',
     {
-      libraryName: '@fluent-ui/core',
+      libraryName: '@fluent-windows/core',
       libraryDirectory: 'es',
       camel2DashComponentName: false
     },
@@ -63,7 +63,7 @@ const plugins = [
   [
     'babel-plugin-import',
     {
-      libraryName: '@fluent-ui/icons',
+      libraryName: '@fluent-windows/icons',
       libraryDirectory: 'es',
       camel2DashComponentName: false
     },
@@ -77,7 +77,7 @@ module.exports = { plugins };
 Now you can use the following import method:
 
 ```git
-- import Button from '@fluent-ui/core/Button';
-- import Input from '@fluent-ui/core/Input';
-+ import { Button, Input } from '@fluent-ui/core';
+- import Button from '@fluent-windows/core/Button';
+- import Input from '@fluent-windows/core/Input';
++ import { Button, Input } from '@fluent-windows/core';
 ```

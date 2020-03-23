@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Drawer from '@fluent-ui/core/Drawer'
+import Drawer from '@fluent-windows/core/Drawer'
 // or
-import { Drawer } from '@fluent-ui/core'
+import { Drawer } from '@fluent-windows/core'
 ```
 
 ### Props

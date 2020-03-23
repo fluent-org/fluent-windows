@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Command from '@fluent-ui/core/Command'
+import Command from '@fluent-windows/core/Command'
 // or
-import { Command } from '@fluent-ui/core'
+import { Command } from '@fluent-windows/core'
 ```
 
 在 Command 内使用 `Command.Content` `Command.Secondary` 来使目标渲染到指定位置。

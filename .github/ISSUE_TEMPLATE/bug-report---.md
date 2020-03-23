@@ -32,7 +32,7 @@ If applicable, add screenshots to help explain your problem.
 
 | Tech        | Version |
 | --------- | ------- |
-| Fluent-UI | |
+| Fluent-Windows | |
 | React | |
 | Browser | |
 | TypeScript | |

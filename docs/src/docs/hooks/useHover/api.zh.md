@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import useHover from '@fluent-ui/hooks/useHover'
+import useHover from '@fluent-windows/hooks/useHover'
 // or
-import { useHover } from '@fluent-ui/hooks'
+import { useHover } from '@fluent-windows/hooks'
 ```
 
 ### useHover 参数

@@ -13,7 +13,7 @@ order: 7
 ## Demo
 
 ```tsx
-import { useMedia } from '@fluent-ui/hooks'
+import { useMedia } from '@fluent-windows/hooks'
 
 const isWide = useMedia('(min-width: 600px)')
 

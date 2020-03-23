@@ -2,10 +2,10 @@ import * as React from 'react'
 import { navigate } from 'gatsby'
 import { useIntl, IntlContext } from 'react-intl'
 
-import { Item, Box, List, Transition, Portal } from '@fluent-ui/core'
-import { EarthLine as EarthLineIcon, PaletteLine as PaletteLineIcon } from '@fluent-ui/icons' // TODO tree-shaking
-import { usePopper, useClickOutside, useGlobal } from '@fluent-ui/hooks'
-import { createUseStyles } from '@fluent-ui/styles'
+import { Item, Box, List, Transition, Portal } from '@fluent-windows/core'
+import { EarthLine as EarthLineIcon, PaletteLine as PaletteLineIcon } from '@fluent-windows/icons' // TODO tree-shaking
+import { usePopper, useClickOutside, useGlobal } from '@fluent-windows/hooks'
+import { createUseStyles } from '@fluent-windows/styles'
 
 import { langKeys, LangKey } from '../../translations'
 import { pathnameToLanguage } from '../../utils'
@@ -19,8 +19,12 @@ const useStyles = createUseStyles({
 const NavFooter = (): React.ReactElement => {
   const classes = useStyles()
 
-  const home = <img className={classes.iconButton} src="/images/fluent-ui.svg" alt="fluent-ui" />
-  const github = <img className={classes.iconButton} src="/images/github.svg" alt="fluent-ui" />
+  const home = (
+    <img className={classes.iconButton} src="/images/fluent-windows.svg" alt="fluent-windows" />
+  )
+  const github = (
+    <img className={classes.iconButton} src="/images/github.svg" alt="fluent-windows" />
+  )
 
   const { formatMessage } = useIntl()
 
@@ -67,7 +71,7 @@ const NavFooter = (): React.ReactElement => {
       <Item onClick={handleNavigateToHome} prefix={home}>
         {formatMessage({ id: 'command.home-page' })}
       </Item>
-      <Item as="a" href="https://github.com/fluent-org/fluent-ui" prefix={github}>
+      <Item as="a" href="https://github.com/fluent-org/fluent-windows" prefix={github}>
         {formatMessage({ id: 'command.github-repository' })}
       </Item>
 

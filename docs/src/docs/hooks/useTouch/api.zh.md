@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import useTouch from '@fluent-ui/hooks/useTouch'
+import useTouch from '@fluent-windows/hooks/useTouch'
 // or
-import { useTouch } from '@fluent-ui/hooks'
+import { useTouch } from '@fluent-windows/hooks'
 ```
 
 ### useTouch 参数

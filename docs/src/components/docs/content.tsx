@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Markdown from 'markdown-to-jsx'
-import { Box, Typography, IconButton } from '@fluent-ui/core'
-import { useDispatch } from '@fluent-ui/hooks'
-import { createUseStyles } from '@fluent-ui/styles'
-import { MenuLine as MenuLineIcon } from '@fluent-ui/icons'
+import { Box, Typography, IconButton } from '@fluent-windows/core'
+import { useDispatch } from '@fluent-windows/hooks'
+import { createUseStyles } from '@fluent-windows/styles'
+import { MenuLine as MenuLineIcon } from '@fluent-windows/icons'
 
 import SideBar from './sidebar'
 import EditPage from './editPage'

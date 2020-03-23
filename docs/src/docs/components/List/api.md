@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import List from '@fluent-ui/core/List'
+import List from '@fluent-windows/core/List'
 // or
-import { List } from '@fluent-ui/core'
+import { List } from '@fluent-windows/core'
 ```
 
 ### Props

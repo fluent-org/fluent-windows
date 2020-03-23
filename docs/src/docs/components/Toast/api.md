@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Toast from '@fluent-ui/core/Toast'
+import Toast from '@fluent-windows/core/Toast'
 // or
-import { Toast } from '@fluent-ui/core'
+import { Toast } from '@fluent-windows/core'
 ```
 
 ### Props

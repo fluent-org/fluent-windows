@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import useUpdateEffect from '@fluent-ui/hooks/useUpdateEffect'
+import useUpdateEffect from '@fluent-windows/hooks/useUpdateEffect'
 // or
-import { useUpdateEffect } from '@fluent-ui/hooks'
+import { useUpdateEffect } from '@fluent-windows/hooks'
 ```
 
 ### useUpdateEffect parameter

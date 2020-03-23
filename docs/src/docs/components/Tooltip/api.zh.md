@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Tooltip from '@fluent-ui/core/Tooltip'
+import Tooltip from '@fluent-windows/core/Tooltip'
 // or
-import { Tooltip } from '@fluent-ui/core'
+import { Tooltip } from '@fluent-windows/core'
 ```
 
 ### Props

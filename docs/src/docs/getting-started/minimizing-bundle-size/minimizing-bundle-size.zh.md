@@ -14,7 +14,7 @@ order: 4
 通常我将通过以下方式引入组件：
 
 ```js
-import { Button, Input } from '@fluent-ui/core';
+import { Button, Input } from '@fluent-windows/core';
 ```
 
 毫无疑问这样做很方便, 但是存在一些问题:
@@ -29,14 +29,14 @@ import { Button, Input } from '@fluent-ui/core';
 您可以使用路径导入来避免引入未使用的模块。例如：
 
 ```js
-import { Button, Input } from '@fluent-ui/core';
+import { Button, Input } from '@fluent-windows/core';
 ```
 
 使用以下代替：
 
 ```js
-import Button from '@fluent-ui/core/Button';
-import Input from '@fluent-ui/core/Input';
+import Button from '@fluent-windows/core/Button';
+import Input from '@fluent-windows/core/Input';
 ```
 
 ### 选项 2
@@ -54,7 +54,7 @@ const plugins = [
   [
     'babel-plugin-import',
     {
-      libraryName: '@fluent-ui/core',
+      libraryName: '@fluent-windows/core',
       libraryDirectory: 'es',
       camel2DashComponentName: false
     },
@@ -63,7 +63,7 @@ const plugins = [
   [
     'babel-plugin-import',
     {
-      libraryName: '@fluent-ui/icons',
+      libraryName: '@fluent-windows/icons',
       libraryDirectory: 'es',
       camel2DashComponentName: false
     },
@@ -77,7 +77,7 @@ module.exports = { plugins };
 现在，您可以使用以下方法引入组件：
 
 ```git
-- import Button from '@fluent-ui/core/Button';
-- import Input from '@fluent-ui/core/Input';
-+ import { Button, Input } from '@fluent-ui/core';
+- import Button from '@fluent-windows/core/Button';
+- import Input from '@fluent-windows/core/Input';
++ import { Button, Input } from '@fluent-windows/core';
 ```

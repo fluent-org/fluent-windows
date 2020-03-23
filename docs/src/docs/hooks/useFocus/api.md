@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import useFocus from '@fluent-ui/hooks/useFocus'
+import useFocus from '@fluent-windows/hooks/useFocus'
 // or
-import { useFocus } from '@fluent-ui/hooks'
+import { useFocus } from '@fluent-windows/hooks'
 ```
 
 ### useFocus parameter

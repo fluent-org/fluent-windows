@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import * as Fluent from '@fluent-ui/core'
-import * as Icon from '@fluent-ui/icons'
-import * as Hooks from '@fluent-ui/hooks'
-import { createUseStyles } from '@fluent-ui/styles'
+import * as Fluent from '@fluent-windows/core'
+import * as Icon from '@fluent-windows/icons'
+import * as Hooks from '@fluent-windows/hooks'
+import { createUseStyles } from '@fluent-windows/styles'
 import { useIntl } from 'react-intl'
 // @ts-ignore
 import CopytoClipboard from 'react-copy-to-clipboard'

@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Portal from '@fluent-ui/core/Portal'
+import Portal from '@fluent-windows/core/Portal'
 // or
-import { Portal } from '@fluent-ui/core'
+import { Portal } from '@fluent-windows/core'
 ```
 
 ### Props

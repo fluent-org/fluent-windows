@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Box, Button } from '@fluent-ui/core'
-import { useDispatch } from '@fluent-ui/hooks'
+import { Box, Button } from '@fluent-windows/core'
+import { useDispatch } from '@fluent-windows/hooks'
 
 import { FilePond, registerPlugin } from 'react-filepond'
 import 'filepond/dist/filepond.min.css'

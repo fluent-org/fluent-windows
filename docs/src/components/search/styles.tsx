@@ -1,4 +1,4 @@
-import { Theme } from '@fluent-ui/core'
+import { Theme } from '@fluent-windows/core'
 import { Style, Styles } from 'jss'
 
 const hits = (theme: Theme): Style => ({

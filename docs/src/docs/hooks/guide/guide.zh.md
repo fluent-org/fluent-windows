@@ -14,16 +14,16 @@ order: 0
 
 ```shell
 // with npm
-npm install @fluent-ui/hooks
+npm install @fluent-windows/hooks
 
 // with yarn
-yarn add @fluent-ui/hooks
+yarn add @fluent-windows/hooks
 ```
 
 ## 使用
 
 ```js
-import { useGlobal } from '@fluent-ui/hooks'
+import { useGlobal } from '@fluent-windows/hooks'
 
 const global = useGlobal()
 ```

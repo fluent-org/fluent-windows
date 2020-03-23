@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import useClick from '@fluent-ui/hooks/useClick'
+import useClick from '@fluent-windows/hooks/useClick'
 // or
-import { useClick } from '@fluent-ui/hooks'
+import { useClick } from '@fluent-windows/hooks'
 ```
 
 ### useClick parameter

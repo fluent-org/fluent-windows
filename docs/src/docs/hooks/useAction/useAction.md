@@ -13,7 +13,7 @@ order: 1
 ## Demo
 
 ```tsx
-import { useAction, useDispatch } from '@fluent-ui/hooks'
+import { useAction, useDispatch } from '@fluent-windows/hooks'
 // parent
 useAction(
   'navigation/active',

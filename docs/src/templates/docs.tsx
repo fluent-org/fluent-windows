@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { Box } from '@fluent-ui/core'
-import { useDispatch, useGlobal, useAction } from '@fluent-ui/hooks'
+import { Box } from '@fluent-windows/core'
+import { useDispatch, useGlobal, useAction } from '@fluent-windows/hooks'
 
 import SEO from '../components/seo'
 import Nav from '../components/docs/nav'

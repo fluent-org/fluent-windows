@@ -18,7 +18,7 @@ order: 3
 You can change the **default theme** by passing `theme` for the `ThemeProvider`
 
 ```jsx
-import ThemeProvider from '@fluent-ui/core/ThemeProvider';
+import ThemeProvider from '@fluent-windows/core/ThemeProvider';
 
 const theme = {
   colors: {
@@ -43,8 +43,8 @@ If you can write using Typescript:
 
 ```tsx
 import * as React from 'react';
-import ThemeProvider from '@fluent-ui/core/ThemeProvider';
-import { Theme } from '@fluent-ui/core'
+import ThemeProvider from '@fluent-windows/core/ThemeProvider';
+import { Theme } from '@fluent-windows/core'
 
 const theme: Theme = {
   colors: {

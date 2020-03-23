@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Checkbox from '@fluent-ui/core/Checkbox'
+import Checkbox from '@fluent-windows/core/Checkbox'
 // or
-import { Checkbox } from '@fluent-ui/core'
+import { Checkbox } from '@fluent-windows/core'
 ```
 
 ### Props

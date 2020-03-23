@@ -8,9 +8,9 @@ langKey: "zh"
 ## API
 
 ```
-import Dialog from '@fluent-ui/core/Dialog'
+import Dialog from '@fluent-windows/core/Dialog'
 // or
-import { Dialog } from '@fluent-ui/core'
+import { Dialog } from '@fluent-windows/core'
 ```
 
 ### Props

@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Box, Typography, Transition, Theme, Portal } from '@fluent-ui/core'
-import { createUseStyles } from '@fluent-ui/styles'
-import { useClickOutside, usePopper } from '@fluent-ui/hooks'
+import { Box, Typography, Transition, Theme, Portal } from '@fluent-windows/core'
+import { createUseStyles } from '@fluent-windows/styles'
+import { useClickOutside, usePopper } from '@fluent-windows/hooks'
 import { InstantSearch, Index } from 'react-instantsearch-dom'
 // @ts-ignore
 import algoliasearch from 'algoliasearch/lite'
@@ -14,9 +14,9 @@ type SearchClassName = 'hits' | 'powerBy'
 const useStyles = createUseStyles<Theme, SearchClassName>(styles)
 
 const indices = [
-  { name: `fluent-ui_components`, title: `Components` },
-  { name: `fluent-ui_hooks`, title: `Hooks` },
-  { name: `fluent-ui_getting-started`, title: `Getting Started` }
+  { name: `fluent-windows_components`, title: `Components` },
+  { name: `fluent-windows_hooks`, title: `Hooks` },
+  { name: `fluent-windows_getting-started`, title: `Getting Started` }
 ]
 
 export default function Search(): React.ReactElement {

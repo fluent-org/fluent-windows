@@ -8,9 +8,9 @@ langKey: "en"
 ## API
 
 ```
-import Form from '@fluent-ui/core/Form'
+import Form from '@fluent-windows/core/Form'
 // or
-import { Form } from '@fluent-ui/core'
+import { Form } from '@fluent-windows/core'
 ```
 
 ### Props
