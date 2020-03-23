@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "fluent-windows.com",
+  "alias": "fluent-windows.com",
   "env": {
     "GATSBY_ALGOLIA_APP_ID": "@gatsby_algolia_app_id",
     "GATSBY_ALGOLIA_SEARCH_KEY": "@gatsby_algolia_search_key",

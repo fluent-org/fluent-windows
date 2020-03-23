@@ -60,7 +60,7 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-[![Edit basic-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nervous-ellis-4e44e?fontsize=14)
+[![Edit basic-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/basic-demo-l79to)
 
 ## 文档
 
