@@ -1,7 +1,7 @@
 {
   "name": "@fluent-windows/hooks",
   "private": false,
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "Fluent-Windows React hooks.",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "keywords": [
